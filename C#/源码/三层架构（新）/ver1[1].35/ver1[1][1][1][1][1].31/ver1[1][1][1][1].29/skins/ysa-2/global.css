@@ -1,0 +1,13 @@
+ body{
+	font-size:12px;
+    margin:0px;
+	padding:0px;
+	text-align:center;
+	background: url(bg.jpg);
+	background-color: #fff;
+	color:#781455;
+	font-family: Tahoma, Arial;
+}
+ img {max-width: 100%;height: auto;}
+ select{font-family: Verdana, Arial}
+ th{background:#2D2F2D;}

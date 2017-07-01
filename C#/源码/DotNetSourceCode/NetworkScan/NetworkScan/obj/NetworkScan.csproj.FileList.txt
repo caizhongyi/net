@@ -1,0 +1,7 @@
+obj\Debug\NetworkScan.exe
+obj\Debug\NetworkScan.pdb
+bin\Debug\NetworkScan.exe
+bin\Debug\NetworkScan.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\NetworkScan.Form1.resources
+obj\Debug\NetworkScan.csproj.GenerateResource.Cache

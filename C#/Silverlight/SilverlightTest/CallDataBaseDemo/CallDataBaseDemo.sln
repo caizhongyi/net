@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CallDataBaseDemo", "CallDataBaseDemo\CallDataBaseDemo.csproj", "{A0042D7C-6851-4FF7-9BB4-8170202583B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CallDataBaseDemo.Web", "CallDataBaseDemo.Web\CallDataBaseDemo.Web.csproj", "{66C8F4A2-BDF8-4319-8251-A89048575125}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "..\..\..\类库\C#\DAL\DAL\DAL.csproj", "{FDA9BC28-9602-4CC9-AF0F-073B009EDFC9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SilverlightClassLibrary", "..\..\..\类库\Silverlight\SilverlightClassLibrary\SilverlightClassLibrary\SilverlightClassLibrary.csproj", "{4FE7D15F-698B-434F-B51A-301E1F0B8F94}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A0042D7C-6851-4FF7-9BB4-8170202583B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0042D7C-6851-4FF7-9BB4-8170202583B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0042D7C-6851-4FF7-9BB4-8170202583B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0042D7C-6851-4FF7-9BB4-8170202583B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66C8F4A2-BDF8-4319-8251-A89048575125}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66C8F4A2-BDF8-4319-8251-A89048575125}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66C8F4A2-BDF8-4319-8251-A89048575125}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66C8F4A2-BDF8-4319-8251-A89048575125}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDA9BC28-9602-4CC9-AF0F-073B009EDFC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDA9BC28-9602-4CC9-AF0F-073B009EDFC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDA9BC28-9602-4CC9-AF0F-073B009EDFC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDA9BC28-9602-4CC9-AF0F-073B009EDFC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FE7D15F-698B-434F-B51A-301E1F0B8F94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FE7D15F-698B-434F-B51A-301E1F0B8F94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FE7D15F-698B-434F-B51A-301E1F0B8F94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FE7D15F-698B-434F-B51A-301E1F0B8F94}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

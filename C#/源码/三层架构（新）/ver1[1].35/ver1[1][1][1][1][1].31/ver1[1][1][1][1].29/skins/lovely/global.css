@@ -1,0 +1,14 @@
+ body{
+	font-size:12px;
+	padding:0px;
+	text-align:center;
+	background:#ffffff url(bg.png) repeat-y center;
+                  margin:0 auto;
+	color:#555555;
+	font-family:Arial, Verdana,  Helvetica, sans-serif;
+}
+ p{margin:3px;}
+ img {max-width: 100%;height: auto;}
+ select{font-family: Verdana, Arial}
+div,ul,li{padding:0; margin:0 ;list-style-type:none;}
+ th{background:#D5CBBE;border-bottom:1px solid #795B50}

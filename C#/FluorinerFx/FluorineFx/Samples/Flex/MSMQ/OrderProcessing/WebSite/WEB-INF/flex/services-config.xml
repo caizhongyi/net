@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<services-config>
+  <services>
+    <service id="message-service" class="flex.messaging.services.MessageService" messageTypes="flex.messaging.messages.AsyncMessage">
+      <adapters>
+        <adapter-definition id="msmqAdapter" class="FluorineFx.Messaging.Services.Messaging.MsmqAdapter" default="true"/>
+      </adapters>
+      <destination id="orderProcessor">
+        <adapter ref="msmqAdapter"/>
+        <channels>
+          <channel ref="my-rtmp"/>
+        </channels>
+        <properties>
+          <msmq>
+            <name>.\private$\orderqueuein</name>
+            <!-- Valid values: XmlMessageFormatter, BinaryMessageFormatter-->
+            <formatter>BinaryMessageFormatter</formatter>
+          </msmq>
+          <network>
+            <!-- The session-timeout element specifies the idle time in minutes before a subscriber is unsubscribed. When you set the value to 0 (zero), subscribers are not forced to unsubscribe automatically. The default value is 20. -->
+            <session-timeout>20</session-timeout>
+          </network>
+        </properties>
+      </destination>
+      <destination id="orderNotifications">
+        <adapter ref="msmqAdapter"/>
+        <channels>
+          <channel ref="my-rtmp"/>
+        </channels>
+        <properties>
+          <msmq>
+            <name>.\private$\orderqueuenotifications</name>
+            <label>Notification</label>
+            <formatter>XmlMessageFormatter;ServiceLibrary.Order</formatter>
+          </msmq>
+          <network>
+            <!-- The session-timeout element specifies the idle time in minutes before a subscriber is unsubscribed. When you set the value to 0 (zero), subscribers are not forced to unsubscribe automatically. The default value is 20. -->
+            <session-timeout>20</session-timeout>
+          </network>
+        </properties>
+      </destination>
+      <destination id="backOffice">
+        <adapter ref="msmqAdapter"/>
+        <channels>
+          <channel ref="my-rtmp"/>
+        </channels>
+        <properties>
+          <msmq>
+            <name>.\private$\backoffice</name>
+            <label>Notification</label>
+            <formatter>XmlMessageFormatter;ServiceLibrary.Order</formatter>
+          </msmq>
+          <network>
+            <!-- The session-timeout element specifies the idle time in minutes before a subscriber is unsubscribed. When you set the value to 0 (zero), subscribers are not forced to unsubscribe automatically. The default value is 20. -->
+            <session-timeout>20</session-timeout>
+          </network>
+        </properties>
+      </destination>
+    </service>
+  </services>
+
+  <channels>
+    <channel-definition id="my-rtmp" class="mx.messaging.channels.RTMPChannel">
+      <endpoint uri="rtmp://{server.name}:1939" class="flex.messaging.endpoints.RTMPEndpoint"/>
+    </channel-definition>
+  </channels>
+</services-config>

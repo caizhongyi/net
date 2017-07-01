@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<services-config>
+  <services>
+    <service id="remoting-service" class="flex.messaging.services.RemotingService" messageTypes="flex.messaging.messages.RemotingMessage">
+      <adapters>
+        <adapter-definition id="dotnet" class="FluorineFx.Remoting.RemotingAdapter" default="true"/>
+      </adapters>
+      <destination id="northwind">
+        <adapter ref="dotnet"/>
+        <channels>
+          <channel ref="my-rtmp"/>
+          <!-- <channel ref="my-amf"/> -->
+        </channels>
+        <properties>
+          <source>ServiceLibrary.NorthwindService</source>
+          <scope>request</scope>
+        </properties>
+      </destination>
+    </service>
+  </services>
+  <channels>
+    <!-- AMF Channel for testing with the Service Browser from VS.NET-->
+    <!--
+    <channel-definition id="my-amf" class="mx.messaging.channels.AMFChannel">
+      <endpoint uri="http://{server.name}:{server.port}/{context.root}/Gateway.aspx" class="flex.messaging.endpoints.AMFEndpoint"/>
+    </channel-definition>
+    -->
+    <channel-definition id="my-rtmp" class="mx.messaging.channels.RTMPChannel">
+      <endpoint uri="rtmp://localhost:1945" class="flex.messaging.endpoints.RTMPEndpoint"/>
+    </channel-definition>
+  </channels>
+</services-config>

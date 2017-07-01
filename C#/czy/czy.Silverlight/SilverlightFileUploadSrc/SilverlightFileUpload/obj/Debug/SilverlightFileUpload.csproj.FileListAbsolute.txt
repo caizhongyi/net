@@ -1,0 +1,27 @@
+C:\Local Dev\temp\SilverlightFileUpload\bin\Debug\DC.SilverlightFileUpload.dll.config
+C:\Local Dev\temp\SilverlightFileUpload\bin\Debug\DC.SilverlightFileUpload.dll
+C:\Local Dev\temp\SilverlightFileUpload\bin\Debug\DC.SilverlightFileUpload.pdb
+C:\Local Dev\temp\SilverlightFileUpload\bin\Debug\System.Web.Silverlight.dll
+C:\Local Dev\temp\SilverlightFileUpload\bin\Debug\de\System.Web.Silverlight.resources.dll
+C:\Local Dev\temp\SilverlightFileUpload\bin\Debug\es\System.Web.Silverlight.resources.dll
+C:\Local Dev\temp\SilverlightFileUpload\bin\Debug\fr\System.Web.Silverlight.resources.dll
+C:\Local Dev\temp\SilverlightFileUpload\bin\Debug\it\System.Web.Silverlight.resources.dll
+C:\Local Dev\temp\SilverlightFileUpload\bin\Debug\ja\System.Web.Silverlight.resources.dll
+C:\Local Dev\temp\SilverlightFileUpload\bin\Debug\ko\System.Web.Silverlight.resources.dll
+C:\Local Dev\temp\SilverlightFileUpload\bin\Debug\zh-Hans\System.Web.Silverlight.resources.dll
+C:\Local Dev\temp\SilverlightFileUpload\bin\Debug\zh-Hant\System.Web.Silverlight.resources.dll
+C:\Local Dev\temp\SilverlightFileUpload\obj\Debug\ResolveAssemblyReference.cache
+C:\Local Dev\temp\SilverlightFileUpload\obj\Debug\DC.SilverlightFileUpload.dll
+C:\Local Dev\temp\SilverlightFileUpload\obj\Debug\DC.SilverlightFileUpload.pdb
+E:\caizhongyi\MyWork\SilverlightFileUploadSrc\SilverlightFileUpload\bin\Debug\DC.SilverlightFileUpload.dll.config
+E:\caizhongyi\MyWork\SilverlightFileUploadSrc\SilverlightFileUpload\bin\Debug\DC.SilverlightFileUpload.dll
+E:\caizhongyi\MyWork\SilverlightFileUploadSrc\SilverlightFileUpload\bin\Debug\DC.SilverlightFileUpload.pdb
+E:\caizhongyi\MyWork\SilverlightFileUploadSrc\SilverlightFileUpload\obj\Debug\ResolveAssemblyReference.cache
+E:\caizhongyi\MyWork\SilverlightFileUploadSrc\SilverlightFileUpload\obj\Debug\DC.SilverlightFileUpload.dll
+E:\caizhongyi\MyWork\SilverlightFileUploadSrc\SilverlightFileUpload\obj\Debug\DC.SilverlightFileUpload.pdb
+E:\caizhongyi\MyWork\Library\C#\czy.Silverlight\SilverlightFileUploadSrc\SilverlightFileUpload\bin\Debug\DC.SilverlightFileUpload.dll.config
+E:\caizhongyi\MyWork\Library\C#\czy.Silverlight\SilverlightFileUploadSrc\SilverlightFileUpload\bin\Debug\DC.SilverlightFileUpload.dll
+E:\caizhongyi\MyWork\Library\C#\czy.Silverlight\SilverlightFileUploadSrc\SilverlightFileUpload\bin\Debug\DC.SilverlightFileUpload.pdb
+E:\caizhongyi\MyWork\Library\C#\czy.Silverlight\SilverlightFileUploadSrc\SilverlightFileUpload\obj\Debug\ResolveAssemblyReference.cache
+E:\caizhongyi\MyWork\Library\C#\czy.Silverlight\SilverlightFileUploadSrc\SilverlightFileUpload\obj\Debug\DC.SilverlightFileUpload.dll
+E:\caizhongyi\MyWork\Library\C#\czy.Silverlight\SilverlightFileUploadSrc\SilverlightFileUpload\obj\Debug\DC.SilverlightFileUpload.pdb

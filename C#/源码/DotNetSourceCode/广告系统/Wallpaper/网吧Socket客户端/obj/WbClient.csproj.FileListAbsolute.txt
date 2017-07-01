@@ -1,0 +1,6 @@
+C:\Users\Administrator\Desktop\AdSystem\网吧Socket客户端\WbClient\bin\Debug\WbClient.dll.config
+C:\Users\Administrator\Desktop\AdSystem\网吧Socket客户端\WbClient\bin\Debug\WbClient.dll
+C:\Users\Administrator\Desktop\AdSystem\网吧Socket客户端\WbClient\bin\Debug\WbClient.pdb
+C:\Users\Administrator\Desktop\AdSystem\网吧Socket客户端\WbClient\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\AdSystem\网吧Socket客户端\WbClient\obj\Debug\WbClient.dll
+C:\Users\Administrator\Desktop\AdSystem\网吧Socket客户端\WbClient\obj\Debug\WbClient.pdb

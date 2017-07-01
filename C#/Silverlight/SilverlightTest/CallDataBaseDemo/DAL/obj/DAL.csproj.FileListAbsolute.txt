@@ -1,0 +1,7 @@
+d:\My Documents\Visual Studio 2005\Projects\DAL\bin\Debug\DAL.dll
+d:\My Documents\Visual Studio 2005\Projects\DAL\bin\Debug\DAL.pdb
+d:\My Documents\Visual Studio 2005\Projects\DAL\bin\Debug\Model.dll
+d:\My Documents\Visual Studio 2005\Projects\DAL\bin\Debug\Model.pdb
+d:\My Documents\Visual Studio 2005\Projects\DAL\obj\Debug\ResolveAssemblyReference.cache
+d:\My Documents\Visual Studio 2005\Projects\DAL\obj\Debug\DAL.dll
+d:\My Documents\Visual Studio 2005\Projects\DAL\obj\Debug\DAL.pdb

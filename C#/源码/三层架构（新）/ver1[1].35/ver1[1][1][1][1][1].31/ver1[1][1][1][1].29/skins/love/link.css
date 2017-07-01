@@ -1,0 +1,24 @@
+﻿/*-----------超链接样式---------------
+ 说明: 伪类:link :visited :hover分别代表超链接的通常、被访问后、和鼠标接触链接是的样式
+ a标签代表通用超链接样式
+ .menuA代表Blog导航条菜单的样式
+ .titleA代表日志标题的样式
+ .sideA代表侧栏的超链接样式
+ .CategoryA代表树形分类的链接样式
+ .more代表更多链接的样式
+------------------------------------*/
+ a:link,a:visited{text-decoration:underline;color:#666;}
+ a:hover{color:#AAA;text-decoration:none;}
+ .menuA:link,.menuA:visited{}  
+ .menuA:hover{} 
+ .titleA:link,.titleA:visited{text-decoration:none;font-weight:bold;font-family:verdana,宋体;text-align:left;color:#666;}
+ .titleA:hover{color:#666;text-decoration:underline;}
+ .sideA:link,.sideA:visited{text-decoration:underline;padding-left:0px;height:16px;overflow:hidden;display:block;margin-bottom:8px;width:160px;line-height:140%;}
+ .sideA:hover{text-decoration:none;padding-left:0px;height:16px;overflow:hidden}
+ .CategoryA:link,.CategoryA:visited{text-decoration:none;font-weight:bold;}
+ .CategoryA:hover{text-decoration:underline;}
+ 
+ .more:link,.more:visited{padding-left:0px;margin:0px;text-decoration:underline;}
+ .more:hover{text-decoration:none;}  
+
+ /*---超链接样式定义结束---*/

@@ -1,0 +1,26 @@
+﻿*{ margin:0px; padding:0px;}
+body { font-size:12px; font-family:微软雅黑;}
+
+.content{width:900px;}
+.header{height:260px; margin-bottom:10px;overflow:hidden;}
+.header .menu{height:50px;  list-style-type:none; margin:0px;}
+.header .menu li{ float:left; width:100px; text-align:center; font-weight:bold; }
+.contenter{height:300px; margin-bottom:10px; overflow:hidden;}
+.contenter .left{  width:100px;  float:left; margin-right:10px; height:100%;}
+.contenter .right{  height:100%;}
+.footer{margin-bottom:10px;overflow:hidden;height:50px;}
+
+
+.i-head-left{ float:left;}
+.i-head-right{ float:right;}
+.i-head-right img{ margin-top:260px}
+
+.i-menu{height:31px;  color:White;}
+.i-menu .i-menu-left{ float:left; background-image:url(../images/menu_left.png); background-repeat:no-repeat;  width:5px;  height:100%; margin-right:-3px;}
+.i-menu .i-menu-right{ float:right; background-image:url(../images/menu_right.png); background-repeat:no-repeat;  width:5px;  height:100%; margin-left:-3px;}
+.i-menu .i-menu-center{height:100%; background-image:url(../images/menu_center.png); background-repeat:repeat-x;}
+.i-menu .i-menu-list{ margin:0px;  list-style-type:none; margin-left:40px;}
+.i-menu .i-menu-list li{ float:left;}
+.i-menu .i-menu-list li a{ color:White; font-weight:bold;}
+.i-menu .i-menu-list li a:hover{}
+.i-menu .i-menu-list li img{ margin-top:2px;}

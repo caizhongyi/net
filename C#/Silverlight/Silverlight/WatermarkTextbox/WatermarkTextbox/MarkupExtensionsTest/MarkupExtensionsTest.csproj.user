@@ -1,0 +1,6 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <StartAction>Project</StartAction>
+    <StartProgram>C:\Program Files\Microsoft Expression\Blend 3\Blend.exe</StartProgram>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,922 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JuSNS.Model</name>
+    </assembly>
+    <members>
+        <member name="T:JuSNS.Model.EnumCusState">
+            <summary>
+            信息状态
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumCusState.ForNormal">
+            <summary>
+            正常
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumCusState.ForLock">
+            <summary>
+            审核中
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumCusState.ForUnPass">
+            <summary>
+            审核未通过
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumCusState.ForStop">
+            <summary>
+            已停止
+            </summary>
+        </member>
+        <member name="T:JuSNS.Model.EnumShareType">
+            <summary>
+            分享分类
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumShareType.ForNews">
+            <summary>
+            新闻
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumShareType.ForBlog">
+            <summary>
+            日志
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumShareType.ForGroup">
+            <summary>
+            社群
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumShareType.ForAsk">
+            <summary>
+            问答
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumShareType.ForActive">
+            <summary>
+            活动
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumShareType.ForGoods">
+            <summary>
+            商品
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumShareType.ForShop">
+            <summary>
+            店铺
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumShareType.ForWeb">
+            <summary>
+            网页
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumShareType.ForFlash">
+            <summary>
+            Flash
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumShareType.ForMusic">
+            <summary>
+            音乐
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumShareType.ForVodie">
+            <summary>
+            视频
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumShareType.ForAlbum">
+            <summary>
+            相册
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumShareType.ForPhoto">
+            <summary>
+            相片
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumShareType.ForVote">
+            <summary>
+            投票
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumShareType.ForTopic">
+            <summary>
+            帖子
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumShareType.ForFriend">
+            <summary>
+            好友
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumShareType.ForMulte">
+            <summary>
+            团购
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumShareType.ForOther">
+            <summary>
+            其他
+            </summary>
+        </member>
+        <member name="T:JuSNS.Model.EnumDynType">
+            <summary>
+            动态类型
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumDynType.CreatTwitter">
+            <summary>
+            微博
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumDynType.TwitterComment">
+            <summary>
+            微博评论
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumDynType.CreatBlog">
+            <summary>
+            日志
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumDynType.BlogComment">
+            <summary>
+            日志评论
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumDynType.CreatAlbum">
+            <summary>
+            创建相册
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumDynType.CreatPhoto">
+            <summary>
+            上传图片
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumDynType.PhotoComment">
+            <summary>
+            图片评论
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumDynType.CreatGroup">
+            <summary>
+            创建社群
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumDynType.CreatTopic">
+            <summary>
+            发帖
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumDynType.ReplyTopic">
+            <summary>
+            回复帖子
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumDynType.CreatShare">
+            <summary>
+            分享
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumDynType.CreatNews">
+            <summary>
+            发布新闻
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumDynType.NewsComment">
+            <summary>
+            新闻评论
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumDynType.CreatGoods">
+            <summary>
+            发布商品
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumDynType.GoodsComment">
+            <summary>
+            商品评论
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumDynType.CreatShop">
+            <summary>
+            入住店铺
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumDynType.CreatMulte">
+            <summary>
+            发起团购
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumDynType.MulteComment">
+            <summary>
+            团购评论
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumDynType.JoinMulte">
+            <summary>
+            加入了团购
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumDynType.CreatActive">
+            <summary>
+            发起活动
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumDynType.ActiveComment">
+            <summary>
+            活动评论
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumDynType.JoinActive">
+            <summary>
+            参加活动
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumDynType.ActiveCreatPhoto">
+            <summary>
+            活动上传图片
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumDynType.CreatAsk">
+            <summary>
+            发起提问
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumDynType.AskComment">
+            <summary>
+            回答提问
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumDynType.CreatGift">
+            <summary>
+            赠送礼物
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumDynType.CreatPoke">
+            <summary>
+            打招呼
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumDynType.CreatVote">
+            <summary>
+            创建投票
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumDynType.JoinVote">
+            <summary>
+            参与投票
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumDynType.CreatFaviote">
+            <summary>
+            添加了收藏
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumDynType.InviteJoinSite">
+            <summary>
+            邀请加入了网站
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumDynType.UpdateHeadPic">
+            <summary>
+            更新了头像
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumDynType.VerfiyEmail">
+            <summary>
+            验证了电子邮件
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumDynType.CreatAPP">
+            <summary>
+            创建了APP
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumDynType.SetUpAPP">
+            <summary>
+            安装了APP
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumDynType.JoinGroup">
+            <summary>
+            加入了社群
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumDynType.Friend">
+            <summary>
+            成为了好友
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumDynType.TopicComment">
+            <summary>
+            活动评论
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumDynType.AskBest">
+            <summary>
+            设置为最佳答案
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumDynType.UpdateBasic">
+            <summary>
+            更新个人基本资料
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumDynType.UpdateTempalte">
+            <summary>
+            更换了模板
+            </summary>
+        </member>
+        <member name="T:JuSNS.Model.EnumNoticeType">
+            <summary>
+            通知类型
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumNoticeType.ReplyTwitter">
+            <summary>
+            微博
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumNoticeType.ReplyBlog">
+            <summary>
+            日志
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumNoticeType.ReplyPhoto">
+            <summary>
+            图片
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumNoticeType.JoinGroup">
+            <summary>
+            申请加入群
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumNoticeType.ReplyTopic">
+            <summary>
+            回帖
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumNoticeType.ReplyNews">
+            <summary>
+            新闻
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumNoticeType.ReplyGoods">
+            <summary>
+            商品
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumNoticeType.PulishMulte">
+            <summary>
+            针对商品发起了团购
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumNoticeType.JoinMulte">
+            <summary>
+            加入团购
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumNoticeType.ReplyMulte">
+            <summary>
+            团购评论
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumNoticeType.JoinActive">
+            <summary>
+            加入活动
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumNoticeType.ReplyActive">
+            <summary>
+            活动留言
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumNoticeType.ActiveCreatPhoto">
+            <summary>
+            活动上传图片
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumNoticeType.ReplyAsk">
+            <summary>
+            回答提问
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumNoticeType.CreatGift">
+            <summary>
+            赠送礼物
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumNoticeType.CreatPoke">
+            <summary>
+            打招呼
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumNoticeType.JoinVote">
+            <summary>
+            参与投票
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumNoticeType.InviteJoinSite">
+            <summary>
+            邀请加入了网站
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumNoticeType.SendBox">
+            <summary>
+            短消息
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumNoticeType.SendBook">
+            <summary>
+            留言
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumNoticeType.SetAskBest">
+            <summary>
+            设置问答为最佳答案
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumNoticeType.VipTimeout">
+            <summary>
+            Vip到期
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumNoticeType.Friend">
+            <summary>
+            成为好友
+            </summary>
+        </member>
+        <member name="T:JuSNS.Model.EnumRegister">
+            <summary>
+            注册反回情况
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumRegister.Succeed">
+            <summary>
+            成功
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumRegister.SucceedNotMail">
+            <summary>
+            注册成功，但未通过电子邮件验证
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumRegister.EmailRepeat">
+            <summary>
+            Email已存在
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumRegister.RegInviteCode">
+            <summary>
+            已接受邀请而注册
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumRegister.InvalidCode">
+            <summary>
+            无效的验证码
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumRegister.UnexpectedError">
+            <summary>
+            其他错误
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumRegister.EmailMayNotSend">
+            <summary>
+            用户注册写入数据库后,可能Email未能发送成功
+            </summary>
+        </member>
+        <member name="T:JuSNS.Model.EnumUserState">
+            <summary>
+            会员状态
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumUserState.Register">
+             <summary>
+             刚刚注册
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumUserState.Lock">
+            <summary>
+            用户被锁定
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumUserState.NormalNotEmail">
+            <summary>
+            状态正常，但未通过电子邮件验证
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumUserState.NormalNotMoblie">
+            <summary>
+            状态正常，但未捆绑手机
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumUserState.Normal">
+            <summary>
+            正常状态
+            </summary>
+        </member>
+        <member name="T:JuSNS.Model.EnumFriendInviteMode">
+            <summary>
+            好友邀请方式
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumFriendInviteMode.Email">
+            <summary>
+            email邀请
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumFriendInviteMode.URL">
+            <summary>
+            ulr邀请
+            </summary>
+        </member>
+        <member name="T:JuSNS.Model.EnumLoginState">
+            <summary>
+            用户登录状态
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumLoginState.Err_TimeOut">
+            <summary>
+            超时或未登录
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumLoginState.Err_AdminTimeOut">
+            <summary>
+            管理员超时或未登陆
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumLoginState.Err_AdminLocked">
+            <summary>
+            管理员被锁定
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumLoginState.Err_Locked">
+            <summary>
+            用户被锁定
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumLoginState.Err_UserInexistent">
+            <summary>
+            用户编号不存在
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumLoginState.Err_IPLimited">
+            <summary>
+            用户IP被限制
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumLoginState.Err_NoAuthority">
+            <summary>
+            用户权限不足
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumLoginState.Err_DbException">
+            <summary>
+            发生数据库异常
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumLoginState.Err_CookesERR">
+            <summary>
+            CookesERR
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumLoginState.Succeed">
+            <summary>
+            登录状态正常
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumLoginState.Err_UnActivation">
+            <summary>
+            帐号未(通过电子邮件)激活
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumLoginState.Err_NameOrPwdError">
+            <summary>
+            用户名或密码错误
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumLoginState.Err_NotAdmin">
+            <summary>
+            非管理员
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumLoginState.Err_DurativeLogError">
+            <summary>
+            连续登录错误锁定
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumLoginState.Err_GroupExpire">
+            <summary>
+            会员组超期
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumLoginState.Err_IPChange">
+            <summary>
+            ip发生了变化
+            </summary>
+        </member>
+        <member name="T:JuSNS.Model.EnumEmailSet">
+            <summary>
+            邮件通知设置类型
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumEmailSet.NewLetter">
+            <summary>
+            新私信
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumEmailSet.FriendRequest">
+            <summary>
+            好友请求
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumEmailSet.NewWord">
+            <summary>
+            新留言
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumEmailSet.Greet">
+            <summary>
+            打招呼
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumEmailSet.FriendDescription">
+            <summary>
+            好友描述请求
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumEmailSet.AcceptRequest">
+            <summary>
+            接受你的邀请加入了NetSNS
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumEmailSet.PhotoBeQ">
+            <summary>
+            在照片中被圈
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumEmailSet.PhotoRequest">
+            <summary>
+            收到照片圈人请求
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumEmailSet.PhotoComments">
+            <summary>
+            照片新评论
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumEmailSet.PhotoResponse">
+            <summary>
+            你的照片评论有新回复
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumEmailSet.GroupInvite">
+            <summary>
+            群组邀请
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumEmailSet.ChanageGroupManager">
+            <summary>
+            成为群组管理员
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumEmailSet.GroupJoin">
+            <summary>
+            群组成员申请
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumEmailSet.Response">
+            <summary>
+            主题新回复
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumEmailSet.LogComments">
+            <summary>
+            日志新评论
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumEmailSet.LogResponse">
+            <summary>
+            你的日志评论有新回复
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumEmailSet.ClassNewWord">
+            <summary>
+            班级新留言
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumEmailSet.ClassNewStudent">
+            <summary>
+            班级新同学
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumEmailSet.ShareComments">
+            <summary>
+            分享新评论
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumEmailSet.ShareResponse">
+            <summary>
+            你的分享评论有新回复
+            </summary>
+        </member>
+        <member name="T:JuSNS.Model.EnumPrivacy">
+            <summary>
+            用户的隐私(公开程度)
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumPrivacy.ForWholeSite">
+            <summary>
+            全站可见,完全开放
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumPrivacy.ForFriends">
+            <summary>
+            只有好友可见
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumPrivacy.ForOwner">
+            <summary>
+            仅用户本人
+            </summary>
+        </member>
+        <member name="T:JuSNS.Model.EnumPublics">
+            <summary>
+            请求类型
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumPublics.NoCheck">
+            <summary>
+            不需要审核
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumPublics.Checked">
+            <summary>
+            需要审核
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumPublics.None">
+            <summary>
+            拒绝加入
+            </summary>
+        </member>
+        <member name="T:JuSNS.Model.EnumFriendDetailType">
+            <summary>
+            好友描述类型
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumFriendDetailType.Schoolmate">
+            <summary>
+            同学
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumFriendDetailType.Chum">
+            <summary>
+            室友
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumFriendDetailType.Consortium">
+            <summary>
+            社团/协会
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumFriendDetailType.Forgather">
+            <summary>
+            聚会
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumFriendDetailType.Friend">
+            <summary>
+            朋友
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumFriendDetailType.Folk">
+            <summary>
+            家人/亲戚
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumFriendDetailType.Colleague">
+            <summary>
+            同事
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumFriendDetailType.Business">
+            <summary>
+            商务合作
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumFriendDetailType.Us">
+            <summary>
+            本站
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumFriendDetailType.OtherWebSite">
+            <summary>
+            其他网站
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumFriendDetailType.Other">
+            <summary>
+            其他
+            </summary>
+        </member>
+        <member name="T:JuSNS.Model.EnumMoudle">
+            <summary>
+            权限类型
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumMoudle.Album">
+            <summary>
+            相册
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumMoudle.Group">
+            <summary>
+            群组
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumMoudle.Share">
+            <summary>
+            分享
+            </summary>
+        </member>
+        <member name="T:JuSNS.Model.EnumStudyGrade">
+            <summary>
+            学习阶段
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumStudyGrade.JuniorHigh">
+            <summary>
+            初中
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumStudyGrade.SeniorHigh">
+            <summary>
+            高中
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumStudyGrade.College">
+            <summary>
+            大学
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumStudyGrade.Master">
+            <summary>
+            研究生
+            </summary>
+        </member>
+        <member name="F:JuSNS.Model.EnumStudyGrade.Doctor">
+            <summary>
+            博士
+            </summary>
+        </member>
+        <member name="M:JuSNS.Model.EnumClass.GetEmailNotifyStr">
+            <summary>
+            取得邮件通知的值组合，如1,2,3,15,...
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:JuSNS.Model.SqlConditionInfo">
+            <summary>
+            SQL查询时所用的条件
+            </summary>
+        </member>
+        <member name="M:JuSNS.Model.SqlConditionInfo.#ctor(System.String,System.Object,System.TypeCode)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="paramname">参数名称</param>
+            <param name="paramvalue">参数的值</param>
+            <param name="paramtype">参数类型</param>
+        </member>
+        <member name="P:JuSNS.Model.SqlConditionInfo.ParamName">
+            <summary>
+            参数名称
+            </summary>
+        </member>
+        <member name="P:JuSNS.Model.SqlConditionInfo.ParamValue">
+            <summary>
+            参数的值
+            </summary>
+        </member>
+        <member name="P:JuSNS.Model.SqlConditionInfo.ParamType">
+            <summary>
+            参数类型
+            </summary>
+        </member>
+        <member name="P:JuSNS.Model.SqlConditionInfo.Blur">
+            <summary>
+            1表示前面模糊,2表示后模糊,3表示前后模糊,其余的数字表示精确查询(默认项)
+            </summary>
+        </member>
+    </members>
+</doc>

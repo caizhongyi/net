@@ -1,0 +1,100 @@
+using   System; 
+using   System.Windows.Forms; 
+
+namespace   ScreenSaver 
+{ 
+  public   class   DotNETScreenSaver 
+  { 
+    [STAThread] 
+    static   void   Main(string[]   args)   
+    { 
+      if   (args.Length   >   0) 
+      { 
+        if   (args[0].ToLower().Trim().Substring(0,2)   ==   "/c ") 
+        { 
+          MessageBox.Show( "This   Screen   Saver   has   no   options   you   can   set. ",   ".NET   Screen   Saver ",   MessageBoxButtons.OK,   MessageBoxIcon.Exclamation); 
+        } 
+        else   if   (args[0].ToLower()   ==   "/s ") 
+        { 
+          for   (int   i   =   Screen.AllScreens.GetLowerBound(0);   i   <=   Screen.AllScreens.GetUpperBound(0);   i++)   
+            System.Windows.Forms.Application.Run(new   ScreenSaverForm(i));         
+        } 
+      } 
+      else 
+      { 
+        for   (int   i   =   Screen.AllScreens.GetLowerBound(0);   i   <=   Screen.AllScreens.GetUpperBound(0);   i++)   
+          System.Windows.Forms.Application.Run(new   ScreenSaverForm(i));         
+      } 
+    } 
+  } 
+} 
+
+
+ScreenSaverForm.cs 
+
+using   System; 
+using   System.Drawing; 
+using   System.Windows.Forms; 
+
+namespace   ScreenSaver 
+{ 
+  public   class   ScreenSaverForm   :   System.Windows.Forms.Form 
+  { 
+    private   Point   MouseXY; 
+    private   int   ScreenNumber; 
+
+    public   ScreenSaverForm(int   scrn) 
+    { 
+      InitializeComponent(); 
+      ScreenNumber   =   scrn; 
+    } 
+        private   void   ScreenSaverForm_Load(object   sender,   System.EventArgs   e) 
+    { 
+      this.Bounds   =   Screen.AllScreens[ScreenNumber].Bounds; 
+      Cursor.Hide(); 
+      TopMost   =   true; 
+    } 
+
+    private   void   OnMouseEvent(object   sender,   System.Windows.Forms.MouseEventArgs   e) 
+    { 
+      if   (!MouseXY.IsEmpty) 
+      { 
+        if   (MouseXY   !=   new   Point(e.X,   e.Y)) 
+          Close(); 
+        if   (e.Clicks   >   0) 
+          Close(); 
+      } 
+      MouseXY   =   new   Point(e.X,   e.Y); 
+    } 
+    
+    private   void   ScreenSaverForm_KeyDown(object   sender,   System.Windows.Forms.KeyEventArgs   e) 
+    { 
+      Close(); 
+    } 
+
+    #region   Windows   Form   Designer   generated   code 
+    ///   <summary> 
+    ///   Required   method   for   Designer   support   -   do   not   modify 
+    ///   the   contents   of   this   method   with   the   code   editor. 
+    ///   </summary> 
+    private   void   InitializeComponent() 
+    { 
+    //   
+      //   ScreenSaverForm 
+      //   
+      this.AutoScaleBaseSize   =   new   System.Drawing.Size(5,   13); 
+      this.BackColor   =   System.Drawing.Color.Black; 
+      this.ClientSize   =   new   System.Drawing.Size(292,   273); 
+      this.FormBorderStyle   =   System.Windows.Forms.FormBorderStyle.None; 
+      this.Name   =   "ScreenSaverForm "; 
+      this.Text   =   "ScreenSaver "; 
+      this.KeyDown   +=   new   System.Windows.Forms.KeyEventHandler(this.ScreenSaverForm_KeyDown); 
+      this.MouseDown   +=   new   System.Windows.Forms.MouseEventHandler(this.OnMouseEvent); 
+      this.Load   +=   new   System.EventHandler(this.ScreenSaverForm_Load); 
+      this.MouseMove   +=   new   System.Windows.Forms.MouseEventHandler(this.OnMouseEvent); 
+
+    } 
+    #endregion 
+  } 
+} 
+

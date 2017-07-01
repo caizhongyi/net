@@ -1,0 +1,58 @@
+﻿#parse("_head.html")
+<link href="$templatepath/css/app/shop.css" rel="stylesheet" type="text/css" />
+<div id="snsmenu">
+#parse("_menu.html")
+</div>
+<div id="snsbody">
+    <div id="snshead"><span class="l">$cpagetitle</span></div>
+
+    <div >
+    <div class="itemmenu">
+        <ul>
+            <li><a href="$webpath/app/shop/default$exname">所有$shop</a></li>
+            <li><a href="$webpath/app/shop/default$exname?q=city">同城$shop</a></li>
+            <li><a href="$webpath/app/shop/default$exname?q=rec">推荐$shop</a></li>
+            <li><a href="$webpath/app/shop/default$exname?q=friend">好友的$shop</a></li>
+            <li><a href="$webpath/app/shop/default$exname?q=my">我的$shop</a></li>
+            <li class="lipoke"></li>
+            <li><a href="$webpath/app/shop/list$exname">所有店铺</a></li>
+            <li><a href="$webpath/app/shop/list$exname?q=rec">推荐商铺</a></li>
+            <li><a href="$webpath/app/shop/list$exname?q=city">同城店铺</a></li>
+            <li><a href="$webpath/app/shop/list$exname?q=friend">好友的店铺</a></li>
+            <li class="current"><a href="$webpath/app/shop/list$exname?q=my">我的店铺</a></li>
+            <li class="lipoke"></li>
+            <li><a href="$webpath/app/shop/multebuy$exname">超级团购</a></li>
+        </ul>
+    </div>
+    #if($uid>0)
+    <div class="itemmenu1">
+        <ul>
+            <li><a href="$webpath/app/shop/list$exname?q=my">我的店铺</a></li> 
+            <li class="current"><a href="$webpath/app/shop/news$exname">管理公告</a></li> 
+            <li><a href="$webpath/app/shop/shopnews$exname">发布公告</a></li> 
+        </ul>
+    </div>
+    #end
+    </div>
+     <div id="shopmiddleall">
+           #if($recordcount>0)
+            <div class="shopnews">
+                <ul>
+                #foreach($info in $infolist)
+                <li id="param_$info.id">
+                   <a href="$info.shopnewsurl" class="title" target="_blank">$info.title</a> $info.showop#if($info.showedit)$info.showedit#end <span class="time">$info.time</span>
+                </li>
+                #end
+              </ul>
+              </div>
+              <div class="pages">$pagelist</div>
+        #else
+            <div>还没有记录</div>
+        #end   
+            
+    </div>
+        
+    
+</div>
+
+#parse("_foot.html")

@@ -1,0 +1,52 @@
+﻿#parse("_head.html")
+<link href="$templatepath/css/app/gift.css" rel="stylesheet" type="text/css" />
+<div id="snssysmenu">
+#parse("_menusystem.html")
+</div>
+<div id="snsbody1">
+    <div id="snshead">广告管理</div>
+    <div class="itemmenu">
+        <ul>
+            <li class="current"><a href="ads$exname">广告管理</a></li>
+            <li><a href="ads_add$exname">添加广告</a></li>
+    </ul>
+    </div>
+    
+
+    <div class="system">
+          #if($recordcount>0)
+               <table  id="mtable">
+                <tr>
+                    <th>标题</th>
+                    <th>内容</th>
+                    <th>图片地址</th>
+                    <th>结束日期</th>
+                    <th>广告位</th>
+                    <th>状态</th>
+                    <th style="text-align:center;">操作</th>
+                </tr>
+                #foreach($info in $infolist)
+                <tr id="param_$info.id">
+                    <td><a href="$info.url" target="_blank">$info.title</a></td>
+                    <td>$info.content</td>
+                    <td><a href="$info.bpath/$info.pic" target="_blank">$info.pic</a></td>
+                    <td>$info.EndTime</td>
+                    <td><a href="$templatepath/images/ads/${info.positionType}.jpg" title="点击查看示例位置" target="_blank">$info.positionType</a></td>
+                      <td>$info.islock</td>
+                   <td>
+                    <input  type="button" value="修改" onclick="window.location.href='ads_add$exname?aid=$info.id'" class="btn_blue2" />
+                    <input  type="button" value="删除" onclick="deleteAll($info.id,$uid,'ads');" class="btn_blue2" />
+                    </td>
+                </tr>
+                #end
+                <tr>
+                    <td colspan="8" class="reshow">复制：&lt;script type=&quot;text/javascript&quot; src=&quot;/ads$exname?ptype=广告位&amp;num=调用数量&quot;&gt;&lt;/script&gt;到网页中即可调用广告</td>
+                </tr>
+             </table>
+        #else
+            <div>还没有记录</div>
+        #end               
+    </div>
+    
+</div>
+#parse("_foot.html")

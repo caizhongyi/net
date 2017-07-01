@@ -1,0 +1,4 @@
+1、ChatTemp 文件夹在根目录下(传文件临时查看所用)
+2、其他文件或文件假与使用PowerTalkBox控件的aspx文件同一目录下即可
+3、如果控件的UserToList属性为True时，Global.asax 文件在根目录 Session_End里写，PowerTalkBox.PowerTalk.DeleteUserInfo(Session["Engin_UserID"].ToString());//在Session结束的时候，删除那个人的所有内存记录
+4、如果想更改美工界面，参考“美工人员用.HTML”去更改CSS.CSS文件。

@@ -1,0 +1,40 @@
+<html dir="LTR">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" />
+    <meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5" />
+    <title>ControlIDQueryParam Property</title>
+    <xml>
+    </xml>
+    <link rel="stylesheet" type="text/css" href="MSDN.css" />
+  </head>
+  <body id="bodyID" class="dtBODY">
+    <div id="nsbanner">
+      <div id="bannerrow1">
+        <table class="bannerparthead" cellspacing="0">
+          <tr id="hdr">
+            <td class="runninghead">NeatUpload Documentation</td>
+            <td class="product">
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div id="TitleRow">
+        <h1 class="dtH1">IMultiRequestUploadModule.ControlIDQueryParam Property</h1>
+      </div>
+    </div>
+    <div id="nstext">
+      <p> The name of the query parameter that must be present for all but the final request, and which must contain the control UniqueID that the requests are to be associated with. </p>
+      <div class="syntax">
+        <a href="http://msdn.microsoft.com/library/default.asp?url=/library/en-us/cpref/html/frlrfSystemStringClassTopic.asp">string</a> ControlIDQueryParam {get;}</div>
+      <p>
+      </p>
+      <h4 class="dtH4">Property Value</h4>
+      <p> The name of the query parameter that must be present for all but the final request, and which must contain the control UniqueID that the requests are to be associated with. </p>
+      <h4 class="dtH4">Remarks</h4>
+      <p>For example, if ControlIDQueryParam is "NeatUpload_MultiRequestControlID", then if a request is received with a query string of "NeatUpload_MultiRequestControlID=123ABC", all files or other upload data in the request will be assocated with the control with UniqueID "123ABC". All requests except the final request must also specify the post-back ID in a separate query param whose name is given by the value of <b>PostBackIDQueryParam</b>. The final request must contain the postback ID in one of the following locations: <ul type="disc"><li>in the query parameter named by <b>PostBackIDQueryParam</b></li><li>in the form field named by <b>PostBackIDFieldName</b></li><li>in a file field name prefixed by <b>FileFieldNamePrefix</b></li></ul></p>
+      <h4 class="dtH4">See Also</h4>
+      <p>
+        <a href="Brettle.Web.NeatUpload.IMultiRequestUploadModule.html">IMultiRequestUploadModule Interface</a> | <a href="Brettle.Web.NeatUpload.html">Brettle.Web.NeatUpload Namespace</a></p>
+    </div>
+  </body>
+</html>

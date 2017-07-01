@@ -1,0 +1,5 @@
+bin\Debug\FtpClientDll_cs.dll
+bin\Debug\FtpClientDll_cs.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\FtpClientDll_cs.dll
+obj\Debug\FtpClientDll_cs.pdb

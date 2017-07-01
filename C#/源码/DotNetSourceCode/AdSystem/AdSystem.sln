@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdSystem", "AdSystem\AdSystem.csproj", "{6D3FF0C0-A379-4616-BF6B-3395C37088A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SetWallpaper", "..\Wallpaper\Wallpaper\Wallpaper\SetWallpaper.csproj", "{BB293AFE-B483-49C2-9A0B-9BC9072753B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterceptScreen", "InterceptScreen\InterceptScreen.csproj", "{83D5AC58-DB4E-4F93-94FB-13BD833A848D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6D3FF0C0-A379-4616-BF6B-3395C37088A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D3FF0C0-A379-4616-BF6B-3395C37088A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D3FF0C0-A379-4616-BF6B-3395C37088A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D3FF0C0-A379-4616-BF6B-3395C37088A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB293AFE-B483-49C2-9A0B-9BC9072753B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB293AFE-B483-49C2-9A0B-9BC9072753B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB293AFE-B483-49C2-9A0B-9BC9072753B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB293AFE-B483-49C2-9A0B-9BC9072753B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83D5AC58-DB4E-4F93-94FB-13BD833A848D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83D5AC58-DB4E-4F93-94FB-13BD833A848D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83D5AC58-DB4E-4F93-94FB-13BD833A848D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83D5AC58-DB4E-4F93-94FB-13BD833A848D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

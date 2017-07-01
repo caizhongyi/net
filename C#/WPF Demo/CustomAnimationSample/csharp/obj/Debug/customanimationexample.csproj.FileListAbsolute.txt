@@ -1,0 +1,12 @@
+F:\类库\WPF Demo\CustomAnimationSample\csharp\bin\Debug\CustomAnimations.exe
+F:\类库\WPF Demo\CustomAnimationSample\csharp\bin\Debug\CustomAnimations.pdb
+F:\类库\WPF Demo\CustomAnimationSample\csharp\obj\Debug\ResolveAssemblyReference.cache
+F:\类库\WPF Demo\CustomAnimationSample\csharp\obj\Debug\CustomAnimationExample.g.cs
+F:\类库\WPF Demo\CustomAnimationSample\csharp\obj\Debug\app.g.cs
+F:\类库\WPF Demo\CustomAnimationSample\csharp\obj\Debug\GeneratedInternalTypeHelper.g.cs
+F:\类库\WPF Demo\CustomAnimationSample\csharp\obj\Debug\CustomAnimations_MarkupCompile.cache
+F:\类库\WPF Demo\CustomAnimationSample\csharp\obj\Debug\CustomAnimations_MarkupCompile.lref
+F:\类库\WPF Demo\CustomAnimationSample\csharp\obj\Debug\CustomAnimationExample.baml
+F:\类库\WPF Demo\CustomAnimationSample\csharp\obj\Debug\CustomAnimations.g.resources
+F:\类库\WPF Demo\CustomAnimationSample\csharp\obj\Debug\CustomAnimations.exe
+F:\类库\WPF Demo\CustomAnimationSample\csharp\obj\Debug\CustomAnimations.pdb

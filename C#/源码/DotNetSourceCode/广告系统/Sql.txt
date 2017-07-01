@@ -1,0 +1,9 @@
+202.75.219.210
+sq_dbggcmxt
+
+ Ad_WB.WB_ID, Ad_WB.Ad_ID, AdInfo.Ad_ID AS Expr1, AdInfo.Ad_Type_ID, 
+      AdInfo.Ad_Name, AdInfo.Ad_Url, AdInfo.Ad_ClickNum, AdInfo.Ad_Operation, 
+      AdInfo.Ad_time, AdInfo.Ad_Remark, Client_Wb.Client_ID, Client_Wb.Wb_id AS Expr2, 
+      ClientInfo.Client_ID AS Expr3, ClientInfo.Client_Name, ClientInfo.Client_Sex, 
+      ClientInfo.Client_Phone, ClientInfo.Client_Address, ClientInfo.Client_Register_Time, 
+      ClientInfo.Client_Remark

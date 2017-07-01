@@ -1,0 +1,168 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+	<head>
+		<title>C#发现之旅 ASP.NET演示程序</title>
+		<meta name="GENERATOR" content="Microsoft Visual Studio .NET 7.1">
+		<meta name="ProgId" content="VisualStudio.HTML">
+		<meta name="Originator" content="Microsoft Visual Studio .NET 7.1">
+		<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+		<style type="text/css"> <!-- body { margin-left: 0px; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; background-color: #F0F7FF; }
+	td { font-size: 14px; line-height: 24px; }
+	td.top { font-family: "黑体"; }
+	.bluetxt {color: #003CB0}
+	img { line-height: 24px; }
+	--></style>
+	</head>
+	<body>
+		<table width="100%" border="0" align="center" cellpadding="4" cellspacing="0" background="back1.png"
+			bgcolor="#002271" style="BACKGROUND-POSITION:left center; BACKGROUND-REPEAT:no-repeat">
+			<tr>
+				<td width="200" height="100" align="center"><img src="logo_small.png" width="136" height="72"></td>
+				<td class="top"><font size="6" color="#ffffff"><strong>C#发现之旅 ASP.NET演示程序</strong></font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#ffffff">袁永福 
+							2008-5-15</font></td>
+			</tr>
+		</table>
+		<table width="98%" border="0" align="center" cellpadding="2" cellspacing="2">
+			<tr>
+				<td height="60"><img src="icon/1.gif" width="16" height="16" align="absMiddle">&nbsp;<span class="bluetxt"><font face="宋体">本程序演示了在ASP.NET中使用XML/XSLT，图形开发技术，是C#发现之旅系列课程关于C#操作XML/XSLT，图形开发技术的演示程序。本程序使用C#开发，运行在微软.NET框架1.1的环境下。</font></span></td>
+			</tr>
+			<tr>
+				<td height="20" class="top"><hr width="100%" style="HEIGHT:1px">
+				</td>
+			</tr>
+			<tr>
+				<td height="40" class="top"><font size="5">程序文件和页面说明如下</font></td>
+			</tr>
+			<tr>
+				<td height="20" class="top"><hr width="100%" style="HEIGHT:1px">
+				</td>
+			</tr>
+			<tr>
+				<td><img src="icon/5.gif" width="16" height="16" align="absMiddle">&nbsp;<font face="宋体"><strong><a href="demomdb.mdb">demomdb.mdb</a></strong>
+						是演示程序使用的数据库文件。</font></td>
+			</tr>
+			<tr>
+				<td height="8"></td>
+			</tr>
+			<tr>
+				<td><img src="icon/3.gif" width="16" height="16" align="absMiddle">&nbsp;<font face="宋体"><strong>recordxml.aspx</strong>
+						是查询 Customers 
+						表并用XML显示查询结果的页面，该页面配有一个页面查询参数xsl用于指明显示页面数据使用的XSLT文件名，使用IE浏览器客户端来执行XSLT转换。比如 </font>
+				</td>
+			</tr>
+			<tr>
+				<td height="24">&nbsp;&nbsp;&nbsp;<img src="icon/2.gif" align="absMiddle">&nbsp;<font face="宋体">“<a href="recordxml.aspx">recordxml.aspx</a>” 
+						没有指明XSLT文档，只是简单的用XML显示查询结果。&nbsp;</font></td>
+			</tr>
+			<tr>
+				<td height="24">&nbsp;&nbsp;&nbsp;<img src="icon/2.gif" align="absMiddle">&nbsp;<font face="宋体">“<a href="recordxml.aspx?xsl=table.xml">recordxml.aspx?xsl=table.xml</a>” 
+						指明使用 table.xml 来作为显示数据使用的XSLT文件名。</font></td>
+			</tr>
+			<tr>
+				<td height="24">&nbsp;&nbsp;&nbsp;<img src="icon/2.gif" align="absMiddle">&nbsp;<font face="宋体"><font face="宋体">“<a href="recordxml.aspx?xsl=table2.xml">recordxml.aspx?xsl=table2.xml</a>” 
+							指明使用 table2.xml 来作为显示数据使用的XSLT文件名。</font></font></td>
+			</tr>
+			<tr>
+				<td height="8"></td>
+			</tr>
+			<tr>
+				<td><img src="icon/3.gif" width="16" height="16" align="absMiddle">&nbsp;<font face="宋体"><strong>record.aspx</strong>
+						是查询 Customers 
+						表并生成XML，它有一个页面参数xsl来指定生成页面HTML代码的XSLT文件名，若指定了该XSLT文件名，则在服务器端加载该XSLT文件并进行转换,页面就返回转换结果，比如
+					</font>
+				</td>
+			</tr>
+			<tr>
+				<td height="24">&nbsp;&nbsp;&nbsp;<img src="icon/2.gif" align="absMiddle">&nbsp;<font face="宋体"><font face="宋体">“<a href="record.aspx">record.aspx</a>” 
+							没有指明XSLT文档，只是简单的用XML显示查询结果。&nbsp;</font></font></td>
+			</tr>
+			<tr>
+				<td height="24"><font face="宋体">&nbsp;&nbsp;&nbsp;<img src="icon/2.gif" align="absMiddle">&nbsp;<font face="宋体">“<a href="record.aspx?xsl=table.xml">record.aspx?xsl=table.xml</a>” 
+							指明使用 table.xml 来作为显示数据使用的XSLT文件名。</font></font></td>
+			</tr>
+			<tr>
+				<td height="24"><font face="宋体">&nbsp;&nbsp;&nbsp;<img src="icon/2.gif" align="absMiddle">&nbsp;<font face="宋体"><font face="宋体">“<a href="record.aspx?xsl=table2.xml">record.aspx?xsl=table2.xml</a>” 
+								指明使用 table2.xml 来作为显示数据使用的XSLT文件名。</font></font></font></td>
+			</tr>
+			<tr>
+				<td height="8"></td>
+			</tr>
+			<tr>
+				<td height="24"><font face="宋体">&nbsp;</font><img src="icon/6.gif" align="absMiddle">&nbsp;<font face="宋体"><a href="table.xml"><strong>table.xml</strong></a>
+						是比较简单的显示数据的XSLT文件。</font></td>
+			</tr>
+			<tr>
+				<td height="24"><font face="宋体">&nbsp;</font><img src="icon/6.gif" align="absMiddle">&nbsp;<font face="宋体"><a href="table2.xml"><strong>table2.xml</strong></a>
+						是稍微复杂的显示数据的XSLT文件。你可以添加自己的显示数据使用的XSLT文件。</font></td>
+			</tr>
+			<tr>
+				<td height="24"><font face="宋体">&nbsp;</font><img src="icon/6.gif" align="absMiddle">&nbsp;<font face="宋体"><a href="recordxpath.aspx"><strong>recordxpath.aspx</strong></a>
+						是演示使用XPath检索XML文档的页面。</font></td>
+			</tr>
+			<tr>
+				<td height="24"><font face="宋体">&nbsp;</font><img src="icon/6.gif" align="absMiddle">&nbsp;<font face="宋体"><a href="codexslt.aspx"><strong>codexslt.aspx</strong></a>
+						是使用C#模拟实现XSLT的处理过程，模拟的目标是 table.xml 中的XSLT代码。</font></td>
+			</tr>
+			<tr>
+				<td height="24"><font face="宋体">&nbsp;</font><img src="icon/6.gif" align="absMiddle">&nbsp;<font face="宋体"><a href="pie.aspx"><strong>pie.aspx</strong></a>
+						是演示在ASP.NET中使用图形编程来显示一个带超链接的饼图。</font></td>
+			</tr>
+			<tr>
+				<td height="24"><font face="宋体">&nbsp;</font><img src="icon/6.gif" align="absMiddle">&nbsp;<font face="宋体"><a href="login.aspx"><strong>login.aspx</strong></a>
+						是演示在ASP.NET中使用图形编程来使用验证码技术。</font></td>
+			</tr>
+			<tr>
+				<td height="24"><font face="宋体">&nbsp;</font><img src="icon/6.gif" align="absMiddle">&nbsp;<font face="宋体"><strong><a href="xslcreatecode.aspx">xslcreatecode.aspx</a></strong>
+						<font face="宋体"><font face="宋体">基于XSLT的带插件的代码生成器</font></font></font></td>
+			</tr>
+			<tr>
+				<td height="20" class="top">
+					<HR style="HEIGHT: 1px" width="100%" DESIGNTIMEDRAGDROP="307">
+				</td>
+			</tr>
+			<TR>
+				<td height="40" class="top"><font size="5">GDI+演示程序下载</font></td>
+			</TR>
+			<tr>
+				<td height="20" class="top">
+					<HR style="HEIGHT: 1px" width="100%" DESIGNTIMEDRAGDROP="313">
+				</td>
+			</tr>
+			<tr>
+				<td><p><img src="icon/4.gif" align="absMiddle">&nbsp;<a href="EllipseButtonLib.zip">椭圆形图形按钮源代码（ZIP格式）</a></p>
+					<p><img src="icon/4.gif" align="absMiddle">&nbsp;<a href="CellViewLib.zip">简单数据网格控件源代码（ZIP格式）</a></p>
+					<p><img src="icon/4.gif" align="absMiddle">&nbsp;<a href="PenMarkLib.zip">简单的签名笔迹记录控件源代码（ZIP格式）</a></p>
+				</td>
+			</tr>
+			<tr>
+				<td height="20" class="top">
+					<HR style="HEIGHT: 1px" width="100%" DESIGNTIMEDRAGDROP="307">
+				</td>
+			</tr>
+			<TR>
+				<td height="40" class="top"><font size="5">联系作者</font></td>
+			</TR>
+			<tr>
+				<td height="20" class="top">
+					<HR style="HEIGHT: 1px" width="100%" DESIGNTIMEDRAGDROP="313">
+				</td>
+			</tr>
+			<TR>
+				<TD>
+					<P>姓名&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 袁永福<BR>
+						MSN/电子邮件 <A href="mailto:yyf9989@hotmail.com">yyf9989@hotmail.com</A><BR>
+						QQ&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 28348092<BR>
+						博客网站&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<A href="http://xdesigner.cnblogs.com">http://xdesigner.cnblogs.com</A>
+					</P>
+					<p align=center><font color="red">版权所有，请尊重作者的知识产权。</font></p>
+				</TD>
+			</TR>
+		</table>
+		<table width="100%" border="0" align="center" cellpadding="4" cellspacing="0" background="back1.png"
+			bgcolor="#002271" style="BACKGROUND-POSITION:left center; BACKGROUND-REPEAT:no-repeat">
+			<tr>
+				<td height="10" align="center"></td>
+			</tr>
+		</table>
+	</body>
+</html>

@@ -1,0 +1,10 @@
+bin\Debug\WbSystem.exe
+bin\Debug\WbSystem.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\WbSystem.FormLogin.resources
+obj\Debug\WbSystem.Properties.Resources.resources
+obj\Debug\WbSystem.csproj.GenerateResource.Cache
+obj\Debug\WbSystem.exe
+obj\Debug\WbSystem.pdb
+obj\Debug\WbSystem.FormMain.resources
+obj\Debug\WbSystem.NoticeBarControl.resources

@@ -1,0 +1,57 @@
+﻿
+/*公共部分
+-------------------------------------------------*/
+.czy-easyform-bg{ background-color:#ffffff;filter:alpha(opacity=75);opacity=75;}
+.czy-easyform{ }
+/*边框样式*/
+.czy-easyform .t-border{ background-color:White}
+.czy-easyform .t-border .t-topLeft{ background-image:url(../images/easyform/default/ef_tleft.png); background-repeat:no-repeat;}/*filter:alpha(opacity=20); opacity=0.5;*/
+.czy-easyform .t-border .t-topRight{background-image:url(../images/easyform/default/ef_tright.png); background-repeat:no-repeat;}
+.czy-easyform .t-border .t-topCenter{background-image:url(../images/easyform/default/ef_tcenter.png); background-repeat:repeat-x;}
+.czy-easyform .t-border .t-middleLeft{background-image:url(../images/easyform/default/ef_sleft.png); background-repeat:repeat-y; }
+.czy-easyform .t-border .t-middleRight{background-image:url(../images/easyform/default/ef_sright.png); background-repeat:repeat-y; }
+.czy-easyform .t-border .t-middleCenter{background-image:url(../images/easyform/default/ef_scenter.png);   }
+.czy-easyform .t-border .t-bottomLeft{ background-image:url(../images/easyform/default/ef_bleft.png);background-repeat:no-repeat;}
+.czy-easyform .t-border .t-bottomRight{ background-image:url(../images/easyform/default/ef_bright.png);background-repeat:no-repeat; }
+.czy-easyform .t-border .t-bottomCenter{background-image:url(../images/easyform/default/ef_bcenter.png); background-repeat:repeat-x;}
+/*头部右边样式*/
+.czy-easyform .czy-easyfrom-top{ font-weight:bolder; height:35px; background-image:url(../images/easyform/default/ef_tbg.png);  }
+.czy-easyform .czy-easyform-top .czy-easyform-oper{ overflow:hidden;   }
+.czy-easyform .czy-easyform-top .czy-easyform-oper li{ }
+.czy-easyform .czy-easyform-top .czy-easyform-oper li a{ background-repeat:no-repeat; cursor:pointer; background-position:center; }
+.czy-easyform .czy-easyform-zoom{  display:block; background-image:url(../images/easyform/default/Zoom.png);background-repeat:no-repeat;  background-position:center;}
+.czy-easyform .czy-easyform-narrow{ display:block;background-image:url(../images/easyform/default/Narrow.png);background-repeat:no-repeat;}
+.czy-easyform .czy-easyform-returnDoc{ display:block; background-image:url(../images/easyform/default/RetrunDoc.png);background-repeat:no-repeat;}
+.czy-easyform .czy-easyform-openNewWindow{display:block;  background-image:url(../images/easyform/default/OpenNewWindow.png);background-repeat:no-repeat;}
+.czy-easyform .czy-easyform-close{display:block;  background-image:url(../images/easyform/default/close.gif);background-repeat:no-repeat; }
+/*内容*/
+.czy-easyform .container{}
+.czy-easyform .czy-easyform-content{overflow:hidden; }
+.czy-easyform .czy-easyform-content a:hover{ overflow:hidden;}
+.czy-easyform .czy-easyform-scrollContent{margin:5px;margin-top:0px; border:solid 1px #999999;width:390px;background-color:#fafafa;border:solid 1px #d0d0d0;border-width:0px;/*立体滚动条亮边的颜色（设置滚动条的颜色）*/ 
+overflow-x:auto;/*X轴隐藏*/ overflow-y:auto;/*Y轴设有滚动条*/ 
+/*scrollbar-highlight-color:#ffffff ;/*滚动条空白部分的颜色*//*scrollbar-3d-light-color:#ffffff;/*立体滚动条亮边的颜色（设置滚动条的颜色）*/ 
+/*scrollbar-shadow-color:#ffffff;/*阴影的颜色*/ 
+/*scrollbar-dark-shadow-color:#ffffff;/*立体滚动条强阴影的颜色*/ 
+/*scrollbar-base-color:#ffffff;/*滚动条的基本颜色 */ 
+/*scrollbar-face-color:#ffffff;/*立体滚动条凸出部分的颜色 */ 
+scrollbar-arrow-color:#7f8174;/*上下按钮上三角箭头的颜色 */ SCROLLBAR-FACE-COLOR: #ffffe0;/*立体滚动条凸出部分的颜色 */ 
+SCROLLBAR-HIGHLIGHT-COLOR: #ffffe0; /*滚动条空白部分的颜色*/OVERFLOW: scroll;SCROLLBAR-SHADOW-COLOR: #ccccff;/*阴影的颜色*/ SCROLLBAR-3DLIGHT-COLOR: #ccccff; /*立体滚动条亮边的颜色（设置滚动条的颜色）*/ SCROLLBAR-DARKSHADOW-COLOR: #ffffcc; /*立体滚动条强阴影的颜色*/ 
+}
+
+
+/*filter: Alpha(Opacity=0, FinishOpacity=100, Style=1,startX=0, startY=0, FinishX=0, FinishY=9)
+不透明度（opacity）是唯一需要提供的数值。起始不透明度startingopacity, 
+0到100之间的一个数值，100完全不透明）通常是为过滤器统一设定的不透明度
+水平。终止不透明度（finishOpacity）用于使用设定了另外一个数值的渐变效
+果时。StartX和StartY是渐变效果起始处（为一个不透明度值）被过滤目标的
+坐标，而FinishX和FinishY是为终止处的坐标（FinishOpacity值）。风格
+（style）是渐变所要使用的类型（采用0至3之间的一个数值，0代表均匀渐变，
+1代表线性渐变，2代表放射渐变，3代表直角渐变）。对于背景不固定的图象，
+这种效果最为明显
+*/
+/*
+Filter: DropShadow9color=The color of the drop shadow, OffX=How many
+ pixels Horizontally, OffY=How many pixels Vertically, Positive=What
+ gets shadows, visible of invisible pixels) 
+*/

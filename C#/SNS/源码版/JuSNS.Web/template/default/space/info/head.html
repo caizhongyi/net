@@ -1,0 +1,85 @@
+﻿#parse("_head.html")
+<div id="snsmenu">
+#parse("_menu.html")
+</div>
+<div id="snsbody">
+
+    <script type="text/javascript" src="$webpath/library/js/date.js"></script>
+    <div id="snshead">上传头像</div>
+    #if($startlogin)
+        <div class="itemmenu">
+            <ul>
+                <li><a>第一步(完善基本资料) </a></li>
+                <li class="current"><a>第二步(上传头像)</a></li>
+                <li><a>第三步（增加好友）</a></li>
+            </ul>
+        </div>
+    #else
+    <div class="itemmenu">
+        <ul>
+            <li><a href="profile$exname">基本资料</a></li>
+            <li><a href="nowcity$exname">居住地</a></li>
+            <li class="current"><a href="head$exname">修改头像</a></li>
+            <li><a href="links$exname">联系方式</a></li>
+            <li><a href="edu$exname">教育情况</a></li>
+            <li><a href="work$exname">工作情况</a></li>
+            <li><a href="like$exname">个人爱好</a></li>
+            <li><a href="privacy$exname">隐私设置</a></li>
+        </ul>
+  </div>
+    #end
+
+<div class="hupload">
+<div class="l">
+    <h3>当前头像</h3>
+            <p>&bull; 你可以从你的<a href="$webpath/app/album/HeadAlbum$exname?uid=$uid">头像相册</a>里选择照片。</p>
+            <div style="margin:5px;" class="image">
+            <b>小图片</b><div><img src="$portrait0" alt="小头像" /></div>
+            <b>标准头像：</b><br /><img src="$portrait1" alt="标准头像" /><br />
+            <b>空间显示头像：</b><br />
+            <img src="$portrait2" alt="空间显示头像" />
+            </div>
+</div>
+<div class="l1">
+    <h3>上传头像</h3>
+    <form method="post" action="$webpath/space/info/head$exname?f=$flag" enctype="multipart/form-data" name="uploadpicture" id="uploadpicture" runat="server" onsubmit="return picvalue();">
+        <div  class="pitem">建议使用大头照，不然缩小后可能看不清楚。</div>
+        <div  class="pitem">图片尺寸建议在宽100px ~ 450px。高100px ~ 450px。</div>
+        <div  class="pitem">图片大小及类型：${picsize}。</div>
+        <div class="pitem">
+            <input type="file" name="picture" class="f-text" id="picture" /><input type="hidden" value="$flag" id="hideflag" name="hideflag" />
+        </div>
+        <div class="reshow pitem">上传色情、反动等照片将导致你的账号被删除。</div>
+        <div class="pitem"><input type="submit" class="btn_blue6" value="开始上传头像" />  <input type="button" title="如果您不需要上传头像，只对现在的头像进行裁剪。" onclick="javascript:location.href='$webpath/space/info/head1$exname?f=$flag';" class="btn_blue10" value="请点这里裁剪当前头像"  style="color:Red;font-weight:bold;"/></div>
+    </form>
+    <div class="clearpix margintop20"></div>
+    <h3>最近用过的头像</h3>
+    <div class="listo">
+        <ul>
+            #foreach($head in $headlist)
+                <li id="param${head.id}">
+                    <div class="images center"><a href="javascript:;" onclick="SetHead($head.id,$uid)" title="设为默认头像"><img src="$head.files" /><br />
+                       <a href="javascript:void(0);" onclick="SetHead($head.id,$uid)">设为默认头像</a> | <a  href="javascript:void(0);" onclick="DeleteHead($head.id,$uid)">删除</a>
+                     </div>
+                 </li>
+            #end
+        </ul>
+    </div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+function picvalue()
+{
+    if(document.getElementById("picture").value=="")
+    {
+        alert("请选择图片");return false;
+    } 
+    else
+    {
+        loading();
+        return true;
+    }
+} 
+</script>
+#parse("_foot.html")

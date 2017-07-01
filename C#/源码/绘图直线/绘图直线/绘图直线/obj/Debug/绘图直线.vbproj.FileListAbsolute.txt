@@ -1,0 +1,10 @@
+F:\源码\绘图直线\绘图直线\绘图直线\obj\Debug\绘图直线.exe
+F:\源码\绘图直线\绘图直线\绘图直线\obj\Debug\绘图直线.xml
+F:\源码\绘图直线\绘图直线\绘图直线\obj\Debug\绘图直线.pdb
+F:\源码\绘图直线\绘图直线\绘图直线\bin\Debug\绘图直线.exe
+F:\源码\绘图直线\绘图直线\绘图直线\bin\Debug\绘图直线.pdb
+F:\源码\绘图直线\绘图直线\绘图直线\bin\Debug\绘图直线.xml
+F:\源码\绘图直线\绘图直线\绘图直线\obj\Debug\ResolveAssemblyReference.cache
+F:\源码\绘图直线\绘图直线\绘图直线\obj\Debug\绘图直线.Form1.resources
+F:\源码\绘图直线\绘图直线\绘图直线\obj\Debug\绘图直线.Resources.resources
+F:\源码\绘图直线\绘图直线\绘图直线\obj\Debug\绘图直线.vbproj.GenerateResource.Cache

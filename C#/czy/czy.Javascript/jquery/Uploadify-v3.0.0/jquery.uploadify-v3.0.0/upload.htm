@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title></title>
+<link  type="text/css" href="uploadify.css" rel="Stylesheet"/>
+<script type="text/javascript" src="jquery-1.4.3.js"></script>
+<script type="text/javascript" src="jquery.uploadify.js"></script>
+<script type="text/javascript">
+                $(document).ready(
+					function () {
+						$('#custom_file_upload').uploadify({
+							  'uploader'       : 'uploadify.swf',
+							  'script'         : 'uploadify.php',
+							  'cancelImg'      : 'uploadify-cancel.png',
+							  'folder'         : '/',
+							  'multi'          : true,
+							  'auto'           : false,
+							  'fileExt'        : '*.jpg;*.gif;*.png',
+							  'fileDesc'       : 'Image Files (.JPG, .GIF, .PNG)',
+							  'queueID'        : 'custom-queue',
+							  'queueSizeLimit' : 3,
+							  'simUploadLimit' : 3,
+							  'removeCompleted': false,
+							  'onInit'   : function(){alert("init");},
+							  'onSelectOnce'   : function(event,data) {
+								  $('#status-message').text(data.filesSelected + ' files have been added to the queue.');
+								},
+							  'onAllComplete'  : function(event,data) {
+								  $('#status-message').text(data.filesUploaded + ' files uploaded, ' + data.errors + ' errors.');
+								}
+					});				
+					}
+				 );
+            </script>
+</head>
+<body>
+<div id="status-message"></div>
+<input id="custom_file_upload" type="file" name="Filedata" />
+<input id="file_upload" type="file" name="file_upload" />
+<div id="custom-queue"></div>
+<script type="text/javascript">
+
+				$(function() {
+				$('#file_upload').uploadify({
+  'uploader'  : 'uploadify.swf',
+  'script'    : 'uploadify.php',
+  'cancelImg' : 'uploadify-cancel.png',
+  'folder'    : '/uploads',
+  'removeCompleted' : true
+});				});
+				</script>
+
+  <p>
+      <a href="javascript:$('#custom_file_upload').uploadifyUpload()">上传</a>| 
+      <a href="javascript:$('#custom_file_upload').uploadifyClearQueue()">取消上传</a>
+    </p>
+
+</body>
+</html>

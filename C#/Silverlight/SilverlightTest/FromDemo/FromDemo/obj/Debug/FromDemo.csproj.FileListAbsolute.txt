@@ -1,0 +1,24 @@
+C:\Documents and Settings\Administrator\桌面\FromDemo\FromDemo\Bin\Debug\AppManifest.xaml
+C:\Documents and Settings\Administrator\桌面\FromDemo\FromDemo\Bin\Debug\FromDemo.dll
+C:\Documents and Settings\Administrator\桌面\FromDemo\FromDemo\Bin\Debug\FromDemo.pdb
+C:\Documents and Settings\Administrator\桌面\FromDemo\FromDemo\Bin\Debug\FromDemo.xap
+C:\Documents and Settings\Administrator\桌面\FromDemo\FromDemo\Bin\Debug\TestPage.html
+C:\Documents and Settings\Administrator\桌面\FromDemo\FromDemo\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\桌面\FromDemo\FromDemo\obj\Debug\App.g.cs
+C:\Documents and Settings\Administrator\桌面\FromDemo\FromDemo\obj\Debug\Page.g.cs
+C:\Documents and Settings\Administrator\桌面\FromDemo\FromDemo\obj\Debug\FromDemo.g.resources
+C:\Documents and Settings\Administrator\桌面\FromDemo\FromDemo\obj\Debug\FromDemo.dll
+C:\Documents and Settings\Administrator\桌面\FromDemo\FromDemo\obj\Debug\FromDemo.pdb
+C:\Documents and Settings\Administrator\桌面\FromDemo\FromDemo\obj\Debug\XapCacheFile.xml
+F:\SilverlightTest\FromDemo\FromDemo\Bin\Debug\AppManifest.xaml
+F:\SilverlightTest\FromDemo\FromDemo\Bin\Debug\FromDemo.dll
+F:\SilverlightTest\FromDemo\FromDemo\Bin\Debug\FromDemo.pdb
+F:\SilverlightTest\FromDemo\FromDemo\Bin\Debug\FromDemo.xap
+F:\SilverlightTest\FromDemo\FromDemo\Bin\Debug\TestPage.html
+F:\SilverlightTest\FromDemo\FromDemo\obj\Debug\ResolveAssemblyReference.cache
+F:\SilverlightTest\FromDemo\FromDemo\obj\Debug\App.g.cs
+F:\SilverlightTest\FromDemo\FromDemo\obj\Debug\Page.g.cs
+F:\SilverlightTest\FromDemo\FromDemo\obj\Debug\FromDemo.g.resources
+F:\SilverlightTest\FromDemo\FromDemo\obj\Debug\FromDemo.dll
+F:\SilverlightTest\FromDemo\FromDemo\obj\Debug\FromDemo.pdb
+F:\SilverlightTest\FromDemo\FromDemo\obj\Debug\XapCacheFile.xml

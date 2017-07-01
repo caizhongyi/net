@@ -1,0 +1,1 @@
+﻿document.write("<div style='padding: 3px 0px 3px 4px;'>广告主合作：010-58794151-6588</div><div style='padding: 3px 0px 3px 4px;'>网站主合作：010-58793980-8886</div><div style='padding: 3px 0px 3px 4px;'>广告主客服：010-58794151-8666</div> <div style='padding: 3px 0px 3px 4px;'>网站主客服：010-58793980-8698</div>");

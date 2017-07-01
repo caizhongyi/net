@@ -1,0 +1,14 @@
+C:\Documents and Settings\Administrator\桌面\3DTools-1.01-src\3DTools-1.01-src\Samples\GeneratedTextureCoordinatesDemo\bin\Release\GeneratedTextureCoordinatesDemo.exe
+C:\Documents and Settings\Administrator\桌面\3DTools-1.01-src\3DTools-1.01-src\Samples\GeneratedTextureCoordinatesDemo\bin\Release\GeneratedTextureCoordinatesDemo.pdb
+C:\Documents and Settings\Administrator\桌面\3DTools-1.01-src\3DTools-1.01-src\Samples\GeneratedTextureCoordinatesDemo\bin\Release\3DTools.dll
+C:\Documents and Settings\Administrator\桌面\3DTools-1.01-src\3DTools-1.01-src\Samples\GeneratedTextureCoordinatesDemo\bin\Release\3DTools.pdb
+C:\Documents and Settings\Administrator\桌面\3DTools-1.01-src\3DTools-1.01-src\Samples\GeneratedTextureCoordinatesDemo\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\桌面\3DTools-1.01-src\3DTools-1.01-src\Samples\GeneratedTextureCoordinatesDemo\obj\Release\Window1.baml
+C:\Documents and Settings\Administrator\桌面\3DTools-1.01-src\3DTools-1.01-src\Samples\GeneratedTextureCoordinatesDemo\obj\Release\Window1.g.cs
+C:\Documents and Settings\Administrator\桌面\3DTools-1.01-src\3DTools-1.01-src\Samples\GeneratedTextureCoordinatesDemo\obj\Release\App.g.cs
+C:\Documents and Settings\Administrator\桌面\3DTools-1.01-src\3DTools-1.01-src\Samples\GeneratedTextureCoordinatesDemo\obj\Release\GeneratedTextureCoordinatesDemo_MarkupCompile.cache
+C:\Documents and Settings\Administrator\桌面\3DTools-1.01-src\3DTools-1.01-src\Samples\GeneratedTextureCoordinatesDemo\obj\Release\GeneratedTextureCoordinatesDemo.g.resources
+C:\Documents and Settings\Administrator\桌面\3DTools-1.01-src\3DTools-1.01-src\Samples\GeneratedTextureCoordinatesDemo\obj\Release\GeneratedTextureCoordinatesDemo.Properties.Resources.resources
+C:\Documents and Settings\Administrator\桌面\3DTools-1.01-src\3DTools-1.01-src\Samples\GeneratedTextureCoordinatesDemo\obj\Release\GeneratedTextureCoordinatesDemo.csproj.GenerateResource.Cache
+C:\Documents and Settings\Administrator\桌面\3DTools-1.01-src\3DTools-1.01-src\Samples\GeneratedTextureCoordinatesDemo\obj\Release\GeneratedTextureCoordinatesDemo.exe
+C:\Documents and Settings\Administrator\桌面\3DTools-1.01-src\3DTools-1.01-src\Samples\GeneratedTextureCoordinatesDemo\obj\Release\GeneratedTextureCoordinatesDemo.pdb

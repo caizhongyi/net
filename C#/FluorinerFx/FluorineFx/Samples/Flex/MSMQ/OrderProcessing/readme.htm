@@ -1,0 +1,26 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html DIR="LTR">
+<head>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+</head>
+<body>
+<h2>MSMQ Order Processing sample</h2>
+
+<p>Demonstrates how to configure destinations with the MSMQ Adapter.</p>
+
+<p>
+Before running this sample please create 3 private queues in the Microsoft Management Console:
+</p>
+<p>
+<b>orderqueuein</b> - Flex Producer objects will place orders in this queue (illustrates using messages serialized with BinaryMessageFormatter)
+</p>
+<p>
+<b>orderqueuenotifications</b> - Flex Consumer objects will receive order notification from this queue (illustrates using messages serialized with XmlMessageFormatter). Aditionally illustrates how to filter messages with message selectors.
+</p>
+<p>
+<b>backoffice</b> - Flex Consumer objects will receive order notification from this queue. In the sample the same Flex application subscribes to the queue without using message filtering so messages will be broadcasted to all Consumers subscribed to this destination.
+</p>
+<p>&nbsp;</p>
+<p>The OrderProcessing WinForm application is responsible to read messages from the <b>orderqueuein</b> queue, set the Id property for each OrderVO and send them to the <b>orderqueuein</b> and <b>backoffice</b> queues.</p>
+</body>
+</html>

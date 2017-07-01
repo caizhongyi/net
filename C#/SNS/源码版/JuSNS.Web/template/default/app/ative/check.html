@@ -1,0 +1,12 @@
+﻿#parse("_headno.html")
+<style type="text/css">body{width:auto;}</style>
+ 
+<div>
+    <ul style="margin:0;padding:0;margin-left:10px;">
+        #foreach($info in $infolist)
+        <li id="param_$info.id" style="display:inline;float:left;width:120px;margin-bottom:10px;">
+            <div class="l images center"><a href="$info.spaceurl" target="_blank"><img src="$info.headpic" /><br />$info.truename</div><div class="l"><a href="javascript:;" onclick="checks($info.userid,$info.id,$info.aid,2)">审核</a><br /><a href="javascript:;" onclick="checks($info.userid,$info.id,$info.aid,0)">不通过</a></div>
+        </li>
+        #end
+    </ul>
+</div>

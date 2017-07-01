@@ -1,0 +1,6 @@
+E:\开发\Statistics\ChartLib\ChartExtents\obj\Debug\ResolveAssemblyReference.cache
+E:\开发\Statistics\ChartLib\ChartExtents\bin\Debug\ChartExtents.dll
+E:\开发\Statistics\ChartLib\ChartExtents\bin\Debug\ChartExtents.pdb
+E:\开发\Statistics\ChartLib\ChartExtents\bin\Debug\dotnetCHARTING.dll
+E:\开发\Statistics\ChartLib\ChartExtents\obj\Debug\ChartExtents.dll
+E:\开发\Statistics\ChartLib\ChartExtents\obj\Debug\ChartExtents.pdb

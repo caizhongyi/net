@@ -1,0 +1,10 @@
+bin\Debug\JuSNS.Common.dll
+bin\Debug\JuSNS.Common.pdb
+bin\Debug\Google.GData.Client.dll
+bin\Debug\Google.GData.Contacts.dll
+bin\Debug\Google.GData.Extensions.dll
+bin\Debug\JuSNS.Config.dll
+bin\Debug\JuSNS.Config.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\JuSNS.Common.dll
+obj\Debug\JuSNS.Common.pdb

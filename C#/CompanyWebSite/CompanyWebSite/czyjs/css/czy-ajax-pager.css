@@ -1,0 +1,27 @@
+﻿
+/*公共部分
+-------------------------------------------------*/
+.AjaxPager-Nav{width:800px;margin-top:15px; margin-bottom:15px;color:#888f99;font-size:13px; margin-left:auto; margin-right:auto}
+/*左边分页信息
+--------------------------------------*/
+.AjaxPager-Nav .nav-left{ margin-right:10px; float:left; }
+.AjaxPager-Nav .nav-font{ color:Red; margin-left:2px; margin-right:2px; }
+/* 右边导航
+--------------------------------------*/
+.AjaxPager-Nav  .ajax-pager-content{}
+.AjaxPager-Nav  .ajax-pager-content .nav-prev{background:url(../images/controls/czy-text-bg.gif) repeat-x;  }
+.AjaxPager-Nav  .ajax-pager-content .nav-next{background:url(../images/controls/czy-text-bg.gif) repeat-x;  margin-right:5px;}
+.AjaxPager-Nav  .ajax-pager-content .nav-first{background:url(../images/controls/czy-text-bg.gif) repeat-x;  margin-right:5px; }
+.AjaxPager-Nav  .ajax-pager-content .nav-last{background:url(../images/controls/czy-text-bg.gif) repeat-x; }
+.AjaxPager-Nav  .ajax-pager-content input{height:25px; width:80px; text-align:center;cursor:pointer;color:#888f99;border:solid 1px #9fbbe2; }
+.AjaxPager-Nav  .ajax-pager-content .ajax-parer-list{ list-style-type:none; padding:0px;}/*导航*/
+.AjaxPager-Nav  .ajax-pager-content .ajax-parer-list li{ text-align:center;  float:left;height:25px; width:25px; line-height:25px; border:solid 1px #9fbbe2;  margin-right:5px; margin-left:5px;}
+.AjaxPager-Nav  .ajax-pager-content .ajax-parer-list li a{}
+.AjaxPager-Nav  .ajax-pager-content .ajax-parer-list li a:hover{ background-color:#9fbbe2;  }
+/*非当前页样式
+-----------------------------------------*/
+.AjaxPager-Nav  .ajax-pager-content .nomal{color:#888f99;font-weight:bold; cursor:pointer;}
+/* 当前页样式 
+------------------------------------------*/
+.AjaxPager-Nav  .ajax-pager-content .cur{color:Black;font-weight:bold; cursor:pointer;}
+

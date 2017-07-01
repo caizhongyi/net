@@ -1,0 +1,23 @@
+
+ body{
+	font-size:12px;
+   margin:0px;
+	padding:0px;
+	text-align:center;
+	background: #000000 url(bg.gif);
+	color:#4f4f4f;
+	font-family: Tahoma, Arial;
+	cursor: url(http://www.kyhut.com/styles/J_paper/cursor.ani);
+}
+ p{margin:3px;}
+ img {max-width: 100%;height: auto;}
+ select{
+ font-family: Tahoma, Arial;
+ background: #fff;
+ color: #4f4f4f;
+ }
+ th{background:#D5CBBE;border-bottom:1px solid #795B50}
+ textarea{
+ 	background: #fff;
+	color: #4f4f4f;
+ }

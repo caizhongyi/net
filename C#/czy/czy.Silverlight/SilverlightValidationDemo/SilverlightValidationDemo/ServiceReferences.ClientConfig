@@ -1,0 +1,17 @@
+﻿<configuration>
+    <system.serviceModel>
+        <bindings>
+            <customBinding>
+                <binding name="CustomBinding_ValidationService">
+                    <binaryMessageEncoding />
+                    <httpTransport maxReceivedMessageSize="2147483647" maxBufferSize="2147483647" />
+                </binding>
+            </customBinding>
+        </bindings>
+        <client>
+            <endpoint address="http://localhost:53051/ValidationService.svc"
+                binding="customBinding" bindingConfiguration="CustomBinding_ValidationService"
+                contract="ValidationService.ValidationService" name="CustomBinding_ValidationService" />
+        </client>
+    </system.serviceModel>
+</configuration>

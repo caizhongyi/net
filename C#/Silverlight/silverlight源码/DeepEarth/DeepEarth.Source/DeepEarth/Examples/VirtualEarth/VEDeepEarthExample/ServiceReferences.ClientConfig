@@ -1,0 +1,38 @@
+﻿<configuration>
+  <system.serviceModel>
+    <bindings>
+      <basicHttpBinding>
+        <binding name="BasicHttpBinding_ITokenService" maxBufferSize="2147483647"
+                    maxReceivedMessageSize="2147483647">
+          <security mode="None" />
+        </binding>
+        <binding name="BasicHttpBinding_IGeocodeService" maxBufferSize="2147483647"
+            maxReceivedMessageSize="2147483647">
+          <security mode="None" />
+        </binding>
+        <binding name="BasicHttpBinding_IImageryService" maxBufferSize="2147483647"
+            maxReceivedMessageSize="2147483647">
+          <security mode="None" />
+        </binding>
+        <binding name="BasicHttpBinding_IRouteService" maxBufferSize="2147483647"
+            maxReceivedMessageSize="2147483647">
+          <security mode="None" />
+        </binding>
+      </basicHttpBinding>
+    </bindings>
+    <client>
+      <endpoint address="http://localhost:52640/VEDeepEarthExampleWeb/Services/VETokenService.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_ITokenService"
+                contract="TokenService.ITokenService" name="BasicHttpBinding_ITokenService" />
+      <endpoint address="http://staging.dev.virtualearth.net/webservices/v1/geocodeservice/GeocodeService.svc"
+          binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_IGeocodeService"
+          contract="VEGeocodeService.IGeocodeService" name="BasicHttpBinding_IGeocodeService" />
+      <endpoint address="http://staging.dev.virtualearth.net/webservices/v1/imageryservice/imageryservice.svc"
+          binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_IImageryService"
+          contract="VEImageryService.IImageryService" name="BasicHttpBinding_IImageryService" />
+      <endpoint address="http://staging.dev.virtualearth.net/webservices/v1/routeservice/routeservice.svc"
+          binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_IRouteService"
+          contract="VERouteService.IRouteService" name="BasicHttpBinding_IRouteService" />
+    </client>
+  </system.serviceModel>
+</configuration>

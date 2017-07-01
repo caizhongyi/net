@@ -1,0 +1,130 @@
+﻿#parse("_head.html")
+<link href="$templatepath/css/app/shop.css" rel="stylesheet" type="text/css" />
+<div id="snsmenu">
+#parse("_menu.html")
+</div>
+<div id="snsbody">
+    <div id="snshead"><span class="l">$cpagetitle</span><span class="r"><input id="kwd" name="kwd" value="#if($kwd)$kwd#else搜索$shop#end" type="text" class="f-text w100" onclick="this.value=''" /> <input id="Button1" type="button" value="搜索" class="btn_gray2" onclick="search('goods','$q')" /></span></div>
+
+    <div >
+    <div class="itemmenu">
+        <ul>
+            <li#if($css_null)$css_null#end><a href="$webpath/app/shop/default$exname">所有$shop</a></li>
+            #if($uid>0)
+            <li#if($css_city)$css_city#end><a href="$webpath/app/shop/default$exname?q=city">同城$shop</a></li>
+            #end
+            <li#if($css_rec)$css_rec#end><a href="$webpath/app/shop/default$exname?q=rec">推荐$shop</a></li>
+            #if($uid>0)
+            <li#if($css_friend)$css_friend#end><a href="$webpath/app/shop/default$exname?q=friend">好友的$shop</a></li>
+            <li#if($css_my)$css_my#end><a href="$webpath/app/shop/default$exname?q=my">我的$shop</a></li>
+            #end
+            <li class="lipoke"></li>
+            <li><a href="$webpath/app/shop/list$exname">所有店铺</a></li>
+            <li><a href="$webpath/app/shop/list$exname?q=rec">推荐商铺</a></li>
+            #if($uid>0)
+            <li><a href="$webpath/app/shop/list$exname?q=city">同城店铺</a></li>
+            <li><a href="$webpath/app/shop/list$exname?q=friend">好友的店铺</a></li>
+            <li><a href="$webpath/app/shop/list$exname?q=my">我的店铺</a></li>
+            #end
+            <li class="lipoke"></li>
+            <li><a href="$webpath/app/shop/multebuy$exname">超级团购</a></li>
+        </ul>
+    </div>
+    #if($uid>0)
+    <div class="itemmenu1">
+        <ul>
+            <li class="new"><a href="$webpath/app/shop/new$exname" class="newitem">发起$shop</a></li> 
+            <li class="new"><a href="$webpath/app/shop/new_m$exname" class="newitem">发起团购</a></li> 
+            #if(!$isshop)
+            <li class="new"><a href="$webpath/app/shop/new_shop$exname" class="newitem">店铺入驻</a></li> 
+            #end
+            #if($OpenTrade=="1")
+            <li class="new"><a href="$webpath/app/shop/order$exname" class="newcatitem">我的购物车</a></li> 
+            <li class="new"><a href="$webpath/app/shop/sell$exname" class="newitem">销售记录</a></li> 
+            #end
+        </ul>
+    </div>
+    #end
+    </div>
+        <div id="shopmiddle">
+         #if($recordcount>0)
+            <div class="shop">
+                <ul>
+                #foreach($info in $infolist)
+                <li id="param_$info.id">
+                    <div class="shopphoto">
+                        <a href="$info.goodsurl"><img src="$info.photo" onerror="this.src='$shoppicpath/default.jpg'" /></a>
+                    </div>
+                    <div class="content">
+                        <p>#if($info.isold)<span class="reshow">[二手]</span>#end<a href="$info.goodsurl" class="title">$info.goodsname</a> $info.showop#if($info.showedit)$info.showedit#end$info.showrec</p>
+                        <p>会员价：$info.mprice RMB</p>
+                        <p>分类：<a href="$webpath/app/shop?q=$q&classid=$info.classid">$info.classname</a> </p>
+                        #if($info.multebuy)<p>团购：允许 | 团购人数：$info.multeminnumber人～ $info.multemaxnumber人，团购格：$info.multeprice RMB</p>#end
+                        #if($info.timeout)<p>有效期：$info.timeout</p>#end
+                        <p>更新时间：<span class="time">$info.time </span></p>
+                    </div>
+                    <div class="userpic images">
+                        <a href="$info.spaceurl" target="_blank" title="查看$info.truename的空间"><img src="$info.headpic" /><br />$info.truename</a>
+                    </div>
+                    
+                </li>
+                #end
+              </ul>
+              </div>
+              <div class="pages">$pagelist</div>
+        #else
+            <div>还没有记录</div>
+        #end        
+    </div>
+        <div id="shopright">
+       <div class="title">$classname</div>
+       <div class="classlist">
+        <ul>
+            $classlist
+        </ul>
+       </div>
+       <div class="clearpix">&nbsp;</div>
+       <div class="title">推荐$shop</div>
+          #if($goodscount>0)
+            <div class="reclist">
+                <ul>
+                    #foreach($goods in $goodslist)
+                    <li>
+                        <a href="$goods.goodsurl">$goods.goodsname</a>
+                    </li>
+                    #end
+                </ul>
+            </div>
+        #end
+        
+        <div class="title">推荐店铺</div>
+          #if($shopcount>0)
+            <div class="reclist">
+                <ul>
+                    #foreach($shop in $shoplist)
+                    <li>
+                        <a href="$shop.shopurl">$shop.shopname</a>
+                    </li>
+                    #end
+                </ul>
+            </div>
+        #end
+        
+         <div class="title">推荐团购</div>
+          #if($multecount>0)
+            <div class="reclist">
+                <ul>
+                    #foreach($multe in $multelist)
+                    <li>
+                        <a href="$multe.multeurl">$multe.title</a>
+                    </li>
+                    #end
+                </ul>
+            </div>
+        #end
+
+    </div>
+    
+</div>
+
+#parse("_foot.html")

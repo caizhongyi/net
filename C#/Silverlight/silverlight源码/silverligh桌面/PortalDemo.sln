@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortalDemo", "PortalDemo\PortalDemo.csproj", "{63F15D27-FE74-46FC-9213-1521CF8E11F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortalDemoWeb", "PortalDemoWeb\PortalDemoWeb.csproj", "{9F33B0DF-FE51-419C-B4F6-3928832E570D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{63F15D27-FE74-46FC-9213-1521CF8E11F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63F15D27-FE74-46FC-9213-1521CF8E11F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63F15D27-FE74-46FC-9213-1521CF8E11F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63F15D27-FE74-46FC-9213-1521CF8E11F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F33B0DF-FE51-419C-B4F6-3928832E570D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F33B0DF-FE51-419C-B4F6-3928832E570D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F33B0DF-FE51-419C-B4F6-3928832E570D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F33B0DF-FE51-419C-B4F6-3928832E570D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

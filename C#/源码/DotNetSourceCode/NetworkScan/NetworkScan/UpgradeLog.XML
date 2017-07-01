@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="NetworkScan">
+</Property><Property Name="解决方案文件" Value="C:\Documents and Settings\Administrator\桌面\NetworkScan\NetworkScan\NetworkScan.sln">
+</Property><Property Name="用户选项文件" Value="C:\Documents and Settings\Administrator\桌面\NetworkScan\NetworkScan\NetworkScan.suo">
+</Property><Property Name="Date" Value="2008年10月23日">
+</Property><Property Name="Time" Value="16:24">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="NetworkScan.sln" Description="文件已成功备份为 C:\Documents and Settings\Administrator\桌面\NetworkScan\NetworkScan\Backup\NetworkScan.sln">
+</Event><Event ErrorLevel="0" Project="" Source="NetworkScan.suo" Description="文件已成功备份为 C:\Documents and Settings\Administrator\桌面\NetworkScan\NetworkScan\Backup\NetworkScan.suo">
+</Event><Event ErrorLevel="0" Project="NetworkScan" Source="NetworkScan.csproj" Description="项目文件已成功备份为 C:\Documents and Settings\Administrator\桌面\NetworkScan\NetworkScan\Backup\NetworkScan.csproj">
+</Event><Event ErrorLevel="0" Project="NetworkScan" Source="NetworkScan.csproj.user" Description="项目用户文件成功备份为 C:\Documents and Settings\Administrator\桌面\NetworkScan\NetworkScan\Backup\NetworkScan.csproj.user">
+</Event><Event ErrorLevel="0" Project="NetworkScan" Source="AssemblyInfo.cs" Description="文件已成功备份为 C:\Documents and Settings\Administrator\桌面\NetworkScan\NetworkScan\Backup\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="NetworkScan" Source="Form1.cs" Description="文件已成功备份为 C:\Documents and Settings\Administrator\桌面\NetworkScan\NetworkScan\Backup\Form1.cs">
+</Event><Event ErrorLevel="0" Project="NetworkScan" Source="InternetCS.cs" Description="文件已成功备份为 C:\Documents and Settings\Administrator\桌面\NetworkScan\NetworkScan\Backup\InternetCS.cs">
+</Event><Event ErrorLevel="0" Project="NetworkScan" Source="App.ico" Description="文件已成功备份为 C:\Documents and Settings\Administrator\桌面\NetworkScan\NetworkScan\Backup\App.ico">
+</Event><Event ErrorLevel="0" Project="NetworkScan" Source="Form1.resx" Description="文件已成功备份为 C:\Documents and Settings\Administrator\桌面\NetworkScan\NetworkScan\Backup\Form1.resx">
+</Event><Event ErrorLevel="0" Project="NetworkScan" Source="NetworkScan.csproj" Description="项目已成功转换">
+</Event><Event ErrorLevel="3" Project="NetworkScan" Source="NetworkScan.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="NetworkScan.sln" Description="成功转换解决方案">
+</Event><Event ErrorLevel="3" Project="" Source="NetworkScan.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="NetworkScan" Source="NetworkScan.csproj" Description="扫描完成: 项目文件不需要升级。">
+</Event></UpgradeLog>

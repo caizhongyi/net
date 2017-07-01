@@ -1,0 +1,32 @@
+<html dir="LTR">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" />
+    <meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5" />
+    <title>UploadHttpModule.WaitForUploadToComplete Method</title>
+    <xml>
+    </xml>
+    <link rel="stylesheet" type="text/css" href="MSDN.css" />
+  </head>
+  <body id="bodyID" class="dtBODY">
+    <div id="nsbanner">
+      <div id="bannerrow1">
+        <table class="bannerparthead" cellspacing="0">
+          <tr id="hdr">
+            <td class="runninghead">NeatUpload Documentation</td>
+            <td class="product">
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div id="TitleRow">
+        <h1 class="dtH1">UploadHttpModule.WaitForUploadToComplete Method </h1>
+      </div>
+    </div>
+    <div id="nstext">
+      <p> Waits for the current upload request to finish.</p>
+      <div class="syntax">public static <a href="http://msdn.microsoft.com/library/default.asp?url=/library/en-us/cpref/html/frlrfSystemVoidClassTopic.asp">void</a> WaitForUploadToComplete();</div>
+      <h4 class="dtH4">Remarks</h4>
+                <p> If the UploadHttpModule is being used for the current request, this method will not return until the module has received and processed the entire request. If the UploadHttpModule is not being used for the current request, this method will return immediately. Note: the UploadHttpModule is only used if it has been added in the httpModules section of the Web.config, the neatUpload section's useHttpModule attribute is "true" for the page being requested (which is the default), and the request has a content type of multipart/form-data.</p>
+            <h4 class="dtH4">See Also</h4><p><a href="Brettle.Web.NeatUpload.UploadHttpModule.html">UploadHttpModule Class</a> | <a href="Brettle.Web.NeatUpload.html">Brettle.Web.NeatUpload Namespace</a></p></div>
+  </body>
+</html>

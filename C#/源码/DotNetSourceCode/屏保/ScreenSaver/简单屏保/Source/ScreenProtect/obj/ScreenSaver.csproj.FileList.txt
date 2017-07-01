@@ -1,0 +1,8 @@
+bin\Debug\ScreenProtect.exe
+bin\Debug\ScreenProtect.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\ScreenProtect.Form1.resources
+obj\Debug\ScreenProtect.Properties.Resources.resources
+obj\Debug\ScreenSaver.csproj.GenerateResource.Cache
+obj\Debug\ScreenProtect.exe
+obj\Debug\ScreenProtect.pdb

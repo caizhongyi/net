@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SWFUpload", "SWFUpload\SWFUpload.csproj", "{B7F5E06C-C0D8-4375-8D74-059C957F00B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SWFUploadAPI", "SWFUploadAPI\SWFUploadAPI.csproj", "{5F61E3F1-90F0-4D7A-8C93-0046E698C1BB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B7F5E06C-C0D8-4375-8D74-059C957F00B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7F5E06C-C0D8-4375-8D74-059C957F00B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7F5E06C-C0D8-4375-8D74-059C957F00B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7F5E06C-C0D8-4375-8D74-059C957F00B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F61E3F1-90F0-4D7A-8C93-0046E698C1BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F61E3F1-90F0-4D7A-8C93-0046E698C1BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F61E3F1-90F0-4D7A-8C93-0046E698C1BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F61E3F1-90F0-4D7A-8C93-0046E698C1BB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,144 @@
+﻿#parse("_head.html")
+<div id="snsmenu">
+#parse("_menu.html")
+</div>
+<div id="snsbody">
+    <div id="snshead"><span class="l">$cpagetitle</span><span class="r"><input id="kwd" name="kwd" value="#if($kwd)$kwd#else搜索问题#end" type="text" class="f-text w100" onclick="this.value=''" /> <input id="Button1" type="button" value="搜索" class="btn_gray2" onclick="search('ask','$q')" /></span></div>
+
+    <div >
+    <div class="itemmenu">
+        <ul>
+            <li><a href="$webpath/app/ask/default$exname?q=all">所有问题</a></li>
+            <li><a href="$webpath/app/ask/default$exname">待解决的问题</a></li>
+            <li><a href="$webpath/app/ask/default$exname?q=ok">已解决的问题</a></li> 
+            <li><a href="$webpath/app/ask/default$exname?q=quick">紧急问题</a></li> 
+            <li><a href="$webpath/app/ask/default$exname?q=hight">高分悬赏问题</a></li> 
+            <li><a href="$webpath/app/ask/default$exname?q=my">我的问题</a></li>
+            <li><a href="$webpath/app/ask/default$exname?q=friend">朋友的问题</a></li>
+            <li class="current"><a href="$webpath/app/ask/new$exname">正在提问...</a></li> 
+        </ul>
+        
+    </div>
+    </div>
+    <div id="snsbody-all">
+        <form id="form1" method="post" action="" enctype="multipart/form-data">
+        
+            <div class="pitem">
+                <em>标题</em>
+                <input id="txttitle" name="txttitle" class="f-text" type="text" style="width:60%;" />
+            </div>
+            <div class="pitem">
+                <em>提问内容</em>
+                <textarea id="txtcontent" name="txtcontent" cols="20" rows="2" style="width:60%;height:150px;" class="f-text"></textarea>&nbsp;<span class="reshow">2000个字符以内</span>
+            </div>
+            <div class="pitem">
+                <em>&nbsp;</em>
+                <a href="javascript:;"  title="插入表情" onclick="Interface('txtcontent','$skinstyle')"><img src="$templatepath/images/c.gif" /></a>
+                <a href="javascript:;" title="插入照片" onclick="Uploadphoto();"><img src="$templatepath/images/z.gif" /></a>
+                <span id="showphoto" style="display:none;">
+                    &nbsp; <input id="twitterphoto" name="twitterphoto" type="file" class="f-file" />
+                </span>
+            </div>
+            <div class="pitem">
+                <em>关键字</em>
+                <input id="txtkeywords" name="txtkeywords" class="f-text" type="text" style="width:60%;" />&nbsp;<span class="reshow">多个关键字用“,”分开</span>
+            </div>
+        
+            <div class="pitem">
+                <em>选择分类</em>
+               <select id="classid" name="classid">
+                    <option value="">选择问题</option>
+                    $classlist
+                </select>
+            </div>
+            <div class="pitem">
+                <em>悬赏积分</em>
+                <input id="txtjifen" name="txtjifen" class="f-text" maxlength="3" value="0" onkeyup="isNumber(this)" type="text" style="width:20%;" /> 目前你有<span class="reshow">$mypoint</span>个积分
+            </div>
+            <div class="pitem">
+                <em>设为紧急</em>
+                   <input id="isJinji" name="isJinji" type="checkbox" value="1" />设为紧急问题，将扣除您<span class="reshow">$jjpoint</span>个积分
+            </div>
+            <div class="pitem1">
+                <em>&nbsp;</em>
+                <input id="Button2" type="submit" value="我填写好了" class="btn_blue6" onclick="return checkdata();" />
+                <input id="Submit1" type="reset" value="重新填写" class="btn_gray4" />
+            </div>
+        </form>
+    </div>
+    
+</div>
+
+#parse("_foot.html")
+<script type="text/javascript">
+    function Uploadphoto()
+    {
+        jQuery("#showphoto").toggle();
+    }
+    function checkdata()
+    {
+         var title=jQuery("#txttitle").val();
+         var txtcontent=jQuery("#txtcontent").val();
+         var classid=jQuery("#classid").val();
+         var txtjifen=jQuery("#txtjifen").val();
+         if(title=="")
+         {
+            showErrorResult("请填写标题");
+            document.getElementById("txttitle").focus();
+            return false;
+         }
+         if(txtcontent=="")
+         {
+            showErrorResult("请填写问题内容");
+            document.getElementById("txtcontent").focus();
+            return false;
+         }
+         if(classid=="")
+         {
+            showErrorResult("选择问题分类");
+            document.getElementById("classid").focus();
+            return false;
+         }
+         if(txtjifen=="")
+         {
+            showErrorResult("请填写悬赏积分，不悬赏填写0");
+            document.getElementById("txtjifen").focus();
+            return false;
+         }
+         if(isNaN(txtjifen))
+         {
+            showErrorResult("悬赏积分必须为数字");
+            document.getElementById("txtjifen").focus();
+            return false;
+         }
+         
+         var upoint=$mypoint;
+         var kpoint=Number(txtjifen);
+         var jjpoint=$jjpoint;
+         if(document.getElementById("isJinji").checked)
+         {
+            kpoint=(Number(kpoint)+Number(jjpoint));
+         }
+         if(upoint<kpoint)
+         {
+            showErrorResult("需要"+kpoint+"个积分，你只有"+upoint+"个积分");
+            document.getElementById("classid").focus();
+            return false;
+         }
+         if(kpoint>0)
+         {
+            if (!confirm("提出问题将扣除您"+kpoint+"积分，确定吗？")) 
+            {
+                return false;
+            }
+            else
+            {
+            return true;
+            }
+         }
+         else
+         {
+            return true;
+         }
+    }
+</script>

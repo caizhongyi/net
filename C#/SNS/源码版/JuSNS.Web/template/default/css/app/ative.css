@@ -1,0 +1,182 @@
+﻿#ativemiddleall
+{
+	width:752px;margin:10px 0;float:left;
+	border:1px solid #eeeeee;
+	padding:10px;
+}
+#ativemiddleall .memberlist
+{
+	width:100%;
+	float:left;
+	clear:both;
+	text-align:center;
+}
+#ativemiddleall .memberlist ul
+{
+	margin-left:8px;
+}
+#ativemiddleall .memberlist li
+{
+	width:93px;
+	display:inline;
+	float:left;
+	text-align:center;
+	margin-bottom:15px;
+}
+
+#ativemiddleall .albumlist
+{
+	width:100%;
+	float:left;
+	clear:both;
+	text-align:center;
+}
+#ativemiddleall .albumlist ul
+{
+	margin-left:8px;
+}
+#ativemiddleall .albumlist li
+{
+	width:125px;
+	height:180px;
+	display:inline;
+	float:left;
+	text-align:center;
+	margin-bottom:15px;
+	border-bottom:1px solid #eeeeee;
+}
+#ativemiddleall .albumlist li img
+{
+	padding:2px;border:1px solid #eeeeee;
+	max-height:140px;
+	max-width:110px;
+}
+#ativemiddleall .albumlist li a:hover img
+{
+	padding:1px;border:2px solid #1877BA;
+	max-height:140px;
+	max-width:110px;
+}
+
+#ativemiddle
+{
+	width:498px;margin:10px 0;float:left;
+	border:1px solid #eeeeee;
+	padding:5px;
+}
+#ativemiddle .ative
+{
+	padding:5px 0;
+}
+#ativemiddle .ative ul
+{
+	margin:0;padding:0;
+}
+#ativemiddle .ative li
+{
+	padding:8px 0;
+	display:block;
+	width:99%;
+	clear:both;
+	border-bottom:1px dotted #eeeeee;
+	float:left;
+	margin:5px 0;
+}
+#ativemiddle .ative li .ativephoto
+{
+	float:left;
+	margin-right:8px;
+	padding:5px;
+	overflow:hidden;
+}
+#ativemiddle .ative li .ativephoto img{padding:2px;border:#eeeeee 1px solid;width:80px;max-height:200px;}
+#ativemiddle .ative li .content
+{
+	float:left;
+	width:310px;
+}
+#ativemiddle .ative li .content p{line-height:22px;margin:0;padding:0;}
+#ativemiddle .ative li .content a.title{font-size:14px;font-weight:bold;font-family:微软雅黑;}
+#ativemiddle .ative li .userpic{float:right;text-align:center;width:60px;overflow:hidden;}
+#ativemiddle .infopic
+{
+	float:left;
+	padding:5px;
+	width:155px;
+}
+#ativemiddle .infopic img{max-width:150px;max-height:200px;_width:150px;overflow:hidden;padding:2px;border:1px solid #eeeeee;}
+#ativemiddle .infocontent
+{
+	float:left;
+	width:320px;
+	padding:5px;
+	margin-top:5px;
+}
+#ativemiddle .infocontent p
+{
+	float:left;
+	width:300px;
+	padding:0;
+	margin:0;
+	line-height:22px;
+}
+#ativemiddle .infocontent p em{float:left;width:60px;font-style:normal;color:#999999;}
+#ativemiddle .infocontents
+{
+	float:left;
+	width:480px;
+	padding:5px;
+	margin-top:5px;
+}
+#ativemiddle .infocontents p
+{
+	float:left;
+	width:480px;
+	padding:0;
+	margin:0;
+	line-height:22px;
+}
+#ativemiddle .ativecontent
+{
+	font-weight:bold;font-size:14px;
+	width:98%;
+	float:left;
+	clear:both;
+	border-bottom:1px solid #eeeeee;
+	padding:5px 0;
+	margin-top:10px;
+}
+#ativemiddle .attlist
+{
+	margin:5px;float:left;width:99%;
+	clear:both;
+	text-align:center;
+}
+#ativemiddle .attlist ul{margin:0;padding:0;margin-top:10px;}
+#ativemiddle .attlist li{float:left;width:98px;display:inline;text-align:center;height:100px;}
+#ativemiddle .photolist
+{
+	margin:5px;float:left;width:99%;
+	clear:both;
+	text-align:center;
+}
+#ativemiddle .photolist ul{margin:0;padding:0;margin-top:10px;}
+#ativemiddle .photolist li{float:left;width:120px;display:inline;text-align:center;height:110px;}
+#ativemiddle .photolist li img{max-width:110px;max-height:80px;_width:110px;_height:80px;display:inline;text-align:center;padding:2px;border:1px solid #eeeeee;}
+#ativemiddle .photolist li a:hover img{max-width:110px;max-height:80px;_width:110px;_height:80px;display:inline;text-align:center;padding:2px;border:1px solid #1877BA;}
+
+#ativeright
+{
+	width:240px;margin:10px 0;float:right;line-height:23px;border:1px solid #eeeeee;background-color:#F8F9F9;margin-right:3px;padding:3px 5px;
+}
+#ativeright .title{font-size:14px;font-weight:bold;padding:3px 0;margin:5px 0;color:#3967A5;width:99%;display:block;float:left;margin-left:5px;}
+#ativeright .classlist ul {padding:3px 0 5px 5px;margin:0;margin-left:30px;list-style:decimal }
+#ativeright .classlistq ul {padding:0;margin:0;list-style:none;margin-left:10px; }
+#ativeright .classlistq li {width:76px;float:left;display:inline; text-align:center;height:90px;}
+#ativeright .friendslist ul {padding:3px 0 5px 5px;margin:0;margin-left:30px;list-style:decimal }
+#ativemiddleall .booklist{margin:5px 0;}
+#ativemiddleall .booklist ul{margin:0;padding:0;}
+#ativemiddleall .booklist li{margin:5px 0;padding:5px;border-bottom:1px solid #eeeeee;width:740px;float:left;}
+#ativemiddleall .booklist li .aa{float:left;width:70px;}
+#ativemiddleall .booklist li .bb{float:left;width:640px;}
+.ativetitle{font-size:16px;font-family:微软雅黑;font-weight:bold;}

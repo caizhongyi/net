@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>无标题页</title>
+     <script type="text/javascript" src="../czy-js-all.js"></script>
+    <link rel="stylesheet" href="../czy-css-all.css" type="text/css"/>
+    <script>
+    var sb;
+    var sb1;
+    var sb2;
+    var sb3;
+    var sb4;
+    var sb5;
+    window.onload=function ()
+    {   
+       var list=new Array();
+       for(var i=1;i<23;i++)
+       {
+          list.push("girls/27girls0"+i+".gif");
+       }
+
+       sb=new czyjs.Effect.StoryBoard(
+       {
+          id:"rec",
+          startPoint:{x:0,y:-300},
+          endPoint:{x:0,y:0},
+          delayTime:10,
+          type:"position",
+          speed:10
+       });
+       sb1=new czyjs.Effect.StoryBoard(
+       {
+          id:"rec1",
+          startSize:{w:300,h:400},
+          endSize:{w:0,h:0},
+          delayTime:10,
+          type:"size",
+          speed: 50
+       });
+        sb2=new czyjs.Effect.StoryBoard(
+       {
+          id:"rec2",
+          startOpacity: 80,
+          endOpacity: 10,
+          delayTime:10,
+          type:"opacity",
+          speed:50
+      });
+      sb3 = new czyjs.Effect.StoryBoard(
+       {
+           id: "rec3",
+           startSize: { w: 100, h: 100 },
+           endSize: { w: 400, h:400},
+           position: { x: 100, y: 100 },
+           delayTime: 10,
+           type: "zoom",
+           speed: 50
+       });
+  
+       sb4 = new czyjs.Effect.StoryBoard(
+       {
+           id: "rec4",
+           startPoint: { x: 0, y: 0},
+           endPoint: { x: 400, y: 300 },
+           delayTime: 10,
+           type: "shiftPosition",
+           speed: 10,
+           speedUp:false
+       });
+    
+       
+       sb5 = new czyjs.Effect.StoryBoard(
+       {
+           id: "rec5",
+           arrayImageUrl: list,
+           isReverse: false,
+           isLoop: true,
+           property:"backgroundImage",
+           delayTime: 1000,
+           type: "action"
+       });
+   }
+   //background-image:url(pic/pic0.jpg)
+    </script>
+</head>
+<body>
+<div style=" position:relative; height:40px; margin-top:300px;">
+<div id='rec' style="width:40px; height:40px; background-color:Blue; " onclick="sb.Start();"></div>
+</div>
+<div style=" position:relative; height:40px;">
+<div id='rec1' style="background-color:Green;" onclick="sb1.Start();"></div>
+</div>
+<div style=" position:relative; height:40px;">
+<div id='rec2' style="width:40px; height:40px;background-color:Red;" onclick="sb2.Start();"></div>
+</div>
+<div style=" position:relative; height:40px; margin-left:40px;">
+<div id='rec3' style="background-color:Black;" onclick="sb3.Start();"></div>
+</div>
+<div style=" position:relative; height:40px; ">
+<div id='rec4' style="width:40px; height:40px;background-color:Yellow;" onclick="sb4.Start();"></div>
+</div>
+<div style=" position:relative;  margin-top:400px;  overflow:hidden;  ">
+<div id='rec5' style="width:90px; height:90px;  background-repeat:no-repeat" onclick="sb5.Start();"></div>
+</div>
+ <input id="Button1" type="button" value="stop" onclick="sb5.Stop();" />
+ <input id="Button2" type="button" value="Reverse" onclick="sb5.Reverse();" />
+<div id="res"></div>
+</body>
+</html>

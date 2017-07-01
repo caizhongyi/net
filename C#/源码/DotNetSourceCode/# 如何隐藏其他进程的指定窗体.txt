@@ -1,0 +1,14 @@
+可以先使用API函数FindWindow来找到窗体的句柄。然后使用ShowWindow来隐藏。 
+
+FindWindow的原型是： 
+HWND FindWindow(          LPCTSTR lpClassName, 
+    LPCTSTR lpWindowName 
+); 
+其中lpClassName是窗体注册的类名，lpWindowName是窗口标题名.两个参数可以只设置一个，另一个设为null 
+
+ShowWindow的原型是: 
+BOOL ShowWindow(          HWND hWnd, 
+    int nCmdShow 
+); 
+
+其中hWnd是你要隐藏的窗体的句柄，nCmdShow设为0（即SW_HIDE)就是隐藏. 

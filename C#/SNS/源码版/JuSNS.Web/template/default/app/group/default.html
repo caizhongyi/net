@@ -1,0 +1,68 @@
+﻿#parse("_head.html")
+<div id="snsmenu">
+#parse("_menu.html")
+</div>
+<div id="snsbody">
+    <div id="snshead"><span class="l">$cpagetitle</span><span class="r"><input id="kwd" name="kwd" value="#if($kwd)$kwd#else搜索社群#end" type="text" class="f-text w100" onclick="this.value=''" /> <input id="Button1" type="button" value="搜索" class="btn_gray2" onclick="search('group','$q')" /></span></div>
+
+    <div >
+    <div class="itemmenu">
+        <ul>
+            <li><a href="grouptopic$exname">最新话题</a></li>
+            <li#if($css_null)$css_null#end><a href="$webpath/app/group/default$exname">所有$groupname</a></li>
+            <li#if($css_rec)$css_rec#end><a href="$webpath/app/group/default$exname?q=rec">推荐$groupname</a></li> 
+            #if($uid>0)
+            <li#if($css_join)$css_join#end><a href="$webpath/app/group/default$exname?q=join">我加入的$groupname</a></li>
+            <li#if($css_my)$css_my#end><a href="$webpath/app/group/default$exname?q=my">我的$groupname</a></li>
+            <li#if($css_friend)$css_friend#end><a href="$webpath/app/group/default$exname?q=friend">朋友的$groupname</a></li> 
+            #end
+            #if($islight)
+                <li#if($css_light)$css_light#end><a href="$webpath/app/group/default$exname?q=light" class="light">名人机构$groupname</a></li> 
+            #end
+            <li class="new"><a href="$webpath/app/group/new$exname" class="newitem">创建新群</a></li> 
+        </ul>
+        
+    </div>
+    </div>
+    <div id="snsbody-sec">
+        #if($recordcount>0)
+            <div class="group">
+                <ul>
+                #foreach($info in $infolist)
+                <li id="param_$info.id">
+                    <div class="aa image"><a href="$info.groupurl"><img src="$info.pic" onerror="this.src='$templatepath/images/nopic.gif'" /></a></div>
+                    <div class="bb">
+                        <div class="title"><a href="$info.groupurl">$info.groupname</a> $info.showrec</div>
+                        <div class="nextreshow">创建者：<a href="$info.spaceurl">$info.truename</a></div>
+                        <div class="nextreshow">成员：$info.members人</div>
+                        <div class="nextreshow">创建：$info.time</div>
+                        <div class="nextreshow">类型：<a href="$webpath/app/group/default$exname?classid=$info.classid">$info.classname</a></div>
+                    </div>
+                    <div class="cc">
+                        <ul>
+                            <li><a href="$info.groupurl">浏览$groupname</a></li>
+                            $info.showop
+                        </ul>
+                    </div>
+                </li>
+                #end
+              </ul>
+              </div>
+              <div class="pages">$pagelist</div>
+        #else
+            <div>还没有记录</div>
+        #end        
+    </div>
+    <div id="snsbody-right">
+        <div class="hdtitle1">按分类查看</div>
+        <div class="hdcontent1">
+            <ul>
+            <li><a href="$webpath/app/group/default$exname?q=$q">全部分类</a></li>
+                $classlist
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+#parse("_foot.html")

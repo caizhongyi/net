@@ -1,0 +1,165 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML style="WIDTH: 450px; HEIGHT: 200px"><HEAD><TITLE>插入表格</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=utf-8">
+<STYLE>HTML {
+	FONT-SIZE: 9pt; FONT-FAMILY: "宋体"
+}
+BODY {
+	FONT-SIZE: 9pt; FONT-FAMILY: "宋体"
+}
+BUTTON {
+	FONT-SIZE: 9pt; FONT-FAMILY: "宋体"
+}
+DIV {
+	FONT-SIZE: 9pt; FONT-FAMILY: "宋体"
+}
+INPUT {
+	FONT-SIZE: 9pt; FONT-FAMILY: "宋体"
+}
+SELECT {
+	FONT-SIZE: 9pt; FONT-FAMILY: "宋体"
+}
+TD {
+	FONT-SIZE: 9pt; FONT-FAMILY: "宋体"
+}
+FIELDSET {
+	FONT-SIZE: 9pt; FONT-FAMILY: "宋体"
+}
+</STYLE>
+
+<SCRIPT>
+
+// if we pass the "window" object as a argument and then set opener to
+// equal that we can refer to dialogWindows and popupWindows the same way
+opener = window.dialogArguments;
+
+var _editor_url = opener._editor_url;
+var objname     = location.search.substring(1,location.search.length);
+var config      = opener.document.all[objname].config;
+var editor_obj  = opener.document.all["_" +objname+  "_editor"];
+var editdoc     = editor_obj.contentWindow.document;
+
+function _CloseOnEsc() {
+  if (event.keyCode == 27) { window.close(); return; }
+}
+
+//window.onerror = HandleError
+
+function HandleError(message, url, line) {
+  var str = "有错误发生如果不明白请咨询www.xydw.com" + "\n\n"
+  + "Error: " + line + "\n" + message;
+  alert(str);
+//  window.close();
+  return true;
+}
+
+function Init() {
+  document.body.onkeypress = _CloseOnEsc;
+}
+
+function _isValidNumber(txtBox) {
+  var val = parseInt(txtBox);
+  if (isNaN(val) || val < 0 || val > 9999) { return false; }
+  return true;
+}
+
+function btnOKClick() {
+  var curRange = editdoc.selection.createRange();
+
+  // error checking
+  var checkList = ['rows','cols','border','cellspacing','cellpadding'];
+  for (var idx in checkList) {
+    var fieldname = checkList[idx];
+    if (document.all[fieldname].value == "") {
+      alert("你必须输入 '" +fieldname+ "' 的值!");
+      document.all[fieldname].focus();
+      return;
+    }
+    else if (!_isValidNumber(document.all[fieldname].value)) {
+      alert("只能输入0-999的数字 '" +fieldname+ "'!");
+      document.all[fieldname].focus();
+      return;
+    }
+  }
+
+  // delete selected content (if applicable)
+  if (editdoc.selection.type == "Control" || curRange.htmlText) {
+
+    if (!confirm("覆盖文件内容？")) { return; }
+
+    curRange.execCommand('Delete');
+    curRange = editdoc.selection.createRange();
+  }
+
+
+  // create table
+  var table = '<table border="' +document.all.border.value+ '"'
+            + ' cellspacing="' +document.all.cellspacing.value+ '"'
+            + ' cellpadding="' +document.all.cellpadding.value+ '"'
+            + ' width="' +document.all.width.value + document.all.widthExt.value+ '"'
+            + ' align="' +document.all.alignment.value+ '">\n';
+
+  for (var x=0; x<document.all.rows.value; x++) {
+    table += " <tr>\n";
+    for (var y=0; y<document.all.cols.value; y++) {
+      table += "  <td></td>\n";
+    }
+    table += " </tr>\n";
+  }
+  table += "</table>\n";
+
+  // insert table
+  opener.editor_insertHTML(objname, table);
+
+
+  // close popup window
+  window.close();
+}
+</SCRIPT>
+
+<META content="MSHTML 6.00.3790.2759" name=GENERATOR></HEAD>
+<BODY id=bdy 
+style="BACKGROUND: buttonface; MARGIN: 10px; COLOR: windowtext; BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none" 
+scroll=no onload=Init()>
+<TABLE style="MARGIN: 0px 0px 8px" cellSpacing=0 cellPadding=0 border=0>
+  <TBODY>
+  <TR>
+    <TD>行: &nbsp;</TD>
+    <TD><INPUT style="WIDTH: 50px" maxLength=4 value=4 name=rows></TD></TR>
+  <TR>
+    <TD>列:</TD>
+    <TD><INPUT style="WIDTH: 50px" maxLength=4 value=3 name=cols></TD>
+    <TD width=10>&nbsp;</TD>
+    <TD>宽度: &nbsp;</TD>
+    <TD><INPUT style="WIDTH: 50px" maxLength=4 value=100 name=width> <SELECT 
+      name=widthExt> <OPTION value="">像素</OPTION> <OPTION value=% 
+        selected>百分比</OPTION></SELECT> </TD></TR></TBODY></TABLE>
+<FIELDSET style="WIDTH: 1%; TEXT-ALIGN: center"><LEGEND>溢出</LEGEND>
+<TABLE cellSpacing=6 cellPadding=0 border=0>
+  <TBODY>
+  <TR>
+    <TD height=21>对齐:</TD>
+    <TD><SELECT size=1 name=alignment> <OPTION value="" selected>默认</OPTION> 
+        <OPTION value=left>左</OPTION> <OPTION value=right>右</OPTION> <OPTION 
+        value=textTop>文本顶端</OPTION> <OPTION value=absMiddle>绝对中间</OPTION> 
+        <OPTION value=baseline>底边</OPTION> <OPTION value=absBottom>绝对底部</OPTION> 
+        <OPTION value=bottom>底部</OPTION> <OPTION value=middle>中间</OPTION> 
+        <OPTION value=top>顶端</OPTION></SELECT> </TD></TR>
+  <TR>
+    <TD><NOBR>边框大小:</NOBR></TD>
+    <TD><INPUT style="WIDTH: 100%" size=4 value=1 
+name=border></TD></TR></TBODY></TABLE></FIELDSET> 
+<FIELDSET style="WIDTH: 1%; TEXT-ALIGN: center"><LEGEND>空隙</LEGEND>
+<TABLE cellSpacing=6 cellPadding=0 border=0>
+  <TBODY>
+  <TR>
+    <TD><NOBR>间距:</NOBR></TD>
+    <TD><INPUT style="WIDTH: 50px" maxLength=4 value=1 name=cellspacing></TD></TR>
+  <TR>
+    <TD><NOBR>填充:</NOBR></TD>
+    <TD><INPUT style="WIDTH: 50px" maxLength=4 value=2 
+  name=cellpadding></TD></TR></TBODY></TABLE></FIELDSET> 
+<DIV style="LEFT: 340px; POSITION: absolute; TOP: 16px"><BUTTON 
+style="MARGIN: 0px 0px 3px; WIDTH: 7em; HEIGHT: 2.2em" onclick=btnOKClick() 
+type=submit>确认</BUTTON><BR><BUTTON style="WIDTH: 7em; HEIGHT: 2.2em" 
+onclick=window.close(); type=reset>退出</BUTTON> </DIV></BODY></HTML>

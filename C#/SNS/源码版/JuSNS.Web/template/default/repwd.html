@@ -1,0 +1,33 @@
+﻿#parse("_head.html")
+<div style="text-align:left;width:450px;margin:30px auto 10px auto;">
+<div class="logins">
+<div class="login_box">
+    <div class="pitem1 reshow strong">找回密码</div>
+    <div class="line"></div>
+    <form action="" id="form1" method="post">
+        <div class="pitem1"><em>注册的邮件：</em>
+        <input type="text" name="email" id="email"   value=""  class="f-text" style="width:250px;" />
+        </div>
+        <div class="pitem1"><em>&nbsp;</em><input type="submit" name="button1" id="SubmitSend" class="btn_gray4" onclick="return checkdata();" value="找回密码"/> 
+        </div>
+    </form>
+</div>
+</div>
+</div>
+
+ 
+#parse("_foot.html")
+<script type="text/javascript">
+    function checkdata()
+    {
+        var email=jQuery("#email").val();
+        if(isEmail(email))
+        {
+                 showErrorResult("填写正确的电子邮件");return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
+</script>

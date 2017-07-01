@@ -1,0 +1,6 @@
+C:\Documents and Settings\Administrator\桌面\SilverlightApplication2\WcfService1\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\桌面\SilverlightApplication2\WcfService1\bin\WcfService1.dll
+C:\Documents and Settings\Administrator\桌面\SilverlightApplication2\WcfService1\bin\WcfService1.pdb
+C:\Documents and Settings\Administrator\桌面\SilverlightApplication2\WcfService1\obj\Debug\WcfService1.dll
+C:\Documents and Settings\Administrator\桌面\SilverlightApplication2\WcfService1\obj\Debug\WcfService1.pdb
+C:\Documents and Settings\Administrator\桌面\SilverlightApplication2\WcfService1\bin\System.ServiceModel.PollingDuplex.dll

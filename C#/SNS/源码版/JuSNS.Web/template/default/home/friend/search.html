@@ -1,0 +1,142 @@
+﻿#parse("_head.html")
+<div id="snsmenu">
+#parse("_menu.html")
+</div>
+<div id="snsbody">
+
+    <div id="snshead">搜索好友</div>
+    <div class="itemmenu">
+        <ul>
+            <li><a href="../friend/default$exname">我的好友</a></li>
+            <li><a href="dyn$exname">好友动态设置</a></li>
+            <li><a href="visit$exname">来访者</a></li>
+            <li><a href="city$exname?q=city">同城</a></li>
+            <li><a href="pfriend$exname">可能认识的人</a></li>
+            <!--<li><a href="city$exname?q=ram">找有缘人</a></li>-->
+            <li class="current"><a href="search$exname">搜索朋友</a></li>
+            <li><a href="att$exname">关注我的人</a></li>
+            <li><a href="invite$exname">邀请朋友加入</a></li>
+        </ul>
+  </div>   
+
+    <div class="pitem">
+   
+        用户：<input id="keys" name="keys" type="text" class="f-text" title="用户名或姓名" value="$keys" />
+        有照片：<input id="IsHead" name="IsHead" type="checkbox" $isheadcheck />
+        地区：<select name="SlctProvince" id="SlctProvince" onchange="ChangeProv();">
+                <option value="0" selected="selected">选择省份</option>
+                ${province}
+                </select>
+                <select name="SlctCity" id="SlctCity" style="display: none;">
+                </select>
+         年龄：       
+         <select name="selBegin" id="selBegin" >
+         <option value="0" selected="selected">不限</option>
+         $beginyears
+         </select> 
+         ~ 
+         <select name="selEnd" id="selEnd" runat="server" >
+         <option value="0" selected="selected">不限</option>
+          $endyears
+         </select>
+         性别：<input type="radio" id="rad" name="sexs" value="0" $check0 />男  
+                  <input type="radio" id="rad1" name="sexs" value="1" $check1 />女  
+                  <input type="radio" id="rad2" name="sexs" value="-1" $check_1 />不限 
+            <input type="button" class="btn_gray2" id="networkFormSubmit" value="查找" onclick="Void();" /> 
+        
+    </div>
+
+    #if($recordcount>0)
+    
+        <div class="list">
+            <ul>
+                #foreach($sea in $sealist)
+                    <li id="Li1">
+                    <div class="l images center"><a href="$sea.spaceurl"><img src="$sea.userhead" /><br />${sea.truename}</a><br />${sea.sexs}</div>
+                    <div class="r">
+                        #if($sea.isfriend==false)
+                        <div><a href="javascript:void(0);" onclick="addfriend($sea.userid,'$sea.truename',$uid)" class="sicon-friend">加为好友</a></div>
+                        #end
+                        <div><a href="javascript:poke($sea.userid,'$sea.truename',$uid)" class="sicon-poke">招呼</a> </div>
+                        <div><a href="javascript:mail($sea.userid,$uid)" title="给ta发消息" class="sicon-mail">消息</a></div>
+                     </div>
+                     </li>
+                #end
+            </ul>
+        </div>    
+    
+
+        <div class="pages">$pagelist</div>
+    #else
+        <div>还没有记录</div>
+    #end        
+
+<div>
+
+</div>
+</div>
+<script type="text/javascript">
+function Void()
+{
+    var tx=0;
+    var sex=-1;
+    if(document.getElementById("IsHead").checked)
+    {
+       tx=1; 
+    }
+    if(document.getElementById("rad").checked)
+    {
+       sex=0; 
+    }
+    else if(document.getElementById("rad1").checked)
+    {
+       sex=1; 
+    }
+    var pro=0;
+    if(jQuery("#SlctProvince").val()!="")
+    {
+        pro=jQuery("#SlctProvince").val();
+    }
+    var city=0;
+    if(jQuery("#SlctCity").val()!=null)
+    {
+        city=jQuery("#SlctCity").val();
+    }
+    window.location.href="../friend/Search$exname?keys="+escape(jQuery("#keys").val())+"&SlctProvince="+pro+"&SlctCity="+city+"&selBegin="+jQuery("#selBegin").val()+"&selEnd="+jQuery("#selEnd").val()+"&Sex="+sex+"&IsHead="+tx;
+}
+   var arryprv = new Array($cityarray);
+    function ChangeProv() 
+    {
+        var objcity = document.getElementById('SlctCity');
+        var s = document.getElementById("SlctProvince").options[document.getElementById("SlctProvince").selectedIndex].value;
+        if(s=="0")
+        {
+            jQuery("#SlctCity").hide();return;
+        }
+        objcity.options.length = 0;
+        objcity.style.display = '';
+        var optn = document.createElement('option');
+        var selvalue=$selvalue;
+        var m=0;
+        for(var i=0;i<arryprv.length;i++)
+        {
+            var arr = arryprv[i];
+            if(arr[0] == s)
+            {
+                var opt = document.createElement('option');
+                opt.value = arr[1];
+                opt.innerHTML = arr[2];
+                objcity.appendChild(opt);
+                if(arr[1]==selvalue)
+                {
+                    objcity.options[m].selected=true;
+                }
+                m++;
+            }
+        }
+    }
+    
+    ChangeProv();
+    </script>
+
+#parse("_foot.html")

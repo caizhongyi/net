@@ -1,0 +1,10 @@
+F:\Library\WPF Demo\Behaviors\ReflectionSample\ReflectionSample\ReflectionSample\bin\Debug\ReflectionSample.exe
+F:\Library\WPF Demo\Behaviors\ReflectionSample\ReflectionSample\ReflectionSample\bin\Debug\ReflectionSample.pdb
+F:\Library\WPF Demo\Behaviors\ReflectionSample\ReflectionSample\ReflectionSample\obj\Debug\ResolveAssemblyReference.cache
+F:\Library\WPF Demo\Behaviors\ReflectionSample\ReflectionSample\ReflectionSample\obj\Debug\MainWindow.baml
+F:\Library\WPF Demo\Behaviors\ReflectionSample\ReflectionSample\ReflectionSample\obj\Debug\MainWindow.g.cs
+F:\Library\WPF Demo\Behaviors\ReflectionSample\ReflectionSample\ReflectionSample\obj\Debug\App.g.cs
+F:\Library\WPF Demo\Behaviors\ReflectionSample\ReflectionSample\ReflectionSample\obj\Debug\ReflectionSample_MarkupCompile.cache
+F:\Library\WPF Demo\Behaviors\ReflectionSample\ReflectionSample\ReflectionSample\obj\Debug\ReflectionSample.g.resources
+F:\Library\WPF Demo\Behaviors\ReflectionSample\ReflectionSample\ReflectionSample\obj\Debug\ReflectionSample.exe
+F:\Library\WPF Demo\Behaviors\ReflectionSample\ReflectionSample\ReflectionSample\obj\Debug\ReflectionSample.pdb

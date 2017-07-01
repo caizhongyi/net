@@ -1,0 +1,59 @@
+﻿#parse("_head.html")
+<div style="text-align:left;width:450px;margin:30px auto 10px auto;">
+<div class="logins">
+<div class="login_box">
+    <div class="pitem1 reshow strong">$cpagetitle</div>
+    <div class="line"></div>
+    #if($type==0)
+        #if($err)
+        $err
+        #else
+        <form action="" id="form1" method="post">
+            <div class="pitem1"><em>输入新密码：</em>
+            <input type="password" name="newpassword" id="newpassword"   value=""  class="f-text" style="width:250px;" />
+            </div>
+            <div class="pitem1"><em>确认新密码：</em>
+            <input type="password" name="confimnewpassword" id="confimnewpassword"   value=""  class="f-text" style="width:250px;" />
+            </div>
+            <div class="pitem1"><input type="submit" name="button1" id="SubmitSend" class="btn_gray4" onclick="return checkdata();" value="修改密码"/> 
+            </div>
+        </form>
+        #end
+    #elseif($type==1)
+        #if($err)
+            <span style="color:Red;font-size:16px;font-family:微软雅黑;font-weight:bold;margin-top:15px;width:80%;">$err</span>
+        #else
+            <span style="color:Green;font-size:16px;font-family:微软雅黑;font-weight:bold;margin-top:15px;width:80%;">激活邮件“$email”成功</span>
+        #end
+     #else
+        other
+    #end
+</div>
+</div>
+</div>
+
+ 
+#parse("_foot.html")
+
+<script type="text/javascript">
+    function checkdata()
+    {
+        var newpassword=jQuery("#newpassword").val();
+        var confimnewpassword=jQuery("#confimnewpassword").val();
+        if(newpassword=="")
+        {
+           showErrorResult("填写密码");return false;
+        }
+        else
+        {
+          if(newpassword!=confimnewpassword)
+          {
+               showErrorResult("两次密码不一致");return false;
+          }
+          else
+          {
+                return true;
+            }
+        }
+    }
+</script>

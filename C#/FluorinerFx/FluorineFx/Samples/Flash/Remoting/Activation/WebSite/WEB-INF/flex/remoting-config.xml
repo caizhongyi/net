@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service id="remoting-service"
+    class="flex.messaging.services.RemotingService"
+    messageTypes="flex.messaging.messages.RemotingMessage">
+
+	<!-- DO NOT CHANGE <adapters> SECTION-->
+    <adapters>
+        <adapter-definition id="dotnet" class="FluorineFx.Remoting.RemotingAdapter" default="true"/>
+    </adapters>
+
+    <default-channels>
+        <channel ref="my-amf"/>
+    </default-channels>
+
+  <destination id="fluorine1">
+    <properties>
+      <source>ServiceLibrary.ApplicationScopeService</source>
+      <scope>application</scope>
+    </properties>
+  </destination>
+
+  <destination id="fluorine2">
+    <properties>
+      <source>ServiceLibrary.SessionScopeService</source>
+      <scope>session</scope>
+    </properties>
+  </destination>
+
+</service>

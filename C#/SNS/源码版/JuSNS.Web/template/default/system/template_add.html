@@ -1,0 +1,58 @@
+﻿#parse("_head.html")
+<div id="snsmenu">
+#parse("_menusystem.html")
+</div>
+<div id="snsbody">
+    <div id="snshead">个人空间模板管理</div>
+
+    <div class="itemmenu">
+        <ul>
+          <li><a href="sys$exname">系统设置</a></li>
+            <li><a href="area$exname">地区</a></li> 
+            <li><a href="charge$exname">充值管理</a></li> 
+            <li class="current"><a href="template$exname">模板</a></li> 
+            <li><a href="indexconfig$exname">首页配置</a></li> 
+            <li><a href="uploads$exname">上传图片配置管理</a></li> 
+            <li><a href="start$exname">初始化</a></li> 
+            <li><a href="help$exname">帮助管理</a></li> 
+
+        </ul>
+  </div>
+  <div class="itemmenu1">
+        <ul>
+            <li><a href="template$exname">模板管理</a></li>
+            <li class="current"><a href="template_add$exname">$cpagetitle</a></li> 
+        </ul>
+  </div>
+  
+  <div class="system">
+        <form id="form1" action="" method="post">
+            <div class="pitem">
+                <em>模板名称</em><input id="TName" name="TName" value="#if($TName)$TName#end" class="f-text" style="width:200px;" type="text" />
+            </div>
+            <div class="pitem">
+                <em>模板CSS目录</em>$templatepath/css/space/<input id="TEName" name="TEName" value="#if($TEName)$TEName#end" style="width:45px;"  class="f-text" type="text" />.css
+            </div>
+            <div class="pitem">
+                <em>需要点数</em><input id="IPoint" name="IPoint" value="#if($IPoint)$IPoint#end" class="f-text" style="width:200px;"  type="text" />
+            </div>
+            <div class="pitem">
+                <em>需要$gpoint</em><input id="GPoints" name="GPoints" value="#if($GPoint)$GPoint#end" style="width:200px;"  class="f-text" type="text" />
+            </div>            
+            <div class="pitem">
+                <em>使用次数</em><input id="UseNumber" name="UseNumber" value="#if($UseNumber)$UseNumber#end" style="width:200px;"  class="f-text" type="text" />
+            </div>            
+            <div class="pitem">
+                <em>锁定</em><input id="islock" name="islock" value="1"  type="checkbox" #if($IsLock==1)checked#end /> 是
+            </div>            
+            
+            <div class="pitem">
+                <em>&nbsp;</em><input id="Text2" name="GPoint" value="保存" type="submit" class="btn_blue2" />
+                #if(!$GPoint)<span class="reshow">请在$templatepath/images/space/模板CSS目录存放图片缩放和浏览样式template.jpg和template_b.jpg文件</span>#end
+            </div>
+        </form>
+  </div>
+ 
+         
+    </div>
+#parse("_foot.html")

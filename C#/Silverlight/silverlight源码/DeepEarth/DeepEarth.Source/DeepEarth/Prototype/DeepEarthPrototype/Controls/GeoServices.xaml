@@ -1,0 +1,18 @@
+﻿<UserControl
+	x:Class="DeepEarthPrototype.Controls.GeoServices"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d">
+	
+	<Grid x:Name="LayoutRoot" >
+		<StackPanel x:Name="_OrientationPanel" Orientation="Vertical"  >
+            <Button x:Name="ToggleDevPins" Content="Toggle DevPins" Margin="3,3,3,3" ToolTipService.ToolTip="Click show or hide developer pins" Style="{StaticResource StandardButton}"/>
+			<Button x:Name="ZoomToLocation" Content="Zoom To Brisbane" Margin="3,3,3,3" ToolTipService.ToolTip="Zoom in to the city of Brisbane, Australia" Style="{StaticResource StandardButton}"/>
+			<Button x:Name="AddPolygon" Content="Add Geometry" Margin="3,3,3,3" ToolTipService.ToolTip="Add a Polygon to Center of the MapControl" Style="{StaticResource StandardButton}"/>
+			<Button x:Name="Rotate" Content="Rotate" Margin="3,3,3,3" ToolTipService.ToolTip="Rotate Map " Style="{StaticResource StandardButton}"/>
+		</StackPanel>
+	</Grid>
+
+</UserControl>

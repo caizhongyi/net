@@ -1,0 +1,11 @@
+﻿@charset "utf-8";
+* {
+	margin: 0px;
+	padding: 0px;
+}
+/* download by http://www.codefans.net */
+body {
+	margin: 50px;
+	font-family: Arial, "宋体";
+	font-size: 12px;
+}

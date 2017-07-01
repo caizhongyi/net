@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="SWFUpload">
+</Property><Property Name="解决方案文件" Value="F:\Library\upload\xingFuSWFUpload\SWFUpload.sln">
+</Property><Property Name="用户选项文件" Value="F:\Library\upload\xingFuSWFUpload\SWFUpload.suo">
+</Property><Property Name="Date" Value="2010年8月21日">
+</Property><Property Name="Time" Value="14:30">
+</Property><Property Name="日志号" Value="2">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="SWFUpload.sln" Description="文件已成功备份为 F:\Library\upload\xingFuSWFUpload\Backup1\SWFUpload.sln">
+</Event><Event ErrorLevel="0" Project="" Source="SWFUpload.suo" Description="文件已成功备份为 F:\Library\upload\xingFuSWFUpload\Backup1\SWFUpload.suo">
+</Event><Event ErrorLevel="0" Project="SWFUpload" Source="SWFUpload\SWFUpload.csproj" Description="项目文件已成功备份为 F:\Library\upload\xingFuSWFUpload\Backup1\SWFUpload\SWFUpload.csproj">
+</Event><Event ErrorLevel="0" Project="SWFUpload" Source="SWFUpload\SWFUpload.csproj.user" Description="项目用户文件成功备份为 F:\Library\upload\xingFuSWFUpload\Backup1\SWFUpload\SWFUpload.csproj.user">
+</Event><Event ErrorLevel="0" Project="SWFUpload" Source="SWFUpload\Default.aspx.cs" Description="文件已成功备份为 F:\Library\upload\xingFuSWFUpload\Backup1\SWFUpload\Default.aspx.cs">
+</Event><Event ErrorLevel="0" Project="SWFUpload" Source="SWFUpload\Default.aspx.designer.cs" Description="文件已成功备份为 F:\Library\upload\xingFuSWFUpload\Backup1\SWFUpload\Default.aspx.designer.cs">
+</Event><Event ErrorLevel="0" Project="SWFUpload" Source="SWFUpload\Properties\AssemblyInfo.cs" Description="文件已成功备份为 F:\Library\upload\xingFuSWFUpload\Backup1\SWFUpload\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="SWFUpload" Source="SWFUpload\SWFUpload\UC_SWFUpload.ascx.cs" Description="文件已成功备份为 F:\Library\upload\xingFuSWFUpload\Backup1\SWFUpload\SWFUpload\UC_SWFUpload.ascx.cs">
+</Event><Event ErrorLevel="0" Project="SWFUpload" Source="SWFUpload\SWFUpload\UC_SWFUpload.ascx.designer.cs" Description="文件已成功备份为 F:\Library\upload\xingFuSWFUpload\Backup1\SWFUpload\SWFUpload\UC_SWFUpload.ascx.designer.cs">
+</Event><Event ErrorLevel="0" Project="SWFUpload" Source="SWFUpload\SWFUpload\upload.aspx.cs" Description="文件已成功备份为 F:\Library\upload\xingFuSWFUpload\Backup1\SWFUpload\SWFUpload\upload.aspx.cs">
+</Event><Event ErrorLevel="0" Project="SWFUpload" Source="SWFUpload\SWFUpload\upload.aspx.designer.cs" Description="文件已成功备份为 F:\Library\upload\xingFuSWFUpload\Backup1\SWFUpload\SWFUpload\upload.aspx.designer.cs">
+</Event><Event ErrorLevel="0" Project="SWFUpload" Source="SWFUpload\Default.aspx" Description="文件已成功备份为 F:\Library\upload\xingFuSWFUpload\Backup1\SWFUpload\Default.aspx">
+</Event><Event ErrorLevel="0" Project="SWFUpload" Source="SWFUpload\images\WaterMark.png" Description="文件已成功备份为 F:\Library\upload\xingFuSWFUpload\Backup1\SWFUpload\images\WaterMark.png">
+</Event><Event ErrorLevel="0" Project="SWFUpload" Source="SWFUpload\SWFUpload\css\swfupload.css" Description="文件已成功备份为 F:\Library\upload\xingFuSWFUpload\Backup1\SWFUpload\SWFUpload\css\swfupload.css">
+</Event><Event ErrorLevel="0" Project="SWFUpload" Source="SWFUpload\SWFUpload\images\icon.gif" Description="文件已成功备份为 F:\Library\upload\xingFuSWFUpload\Backup1\SWFUpload\SWFUpload\images\icon.gif">
+</Event><Event ErrorLevel="0" Project="SWFUpload" Source="SWFUpload\SWFUpload\images\swfupload_uploadBtn.png" Description="文件已成功备份为 F:\Library\upload\xingFuSWFUpload\Backup1\SWFUpload\SWFUpload\images\swfupload_uploadBtn.png">
+</Event><Event ErrorLevel="0" Project="SWFUpload" Source="SWFUpload\SWFUpload\js\handlers.js" Description="文件已成功备份为 F:\Library\upload\xingFuSWFUpload\Backup1\SWFUpload\SWFUpload\js\handlers.js">
+</Event><Event ErrorLevel="0" Project="SWFUpload" Source="SWFUpload\SWFUpload\js\swfupload.js" Description="文件已成功备份为 F:\Library\upload\xingFuSWFUpload\Backup1\SWFUpload\SWFUpload\js\swfupload.js">
+</Event><Event ErrorLevel="0" Project="SWFUpload" Source="SWFUpload\SWFUpload\js\swfupload.queue.js" Description="文件已成功备份为 F:\Library\upload\xingFuSWFUpload\Backup1\SWFUpload\SWFUpload\js\swfupload.queue.js">
+</Event><Event ErrorLevel="0" Project="SWFUpload" Source="SWFUpload\SWFUpload\swf\swfupload.swf" Description="文件已成功备份为 F:\Library\upload\xingFuSWFUpload\Backup1\SWFUpload\SWFUpload\swf\swfupload.swf">
+</Event><Event ErrorLevel="0" Project="SWFUpload" Source="SWFUpload\SWFUpload\UC_SWFUpload.ascx" Description="文件已成功备份为 F:\Library\upload\xingFuSWFUpload\Backup1\SWFUpload\SWFUpload\UC_SWFUpload.ascx">
+</Event><Event ErrorLevel="0" Project="SWFUpload" Source="SWFUpload\SWFUpload\upload.aspx" Description="文件已成功备份为 F:\Library\upload\xingFuSWFUpload\Backup1\SWFUpload\SWFUpload\upload.aspx">
+</Event><Event ErrorLevel="0" Project="SWFUpload" Source="SWFUpload\Web.config" Description="文件已成功备份为 F:\Library\upload\xingFuSWFUpload\Backup1\SWFUpload\Web.config">
+</Event><Event ErrorLevel="0" Project="SWFUpload" Source="SWFUpload\SWFUpload.csproj" Description="项目已成功转换">
+</Event><Event ErrorLevel="3" Project="SWFUpload" Source="SWFUpload\SWFUpload.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="SWFUploadAPI" Source="SWFUploadAPI\SWFUploadAPI.csproj" Description="项目文件已成功备份为 F:\Library\upload\xingFuSWFUpload\Backup1\SWFUploadAPI\SWFUploadAPI.csproj">
+</Event><Event ErrorLevel="0" Project="SWFUploadAPI" Source="SWFUploadAPI\Enums\SWFButtonAction.cs" Description="文件已成功备份为 F:\Library\upload\xingFuSWFUpload\Backup1\SWFUploadAPI\Enums\SWFButtonAction.cs">
+</Event><Event ErrorLevel="0" Project="SWFUploadAPI" Source="SWFUploadAPI\Enums\SWFFileFolderKey.cs" Description="文件已成功备份为 F:\Library\upload\xingFuSWFUpload\Backup1\SWFUploadAPI\Enums\SWFFileFolderKey.cs">
+</Event><Event ErrorLevel="0" Project="SWFUploadAPI" Source="SWFUploadAPI\Enums\SWFUpMode.cs" Description="文件已成功备份为 F:\Library\upload\xingFuSWFUpload\Backup1\SWFUploadAPI\Enums\SWFUpMode.cs">
+</Event><Event ErrorLevel="0" Project="SWFUploadAPI" Source="SWFUploadAPI\Enums\SWFWaterMarkLocation.cs" Description="文件已成功备份为 F:\Library\upload\xingFuSWFUpload\Backup1\SWFUploadAPI\Enums\SWFWaterMarkLocation.cs">
+</Event><Event ErrorLevel="0" Project="SWFUploadAPI" Source="SWFUploadAPI\Enums\SWFWaterMarkType.cs" Description="文件已成功备份为 F:\Library\upload\xingFuSWFUpload\Backup1\SWFUploadAPI\Enums\SWFWaterMarkType.cs">
+</Event><Event ErrorLevel="0" Project="SWFUploadAPI" Source="SWFUploadAPI\Properties\AssemblyInfo.cs" Description="文件已成功备份为 F:\Library\upload\xingFuSWFUpload\Backup1\SWFUploadAPI\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="SWFUploadAPI" Source="SWFUploadAPI\SWFDataCache.cs" Description="文件已成功备份为 F:\Library\upload\xingFuSWFUpload\Backup1\SWFUploadAPI\SWFDataCache.cs">
+</Event><Event ErrorLevel="0" Project="SWFUploadAPI" Source="SWFUploadAPI\SWFUploadFile.cs" Description="文件已成功备份为 F:\Library\upload\xingFuSWFUpload\Backup1\SWFUploadAPI\SWFUploadFile.cs">
+</Event><Event ErrorLevel="0" Project="SWFUploadAPI" Source="SWFUploadAPI\SWFUploadInfo.cs" Description="文件已成功备份为 F:\Library\upload\xingFuSWFUpload\Backup1\SWFUploadAPI\SWFUploadInfo.cs">
+</Event><Event ErrorLevel="0" Project="SWFUploadAPI" Source="SWFUploadAPI\SWFUrlOper.cs" Description="文件已成功备份为 F:\Library\upload\xingFuSWFUpload\Backup1\SWFUploadAPI\SWFUrlOper.cs">
+</Event><Event ErrorLevel="0" Project="SWFUploadAPI" Source="SWFUploadAPI\SWFWebConfigManage.cs" Description="文件已成功备份为 F:\Library\upload\xingFuSWFUpload\Backup1\SWFUploadAPI\SWFWebConfigManage.cs">
+</Event><Event ErrorLevel="0" Project="SWFUploadAPI" Source="SWFUploadAPI\SWFUploadAPI.csproj" Description="项目已成功转换">
+</Event><Event ErrorLevel="3" Project="SWFUploadAPI" Source="SWFUploadAPI\SWFUploadAPI.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="SWFUpload.sln" Description="成功转换解决方案">
+</Event><Event ErrorLevel="3" Project="" Source="SWFUpload.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="SWFUpload" Source="SWFUpload\SWFUpload.csproj" Description="扫描完成: 项目文件不需要升级。">
+</Event><Event ErrorLevel="0" Project="SWFUploadAPI" Source="SWFUploadAPI\SWFUploadAPI.csproj" Description="扫描完成: 项目文件不需要升级。">
+</Event></UpgradeLog>

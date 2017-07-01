@@ -1,0 +1,5 @@
+C:\Users\Administrator\Desktop\远程监控\代理类\bin\Debug\SmartKernel.Net.Monitor.dll
+C:\Users\Administrator\Desktop\远程监控\代理类\bin\Debug\SmartKernel.Net.Monitor.pdb
+C:\Users\Administrator\Desktop\远程监控\代理类\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\远程监控\代理类\obj\Debug\SmartKernel.Net.Monitor.dll
+C:\Users\Administrator\Desktop\远程监控\代理类\obj\Debug\SmartKernel.Net.Monitor.pdb

@@ -1,0 +1,59 @@
+﻿ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+<title>${cpagetitle} - ${pagetitle}</title>
+<meta name="keywords" content="$keywords" />
+<meta name="description" content="$description" />
+<link href="$templatepath/css/home.css" rel="stylesheet" type="text/css" />
+<link href="$templatepath/css/css.css" rel="stylesheet" type="text/css" />
+<link href="$templatepath/css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="$webpath/library/js/jquery.min.js"></script>
+<script type="text/javascript" src="$webpath/library/js/public.js"></script>
+<script type="text/javascript" src="$webpath/library/js/common.js"></script>
+<script type="text/javascript" src="$webpath/library/js/centerwindow.js"></script>
+</head>
+<body>
+<div id="loadingid" style="display:none;"></div>
+#if($errors)<div  id="toperrors" class="errors">错误：$errors</div>#end
+#if($rights)<div  id="toprights" class="rights">$rights</div>#end
+<div style="text-align:center;">
+    <div  style="display:none;" id="top_rightmsg"></div>
+    <div  style="display:none;" id="top_errormsg"></div>
+</div>
+ #if($uid>0)
+	        <div class="top_bar" id="top_barscroll">
+	            <div class="left_bar">
+	                <a href="$webpath/">首页</a> | <a href="$webpath/home">我的家园</a> | <a href="${myspace}">我的空间</a> | <a href="$webpath/home/friend">好友</a> | <a href="$webpath/homes$exname">他们都在做什么？</a> | <a href="$webpath/app/gbook">留言本</a> | <a href="$webpath/home/box">收件箱</a> | <a href="javascript:;">导航</a>
+	            </div>
+	            <div class="right_bar">
+	                <a href="$myspace" class="imagec" title="我的主页"><img src="$portrait0" align="absmiddle" alt="我的主页" />$mytruename</a> | <a href="$webpath/space/info/profile$exname">设置</a> | <a href="$webpath/home/charge">充值</a> | <a href="$webpath/home/magic">道具</a> | <a href="$webpath/space/info/space$exname">装扮空间</a> | <a href="$webpath/app/help">帮助</a> |  <a href="javascript:;" onclick="login('$loginurl',$iscode);" title="换个用户登录">重登录</a> | <a href="$webpath/login$exname?r=out">退出</a> 
+	            </div>
+	        </div>
+	    #else
+	        <div class="top_bar" id="top_barscroll">
+		        <div class="left_bar"><a href="$webpath/default$exname">首页</a> | <a href="$webpath/homes$exname">他们都在做什么？</a> | <a href="$webpath/app/center">应用程序</a> | <a href="javascript:;">导航</a> | <a href="$webpath/app/help">帮助</a></div>
+		        <div class="right_bar"><a href="$webpath/register$exname">注册</a> | <a href="javascript:;" onclick="login('$loginurl',$iscode);">登录</a></div>
+	        </div>
+	    #end
+<style type="text/css">body{width:auto;}</style>
+<div id="visdiv">
+<iframe src="$urls"  name="mainFrame" id="mainFrame" frameborder="no"  scrolling="auto" style="width:100%;border:0;"></iframe>
+</div>
+<script type="text/javascript">
+jQuery(document).ready(function()
+{
+     setTimeout(function() 
+     {
+        function lineheight()
+        {
+            if(document.getElementById("mainFrame")!=null)
+            {
+                var bodyheight= document.documentElement.clientHeight;
+                document.getElementById("mainFrame").style.height=bodyheight+"px";
+            } 
+        }
+        lineheight();
+     }, 1000);
+    }); 
+
+</script>

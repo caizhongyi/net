@@ -1,0 +1,10 @@
+C:\Documents and Settings\Administrator\桌面\CallDataBaseDemo\DAL\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\桌面\CallDataBaseDemo\DAL\obj\Debug\DAL.dll
+C:\Documents and Settings\Administrator\桌面\CallDataBaseDemo\DAL\obj\Debug\DAL.pdb
+C:\Documents and Settings\Administrator\桌面\CallDataBaseDemo\DAL\bin\Debug\DAL.dll
+C:\Documents and Settings\Administrator\桌面\CallDataBaseDemo\DAL\bin\Debug\DAL.pdb
+F:\Silverlight\SilverlightTest\CallDataBaseDemo\DAL\bin\Debug\DAL.dll
+F:\Silverlight\SilverlightTest\CallDataBaseDemo\DAL\bin\Debug\DAL.pdb
+F:\Silverlight\SilverlightTest\CallDataBaseDemo\DAL\obj\Debug\ResolveAssemblyReference.cache
+F:\Silverlight\SilverlightTest\CallDataBaseDemo\DAL\obj\Debug\DAL.dll
+F:\Silverlight\SilverlightTest\CallDataBaseDemo\DAL\obj\Debug\DAL.pdb

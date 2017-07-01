@@ -1,0 +1,271 @@
+{subtemplate header}
+<div id="nav"><a href="$indexname">$bbname</a> &raquo; {lang faq} &raquo; {lang permission_group_search}</div>
+
+<script type="text/javascript">
+function setpermn(id, maxi) {
+	for(i = 0;i < maxi;i++) {
+		$(id + '_' + i).innerHTML = permlang[$(id + '_' + i).innerHTML];
+	}
+}
+var permlang = new Array();
+permlang['allowvisit'] = '{lang permission_basic_fourm}';
+permlang['readaccess'] = '{lang permission_basic_read}';
+permlang['allowviewpro'] = '{lang permission_basic_memberinfo}';
+permlang['allowinvisible'] = '{lang permission_basic_invisible}';
+permlang['allowsearch'] = '{lang permission_basic_search}';
+permlang['allownickname'] = '{lang permission_basic_nickname}';
+permlang['allowcstatus'] = '{lang permission_basic_status}';
+permlang['allowpost'] = '{lang permission_post_new}';
+permlang['allowreply'] = '{lang permission_post_replay}';
+permlang['allowpostpoll'] = '{lang permission_post_poll}';
+permlang['allowvote'] = '{lang permission_post_poll_join}';
+permlang['allowpostreward'] = '{lang permission_post_reward}';
+permlang['allowpostactivity'] = '{lang permission_post_activity}';
+permlang['allowpostdebate'] = '{lang permission_post_debate}';
+permlang['allowposttrade'] = '{lang permission_post_trade}';
+permlang['maxsigsize'] = '{lang permission_post_max_signature}';
+permlang['allowsigbbcode'] = '{lang permission_post_discuzcode}';
+permlang['allowsigimgcode'] = '{lang permission_post_img}';
+permlang['maxbiosize'] = '{lang permission_post_max_bio}';
+permlang['allowrecommend'] = '{lang permission_post_recommend}';
+permlang['allowbiobbcode'] = '{lang permission_post_discuzcode_bio}';
+permlang['allowbioimgcode'] = '{lang permission_post_img_bio}';
+permlang['allowgetattach'] = '{lang permission_attachment_down_show}';
+permlang['allowpostattach'] = '{lang permission_attachment_add}';
+permlang['allowsetattachperm'] = '{lang permission_post_img_bio}';
+permlang['maxattachsize'] = '{lang permission_attachment_maxlen}';
+permlang['maxsizeperday'] = '{lang permission_attachment_maxsize}';
+permlang['allowbioimgcode'] = '{lang permission_post_img_bio}';
+permlang['attachextensions'] = '{lang permission_attachment_type}';
+</script>
+
+<div id="wrap" class="wrap with_side s_clear">
+	<div class="side">
+		{subtemplate faq_navbar}
+	</div>
+	<div class="main">
+		<div class="content">
+			<div class="itemtitle s_clear">
+				<h1>$group[grouptitle] {lang permission_group}</h1>
+				<select class="right" onchange="location.href='faq.php?action=grouppermission&searchgroupid=' + this.value">
+					<optgroup label="{lang permission_member_group}">$grouplist[member]</optgroup>
+					<optgroup label="{lang permission_special_group}">$grouplist[special]</optgroup>
+					<optgroup label="{lang permission_system_group}">$grouplist[system]</optgroup>
+				</select>
+			</div>
+			<div class="datalist">
+				<table cellspacing="0" cellpadding="0" class="datatable">
+					<tr class="colplural">
+						<td width="10%">{lang permission_member_level}</td>
+						<td width="40%">{eval showstars($group[stars]);}</td>
+						<!--{if $group[radminid]}-->
+							<td width="10%">{lang permission_menu_modoptions}</td>
+							<td><!--{if $group[radminid]==1 || $group[radminid]==2}-->{lang permission_modoptions_allfourm}<!--{elseif $group[radminid]==3 }-->{lang permission_modoptions_partforum}<!--{/if}--></td>
+						<!--{elseif $cgdata[0] == 'member'}-->
+							<td width="10%">{lang permission_group_credit}</td>
+							<td width="40%">{$group[creditshigher]}</td>
+						<!--{/if}-->
+					</tr>
+					<!--{if $searchgroupid == $groupid && $nextgid}-->
+						{eval $upgrade = $groups[$nextgid][creditshigher] - $credits;}
+						<tr><td colspan="4">{lang permission_group_upgrade}</td></tr>
+					<!--{/if}-->
+				</table>
+				<!--{if $group['radminid']}-->
+					<div id="list_modoptions_c" class="c_header">
+						<h3 onclick="toggle_collapse('list_modoptions', 1, 1);">{lang permission_menu_modoptions}</h3>
+						<div class="c_header_action">
+							<p class="c_header_ctrlbtn" onclick="toggle_collapse('list_modoptions', 1, 1);">[ {lang open} ]</p>
+						</div>
+					</div>
+					<table id="list_modoptions" cellspacing="0" cellpadding="0">
+						<tr class="colplural">
+							<th>{lang permission_modoptions_edit_post}</th>
+							<th>{lang permission_modoptions_edit_poll}</th>
+							<th>{lang permission_modoptions_edit_stick}</th>
+							<th>{lang permission_modoptions_audit_post}</th>
+							<th>{lang permission_modoptions_delete_post}</th>
+							<th>{lang permission_modoptions_delete_postlist}</th>
+							<th>{lang permission_modoptions_filter}</th>
+							<th>{lang permission_modoptions_show_ip}</th>
+						</tr>
+						<tr>
+							<td><!--{if $group['alloweditpost'] == 1}--><img src="{IMGDIR}/data_valid.gif" /><!--{else}--><img src="{IMGDIR}/data_invalid.gif" /><!--{/if}--></td>
+							<td><!--{if $group['alloweditpoll'] == 1}--><img src="{IMGDIR}/data_valid.gif" /><!--{else}--><img src="{IMGDIR}/data_invalid.gif" /><!--{/if}--></td>
+							<td><!--{if $group[allowstickthread]==1 }-->{lang thread_stick} I<!--{elseif $group[allowstickthread]==2 }-->{lang thread_stick} II<!--{elseif $group[allowstickthread]==3 }-->{lang thread_stick} III<!--{else}--><img src="{IMGDIR}/data_invalid.gif" /><!--{/if}--></td>
+							<td><!--{if $group['allowmodpost'] == 1}--><img src="{IMGDIR}/data_valid.gif" /><!--{else}--><img src="{IMGDIR}/data_invalid.gif" /><!--{/if}--></td>
+							<td><!--{if $group['allowdelpost'] == 1}--><img src="{IMGDIR}/data_valid.gif" /><!--{else}--><img src="{IMGDIR}/data_invalid.gif" /><!--{/if}--></td>
+							<td><!--{if $group['allowmassprune'] == 1}--><img src="{IMGDIR}/data_valid.gif" /><!--{else}--><img src="{IMGDIR}/data_invalid.gif" /><!--{/if}--></td>
+							<td><!--{if $group['allowcensorword'] == 1}--><img src="{IMGDIR}/data_valid.gif" /><!--{else}--><img src="{IMGDIR}/data_invalid.gif" /><!--{/if}--></td>
+							<td><!--{if $group['allowviewip'] == 1}--><img src="{IMGDIR}/data_valid.gif" /><!--{else}--><img src="{IMGDIR}/data_invalid.gif" /><!--{/if}--></td>
+						</tr>
+						<tr class="colplural">
+							<th>{lang permission_modoptions_ban_ip}:</th>
+							<th>{lang permission_modoptions_edit_member}:</th>
+							<th>{lang permission_modoptions_ban_member}:</th>
+							<th>{lang permission_modoptions_audit_member}:</th>
+							<th>{lang permission_modoptions_add_announcements}:</th>
+							<th>{lang permission_modoptions_check_log}:</th>
+							<th colspan="2">{lang permission_modoptions_post_nopermission}:</th>
+						</tr>
+						<tr>
+							<td><!--{if $group['allowbanip'] == 1}--><img src="{IMGDIR}/data_valid.gif" /><!--{else}--><img src="{IMGDIR}/data_invalid.gif" /><!--{/if}--></td>
+							<td><!--{if $group['allowedituser'] == 1}--><img src="{IMGDIR}/data_valid.gif" /><!--{else}--><img src="{IMGDIR}/data_invalid.gif" /><!--{/if}--></td>
+							<td><!--{if $group['allowbanuser'] == 1}--><img src="{IMGDIR}/data_valid.gif" /><!--{else}--><img src="{IMGDIR}/data_invalid.gif" /><!--{/if}--></td>
+							<td><!--{if $group['allowmoduser'] == 1}--><img src="{IMGDIR}/data_valid.gif" /><!--{else}--><img src="{IMGDIR}/data_invalid.gif" /><!--{/if}--></td>
+							<td><!--{if $group['allowpostannounce'] == 1}--><img src="{IMGDIR}/data_valid.gif" /><!--{else}--><img src="{IMGDIR}/data_invalid.gif" /><!--{/if}--></td>
+							<td><!--{if $group['allowviewlog'] == 1}--><img src="{IMGDIR}/data_valid.gif" /><!--{else}--><img src="{IMGDIR}/data_invalid.gif" /><!--{/if}--></td>
+							<td colspan="2"><!--{if $group['disablepostctrl'] == 1}--><img src="{IMGDIR}/data_valid.gif" /><!--{else}--><img src="{IMGDIR}/data_invalid.gif" /><!--{/if}--></td>
+						</tr>
+					</table>
+				<!--{/if}-->
+				<div id="list_normaloptions_c" class="c_header">
+					<h3 onclick="toggle_collapse('list_normaloptions', 1, 1);">{lang permission_menu_normaloptions}</h3>
+					<div class="c_header_action">
+						<p class="c_header_ctrlbtn" onclick="toggle_collapse('list_normaloptions', 1, 1);">[ {lang open} ]</p>
+					</div>
+				</div>
+				<!--{if $cgdata[0] == 'member'}-->
+					<div class="itemtitle s_clear">
+						<ul>
+							<li{if empty($view)} class="current"{/if}><a href="faq.php?action=grouppermission&searchgroupid=$searchgroupid"><span>{lang permission_change_perm}</span></a></li>
+							<li{if !empty($view)} class="current"{/if}><a href="faq.php?action=grouppermission&searchgroupid=$searchgroupid&view=all"><span>{lang permission_all_perm}</span></a></li>
+						</ul>
+					</div>
+				<!--{/if}-->
+				<table id="list_normaloptions" cellspacing="0" cellpadding="0">
+				<!--{if $groupbperms}-->
+					<tr class="colplural">
+						<th width="200">{lang permission_menu_basic}</th>
+						<!--{if $cgdata[0] == 'member'}-->
+							<!--{loop $gids $k $row}-->
+								<th width="25%">
+									<a href="faq.php?action=grouppermission&searchgroupid=$row[0]$viewextra" class="lightlink">$row[1]</a>
+									<!--{if $groupid == $searchgroupid}-->
+										<!--{if $k == 1}-->{lang permission_prev_group}<!--{elseif $k == 2}-->{lang permission_current_group}<!--{elseif $k == 3}-->{lang permission_next_group}<!--{/if}-->
+									<!--{/if}-->
+								</th>
+							<!--{/loop}-->
+						<!--{else}-->
+							<th></th>
+						<!--{/if}-->
+					</tr>
+				<!--{/if}-->
+				{eval $bi = 0;}
+				<!--{loop $groupbperms $groupbperm}-->
+					<tr><th id="bperm_$bi">$groupbperm</th>
+					<!--{loop $groups $group}-->
+						<td{if $group[groupid] == $searchgroupid && $cgdata[0] == 'member'} class="highlight"{/if}>
+						<!--{if $groupbperm == 'creditshigher' || $groupbperm == 'readaccess' || $groupbperm == 'maxpmnum'}-->
+							$group[$groupbperm]
+						<!--{elseif $groupbperm == 'allowsearch'}-->
+							<!--{if $group['allowsearch'] == '0'}-->{lang permission_basic_disable_sarch}<!--{elseif $group['allowsearch'] == '1'}-->{lang permission_basic_search_title}<!--{else}-->{lang permission_basic_search_content}<!--{/if}-->
+						<!--{else}-->
+							<!--{if $group[$groupbperm] == 1}--><img src="{IMGDIR}/data_valid.gif" /><!--{else}--><img src="{IMGDIR}/data_invalid.gif" /><!--{/if}-->
+						<!--{/if}-->
+						</td>
+					<!--{/loop}-->
+					</tr>
+					{eval $bi++;}
+				<!--{/loop}-->
+				<!--{if $grouppperms}-->
+					<tr class="colplural">
+						<th width="200">{lang permission_menu_post}</th>
+						<!--{if $cgdata[0] == 'member'}-->
+							<!--{loop $gids $k $row}-->
+								<th width="25%"><a href="faq.php?action=grouppermission&searchgroupid=$row[0]$viewextra" class="lightlink">$row[1]</a></th>
+							<!--{/loop}-->
+						<!--{else}-->
+							<th></th>
+						<!--{/if}-->
+					</tr>
+				<!--{/if}-->
+				{eval $pi = 0;}
+				<!--{loop $grouppperms $grouppperm}-->
+					<tr><th id="pperm_$pi">$grouppperm</th>
+					<!--{loop $groups $group}-->
+						<td{if $group[groupid] == $searchgroupid && $cgdata[0] == 'member'} class="highlight"{/if}>
+						<!--{if $grouppperm == 'maxsigsize' || $grouppperm == 'maxbiosize'}-->
+							$group[$grouppperm] {lang bytes}
+						<!--{elseif $grouppperm == 'allowrecommend'}-->
+							<!--{if $group[allowrecommend] > 0}-->+$group[allowrecommend]<!--{else}--><img src="{IMGDIR}/data_invalid.gif" /><!--{/if}-->
+						<!--{else}-->
+							<!--{if $group[$grouppperm] == 1}--><img src="{IMGDIR}/data_valid.gif" /><!--{else}--><img src="{IMGDIR}/data_invalid.gif" /><!--{/if}-->
+						<!--{/if}-->
+						</td>
+					<!--{/loop}-->
+					</tr>
+					{eval $pi++;}
+				<!--{/loop}-->
+				<!--{if $groupaperms}-->
+					<tr class="colplural">
+						<th width="200">{lang permission_menu_attachment}</th>
+						<!--{if $cgdata[0] == 'member'}-->
+							<!--{loop $gids $k $row}-->
+								<th width="25%"><a href="faq.php?action=grouppermission&searchgroupid=$row[0]$viewextra" class="lightlink">$row[1]</a></th>
+							<!--{/loop}-->
+						<!--{else}-->
+							<th></th>
+						<!--{/if}-->
+					</tr>
+				<!--{/if}-->
+				{eval $ai = 0;}
+				<!--{loop $groupaperms $groupaperm}-->
+					<tr><th id="aperm_$ai">$groupaperm</th>
+					<!--{loop $groups $group}-->
+						<td{if $group[groupid] == $searchgroupid && $cgdata[0] == 'member'} class="highlight"{/if}>
+						<!--{if $groupaperm == 'maxattachsize' || $groupaperm == 'maxsizeperday'}-->
+							<!--{if $group[$groupaperm]}-->$group[$groupaperm] KB<!--{else}-->{lang permission_attachment_nopermission}<!--{/if}-->
+						<!--{elseif $groupaperm == 'attachextensions'}-->
+							<!--{if $group[allowpostattach] == 1}--><!--{if $group[attachextensions]}-->$group[attachextensions]<!--{else}-->{lang permission_attachment_nopermission}<!--{/if}--><!--{else}--><img src="{IMGDIR}/data_invalid.gif" /><!--{/if}-->
+						<!--{else}-->
+							<!--{if $group[$groupaperm] == 1}--><img src="{IMGDIR}/data_valid.gif" /><!--{else}--><img src="{IMGDIR}/data_invalid.gif" /><!--{/if}-->
+						<!--{/if}-->
+						</td>
+					<!--{/loop}-->
+					</tr>
+					{eval $ai++;}
+				<!--{/loop}-->
+				</table>
+				<script type="text/javascript">
+					setpermn('bperm', $bi);
+					setpermn('pperm', $pi);
+					setpermn('aperm', $ai);
+				</script>				
+				
+				<div id="list_forumoptions_c" class="c_header">
+					<h3 onclick="toggle_collapse('list_forumoptions', 1, 1);">{lang permission_menu_forumoptions}</h3>
+					<div class="c_header_action">
+						<p class="c_header_ctrlbtn" onclick="toggle_collapse('list_forumoptions', 1, 1);">[ {lang open} ]</p>
+					</div>
+				</div>
+				<table id="list_forumoptions" cellspacing="0" cellpadding="0">
+				<tr class="colplural">
+					<td>{lang forum_name}</td>
+					<td width="15%">{lang credits_perm_viewperm}</td>
+					<td width="15%">{lang credits_perm_postperm}</td>
+					<td width="15%">{lang credits_perm_replyperm}</td>
+					<td width="15%">{lang credits_perm_getattachperm}</td>
+					<td width="15%">{lang credits_perm_postattachperm}</td>
+				</tr>
+				<!--{loop $_DCACHE[forums] $fid $forum}-->
+					<!--{if $forum[type] == 'group'}-->
+						<tr><td colspan="6"><a href="index.php?gid=$fid" target="_blank"><strong>$forum[name]</strong></a></td></tr>
+					<!--{else}-->
+						<tr><td><!--{if $forum[type] == 'sub'}-->&nbsp;&nbsp;&nbsp;&nbsp;<!--{/if}--><a href="forumdisplay.php?fid=$fid" target="_blank">$forum[name]</a></td>
+						<!--{loop $perms $perm}-->
+							<td><!--{if isset($forumperm[$fid][$perm])}--><img src="{IMGDIR}/data_valid.gif" /><!--{else}--><img src="{IMGDIR}/data_invalid.gif" /><!--{/if}--></td>
+						<!--{/loop}-->
+						</tr>
+					<!--{/if}-->
+				<!--{/loop}-->
+				</table>
+				
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+{subtemplate footer}

@@ -1,0 +1,79 @@
+
+<Border x:Name="LayoutRoot" CornerRadius="5"  
+2          BorderBrush="Gray" BorderThickness="3"> 
+3          <Border.Background> 
+4              <VideoBrush x:Name="myVideoBrush"/> 
+5          </Border.Background> 
+6          <Button x:Name="btnCam" HorizontalAlignment="Right" 
+7              VerticalAlignment="Bottom" 
+8              Width="120" Height="30"  
+9              Content="启动摄像头"/> 
+10     </Border> 
+
+C#：
+
+1          public VideoAndAudio() 
+2          { 
+3              InitializeComponent(); 
+4              this.btnCam.Click += new RoutedEventHandler(btnCam_Click); 
+5          } 
+6  
+7          void btnCam_Click(object sender, RoutedEventArgs e) 
+8          { 
+9              //取得默认视频设备对象 
+10             VideoCaptureDevice cam = CaptureDeviceConfiguration.GetDefaultVideoCaptureDevice(); 
+11             //创建视频捕获源对象 
+12             CaptureSource videoSource = new CaptureSource(); 
+13             //获取用户启用本机摄像头的许可 
+14             if (CaptureDeviceConfiguration.RequestDeviceAccess()) 
+15             { 
+16                 //设置视频设备 
+17                 videoSource.VideoCaptureDevice = cam; 
+18                 //设置视频来源 
+19                 myVideoBrush.SetSource(videoSource); 
+20                 myVideoBrush.Stretch = Stretch.Fill; 
+21                 //启动摄像头 
+22                 videoSource.Start(); 
+23             } 
+24         } 
+
+
+
+ <StackPanel x:Name="LayoutRoot"> 
+2          <Border Height="350" x:Name="myBorder" CornerRadius="5"  
+3          BorderBrush="Gray" BorderThickness="3"> 
+4              <Border.Background> 
+5                  <VideoBrush x:Name="myVideoBrush"/> 
+6              </Border.Background> 
+7          </Border> 
+8          <StackPanel x:Name="tsp" Orientation="Horizontal"  
+9               Height="100"></StackPanel> 
+10         <StackPanel Orientation="Horizontal" Height="30"  
+11                 HorizontalAlignment="Center"> 
+12             <Button x:Name="btnCam" HorizontalAlignment="Right" 
+13             VerticalAlignment="Bottom" 
+14             Width="120" Height="30"  
+15             Content="启动摄像头"/> 
+16             <Button x:Name="btnCrop" HorizontalAlignment="Right" 
+17             VerticalAlignment="Bottom" 
+18             Width="120" Height="30"  
+19             Content="视频截图"/> 
+20         </StackPanel> 
+21     </StackPanel> 
+
+C#：
+
+1          void CropVideo() 
+2          { 
+3              //创建可写入位图对象 
+4              WriteableBitmap wBitmap = new WriteableBitmap(myBorder, new MatrixTransform()); 
+5              //创建一个图像 
+6              Image img = new Image(); 
+7              img.Width = 100; 
+8              img.Margin = new Thickness(2); 
+9              //将wBitmap做为图像源 
+10             img.Source = wBitmap; 
+11             //将图像添加到WrapPanel控件 
+12             tsp.Children.Add(img); 
+13         } 
+

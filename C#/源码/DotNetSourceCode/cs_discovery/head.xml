@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+   HTML页面头
+   
+   编制 袁永福 2007-12-29
+-->
+<xsl:stylesheet version='1.0' xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+	<xsl:template name="head">
+		<p>
+			<span>C#发现之旅 ASP.NET演示程序，<a href="default.htm">点击返回主页面</a></span>
+		</p>
+	</xsl:template>
+</xsl:stylesheet>

@@ -1,0 +1,68 @@
+﻿<UserControl x:Class="FromDemo.Page"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+      >
+    <Grid x:Name="LayoutRoot" >
+        <Canvas >
+            <Canvas  x:Name="list_canvas" Canvas.Left="10" >
+                <Canvas.RenderTransform>
+                    <ScaleTransform x:Name="list_stf" ></ScaleTransform>
+                </Canvas.RenderTransform>
+                <Grid  >
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Button  x:Name="changesize_btn" Width="20" Height="10"  Canvas.Left="100" Content="-"  Click="changesize_btn_Click"></Button>
+
+                    <ListBox x:Name="input_list"  Grid.Row="1">
+
+                        <!--<ListBoxItem x:Name="item1">
+                        <StackPanel  x:Name="sp1" Orientation="Horizontal" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown"  MouseLeftButtonUp="StackPanel_MouseLeftButtonUp" MouseMove="StackPanel_MouseMove">
+                            <StackPanel.RenderTransform  >
+                                <TranslateTransform x:Name="tsp1"></TranslateTransform>
+                            </StackPanel.RenderTransform>
+                            <TextBlock>姓名:</TextBlock>
+                            <TextBox  x:Name="txtName" Width="200"></TextBox>
+                        </StackPanel >
+                            </ListBoxItem>
+                        
+                        <ListBoxItem  x:Name="item2">
+                        <StackPanel x:Name="sp2"  Orientation="Horizontal" MouseLeftButtonDown="sp2_MouseLeftButtonDown" MouseLeftButtonUp="sp2_MouseLeftButtonUp"  MouseMove="sp2_MouseMove">
+                            <StackPanel.RenderTransform  >
+                                <TranslateTransform x:Name="tsp2"></TranslateTransform>
+                            </StackPanel.RenderTransform>
+                            <TextBlock>性别:</TextBlock>
+                            <TextBox  x:Name="txtSex" Width="200"></TextBox>
+                        </StackPanel >
+                            </ListBoxItem>
+                        
+                        <ListBoxItem  x:Name="item3">
+                        <StackPanel  x:Name="sp3" Orientation="Horizontal" MouseLeftButtonDown="sp3_MouseLeftButtonDown" MouseLeftButtonUp="sp3_MouseLeftButtonUp"  MouseMove="sp3_MouseMove">
+                            <StackPanel.RenderTransform  >
+                                <TranslateTransform x:Name="tsp3"></TranslateTransform>
+                            </StackPanel.RenderTransform>
+                            <TextBlock>年龄:</TextBlock>
+                            <TextBox x:Name="txtAge" Width="200"></TextBox>
+                        </StackPanel >
+                            </ListBoxItem>
+                        
+                        <StackPanel >
+                            <Button Content="Save" Click="Button_Click"></Button>
+                        </StackPanel>-->
+                    </ListBox>
+
+                </Grid>
+            </Canvas>
+
+            <Canvas x:Name="save_canvas">
+              
+                <ListBox x:Name="save_list" Height="300" Width="250">
+
+                </ListBox>
+            </Canvas>
+
+
+        </Canvas>
+    </Grid>
+</UserControl>

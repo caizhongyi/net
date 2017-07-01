@@ -1,0 +1,68 @@
+﻿#parse("_head.html")
+<div id="snsmenu">
+#parse("_menu.html")
+</div>
+<div id="snsbody">
+    <div id="snshead">关注我的人</div>
+    <div class="itemmenu">
+        <ul>
+            <li><a href="$webpath/home/friend/default$exname">我的好友</a></li>
+            <li><a href="$webpath/home/friend/dyn$exname">好友动态设置</a></li>
+            <li><a href="$webpath/home/friend/visit$exname">来访者</a></li>
+            <li><a href="$webpath/home/friend/city$exname?q=city">同城</a></li>
+            <li><a href="$webpath/home/friend/pfriend$exname">可能认识的人</a></li>
+            <li><a href="$webpath/home/friend/search$exname">搜索朋友</a></li>
+            <li class="current"><a href="$webpath/home/friend/att$exname">关注我的人</a></li>
+            <li><a href="$webpath/home/friend/invite$exname">邀请朋友加入</a></li>
+        </ul>
+  </div>
+
+    <div class="itemmenu1"><ul> <li#if($css_) $css_ #end><a href="$webpath/home/friend/att$exname">关注我的人</a></li> <li#if($css_1) $css_1 #end><a href="$webpath/home/friend/att$exname?r=1">我关注的人</a></li></ul></div>
+    #if($recordcount>0)
+    <div class="list">
+        <ul>
+            #foreach($att in $attlist)
+                <li id="param_${att.id}">
+                <div class="l images center"><a href="$att.spaceurl"><img src="$att.userhead" /><br />$att.truename</a>#if($css_1)<br /><a href="javascript:void(0);" onclick="deleteatt($att.id)" class="showok1" title="取消关注"></a>#end</div>
+                <div class="r">
+                    #if($att.isfriend==false)
+                    <div><a href="javascript:void(0);" onclick="addfriend($att.userid,'$att.truename',$uid)" class="sicon-friend">加为好友</a></div>
+                    #end
+                    <div><a href="javascript:poke($att.userid,$uid)" class="sicon-poke">招呼</a> </div>
+                    <div><a href="javascript:mail($att.userid,$uid)" title="给ta发消息" class="sicon-mail">消息</a></div>
+                 </div>
+                 </li>
+            #end
+        </ul>
+    </div>
+    <div class="pages">$pagelist</div>
+    #else
+        <div>没有记录</div>
+    #end        
+
+<div>
+
+</div>
+</div>
+#parse("_foot.html")
+<script type="text/javascript">
+    function deleteatt(aid)
+    {
+        if (!confirm("确定要取消关注？\n取消后，将不能接受到他（她）的动态")) return;
+        jQuery.get("att"+ExName+"", { action:"DeleteATT", aid:aid, param:Math.random() }, 
+        function(msg)
+        {
+            if(msg=="1")
+            {
+                showRightResult("取消关注成功");
+                jQuery("#param_"+aid).remove();
+            }
+            else
+            {
+                showErrorResult("取消关注失败");
+            }
+        }
+        );              
+
+    }
+</script>

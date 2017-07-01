@@ -1,0 +1,101 @@
+﻿#parse("_head.html")
+<link href="$templatepath/css/app/shop.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="$webpath/library/xmleditor/xheditor-zh-cn.min.js"></script>
+<div id="snsmenu">
+#parse("_menu.html")
+</div>
+<div id="snsbody">
+    <div id="snshead"><span class="l">$cpagetitle</span></div>
+
+    <div >
+    <div class="itemmenu">
+        <ul>
+            <li><a href="$webpath/app/shop/default$exname">所有$shop</a></li>
+            <li><a href="$webpath/app/shop/default$exname?q=city">同城$shop</a></li>
+            <li><a href="$webpath/app/shop/default$exname?q=rec">推荐$shop</a></li>
+            <li><a href="$webpath/app/shop/default$exname?q=friend">好友的$shop</a></li>
+            <li><a href="$webpath/app/shop/default$exname?q=my">我的$shop</a></li>
+            <li class="lipoke"></li>
+            <li><a href="$webpath/app/shop/list$exname">所有店铺</a></li>
+            <li><a href="$webpath/app/shop/list$exname?q=rec">推荐商铺</a></li>
+            <li><a href="$webpath/app/shop/list$exname?q=city">同城店铺</a></li>
+            <li><a href="$webpath/app/shop/list$exname?q=friend">好友的店铺</a></li>
+            <li class="current"><a href="$webpath/app/shop/list$exname?q=my">我的店铺</a></li>
+            <li class="lipoke"></li>
+            <li><a href="$webpath/app/shop/multebuy$exname">超级团购</a></li>
+        </ul>
+    </div>
+    #if($uid>0)
+    <div class="itemmenu1">
+        <ul>
+            <li><a href="$webpath/app/shop/list$exname?q=my">我的店铺</a></li> 
+            <li><a href="$webpath/app/shop/news$exname">管理公告</a></li> 
+            <li class="current"><a href="$webpath/app/shop/shopnews$exname">$cpagetitle</a></li> 
+        </ul>
+    </div>
+    #end
+    </div>
+     <div id="shopmiddleall">
+            <form id="form1" method="post" action="">
+                <div class="pitem">
+                    <em>公告标题</em>
+                    <input id="title" name="title" type="text" class="f-text" style="width:60%;" value="#if($title)$title#end" />
+                </div>
+                <div class="pitem">
+                    <em>&nbsp;</em>
+                <textarea runat="server" name="content"  class="xheditor-simple {upBtnText:'上传',upMultiple:5,upLinkUrl:'$editfile',upImgUrl:'$edit_pic',skin:'$editskin'}" id="content" style="width:80%;height:300px">#if($content)$content#end</textarea>
+                
+                </div>
+                
+           
+                       <div class="pitem1">
+                <em>&nbsp;</em>
+                <input id="Button2" type="submit" value="$cpagetitle" class="btn_blue6" onclick="return checkdata();" />
+                <input id="Submit1" type="reset" value="重新填写" class="btn_gray4" />
+            </div>
+ 
+            </form>
+    </div>
+        
+    
+</div>
+
+#parse("_foot.html")
+<script type="text/javascript">
+    function checkdata()
+    {
+        var txtGoodsName=jQuery("#title").val();
+        var err="";
+        if(txtGoodsName=="")
+        {
+            err+="公告名称<br />";
+        }        
+        
+        var Content=jQuery("#txtcontent").val();
+         if(Content=="") 
+         { 
+             err+="公告内容<br />";
+         } 
+
+        if(err!="")
+        {
+            showErrorResult("以下必须填写：<br />"+err)
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
+    function Uploadphoto()
+    {
+        jQuery("#showphoto").show();
+        jQuery("#editupload").hide();
+    }
+    function Uploadphoto1()
+    {
+        jQuery("#editupload").show();
+       jQuery("#showphoto").hide();
+     }
+
+</script>

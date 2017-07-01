@@ -1,0 +1,23 @@
+Product product = new Product(); product.Name = "Apple";product.Expiry = new DateTime(2008, 12, 28);product.Price = 3.99M;product.Sizes = new string[] { "Small", "Medium", "Large" }; string output = JavaScriptConvert.SerializeObject(product);//{//  "Name": "Apple",//  "Expiry": new Date(1230422400000),//  "Price": 3.99,//  "Sizes": [//    "Small",//    "Medium",//    "Large"//  ]//} Product deserializedProduct = (Product)JavaScriptConvert.DeserializeObject(output, 
+    typeof(Product));  
+读取JSON
+
+
+string jsonText = "['JSON!',1,true,{property:'value'}]"; JsonReader reader = new JsonReader(new StringReader(jsonText)); Console.WriteLine("TokenType\t\tValueType\t\tValue"); while (reader.Read()){    Console.WriteLine(reader.TokenType + "\t\t" + WriteValue(reader.ValueType) + 
+       "\t\t" + WriteValue(reader.Value))}
+
+结果显示:
+TokenType ValueType Value 
+StartArray null null 
+String System.String JSON! 
+Integer System.Int32 1 
+Boolean System.Boolean True 
+StartObject null null 
+PropertyName System.String property 
+String System.String value 
+EndObject null null 
+EndArray null null 
+
+JSON写入
+StringWriter sw = new StringWriter();JsonWriter writer = new JsonWriter(sw); writer.WriteStartArray();writer.WriteValue("JSON!");writer.WriteValue(1);writer.WriteValue(true);writer.WriteStartObject();writer.WritePropertyName("property");writer.WriteValue("value");writer.WriteEndObject();writer.WriteEndArray(); writer.Flush(); string jsonText = sw.GetStringBuilder().ToString(); Console.WriteLine(jsonText);// ['JSON!',1,true,{property:'value'}]
+这里会打印出: ['JSON!',1,true,{property:'value'}].  

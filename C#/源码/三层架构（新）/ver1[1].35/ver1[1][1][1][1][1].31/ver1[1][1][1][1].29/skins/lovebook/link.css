@@ -1,0 +1,40 @@
+/*-----------超链接样式---------------
+ 说明: 伪类:link :visited :hover分别代表超链接的通常、被访问后、和鼠标接触链接是的样式
+ a标签代表通用超链接样式
+ .menuA代表Blog导航条菜单的样式
+ .titleA代表日志标题的样式
+ .sideA代表侧栏的超链接样式
+ .CategoryA代表树形分类的链接样式
+ .more代表更多链接的样式
+------------------------------------*/
+body * a, body * a:visited, body * a:link {background: transparent; color:#000000 ;margin:0px;padding:0px;}
+body * a:active { background: transparent; color: #c00; }
+ a:link,a:visited{text-decoration:none;color:#666666;}
+ a:hover{text-decoration: none;position: relative;text-decoration:none; height:0; filter:blur Alpha(Opacity=90, FinishOpacity=40, Style=2);text-decoration:none;}
+.menuA:link,.menuA:visited{
+	float:left;
+	height:22px;
+	text-align:center;
+	line-height:210%;
+	font-weight:bold;
+	font-size:12px;
+	padding-top: 0px;
+	padding-right: 18px;
+	padding-bottom: 0px;
+	padding-left: 4px;
+}    
+ .menuA:hover{background:#000000;text-decoration: none;position: relative;color:#ffffff;text-decoration: none; height:0; filter:blur Alpha(Opacity=90, FinishOpacity=40, Style=2);}
+
+ .titleA:link,.titleA:visited{text-decoration:none;font-weight:bold;font-family:verdana,宋体;text-align:left;color:#444;}
+ .titleA:hover{text-decoration: none;position: relative;text-decoration: none; height: 0; filter:blur Alpha(Opacity=90, FinishOpacity=40, Style=2);color:#000;}
+
+ .sideA:link,.sideA:visited{text-decoration:none;padding-left:15px;background:url(side.gif) 2px 3px no-repeat;height:16px;overflow:hidden;display:block;margin-bottom:2px;width:160px;line-height:140%;}
+ .sideA:hover{text-decoration: none;position: relative;text-decoration: none; height: 0; filter:blur Alpha(Opacity=90, FinishOpacity=40, Style=2);padding-left:15px;height:16px;overflow:hidden}
+
+ .CategoryA:link,.CategoryA:visited{text-decoration:none;font-weight:bold;}
+ .CategoryA:hover{text-decoration: none;position: relative;text-decoration: none; height: 0; filter:blur Alpha(Opacity=90, FinishOpacity=40, Style=2);}
+ 
+ .more:link,.more:visited{padding-left:0px;margin:0px;text-decoration:none;}
+ .more:hover{text-decoration: none;position: relative;text-decoration: none; height: 0; filter:blur Alpha(Opacity=90, FinishOpacity=40, Style=2);}  
+
+ /*---超链接样式定义结束---*/

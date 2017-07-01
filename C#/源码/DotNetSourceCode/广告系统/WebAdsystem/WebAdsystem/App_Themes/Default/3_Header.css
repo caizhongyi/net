@@ -1,0 +1,24 @@
+﻿/* 1、系统导航模块的基础样式。 */
+/* 头    部 */
+div.header 
+{
+    width: 100%;
+    height: 50px;
+    background: url(../../Images/HeaderBack.gif) repeat-x top left;
+}
+/* 网站标志 */
+.logo 
+{
+}
+/* 主 导 航 */
+.mainNav 
+{
+}
+/* 子 导 航 */
+.subNav 
+{
+}
+/* 顶 导 航 */
+.topNav 
+{
+}

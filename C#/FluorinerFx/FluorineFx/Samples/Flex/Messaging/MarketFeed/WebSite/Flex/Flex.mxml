@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:local="*">
+	<mx:Script>
+		<![CDATA[
+			
+			private function connect():void
+			{
+				if (userId.text == "john")
+				{
+					mainPanel.watchList = ["IBM", "JBLU", "ADBE", "GE", "C"];
+				}
+				else if (userId.text == "jane")
+				{
+					mainPanel.watchList = ["IBM", "XOM", "GM", "WMT", "CVX", "GOOG", "AIG", "COKE"];
+				}
+				mainPanel.userId = userId.text;
+				currentState="main";				
+			}
+			
+		]]>
+	</mx:Script>
+
+	<mx:states>
+		<mx:State name="main">
+			<mx:RemoveChild target="{connectionWindow}"/>
+			<mx:SetProperty target="{mainPanel}" name="includeInLayout" value="true"/>
+			<mx:SetProperty target="{mainPanel}" name="visible" value="true"/>
+		</mx:State>
+	</mx:states>
+
+	<mx:Style source="main.css"/>
+
+	<mx:Form id="connectionWindow" verticalCenter="0" horizontalCenter="0" backgroundColor="#FFFFFF" backgroundAlpha=".5" cornerRadius="8" borderStyle="solid">
+		<mx:Label text="Logon" fontWeight="bold" fontSize="12"/>
+		<mx:Text width="100%">
+			<mx:text>
+			Enter your username and password. There are two users configured in this sample version: "john" and "jane". 
+			These two users subscribe to a different set of stocks.
+			</mx:text>
+		</mx:Text>
+		<mx:FormItem label="User Id">
+			<mx:TextInput id="userId" text="john"/>
+		</mx:FormItem>
+		<mx:FormItem label="Password">
+			<mx:TextInput id="password" displayAsPassword="true"/>
+		</mx:FormItem>
+		<mx:Spacer height="8"/>
+		<mx:FormItem>
+			<mx:Button label="Connect" click="connect()"/>
+		</mx:FormItem>
+	</mx:Form>
+
+	<local:MainPanel id="mainPanel" visible="false" includeInLayout="false"/>
+	
+</mx:Application>

@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadImageName", "ReadImageName.csproj", "{1F56C58B-E517-45F8-9A29-2211F64AE5CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication1", "..\ConsoleApplication1\ConsoleApplication1.csproj", "{F621DC2E-9281-4E0F-9BF2-024766C3C4FD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1F56C58B-E517-45F8-9A29-2211F64AE5CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F56C58B-E517-45F8-9A29-2211F64AE5CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F56C58B-E517-45F8-9A29-2211F64AE5CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F56C58B-E517-45F8-9A29-2211F64AE5CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F621DC2E-9281-4E0F-9BF2-024766C3C4FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F621DC2E-9281-4E0F-9BF2-024766C3C4FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F621DC2E-9281-4E0F-9BF2-024766C3C4FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F621DC2E-9281-4E0F-9BF2-024766C3C4FD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

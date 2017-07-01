@@ -1,0 +1,58 @@
+
+
+1.下载AjaxPro.2.dll
+
+2.在web中引用AjaxPro.2.dll
+
+3.在web.config中进行请求拦截
+<system.web>
+	<httpHandlers>
+		<add verb="POST,GET" path="Ajaxpro/*.ashx" type="AjaxPro.AjaxHandlerFactory, AjaxPro.2"/>
+	</httpHandlers>
+</system.web>
+
+4.创建一个AJAX调用类及添加方法，在需要Ajax调用的方法前面添加方法特性.
+	public class AjaxProDemo
+	{
+		[AjaxPro.AjaxMethod]
+		public string GetValue(string uname)
+		{
+		   return "你录入的用户名是：" + uname;
+		}
+	}
+
+5.在要使用该框架的页面类中注册AJAX调用类.
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        //在页面注册需要Ajax调用的类，AjaxProDemo是类名，可以注册多个
+        AjaxPro.Utility.RegisterTypeForAjax(typeof(AjaxProDemo));
+    }
+
+6.在页面的javascript中进入调用.
+	function Button1_onclick()
+	{
+		var result=AjaxProDemo.GetValue("这是转给服务器端的代码").value;
+		alert(result);
+	}
+	
+7.服务器端与客户端(脚本)之间，将对象作为参数传递时，AjaxPro内部实现了对应类型的转换。
+转换是根据Ajax调用类中定义的参数户返回值的类型确定的，并不参考前台JavaScript中定义的
+类型或对象名，也就是说JavaScript中的对象必须遵循后台(.cs文件)中类型的定义规则， 属性
+名称保持一致。
+
+问题：版本为7.7.31.1的AjaxPro.2.dll中存在运行时异常
+	位置：core.ashx 81行 var r = this.onTimeout(this.duration, this);
+	描述：this.onTimeout未定义
+  [AjaxPro.AjaxProperty()]
+        public string UserName
+        {
+            set
+            {
+                    Session["UserName"] = value;
+                }
+
+            get
+            {
+                return Session["UserName"].ToString();
+                }
+            }

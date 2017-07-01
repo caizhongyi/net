@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<SkinSet>
+ <SkinName>斑驳の墙</SkinName>
+ <SkinDesigner>Jea</SkinDesigner>
+ <pubDate>2005-10-6</pubDate>
+ <DesignerURL>http://jea.com.cn/blog</DesignerURL>
+ <DesignerMail>magicred@163.com</DesignerMail>
+<Flash>
+<UseFlash>-1</UseFlash>
+<FlashPath>head.swf</FlashPath>
+<FlashWidth>748</FlashWidth>
+<FlashHeight>80</FlashHeight>
+<FlashAlign>center</FlashAlign>
+<FlashTop>0</FlashTop>
+<FlashTransparent>-1</FlashTransparent>
+</Flash>
+</SkinSet>

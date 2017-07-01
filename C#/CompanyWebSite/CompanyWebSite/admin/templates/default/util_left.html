@@ -1,0 +1,112 @@
+﻿<table id="navgation" width="100%" height="280" border="0" cellpadding="0" cellspacing="0" bgcolor="#EEF2FB">
+  <tr>
+    <td width="182" valign="top"><div id="container">
+      <h1 class="type"><a href="javascript:void(0)">网站常规管理</a></h1>
+      <div class="content">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td><img src="images/menu_topline.gif" width="182" height="5" /></td>
+          </tr>
+        </table>
+        <ul class="MM">
+          <li><a href="javascript:void(0)"  onclick="ChangeNavItem('news.html')">内容管理</a></li>
+          <li><a href="javascript:void(0)" >添加内容</a></li>
+        </ul>
+      </div>
+      <h1 class="type"><a href="javascript:void(0)">栏目分类管理</a></h1>
+      <div class="content">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td><img src="images/menu_topline.gif" width="182" height="5" /></td>
+          </tr>
+        </table>
+        <ul class="MM">
+          <li><a href="javascript:void(0)" >分类管理</a></li>
+          <li><a href="javascript:void(0)" >添加分类</a></li>
+        </ul>
+      </div>
+      <h1 class="type"><a href="javascript:void(0)">栏目内容管理</a></h1>
+      <div class="content">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td><img src="images/menu_topline.gif" width="182" height="5" /></td>
+          </tr>
+        </table>
+        <ul class="MM">
+		  <li><a href="javascript:void(0)" >角色管理</a></li>
+          <li><a href="javascript:void(0)" >添加角色</a></li>
+
+    
+        </ul>
+      </div>
+   
+        <script type="text/javascript">
+      /*  
+
+  * 根据元素clsssName得到元素集合  
+
+  * @param fatherId 父元素的ID，默认为document  
+
+  * @tagName 子元素的标签名  
+
+  * @className 用空格分开的className字符串  
+
+  */ 
+
+ function getElementsByClassName(fatherId,tagName,className){  
+
+     node = fatherId&&document.getElementById(fatherId) || document;  
+
+     tagName = tagName || "*";  
+
+     className = className.split(" ");  
+
+     var classNameLength = className.length;  
+
+     for(var i=0,j=classNameLength;i<j;i++){  
+
+         //创建匹配类名的正则  
+
+         className[i]= new RegExp("(^|\\s)" + className[i].replace(/\-/g, "\\-") + "(\\s|$)");   
+
+     }  
+
+     var elements = node.getElementsByTagName(tagName);  
+
+     var result = [];  
+
+     for(var i=0,j=elements.length,k=0;i<j;i++){//缓存length属性  
+
+         var element = elements[i];  
+
+         while(className[k++].test(element.className)){//优化循环  
+
+             if(k === classNameLength){  
+
+                 result[result.length] = element;  
+
+                 break;  
+
+             }     
+
+         }  
+
+        k = 0;  
+
+     }  
+
+     return result;  
+
+} 
+
+		var contents = getElementsByClassName("navgation","div",'content');
+		var toggles = getElementsByClassName("navgation","h1",'type');
+	
+		var myAccordion = new fx.Accordion(
+			toggles, contents, {opacity: true, duration: 400}
+		);
+		myAccordion.showThisHideOpen(contents[0]);
+	</script>
+        </td>
+  </tr>
+</table>

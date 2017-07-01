@@ -1,0 +1,81 @@
+﻿#newnotice {
+	DISPLAY: none; Z-INDEX: 9999; WIDTH: 260px; POSITION: absolute
+}
+#newnotice P.caption {
+	BACKGROUND: url(../images/tool.gif) left top; MARGIN: 0px; WIDTH: 260px; LINE-HEIGHT: 29px; HEIGHT: 29px
+}
+#newnotice SPAN.title {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; MARGIN-LEFT: 5px; COLOR: #000
+}
+#newnotice A {
+	MARGIN-LEFT: 0px; MARGIN-TOP: 2px; COLOR: #333
+}
+#tool {
+	DISPLAY: inline; FLOAT: right; MARGIN: 8px 3px 0px 0px; WIDTH: 38px; HEIGHT: 13px
+}
+#tool LABEL {
+	DISPLAY: block; BACKGROUND: url(../images/tool.gif); FLOAT: left; WIDTH: 14px; CURSOR: pointer; LINE-HEIGHT: 12px; MARGIN-RIGHT: 2px; HEIGHT: 12px; 
+}
+#tool #toMin {
+	BACKGROUND-POSITION: -9px -38px
+}
+#tool #toMax {
+	BACKGROUND-POSITION: -30px -38px; DISPLAY: none
+}
+#tool #toClose {
+	BACKGROUND-POSITION: -51px -38px
+}
+#noticecon {
+	BORDER-RIGHT: #cc6600 1px solid; BORDER-LEFT: #cc6600 1px solid; BORDER-BOTTOM: #cc6600 1px solid
+}
+#leftSda .close {
+	FONT-SIZE: 12px; BACKGROUND: #ccc; CURSOR: pointer; LINE-HEIGHT: 16px; TEXT-ALIGN: center
+}
+#rightSda .close {
+	FONT-SIZE: 12px; BACKGROUND: #ccc; CURSOR: pointer; LINE-HEIGHT: 16px; TEXT-ALIGN: center
+}
+#leftSda_Content {
+	DISPLAY: none; Z-INDEX: 9999; WIDTH: 500px; POSITION: absolute; HEIGHT: 300px
+}
+
+/* weather pop start */
+#weathernewnotice {
+	DISPLAY: none; Z-INDEX: 9999; WIDTH: 260px; POSITION: absolute
+}
+#weathernewnotice P.caption {
+	BACKGROUND: url(../images/weathertool.gif) left top; MARGIN: 0px; WIDTH: 260px; LINE-HEIGHT: 29px; HEIGHT: 29px
+}
+#weathernewnotice SPAN.title {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; MARGIN-LEFT: 5px; COLOR: #000
+}
+#weathernewnotice A {
+	MARGIN-LEFT: 0px; MARGIN-TOP: 2px; COLOR: #333
+}
+#weathertool {
+	DISPLAY: inline; FLOAT: right; MARGIN: 8px 3px 0px 0px; WIDTH: 38px; HEIGHT: 13px
+}
+#weathertool LABEL {
+	DISPLAY: block; BACKGROUND: url(../images/weathertool.gif); FLOAT: left; WIDTH: 14px; CURSOR: pointer; LINE-HEIGHT: 12px; MARGIN-RIGHT: 2px; HEIGHT: 12px; 
+}
+#weathertool #toMin {
+	BACKGROUND-POSITION: -9px -38px
+}
+#weathertool #toMax {
+	BACKGROUND-POSITION: -30px -38px; DISPLAY: none
+}
+#weathertool #toClose {
+	BACKGROUND-POSITION: -51px -38px
+}
+#weathernoticecon {
+	BORDER-RIGHT: #2e5eba 1px solid; BORDER-LEFT: #2e5eba 1px solid; BORDER-BOTTOM: #2e5eba 1px solid
+}
+#leftSda .close {
+	FONT-SIZE: 12px; BACKGROUND: #ccc; CURSOR: pointer; LINE-HEIGHT: 16px; TEXT-ALIGN: center
+}
+#rightSda .close {
+	FONT-SIZE: 12px; BACKGROUND: #ccc; CURSOR: pointer; LINE-HEIGHT: 16px; TEXT-ALIGN: center
+}
+#leftSda_Content {
+	DISPLAY: none; Z-INDEX: 9999; WIDTH: 500px; POSITION: absolute; HEIGHT: 300px
+}
+/* weather pop end */

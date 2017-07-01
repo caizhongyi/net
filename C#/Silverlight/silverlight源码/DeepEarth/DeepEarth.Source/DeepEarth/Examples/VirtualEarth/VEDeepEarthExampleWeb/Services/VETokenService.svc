@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="DeepEarth.Provider.VirtualEarth.Services.TokenService,DeepEarth.Provider.VirtualEarth.Services" %>

@@ -1,0 +1,35 @@
+﻿<UserControl xmlns:my="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Data"  x:Class="SilverlightApplication.Page"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    Width="400" Height="300">
+    <Grid x:Name="LayoutRoot">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40" />
+            <RowDefinition />
+            <RowDefinition Height="80" />
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal"
+                HorizontalAlignment="Left"
+                Grid.Row="0">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="300"/>
+                    <ColumnDefinition Width="100"/>
+                </Grid.ColumnDefinitions>
+                <TextBox x:Name="txtSearch" Grid.Column="0" FontSize="12" Padding="5" Height="26" Margin="0,0,5,0"/>
+                <Button Content="Get Customers"
+                  Padding="5"
+                  Margin="0,0,0,0"
+                  Height="26"
+                  Grid.Column="1"
+                  x:Name="btnPopulate"
+                  Click="Button_Click" />
+            </Grid>
+        </StackPanel>
+        <my:DataGrid x:Name="customersDataGrid" IsReadOnly="True"
+                 Grid.Row="1" RowHeight="30"
+                 AutoGenerateColumns="True">
+        </my:DataGrid>
+        <TextBox x:Name="TxtLog" Width="400" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Visible"  Grid.Row="2" />
+    </Grid>
+</UserControl>

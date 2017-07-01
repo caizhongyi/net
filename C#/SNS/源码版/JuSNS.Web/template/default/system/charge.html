@@ -1,0 +1,86 @@
+﻿#parse("_head.html")
+<div id="snssysmenu">
+#parse("_menusystem.html")
+</div>
+<div id="snsbody1">
+    <div id="snshead">充值管理</div>
+    <div class="itemmenu">
+        <ul>
+            <li><a href="sys$exname">系统设置</a></li>
+            <li><a href="area$exname">地区</a></li> 
+            <li class="current"><a href="charge$exname">充值管理</a></li> 
+            <li><a href="template$exname">模板</a></li> 
+            <li><a href="indexconfig$exname">首页配置</a></li> 
+            <li><a href="uploads$exname">上传图片配置管理</a></li> 
+            <li><a href="start$exname">初始化</a></li> 
+            <li><a href="help$exname">帮助管理</a></li> 
+        </ul>
+    </div>
+    
+        <div class="itemmenu1">
+            <ul>
+                <li#if($css_null) $css_null #end><a href="charge$exname">所有记录</a></li>
+                <li#if($css_1) $css_1 #end><a href="charge$exname?q=1">成功记录</a></li> 
+                <li#if($css_0) $css_0 #end><a href="charge$exname?q=0">失败记录</a></li> 
+            </ul>
+        </div>
+    
+
+    <div class="system">
+  #if($recordcount>0)
+          <table  id="mtable">
+               <tr>
+              <th>订单号</th>
+              <th>积分</th>
+              <th>$gpoint</th>
+              <th>金额</th>
+              <th>状态</th>
+              <th>提交时间</th>
+              <th>操作</th>
+            </tr>
+            #foreach($rec in $reclist)
+            <tr id="param_$rec.id">
+              <td>$rec.ordernumber</td>
+              <td>$rec.point</td>
+              <td>$rec.gpoint</td>
+              <td>${rec.money} RMB</td>
+              <td>$rec.succ</td>
+              <td>$rec.time</td>
+              <td><input  type="button" value="删除" onclick="deleteAll($rec.id,$uid,'charges');" class="btn_blue2" /></td>
+            </tr>
+            #end
+          </table>
+            <div class="pages">$pagelist</div>
+        #else
+            <div>还没有充值记录</div>
+        #end            
+    
+    
+
+    </div>
+    
+</div>
+#parse("_foot.html")
+<script type="text/javascript">
+function chargeorder(infoid,flag)
+ {
+    if (!confirm("确定进行此操作吗？")) return;
+    jQuery.get(ajaxUrl, { action:"ChargeOrderAjax", infoid:infoid, uid:$uid,flag:flag, param:Math.random() }, 
+      function(msg)
+      {
+         if(msg.indexOf("succs")>-1)
+         {
+              setTimeout(function() 
+             {
+                window.location.href=window.location.href;
+              }, 1000);             
+             showRightResult("操作成功");
+         }
+         else
+         {
+             showErrorResult("操作失败");
+         }
+      }
+    );                 
+ }
+</script>

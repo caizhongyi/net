@@ -1,0 +1,58 @@
+C:\Users\Administrator\Desktop\YYFly\YYFly\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\YYFly\YYFly\obj\Debug\App.g.cs
+C:\Users\Administrator\Desktop\YYFly\YYFly\Bin\Debug\AppManifest.xaml
+C:\Users\Administrator\Desktop\YYFly\YYFly\Bin\Debug\YYFly.dll
+C:\Users\Administrator\Desktop\YYFly\YYFly\Bin\Debug\YYFly.pdb
+C:\Users\Administrator\Desktop\YYFly\YYFly\Bin\Debug\YYFly.xap
+C:\Users\Administrator\Desktop\YYFly\YYFly\Bin\Debug\TestPage.html
+C:\Users\Administrator\Desktop\YYFly\YYFly\obj\Debug\Page.g.cs
+C:\Users\Administrator\Desktop\YYFly\YYFly\obj\Debug\YYFly.g.resources
+C:\Users\Administrator\Desktop\YYFly\YYFly\obj\Debug\YYFly.dll
+C:\Users\Administrator\Desktop\YYFly\YYFly\obj\Debug\YYFly.pdb
+C:\Users\Administrator\Desktop\YYFly\YYFly\obj\Debug\XapCacheFile.xml
+C:\Users\Administrator\Desktop\YYFly\YYFly\obj\Debug\Controls\Background.g.cs
+C:\Users\Administrator\Desktop\YYFly\YYFly\obj\Debug\Controls\Parts\Flower.g.cs
+C:\Users\Administrator\Desktop\YYFly\YYFly\obj\Debug\Controls\Parts\Cloud.g.cs
+C:\Documents and Settings\webabcd\桌面\YYFly\YYFly\Bin\Debug\AppManifest.xaml
+C:\Documents and Settings\webabcd\桌面\YYFly\YYFly\Bin\Debug\YYFly.dll
+C:\Documents and Settings\webabcd\桌面\YYFly\YYFly\Bin\Debug\YYFly.pdb
+C:\Documents and Settings\webabcd\桌面\YYFly\YYFly\Bin\Debug\YYFly.xap
+C:\Documents and Settings\webabcd\桌面\YYFly\YYFly\Bin\Debug\TestPage.html
+C:\Documents and Settings\webabcd\桌面\YYFly\YYFly\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\webabcd\桌面\YYFly\YYFly\obj\Debug\App.g.cs
+C:\Documents and Settings\webabcd\桌面\YYFly\YYFly\obj\Debug\Controls\Parts\Cloud.g.cs
+C:\Documents and Settings\webabcd\桌面\YYFly\YYFly\obj\Debug\Controls\Background.g.cs
+C:\Documents and Settings\webabcd\桌面\YYFly\YYFly\obj\Debug\Controls\Parts\Flower.g.cs
+C:\Documents and Settings\webabcd\桌面\YYFly\YYFly\obj\Debug\Page.g.cs
+C:\Documents and Settings\webabcd\桌面\YYFly\YYFly\obj\Debug\YYFly.g.resources
+C:\Documents and Settings\webabcd\桌面\YYFly\YYFly\obj\Debug\YYFly.dll
+C:\Documents and Settings\webabcd\桌面\YYFly\YYFly\obj\Debug\YYFly.pdb
+C:\Documents and Settings\webabcd\桌面\YYFly\YYFly\obj\Debug\XapCacheFile.xml
+C:\Documents and Settings\webabcd\桌面\YYFly\YYFly\obj\Debug\View\Fly.g.cs
+C:\Documents and Settings\webabcd\桌面\YYFly\YYFly\obj\Debug\Controls\Sound.g.cs
+C:\Users\Administrator\Desktop\YYFly\YYFly\obj\Debug\View\Fly.g.cs
+C:\Users\Administrator\Desktop\YYFly\YYFly\obj\Debug\Controls\Sound.g.cs
+C:\Users\Administrator\Desktop\YYFly\YYFly\obj\Debug\Controls\Gun.g.cs
+C:\Documents and Settings\webabcd\桌面\YYFly\YYFly\obj\Debug\Controls\Gun.g.cs
+C:\Documents and Settings\webabcd\桌面\YYFly\YYFly\obj\Debug\Controls\GameTip.g.cs
+C:\Documents and Settings\webabcd\桌面\YYFly\YYFly\obj\Debug\Controls\MyTimer.g.cs
+E:\downcode\YYFly\YYFly\Bin\Debug\AppManifest.xaml
+E:\downcode\YYFly\YYFly\Bin\Debug\YYFly.dll
+E:\downcode\YYFly\YYFly\Bin\Debug\YYFly.pdb
+E:\downcode\YYFly\YYFly\Bin\Debug\YYFly.xap
+E:\downcode\YYFly\YYFly\Bin\Debug\TestPage.html
+E:\downcode\YYFly\YYFly\obj\Debug\ResolveAssemblyReference.cache
+E:\downcode\YYFly\YYFly\obj\Debug\App.g.cs
+E:\downcode\YYFly\YYFly\obj\Debug\Controls\Parts\Cloud.g.cs
+E:\downcode\YYFly\YYFly\obj\Debug\View\Fly.g.cs
+E:\downcode\YYFly\YYFly\obj\Debug\Controls\Background.g.cs
+E:\downcode\YYFly\YYFly\obj\Debug\Controls\GameTip.g.cs
+E:\downcode\YYFly\YYFly\obj\Debug\Controls\Gun.g.cs
+E:\downcode\YYFly\YYFly\obj\Debug\Controls\MyTimer.g.cs
+E:\downcode\YYFly\YYFly\obj\Debug\Controls\Parts\Flower.g.cs
+E:\downcode\YYFly\YYFly\obj\Debug\Controls\Sound.g.cs
+E:\downcode\YYFly\YYFly\obj\Debug\Page.g.cs
+E:\downcode\YYFly\YYFly\obj\Debug\YYFly.g.resources
+E:\downcode\YYFly\YYFly\obj\Debug\YYFly.dll
+E:\downcode\YYFly\YYFly\obj\Debug\YYFly.pdb
+E:\downcode\YYFly\YYFly\obj\Debug\XapCacheFile.xml

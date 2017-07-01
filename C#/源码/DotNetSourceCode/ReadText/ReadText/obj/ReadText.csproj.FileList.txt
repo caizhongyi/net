@@ -1,0 +1,5 @@
+bin\Debug\ReadText.exe
+bin\Debug\ReadText.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\ReadText.exe
+obj\Debug\ReadText.pdb

@@ -1,0 +1,53 @@
+﻿#parse("_head.html")
+<div id="snsmenu">
+#parse("_menu.html")
+</div>
+<div id="snsbody">
+    <div id="snshead"><span class="l">$cpagetitle</span><span class="r"><input id="kwd" name="kwd" value="#if($kwd)$kwd#else搜索问题#end" type="text" class="f-text w100" onclick="this.value=''" /> <input id="Button1" type="button" value="搜索" class="btn_gray2" onclick="search('ask','$q')" /></span></div>
+
+    <div >
+    <div class="itemmenu">
+        <ul>
+            <li#if($css_all)$css_all#end><a href="$webpath/app/ask/default$exname?q=all">所有问题</a></li>
+            <li#if($css_null)$css_null#end><a href="$webpath/app/ask/default$exname">待解决的问题</a></li>
+            <li#if($css_ok)$css_ok#end><a href="$webpath/app/ask/default$exname?q=ok">已解决的问题</a></li> 
+            <li#if($css_quick)$css_quick#end><a href="$webpath/app/ask/default$exname?q=quick">紧急问题</a></li> 
+            <li#if($css_hight)$css_hight#end><a href="$webpath/app/ask/default$exname?q=hight">高分悬赏问题</a></li> 
+            #if($uid>0)
+            <li#if($css_my)$css_my#end><a href="$webpath/app/ask/default$exname?q=my">我的问题</a></li>
+            <li#if($css_friend)$css_friend#end><a href="$webpath/app/ask/default$exname?q=friend">朋友的问题</a></li>
+            #end
+            <li class="new"><a href="$webpath/app/ask/new$exname" class="newitem">我要提问</a></li> 
+        </ul>
+        
+    </div>
+    </div>
+    <div id="snsbody-sec">
+        #if($recordcount>0)
+            <div class="ask">
+                <ul>
+                #foreach($info in $infolist)
+                <li id="param_$info.id">
+                    <span class="imagecs"><a href="$info.spaceurl" target="_blank" title="查看$info.truename的空间"><img src="$info.headpic" /></a></span>$info.jinji $info.state <span> <a href="$info.askurl">$info.title </a>(<a href="$webpath/app/ask?q=$q&classid=$info.classid">$info.classname</a>) $info.showop$info.showrec</span><em class="time">$info.time </em>
+                </li>
+                #end
+              </ul>
+              </div>
+              <div class="pages">$pagelist</div>
+        #else
+            <div>还没有记录</div>
+        #end        
+    </div>
+    <div id="snsbody-right">
+        <div class="hdtitle1">$classname</div>
+        <div class="hdcontent1">
+            <ul>
+            <li><a href="$webpath/app/ask/default$exname?q=all">全部分类</a></li>
+                $classlist
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+#parse("_foot.html")

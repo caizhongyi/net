@@ -1,0 +1,42 @@
+F:\test\SilverlightApplication1\SilverlightApplication1.Web\bin\SilverlightApplication1.Web.dll
+F:\test\SilverlightApplication1\SilverlightApplication1.Web\bin\SilverlightApplication1.Web.pdb
+F:\test\SilverlightApplication1\SilverlightApplication1.Web\bin\System.Web.Silverlight.dll
+F:\test\SilverlightApplication1\SilverlightApplication1.Web\bin\de\System.Web.Silverlight.resources.dll
+F:\test\SilverlightApplication1\SilverlightApplication1.Web\bin\es\System.Web.Silverlight.resources.dll
+F:\test\SilverlightApplication1\SilverlightApplication1.Web\bin\fr\System.Web.Silverlight.resources.dll
+F:\test\SilverlightApplication1\SilverlightApplication1.Web\bin\it\System.Web.Silverlight.resources.dll
+F:\test\SilverlightApplication1\SilverlightApplication1.Web\bin\ja\System.Web.Silverlight.resources.dll
+F:\test\SilverlightApplication1\SilverlightApplication1.Web\bin\ko\System.Web.Silverlight.resources.dll
+F:\test\SilverlightApplication1\SilverlightApplication1.Web\bin\zh-Hans\System.Web.Silverlight.resources.dll
+F:\test\SilverlightApplication1\SilverlightApplication1.Web\bin\zh-Hant\System.Web.Silverlight.resources.dll
+F:\test\SilverlightApplication1\SilverlightApplication1.Web\obj\Debug\ResolveAssemblyReference.cache
+F:\test\SilverlightApplication1\SilverlightApplication1.Web\obj\Debug\SilverlightApplication1.Web.dll
+F:\test\SilverlightApplication1\SilverlightApplication1.Web\obj\Debug\SilverlightApplication1.Web.pdb
+C:\Documents and Settings\Administrator\桌面\SilverlightApplication1\SilverlightApplication1.Web\bin\SilverlightApplication1.Web.dll
+C:\Documents and Settings\Administrator\桌面\SilverlightApplication1\SilverlightApplication1.Web\bin\SilverlightApplication1.Web.pdb
+C:\Documents and Settings\Administrator\桌面\SilverlightApplication1\SilverlightApplication1.Web\bin\System.Web.Silverlight.dll
+C:\Documents and Settings\Administrator\桌面\SilverlightApplication1\SilverlightApplication1.Web\bin\zh-Hans\System.Web.Silverlight.resources.dll
+C:\Documents and Settings\Administrator\桌面\SilverlightApplication1\SilverlightApplication1.Web\bin\zh-Hant\System.Web.Silverlight.resources.dll
+C:\Documents and Settings\Administrator\桌面\SilverlightApplication1\SilverlightApplication1.Web\bin\de\System.Web.Silverlight.resources.dll
+C:\Documents and Settings\Administrator\桌面\SilverlightApplication1\SilverlightApplication1.Web\bin\es\System.Web.Silverlight.resources.dll
+C:\Documents and Settings\Administrator\桌面\SilverlightApplication1\SilverlightApplication1.Web\bin\fr\System.Web.Silverlight.resources.dll
+C:\Documents and Settings\Administrator\桌面\SilverlightApplication1\SilverlightApplication1.Web\bin\it\System.Web.Silverlight.resources.dll
+C:\Documents and Settings\Administrator\桌面\SilverlightApplication1\SilverlightApplication1.Web\bin\ja\System.Web.Silverlight.resources.dll
+C:\Documents and Settings\Administrator\桌面\SilverlightApplication1\SilverlightApplication1.Web\bin\ko\System.Web.Silverlight.resources.dll
+C:\Documents and Settings\Administrator\桌面\SilverlightApplication1\SilverlightApplication1.Web\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\桌面\SilverlightApplication1\SilverlightApplication1.Web\obj\Debug\SilverlightApplication1.Web.dll
+C:\Documents and Settings\Administrator\桌面\SilverlightApplication1\SilverlightApplication1.Web\obj\Debug\SilverlightApplication1.Web.pdb
+C:\Documents and Settings\Administrator\桌面\MyWork\SilverlightApplication1\SilverlightApplication1.Web\bin\SilverlightApplication1.Web.dll
+C:\Documents and Settings\Administrator\桌面\MyWork\SilverlightApplication1\SilverlightApplication1.Web\bin\SilverlightApplication1.Web.pdb
+C:\Documents and Settings\Administrator\桌面\MyWork\SilverlightApplication1\SilverlightApplication1.Web\bin\System.Web.Silverlight.dll
+C:\Documents and Settings\Administrator\桌面\MyWork\SilverlightApplication1\SilverlightApplication1.Web\bin\zh-Hans\System.Web.Silverlight.resources.dll
+C:\Documents and Settings\Administrator\桌面\MyWork\SilverlightApplication1\SilverlightApplication1.Web\bin\zh-Hant\System.Web.Silverlight.resources.dll
+C:\Documents and Settings\Administrator\桌面\MyWork\SilverlightApplication1\SilverlightApplication1.Web\bin\de\System.Web.Silverlight.resources.dll
+C:\Documents and Settings\Administrator\桌面\MyWork\SilverlightApplication1\SilverlightApplication1.Web\bin\es\System.Web.Silverlight.resources.dll
+C:\Documents and Settings\Administrator\桌面\MyWork\SilverlightApplication1\SilverlightApplication1.Web\bin\fr\System.Web.Silverlight.resources.dll
+C:\Documents and Settings\Administrator\桌面\MyWork\SilverlightApplication1\SilverlightApplication1.Web\bin\it\System.Web.Silverlight.resources.dll
+C:\Documents and Settings\Administrator\桌面\MyWork\SilverlightApplication1\SilverlightApplication1.Web\bin\ja\System.Web.Silverlight.resources.dll
+C:\Documents and Settings\Administrator\桌面\MyWork\SilverlightApplication1\SilverlightApplication1.Web\bin\ko\System.Web.Silverlight.resources.dll
+C:\Documents and Settings\Administrator\桌面\MyWork\SilverlightApplication1\SilverlightApplication1.Web\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\桌面\MyWork\SilverlightApplication1\SilverlightApplication1.Web\obj\Debug\SilverlightApplication1.Web.dll
+C:\Documents and Settings\Administrator\桌面\MyWork\SilverlightApplication1\SilverlightApplication1.Web\obj\Debug\SilverlightApplication1.Web.pdb

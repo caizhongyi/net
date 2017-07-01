@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="DeskTopFish">
+</Property><Property Name="解决方案文件" Value="C:\Documents and Settings\Administrator\桌面\桌面屏保软件\DeskTopFish\DeskTopFish.sln">
+</Property><Property Name="用户选项文件" Value="C:\Documents and Settings\Administrator\桌面\桌面屏保软件\DeskTopFish\DeskTopFish.suo">
+</Property><Property Name="Date" Value="2008年10月18日">
+</Property><Property Name="Time" Value="12:22">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="DeskTopFish.sln" Description="文件已成功备份为 C:\Documents and Settings\Administrator\桌面\桌面屏保软件\DeskTopFish\Backup\DeskTopFish.sln">
+</Event><Event ErrorLevel="0" Project="" Source="DeskTopFish.suo" Description="文件已成功备份为 C:\Documents and Settings\Administrator\桌面\桌面屏保软件\DeskTopFish\Backup\DeskTopFish.suo">
+</Event><Event ErrorLevel="0" Project="DeskTopFish" Source="DeskTopFish.csproj" Description="项目文件已成功备份为 C:\Documents and Settings\Administrator\桌面\桌面屏保软件\DeskTopFish\Backup\DeskTopFish.csproj">
+</Event><Event ErrorLevel="0" Project="DeskTopFish" Source="DeskTopFish.csproj.user" Description="项目用户文件成功备份为 C:\Documents and Settings\Administrator\桌面\桌面屏保软件\DeskTopFish\Backup\DeskTopFish.csproj.user">
+</Event><Event ErrorLevel="0" Project="DeskTopFish" Source="AssemblyInfo.cs" Description="文件已成功备份为 C:\Documents and Settings\Administrator\桌面\桌面屏保软件\DeskTopFish\Backup\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="DeskTopFish" Source="MainForm.cs" Description="文件已成功备份为 C:\Documents and Settings\Administrator\桌面\桌面屏保软件\DeskTopFish\Backup\MainForm.cs">
+</Event><Event ErrorLevel="0" Project="DeskTopFish" Source="App.ico" Description="文件已成功备份为 C:\Documents and Settings\Administrator\桌面\桌面屏保软件\DeskTopFish\Backup\App.ico">
+</Event><Event ErrorLevel="0" Project="DeskTopFish" Source="MainForm.resx" Description="文件已成功备份为 C:\Documents and Settings\Administrator\桌面\桌面屏保软件\DeskTopFish\Backup\MainForm.resx">
+</Event><Event ErrorLevel="0" Project="DeskTopFish" Source="DeskTopFish.csproj" Description="项目已成功转换">
+</Event><Event ErrorLevel="3" Project="DeskTopFish" Source="DeskTopFish.csproj" Description="Converted">
+</Event><Event ErrorLevel="1" Project="CustomForm" Source="E:\s\控件源码\bin\CustomForm\CustomForm.csproj" Description="警告: 正将项目文件备份到与原始解决方案相对路径不同的相对路径中。文件夹层次结构上的差异可能会导致在打开或生成备份的解决方案和项目时出现问题。">
+</Event><Event ErrorLevel="2" Project="CustomForm" Source="E:\s\控件源码\bin\CustomForm\CustomForm.csproj" Description="无法打开项目文件以执行升级操作。">
+</Event><Event ErrorLevel="0" Project="" Source="DeskTopFish.sln" Description="成功转换解决方案">
+</Event><Event ErrorLevel="3" Project="" Source="DeskTopFish.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="DeskTopFish" Source="DeskTopFish.csproj" Description="扫描完成: 项目文件不需要升级。">
+</Event></UpgradeLog>

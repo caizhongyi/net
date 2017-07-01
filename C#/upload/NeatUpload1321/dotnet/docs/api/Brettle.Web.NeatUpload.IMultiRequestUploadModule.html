@@ -1,0 +1,63 @@
+<html dir="LTR">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" />
+    <meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5" />
+    <title>IMultiRequestUploadModule Interface</title>
+    <xml>
+    </xml>
+    <link rel="stylesheet" type="text/css" href="MSDN.css" />
+  </head>
+  <body id="bodyID" class="dtBODY">
+    <div id="nsbanner">
+      <div id="bannerrow1">
+        <table class="bannerparthead" cellspacing="0">
+          <tr id="hdr">
+            <td class="runninghead">NeatUpload Documentation</td>
+            <td class="product">
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div id="TitleRow">
+        <h1 class="dtH1">IMultiRequestUploadModule Interface</h1>
+      </div>
+    </div>
+    <div id="nstext">
+      <p> An <a href="Brettle.Web.NeatUpload.IUploadModule.html">IUploadModule</a> that treats a sequence of special requests as a single combined upload. </p>
+      <p>For a list of all members of this type, see <a href="Brettle.Web.NeatUpload.IMultiRequestUploadModuleMembers.html">IMultiRequestUploadModule Members</a>.</p>
+      <p>
+      </p>
+      <div class="syntax">
+        <div>public interface IMultiRequestUploadModule<b> : <a href="Brettle.Web.NeatUpload.IUploadModule.html">IUploadModule</a></b></div>
+      </div>
+      <h4 class="dtH4">Types that implement IMultiRequestUploadModule</h4>
+      <div class="tablediv">
+        <table class="dtTABLE" cellspacing="0">
+          <tr valign="top">
+            <th width="50%">Type</th>
+            <th width="50%">Description</th>
+          </tr>
+          <tr valign="top">
+            <td width="50%">
+              <a href="Brettle.Web.NeatUpload.UploadHttpModule.html">UploadHttpModule</a>
+            </td>
+            <td width="50%"> An <a href="Brettle.Web.NeatUpload.IUploadModule.html">IUploadModule</a> and <a href="Brettle.Web.NeatUpload.IMultiRequestUploadModule.html">IMultiRequestUploadModule</a> that uses child requests to extract uploaded files and maintain upload state across a web garden/farm.</td>
+          </tr>
+        </table>
+      </div>
+      <h4 class="dtH4">Remarks</h4>
+      <p>The module treats the following sequence of requests as a single upload: <ol><li>An initial POST request sent to the <a href="Brettle.Web.NeatUpload.IMultiRequestUploadModule.UploadPath.html">UploadPath</a> containing: <ul type="disc"><li>a post-back ID in the query parameter named by <a href="Brettle.Web.NeatUpload.IUploadModule.PostBackIDQueryParam.html">PostBackIDQueryParam</a></li><li>a control UniqueID in the query parameter named by <a href="Brettle.Web.NeatUpload.IMultiRequestUploadModule.ControlIDQueryParam.html">ControlIDQueryParam</a></li><li>"protected" cookies needed for authentication or session identification in the query parameter named by <a href="Brettle.Web.NeatUpload.IMultiRequestUploadModule.ArmoredCookiesQueryParam.html">ArmoredCookiesQueryParam</a></li><li>a space-delimited list of file sizes in the form field named by <b>FileSizesFieldName</b></li><li>(optionally) a form field with a name starting with <a href="Brettle.Web.NeatUpload.IUploadModule.ConfigFieldNamePrefix.html">ConfigFieldNamePrefix</a> followed by the same control UniqueID as above, containing "protected" module-specific configuration information.</li></ul></li><li>A sequence of upload request (one for each file size in the file sizes field of the initial request) to the <b>UploadPath</b> containing: <ul type="disc"><li>a post-back ID in the query parameter named by <b>PostBackIDQueryParam</b></li><li>a control UniqueID in the query parameter named by <b>ControlIDQueryParam</b></li><li>"protected" cookies needed for authentication or session identification in the query parameter named by <b>ArmoredCookiesQueryParam</b></li></ul></li><li>A final form submission upload request to any path for which <a href="Brettle.Web.NeatUpload.IUploadModule.IsEnabled.html">IsEnabled</a> returns true. This request must contain the postback ID in one of the following locations: <ul type="disc"><li>in the query parameter named by <b>PostBackIDQueryParam</b></li><li>in the form field named by <a href="Brettle.Web.NeatUpload.IUploadModule.PostBackIDFieldName.html">PostBackIDFieldName</a></li><li>in a file field name prefixed by <a href="Brettle.Web.NeatUpload.IUploadModule.FileFieldNamePrefix.html">FileFieldNamePrefix</a></li></ul> While this request is being handled, the module will make all the files associated with the post-back ID available via <a href="Brettle.Web.NeatUpload.IUploadModule.Files.html">Files</a>. </li></ol></p>
+      <h4 class="dtH4">Requirements</h4>
+      <p>
+        <b>Namespace: </b>
+        <a href="Brettle.Web.NeatUpload.html">Brettle.Web.NeatUpload</a>
+      </p>
+      <p>
+        <b>Assembly: </b>Brettle.Web.NeatUpload (in Brettle.Web.NeatUpload.dll)
+					</p>
+      <h4 class="dtH4">See Also</h4>
+      <p>
+        <a href="Brettle.Web.NeatUpload.IMultiRequestUploadModuleMembers.html">IMultiRequestUploadModule Members</a> | <a href="Brettle.Web.NeatUpload.html">Brettle.Web.NeatUpload Namespace</a></p>
+    </div>
+  </body>
+</html>

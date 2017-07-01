@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:HBox xmlns:mx="http://www.adobe.com/2006/mxml" width="100%" height="100%"
+	paddingTop="8" paddingBottom="8" paddingLeft="4" paddingRight="4" horizontalGap="12" verticalScrollPolicy="off"
+	backgroundAlpha=".4">
+	
+    <mx:Script>
+        <![CDATA[
+        	import mx.core.UIComponent;
+        	import mx.rpc.events.FaultEvent;
+        	import mx.rpc.events.ResultEvent;
+	    	private var _employee:Employee;
+	
+	    	[Bindable]
+	    	public function get employee():Employee
+	    	{
+	    		return _employee;
+	   		}
+	
+	        public function set employee(value:Employee):void
+	        {
+	            _employee = value;
+	            currentState = value != null ? "hasEmployee" : "";
+	            if( value != null )
+	            	ro.GetEmployeePhoto(value.id);
+	        }
+	        
+		    private function photoHandler(event:ResultEvent):void 
+		    {
+		    	var width:Number = event.result.width;
+		    	var height:Number = event.result.height;
+		    	var byteArr:ByteArray = event.result.bitmapData as ByteArray;
+		    	byteArr.uncompress();
+            	var data:BitmapData = new BitmapData(width, height, false, 0);
+            	data.setPixels(data.rect, byteArr);
+            	var bmp:Bitmap = new Bitmap(data);
+   	            img.removeAllChildren();
+	            var pictureHolder:UIComponent = new UIComponent();
+				pictureHolder.addChild(bmp);
+				img.addChild(pictureHolder);
+	     	}
+	      
+		    private function photoFaultHandler(event:FaultEvent):void
+		    {
+		    }        
+		]]>
+    </mx:Script>
+
+	<mx:RemoteObject id="ro" destination="northwind">
+	    <mx:method name="GetEmployeePhoto" fault="photoFaultHandler(event)" result="photoHandler(event)" />
+	</mx:RemoteObject>
+            	
+    <mx:states>
+      <mx:State name="hasEmployee">
+        <mx:AddChild position="lastChild">
+          <mx:Canvas id="img" width="217" height="188"/>
+        </mx:AddChild>
+        <mx:AddChild position="lastChild">
+          <mx:VBox id="details" width="60%" verticalGap="0">
+              <mx:Label text="{employee.firstName + ' ' + employee.lastName}" />
+              <mx:Label id="address" text="{employee.address}"/>
+              <mx:Label text="{employee.city}"/>
+              <mx:Label id="phoneNumber" text="{employee.phone}"/>
+              <mx:Spacer height="10"/>
+              <mx:TextArea id="notes" text="{employee.notes}" wordWrap="true" editable="false" width="363" height="135"/>
+          </mx:VBox>
+        </mx:AddChild>
+      </mx:State>
+    </mx:states>	
+</mx:HBox>

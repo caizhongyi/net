@@ -1,0 +1,114 @@
+;/************************************************************
+;**     File:   jppci2.inf
+;**           
+;** Description:
+;**             Installs the serial ports behind a PCI bridge
+;**      
+;************************************************************/
+
+[Version]
+signature="$CHICAGO$"
+Class=Ports
+ClassGuid={4D36E978-E325-11CE-BFC1-08002BE10318}
+Provider=%mfg%
+
+DriverVer=12/15/2006, 2.2
+
+[DestinationDirs]
+DefaultDestDir  = 11                ; LDID_SYS
+Inf.Copy=17                         ; LDID_INF
+
+; Install class "Ports"
+;----------------------------------------------------------
+[ClassInstall]
+AddReg=PortsClass.AddReg
+
+[PortsClass.AddReg]
+HKR,,,,%PortsClassName%
+
+[ClassInstall32.NT]
+AddReg=PortsClass.NT.AddReg
+
+[PortsClass.NT.AddReg]
+HKR,,,,%PortsClassName%
+HKR,,Icon,,"-23"
+HKR,,Installer32,,"MsPorts.Dll,PortsClassInstaller"
+
+[ControlFlags]
+ExcludeFromSelect=JPT_CARD\SERIAL
+
+; Drivers
+;----------------------------------------------------------
+[Manufacturer]
+%mfg%=mfg
+
+[mfg]
+%ComPort.DeviceDesc% =  ComPort,    JPT_CARD\SERIAL
+
+; ************** install serial ports ***********************
+[ComPort]
+DriverVer=11/15/2005, 2.0
+CopyFiles=Inf.Copy
+AddReg=ComPort.AddReg
+
+[ComPort.NT]
+AddReg=ComPort.NT.AddReg
+
+[ComPort.NT.HW]
+AddReg=ComPort.NT.HW.AddReg
+
+[ComPort.NT.HW.AddReg]
+HKR,,"UpperFilters",    0x00010000, "serenum"   ;;MULTI_SZ
+
+[ComPort.AddReg]
+HKR,,PortSubClass,1,01
+HKR,,DevLoader,,*vcomm
+HKR,,Enumerator,,serenum.vxd
+HKR,,PortDriver,,jptser.vxd
+HKR,,ConfigDialog,,serialui.dll
+HKR,,DCB,3,1c,00,00,00,80,25,00,00,11,33,00,00,00,00,0a,00,0a,00,08,00,00,11,13,00,00,00
+HKR,,EnumPropPages,,"serialui.dll,EnumPropPages"
+
+[ComPort.NT.AddReg]
+HKR,,PortSubClass,1,01
+HKR,,EnumPropPages32,,"MsPorts.dll,SerialPortPropPageProvider"
+
+[ComPort.NT.Services]
+AddService = jptser, 0x00000002, jptser_Service_Inst
+AddService = Serenum,,Serenum_Service_Inst
+
+; -------------- Serial Port Driver install sections
+[jptser_Service_Inst]
+DisplayName    = %jptser.SVCDESC%
+ServiceType    = 1               ; SERVICE_KERNEL_DRIVER
+StartType      = 1               ; SERVICE_SYSTEM_START (this driver may do detection)
+ErrorControl   = 0               ; SERVICE_ERROR_IGNORE
+ServiceBinary  = %12%\jptser.sys
+LoadOrderGroup = Extended base
+
+; -------------- Serenum Driver install section
+[Serenum_Service_Inst]
+DisplayName    = %Serenum.SVCDESC%
+ServiceType    = 1               ; SERVICE_KERNEL_DRIVER
+StartType      = 3               ; SERVICE_DEMAND_START
+ErrorControl   = 1               ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %12%\serenum.sys
+LoadOrderGroup = Pjpt Filter
+
+[Inf.Copy]
+jppci2.inf
+
+[SourceDisksNames]
+1=%drvdisk%,,
+
+[SourceDisksFiles]
+jppci2.inf=1
+
+[Strings]
+PortsClassName= "Ports (COM & LPT)"
+
+mfg="OEM."
+drvDisk="JP PCI serial card disk"
+ComPort.DeviceDesc="JP PCI serial port"
+jptser.SVCDESC="JP PCI serial port driver"
+Serenum.SVCDESC= "Serenum Filter Driver"

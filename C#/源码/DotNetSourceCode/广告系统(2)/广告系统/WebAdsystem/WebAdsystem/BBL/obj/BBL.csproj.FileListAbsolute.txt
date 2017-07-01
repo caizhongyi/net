@@ -1,0 +1,11 @@
+C:\Users\Administrator\Desktop\广告系统\WebAdsystem\BBL\bin\Debug\BBL.dll
+C:\Users\Administrator\Desktop\广告系统\WebAdsystem\BBL\bin\Debug\BBL.pdb
+C:\Users\Administrator\Desktop\广告系统\WebAdsystem\BBL\bin\Debug\DAL.dll
+C:\Users\Administrator\Desktop\广告系统\WebAdsystem\BBL\bin\Debug\MySocket.dll
+C:\Users\Administrator\Desktop\广告系统\WebAdsystem\BBL\bin\Debug\MySocket.pdb
+C:\Users\Administrator\Desktop\广告系统\WebAdsystem\BBL\bin\Debug\DAL.pdb
+C:\Users\Administrator\Desktop\广告系统\WebAdsystem\BBL\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\广告系统\WebAdsystem\BBL\obj\Debug\BBL.dll
+C:\Users\Administrator\Desktop\广告系统\WebAdsystem\BBL\obj\Debug\BBL.pdb
+C:\Users\Administrator\Desktop\广告系统\WebAdsystem\BBL\bin\Debug\WbClient.dll
+C:\Users\Administrator\Desktop\广告系统\WebAdsystem\BBL\bin\Debug\WbClient.pdb

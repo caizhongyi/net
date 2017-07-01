@@ -1,0 +1,16 @@
+C:\Silverlight20\SocketServer\bin\Debug\SocketServer.exe
+C:\Silverlight20\SocketServer\bin\Debug\SocketServer.pdb
+C:\Silverlight20\SocketServer\obj\Debug\ResolveAssemblyReference.cache
+C:\Silverlight20\SocketServer\obj\Debug\SocketServer.Main.resources
+C:\Silverlight20\SocketServer\obj\Debug\SocketServer.Properties.Resources.resources
+C:\Silverlight20\SocketServer\obj\Debug\SocketServer.csproj.GenerateResource.Cache
+C:\Silverlight20\SocketServer\obj\Debug\SocketServer.exe
+C:\Silverlight20\SocketServer\obj\Debug\SocketServer.pdb
+C:\Documents and Settings\webabcd\桌面\Silverlight20\SocketServer\bin\Debug\SocketServer.exe
+C:\Documents and Settings\webabcd\桌面\Silverlight20\SocketServer\bin\Debug\SocketServer.pdb
+C:\Documents and Settings\webabcd\桌面\Silverlight20\SocketServer\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\webabcd\桌面\Silverlight20\SocketServer\obj\Debug\SocketServer.Main.resources
+C:\Documents and Settings\webabcd\桌面\Silverlight20\SocketServer\obj\Debug\SocketServer.Properties.Resources.resources
+C:\Documents and Settings\webabcd\桌面\Silverlight20\SocketServer\obj\Debug\SocketServer.csproj.GenerateResource.Cache
+C:\Documents and Settings\webabcd\桌面\Silverlight20\SocketServer\obj\Debug\SocketServer.exe
+C:\Documents and Settings\webabcd\桌面\Silverlight20\SocketServer\obj\Debug\SocketServer.pdb

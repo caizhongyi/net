@@ -1,0 +1,177 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{06744065-E920-4B1B-9141-9EAA79443102}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WbSystem</RootNamespace>
+    <AssemblyName>WbSystem</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar2, Version=7.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\WbSystem\WbSystem\bin\Debug\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.85.5.452, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL" />
+    <Reference Include="IrisSkin2, Version=2006.3.22.45, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\WbSystem\WbSystem\bin\Debug\IrisSkin2.dll</HintPath>
+    </Reference>
+    <Reference Include="ReadPage, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnCompress, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="WriteXML, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdForm.Designer.cs">
+      <DependentUpon>AdForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BackForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BackForm.Designer.cs">
+      <DependentUpon>BackForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DelOrUpdateNewsInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DelOrUpdateNewsInfo.Designer.cs">
+      <DependentUpon>DelOrUpdateNewsInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DownFiles\DownLoadFiles.cs" />
+    <Compile Include="DownFiles\FilesFactory.cs" />
+    <Compile Include="DownFiles\IFiles.cs" />
+    <Compile Include="DownPicture.cs" />
+    <Compile Include="FileManage\FileFactory.cs" />
+    <Compile Include="FileManage\FileOperate.cs" />
+    <Compile Include="FileManage\IFileOperate.cs" />
+    <Compile Include="GetIp\ClassBroadCast.cs" />
+    <Compile Include="GetIp\ClassStartUdpThread.cs" />
+    <Compile Include="GetIp\FileDateTimeInfo.cs" />
+    <Compile Include="GetIp\IPInfo.cs" />
+    <Compile Include="GetIp\LanTimeManageInfo.cs" />
+    <Compile Include="NewsInfo.cs" />
+    <Compile Include="NewsInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewsInfoForm.Designer.cs">
+      <DependentUpon>NewsInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PictureInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PictureInfoForm.Designer.cs">
+      <DependentUpon>PictureInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AdForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AdForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BackForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BackForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DelOrUpdateNewsInfo.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DelOrUpdateNewsInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewsInfoForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NewsInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PictureInfoForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PictureInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WriteNewInfoForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>WriteNewInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="App.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ReadInfo\Client\ClassSocket.cs" />
+    <Compile Include="ReadInfo\Client\Client.cs" />
+    <Compile Include="ReadInfo\Client\ClientInfo.cs" />
+    <Compile Include="ReadInfo\Client\IConnectionService.cs" />
+    <Compile Include="ReadInfo\ListenInfo\ListenInfo.cs" />
+    <Compile Include="ReadInfo\ListenInfo\ListenSession.cs" />
+    <Compile Include="ReadInfo\SendInfo\SendInfo.cs" />
+    <Compile Include="ReadInfo\Service\ClassSession.cs" />
+    <Compile Include="ReadInfo\Service\IService.cs" />
+    <Compile Include="ReadInfo\Service\Service.cs" />
+    <Compile Include="ReadInfo\Service\ServiceInfo.cs" />
+    <Compile Include="TimeManage\CompareTime.cs" />
+    <Compile Include="TimeManage\FactoryTime.cs" />
+    <Compile Include="TimeManage\ICompareTime.cs" />
+    <Compile Include="WriteNewInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WriteNewInfoForm.Designer.cs">
+      <DependentUpon>WriteNewInfoForm.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\设置桌面背景\SetWallpaper.csproj">
+      <Project>{BB293AFE-B483-49C2-9A0B-9BC9072753B0}</Project>
+      <Name>SetWallpaper</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

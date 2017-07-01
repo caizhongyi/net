@@ -1,0 +1,8 @@
+bin\Debug\FindFile.exe
+bin\Debug\FindFile.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\FindFile.Form1.resources
+obj\Debug\FindFile.Properties.Resources.resources
+obj\Debug\FindFile.csproj.GenerateResource.Cache
+obj\Debug\FindFile.exe
+obj\Debug\FindFile.pdb

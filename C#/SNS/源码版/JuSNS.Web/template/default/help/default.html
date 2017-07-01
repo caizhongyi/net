@@ -1,0 +1,37 @@
+﻿#parse("_head.html")
+<script type="text/javascript" src="$webpath/library/js/date/WdatePicker.js"></script>
+<div id="snsmenu">
+#parse("_menu.html")
+</div>
+<div id="snsbody">
+    <div id="snshead"><span class="l">帮助中心</span></div>
+   <div id="snsbody-all">
+   <div class="itemmenu">
+        <ul>
+            <li class="current"><a href="$webpath/help/default$exname">帮助索引</a></li>
+            #if($isadmin)
+            <li><a href="$webpath/help/new$exname">添加帮助</a></li>
+            #end
+            <li class="search"> &nbsp;  &nbsp; 搜索：<input id="kwd" name="kwd" value="#if($kwd)$kwd#else搜索帮助#end" type="text" class="f-text w100" onclick="this.value=''" /> <input id="Button1" type="button" value="搜索" class="btn_gray2" onclick="search('help','')" /></li>
+        </ul>
+    </div>
+      <div class="pitem">
+         #if($recordcount>0)
+                <ul>
+                #foreach($info in $infolist)
+                <li id="param_$info.id">
+                   <a href="$webpath/help/info$exname?hid=$info.id">$info.title</a> $info.showop #if($info.showedit)$info.showedit#end
+                </li>
+                #end
+              </ul>
+              <div class="pages">$pagelist</div>
+        #else
+            <div>还没有记录</div>
+        #end       
+            
+      </div>
+     
+</div>
+</div>
+
+#parse("_foot.html")

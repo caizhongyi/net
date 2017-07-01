@@ -1,0 +1,1 @@
+document.writeln('<script type="text\/javascript" src="http:\/\/s113.cnzz.com\/stat.php?id=812980&amp;web_id=812980" charset="gb2312"><\/scr'+'ipt>');

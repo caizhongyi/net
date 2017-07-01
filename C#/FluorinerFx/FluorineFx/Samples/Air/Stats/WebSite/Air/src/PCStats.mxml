@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:WindowedApplication xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" width="400" height="200" creationComplete="init();"
+	showStatusBar="false" horizontalScrollPolicy="off" verticalScrollPolicy="off" title="PCStats Sample">
+	<mx:Label x="10" y="10" text="OS Version" fontWeight="bold"/>
+	<mx:Label x="10" y="50" text=".NET Runtime" fontWeight="bold"/>
+	<mx:Label x="10" y="88" text="Uptime" fontWeight="bold"/>
+	<mx:Label y="10" id="lblOS" right="46" left="101"/>
+	<mx:Label y="50" id="lblClr" right="46" left="101"/>
+	<mx:Label y="88" id="lblUptime" right="46" left="101"/>
+	
+	<mx:Script>
+		<![CDATA[
+		
+			import mx.utils.ObjectUtil;
+			import mx.controls.Alert;
+			import mx.rpc.events.FaultEvent;
+			import mx.rpc.events.ResultEvent;
+		
+		private function init():void
+		{
+			statsRO.GetComputerStats();
+		}
+		
+	    private function statsHandler(event:ResultEvent):void 
+	    {
+	    	lblClr.text = event.result.clr;
+	    	lblOS.text = event.result.os;
+	    	lblUptime.text = event.result.uptime;
+     	}
+      
+	    private function statsFaultHandler(event:FaultEvent):void
+	    {
+        	Alert.show( event.fault.faultString, "Failed to request info");
+	    }
+		
+		]]>
+	</mx:Script>
+
+	<mx:RemoteObject id="statsRO" destination="stats">
+	    <mx:method name="GetComputerStats" fault="statsFaultHandler(event)" result="statsHandler(event)" />
+	</mx:RemoteObject>
+	
+</mx:WindowedApplication>

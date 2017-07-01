@@ -1,0 +1,57 @@
+﻿<UserControl x:Class="Five.View.Components.WhitePieceComponent"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+	<UserControl.Resources>
+		<Storyboard x:Name="Highlight">
+			<ColorAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Shape" Storyboard.TargetProperty="(Shape.Stroke).(SolidColorBrush.Color)">
+				<SplineColorKeyFrame KeyTime="00:00:01" Value="#FFFF0000"/>
+				<SplineColorKeyFrame KeyTime="00:00:02" Value="#FF9C9C9C"/>
+			</ColorAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Shape" Storyboard.TargetProperty="(Shape.StrokeThickness)">
+				<SplineDoubleKeyFrame KeyTime="00:00:01" Value="1"/>
+				<SplineDoubleKeyFrame KeyTime="00:00:02" Value="1"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Shape" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Offset)">
+				<SplineDoubleKeyFrame KeyTime="00:00:01" Value="0.045"/>
+				<SplineDoubleKeyFrame KeyTime="00:00:02" Value="0.11864399909973145"/>
+			</DoubleAnimationUsingKeyFrames>
+			<ColorAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Shape" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Color)">
+				<SplineColorKeyFrame KeyTime="00:00:01" Value="#FFFFFFFF"/>
+				<SplineColorKeyFrame KeyTime="00:00:02" Value="#FFFFFFFF"/>
+			</ColorAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Shape" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Offset)">
+				<SplineDoubleKeyFrame KeyTime="00:00:01" Value="0.201"/>
+				<SplineDoubleKeyFrame KeyTime="00:00:02" Value="0.40254199504852295"/>
+			</DoubleAnimationUsingKeyFrames>
+			<ColorAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Shape" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Color)">
+				<SplineColorKeyFrame KeyTime="00:00:01" Value="#FFFF0000"/>
+				<SplineColorKeyFrame KeyTime="00:00:02" Value="#FFCACACA"/>
+			</ColorAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Shape" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[3].(GradientStop.Offset)">
+				<SplineDoubleKeyFrame KeyTime="00:00:01" Value="0.567"/>
+				<SplineDoubleKeyFrame KeyTime="00:00:02" Value="0.83474600315093994"/>
+			</DoubleAnimationUsingKeyFrames>
+			<ColorAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Shape" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[3].(GradientStop.Color)">
+				<SplineColorKeyFrame KeyTime="00:00:01" Value="#FF5C0000"/>
+				<SplineColorKeyFrame KeyTime="00:00:02" Value="#FF656565"/>
+			</ColorAnimationUsingKeyFrames>
+		</Storyboard>
+	</UserControl.Resources>
+    <Ellipse x:Name="Shape" Width="26" Height="26" Canvas.Left="0" Canvas.Top="-1.52588e-005" Stretch="Fill" StrokeLineJoin="Round" Stroke="#FF9C9C9C">
+        <Ellipse.Fill>
+            <RadialGradientBrush RadiusX="1.30682" RadiusY="1.30682" Center="0.296415,0.258895" GradientOrigin="0.296415,0.258895">
+                <RadialGradientBrush.GradientStops>
+                    <GradientStop Color="#FFFFFFFF" Offset="0.118644"/>
+                    <GradientStop Color="#FFCACACA" Offset="0.402542"/>
+                    <GradientStop Color="#FF000000" Offset="1"/>
+                    <GradientStop Color="#FF656565" Offset="0.834746"/>
+                </RadialGradientBrush.GradientStops>
+                <RadialGradientBrush.RelativeTransform>
+                    <TransformGroup>
+                        <RotateTransform CenterX="0.296415" CenterY="0.258895" Angle="52.2532"/>
+                    </TransformGroup>
+                </RadialGradientBrush.RelativeTransform>
+            </RadialGradientBrush>
+        </Ellipse.Fill>
+    </Ellipse>
+</UserControl>

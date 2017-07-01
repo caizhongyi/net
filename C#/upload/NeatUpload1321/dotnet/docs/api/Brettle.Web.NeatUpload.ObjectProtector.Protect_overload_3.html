@@ -1,0 +1,60 @@
+<html dir="LTR">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" />
+    <meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5" />
+    <title>ObjectProtector.Protect Method (Object, Byte[], Byte[], String, String)</title>
+    <xml>
+    </xml>
+    <link rel="stylesheet" type="text/css" href="MSDN.css" />
+  </head>
+  <body id="bodyID" class="dtBODY">
+    <div id="nsbanner">
+      <div id="bannerrow1">
+        <table class="bannerparthead" cellspacing="0">
+          <tr id="hdr">
+            <td class="runninghead">NeatUpload Documentation</td>
+            <td class="product">
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div id="TitleRow">
+        <h1 class="dtH1">ObjectProtector.Protect Method (Object, Byte[], Byte[], String, String)</h1>
+      </div>
+    </div>
+    <div id="nstext">
+      <p> Converts an object tree to a secure string. </p>
+      <div class="syntax">public static <a href="http://msdn.microsoft.com/library/default.asp?url=/library/en-us/cpref/html/frlrfSystemStringClassTopic.asp">string</a> Protect(<br />   <a href="http://msdn.microsoft.com/library/default.asp?url=/library/en-us/cpref/html/frlrfSystemObjectClassTopic.asp">object</a> <i>objectToSerialize</i>,<br />   <a href="http://msdn.microsoft.com/library/default.asp?url=/library/en-us/cpref/html/frlrfSystemByteClassTopic.asp">byte[]</a> <i>encryptionKey</i>,<br />   <a href="http://msdn.microsoft.com/library/default.asp?url=/library/en-us/cpref/html/frlrfSystemByteClassTopic.asp">byte[]</a> <i>validationKey</i>,<br />   <a href="http://msdn.microsoft.com/library/default.asp?url=/library/en-us/cpref/html/frlrfSystemStringClassTopic.asp">string</a> <i>encryptionAlgorithm</i>,<br />   <a href="http://msdn.microsoft.com/library/default.asp?url=/library/en-us/cpref/html/frlrfSystemStringClassTopic.asp">string</a> <i>validationAlgorithm</i><br />);</div>
+      <h4 class="dtH4">Parameters</h4>
+      <dl>
+        <dt>
+          <i>objectToSerialize</i>
+        </dt>
+        <dd>the object at the root of the object tree to protect.</dd>
+        <dt>
+          <i>encryptionKey</i>
+        </dt>
+        <dd>the key to use to encrypt the object</dd>
+        <dt>
+          <i>validationKey</i>
+        </dt>
+        <dd>ignored</dd>
+        <dt>
+          <i>encryptionAlgorithm</i>
+        </dt>
+        <dd>the name of the encryption algorithm to use, null means use default</dd>
+        <dt>
+          <i>validationAlgorithm</i>
+        </dt>
+        <dd>the name of the signing algorithm to use, null means use default</dd>
+      </dl>
+      <h4 class="dtH4">Return Value</h4>
+      <p>a secure string that can be passed to <a href="Brettle.Web.NeatUpload.ObjectProtector.Unprotect_overload_1.html">Unprotect</a> to retrieve the original object.</p>
+      <h4 class="dtH4">Remarks</h4>
+      <p>The encryption key and algorithms are used to encrypt the serialized object. They must have the same values when <a href="Brettle.Web.NeatUpload.ObjectProtector.Unprotect_overload_2.html">Unprotect</a> is called or an exception will occur.</p>
+      <h4 class="dtH4">See Also</h4>
+      <p>
+        <a href="Brettle.Web.NeatUpload.ObjectProtector.html">ObjectProtector Class</a> | <a href="Brettle.Web.NeatUpload.html">Brettle.Web.NeatUpload Namespace</a> | <a href="Brettle.Web.NeatUpload.ObjectProtector.Protect_overloads.html">ObjectProtector.Protect Overload List</a></p>
+    </div>
+  </body>
+</html>

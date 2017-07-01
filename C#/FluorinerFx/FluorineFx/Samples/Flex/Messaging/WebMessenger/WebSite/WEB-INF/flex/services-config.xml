@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<services-config>
+  <services>
+    <service id="message-service" class="flex.messaging.services.MessageService" messageTypes="flex.messaging.messages.AsyncMessage">
+		    <adapters>
+			    <adapter-definition id="chat" class="ServiceLibrary.ChatAdapter" default="true"/>
+		    </adapters>
+        <destination id="chat">
+			    <adapter ref="chat"/>
+          <channels>
+              <channel ref="my-rtmp"/>
+          </channels>
+          <properties>
+				    <network>
+					    <!-- The session-timeout element specifies the idle time in minutes before a subscriber is unsubscribed. When you set the value to 0 (zero), subscribers are not forced to unsubscribe automatically. The default value is 20. -->
+					    <!-- <session-timeout>20</session-timeout> -->
+				    </network>
+            <server>
+              <allow-subtopics>true</allow-subtopics>
+            </server>            
+          </properties>
+         </destination>
+      </service>
+    <service id="data-service" class="flex.data.DataService" messageTypes="flex.data.messages.DataMessage">
+      <adapters>
+        <adapter-definition id="dotnet-dao" class="FluorineFx.DotNetAdapter" default="true"/>
+      </adapters>
+      <destination id="chat-sessions">
+        <adapter ref="dotnet-dao" />
+        <channels>
+          <channel ref="my-rtmp"/>
+        </channels>
+        <properties>
+          <source>ServiceLibrary.UserSessionAssembler</source>
+          <scope>application</scope>
+          <metadata>
+            <identity property="userId"/>
+          </metadata>
+          <network>
+            <!-- <session-timeout>20</session-timeout> -->
+            <paging enabled="false" pageSize="10" />
+          </network>
+        </properties>
+      </destination>
+      <destination id="chat-buddies">
+        <adapter ref="dotnet-dao" />
+        <channels>
+          <channel ref="my-rtmp"/>
+        </channels>
+        <properties>
+          <source>ServiceLibrary.BuddyAssembler</source>
+          <scope>application</scope>
+          <metadata>
+            <identity property="userId"/>
+            <identity property="buddyId"/>
+          </metadata>
+          <network>
+            <!-- <session-timeout>20</session-timeout> -->
+            <paging enabled="false" pageSize="10" />
+          </network>
+        </properties>
+      </destination>
+    </service>
+  </services>
+
+  <channels>
+        <channel-definition id="my-rtmp" class="mx.messaging.channels.RTMPChannel">
+            <endpoint uri="rtmp://{server.name}:1950" class="flex.messaging.endpoints.RTMPEndpoint"/>
+        </channel-definition>        
+    </channels>
+</services-config>

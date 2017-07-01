@@ -1,0 +1,67 @@
+﻿.color-table TH {
+	PADDING-RIGHT: 7px; PADDING-LEFT: 7px; FONT-WEIGHT: normal; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; TEXT-ALIGN: right
+}
+.manage-products-table TD {
+	BORDER-RIGHT: #ddd 1px solid; BORDER-TOP: #ddd 1px solid; BORDER-LEFT: #ddd 1px solid; BORDER-BOTTOM: #ddd 1px solid; BORDER-COLLAPSE: collapse
+}
+.color-field-label {
+	PADDING-RIGHT: 1em; TEXT-ALIGN: right
+}
+.color-field {
+	MARGIN-TOP: 2px; MARGIN-BOTTOM: 2px; FONT-FAMILY: "Courier New", Courier, monospace
+}
+.colorhover {
+	BORDER-RIGHT: blue 1px solid; BORDER-TOP: blue 1px solid; DISPLAY: block; MARGIN-LEFT: 4px; BORDER-LEFT: blue 1px solid; WIDTH: 20px; CURSOR: pointer; BORDER-BOTTOM: blue 1px solid; HEIGHT: 16px
+}
+TABLE.palette {
+	BORDER-RIGHT: #999999 1px solid; BORDER-TOP: #999999 1px solid; FONT-SIZE: 5px; BACKGROUND: black; BORDER-LEFT: #999999 1px solid; BORDER-BOTTOM: #999999 1px solid; BORDER-COLLAPSE: collapse
+}
+TABLE.palette TD A {
+	DISPLAY: block; TEXT-DECORATION: none
+}
+TABLE.palette TD A DIV {
+	WIDTH: 20px; HEIGHT: 20px
+}
+TABLE.palette A {
+	BORDER-RIGHT: #cccccc 1px solid; PADDING-RIGHT: 1px; BORDER-TOP: #cccccc 1px solid; PADDING-LEFT: 1px; PADDING-BOTTOM: 1px; BORDER-LEFT: #cccccc 1px solid; PADDING-TOP: 1px; BORDER-BOTTOM: #cccccc 1px solid
+}
+TABLE.palette A:hover {
+	BORDER-RIGHT: red 1px solid; BORDER-TOP: red 1px solid; BORDER-LEFT: red 1px solid; CURSOR: pointer; BORDER-BOTTOM: red 1px solid
+}
+
+#IAB-1 {
+	Z-INDEX: 2; OVERFLOW: hidden; WIDTH: 500px; margin-left:40px; POSITION: relative; HEIGHT: 92px
+}
+#IAB-1 IMG {
+	RIGHT: 0px; CURSOR: pointer; POSITION: absolute; TOP: 0px
+}
+#IAB-1 .iab-container {
+	FLOAT: left; OVERFLOW: hidden; WIDTH: 500px; FONT-FAMILY: Arial, Helvetica, sans-serif; HEIGHT: 92px; BACKGROUND-COLOR: #ffffff
+}
+#IAB-1 .container {
+	BORDER-RIGHT: #ffffff 1px solid; PADDING-RIGHT: 0px; BORDER-TOP: #ffffff 1px solid; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; BORDER-LEFT: #ffffff 1px solid; WIDTH: 500px; PADDING-TOP: 0px; BORDER-BOTTOM: #ffffff 1px solid; HEIGHT: 92px
+}
+#IAB-1 .container TD {
+	VERTICAL-ALIGN: top
+}
+#IAB-1 .adhead {
+	FONT-SIZE: 13px; MARGIN: auto; OVERFLOW: hidden; COLOR: #0000ff; PADDING-TOP: 2px; TEXT-ALIGN: center
+}
+#IAB-1 .adtext {
+	FONT-SIZE: 13px; MARGIN: auto; OVERFLOW: hidden; TEXT-ALIGN: center
+}
+#IAB-1 .ad-over {
+	
+}
+#IAB-1 .ad-over .adhead {
+	
+}
+#IAB-1 .ad-over .adtext {
+	
+}
+#IAB-1 .ad {
+	CURSOR: pointer; TEXT-ALIGN: center
+}
+.ad-over {
+	CURSOR: pointer; TEXT-ALIGN: center
+}

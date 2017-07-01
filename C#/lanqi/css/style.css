@@ -1,0 +1,77 @@
+﻿body{padding:0px;margin:0;font-size:12px;color:#484848; background:url(../images/bg.jpg) center top no-repeat; background-color:#fff}
+td{line-height:150%;font-size:12px;}
+a:link,a:visited{color:#484848; text-decoration: none} 
+a:hover,a:active{color:#f00;text-decoration: underline;}
+#nav{ background-image:url(../images/index_05.gif);height:32px;line-height:32px;}
+#nav a:link,#nav a:visited{height:29px;line-height:29px;color:#FFFFFF;font-size:14px;width:89px;} 
+#nav a:hover,#nav a:active,#now a:link,#now a:visited{color:#010101;font-size:14px; text-decoration: none; background-image:url(../images/index_10.gif);width:89px;height:29px;line-height:29px; display:block;}
+.c5{margin:5px 0;}
+.c3{margin:3px 0;}
+.xian{ border-left:1px solid #dedede;border-right:1px solid #dedede}
+.green{color:#548d00;}
+.red{color:#c80606}
+.red1{color:#c90808;}
+.line{border-bottom:1px dashed #ccc;}
+.biankuang{border:1px solid #dedede}
+.biankuang1{border:1px solid #dedede;border-right:0;}
+.biankuang2{border:1px solid #dedede;border-top:1px dashed #dedede;}
+.word{font-size:14px;}
+.tag{}
+.tag a:link,.tag a:visited{ background-image:url(../images/index_131.gif);height:24px;line-height:24px;width:93px; display:block;margin:0 1px;} 
+.tag a:hover,.tag a:active,.tag_now a:link,.tag_now a:visited{ background-image:url(../images/index_129.gif);width:93px;height:24px;line-height:24px;margin:0 1px; display:block;color:#fff; text-decoration:none}
+.footer{ background-image:url(../images/index_275.gif);color:#fff;}
+.footer a{color:#fff;}
+
+.menu{margin:5px 0; border:0}
+.menu a:link,.menu a:visited {color:#333; text-decoration: none; display:block; background-image:url(../images/aboutus_25.gif);line-height:26px;height:26px;} 
+.menu a:hover,.menu a:active,.now a:link,.now a:visited {color:#fff;text-decoration: none;display:block; background-image:url(../images/aboutus_22.gif);line-height:26px;height:26px;}
+.dian{padding:2px 0; border-bottom:1px solid #ccc;}
+.bg{ background-image:url(../images/zq_web_12.gif);height:24px;line-height:24px;padding-right:5px;}
+.title{font-size:14px;color:#c80505;font-weight:bold;}
+.p10{padding:20px 5px;}
+.job a:link,..job a:visited{ background-image:url(../images/job_17.gif);height:24px;line-height:24px;padding-left:24px; display:block}
+.job a:hover,.job a:active,.job_now a:link,.job_now a:visited{ background-image:url(../images/job_03.gif);height:24px;line-height:24px;padding-left:24px; display:block}
+.lan{color:#3973b2;}
+.diwen{ background:url(../images/job_07.gif) right bottom no-repeat; border:1px dashed #ccc;}
+.topic{margin:10px 0 10px 10px;}
+.topic a{ background-image:none;}
+.pic{ background:url(../images/zq_tuiguang_10.gif) no-repeat;height:142px;width:211px;}
+.domain{ background-image:url(../images/zq_Domain_03.gif);height:29px;line-height:29px;}
+.service{ border:1px solid #e2e2e2;margin:5px 0;}
+.title3{border-bottom:1px dashed #999;padding-left:8px;color:#3c3c3c;font-size:14px;font-weight:bold;height:28px;line-height:28px;}
+.tuoguan{ background:url(../images/zq_tuoguan_03.gif) no-repeat;height:241px;}
+.title5{ background:url(../images/zq_tuoguan_07.gif) no-repeat;height:28px;line-height:28px;}
+.title7{background-image:url(../images/zq_tuoguan_details_03.gif);padding-left:8px;font-size:14px;font-weight:bold;height:28px;line-height:28px;}
+.case{ background:url(../images/Case_16.gif) no-repeat;height:127px;}
+.email a:link,.email a:visited {color:#333; text-decoration: none; display:block; background:url(../images/btn_td02.jpg) no-repeat;line-height:25px;height:25px;width:116px;} 
+.email a:hover,.email a:active,.e a:link, .e a:visited {color:#fff;text-decoration: none;background:url(../images/btn_td01.jpg) no-repeat;line-height:25px;height:25px;width:116px;}
+.word3{color:#006633;font-size:14px;font-weight:bold;}
+.subnav{ border-bottom:1px dashed #333;padding:3px;height:18px;}
+
+TABLE.t-list {
+	BORDER-RIGHT: #cddce5 1px solid; BORDER-TOP: #cddce5 1px solid; BORDER-LEFT: #cddce5 1px solid; BORDER-BOTTOM: #cddce5 1px solid
+}
+TABLE.t-list TD {
+	BORDER-RIGHT: #cddce5 1px solid; BORDER-TOP: #cddce5 1px solid; BORDER-LEFT: #cddce5 1px solid; BORDER-BOTTOM: #cddce5 1px solid
+}
+TABLE.t-list TH {
+	BORDER-RIGHT: #cddce5 1px solid; BORDER-TOP: #cddce5 1px solid; BORDER-LEFT: #cddce5 1px solid; BORDER-BOTTOM: #cddce5 1px solid
+}
+TABLE.t-list {
+	MARGIN: 10px 5px; WIDTH: 99%; BORDER-COLLAPSE: collapse
+}
+TABLE.t-list TD {
+	PADDING-RIGHT: 6px; PADDING-LEFT: 6px; PADDING-BOTTOM: 3px; PADDING-TOP: 3px
+}
+TABLE.t-list TH {
+	PADDING-RIGHT: 6px; PADDING-LEFT: 6px; PADDING-BOTTOM: 3px; PADDING-TOP: 3px
+}
+TABLE.t-list TH {
+	BACKGROUND: #fdfdfd
+}
+TABLE.t-list THEAD TH {
+	BACKGROUND: url(../images/thbg.jpg) repeat-x center bottom; COLOR: #2980a3
+}
+TABLE.t-list .summary {
+	FONT-WEIGHT: bold; FONT-SIZE: 1.5em; COLOR: #56a0cd; FONT-STYLE: italic
+}

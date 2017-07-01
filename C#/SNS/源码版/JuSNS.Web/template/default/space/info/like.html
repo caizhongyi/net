@@ -1,0 +1,85 @@
+﻿#parse("_head.html")
+<div id="snsmenu">
+#parse("_menu.html")
+</div>
+<div id="snsbody">
+    <div id="snshead">个人爱好</div>
+
+    <div class="itemmenu">
+        <ul>
+            <li><a href="profile$exname">基本资料</a></li>
+            <li><a href="nowcity$exname">居住地</a></li>
+            <li><a href="head$exname">修改头像</a></li>
+            <li><a href="links$exname">联系方式</a></li>
+            <li><a href="edu$exname">教育情况</a></li>
+            <li><a href="work$exname">工作情况</a></li>
+            <li class="current"><a href="like$exname">个人爱好</a></li>
+            <li><a href="privacy$exname">隐私设置</a></li>
+        </ul>
+  </div>
+
+    <div class="pitem">${username} &nbsp; ${email} &nbsp; ${mobile}${bindmobile} 
+        <span id="hideMobile" style="display:none;">
+            <input value="" class="f-text" type="text" id="mMobile" name="mMobile" /> <input type="button" name="MobileModify" id="MobileModify" onclick="MobileModifys();" class="f-button" value="填写手机"/>
+        </span>
+     (<a href="pwd$exname">修改登录密码</a>)</div>
+    <form action="$webpath/space/info/like${exname}" method="post">
+        <div class="pitem">
+            <em>兴趣爱好</em>
+             <textarea name="Favourite" id="Favourite" cols="45" style="height: 50px;width:300px;" class="f-text">$Favourite</textarea>
+            </div>
+            <div class="pitem">
+            <em>喜欢的音乐</em>
+             <textarea name="FavMusics" id="FavMusics" cols="45" style="height: 50px;width:300px;" class="f-text">$FavMusics</textarea>
+            </div>  
+            <div class="pitem">
+            <em>喜欢的电影</em>
+            <textarea name="FavMovies" id="FavMovies" cols="45" style="height: 50px;width:300px;" class="f-text">$FavMovies</textarea>
+            </div>                     
+            <div class="pitem">
+            <em>喜欢的动漫</em>
+            <textarea name="FavCartoons" id="FavCartoons" cols="45" style="height: 50px;width:300px;" class="f-text">$FavCartoons</textarea>
+            </div>                      
+            <div class="pitem">
+            <em>喜欢的游戏</em>
+            <textarea name="FavGames" id="FavGames" cols="45" style="height: 50px;width:300px;" class="f-text">$FavGames</textarea>
+            </div>                      
+            <div class="pitem">
+            <em>喜欢的运动</em>
+            <textarea name="FavSports" id="FavSports" cols="45" style="height: 50px;width:300px;" class="f-text">$FavSports</textarea>
+            </div>                       
+            <div class="pitem">
+            <em>喜欢的书</em>
+            <textarea name="FavBooks" id="FavBooks" cols="45" style="height: 50px;width:300px;" class="f-text">$FavBooks</textarea>
+            </div>                      
+            <div class="pitem">
+            <em>喜欢的格言</em>
+            <textarea name="FavAdages" id="FavAdages" cols="45" style="height: 50px;width:300px;" class="f-text">$FavAdages</textarea>
+            </div>                      
+            <div class="pitem">
+            <em>欣赏的名人</em>
+            <textarea name="AppreciateMen" id="AppreciateMen" cols="45" style="height: 50px;width:300px;" class="f-text">$AppreciateMen</textarea>
+            </div>                      
+            <div class="pitem">
+            <em>自我描述</em>
+            <textarea name="Presentation" id="Presentation" cols="45" style="height: 50px;width:300px;" class="f-text">$Presentation</textarea>
+            </div>       
+            <div class="pitem1"> <em>&nbsp;</em>
+        <input type="submit" name="button1" id="Submit1" class="btn_blue6"  value="保存个人爱好"/>
+        <input type="reset" name="button1" id="Submit2" class="btn_gray2" value="重填"/>
+            </div>
+    </form>
+    </div>
+    <script type="text/javascript">
+        function MobileModifys()
+        {
+            var mobile=jQuery("#mMobile").val();
+            var uid=$uid;
+            modifymobile(uid,mobile);
+        }
+        function bindmobile(mb,flag)
+        {
+            bindmobiles("${mobilesendcontent}",flag);
+        }
+    </script>
+#parse("_foot.html")

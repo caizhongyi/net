@@ -1,0 +1,93 @@
+﻿#parse("_head.html")
+<link href="$templatepath/css/app/ative.css" rel="stylesheet" type="text/css" />
+<div id="snsmenu">
+#parse("_menu.html")
+</div>
+<div id="snsbody">
+    <div id="snshead"><span class="l">$cpagetitle</span><span class="r"><input id="kwd" name="kwd" value="#if($kwd)$kwd#else搜索活动#end" type="text" class="f-text w100" onclick="this.value=''" /> <input id="Button1" type="button" value="搜索" class="btn_gray2" onclick="search('ative','$q')" /></span></div>
+    <div >
+    <div class="itemmenu">
+        <ul>
+            <li><a href="$webpath/app/ative">返回活动列表</a></li>
+            <li class="current"><a href="$webpath/app/ative/info$exname?aid=$aid">活动详情</a></li>
+            <li><a href="$webpath/app/ative/member$exname?aid=$aid">活动成员</a></li>
+            <li><a href="$webpath/app/ative/album$exname?aid=$aid">活动相册</a></li>
+            <li><a href="$webpath/app/ative/book$exname?aid=$aid">活动留言</a></li>
+            <li class="new"><a href="$webpath/app/ative/new$exname" class="newitem">发起活动</a></li> 
+        </ul>
+        
+    </div>
+    </div>
+    <div id="ativemiddle">
+          <p  class="ativetitle">$ativename <a href="javascript:;" onclick="sharetofriend('active',$aid,$uid,'活动：$ativename')" class="a-share">分享</a></p>
+            <div class="infopic">
+                <img src="$ativeurl" onerror="this.src='$webpath/uploads/app/ative/default.jpg'" />
+                <p class="center"> </p>
+            </div>
+            <div class="infocontent">
+                <p><em>发起者</em><a href="$userurl">$truename</a></p>
+                <p><em>活动分类</em><a href="$webpath/app/ative/default$exname?classid=$classid">$classname</a></p>
+                <p><em>活动地址</em>$address</p>
+                <p><em>活动时间</em>$starttime  - $endtime</p>
+                <p><em>报名截至</em>$baotime</p>
+                <p><em>活动人数</em>$persionnumber</p>
+                <p><em>需要审核</em>$check</p>
+                <p><span class="reshow strong">$click</span>人查看，<span class="reshow strong">$baomembers</span>人报名，<span class="reshow strong">$attmembers</span>关注</p>
+                <p>
+                $button
+                </p>
+            </div>
+            <div class="ativecontent">活动详情</div>
+            <div class="infocontents">
+                <p>$content</p>
+            </div>
+            <div class="ativecontent">关注的人</div>
+            <div class="attlist">
+                <ul>
+                    #foreach($info in $infolist)
+                    <li id="param_$info.id">
+                        <div class="l images center"><a href="$info.spaceurl" target="_blank"><img src="$info.headpic" /><br />$info.truename</a></div>
+                    </li>
+                    #end
+                </ul>
+                <div class="right clearpix"><a href="$webpath/app/ative/member$exname?aid=$aid&flag=1">更多...</a> </div>
+            </div>
+            <div class="ativecontent">活动相册</div>
+               <div class="photolist">
+                <ul>
+                    #foreach($photoinfo in $photoinfolist)
+                    <li>
+                        <a href="$webpath/app/ative/photoview$exname?pid=$photoinfo.id&aid=$aid" target="_blank" title="发布者：$photoinfo.truename"><img src="$photoinfo.photourl" /></a>
+                    </li>
+                    #end
+                </ul>
+                <div class="right clearpix"><a href="$webpath/app/ative/album$exname?aid=$aid">更多...</a> </div>
+            </div>
+
+    </div>
+    <div id="ativeright">
+       <div class="title">加入活动的人</div>
+       <div class="classlistq">
+        <ul>
+            #foreach($joininfo in $joininfolist)
+            <li>
+                <div class="l images center"><a href="$joininfo.spaceurl" target="_blank"><img src="$joininfo.headpic" /><br />$joininfo.truename</a></div>
+            </li>
+            #end
+        </ul>
+       </div>
+        
+    </div>
+</div>
+
+#parse("_foot.html")
+<script type="text/javascript">
+function CheckMember(aid,uid)
+{
+   var formcontent = "<iframe src=\"$webpath/app/ative/check"+ExName+"?aid="+aid+"&uid="+uid+"\" style=\"width:100%;height:300px;border:0;\" frameborder=\"NO\" border=\"0\" framespacing=\"0\"></iframe>";
+    var W = WinTip("<div>审核会员</div>", formcontent);
+    W.HasBottom=false;
+    W.Create();        
+ 
+}
+</script>

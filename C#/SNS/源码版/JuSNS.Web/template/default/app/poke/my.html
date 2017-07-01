@@ -1,0 +1,35 @@
+﻿#parse("_head.html")
+<link href="$templatepath/css/app/poke.css" rel="stylesheet" type="text/css" />
+<div id="snsmenu">
+#parse("_menu.html")
+</div>
+<div id="snsbody">
+    <div id="snshead">我收到的招呼</div>
+    <div class="itemmenu">
+        <ul>
+            <li><a href="$webpath/app/poke/default$exname">打招呼</a></li>
+            <li class="current"><a href="$webpath/app/poke/my$exname">我收到的招呼</a></li>
+        </ul>
+    </div>
+    
+
+    <div class="pokemy">
+             #if($recordcount>0)
+                <ul>
+                #foreach($info in $infolist)
+                <li id="param_$info.id">
+                   <div class="hsc1 imagecs center"><a href="$info.spaceurl"><img src="$info.headpic" /></div>
+                   <div class="hsc2"><a href="$info.spaceurl">$info.truename</a>$info.content</div>
+                   <div class="hsc3">$info.time</div>
+                   <div class="hsc4"><a href="$webpath/app/poke/default$exname?uid=$info.userid">回应他(她)</a>$info.showop</div>
+                </li>
+                #end
+              </ul>
+              <div class="pages">$pagelist</div>
+        #else
+            <div>还没有记录</div>
+        #end       
+    </div>
+    
+</div>
+#parse("_foot.html")

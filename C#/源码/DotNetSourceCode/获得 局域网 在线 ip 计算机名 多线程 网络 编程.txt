@@ -1,0 +1,189 @@
+using System;
+using System.Collections;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Text;
+using System.Windows.Forms;
+using System.Net;
+using System.Net.Sockets;
+using System.Threading;
+using System.DirectoryServices;
+
+namespace CSDNResult
+...{
+    /**//// <summary>
+    /// Form1 的摘要说明。
+    /// </summary>
+    public class Form1 : System.Windows.Forms.Form
+    ...{
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TreeView PCTree;
+        private System.Windows.Forms.ListBox listBox1;
+        /**//// <summary>
+        /// 必需的设计器变量。
+        /// </summary>
+        private System.ComponentModel.Container components = null;
+
+        public Form1()
+        ...{
+            //
+            // Windows 窗体设计器支持所必需的
+            //
+            InitializeComponent();
+
+            //
+            // TODO: 在 InitializeComponent 调用后添加任何构造函数代码
+            //
+        }
+
+        /**//// <summary>
+        /// 清理所有正在使用的资源。
+        /// </summary>
+        protected override void Dispose( bool disposing )
+        ...{
+            if( disposing )
+            ...{
+                if (components != null) 
+                ...{
+                    components.Dispose();
+                }
+            }
+            base.Dispose( disposing );
+        }
+
+        Windows 窗体设计器生成的代码#region Windows 窗体设计器生成的代码
+        /**//// <summary>
+        /// 设计器支持所需的方法 - 不要使用代码编辑器修改
+        /// 此方法的内容。
+        /// </summary>
+        private void InitializeComponent()
+        ...{
+            this.button1 = new System.Windows.Forms.Button();
+            this.PCTree = new System.Windows.Forms.TreeView();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.SuspendLayout();
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(440, 152);
+            this.button1.Name = "button1";
+            this.button1.TabIndex = 0;
+            this.button1.Text = "button1";
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // PCTree
+            // 
+            this.PCTree.ImageIndex = -1;
+            this.PCTree.Location = new System.Drawing.Point(40, 56);
+            this.PCTree.Name = "PCTree";
+            this.PCTree.SelectedImageIndex = -1;
+            this.PCTree.Size = new System.Drawing.Size(280, 288);
+            this.PCTree.TabIndex = 1;
+            // 
+            // listBox1
+            // 
+            this.listBox1.ItemHeight = 12;
+            this.listBox1.Location = new System.Drawing.Point(368, 192);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(264, 172);
+            this.listBox1.TabIndex = 2;
+            // 
+            // Form1
+            // 
+            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
+            this.ClientSize = new System.Drawing.Size(648, 414);
+            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.PCTree);
+            this.Controls.Add(this.button1);
+            this.Name = "Form1";
+            this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
+            this.ResumeLayout(false);
+
+        }
+        #endregion
+
+        /**//// <summary>
+        /// 应用程序的主入口点。
+        /// </summary>
+        [STAThread]
+        static void Main() 
+        ...{
+            Application.Run(new Form1());
+        }
+
+        private void Form1_Load(object sender, System.EventArgs e)
+        ...{
+        
+        }
+
+        private void button1_Click(object sender, System.EventArgs e)
+        ...{
+            GetIPAddress();
+        }
+        public static string ReadMac(string ip)//传递IP地址,即可返回MAC地址
+        ...{
+            string mac = "";
+            System.Diagnostics.Process p = new System.Diagnostics.Process();
+            p.StartInfo.FileName = "nbtstat";
+            p.StartInfo.Arguments = "-a " + ip;
+            p.StartInfo.UseShellExecute = false;
+            p.StartInfo.CreateNoWindow = true;
+            p.StartInfo.RedirectStandardOutput = true;            
+            p.Start();
+            string output = p.StandardOutput.ReadToEnd();
+            int len = output.IndexOf("MAC Address = ");
+            if(len>0)
+            ...{
+                mac = output.Substring(len + 14, 17);
+            }            
+            p.WaitForExit();            
+            return mac;
+        }
+        public void GetIPAddress()
+        ...{
+            DirectoryEntry entryPC = new DirectoryEntry("WinNT:");
+            ArrayList arr=new ArrayList();
+            foreach(DirectoryEntry child in entryPC.Children)
+            ...{
+                TreeNode node = new TreeNode();
+                node.Text = child.SchemaClassName+":"+child.Name;
+                PCTree.Nodes.Add(node);
+
+                foreach(DirectoryEntry pc in child.Children)
+                ...{
+                    if(String.Compare(pc.SchemaClassName,"computer",true)==0)
+                    ...{
+                        TreeNode son = new TreeNode();
+                        //son.Text = pc.Name;
+                        try
+                        ...{
+                            IPHostEntry hostent = Dns.GetHostByName(pc.Name); // 主机信息
+                            Array addrs = hostent.AddressList;            // IP地址数组
+                            IEnumerator it = addrs.GetEnumerator();       // 迭代器
+                            while(it.MoveNext()) 
+                            ...{                     // 循环到下一个IP 地址
+                                IPAddress ip = (IPAddress)it.Current;      // 获得 IP 地址
+                                son.Text=ip.ToString(); // 显示 IP地址
+                                arr.Add(ReadMac(ip.ToString()));
+                            }
+                        }
+                        catch
+                        ...{
+                            son.Text=pc.Name;
+                        }
+                        node.Nodes.Add(son);
+                    }
+                }
+            }
+            foreach(string s in arr)
+            ...{
+                this.listBox1.Items.Add(s);
+            }
+        }
+        
+    }
+}
+
+

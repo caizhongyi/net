@@ -1,0 +1,40 @@
+#parse("_header.html")
+#parse("_sidebar.html")
+<div id="content">
+    <div class="clearfix">
+    ${postmessage}
+    #if($isdefault==1)
+        #foreach($item in $topposts)
+        <div class="post">
+            <h2 class="post-title">[Top]&nbsp;<a href="${item.url}">${item.title}</a></h2>
+        </div>
+        #end
+    #end
+    #foreach($item in $posts)
+    <div id="post-${item.postid}" class="post">
+        <h2 class="post-title"><a href="${item.url}" title="${item.title}">${item.title}</a> </h2>
+        <div class="post-meta">            
+            <span class="post-date"><i>$item.createdate.tostring("dd")</i>$item.createdate.tostring("yy/MM")</span>            
+            <span class="post-comment"><a href="${item.url}#comments">$item.commentcount</a></span>            
+        </div>
+        <small class="post-meta-sub"><span class="post-author">Author：${item.author.link}</span><span class="post-view"><a href="${item.url}">View(${item.viewcount})</a></span><span class="post-category">${item.category.link}</span></small>
+        
+        <div class="post-content">
+            ${item.detail}
+            <p class="more">
+                <a href="${item.url}">More&raquo;</a>
+            </p>
+        </div>
+    </div>
+    #end
+    #if($posts.count==0)
+    <div class="post">
+        <p>No corresponding article</p>
+    </div>
+    #end
+    ${pager}
+    </div>
+</div>
+
+
+#parse("_footer.html")

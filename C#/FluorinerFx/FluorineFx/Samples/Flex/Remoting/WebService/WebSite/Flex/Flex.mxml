@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute">
+
+	<mx:Script>
+    	<![CDATA[
+    		import mx.collections.ArrayCollection;
+    		import mx.utils.ObjectUtil;
+    		import mx.controls.Alert;
+    		import mx.rpc.events.FaultEvent;
+    		import mx.rpc.events.ResultEvent;
+
+
+	  		private function test():void
+	  		{		
+	  			fluorineRo.GetDataSet();
+	  		}
+
+		  	private function onResult(event:ResultEvent):void {
+		  		gridResult.dataProvider = new ArrayCollection(event.result.test.serverInfo.initialData);
+		  	}
+    
+			private function onFault(event:FaultEvent):void{
+				Alert.show( ObjectUtil.toString(event.fault.faultString), "Error", mx.controls.Alert.OK );
+			}
+    
+    	]]>    
+    </mx:Script>
+
+  <mx:RemoteObject id="fluorineRo" destination="fluorine" source="DataWebService.asmx">
+    <mx:method name="GetDataSet" result="onResult(event)" fault="onFault(event)" />
+  </mx:RemoteObject>	
+
+	<mx:VBox x="0" y="0" height="100%" width="100%">
+		<mx:Button label="Get DataSet" click="test()"/>
+		<mx:DataGrid id="gridResult" width="100%" height="100%">
+			<mx:columns>
+				<mx:DataGridColumn headerText="Column 1" dataField="0" />
+				<mx:DataGridColumn headerText="Column 2" dataField="1" />
+			</mx:columns>
+		</mx:DataGrid>
+	</mx:VBox>
+	
+</mx:Application>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<services-config>
+    <services>
+      <service id="remoting-service" class="flex.messaging.services.RemotingService" messageTypes="flex.messaging.messages.RemotingMessage">
+        <adapters>
+          <adapter-definition id="dotnet" class="FluorineFx.Remoting.RemotingAdapter" default="true"/>
+        </adapters>
+        <destination id="login">
+          <adapter ref="dotnet"/>
+          <channels>
+            <channel ref="my-rtmp"/>
+          </channels>
+          <properties>
+            <source>ServiceLibrary.MyLoginService</source>
+            <scope>application</scope>
+          </properties>
+          <security>
+            <security-constraint ref="privileged-users"/>
+          </security>
+        </destination>
+      </service>
+      <service id="message-service" class="flex.messaging.services.MessageService" messageTypes="flex.messaging.messages.AsyncMessage">
+			    <adapters>
+				    <adapter-definition id="messagingAdapter" class="FluorineFx.Messaging.Services.Messaging.MessagingAdapter" default="true"/>
+			    </adapters>
+          <destination id="chat">
+				    <adapter ref="messagingAdapter"/>
+            <channels>
+                <channel ref="my-rtmp"/>
+            </channels>
+            <properties>
+					    <network>
+						    <!-- The session-timeout element specifies the idle time in minutes before a subscriber is unsubscribed. When you set the value to 0 (zero), subscribers are not forced to unsubscribe automatically. The default value is 20. -->
+						    <session-timeout>20</session-timeout>
+					    </network>
+            </properties>
+          <security>
+					  <security-constraint ref="privileged-users"/>
+				  </security>                
+            </destination>
+        </service>        
+    </services>
+    
+    <!-- Custom authentication -->
+    <security>
+      <security-constraint id="privileged-users">
+        <auth-method>Custom</auth-method>
+        <roles>
+          <role>privilegeduser</role>
+        </roles>
+      </security-constraint>
+
+      <login-command class="ServiceLibrary.MyLoginCommand" server="asp.net"/>
+    </security>
+    
+    <channels>
+        <channel-definition id="my-rtmp" class="mx.messaging.channels.RTMPChannel">
+            <endpoint uri="rtmp://{server.name}:1939" class="flex.messaging.endpoints.RTMPEndpoint"/>
+        </channel-definition>        
+    </channels>
+</services-config>

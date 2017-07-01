@@ -1,0 +1,44 @@
+﻿#parse("_head.html")
+<div id="snsmenu">
+#parse("_menu.html")
+</div>
+<div id="snsbody">
+
+    <div id="snshead">可能认识的人</div>
+    <div class="itemmenu">
+        <ul>
+            <li><a href="../friend/default$exname">我的好友</a></li>
+            <li><a href="dyn$exname">好友动态设置</a></li>
+            <li><a href="visit$exname">来访者</a></li>
+            <li><a href="city$exname?q=city">同城</a></li>
+            <li class="current"><a href="pfriend$exname">可能认识的人</a></li>
+            <li><a href="search$exname">搜索朋友</a></li>
+            <li><a href="att$exname">关注我的人</a></li>
+            <li><a href="invite$exname">邀请朋友加入</a></li>
+        </ul>
+  </div>    
+
+    <div class="itemmenu1"><ul> <li><a href="city$exname?sex=1">同城帅哥</a></li> <li><a href="city$exname?sex=0">同城美女</a></li></ul></div>
+    
+    <div class="list">
+            <ul>
+                #foreach($pfrd in $pfrdlist)
+                    <li id="param${pfrd.userid}">
+                    <div class="l images center"><a href="$pfrd.spaceurl"><img src="$pfrd.userhead" /><br />$pfrd.truename</a></div>
+                    <div class="r">
+                        <div><a href="javascript:void(0);" onclick="addfriend($pfrd.userid,'$pfrd.truename',$uid)" class="sicon-friend">加为好友</a></div>
+                        <div><a href="javascript:poke($pfrd.userid,$uid)" class="sicon-poke">招呼</a> <a href="javascript:mail($pfrd.userid,$uid)" title="给ta发消息" class="sicon-mail">消息</a></div>
+                        <div title="$pfrd.twittermore" class="friendtwitter">$pfrd.twitter</div>
+                     </div>
+                     </li>
+                #end
+            </ul>
+    </div>    
+    
+    
+<div>
+
+</div>
+</div>
+
+#parse("_foot.html")

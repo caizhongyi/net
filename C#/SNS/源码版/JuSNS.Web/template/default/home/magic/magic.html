@@ -1,0 +1,47 @@
+﻿#parse("_head.html")
+<div id="snsmenu">
+#parse("_menu.html")
+</div>
+<div id="snsbody">
+    <div id="snshead">我的道具</div>
+        <div class="itemmenu">
+            <ul>
+                <li><a href="default$exname">道具中心</a></li>
+                <li class="current"><a href="magic$exname">我的道具</a></li>
+                <li><a href="record$exname?q=0">道具记录</a></li>
+            </ul>
+        </div>
+        #if($recordcount>0)
+            <div>
+            <ul>
+                #foreach($magic in $magiclist)
+                <li>
+                    <div class="imageb"><a href="javascript:void(0);"><img src="$magic.magicpic" /></a></div>
+                    <div><span class="strong">$magic.mname</span><span class="reshow">$magic.number</span> 个 </div>
+                    <div><span class="nextreshow">$magic.mdesc</span></div>
+                    <div>
+                        <input id="Button1" type="button" value="使用" class="btn_gray2" onclick="usermagic($magic.id)" />
+                        <input id="Button2" type="button" value="赠送" class="btn_gray2" onclick="sendmagic($magic.id)" />
+                    </div>
+                </li>
+                #end
+            </ul>
+          </div>
+            <div class="pages">$pagelist</div>
+        #else
+            <div>还没有道具记录</div>
+        #end        
+
+</div>
+<script type="text/javascript">
+    function usermagic(mid)
+    {
+        alert("扩展中....");
+    }
+    function sendmagic(mid)
+    {
+        alert("扩展中....");
+    }
+</script>
+    
+#parse("_foot.html")

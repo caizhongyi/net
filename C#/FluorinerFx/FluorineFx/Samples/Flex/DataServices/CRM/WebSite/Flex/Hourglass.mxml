@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+////////////////////////////////////////////////////////////////////////////////
+//
+// Copyright (C) 2003-2007 Adobe Systems Incorporated
+// All Rights Reserved.
+// The following is Sample Code and is subject to all restrictions on such code
+// as contained in the End User License Agreement accompanying this product.
+// If you have received this file from a source other than Adobe,
+// then your use, modification, or distribution of it requires
+// the prior written permission of Adobe.
+//
+////////////////////////////////////////////////////////////////////////////////
+-->
+<mx:VBox xmlns:mx="http://www.adobe.com/2006/mxml" width="220" height="60">
+
+	<mx:Script>
+		<![CDATA[
+			
+		import mx.managers.PopUpManager;
+		import mx.core.IFlexDisplayObject;
+		
+		private static var dialog:IFlexDisplayObject;
+			
+		public static function show(parent:DisplayObject):void
+		{
+			dialog = PopUpManager.createPopUp(parent, Hourglass, true);
+			PopUpManager.centerPopUp(dialog);
+		}
+						
+		public static function remove():void
+		{
+			PopUpManager.removePopUp(dialog);
+		}
+
+		]]>
+	</mx:Script>
+
+	<mx:Image source="@Embed('wait.png')"/>
+	
+</mx:VBox>

@@ -1,0 +1,78 @@
+﻿#parse("_head.html")
+<script type="text/javascript" src="$webpath/library/js/date/WdatePicker.js"></script>
+<div id="snsmenu">
+#parse("_menu.html")
+</div>
+<div id="snsbody">
+        <div id="snshead">工作信息</div>
+    <div class="itemmenu">
+        <ul>
+            <li><a href="profile$exname">基本资料</a></li>
+            <li><a href="nowcity$exname">居住地</a></li>
+            <li><a href="head$exname">修改头像</a></li>
+            <li><a href="links$exname">联系方式</a></li>
+            <li><a href="edu$exname">教育情况</a></li>
+            <li class="current"><a href="work$exname">工作情况</a></li>
+            <li><a href="like$exname">个人爱好</a></li>
+            <li><a href="privacy$exname">隐私设置</a></li>
+        </ul>
+  </div>
+
+    <div class="pitem">${username} &nbsp; ${email} &nbsp; <span id="bmobiles">${mobile}${bindmobile}</span> 
+        <span id="hideMobile" style="display:none;">
+            <input value="" class="f-text" type="text" id="mMobile" name="mMobile" /> <input type="button" name="MobileModify" id="MobileModify" onclick="MobileModifys();" class="f-button" value="填写手机"/>
+        </span>
+     (<a href="pwd$exname">修改登录密码</a>)</div>
+    <form action="work${exname}" method="post">
+        <div class="pitem">
+        公司名称：<input type="text" name="txtcompany" id="txtcompany" maxlength="50" value="$company" class="f-text" />
+        就职时间：<input type="text" name="txtjointime" id="txtjointime" maxlength="7" onFocus="WdatePicker({isShowWeek:true})" value="$jointime" class="f-text" style="width:100px;" />
+        离职时间：<input type="text" name="txtleavetime" id="txtleavetime" maxlength="7" onFocus="WdatePicker({isShowWeek:true})" value="$leavetime" class="f-text" style="width:100px;" />
+        <input type="checkbox" value="1" name="chknolevel" id="chknolevel" ${checked} /> 在职
+        <input type="hidden" name="cid" id="cid"  value="${cid}" />
+        <input type="submit" name="button1" id="SubmitSend" class="btn_blue2" onclick="return checkdata();"  value="保存"/> 
+        <span class="errors" id="spanerr" style="display:none;"></span> <a href="work${exname}">增加新的工作信息</a>
+        </div>
+        <div class="pitem">
+            #if($recordcount>0)
+                #foreach($career in $careerlist)
+                <div id="param${career.id}">
+                <a href="work${exname}?cid=$career.id">$career.company</a> <span>$career.jointime</span> $career.leavetime 
+                <a href="work${exname}?cid=$career.id">编辑</a> | 
+                <a href="javascript:void(0);" onclick="DeleteCarAjax($career.id,$uid)">删除</a>
+                </div>
+                #end
+                <div class="pages">$pagelist</div>
+            #else
+                <div>还没填写工作信息</div>
+            #end        
+        </div>
+    </form>
+    </div>
+    <script type="text/javascript">
+        function checkdata()
+        {
+            if(jQuery("#txtcompany").val()=="")
+            {
+                jQuery("#spanerr").show();
+                jQuery("#spanerr").html("请填写公司名称！");
+                return false;
+            }
+            else
+            {
+                jQuery("#spanerr").hide();
+                return true;
+            }
+        }
+        function MobileModifys()
+        {
+            var mobile=jQuery("#mMobile").val();
+            var uid=$uid;
+            modifymobile(uid,mobile);
+        }
+        function bindmobile(mb,flag)
+        {
+            bindmobiles("${mobilesendcontent}",flag);
+        }
+    </script>
+#parse("_foot.html")

@@ -1,0 +1,83 @@
+﻿.vote
+{
+	margin:5px 0;
+}
+.vote ul{margin:0;padding:0;}
+.vote li{margin:3px 0;padding:5px 0;border-bottom:1px solid #eeeeee;float:left;width:99%;padding-bottom:10px;}
+.vote li .aa{width:80px;float:left;}
+.vote li .bb{width:600px;float:left;line-height:25px;}
+.vote li .bb a{font-size:14px;font-weight:bold;font-family:微软雅黑;}
+.vote li .cc{width:80px;float:left;text-align:center;}
+
+.vote-act {
+	width:60px;
+}
+.vote-num {
+	display:block;
+	color:#FFF;
+	height:49px;
+	padding-top:12px;
+	text-align:center;
+	width:60px;
+	background:url(../../images/toupiao_num1_bg.gif) no-repeat;
+}
+.vote-num:hover {
+	text-decoration:none;
+}
+.vote-num strong {
+	display:block;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:16px;
+}
+.vote-link {
+	background:transparent url(../../images/toupiao_go_bg.gif) no-repeat scroll 0 0;
+	display:block;
+	height:23px;
+	line-height:23px;
+	margin-top:5px;
+	padding-left:17px;
+	width:43px;
+}
+.voteinfo{float:left; display:inline; margin-left:10px; width:200px;text-align:right;}
+.voteplan{float:left;width:300px;height:30px;}
+.voteplan .plan{height:15px;}
+.votenumber{float:left;width:100px;margin-left:5px;}
+
+.viewcomment
+{
+	margin:8px 0;;
+	padding:5px 0;
+	line-height:22px;
+	border-top:1px dotted #eeeeee;
+	float:left;
+	width:99%;
+}
+.viewcomment ul
+{
+	margin:0;padding:0;
+}
+.viewcomment li
+{
+	margin:5px 0;
+	width:100%;
+	float:left;
+	border-bottom:1px solid #eeeeee;
+	padding:10px 0;
+}
+.viewcomment li .aa
+{
+	width:80px;
+	float:left;
+	text-align:center;
+}
+.viewcomment li .bb
+{
+	float:left;
+	width:680px;
+}
+.pitem li{border:0;width:98%;}
+.voteview
+{
+	width:780px;
+	float:left;
+}

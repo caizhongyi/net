@@ -1,0 +1,47 @@
+﻿#parse("_head.html")
+<div id="snsmenu">
+#parse("_menusystem.html")
+</div>
+<div id="snsbody">
+    <div id="snshead">个人空间模板管理</div>
+
+    <div class="itemmenu">
+        <ul>
+          <li><a href="sys$exname">系统设置</a></li>
+            <li><a href="area$exname">地区</a></li> 
+            <li><a href="charge$exname">充值管理</a></li> 
+            <li class="current"><a href="template$exname">模板</a></li> 
+            <li><a href="indexconfig$exname">首页配置</a></li> 
+            <li><a href="uploads$exname">上传图片配置管理</a></li> 
+            <li><a href="start$exname">初始化</a></li> 
+            <li><a href="help$exname">帮助管理</a></li> 
+
+        </ul>
+  </div>
+    <div class="itemmenu1">
+        <ul>
+            <li class="current"><a href="template$exname">模板管理</a></li>
+            <li><a href="template_add$exname">添加空间模板</a></li> 
+        </ul>
+  </div>
+ 
+         #if($recordcount>0)
+            <div class="spacelist">
+                <ul>
+                    #foreach($info in $infolist)
+                        <li id="param_$info.id">
+                            <a href="$templatepath/images/space/$info.tename/template_b.jpg" title="点击查看大图" target="_blank"><img src="$templatepath/images/space/$info.tename/template.jpg" style="width:100px;height:56px;" onerror="this.src='$templatepath/images/space/nopic.jpg'" /></a>
+                            <p class="font14 strong"><a href="$templatepath/images/space/$info.tename/template_b.jpg" title="点击查看大图" target="_blank">$info.tname</a> $info.showop <a href="template_add$exname?tid=$info.id"  class="edit1"></a></p>
+                            <p>被使用$info.usenumber次</p>
+                            <p>$gpoint：$info.gpoints</p>
+                            <p>积分：$info.ipoint</p>
+                        </li>
+                    #end
+                </ul>
+            </div>
+            <div class="pages">$pagelist</div>
+        #else
+        <div>没有模板</div>
+        #end     
+    </div>
+#parse("_foot.html")

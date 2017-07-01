@@ -1,0 +1,95 @@
+静成 2008-11-03 11:35:00
+http://www.vckbase.com/document/viewdoc/?id=1457
+静成 2008-11-03 11:34:17
+http://hiphotos.baidu.com/%D2%FE%5Fkong/pic/item/6f19fe1795c3ba1dc83d6dd6.jpg
+静成 2008-11-03 11:34:40
+http://www.microsoft.com/msj/1199/bandobj/bandobj.aspx
+
+http://topic.csdn.net/u/20081027/23/1121933a-8fd1-490c-bec2-8cf3e3a3176d.html
+
+ [ 原创文档 本文适合高级读者 已阅读29333次 ]   文档 代码 工具   
+
+ATL 实现定制的 IE 浏览器栏、工具栏和桌面工具栏
+
+作者：杨老师
+
+下载源代码
+
+关键字：Band，Desk Band，Explorer Band，Tool Band，浏览器栏，工具栏，桌面工具栏
+
+一、引言
+　　最近，由于工作的要求，我需要在 IE 上做一些开发工作。于是在 MSDN 上翻阅了一些资料，根据 MSDN 上的说明我用 ATL 胜利完成了“资本家老板”分配的任务。
+（并且在白天睡觉的过程中梦到了老板给我加工资啦......）
+现在，我把 MSDN 上的原文资料，经过翻译整理并把一个 ATL 的实现奉贤给 VCKBASE 上的朋友们。
+
+概念 
+原理
+基本band 对象
+必须实现的 COM 接口
+    IPersistStream
+    IObjectWithSite
+    IDeskBand、IDockingWindow、IOleWindow
+选择实现的 COM 接口
+Band 对象注册 
+ATL 实现 
+二、概念
+　　在翻译的过程中，有两个词汇非常不好理解。第一个词是 Band 对象，词典中翻译为“镶边、裙子边、带子、乐队......”我的英文水平有限，实在不知道应该翻译为什么词汇更合适。于是我毅然决然地决定：在如下的论述中，依然使用 band 这个词！（什么？没听明白？我的意思就是说，我不翻译这个词了）但到底 Band 对象应该如何理解那？请看图一：
+
+
+图一
+
+　　图一中画红圈的地方，分别称作“垂直的浏览器栏”、“水平的浏览器栏”、“工具栏”和“桌面工具栏”。这些“栏”，都可以在 IE 的“查看”菜单中或鼠标右键的上下文快捷方式菜单中显示或隐藏起来。这些界面窗口的实现，其实就是实现一种 COM 接口对象，而这个对象叫 band。这个概念实在是只能意会而无法言传的，我总不能在文章中把它翻译为“总是靠在 IE 主窗口边上的对象”吧？^_^
+　　另外，还有一个词叫 site。这个很好翻译，叫“站点”！。呵呵，我敢打包票，如果你要能理解这个翻译在计算机类文章中的含义，那就只能恭喜你了，你的智慧太高了。（都是学计算机软件的人，做人的差距咋就这么大呢？）在本篇文章中，site 可以这样理解：IE 的主框架四周，就好比是“汽车站”，那些 band 对象，就好比是“汽车”。band 汽车总是可以停靠在“汽车站”上。所以，site 就是“站点”，它也是 COM 接口的对象（IObjectWithSite、IInputObjectSite）。
+
+三、原理
+
+3.1　基本 band 对象
+　　Band 对象，从 Shell 4.71(IE 5.0) 开始提供支持。Band 是一个 COM 对象，必须放在一个容器中去使用，当然使用它们就好象使用普通窗口是一样的。IE 就是一个容器，桌面 Shell 也是一个容器，它们提供不同的函数功能，但基本的实现是相似的。
+　　Band 对象分三种类型，浏览器栏 band（Explorer bands）、工具栏 band（Tool Bands）和桌面工具栏(Desk bands)，而浏览器栏 band 又有两种表现形式：垂直和水平的。那么 IE 和 Shell 如何区分并加载这些 bands 对象呢？方法是：你要对不同的 band 对象，在注册表中注册不同的组件类型（CATID）。
+
+Band 样式
+ 组件类型
+ CATID
+ 
+垂直的浏览器栏 CATID_InfoBand 00021493-0000-0000-C000-000000000046 
+水平的浏览器栏 CATID_CommBand 00021494-0000-0000-C000-000000000046 
+桌面的工具栏 CATID_DeskBand 00021492-0000-0000-C000-000000000046 
+
+　　IE 工具栏不使用组件类型注册，而是使用在注册进行 CLSID 的登记方式。详细情况见 3.3。
+　　在例子程序中，实现了全部四个类型的 band 对象，垂直浏览器栏(CVerticalBar)显示了一个 HTML 文件，并且实现了对 IE 主窗口浏览网页的导航等功能；水平的浏览器栏(CHorizontalBar)是一个编辑窗，它同步显示当前网页的 BODY 源文件内容；IE 工具栏(CToolBar)最简单，只是添加了一个空的工具栏；桌面工具栏(CDeskBar)实现了一个单行编辑窗口，你可以在上面输入命令行或文件名称，回车后它会执行 Shell 的打开动作。
+
+3.2　必须实现的 COM 接口
+　　Band 对象是 IE 或 Shell 的进程内服务器，所以它被包装在 DLL 中。而作为 COM 对象，它必须要实现 IUnknown 和 IClassFactory 接口。（大家可以不同操心，因为我们用 ATL 写程序，这两个接口是不用我们自己写代码的。）另外，Band 对象还必须实现 IDeskBand、IObjectWithSite 和 IPersistStream 三个接口：
+　　IPersistStream 是持续性接口的一种。当 IE 加载 band 对象的时候，它通过这个接口的 Load 方法传递属性值给对象，让其进行初始化；而当卸载前，IE 则调用这个接口的 Save 方法保存对象的属性。用 ATL 实现这个接口很简单： 
+
+class ATL_NO_VTABLE Cxxx : 
+	......
+	public IPersistStreamInitImpl, // 添加继承
+	......
+{
+public:
+	BOOL m_bRequiresSave; // IPersistStreamInitImpl 所必须的变量
+......
+BEGIN_COM_MAP(CVerticalBar)
+	......
+	COM_INTERFACE_ENTRY2(IPersist, IPersistStreamInit)
+	COM_INTERFACE_ENTRY2(IPersistStream, IPersistStreamInit)
+	COM_INTERFACE_ENTRY(IPersistStreamInit)
+	......
+END_COM_MAP()
+
+BEGIN_PROP_MAP(Cxxx)
+...... // 添加需要持续性的属性
+END_PROP_MAP()		
+　　上面的代码，其实实现的是 IPersistStreamInit 接口，不过没有关系，因为 IPersistStreamInit 派生自 IPersistStream，实例化了派生类，自然就实例化了基类。在例子程序中，我只在桌面工具栏对象中添加了持续性属性，用来保存和初始化“命令行”。另外 COM_INTERFACE_ENTRY2(A，B)表示的含义是：如果想查询A接口的指针，则提供B接口指针来代替。为什么可以这样那？因为B接口派生自A接口，那么B接口的前几个函数必然就是A接口的函数了，自然B接口的地址其实和A接口的地址是一样的了。
+　　IObjectWithSite 是 IE 用来对插件进行管理和通讯用的一个接口。必须要实现这个接口的2个函数：SetSite() 和 GetSite()。当 IE 加载 band 对象和释放 band 对象的时候，都要调用 SetSite()函数，那么在这个函数里正好是写初始化和释放操作代码的地方： STDMETHODIMP Cxxx::SetSite(IUnknown *pUnkSite)
+{
+	if( NULL == pUnkSite )	// 释放 band 的时候
+	{
+		// 如果加载的时候，保存了一些接口
+		// 那么现在：释放它
+	}
+	else	// 加载 band 的时候
+
+ 
+ 

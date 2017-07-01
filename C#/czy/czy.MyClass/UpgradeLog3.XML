@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="MyClass">
+</Property><Property Name="解决方案文件" Value="F:\Library\LibraryClass\C#\czy.MyClass\MyClass.sln">
+</Property><Property Name="Date" Value="2010年10月28日">
+</Property><Property Name="Time" Value="19:38:48">
+</Property><Property Name="日志号" Value="3">
+</Property></Properties><Event ErrorLevel="0" Project="SilverlightClassLibrary" Source="..\czy.Silverlight\czy.Silverlight.LibraryClass\SilverlightClassLibrary.csproj" Description="项目已成功转换">
+</Event><Event ErrorLevel="3" Project="SilverlightClassLibrary" Source="..\czy.Silverlight\czy.Silverlight.LibraryClass\SilverlightClassLibrary.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="SilverlightClassLibrary" Source="..\czy.Silverlight\czy.Silverlight.LibraryClass\SilverlightClassLibrary.csproj" Description="扫描完成: 项目文件不需要升级。">
+</Event></UpgradeLog>

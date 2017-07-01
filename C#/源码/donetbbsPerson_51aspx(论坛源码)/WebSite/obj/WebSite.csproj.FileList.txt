@@ -1,0 +1,12 @@
+obj\Debug\ResolveAssemblyReference.cache
+bin\WebSite.dll
+bin\WebSite.pdb
+bin\Components.dll
+bin\Control.dll
+bin\DataProviders.dll
+bin\DoNetBbs.dll
+bin\DosOrg.dll
+bin\DataProviders.pdb
+bin\Components.pdb
+obj\Debug\WebSite.dll
+obj\Debug\WebSite.pdb

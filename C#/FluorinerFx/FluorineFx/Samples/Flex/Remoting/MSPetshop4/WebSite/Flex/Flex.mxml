@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" initialize="init();">
+
+	<mx:Script>
+		<![CDATA[
+			import mx.utils.URLUtil;
+			import mx.controls.Alert;
+			import mx.rpc.events.FaultEvent;
+			import mx.rpc.events.ResultEvent;
+			import mx.collections.ArrayCollection;
+
+			private var categoryVORef:CategoryVO;
+			private var productVORef:ProductVO;
+			[Bindable]
+			private var categories:ArrayCollection;
+			[Bindable]
+			private var products:ArrayCollection;
+			
+			private function init():void
+			{
+				getCategories();
+			}
+
+			private function getCategories():void
+			{
+				ro.GetCategories();
+			}
+
+	        public function categoriesHandler(event:ResultEvent):void 
+	        {
+	            categories = event.result as ArrayCollection;
+	            getProducts(categories[0].CategoryId);
+	        }
+
+			private function getProducts(categoryId:String):void
+			{
+				ro.GetProducts(categoryId);
+			}
+
+	        public function productsHandler(event:ResultEvent):void 
+	        {
+	            products = event.result as ArrayCollection;
+	            dg.selectedIndex = 0;
+	            getImage();
+	        }
+	
+	        public function faultHandler(event:FaultEvent):void 
+	        {
+	             Alert.show("Fault",  event.fault.toString());
+	        }
+        			
+			private function getDomain():String{
+     			var baseURL:String = Application.application.url;
+		     	var pattern:RegExp = new RegExp("http://[^/]*/");
+	     		if (pattern.test(baseURL) == true) {
+        			return pattern.exec(baseURL).toString() + "WebSite";
+     			} 
+     			else
+     			{
+        			return "http://localhost:2896/WebSite"
+     			}   
+  			}				
+        			
+        	private function getImage():void
+        	{
+        		if( dg.selectedItem != null )
+        		{
+	        		var url:String = dg.selectedItem.Image;
+	        		if( url.charAt(0) == "~" )
+	        		{
+	        			url = getDomain() + url.substring(1);
+	        		}
+        			imgProduct.load(url);
+        		}
+        	}
+		]]>
+	</mx:Script>
+	
+    <mx:RemoteObject id="ro" destination="fluorine" source="ServiceLibrary.MyDataService" fault="faultHandler(event)">
+		<mx:method name="GetCategories" result="categoriesHandler(event)"/>
+		<mx:method name="GetProducts" result="productsHandler(event)"/>
+	</mx:RemoteObject>     
+	
+	<mx:Panel title="MSPetShop4" width="100%" height="100%">
+		<mx:ControlBar>
+			<mx:Label text="Select category:" />
+			<mx:ComboBox id="cboCategory" dataProvider="{categories}" change="getProducts(cboCategory.selectedItem.CategoryId);" labelField="Name" width="100"/>
+		</mx:ControlBar>
+		<mx:HBox width="100%" height="100%">
+			
+		<mx:DataGrid id="dg" dataProvider="{products}" width="100%" height="100%" change="getImage();">
+			<mx:columns>
+				<mx:DataGridColumn headerText="Name" dataField="Name" width="100"/>
+				<mx:DataGridColumn headerText="Description" dataField="Descn" width="100"/>
+			</mx:columns>
+		</mx:DataGrid>
+		<mx:Image id="imgProduct" width="91" height="79"/>
+		</mx:HBox>
+	</mx:Panel>
+	
+</mx:Application>

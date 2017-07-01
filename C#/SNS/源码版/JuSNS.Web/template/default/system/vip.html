@@ -1,0 +1,49 @@
+﻿#parse("_head.html")
+<div id="snssysmenu">
+#parse("_menusystem.html")
+</div>
+<div id="snsbody1">
+    <div id="snshead">VIP会员管理</div>
+    <div class="itemmenu">
+        <ul>
+            <li><a href="default$exname">会员管理</a></li>
+            <li><a href="default$exname?q=2">未邮件激活会员</a></li> 
+            <li><a href="default$exname?q=5">正常会员</a></li> 
+            <li><a href="default$exname?q=1">被锁定会员</a></li> 
+            <li class="current"><a href="vip$exname">VIP会员申请</a></li> 
+            <li><a href="javascript:;" onclick="deleteAll($uid,$uid,'userall')">删除全部会员</a></li> 
+            <li class="search"> &nbsp; 搜索：<input id="kwd" name="kwd" value="#if($kwd)$kwd#else搜索会员#end" type="text" class="f-text w100" onclick="this.value=''" /> <input id="Button1" type="button" value="搜索" class="btn_gray2" onclick="search('users','$q')" /></li>
+        </ul>
+    </div>
+    
+
+    <div class="system">
+          #if($recordcount>0)
+                <table  id="mtable">
+                <tr>
+                    <th>姓名</th>
+                    <th>申请时间</th>
+                    <th>VIP到期时间</th>
+                    <th>状态</th>
+                    <th>申请理由</th>
+                    <th style="text-align:center;">操作</th>
+                </tr>
+                #foreach($info in $infolist)
+                <tr id="param_$info.id">
+                    <td><a href="$info.spaceurl" target="_blank">$info.truename</a></td>
+                    <td>$info.posttime</td>
+                    <td>$info.endtime</td>
+                    <td>$info.islock</td>
+                    <td>$info.content</td>
+                    <td>$info.state</td>
+                </tr>
+                #end
+             </table>
+              <div class="pages">$pagelist</div>
+        #else
+            <div>还没有记录</div>
+        #end       
+    </div>
+    
+</div>
+#parse("_foot.html")

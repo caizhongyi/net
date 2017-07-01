@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute">
+
+	<mx:Script>
+		<![CDATA[
+			import mx.controls.Alert;
+			import mx.rpc.events.FaultEvent;
+			import mx.rpc.events.ResultEvent;
+			import mx.collections.ArrayCollection;
+
+			[Bindable]
+			private var customers:ArrayCollection;
+			private var customerVORef:CustomerVO;
+
+			private function getCustomers(areaCode:String):void
+			{
+				ro.GetCustomers(areaCode);
+			}
+
+	        public function customersHandler(event:ResultEvent):void 
+	        {
+	            customers = event.result as ArrayCollection;
+	        }
+	
+	        public function faultHandler(event:FaultEvent):void 
+	        {
+	             Alert.show("Fault",  event.fault.toString());
+	        }
+        			
+		]]>
+	</mx:Script>
+	
+    <mx:RemoteObject id="ro" destination="fluorine" source="ServiceLibrary.MyDataService" fault="faultHandler(event)">
+		<mx:method name="GetCustomers" result="customersHandler(event)"/>
+	</mx:RemoteObject>     
+	
+	<mx:Panel title="Customers" width="100%" height="100%">
+		<mx:ControlBar>
+			<mx:Label text="Enter area code:" />				
+			<mx:TextInput id="areaCode" enter="getCustomers(areaCode.text);" width="50" text="415"/>
+			<mx:Button label="Search" click="getCustomers(areaCode.text);"/>
+			<mx:Spacer width="100%"/>
+		</mx:ControlBar>
+		<mx:DataGrid id="dg" dataProvider="{customers}" width="100%" height="100%">
+			<mx:columns>
+				<mx:DataGridColumn headerText="Firstname" dataField="firstname" width="100"/>
+				<mx:DataGridColumn headerText="Lastname" dataField="lastname" width="100"/>
+				<mx:DataGridColumn headerText="Phone" dataField="phone" width="100"/>
+			</mx:columns>
+		</mx:DataGrid>
+	</mx:Panel>
+	
+</mx:Application>

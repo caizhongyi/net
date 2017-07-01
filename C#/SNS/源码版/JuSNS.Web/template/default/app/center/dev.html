@@ -1,0 +1,84 @@
+﻿#parse("_head.html")
+<div id="snsmenu">
+#parse("_menu.html")
+</div>
+<div id="snsbody">
+    <div id="snshead">应用程序</div>
+
+
+    <div class="itemmenu">
+        <ul>
+            <li><a href="$webpath/app/center/default$exname">应用列表</a></li>
+            <li><a href="$webpath/app/center/default$exname?q=hot">热门应用</a></li>
+            <li><a href="$webpath/app/center/default$exname?q=my">我安装的应用</a></li>
+            <li><a href="$webpath/app/center/default$exname?q=mys">我提交的应用</a></li>
+            <li class="current"><a href="$webpath/app/center/dev$exname">开发者</a></li>
+            <li><a href="$webpath/app/center/help$exname">开发者帮助中心</a></li>
+        </ul>
+    </div>
+    
+    <div class="itemmenu1">
+        <ul>
+            <li><a href="$webpath/app/center/new$exname">创建应用程序</a></li>
+            <li class="current"><a href="$webpath/app/center/dev$exname">开发者</a></li>
+        </ul>
+    </div>
+    <div class="app">
+        #if($isdev)
+            <span style="font-size:14px;padding:5px;font-weight:bold;margin:10px 0;height:25px;float:left;width:96%;">您已经是开发者了。<a href="new$exname">点击创建应用程序</a></span>
+             <span style="font-size:12px;padding:5px;margin:10px 0;height:20px;float:left;width:96%;"> 您的UserKey（用户身份密钥）：$userkey</span>
+        #else
+            #if($state)
+                <span style="font-size:14px;padding:10px;font-weight:bold;color:Red;margin:10px 0;height:50px;float:left;width:96%;">状态：$state</span>
+            #else
+            <div style="font-size:14px;font-weight:bold;border-bottom:1px solid #eeeeee;padding:3px;width:98%;clear:both;margin-bottom:10px;">申请成为开发者</div>
+            <form id="form1" action="" method="post">
+                <div class="pitem">
+                    <em>姓名</em>
+                    <input id="username" name="username" class="f-text" type="text" />
+                </div>
+                <div class="pitem">
+                    <em>电话</em>
+                    <input id="Text2" name="tel" class="f-text" type="text" />
+                </div>
+                <div class="pitem">
+                    <em>手机</em>
+                    <input id="moblie" name="moblie" class="f-text" type="text" />
+                </div>
+                <div class="pitem">
+                    <em>Email</em>
+                    <input id="email" name="email" class="f-text" type="text" value="#if($email)$email#end" />
+                </div>
+                <div class="pitem">
+                    <em>&nbsp;</em>
+                    <input id="Text1" name="emails" class="btn_blue6" type="submit" onclick="return checkdata();" value="申请成为开发者" />
+                </div>
+            </form>
+            #end
+        #end
+    </div>
+    
+</div>
+#parse("_foot.html")
+<script type="text/javascript">
+    function checkdata()
+    {
+        var username=jQuery("#username").val();
+        var tel=jQuery("#tel").val();
+        var moblie=jQuery("#moblie").val();
+        if(username=="")
+        {
+            showErrorResult("请填写联系人姓名！");
+            return false;
+        }
+        if(tel==""&&moblie=="")
+        {
+            showErrorResult("联系方式必须填写一个！");
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
+</script>

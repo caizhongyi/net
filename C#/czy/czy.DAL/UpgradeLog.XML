@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="DAL">
+</Property><Property Name="解决方案文件" Value="F:\类库\C#\DAL\DAL.sln">
+</Property><Property Name="用户选项文件" Value="F:\类库\C#\DAL\DAL.suo">
+</Property><Property Name="Date" Value="2010年4月1日">
+</Property><Property Name="Time" Value="11:02">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="DAL.sln" Description="文件已成功备份为 F:\类库\C#\DAL\Backup\DAL.sln">
+</Event><Event ErrorLevel="0" Project="" Source="DAL.suo" Description="文件已成功备份为 F:\类库\C#\DAL\Backup\DAL.suo">
+</Event><Event ErrorLevel="0" Project="DAL" Source="DAL\DAL.csproj" Description="项目文件已成功备份为 F:\类库\C#\DAL\Backup\DAL\DAL.csproj">
+</Event><Event ErrorLevel="0" Project="DAL" Source="DAL\DAL.csproj.user" Description="项目用户文件成功备份为 F:\类库\C#\DAL\Backup\DAL\DAL.csproj.user">
+</Event><Event ErrorLevel="0" Project="DAL" Source="DAL\AccessDataBase.cs" Description="文件已成功备份为 F:\类库\C#\DAL\Backup\DAL\AccessDataBase.cs">
+</Event><Event ErrorLevel="0" Project="DAL" Source="DAL\MySqlConnect.cs" Description="文件已成功备份为 F:\类库\C#\DAL\Backup\DAL\MySqlConnect.cs">
+</Event><Event ErrorLevel="0" Project="DAL" Source="DAL\OledbConnect.cs" Description="文件已成功备份为 F:\类库\C#\DAL\Backup\DAL\OledbConnect.cs">
+</Event><Event ErrorLevel="0" Project="DAL" Source="DAL\Properties\AssemblyInfo.cs" Description="文件已成功备份为 F:\类库\C#\DAL\Backup\DAL\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="DAL" Source="DAL\SqlCmdStr.cs" Description="文件已成功备份为 F:\类库\C#\DAL\Backup\DAL\SqlCmdStr.cs">
+</Event><Event ErrorLevel="0" Project="DAL" Source="DAL\sql\BackUpDataBase.cs" Description="文件已成功备份为 F:\类库\C#\DAL\Backup\DAL\sql\BackUpDataBase.cs">
+</Event><Event ErrorLevel="0" Project="DAL" Source="DAL\sql\CreateSqlScript.cs" Description="文件已成功备份为 F:\类库\C#\DAL\Backup\DAL\sql\CreateSqlScript.cs">
+</Event><Event ErrorLevel="0" Project="DAL" Source="DAL\sql\GetSqlDataSchema.cs" Description="文件已成功备份为 F:\类库\C#\DAL\Backup\DAL\sql\GetSqlDataSchema.cs">
+</Event><Event ErrorLevel="0" Project="DAL" Source="DAL\sql\Login.cs" Description="文件已成功备份为 F:\类库\C#\DAL\Backup\DAL\sql\Login.cs">
+</Event><Event ErrorLevel="0" Project="DAL" Source="DAL\sql\WriteToTxt.cs" Description="文件已成功备份为 F:\类库\C#\DAL\Backup\DAL\sql\WriteToTxt.cs">
+</Event><Event ErrorLevel="0" Project="DAL" Source="DAL\Util.cs" Description="文件已成功备份为 F:\类库\C#\DAL\Backup\DAL\Util.cs">
+</Event><Event ErrorLevel="0" Project="DAL" Source="DAL\DAL.csproj" Description="项目文件不需要转换。">
+</Event><Event ErrorLevel="3" Project="DAL" Source="DAL\DAL.csproj" Description="无需转换">
+</Event><Event ErrorLevel="0" Project="" Source="DAL.sln" Description="成功转换解决方案">
+</Event><Event ErrorLevel="3" Project="" Source="DAL.sln" Description="Converted">
+</Event></UpgradeLog>

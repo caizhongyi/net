@@ -1,0 +1,8 @@
+F:\源码\开机启动\WindowsApplication2\obj\Debug\WindowsApplication2.exe
+F:\源码\开机启动\WindowsApplication2\obj\Debug\WindowsApplication2.pdb
+F:\源码\开机启动\WindowsApplication2\bin\Debug\WindowsApplication2.exe
+F:\源码\开机启动\WindowsApplication2\bin\Debug\WindowsApplication2.pdb
+F:\源码\开机启动\WindowsApplication2\obj\Debug\ResolveAssemblyReference.cache
+F:\源码\开机启动\WindowsApplication2\obj\Debug\WindowsApplication2.Form1.resources
+F:\源码\开机启动\WindowsApplication2\obj\Debug\WindowsApplication2.Properties.Resources.resources
+F:\源码\开机启动\WindowsApplication2\obj\Debug\WindowsApplication2.csproj.GenerateResource.Cache

@@ -1,0 +1,14 @@
+F:\Library\LibraryClass\czy\OledbIFactory\bin\Debug\OledbIFactory.dll
+F:\Library\LibraryClass\czy\OledbIFactory\bin\Debug\OledbIFactory.pdb
+F:\Library\LibraryClass\czy\OledbIFactory\bin\Debug\czy.MyClass.dll
+F:\Library\LibraryClass\czy\OledbIFactory\bin\Debug\czy.MyDAL.dll
+F:\Library\LibraryClass\czy\OledbIFactory\bin\Debug\czy.SQLAccess.dll
+F:\Library\LibraryClass\czy\OledbIFactory\bin\Debug\MySql.Data.dll
+F:\Library\LibraryClass\czy\OledbIFactory\bin\Debug\dotnetCHARTING.dll
+F:\Library\LibraryClass\czy\OledbIFactory\bin\Debug\Newtonsoft.Json.dll
+F:\Library\LibraryClass\czy\OledbIFactory\bin\Debug\czy.MyDAL.pdb
+F:\Library\LibraryClass\czy\OledbIFactory\bin\Debug\czy.MyClass.pdb
+F:\Library\LibraryClass\czy\OledbIFactory\bin\Debug\czy.SQLAccess.pdb
+F:\Library\LibraryClass\czy\OledbIFactory\obj\Debug\ResolveAssemblyReference.cache
+F:\Library\LibraryClass\czy\OledbIFactory\obj\Debug\OledbIFactory.dll
+F:\Library\LibraryClass\czy\OledbIFactory\obj\Debug\OledbIFactory.pdb

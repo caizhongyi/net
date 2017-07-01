@@ -1,0 +1,90 @@
+﻿/*---主体样式---*/
+  #container{width:660px;margin:0 auto;padding:0;text-align:center;background:#fff url('');}
+  
+  /*---顶部样式---*/
+  #container #header{height:109px;width:660px;margin:0 auto;background: url('topbar.png');}
+  #container #header #blogname{margin:0 auto;padding:20px 0px 20px 10px;font-size:28px;color:#666;text-align:left;font-weight:bold;}
+  #container #header #blogname #blogTitle{font-size:12px;margin:3px 3px 3px 8px;height:16px;}
+  #container #header #menu{display:none;/*visibility:hidden;*/}
+  #container #header #menu #Left{width:0px;float:left;}
+  #container #header #menu #Right{width:0px;float:right;}  
+  #container #header #menu ul{} 
+  #container #header #menu ul li{}  
+   .menuL{}
+   .menuR{}  
+   .menuDiv{}/*---菜单分割线---*/
+  /*---内容样式---*/
+  #container #Tbody{width:640px;margin:0 auto;text-align:left;padding:0px;}
+  /*---工具条--*/
+  #sidebar{float:right;width:190px;margin:0px;background:#fff url();text-align:center;color:#333;}
+  #innersidebar{}
+  #sidebar-topimg{height:0px;width:190px;}
+  #sidebar-bottomimg{height:0px;width:190px;overflow:hidden;}
+  /*---工具箱样式--*/
+  .sidepanel{width:190px;margin:0 auto!important; margin:0px;}
+  .Ptitle{height:20px;line-height:150%;text-align:center;padding-left:0px;background: #D0E7AF url('title.gif');margin:0px;color:#FFF;font-size:12px;font-weight:100;}  
+  .Pcontent{text-align:left;padding-left:10px;padding-top:8px;line-height:160%}  
+  .Pfoot{margin:0px 0px 15px 0px;}  
+  /*---主内容--*/ 
+  #mainContent{float:left;margin-right:-230px;width:100%;text-align:center;}
+  #innermainContent{overflow:visible;margin-right:200px;}
+  #mainContent-topimg{height:0px;overflow:hidden;}
+  #mainContent-bottomimg{height:0px;overflow:hidden;}
+  .content-width{width:420px;margin:auto;}/*--主内容元素的全局宽度--*/
+  /*---主内容页数--*/
+  .pageContent{margin:0 auto;padding:1px;text-align:left;height:18px;} 
+  .NavTitle{float:left;font-weight:bold;}
+  .page{padding-right:5px;height:18px;}
+  .page ul{list-style:none;margin:0px;padding:0px} 
+  .page ul li{float:left;padding:0px 3px 0px 3px;} 
+  .page ul li.PageL {width:9px;height:16px;}
+  .page ul li.PageR {width:9px;height:16px;}
+  .PageLbutton{background:url('../../images/BttnLeft.gif') 0px 0px;width:9px;height:16px;display:block;}
+  .PageRbutton{background:url('../../images/BttnRight.gif') 0px 0px;width:9px;height:16px;display:block;}
+  /*---内容框--*/
+  .Content{margin:15px auto;font-family:Georgia;border:1px solid #ddd;}    
+  /*---日志标题框--*/
+  .Content-top{background:url('logIcon.gif') 5px 12px no-repeat;padding:10px 0px 0px 30px !important;padding:10px 0px 0px 30px;color:#000;text-align:left;margin-bottom:2px;}
+  .Content-top .ContentLeft{width:0px;float:left;}
+  .Content-top .ContentRight{width:0px;float:right;}
+  .Content-top .ContentTitle{font-size:14px;color:#666;padding-bottom:0px;margin:0px; }
+  .Content-top .ContentAuthor{color:#AAAAAA;font-size:12px;padding-left:3px;margin:0px;font-weight:100;} 
+  /*---日志内容框--*/
+  .Content-body{margin:8px auto;overflow:hidden;text-align:left;width:96%;line-height:210%;layout-grid-char : 1px;}
+  /*---日志内容底部--*/
+  .Content-bottom{text-align:center;height:30px;padding:3px 2px 0px 2px;}
+  .Content-bottom .ContentBLeft{width:0px;float:left;}
+  .Content-bottom .ContentBRight{width:0px;float:right;}  
+
+  /*---日志其他信息--*/
+  .Content-Info {margin:0px 4px 6px 4px;padding:0px}
+  .Content-Info .InfoAuthor{text-align:left}
+  .Content-Info .InfoOther{float:right;text-align:right;}
+  /*--评论框--*/
+  .comment{text-align:left;margin:10px 12px 4px 12px;background:#FAFAFA;border-left: 5px solid #ddd;color:#666}
+  .commentinfo{font-size:11px;color:#666;}
+  .commenttop{padding:4px;border-bottom:0px dotted #DDDDDD;}
+  .commentcontent{padding:10px;line-height:140%;overflow:hidden;width:94%;}
+  /*---UBB框--*/ 
+  .UBBPanel{background:#f7f7f7;border:1px solid #DDD;}
+  .UBBTitle{font-weight:bold;padding:5px;}
+  .UBBTitle img {display:none}
+  .UBBContent{padding:6px;line-height:160%;}
+  .UBBContent TEXTAREA {width:300px;margin-bottom:2px;}
+  :link.UBBLink,:visited.UBBLink{font-size:11px;}
+  /*---信息框--*/
+  #MsgContent{border:0px solid #ADAAAD;width:450px;padding:0px; background:#FFF;margin:auto;}
+  #MsgContent #MsgHead{background:#9A9A9A;padding:4px;color:#fff;text-align:center;font-weight:bold;}
+  #MsgContent #MsgBody{padding:4px;line-height:180%;}
+
+  .LDialog{border:1px solid #795B50;margin:3px auto;padding:1px;}
+  .LDialog .LHead{background:#BBA097;padding:1px;color:#fff;text-align:center;font-weight:bold;}
+  .LDialog .LBody{padding:4px;line-height:200%;}
+
+
+  /*---底部样式---*/
+  #container #foot{font-family:Georgia;margin:6px 0 0 0;height:70px;padding-top:10px;}
+  /*---文件上传框样式---*/
+  .attachmentBody{
+  margin:0px;font-size:12px;background:#FFF
+  }

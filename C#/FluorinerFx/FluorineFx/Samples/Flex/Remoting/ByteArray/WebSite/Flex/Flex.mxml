@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute">
+
+  <mx:Script>
+    <![CDATA[
+    	import mx.rpc.events.AbstractEvent;
+    	import mx.core.UIComponent;
+	    import mx.rpc.events.ResultEvent;
+	    import mx.utils.ObjectUtil;
+	    import mx.controls.Alert;
+	    import mx.rpc.events.FaultEvent;
+	
+	  private function test():void
+	  {		
+	    	var byteArr:ByteArray = new ByteArray();
+	    	byteArr.objectEncoding = ObjectEncoding.AMF0;
+	    	byteArr.writeUTF("hello world");
+	    	byteArr.objectEncoding = ObjectEncoding.AMF3;
+	    	byteArr.writeObject("hello world");
+	    	byteArr.objectEncoding = ObjectEncoding.AMF0;
+	    	byteArr.writeObject("hello world");
+	    	byteArr.compress();
+		    byteStreamService.ProcessStream(byteArr);
+	  }
+
+	  private function onFault(event:FaultEvent):void{
+        	Alert.show( ObjectUtil.toString(event.fault.faultString), "Error", mx.controls.Alert.OK );
+	  }
+      
+	  private function onResult(event:ResultEvent):void {
+	    	var byteArr:ByteArray = event.result as ByteArray;
+		  	byteArr.uncompress();
+	    	byteArr.objectEncoding = ObjectEncoding.AMF0;
+	    	var str:String = byteArr.readUTF();
+	    	byteArr.objectEncoding = ObjectEncoding.AMF3;
+	    	str = byteArr.readObject() as String;
+	    	byteArr.objectEncoding = ObjectEncoding.AMF0;
+	    	str = byteArr.readObject() as String;
+      }
+      
+      
+      //James Ward - Flex Paint 
+      
+		private var isDrawing:Boolean=false;
+		private var x1:int;
+		private var y1:int;
+		private var x2:int;
+		private var y2:int;
+		private var drawColor:uint;
+
+        private function doErase():void
+        {
+            canvas.graphics.clear();
+        }
+
+        private function doMouseDown():void
+        {
+            x1 = canvas.mouseX;
+            y1 = canvas.mouseY;
+            isDrawing = true;
+        }
+
+        private function doMouseMove():void
+        {
+            x2 = canvas.mouseX;
+            y2 = canvas.mouseY;
+            if (isDrawing)
+            {
+                canvas.graphics.lineStyle(2, drawColor);
+                canvas.graphics.moveTo(x1, y1);
+                canvas.graphics.lineTo(x2, y2);
+                x1 = x2;
+                y1 = y2;
+            }
+        }
+
+        private function doMouseUp():void
+        {
+            isDrawing = false;
+        }
+
+        private function doSave():void
+        {
+            var bd:BitmapData = new BitmapData(canvas.width,canvas.height);
+            bd.draw(canvas);
+            var ba:ByteArray = PNGEnc.encode(bd);
+            byteStreamService.UploadImage(ba);
+        }
+
+        private function onUploadResult(event:ResultEvent):void
+        {
+	    	var byteArr:ByteArray = event.result as ByteArray;
+
+        	/*
+			byteArr.uncompress();			
+            var data:BitmapData = new BitmapData(canvas.width,canvas.height, false, 0);
+            data.setPixels(data.rect, byteArr);
+            var bmp:Bitmap = new Bitmap(data);            
+            
+            resultCanvas.removeAllChildren();
+            var pictureHolder:UIComponent = new UIComponent();
+			pictureHolder.addChild(bmp);
+			resultCanvas.addChild(pictureHolder);
+			*/
+			var loader:Loader = new Loader();
+			loader.contentLoaderInfo.addEventListener(Event.COMPLETE,loaderCompleteHandler);
+			loader.loadBytes(byteArr);
+        }
+        
+		private function loaderCompleteHandler(event:Event):void
+		{
+			var loader:Loader = (event.target as LoaderInfo).loader;
+			loader.contentLoaderInfo.removeEventListener(Event.COMPLETE,loaderCompleteHandler);
+            resultCanvas.removeAllChildren();
+            var pictureHolder:UIComponent = new UIComponent();
+			pictureHolder.addChild(loader);
+			resultCanvas.addChild(pictureHolder);				        
+}
+        
+      
+    ]]>
+</mx:Script>
+
+<mx:VBox>
+	
+  <mx:Button label="ProcessStream" click="test()"/>
+
+	<mx:HBox>
+		<mx:Panel title="FlexPaint">
+		    <mx:Canvas id="canvas" width="300" height="300"
+		        horizontalScrollPolicy="off" verticalScrollPolicy="off"
+		        mouseDown="doMouseDown()"
+		        mouseMove="doMouseMove()"
+		        mouseUp="doMouseUp()"/>
+		    <mx:ControlBar>
+		        <mx:ColorPicker change="drawColor = event.target.selectedColor"/>
+		        <mx:Button label="Erase" click="doErase()"/>
+		    </mx:ControlBar>
+		</mx:Panel>
+		<mx:Spacer width="5" height="100%" includeInLayout="true" />
+		<mx:Panel title="FlexPaint Sepia Effect">
+		    <mx:Canvas id="resultCanvas" width="300" height="300"
+		        horizontalScrollPolicy="off" verticalScrollPolicy="off"
+		        />
+		    <mx:ControlBar>
+		        <mx:Button label="Process Image" click="doSave()"/>
+		    </mx:ControlBar>
+		</mx:Panel>
+	</mx:HBox>		        
+</mx:VBox>
+    
+  <mx:RemoteObject id="byteStreamService" destination="fluorine" source="ServiceLibrary.ByteStreamService">
+    <mx:method name="ProcessStream" result="onResult(event)" fault="onFault(event)" />
+    <mx:method name="UploadImage" result="onUploadResult(event)" fault="onFault(event)" />
+  </mx:RemoteObject>	
+</mx:Application>

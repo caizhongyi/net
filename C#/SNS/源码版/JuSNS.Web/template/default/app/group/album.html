@@ -1,0 +1,77 @@
+﻿#parse("_head.html")
+<div id="snsmenu">
+#parse("_menu.html")
+</div>
+<div id="snsbody">
+    <div id="snshead"><span class="l">$cpagetitle</span><span class="r"><input id="kwd" name="kwd" value="#if($kwd)$kwd#else搜索话题#end" type="text" class="f-text w100" onclick="this.value=''" /> <input id="Button1" type="button" value="搜索" class="btn_gray2" onclick="search('grouptopic','$gid')" /></span></div>
+
+    <div id="snsbody-all">
+          <div class="grouplist">
+                <div class="images l">
+                    <img src="$portrait" onerror="this.src='$templatepath/images/nopic.gif'" />
+                </div>
+                <div class="bulletin">
+                    <div class="info">$Bulletin</div>
+                </div>
+          </div>
+      <div class="itemmenu">
+        <ul>
+            <li><a href="$webpath/app/group/group$exname?gid=$gid">$groupname首页</a></li>
+            <li><a href="$webpath/app/group/list$exname?gid=$gid">话题区($topiccount)</a></li>
+            <li class="current"><a href="$webpath/app/group/album$exname?gid=$gid">相册($albumcount)</a></li>
+            <li><a href="$webpath/app/group/files$exname?gid=$gid">文件共享($filescount)</a></li>
+            <li><a href="$webpath/app/group/member$exname?gid=$gid">所有成员($membercount)</a></li>
+            <li><a href="$webpath/app/group/list$exname?gid=$gid&q=best">精华区</a></li>
+            <li class="new"><a href="$webpath/app/album/new$exname?gid=$gid&groupname=$GroupName" class="newitem">上传图片</a></li> 
+        </ul>
+        
+    </div>
+    
+        #if($recordcount>0)
+            <div class="album">
+                <ul>
+                #foreach($info in $infolist)
+                <li id="param_$info.albumid">
+                
+                    <div class="photo-album">
+                            <table class="photo-album-table">
+                              <tr><td class="cover-image">
+                                    <p class="image"><a href="$webpath/app/album/albumview$exname?aid=$info.albumid&gid=$gid&groupname=$GroupName"><img src="$info.pic" /></a></p>
+                               </td><td>
+                               <table class="info">
+                                   <tr>
+                                       <td >
+                                           <div class="strong"><a href="$webpath/app/album/albumview$exname?aid=$info.albumid&gid=$gid&groupname=$GroupName">$info.title</a></span> <span class="count normal">($info.piccount张图片)</span></div>
+                                           <div class="desc">$info.desc</div>
+                                             <div ><a href="$info.spaceurl">$info.truename</a><span class="pipe">|</span><a href="$webpath/app/album?q=$info.userid" target="_blank">$info.truename的所有相册</a><span class="pipe">|</span><span class="time">创建于 $info.time#if($info.edittime)<span class="pipe">|</span>更新于$info.edittime#end</span></div>
+                                       </td>
+                                   </tr>
+                                   #if($info.self>0)
+                                   <tr>
+                                           <td>
+                                               <a href="$webpath/app/album/PhotoAdd$exname?aid=$info.albumid&gid=$gid&groupname=$GroupName">上传图片</a><span class="pipe">|</span><a href="$webpath/app/album/PhotoEdit$exname?aid=$info.albumid&gid=$gid&groupname=$GroupName">编辑图片</a><span class="pipe">|</span><a href="$webpath/app/album/AlbumEdit$exname?aid=$info.albumid&gid=$gid&groupname=$GroupName">编辑相册</a><span class="pipe">|</span><a href="$webpath/app/album/AlbumView$exname?aid=$info.albumid&gid=$gid&groupname=$GroupName">浏览相册</a> $info.showop
+                                          </td>
+                                   </tr>
+                                   #end
+                               </table>
+                               $info.picofalbum
+                            </td>
+                            </tr>
+                            </table>
+                </div>                
+
+                 
+                </li>
+                #end
+              </ul>
+              </div>
+              <div class="pages">$pagelist</div>
+        #else
+            <div>还没有相册</div>
+        #end     
+        
+    
+    </div>
+</div>
+
+#parse("_foot.html")

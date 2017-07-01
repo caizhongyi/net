@@ -1,0 +1,43 @@
+﻿#parse("_headno.html")
+<style type="text/css">body{width:auto;}</style>
+<div id="snshead"> 选择电子邮件</div>
+<div>
+  <table width="100%" border="0" cellspacing="1" cellpadding="5">
+    <tr>
+      <td><input name="ab" type="radio" id="ab_163" value="163" checked="checked" />
+        <img src="$webpath/template/images/logo_163.gif" alt="163" align="absmiddle" /> </td>
+      <td><input name="ab" type="radio" id="ab_126" value="126" />
+        <img src="$webpath/template/images/logo_126.gif" alt="126" align="absmiddle" /></td>
+    </tr>
+    <tr>
+      <td><input type="radio" name="ab" value="Gmail" id="ab_Gmail" />
+      <img src="$webpath/template/images/logo_gmail.gif" alt="Gmail" align="absmiddle" /></td>
+      <td><input type="radio" name="ab" value="Sina" id="ab_Sina" />
+        <img src="$webpath/template/images/logo_sina.gif" alt="Sina" align="absmiddle" /> </td>
+    </tr>
+    <tr>
+      <td><input type="radio" name="ab" value="Yahoo" id="ab_Yahoo" />
+        <img src="$webpath/template/images/logo_yahoo.gif" alt="Yahoo!" align="absmiddle" /> </td>
+      <td><input type="radio" name="ab" value="Sohu" id="ab_Sohu" />
+        <img src="$webpath/template/images/logo_sohu.gif" alt="Sohu" align="absmiddle" /> </td>
+    </tr>
+    <tr>
+      <td><input type="radio" name="ab" value="Qzone" id="ab_Qzone" />
+        <img src="$webpath/template/images/logo_imqq.gif" alt="Qzone" align="absmiddle" /> </td>
+      <td><input type="radio" name="ab" value="IMMSN" id="ab_IMMSN" />
+        <img src="$webpath/template/images/logo_immsn.gif" alt="IMMSN" align="absmiddle" /> </td>
+    </tr>
+    <tr>
+      <td colspan="2"><div align="center">
+        <input name="button" type="button"  class="btn_gray3" id="next_btn" value="下一步" onclick="javascript:nextemail();" />
+      </div></td>
+    </tr>
+  </table>
+</div>
+<script type="text/javascript">
+    function nextemail()
+    {
+        alert('未开通此功能');
+    }
+</script>
+

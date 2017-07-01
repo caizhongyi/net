@@ -1,0 +1,229 @@
+﻿#parse("_head.html")
+<link href="$templatepath/css/app/shop.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="$webpath/library/xmleditor/xheditor-zh-cn.min.js"></script>
+<div id="snsmenu">
+#parse("_menu.html")
+</div>
+<div id="snsbody">
+    <div id="snshead"><span class="l">${cpagetitle}__超级团购</span><span class="r"><input id="kwd" name="kwd" value="#if($kwd)$kwd#else搜索$shop#end" type="text" class="f-text w100" onclick="this.value=''" /> <input id="Button1" type="button" value="搜索" class="btn_gray2" onclick="search('multe','$q')" /></span></div>
+
+    <div class="itemmenu">
+        <ul>
+            <li><a href="$webpath/app/shop/default$exname">所有$shop</a></li>
+            #if($uid>0)
+            <li><a href="$webpath/app/shop/default$exname?q=city">同城$shop</a></li>
+            #end
+            <li><a href="$webpath/app/shop/default$exname?q=rec">推荐$shop</a></li>
+            #if($uid>0)
+            <li><a href="$webpath/app/shop/default$exname?q=friend">好友的$shop</a></li>
+            <li><a href="$webpath/app/shop/default$exname?q=my">我的$shop</a></li>
+            #end
+            <li class="lipoke"></li>
+            <li><a href="$webpath/app/shop/list$exname">所有店铺</a></li>
+            <li><a href="$webpath/app/shop/list$exname?q=rec">推荐商铺</a></li>
+            #if($uid>0)
+            <li><a href="$webpath/app/shop/list$exname?q=city">同城店铺</a></li>
+            <li><a href="$webpath/app/shop/list$exname?q=friend">好友的店铺</a></li>
+            <li><a href="$webpath/app/shop/list$exname?q=my">我的店铺</a></li>
+            #end
+            <li class="lipoke"></li>
+            <li class="current"><a href="$webpath/app/shop/multebuy$exname">超级团购</a></li>
+        </ul>
+    </div>
+    #if($uid>0)
+    <div class="itemmenu1">
+        <ul>
+            <li class="new"><a href="$webpath/app/shop/new$exname" class="newitem">发起$shop</a></li> 
+            <li class="new"><a href="$webpath/app/shop/new_m$exname" class="newitem">发起团购</a></li> 
+            #if(!$isshop)
+            <li class="new"><a href="$webpath/app/shop/new_shop$exname" class="newitem">店铺入驻</a></li> 
+            #end
+            #if($OpenTrade=="1")
+            <li class="new"><a href="$webpath/app/shop/order$exname" class="newcatitem">我的购物车</a></li> 
+            <li class="new"><a href="$webpath/app/shop/sell$exname" class="newitem">销售记录</a></li> 
+            #end
+        </ul>
+    </div>
+    #end
+
+    <div id="shopmiddle">
+          <span  class="multetitle">团购名称：$title</span>
+          <div class="infopic">
+                <a href="$multeimges" target="_blank" title="点击查看大图"><img src="$multeimges" onerror="this.src='/uploads/app/shop/default.jpg'" /></a>
+                <p class="center"> <a href="javascript:;" onclick="sharetofriend('multe',$mid,$uid,'团购：$title')" class="a-share">分享</a></p>
+            </div>
+            <div class="infocontent">
+                #if($goodsname)<p><em>团购$shop</em><a href="$webpath/app/shop/goods$exname?gid=$goodsid" target="_blank">$goodsname</a></p>#end
+                <p><em>发布人</em><a href="$spaceurl">$truename</a></p>
+                #if($youxiao!="000")<p><em>有效期</em>$youxiao</p>#end
+                <p><em>团购地址</em>$address</p>
+                #if($price>0)<p><em>团购价</em><span class="reshow strong">$price</span> RMB#end</p>
+                #if($goodsgpoint)<p><em>附加$gpoint</em><span class="reshow strong">$goodsgpoint</span> 个</p>#end
+                <p><em>联系方式</em>$linkstyle</p>
+                <p><em>已参加团购</em><span class="reshow strong">$joinmember</span> 人</p>
+                <p style="margin-top:10px;"> 
+                #if($youxiao!="已过期"&&$multeuserid!=$uid&&$uid>0)
+                        <input type="button" value="我要参加" onclick="joinmulte($mid,$uid)" class="btn_blue4" />
+                #end
+                #if($multeuserid==$uid&&$uid>0)
+                        <input type="button" value="查看参与活动人" onclick="reviewjoin($mid,$uid)" class="btn_blue10" />
+                #end
+               <input type="button" value="我要评论" onclick="javascript:window.location.href='$webpath/app/shop/multe$exname?mid=$mid#commentcontent'" class="btn_blue4" />      
+                </p>
+            </div>
+            <div class="clearpix"></div>
+            <div class="ativecontent">团购详情</div>
+            <div class="infocontents">
+                <p>$content</p>
+            </div>
+            
+        <div id="shopcomment">
+        <div class="line"></div>
+        <h3>评论 <a href="#commentcontent" class="normal">我要评论</a></h3>
+        #if($recordcount>0)
+                <ul>
+                #foreach($comm in $commlist)
+                    <li id="param_$comm.id">
+                        <div class="aa images center">
+                            <a href="$comm.spaceurl"><img src="$comm.headpic"></a>
+                        </div>
+                        <div class="bb">
+                            <div class="hdtitlecomment">
+                                <div class="ll"><a href="$comm.spaceurl">$comm.truename</a> <span class="time">$comm.time</span></div>
+                                <div class="rr">$comm.showop<a href="${reporturl}#param_$comm.id" target="_blank" class="a-report"></a></div>
+                            </div>
+                            <div class="ctx">$comm.content</div>
+                        </div>
+                    </li>
+                #end
+                  <li class="pages">$pagelist</li>
+              </ul>
+        #else
+            <div>还没有评论</div>
+        #end      
+        #if($uid>0)    
+        <div class="pitem">
+        <h4>发表评论</h4>
+        <form action="" method="post">
+            <textarea id="commentcontent" name="commentcontent" cols="20" rows="2" class="xheditor-mini {skin:'$editskin'}" style="width:100%;height:140px"></textarea>
+            <input id="userid" name="userid" value="$userid" type="hidden" />
+            <br />
+            <input id="Submit1" type="submit" value="提交评论" class="btn_blue4" onclick="return checkdata();" />
+        </form>
+            
+        </div>
+        #end
+    </div>
+    </div>
+     <div id="shopright">
+       <div class="title">推荐$shop</div>
+          #if($goodsreccount>0)
+            <div class="reclist">
+                <ul>
+                    #foreach($goodsrec in $goodsreclist)
+                    <li>
+                        <a href="$goodsrec.goodsurl">$goodsrec.goodsname</a>
+                    </li>
+                    #end
+                </ul>
+            </div>
+        #end
+        
+          <div class="title">推荐团购</div>
+          #if($multecount>0)
+            <div class="reclist">
+                <ul>
+                    #foreach($multe in $multelist)
+                    <li>
+                        <a href="$multe.multeurl">$multe.title</a>
+                    </li>
+                    #end
+                </ul>
+            </div>
+        #end
+
+
+    </div>
+    
+</div>
+
+#parse("_foot.html")
+<script type="text/javascript">
+    function checkdata()
+    {
+        if(jQuery("#commentcontent").val()=="")
+        {
+                 showErrorResult("填写回复内容");return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
+    function reviewjoin(mid,uid)
+    {
+        var formcontent = "<iframe src=\"$webpath/app/shop/join"+ExName+"?mid="+mid+"\" style=\"width:100%;height:360px;border:0;\" frameborder=\"NO\" border=\"0\" framespacing=\"0\"></iframe>";
+        var W = WinTip("<div>查看报名参加人</div>", formcontent);
+        W.Width=740;
+        W.Height=360;
+        W.HasBottom=false;
+        W.Create();        
+    }
+    function joinmulte(mid,uid)
+    {
+        var content="<div style=\"text-align:center;\">输入您的联系方式，以方便联系：<textarea id=\"multelinks\" name=\"multelinks\" cols=\"20\" rows=\"2\" class=\"f-area\"></textarea>";
+        var  W = WinTip("参加团购", content);
+        W.ConfirmButton="确定报名参加";
+        if(uid==0)
+        {
+             W=WinTip("请先登录", "登录后才能操作");
+             setTimeout(function() 
+             {
+                W.Close();
+              }, 2000);
+        }
+        else
+        {
+            W.Confirm=function()
+            {
+                var cont=jQuery("#multelinks").val();
+                if(cont=="")
+                {
+                    alert("请填写联系方式");return;
+                }
+                   jQuery.post(ajaxUrl, { action:"JoinMulteAjax", mid:mid,uid:uid,cont:cont,param:Math.random() }, 
+                  function(msg)
+                  {
+                     var  W1="";
+                     if(msg=="1")
+                     {
+                        W1 = WinTip("参加团购活动成功", "<span style=\"color:Green;\">参加成功，等待创建者和您联系。</span>");
+                         W1.Create();        
+                         setTimeout(function() 
+                         {
+                            window.location.href=location.href;
+                            W1.Close();
+                          }, 2000);
+                     }
+                    else if(msg=="-1")
+                    {
+                        W1 = WinTip("参加失败", "<span style=\"color:Red;\">参加失败，您已经报名参加了。</span>");
+                         W1.Create();        
+                         setTimeout(function() 
+                         {
+                            W1.Close();
+                          }, 2000);               
+                     }
+                     else
+                     {
+                         W1 = WinTip("发生错误", "<span style=\"color:Red;\">参加失败，发生异常</span>");
+                         W1.Create();        
+                         return;
+                     }
+                  }
+                );                         
+            }
+        }
+        W.Create();            
+    }
+</script>

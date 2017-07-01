@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="FtpClient_cs">
+</Property><Property Name="解决方案文件" Value="F:\源码\FtpClient_cs\FtpClient_cs\FtpClient_cs.sln">
+</Property><Property Name="用户选项文件" Value="F:\源码\FtpClient_cs\FtpClient_cs\FtpClient_cs.suo">
+</Property><Property Name="Date" Value="2009年3月15日">
+</Property><Property Name="Time" Value="22:40">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="FtpClient_cs.sln" Description="文件已成功备份为 F:\源码\FtpClient_cs\FtpClient_cs\Backup\FtpClient_cs.sln">
+</Event><Event ErrorLevel="0" Project="" Source="FtpClient_cs.suo" Description="文件已成功备份为 F:\源码\FtpClient_cs\FtpClient_cs\Backup\FtpClient_cs.suo">
+</Event><Event ErrorLevel="0" Project="FtpClient_cs" Source="FtpClient_cs\FtpClient_cs.csproj" Description="项目文件已成功备份为 F:\源码\FtpClient_cs\FtpClient_cs\Backup\FtpClient_cs\FtpClient_cs.csproj">
+</Event><Event ErrorLevel="0" Project="FtpClient_cs" Source="FtpClient_cs\FtpClient_cs.csproj.user" Description="项目用户文件成功备份为 F:\源码\FtpClient_cs\FtpClient_cs\Backup\FtpClient_cs\FtpClient_cs.csproj.user">
+</Event><Event ErrorLevel="0" Project="FtpClient_cs" Source="FtpClient_cs\Form1.cs" Description="文件已成功备份为 F:\源码\FtpClient_cs\FtpClient_cs\Backup\FtpClient_cs\Form1.cs">
+</Event><Event ErrorLevel="0" Project="FtpClient_cs" Source="FtpClient_cs\Form1.Designer.cs" Description="文件已成功备份为 F:\源码\FtpClient_cs\FtpClient_cs\Backup\FtpClient_cs\Form1.Designer.cs">
+</Event><Event ErrorLevel="0" Project="FtpClient_cs" Source="FtpClient_cs\Program.cs" Description="文件已成功备份为 F:\源码\FtpClient_cs\FtpClient_cs\Backup\FtpClient_cs\Program.cs">
+</Event><Event ErrorLevel="0" Project="FtpClient_cs" Source="FtpClient_cs\Properties\AssemblyInfo.cs" Description="文件已成功备份为 F:\源码\FtpClient_cs\FtpClient_cs\Backup\FtpClient_cs\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="FtpClient_cs" Source="FtpClient_cs\Properties\Resources.Designer.cs" Description="文件已成功备份为 F:\源码\FtpClient_cs\FtpClient_cs\Backup\FtpClient_cs\Properties\Resources.Designer.cs">
+</Event><Event ErrorLevel="0" Project="FtpClient_cs" Source="FtpClient_cs\Properties\Settings.Designer.cs" Description="文件已成功备份为 F:\源码\FtpClient_cs\FtpClient_cs\Backup\FtpClient_cs\Properties\Settings.Designer.cs">
+</Event><Event ErrorLevel="0" Project="FtpClient_cs" Source="FtpClient_cs\ClassDiagram1.cd" Description="文件已成功备份为 F:\源码\FtpClient_cs\FtpClient_cs\Backup\FtpClient_cs\ClassDiagram1.cd">
+</Event><Event ErrorLevel="0" Project="FtpClient_cs" Source="FtpClient_cs\Properties\Settings.settings" Description="文件已成功备份为 F:\源码\FtpClient_cs\FtpClient_cs\Backup\FtpClient_cs\Properties\Settings.settings">
+</Event><Event ErrorLevel="0" Project="FtpClient_cs" Source="FtpClient_cs\Form1.resx" Description="文件已成功备份为 F:\源码\FtpClient_cs\FtpClient_cs\Backup\FtpClient_cs\Form1.resx">
+</Event><Event ErrorLevel="0" Project="FtpClient_cs" Source="FtpClient_cs\Properties\Resources.resx" Description="文件已成功备份为 F:\源码\FtpClient_cs\FtpClient_cs\Backup\FtpClient_cs\Properties\Resources.resx">
+</Event><Event ErrorLevel="0" Project="FtpClient_cs" Source="FtpClient_cs\FtpClient_cs.csproj" Description="项目已成功转换">
+</Event><Event ErrorLevel="3" Project="FtpClient_cs" Source="FtpClient_cs\FtpClient_cs.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="FtpClientDll_cs" Source="FtpClientDll_cs\FtpClientDll_cs.csproj" Description="项目文件已成功备份为 F:\源码\FtpClient_cs\FtpClient_cs\Backup\FtpClientDll_cs\FtpClientDll_cs.csproj">
+</Event><Event ErrorLevel="0" Project="FtpClientDll_cs" Source="FtpClientDll_cs\Class1.cs" Description="文件已成功备份为 F:\源码\FtpClient_cs\FtpClient_cs\Backup\FtpClientDll_cs\Class1.cs">
+</Event><Event ErrorLevel="0" Project="FtpClientDll_cs" Source="FtpClientDll_cs\Properties\AssemblyInfo.cs" Description="文件已成功备份为 F:\源码\FtpClient_cs\FtpClient_cs\Backup\FtpClientDll_cs\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="FtpClientDll_cs" Source="FtpClientDll_cs\FtpClientDll_cs.csproj" Description="项目已成功转换">
+</Event><Event ErrorLevel="3" Project="FtpClientDll_cs" Source="FtpClientDll_cs\FtpClientDll_cs.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="FtpClient_cs.sln" Description="成功转换解决方案">
+</Event><Event ErrorLevel="3" Project="" Source="FtpClient_cs.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="FtpClient_cs" Source="FtpClient_cs\FtpClient_cs.csproj" Description="扫描完成: 项目文件不需要升级。">
+</Event><Event ErrorLevel="0" Project="FtpClientDll_cs" Source="FtpClientDll_cs\FtpClientDll_cs.csproj" Description="扫描完成: 项目文件不需要升级。">
+</Event></UpgradeLog>

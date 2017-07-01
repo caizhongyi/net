@@ -1,0 +1,41 @@
+﻿#parse("_head.html")
+<div id="snsmenu">
+#parse("_menu.html")
+</div>
+<div id="snsbody">
+    <div id="snshead">最新图片</div>
+    <div class="itemmenu">
+        <ul>
+            <li class="current"><a href="$webpath/app/album/photo$exname">最新图片</a></li>
+            <li><a href="$webpath/app/album/default$exname">所有相册</a></li>
+            #if($uid>0)
+            <li><a href="$webpath/app/album/default$exname?q=my">我的相册</a></li>
+            <li><a href="$webpath/app/album/default$exname?q=friend">朋友的相册</a></li> 
+            #end
+            <li><a>浏览相册</a></li> 
+            <li class="new"><a href="$webpath/app/album/new$exname" class="newitem" title="在此相册中上传照片">上传图片</a></li> 
+            <li class="search">搜索：<input id="kwd" name="kwd" value="搜索相册" type="text" class="f-text w100" onclick="this.value=''" /> <input id="Button1" type="button" value="搜索" class="btn_gray2" onclick="search('album','$q')" /></li>
+        </ul>
+        
+    </div>
+
+    <div id="snsbody-all">
+        #if($recordcount>0)
+            <div class="albumview">
+                <ul>
+                #foreach($info in $infolist)
+                <li id="param_$info.id">
+                    <div><a href="$webpath/app/album/PhotoView$exname?pid=$info.id" title="$info.descmore">#if($info.desc!="")$info.desc#else&nbsp;#end</a> $info.showop</div>
+                    <div class="img"><a href="$webpath/app/album/PhotoView$exname?pid=$info.id"><img src="$info.pic" /></a></div>
+                </li>
+                #end
+              </ul>
+              </div>
+              <div class="pages">$pagelist</div>
+        #else
+            <div>还没有图片</div>
+        #end        
+    </div>
+    
+</div>
+#parse("_foot.html")

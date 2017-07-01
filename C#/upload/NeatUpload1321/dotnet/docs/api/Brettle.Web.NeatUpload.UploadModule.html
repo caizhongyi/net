@@ -1,0 +1,53 @@
+<html dir="LTR">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" />
+    <meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5" />
+    <title>UploadModule Class</title>
+    <xml>
+    </xml>
+    <link rel="stylesheet" type="text/css" href="MSDN.css" />
+  </head>
+  <body id="bodyID" class="dtBODY">
+    <div id="nsbanner">
+      <div id="bannerrow1">
+        <table class="bannerparthead" cellspacing="0">
+          <tr id="hdr">
+            <td class="runninghead">NeatUpload Documentation</td>
+            <td class="product">
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div id="TitleRow">
+        <h1 class="dtH1">UploadModule Class</h1>
+      </div>
+    </div>
+    <div id="nstext">
+      <p> Provides an API (via its static members) that upload controls can use to access the currently installed upload module. The members of this class mostly delegate to the corresponding members of the <a href="Brettle.Web.NeatUpload.IUploadModule.html">IUploadModule</a> that is installed in the &lt;httpModules&gt; section of the Web.config. </p>
+      <p>For a list of all members of this type, see <a href="Brettle.Web.NeatUpload.UploadModuleMembers.html">UploadModule Members</a>.</p>
+      <p>
+        <a href="http://msdn.microsoft.com/library/default.asp?url=/library/en-us/cpref/html/frlrfSystemObjectClassTopic.asp">System.Object</a>
+        <br />   <b>Brettle.Web.NeatUpload.UploadModule</b><br />      <a href="Brettle.Web.NeatUpload.MultiRequestUploadModule.html">Brettle.Web.NeatUpload.MultiRequestUploadModule</a></p>
+      <div class="syntax">
+        <div>public class UploadModule</div>
+      </div>
+      <H4 class="dtH4">Thread Safety</H4>
+      <P>Public static (<b>Shared</b> in Visual Basic) members of this type are 
+				safe for multithreaded operations. Instance members are <b>not</b> guaranteed to be 
+				thread-safe.</P>
+      <h4 class="dtH4">Remarks</h4>
+      <p> When <a href="Brettle.Web.NeatUpload.UploadModule.IsEnabled.html">IsEnabled</a> returns true, an <a href="Brettle.Web.NeatUpload.IUploadModule.html">IUploadModule</a> is installed in the &lt;httpModules&gt; section of the Web.config and will handle POST requests to the current request's URL that have a Content-Type header of "multipart/form-data" and contain a post-back ID in one of the following locations: <ul type="disc"><li>If the post-back ID is in a query parameter named by <a href="Brettle.Web.NeatUpload.UploadModule.PostBackIDQueryParam.html">PostBackIDQueryParam</a>, all files in the request will be associated with the post-back ID. The files can be retrieved from the <a href="Brettle.Web.NeatUpload.UploadModule.Files.html">Files</a> collection using the names of the file fields in the request. These names are typically the UniqueIDs of the controls that uploaded the files.</li><li>If the post-back ID is in the form field named by <a href="Brettle.Web.NeatUpload.UploadModule.PostBackIDFieldName.html">PostBackIDFieldName</a>, all files that occur after form field will be associated with the post-back ID. Those files can be retrieved from the <b>Files</b> collection using the names of the file fields in the request. These names are typically the UniqueIDs of the controls that uploaded the files.</li><li>If the post-back ID is in a file field name prefixed by <a href="Brettle.Web.NeatUpload.UploadModule.FileFieldNamePrefix.html">FileFieldNamePrefix</a>, that file will be associated with the post-back ID. That file can be retrieved from the <b>Files</b> collection using the portion of the file field name after the first "-". That portion of the name typically corresponds to the UniqueID of the controls that uploaded the files.</li></ul> For requests that specify a post-back ID, the module can also use "protected" configuration information associated with a particular file if the file field is preceded in the request by a field with a name consisting of the value <a href="Brettle.Web.NeatUpload.UploadModule.ConfigFieldNamePrefix.html">ConfigFieldNamePrefix</a> followed by the files key in <b>Files</b> collection (typically the uploading control's UniqueID). <p>In addition, <a href="Brettle.Web.NeatUpload.UploadModule.BindProgressState.html">BindProgressState</a> provides information concerning the progress of the upload, <a href="Brettle.Web.NeatUpload.UploadModule.CancelPostBack.html">CancelPostBack</a> tells the module it should ignore the remainder of the upload, <a href="Brettle.Web.NeatUpload.UploadModule.SetProcessingState.html">SetProcessingState</a> associates an arbitrary object with an upload after it has been received but before the end of the request, and <a href="Brettle.Web.NeatUpload.UploadModule.ConvertToUploadedFile.html">ConvertToUploadedFile</a> to convert an <a href="http://msdn.microsoft.com/library/default.asp?url=/library/en-us/cpref/html/frlrfSystemWebHttpPostedFileClassTopic.asp">HttpPostedFile</a> into an <a href="Brettle.Web.NeatUpload.UploadedFile.html">UploadedFile</a></p></p>
+      <h4 class="dtH4">Requirements</h4>
+      <p>
+        <b>Namespace: </b>
+        <a href="Brettle.Web.NeatUpload.html">Brettle.Web.NeatUpload</a>
+      </p>
+      <p>
+        <b>Assembly: </b>Brettle.Web.NeatUpload (in Brettle.Web.NeatUpload.dll)
+					</p>
+      <h4 class="dtH4">See Also</h4>
+      <p>
+        <a href="Brettle.Web.NeatUpload.UploadModuleMembers.html">UploadModule Members</a> | <a href="Brettle.Web.NeatUpload.html">Brettle.Web.NeatUpload Namespace</a></p>
+    </div>
+  </body>
+</html>

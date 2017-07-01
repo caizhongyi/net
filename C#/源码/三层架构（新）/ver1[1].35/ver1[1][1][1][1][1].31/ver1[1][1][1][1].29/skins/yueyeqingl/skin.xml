@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<SkinSet>
+ <SkinName>月夜情侣</SkinName>
+ <SkinDesigner>哑锣</SkinDesigner>
+ <pubDate>2005-11-15</pubDate>
+ <DesignerURL>http://www.showfeel.com/</DesignerURL>
+ <DesignerMail>yaluo@126.com</DesignerMail>
+ <Flash>
+  <UseFlash>0</UseFlash>
+  <FlashPath>top.swf</FlashPath>
+  <FlashWidth>790</FlashWidth>
+  <FlashHeight>255</FlashHeight>
+  <FlashAlign>center</FlashAlign>
+  <FlashTop>0</FlashTop>
+  <FlashTransparent>-1</FlashTransparent>
+ </Flash>
+</SkinSet>

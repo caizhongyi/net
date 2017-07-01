@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="D:\Builder\SLValidation" deleteExistingFiles="False" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="Profile1" publishMethod="FileSystem" replaceMatchingFiles="True" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
+    <file relUrl="SilverlightValidationDemoTestPage.aspx" publishTime="09/07/2010 15:05:30" />
+    <file relUrl="ClientBin/SilverlightValidationDemo.xap" publishTime="09/14/2010 09:44:13" />
+    <file relUrl="Web.config" publishTime="09/14/2010 09:45:04" />
+    <file relUrl="Silverlight.js" publishTime="09/07/2010 15:05:30" />
+    <file relUrl="SilverlightValidationDemoTestPage.html" publishTime="09/07/2010 15:05:30" />
+    <file relUrl="bin/SilverlightValidationDemo.Web.dll" publishTime="09/14/2010 09:44:14" />
+    <file relUrl="bin/SilverlightValidationDemo.Web.pdb" publishTime="09/14/2010 09:44:14" />
+  </publishProfile>
+</publishData>

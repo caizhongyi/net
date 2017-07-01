@@ -1,0 +1,141 @@
+﻿#parse("_head.html")
+<link href="$templatepath/css/app/poke.css" rel="stylesheet" type="text/css" />
+<div id="snsmenu">
+#parse("_menu.html")
+</div>
+<div id="snsbody">
+    <div id="snshead">给朋友打招呼</div>
+
+
+    <div class="itemmenu">
+        <ul>
+            <li class="current"><a href="$webpath/app/poke/default$exname">打招呼</a></li>
+            <li><a href="$webpath/app/poke/my$exname">我收到的招呼</a></li>
+        </ul>
+    </div>
+ <form id="form1" name="form1" action="$webpath/app/poke/default$exname" method="post">   
+    <h4 class="clearpix">1.请选择动作</h4>
+    <div class="poke">
+            <ul>$pokelist</ul>
+    </div>
+    <div class="clearpix"></div>
+    <h4>2.自定义动作</h4>
+    <div class="poke">
+         <input type="radio" value="-1" name="pokeaction" id="pokeact_diy_input" />
+          <img align="baseline" alt="打招呼" src="$templatepath/images/poke/pokeact_1.gif" align="middle" />&nbsp;
+          <input type="text" class="f-text" maxlength="50" id="pokefrom" name="pokefrom" onclick="javascript:document.getElementById('pokeact_diy_input').checked=true" />
+          &nbsp;她(他)&nbsp;
+          <input type="text" class="f-text" maxlength="50" id="poketo" name="poketo" onclick="javascript:document.getElementById('pokeact_diy_input').checked=true" />
+    </div>
+    <div class="pitem">
+        
+        <div class="aa">
+            <p>选择好友：<input id="friends" readonly="readonly" name="friends" onclick="showfriend(this,$uid)" type="text" class="f-text" style="width:300px;" value="#if($susername)$susername#end" /><input id="hidefrienduid" value="#if($suid>0)$suid#end" name="hidefrienduid" type="hidden" /><input id="giftid" name="giftid" type="hidden" /> <a href="javascript:;" onclick="clearfriend();">重新选择</a></p>
+            <p><em style="width:60px;">&nbsp; </em><input id="Submit1" type="submit" onclick="return checkdata();" value="打招呼" class="btn_blue4" /> <input type="checkbox" value="0" name="ispubs" id="ispubs" /> 偷偷的</p>
+            <p><em style="width:60px;">&nbsp; </em> <span class="reshow">每天最多发送$maxpoke个招呼</span></p>
+        </div>
+        <div class="bb" id="giftcont">
+            
+        </div>
+        
+    </div>
+    </form>
+</div>
+
+#parse("_foot.html")
+
+<script type="text/javascript">
+    function checkdata()
+    {
+        var isvalue=false;
+        var temp=document.getElementsByName("pokeaction");
+        var checkvalue="";
+        for (i=0;i<temp.length;i++)
+        {
+            if(temp[i].checked)
+          {
+              isvalue=true;
+          }
+          if(i==(temp.length-1))
+          {
+            if(temp[i].checked)
+            {
+                checkvalue="1";
+            }
+          }
+        }
+        if(!isvalue)
+        {
+            showErrorResult("请选择一个动作或自定义动作");return false;
+        }
+        if(checkvalue=="1")
+        {
+            var pokefrom=jQuery("#pokefrom").val();
+            var poketo=jQuery("#poketo").val();
+            if(pokefrom==""||poketo=="")
+            {
+                 showErrorResult("请填写自定义动作描述");return false;
+            }
+        }
+        var hidefrienduid=jQuery("#hidefrienduid").val();
+        if(hidefrienduid=="")
+        {
+             showErrorResult("请至少选择一个好友");return false;
+        }
+        return true;
+    }
+    function clearfriend()
+    {   
+           document.getElementById("friends").value="";
+           document.getElementById("hidefrienduid").value="";
+   }
+    function showfriend(obj,uid)
+    {
+        var formcontent = "<iframe src=\"$webpath/home/friend/friend"+ExName+"?uid="+uid+"\" style=\"width:99%;height:300px;border:0;\" frameborder=\"NO\" border=\"0\" framespacing=\"0\"></iframe>";
+        var W = WinTip("<div>选择好友</div>", formcontent);
+        W.Width=750;
+        W.Create();        
+
+    }
+    function inserttoFriend(friendname,frienduid)
+    {
+        var friends=jQuery("#friends").val();
+        var hidefrienduid=jQuery("#hidefrienduid").val();
+        if(hidefrienduid!="")
+        {
+            var arr=new Array();
+            arr = hidefrienduid.split(",");
+            var isvalue=false;
+            //检查是否有好友了
+            for(var i=0;i<arr.length;i++)
+            {
+                if(arr[i]==frienduid)
+                {
+                    isvalue=true;
+                }
+            }
+            if(isvalue)
+            {
+                alert("已经选择了此好友了。");return;
+            }
+            var maxs=$maxsendfriend;
+            if(arr.length>(maxs-1))
+            {
+                alert("最多允许选择$maxsendfriend个好友。");return;
+            }
+           document.getElementById("hidefrienduid").value=hidefrienduid+","+frienduid;
+        }
+        else
+        {
+           document.getElementById("hidefrienduid").value=frienduid;
+        }        
+        if(friends!="")
+        {
+           document.getElementById("friends").value=friends+","+friendname;
+        }
+        else
+        {
+           document.getElementById("friends").value=friendname;
+        }
+    }
+</script>

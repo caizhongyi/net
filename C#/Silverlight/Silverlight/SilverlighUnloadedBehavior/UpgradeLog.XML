@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="SilverlighUnloadedBehavior">
+</Property><Property Name="解决方案文件" Value="F:\Silverlight\SilverlighUnloadedBehavior\SilverlighUnloadedBehavior.sln">
+</Property><Property Name="Date" Value="2010年11月4日">
+</Property><Property Name="Time" Value="19:25">
+</Property></Properties><Event ErrorLevel="0" Project="SilverlighUnloadedBehavior" Source="SilverlighUnloadedBehavior\SilverlighUnloadedBehavior.csproj" Description="项目已成功转换">
+</Event><Event ErrorLevel="3" Project="SilverlighUnloadedBehavior" Source="SilverlighUnloadedBehavior\SilverlighUnloadedBehavior.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="SilverlighUnloadedBehavior.Web" Source="SilverlighUnloadedBehavior.Web\SilverlighUnloadedBehavior.Web.csproj" Description="项目已成功转换">
+</Event><Event ErrorLevel="3" Project="SilverlighUnloadedBehavior.Web" Source="SilverlighUnloadedBehavior.Web\SilverlighUnloadedBehavior.Web.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="SilverlighUnloadedBehavior.sln" Description="成功转换解决方案">
+</Event><Event ErrorLevel="3" Project="" Source="SilverlighUnloadedBehavior.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="SilverlighUnloadedBehavior" Source="SilverlighUnloadedBehavior\SilverlighUnloadedBehavior.csproj" Description="扫描完成: 项目文件不需要升级。">
+</Event><Event ErrorLevel="0" Project="SilverlighUnloadedBehavior.Web" Source="SilverlighUnloadedBehavior.Web\SilverlighUnloadedBehavior.Web.csproj" Description="扫描完成: 项目文件不需要升级。">
+</Event></UpgradeLog>

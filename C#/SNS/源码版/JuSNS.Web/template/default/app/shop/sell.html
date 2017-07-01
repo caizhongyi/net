@@ -1,0 +1,68 @@
+﻿#parse("_head.html")
+<script type="text/javascript" src="$webpath/library/js/date/WdatePicker.js"></script>
+<link href="$templatepath/css/app/shop.css" rel="stylesheet" type="text/css" />
+<div id="snsmenu">
+#parse("_menu.html")
+</div>
+<div id="snsbody">
+    <div id="snshead"><span class="l">销售记录</span><span class="r"><input id="kwd" name="kwd" value="#if($kwd)$kwd#else搜索$shop#end" type="text" class="f-text w100" onclick="this.value=''" /> <input id="Button1" type="button" value="搜索" class="btn_gray2" onclick="search('goods','$q')" /></span></div>
+
+        <div class="itemmenu">
+        <ul>
+            <li><a href="$webpath/app/shop/default$exname">所有$shop</a></li>
+            <li><a href="$webpath/app/shop/default$exname?q=city">同城$shop</a></li>
+            <li><a href="$webpath/app/shop/default$exname?q=rec">推荐$shop</a></li>
+           <li><a href="$webpath/app/shop/default$exname?q=friend">好友的$shop</a></li>
+            <li><a href="$webpath/app/shop/default$exname?q=my">我的$shop</a></li>
+            <li class="lipoke"></li>
+             <li><a href="$webpath/app/shop/list$exname">所有店铺</a></li>
+            <li><a href="$webpath/app/shop/list$exname?q=rec">推荐商铺</a></li>
+            <li><a href="$webpath/app/shop/list$exname?q=city">同城店铺</a></li>
+            <li><a href="$webpath/app/shop/list$exname?q=friend">好友的店铺</a></li>
+            <li><a href="$webpath/app/shop/list$exname?q=my">我的店铺</a></li>
+            <li class="lipoke"></li>
+            <li><a href="$webpath/app/shop/multebuy$exname">超级团购</a></li>
+        </ul>
+    </div>
+    <div class="itemmenu1">
+        <ul>
+            <li class="current"><a href="$webpath/app/shop/sell$exname">销售记录</a></li> 
+            <li class="new"><a href="$webpath/app/shop/order$exname" class="newitem">购物车</a></li>
+        </ul>
+    </div>
+
+    <div id="shopmiddleall">
+            <div class="orderlist">
+                <div class="ordertitle">
+                    <div class="t1">订单号</div>
+                    <div class="t2" style="width:185px;">名称</div>
+                    <div class="t8">购买人</div>
+                    <div class="t3">金额</div>
+                    <div class="t4">$gpoint</div>
+                    <div class="t5">状态</div>
+                    <div class="t6">订单时间</div>
+                    <div class="t7">操作</div>
+                </div>
+                #if($recordcount>0)
+                    #foreach($info in $infolist)
+                    <div id="param_$info.id" class="ordercontent">
+                        <div class="t1">$info.ordernumber&nbsp;</div>
+                        <div class="t2" style="width:190px;"><a href="$info.goodsurl">$info.goodsname</a></div>
+                        <div class="t8"><a href="$info.spaceurl">$info.username</a></div>
+                        <div class="t3">$info.money</div>
+                        <div class="t4">$info.gpoint</div>
+                        <div class="t5">$info.state&nbsp;</div>
+                        <div class="t6">$info.time&nbsp;</div>
+                        <div class="t7" style="width:100px;">$info.pay&nbsp;</div>
+                    </div>
+                    #end
+                  <div class="pages">$pagelist</div>
+                #else
+                    <div>还没有记录</div>
+                #end      
+            </div>    
+    </div>
+    
+</div>
+
+#parse("_foot.html")

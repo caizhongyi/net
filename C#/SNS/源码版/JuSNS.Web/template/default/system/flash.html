@@ -1,0 +1,57 @@
+﻿#parse("_head.html")
+<link href="$templatepath/css/app/gift.css" rel="stylesheet" type="text/css" />
+<div id="snssysmenu">
+#parse("_menusystem.html")
+</div>
+<div id="snsbody1">
+    <div id="snshead">系统设置</div>
+    <div class="itemmenu">
+        <ul>
+            <li><a href="sys$exname">系统设置</a></li>
+            <li><a href="area$exname">地区</a></li> 
+            <li><a href="charge$exname">充值管理</a></li> 
+            <li><a href="template$exname">模板</a></li> 
+            <li class="current"><a href="indexconfig$exname">首页配置</a></li> 
+            <li><a href="uploads$exname">上传图片配置管理</a></li> 
+            <li><a href="start$exname">初始化</a></li> 
+            <li><a href="help$exname">帮助管理</a></li> 
+    </ul>
+    </div>
+    
+
+    <div class="system">
+            <div class="pitem"> <a href="flash$exname">首页幻灯片配置</a> | <a href="flash_add$exname">添加幻灯图片</a></div>
+          #if($recordcount>0)
+               <table  id="mtable">
+                <tr>
+                    <th>小图片</th>
+                    <th>大图片</th>
+                    <th>链接地址</th>
+                    <th>显示序号</th>
+                    <th>状态</th>
+                    <th style="text-align:center;">操作</th>
+                </tr>
+                #foreach($info in $infolist)
+                <tr id="param_$info.id">
+                    <td><a href="$info.path/$info.spic" target="_blank">$info.spic</a></td>
+                    <td><a href="$info.path/$info.bpic" target="_blank">$info.bpic</a></td>
+                    <td>$info.url</td>
+                    <td>$info.orderid</td>
+                    <td>#if($info.islock)<span class="reshow">锁定</span>#else正常#end</td>
+                    <td>
+                    <input  type="button" value="修改" onclick="window.location.href='flash_add$exname?fid=$info.id'" class="btn_blue2" />
+                    <input  type="button" value="删除" onclick="deleteAll($info.id,$uid,'flash');" class="btn_blue2" />
+                    </td>
+                </tr>
+                #end
+             </table>
+             <form method="post" action="" id="froms">
+              <input value="生成首页Flash幻灯片" type="submit" class="btn_blue10" />
+              </form>
+        #else
+            <div>还没有记录</div>
+        #end               
+    </div>
+    
+</div>
+#parse("_foot.html")

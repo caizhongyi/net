@@ -1,0 +1,18 @@
+<configuration width="744" height="600" background="#000000">
+	<modules>
+		<module type="SlideViewer" />
+		<module type="ProgressBar" />
+		<module type="SlideDescription" />
+		<module type="NavigationTray">
+			<option name="thumbnailViewer.left" value="83" />
+		</module>
+	</modules>
+	<transitions>
+		<transition type="FadeTransition" name="CrossFadeTransition" />
+<transition type="WipeTransition" name="WipeRightTransition">
+			<option name="direction" value="Right" />
+		</transition>
+</transitions>
+<dataProvider type="XmlDataProvider" />
+</configuration>
+

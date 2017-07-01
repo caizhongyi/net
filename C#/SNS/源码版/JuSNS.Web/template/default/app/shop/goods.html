@@ -1,0 +1,233 @@
+﻿#parse("_head.html")
+<link href="$templatepath/css/app/shop.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="$webpath/library/xmleditor/xheditor-zh-cn.min.js"></script>
+<div id="snsmenu">
+#parse("_menu.html")
+</div>
+<div id="snsbody">
+    <div id="snshead"><span class="l">${cpagetitle} - $shop详情</span><span class="r"><input id="kwd" name="kwd" value="#if($kwd)$kwd#else搜索$shop#end" type="text" class="f-text w100" onclick="this.value=''" /> <input id="Button1" type="button" value="搜索" class="btn_gray2" onclick="search('goods','$q')" /></span></div>
+
+    <div class="itemmenu">
+        <ul>
+            <li class="current"><a href="$webpath/app/shop/default$exname">所有$shop</a></li>
+            #if($uid>0)
+            <li><a href="$webpath/app/shop/default$exname?q=city">同城$shop</a></li>
+            #end
+            <li><a href="$webpath/app/shop/default$exname?q=rec">推荐$shop</a></li>
+            #if($uid>0)
+            <li><a href="$webpath/app/shop/default$exname?q=friend">好友的$shop</a></li>
+            <li><a href="$webpath/app/shop/default$exname?q=my">我的$shop</a></li>
+            #end
+            <li class="lipoke"></li>
+            <li><a href="$webpath/app/shop/list$exname">所有店铺</a></li>
+            <li><a href="$webpath/app/shop/list$exname?q=rec">推荐商铺</a></li>
+            #if($uid>0)
+            <li><a href="$webpath/app/shop/list$exname?q=city">同城店铺</a></li>
+            <li><a href="$webpath/app/shop/list$exname?q=friend">好友的店铺</a></li>
+            <li><a href="$webpath/app/shop/list$exname?q=my">我的店铺</a></li>
+            #end
+            <li class="lipoke"></li>
+            <li><a href="$webpath/app/shop/multebuy$exname">超级团购</a></li>
+        </ul>
+    </div>
+    #if($uid>0)
+    <div class="itemmenu1">
+        <ul>
+            <li class="new"><a href="$webpath/app/shop/new$exname" class="newitem">发起$shop</a></li> 
+            <li class="new"><a href="$webpath/app/shop/new_m$exname" class="newitem">发起团购</a></li> 
+            #if(!$isshop)
+            <li class="new"><a href="$webpath/app/shop/new_shop$exname" class="newitem">店铺入驻</a></li> 
+            #end
+            #if($OpenTrade=="1")
+            <li class="new"><a href="$webpath/app/shop/order$exname" class="newcatitem">我的购物车</a></li> 
+            <li class="new"><a href="$webpath/app/shop/sell$exname" class="newitem">销售记录</a></li> 
+            #end
+        </ul>
+    </div>
+    #end
+
+    <div id="shopmiddle">
+          <span  class="multetitle">$shop名称：$goodsname</span>
+          <div class="infopic">
+                <a href="$goodsimges" target="_blank" title="点击查看大图"><img src="$goodsimges" onerror="this.src='/uploads/app/shop/default.jpg'" /></a>
+                <p class="goodssore">用户评分：<a href="comment$exname?gid=$gid" title="查看评分记录"><span>$sumsore</span> 分</a></p>
+                <p>#if($number!=1000000)库存<span class="reshow strong">$number</span> 件；#end已售<span class="reshow strong">$buynumber</span>件</p>
+                <p>浏览次数<span class="reshow strong">$click</span> 次</p>
+                <p>
+                <input type="button" value="顶($topnumber)" onclick="attby(this,$goodsid,$uid,'up')" class="btn_gray4" style="color:Green;"></input>
+                <input type="button" value="踩($downnumber)" onclick="attby(this,$goodsid,$uid,'down')" class="btn_gray4" style="color:Red;" ></input>
+                </p>
+                <p class="center"> <a href="javascript:;" onclick="sharetofriend('goods',$gid,$uid,'$shop：$goodsname')" class="a-share">分享</a></p>
+            </div>
+            <div class="infocontent">
+                <p><em>发布人</em><a href="$spaceurl">$truename</a></p>
+                <p><em>$shop分类</em><a href="$webpath/app/shop/default$exname?classid=$classid">$classname</a></p>
+                <p><em>$shop类型</em>$isold</p>
+                #if($youxiao!="000")<p><em>有效期</em>$youxiao</p>#end
+                <p><em>所在地点</em>$areaid</p>
+                #if($shopname)<p><em>所属店铺</em><a href="$shopurl">$shopname</a></p>#end
+                #if($price!="0.00")<p><em>原价</em><span class="reshow strong">$price</span> RMB</p>#end
+                #if($mprice)<p><em>会员价</em><span class="reshow strong">$mprice</span> RMB#end</p>
+                #if($goodsgpoint)<p><em>附加$gpoint</em><span class="reshow strong">$goodsgpoint</span> 个</p>#end
+                <p><em>联系电话</em>$tel</p>
+                <p><em>$shop地址</em>$address</p>
+                <p><em>物流方式</em>$expressstyle $money</p>
+                #if($multebuy==1)<p><em>团购</em>最少人数<span class="reshow strong">$minmembers</span>人；最多人数<span class="reshow strong">$maxmembers</span>人</p> #end
+                <p style="margin-top:10px;"> 
+                #if($OpenTrade=="1"&&$youxiao!="已过期"&&$goodsuserid!=$uid)
+                        <input type="button" value="我要购买" onclick="buy($goodsid,$uid)" class="btn_blue4" />
+                #end
+                #if($multebuy==1)
+                    #if($youxiao!="已过期")<input type="button" value="发起团购" onclick="multeby($goodsid,$uid)" class="btn_blue4" />#end
+                #end           
+               <input type="button" value="我要评论" onclick="javascript:window.location.href='$webpath/app/shop/goods$exname?gid=$gid#commentcontent'" class="btn_blue4" />      
+               
+                </p>
+            </div>
+            <div class="clearpix"></div>
+            <div class="ativecontent">活动详情</div>
+            <div class="infocontents">
+                <p>$content</p>
+            </div>
+            
+        <div id="shopcomment">
+        <div class="line"></div>
+        <h3>评论 <a href="#commentcontent" class="normal">我要评论</a></h3>
+        #if($recordcount>0)
+                <ul>
+                #foreach($comm in $commlist)
+                    <li id="param_$comm.id">
+                        <div class="aa images center">
+                            <a href="$comm.spaceurl"><img src="$comm.headpic"></a>
+                        </div>
+                        <div class="bb">
+                            <div class="hdtitlecomment">
+                                <div class="ll"><a href="$comm.spaceurl">$comm.truename</a> <span class="time">$comm.time</span></div>
+                                <div class="rr">$comm.showop<a href="${reporturl}#param_$comm.id" target="_blank" class="a-report"></a></div>
+                            </div>
+                            <div class="ctx">$comm.content</div>
+                        </div>
+                    </li>
+                #end
+                  <li class="pages">$pagelist</li>
+              </ul>
+        #else
+            <div>还没有评论</div>
+        #end      
+        #if($uid>0)    
+        <div class="pitem">
+        <h4>发表评论</h4>
+        <form action="" method="post">
+            <textarea id="commentcontent" name="commentcontent" cols="20" rows="2"  class="xheditor-mini {skin:'$editskin'}" style="width:100%;height:140px"></textarea>
+            <input id="userid" name="userid" value="$userid" type="hidden" />
+            <br />
+            <input id="Submit1" type="submit" value="提交评论" class="btn_blue4" onclick="return checkdata();" />
+        </form>
+            
+        </div>
+        #end
+    </div>
+    </div>
+     <div id="shopright">
+       <div class="title">$truename的其他$shop</div>
+          #if($goodscount>0)
+            <div class="reclist">
+                <ul>
+                    #foreach($goods in $goodslist)
+                    <li>
+                        <a href="$goods.goodsurl">$goods.goodsname</a>
+                    </li>
+                    #end
+                </ul>
+            </div>
+        #end
+       <div class="title">推荐$shop</div>
+          #if($goodsreccount>0)
+            <div class="reclist">
+                <ul>
+                    #foreach($goodsrec in $goodsreclist)
+                    <li>
+                        <a href="$goodsrec.goodsurl">$goodsrec.goodsname</a>
+                    </li>
+                    #end
+                </ul>
+            </div>
+        #end
+        
+                 <div class="title">推荐团购</div>
+          #if($multecount>0)
+            <div class="reclist">
+                <ul>
+                    #foreach($multe in $multelist)
+                    <li>
+                        <a href="$multe.multeurl">$multe.title</a>
+                    </li>
+                    #end
+                </ul>
+            </div>
+        #end
+
+
+    </div>
+    
+</div>
+
+#parse("_foot.html")
+<script type="text/javascript">
+    function checkdata()
+    {
+       if(jQuery("#commentcontent").val()=="")
+        {
+                 showErrorResult("填写回复内容");return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
+    function multeby(gid,uid)
+    {
+            if(uid==0)
+            {
+                showErrorResult("请先登录");return;
+            }
+        window.location.href="$webpath/app/shop/new_m"+ExName+"?gid="+gid+"&uid="+uid+"";
+    }
+    function buy(gid,uid)
+    {
+            if(uid==0)
+            {
+                showErrorResult("请先登录");return;
+            }
+        window.location.href="$webpath/app/shop/buy"+ExName+"?gid="+gid+"&uid="+uid+"";
+    }
+    function attby(obj,gid,uid,type)
+    {
+            if(uid==0)
+            {
+                showErrorResult("请先登录");return;
+            }
+           jQuery.get(ajaxUrl, { action:"UpdateGoodsNumber", gid:gid,uid:uid, flag:type, param:Math.random() }, 
+          function(msg)
+          {
+            if(msg!="0")
+            {
+                if(type=="up")
+                {
+                    obj.value="顶("+msg+")";
+                    showRightResult("您成功顶了一下");
+                }
+                else
+                {
+                    obj.value="踩("+msg+")";
+                    showRightResult("您成功踩了一脚");
+                }
+            }
+            else
+            {
+                  showErrorResult("操作失败");
+            }
+          }
+        );        
+    }
+</script>

@@ -1,0 +1,90 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WbSystem", "WbSystem\WbSystem.csproj", "{06744065-E920-4B1B-9141-9EAA79443102}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CpuLoad", "CpuLoad\CpuLoad.csproj", "{DFE53712-1CC9-40DB-A704-92FCC55FDF18}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "printscreen", "printscreen\printscreen.csproj", "{82A1E4FA-63CB-404D-8B96-D369B6127737}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScreenSavers", "ScreenSavers\ScreenSavers.csproj", "{64D9DE5E-F34C-40A0-BA5F-1A457763151B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "send", "send\send.csproj", "{39740BC8-C1BB-4A45-87B3-6E19ED8F31A2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SetWallpaper", "Wallpaper\SetWallpaper.csproj", "{BB293AFE-B483-49C2-9A0B-9BC9072753B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Socket", "网吧Socket客户端\Socket.csproj", "{991CF5C2-087E-4655-B10B-ABEB2285830F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MySocket", "MySocket\MySocket.csproj", "{C9B24FF1-D7CA-42CF-AC24-94B44AF53A9B}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 9
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = CpuLoad\\CpuLoad.csproj
+		SccLocalPath1 = .
+		SccProjectFilePathRelativizedFromConnection1 = CpuLoad\\
+		SccProjectUniqueName2 = printscreen\\printscreen.csproj
+		SccLocalPath2 = .
+		SccProjectFilePathRelativizedFromConnection2 = printscreen\\
+		SccProjectUniqueName3 = ScreenSavers\\ScreenSavers.csproj
+		SccLocalPath3 = .
+		SccProjectFilePathRelativizedFromConnection3 = ScreenSavers\\
+		SccProjectUniqueName4 = send\\send.csproj
+		SccLocalPath4 = .
+		SccProjectFilePathRelativizedFromConnection4 = send\\
+		SccProjectUniqueName5 = Wallpaper\\SetWallpaper.csproj
+		SccLocalPath5 = .
+		SccProjectFilePathRelativizedFromConnection5 = Wallpaper\\
+		SccProjectUniqueName6 = WbSystem\\WbSystem.csproj
+		SccLocalPath6 = .
+		SccProjectFilePathRelativizedFromConnection6 = WbSystem\\
+		SccProjectUniqueName7 = 网吧Socket客户端\\Socket.csproj
+		SccLocalPath7 = .
+		SccProjectFilePathRelativizedFromConnection7 = 网吧Socket客户端\\
+		SccProjectUniqueName8 = MySocket\\MySocket.csproj
+		SccLocalPath8 = .
+		SccProjectFilePathRelativizedFromConnection8 = MySocket\\
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{06744065-E920-4B1B-9141-9EAA79443102}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06744065-E920-4B1B-9141-9EAA79443102}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06744065-E920-4B1B-9141-9EAA79443102}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06744065-E920-4B1B-9141-9EAA79443102}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFE53712-1CC9-40DB-A704-92FCC55FDF18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFE53712-1CC9-40DB-A704-92FCC55FDF18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFE53712-1CC9-40DB-A704-92FCC55FDF18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFE53712-1CC9-40DB-A704-92FCC55FDF18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82A1E4FA-63CB-404D-8B96-D369B6127737}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82A1E4FA-63CB-404D-8B96-D369B6127737}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82A1E4FA-63CB-404D-8B96-D369B6127737}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82A1E4FA-63CB-404D-8B96-D369B6127737}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64D9DE5E-F34C-40A0-BA5F-1A457763151B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64D9DE5E-F34C-40A0-BA5F-1A457763151B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64D9DE5E-F34C-40A0-BA5F-1A457763151B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64D9DE5E-F34C-40A0-BA5F-1A457763151B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39740BC8-C1BB-4A45-87B3-6E19ED8F31A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39740BC8-C1BB-4A45-87B3-6E19ED8F31A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39740BC8-C1BB-4A45-87B3-6E19ED8F31A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39740BC8-C1BB-4A45-87B3-6E19ED8F31A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB293AFE-B483-49C2-9A0B-9BC9072753B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB293AFE-B483-49C2-9A0B-9BC9072753B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB293AFE-B483-49C2-9A0B-9BC9072753B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB293AFE-B483-49C2-9A0B-9BC9072753B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{991CF5C2-087E-4655-B10B-ABEB2285830F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{991CF5C2-087E-4655-B10B-ABEB2285830F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{991CF5C2-087E-4655-B10B-ABEB2285830F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{991CF5C2-087E-4655-B10B-ABEB2285830F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9B24FF1-D7CA-42CF-AC24-94B44AF53A9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9B24FF1-D7CA-42CF-AC24-94B44AF53A9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9B24FF1-D7CA-42CF-AC24-94B44AF53A9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9B24FF1-D7CA-42CF-AC24-94B44AF53A9B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

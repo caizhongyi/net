@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<SceneGraph version="1">
+  <AspectRatio>2.93333333333333</AspectRatio>
+  <SceneNode>
+    <FileName>C:\Documents and Settings\Administrator\桌面\deepZoom\UntitledProject1\Source Images\01.jpg</FileName>
+    <x>0</x>
+    <y>0</y>
+    <Width>0.454545454545455</Width>
+    <Height>1</Height>
+    <ZOrder>1</ZOrder>
+  </SceneNode>
+  <SceneNode>
+    <FileName>C:\Documents and Settings\Administrator\桌面\deepZoom\UntitledProject1\Source Images\02.jpg</FileName>
+    <x>0.454545454545455</x>
+    <y>0</y>
+    <Width>0.545454545454545</Width>
+    <Height>1</Height>
+    <ZOrder>2</ZOrder>
+  </SceneNode>
+</SceneGraph>

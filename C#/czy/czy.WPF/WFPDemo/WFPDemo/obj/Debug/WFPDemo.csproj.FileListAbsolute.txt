@@ -1,0 +1,13 @@
+F:\Library\LibraryClass\C#\czy.WPF\WFPDemo\WFPDemo\bin\Debug\WFPDemo.dll
+F:\Library\LibraryClass\C#\czy.WPF\WFPDemo\WFPDemo\bin\Debug\WFPDemo.pdb
+F:\Library\LibraryClass\C#\czy.WPF\WFPDemo\WFPDemo\obj\Debug\ResolveAssemblyReference.cache
+F:\Library\LibraryClass\C#\czy.WPF\WFPDemo\WFPDemo\obj\Debug\GeneratedInternalTypeHelper.g.cs
+F:\Library\LibraryClass\C#\czy.WPF\WFPDemo\WFPDemo\obj\Debug\WFPDemo_MarkupCompile.cache
+F:\Library\LibraryClass\C#\czy.WPF\WFPDemo\WFPDemo\obj\Debug\WFPDemo_MarkupCompile.lref
+F:\Library\LibraryClass\C#\czy.WPF\WFPDemo\WFPDemo\obj\Debug\Themes\Generic.baml
+F:\Library\LibraryClass\C#\czy.WPF\WFPDemo\WFPDemo\obj\Debug\WFPDemo.g.resources
+F:\Library\LibraryClass\C#\czy.WPF\WFPDemo\WFPDemo\obj\Debug\WFPDemo.Properties.Resources.resources
+F:\Library\LibraryClass\C#\czy.WPF\WFPDemo\WFPDemo\obj\Debug\GenerateResource.read.1.tlog
+F:\Library\LibraryClass\C#\czy.WPF\WFPDemo\WFPDemo\obj\Debug\GenerateResource.write.1.tlog
+F:\Library\LibraryClass\C#\czy.WPF\WFPDemo\WFPDemo\obj\Debug\WFPDemo.dll
+F:\Library\LibraryClass\C#\czy.WPF\WFPDemo\WFPDemo\obj\Debug\WFPDemo.pdb

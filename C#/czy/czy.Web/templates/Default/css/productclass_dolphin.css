@@ -1,0 +1,24 @@
+﻿/* ============分类列表============== */
+
+div.productclass_dolphin{
+margin:0px 23px 0px;
+padding:20px 0px 12px 0px;
+}
+
+a.productclass_dolphin:link,a.productclass_dolphin:visited,a.productclass_dolphin:active{
+display:block;
+text-decoration: none;
+font:12px/15px Verdana, Arial, Helvetica, sans-serif;
+height:26px;
+text-align:left;
+background:url(../images/dot2.jpg) 0px 0px no-repeat;
+padding-left:13px;
+color:#3d3d3d;
+}
+
+a.productclass_dolphin:hover{
+display:block;
+color: #e10000; 
+text-decoration: none;
+font:12px/15px Verdana, Arial, Helvetica, sans-serif;
+}

@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JuSNS.App</name>
+    </assembly>
+    <members>
+        <member name="M:JuSNS.App.App.IsDeveloper(System.Int32)">
+            <summary>
+            是否是开发者
+            </summary>
+            <param name="userid">用户ID</param>
+            <returns>返回true或false</returns>
+        </member>
+        <member name="M:JuSNS.App.App.InsertDev(JuSNS.Model.AppDeveloperInfo)">
+            <summary>
+            成为开发者
+            </summary>
+            <param name="info">AppDeveloperInfo实体类</param>
+            <returns>0成功，1失败</returns>
+        </member>
+        <member name="M:JuSNS.App.App.GetDevInfo(System.Int32)">
+            <summary>
+            得到开发者信息
+            </summary>
+            <param name="userid">用户ID</param>
+            <returns>AppDeveloperInfo实体类</returns>
+        </member>
+        <member name="M:JuSNS.App.App.InsertApp(JuSNS.Model.AppInfo)">
+            <summary>
+            添加/更新应用程序
+            </summary>
+            <param name="info">AppInfo实体类</param>
+            <returns>0失败，1成功</returns>
+        </member>
+        <member name="M:JuSNS.App.App.GetAppInfo(System.Int32)">
+            <summary>
+            得到应用程序信息
+            </summary>
+            <param name="appid">应用程序ID</param>
+            <returns>AppInfo实体类</returns>
+        </member>
+        <member name="M:JuSNS.App.App.DeleteApp(System.Int32,System.Int32)">
+            <summary>
+            删除应用程序
+            </summary>
+            <param name="appid">应用程序ID</param>
+            <param name="userid">操作用户ID</param>
+            <returns>0失败，1成功</returns>
+        </member>
+        <member name="M:JuSNS.App.App.DeleteAppdev(System.Int32,System.Int32)">
+            <summary>
+            删除应用开发者
+            </summary>
+            <param name="appid">应用程序ID</param>
+            <param name="userid">操作用户ID</param>
+            <returns>0失败，1成功</returns>
+        </member>
+        <member name="M:JuSNS.App.App.IsSetupApp(System.Int32,System.Int32)">
+            <summary>
+            判断是否安装应用程序
+            </summary>
+            <param name="appid">appid</param>
+            <param name="userid">当前用户ID</param>
+            <returns>true或false</returns>
+        </member>
+        <member name="M:JuSNS.App.App.UpdateAppClick(System.Int32)">
+            <summary>
+            更新应用程序点击次数
+            </summary>
+            <param name="appid">appid</param>
+            <returns>0失败，1成功</returns>
+        </member>
+        <member name="M:JuSNS.App.App.UpdateAppSetup(System.Int32)">
+            <summary>
+            更新应用程序安装量
+            </summary>
+            <param name="appid">appid</param>
+            <returns>0失败，1成功</returns>
+        </member>
+        <member name="M:JuSNS.App.App.InsertSetupApp(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            安装/卸载应用程序
+            </summary>
+            <param name="appid">appid</param>
+            <param name="userid">安装用户ID</param>
+            <param name="flag">1安装，0卸载</param>
+            <returns>0失败，1成功</returns>
+        </member>
+        <member name="P:JuSNS.App.App.Instance">
+            <summary>
+            取得实例
+            </summary>
+        </member>
+    </members>
+</doc>

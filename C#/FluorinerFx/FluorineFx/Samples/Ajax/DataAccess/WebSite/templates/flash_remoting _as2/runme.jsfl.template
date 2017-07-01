@@ -1,0 +1,31 @@
+<%@ CodeTemplate Language="C#"%>
+<%@ Assembly Name="FluorineFx.ServiceBrowser.dll" %>
+<%@ Import Namespace="System.IO" %>
+<%@ Import Namespace="FluorineFx.Management" %>
+<%@ Import Namespace="FluorineFx.Management.Data" %>
+fl.outputPanel.clear();
+fl.openDocument( 'file:///test.fla' );
+var doc=fl.getDocumentDOM();
+var tl=doc.getTimeline();
+tl.setSelectedFrames([0,0,0],true);
+<%
+	Project project = Context["Project"] as Project;
+	TypeDescriptor typeDescriptor = project.GetType(Context["Service"]);
+	if( typeDescriptor != null )
+	{
+%>	
+tl.layers[0].frames[0].actionScript=
+"import <%=Context["Service"]%>;\n"+
+"var inst = new <%=Context["Service"]%>();\n"+
+<%
+		foreach(MethodDescriptor methodDescriptor in typeDescriptor.Methods)
+		{
+%>		
+"//inst.<%=methodDescriptor.Name%>(...)\n"+
+<%		
+		}
+%>
+"\n";
+<%
+	}
+%>

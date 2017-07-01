@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" creationComplete="init()" >
+    
+    <!--
+    =======================================================
+    *    
+    *    Stress test simply connects to and tries to set properties on a 
+    *    bunch of remote shared objects at high frequency.
+    *    
+    *    @author Nathan Smith <nathgs@gmail.com>
+    *
+    =======================================================
+    -->
+    <mx:Script>
+            <![CDATA[
+            	import mx.messaging.config.ServerConfig;
+            import mx.controls.Alert;
+        
+			NetConnection.defaultObjectEncoding = flash.net.ObjectEncoding.AMF0;
+			SharedObject.defaultObjectEncoding  = flash.net.ObjectEncoding.AMF0;
+        
+            private var conn:NetConnection = new NetConnection();
+            
+            [Bindable]
+            private var connected:Boolean;
+                        
+            private var sharedObjects:Array = new Array();
+            
+            /**
+             * Number of shared objects to use
+             */
+            private var sharedObjectNum:int = 50;
+            
+            /**
+             * Interval at which to set a property on a randomly choosen SharedObject
+             */
+            private var changeObjectInterval:int = 10;
+            
+            /**
+             * Max number of properties to keep on each SharedObject
+             */
+            private var sharedObjectPropertyNum:int = 6;
+            
+            private var changeObjectTimer:Timer;
+                                    
+            /**
+             * Number of times this client has set a property on a SharedObject
+             */
+            [Bindable]
+            private var objectChangesMade:int;
+            
+            /**
+             * Number of times this client has recieved a SyncEvent
+             */
+            [Bindable]
+            private var syncEventsRecieved:int;            
+            
+            private function init():void
+            {
+            	var uri:String = ServerConfig.getChannel( "my-rtmp" ).endpoint;
+				t_url.text = uri + "/StressTest";
+            }
+            
+            /**
+             * Connect to server
+             * (Once connected will start SharedObject test)
+             */
+            private function connect():void
+            {
+                conn.addEventListener(NetStatusEvent.NET_STATUS, onNetStatus);
+                //conn.objectEncoding = ObjectEncoding.AMF0;
+                conn.connect(t_url.text);
+            }
+            
+            protected function onNetStatus(event:NetStatusEvent):void
+            {
+                trace(event.toString());
+                var level:String = event.info.level;
+                var code:String = event.info.code;
+                
+                switch(level)
+                {
+                    case "error":
+                        // Connection Error
+                        if ( code.indexOf("NetConnection") >= 0 )
+                        {
+                            Alert.show(code);
+                        }
+                        break;
+                        
+                    default:
+                        if ( code.indexOf("Connect.Success") >= 0 )
+                        {
+                            connected = true;
+                            start();
+                        }                
+                        break;
+                }
+            }
+            
+            /**
+             * Stop test and dissconnect from server
+             *
+             */
+            private function disconnect():void
+            {
+                stop();
+                conn.close();
+                connected = false;
+            }
+            
+            private function start():void
+            {
+                startSharedObjects();                
+            }
+            
+            private function stop():void
+            {
+                changeObjectTimer.stop();
+                for each ( var so:SharedObject in sharedObjects )
+                {
+                    so.close();
+                }
+                sharedObjects = new Array();
+            }
+            
+            /**
+             * Connect to and start setting properties on shared objects
+             *
+             */
+            private function startSharedObjects():void
+            {
+                for ( var i:int = 0; i < sharedObjectNum; i++ )
+                {
+                    var so:SharedObject = SharedObject.getRemote("object_"+i, conn.uri, false);
+                    so.client = this;
+                    so.addEventListener(SyncEvent.SYNC, onSync);
+                    so.connect(conn);
+                    sharedObjects.push(so);
+                }
+            
+                changeObjectTimer = new Timer(changeObjectInterval);
+                changeObjectTimer.addEventListener(TimerEvent.TIMER, onChangeObject);
+                changeObjectTimer.start();
+            }
+                        
+            private function onChangeObject(event:TimerEvent):void
+            {
+                changeObject();
+            }        
+            
+            /**
+             * Set property on a randomly selected SharedObject
+             *
+             */
+            private function changeObject():void
+            {
+                var changeIndex:int = int(Math.random() * sharedObjectNum);                
+                var so:SharedObject = sharedObjects[changeIndex] as SharedObject;
+                var changeProperty:String = "property_" + int(Math.random() * sharedObjectPropertyNum);
+                so.setProperty(changeProperty, randomProperty());
+                                
+                objectChangesMade++;
+            }
+            
+            
+            private function onSync(event:SyncEvent):void
+            {
+                syncEventsRecieved++;
+            }        
+        
+            public static function randomProperty():String
+            {
+                var random:String;
+                var min:Number = 999999999;
+                var max:Number = 100000000;
+                return Math.round(Math.random()*(max-min)) + min.toString();
+            }
+            
+            
+        ]]>
+    </mx:Script>
+    
+    
+    <mx:VBox width="100%" height="100%" horizontalAlign="center" verticalAlign="middle">
+        
+        <mx:HBox>
+            <mx:Label text="URL"/>
+            <mx:TextInput id="t_url" text="" width="200"/>
+        </mx:HBox>
+    
+        <mx:ViewStack selectedIndex="{connected?1:0}" width="100%">
+            <mx:Box width="100%" horizontalAlign="center">
+                <mx:Button label="Connect" click="connect()"/>
+            </mx:Box>
+            <mx:Box width="100%" horizontalAlign="center">
+                <mx:Button label="Disconnect" click="disconnect()"/>
+            </mx:Box>
+        </mx:ViewStack>
+                
+        <mx:Label text="{objectChangesMade+&apos; changes made&apos;}"/>
+        <mx:Label text="{syncEventsRecieved+&apos; times synced&apos;}"/>    
+        
+    </mx:VBox>
+    
+</mx:Application>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml"
+	creationComplete="ds.fill(companies)">
+
+	<mx:Script>
+		<![CDATA[
+			
+        import mx.controls.Alert;
+        import mx.data.Conflict;
+        import mx.data.Conflicts;
+        import mx.data.events.DataConflictEvent;
+        import flex.samples.crm.company.Company;
+
+		// Ensure the Company class definition is included in the SWF
+        private static var company:Company = null;
+        
+        private function conflictHandler(event:DataConflictEvent):void
+        {
+            var conflicts:Conflicts = ds.conflicts;
+            var c:Conflict;
+            for (var i:int=0; i<conflicts.length; i++)
+            {
+                c = Conflict(conflicts.getItemAt(i));
+                Alert.show("Reverting to server value", "Conflict");
+                c.acceptServer();
+            }
+        }
+			
+		]]>
+	</mx:Script>
+
+    <mx:ArrayCollection id="companies"/>
+
+    <mx:DataService id="ds" destination="crm.company" 
+    	fault="Alert.show(event.fault.faultString, 'Error');" 
+    	conflict="conflictHandler(event)"/>
+
+    <mx:Panel title="Company List" width="100%" height="100%">
+        <mx:DataGrid id="dg" dataProvider="{companies}" width="100%" height="100%" editable="true">
+            <mx:columns>
+                <mx:DataGridColumn dataField="companyId" headerText="Company Id" editable="false"/>
+                <mx:DataGridColumn dataField="name" headerText="Company"/>
+                <mx:DataGridColumn dataField="address" headerText="Address"/>
+                <mx:DataGridColumn dataField="city" headerText="City"/>
+                <mx:DataGridColumn dataField="state" headerText="State"/>
+                <mx:DataGridColumn dataField="zip" headerText="Zip"/>
+                <mx:DataGridColumn dataField="industry" headerText="Industry"/>
+            </mx:columns>
+        </mx:DataGrid>
+    </mx:Panel>
+
+</mx:Application>

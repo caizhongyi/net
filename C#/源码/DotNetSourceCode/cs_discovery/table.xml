@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--  配合 xml.aspx 使用表格输出数据的XSLT文件简单版本
+   
+   编制 袁永福 2007-12-28    -->
+<xsl:stylesheet version='1.0' xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+	<xsl:output method='html' indent="yes"/>
+	<xsl:template match='/'>
+		<html>
+			<body>
+				<table border='1'>
+					<xsl:for-each select="Table/Record">
+						<tr>
+							<xsl:for-each select="*">
+								<td>
+									<xsl:value-of select="." />
+								</td>
+							</xsl:for-each>
+						</tr>
+					</xsl:for-each>
+				</table>
+			</body>
+		</html>
+	</xsl:template>
+</xsl:stylesheet>

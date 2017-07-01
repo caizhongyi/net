@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="Files">
+</Property><Property Name="解决方案文件" Value="C:\Documents and Settings\Administrator\桌面\网吧广告系统材料\如何监视文件和文件夹系统变化情况\Files.sln">
+</Property><Property Name="用户选项文件" Value="C:\Documents and Settings\Administrator\桌面\网吧广告系统材料\如何监视文件和文件夹系统变化情况\Files.suo">
+</Property><Property Name="Date" Value="2008年10月25日">
+</Property><Property Name="Time" Value="16:32">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="Files.sln" Description="文件已成功备份为 C:\Documents and Settings\Administrator\桌面\网吧广告系统材料\如何监视文件和文件夹系统变化情况\Backup\Files.sln">
+</Event><Event ErrorLevel="0" Project="" Source="Files.suo" Description="文件已成功备份为 C:\Documents and Settings\Administrator\桌面\网吧广告系统材料\如何监视文件和文件夹系统变化情况\Backup\Files.suo">
+</Event><Event ErrorLevel="0" Project="Files" Source="Files.csproj" Description="项目文件已成功备份为 C:\Documents and Settings\Administrator\桌面\网吧广告系统材料\如何监视文件和文件夹系统变化情况\Backup\Files.csproj">
+</Event><Event ErrorLevel="0" Project="Files" Source="Files.csproj.user" Description="项目用户文件成功备份为 C:\Documents and Settings\Administrator\桌面\网吧广告系统材料\如何监视文件和文件夹系统变化情况\Backup\Files.csproj.user">
+</Event><Event ErrorLevel="0" Project="Files" Source="AssemblyInfo.cs" Description="文件已成功备份为 C:\Documents and Settings\Administrator\桌面\网吧广告系统材料\如何监视文件和文件夹系统变化情况\Backup\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="Files" Source="Form1.cs" Description="文件已成功备份为 C:\Documents and Settings\Administrator\桌面\网吧广告系统材料\如何监视文件和文件夹系统变化情况\Backup\Form1.cs">
+</Event><Event ErrorLevel="0" Project="Files" Source="App.ico" Description="文件已成功备份为 C:\Documents and Settings\Administrator\桌面\网吧广告系统材料\如何监视文件和文件夹系统变化情况\Backup\App.ico">
+</Event><Event ErrorLevel="0" Project="Files" Source="Form1.resx" Description="文件已成功备份为 C:\Documents and Settings\Administrator\桌面\网吧广告系统材料\如何监视文件和文件夹系统变化情况\Backup\Form1.resx">
+</Event><Event ErrorLevel="0" Project="Files" Source="Files.csproj" Description="项目已成功转换">
+</Event><Event ErrorLevel="3" Project="Files" Source="Files.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="Files.sln" Description="成功转换解决方案">
+</Event><Event ErrorLevel="3" Project="" Source="Files.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="Files" Source="Files.csproj" Description="扫描完成: 项目文件不需要升级。">
+</Event></UpgradeLog>

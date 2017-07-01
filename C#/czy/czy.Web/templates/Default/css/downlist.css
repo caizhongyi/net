@@ -1,0 +1,38 @@
+﻿/* ============下载列表============== */
+
+ul.downlist{
+margin:0px;
+padding:6px 0px 0px;
+}
+
+li.downlist {
+margin:0;
+padding-left:16px;
+list-style-type: none;
+background: transparent url(../images/li1.jpg) left no-repeat;
+}
+
+
+a.downlist:link,a.downlist:visited,a.downlist:active{
+text-decoration: none;
+font:12px/24px 'Microsoft YaHei','SimSun',Arial,Sans-Serif;
+color:#383838;
+}
+
+a.downlist:hover{
+text-decoration: underline;
+font:12px/24px 'Microsoft YaHei','SimSun',Arial,Sans-Serif;
+color:#ff6600;
+}
+
+a.downlink:link,a.downlink:visited,a.downlink:active{
+text-decoration: underline;
+font:12px/24px 'Microsoft YaHei','SimSun',Arial,Sans-Serif;
+color:#777;
+}
+
+a.downlink:hover{
+text-decoration: underline;
+font:12px/24px 'Microsoft YaHei','SimSun',Arial,Sans-Serif;
+color:#ff6600;
+}

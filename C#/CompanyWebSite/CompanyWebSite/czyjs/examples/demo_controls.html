@@ -1,0 +1,86 @@
+﻿<html>
+	<head>
+	<title></title>
+<script type="text/javascript" src="../czy-js-all.js"></script>
+<link rel="stylesheet" href="../czy-css-all.css" type="text/css"/>
+
+<script type="text/javascript">
+	var select;
+   window.onload=function()
+   {     
+ 
+     
+         
+   	     var d=[
+		 ["1","aa"],
+		 ["2","bb"],
+		 ["1","cc"],
+		 ["2","dd"],
+		 ["1","ee"],
+		 ["2","ff"],
+		 ["1","gg"],
+		 ["1","aa"],
+		 ["2","bb"],
+		 [ "1","cc"],
+		 [ "2","dd"],
+		 [ "1","ee"],
+		 [ "2","ff"],
+		 [ "1","gg"],
+		 [ "2","ss"]
+		 ];
+		 
+		 //var data=[{tableName:"table",data:[[][][]]}];
+	
+		 var data=[
+		 ["xx","xx","xx","xx"],
+		 ["xx","xx","xx","xx"],
+		 ["xx","xx","xx","xx"],
+		 ["xx","xx","xx","xx"]
+		 ];
+		 var column=[
+		 {columnName:"columnName"},
+		 {columnName:"columnName"},
+		 {columnName:"columnName"},
+	     {columnName:"columnName"}
+		 ]
+	     
+         select =new czyjs.UI.Controls.Select(
+		 {
+		 	data:d,
+			width:200,
+			height:20,
+			contenterId:"se",
+            disable:false,
+            id: "select1",
+            randerTo: "select"
+		 }
+		 );  
+
+   }
+   
+   
+   function c()
+   {
+   	   alert(select.selectIndex);
+   }
+</script>
+
+	</head>
+	<body>
+<div id="select" ></div>
+
+<div id="grids" ></div>
+	
+<input type="" id="txt1" class="czy-text" />
+<input type="" id="txt"  />
+	<input type="button" id="txt" class="czy-button" value="click" onclick="c()"  />
+	<div id="se" style=" width:200px; margin-left:10px;"></div>	
+
+   <div style=" overflow:hidden; ">
+   <div style=" background-color:Gray; float:left;width:400px; height:100%;"></div>
+   <div style=" background-color:Yellow;float:right; width:400px;height:inherit"></div>
+   <div style="height:400px; background-color:Red;"></div>
+   
+   </div>
+	</body>
+</html>

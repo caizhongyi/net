@@ -1,0 +1,21 @@
+﻿<UserControl x:Class="LocalMapsExample.Page"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:DeepEarth="clr-namespace:DeepEarth;assembly=DeepEarth" 
+	xmlns:DeepBlueMarble="clr-namespace:DeepEarth.Provider.BlueMarble;assembly=DeepEarth.Provider"
+    xmlns:DeepControls="clr-namespace:DeepEarth.Controls;assembly=DeepEarth"
+    xmlns:local="clr-namespace:LocalMapsExample"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    mc:Ignorable="d" d:DesignWidth="677" d:DesignHeight="472">
+
+    <Grid x:Name="LayoutRoot" >
+
+        <DeepEarth:Map x:Name="map" >
+            <DeepControls:NavControl>
+                <local:MapSourceControl x:Name="mapSourceControl"  />
+            </DeepControls:NavControl>
+            <DeepControls:CoordControl />
+        </DeepEarth:Map>
+    </Grid>
+</UserControl>

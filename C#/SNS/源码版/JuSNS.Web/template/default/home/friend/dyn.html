@@ -1,0 +1,67 @@
+﻿#parse("_head.html")
+<div id="snsmenu">
+#parse("_menu.html")
+</div>
+<div id="snsbody">
+    <div id="snshead">好友动态设置</div>
+    <div class="itemmenu">
+        <ul>
+            <li><a href="$webpath/home/friend/default$exname">我的好友</a></li>
+            <li class="current"><a href="$webpath/home/friend/dyn$exname">好友动态设置</a></li>
+            <li><a href="$webpath/home/friend/visit$exname">来访者</a></li>
+            <li><a href="$webpath/home/friend/city$exname?q=city">同城</a></li>
+            <li><a href="$webpath/home/friend/pfriend$exname">可能认识的人</a></li>
+            <li><a href="$webpath/home/friend/search$exname">搜索朋友</a></li>
+            <li><a href="$webpath/home/friend/att$exname">关注我的人</a></li>
+            <li><a href="$webpath/home/friend/invite$exname">邀请朋友加入</a></li>
+        </ul>
+  </div>
+    <div class="pitem">我屏蔽的好友名单</div>
+    <div class="dynlist">
+        <ul>
+            $friendlist
+        </ul>
+    </div>
+    <div class="pitem">
+       会员中心调用动态数： <input id="dynnumber"  name="dynnumber" onkeyup="isNumber(this)" class="f-text" type="text" value="#if($dynnumber)$dynnumber#end" />
+        <input id="Button1" type="button" value="更改"  class="btn_blue2" onclick="setdynnumber();" />
+    </div>
+<div>
+
+</div>
+</div>
+#parse("_foot.html")
+<script type="text/javascript">
+    function setdynnumber()
+    {
+        var dynnumber=jQuery("#dynnumber").val();
+        if(dynnumber=="")
+        {
+            showErrorResult("请填写要显示的动态数量");return;
+        }
+            jQuery.get("dyn"+ExName+"", { action:"Set", dynnumber:dynnumber, param:Math.random() }, 
+            function(msg)
+            {
+                 showRightResult("设置成功");
+                 setTimeout(function() 
+                 {
+                    window.location.href=window.location.href;
+                  }, 1000);
+                }
+           );              
+    }
+    function deletedynlist(uid)
+    {
+            jQuery.get("$webpath/home/friend/dyn"+ExName+"", { action:"delete", uid:uid, param:Math.random() }, 
+            function(msg)
+            {
+                 showRightResult("取消屏蔽成功");
+                 setTimeout(function() 
+                 {
+                    window.location.href=window.location.href;
+                  }, 1000);
+                }
+           );          
+
+    }
+</script>

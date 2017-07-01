@@ -1,0 +1,7 @@
+C:\Users\Administrator\Desktop\远程监控\受控端\bin\Debug\受控端.exe
+C:\Users\Administrator\Desktop\远程监控\受控端\bin\Debug\受控端.pdb
+C:\Users\Administrator\Desktop\远程监控\受控端\bin\Debug\SmartKernel.Net.Monitor.dll
+C:\Users\Administrator\Desktop\远程监控\受控端\bin\Debug\SmartKernel.Net.Monitor.pdb
+C:\Users\Administrator\Desktop\远程监控\受控端\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\远程监控\受控端\obj\Debug\受控端.exe
+C:\Users\Administrator\Desktop\远程监控\受控端\obj\Debug\受控端.pdb

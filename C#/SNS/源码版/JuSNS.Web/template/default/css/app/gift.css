@@ -1,0 +1,124 @@
+﻿.gift
+{
+	margin:5px 0;
+	width:98%;
+	float:left;
+	line-height:22px;
+}
+.gift ul
+{
+	margin:0;
+	padding:0;
+	text-align:center;
+}
+.gift li
+{
+	float:left;
+	display:inline;
+	width:191px;
+	height:140px;
+	border-bottom:1px solid #eeeeee;
+	margin:10px 0;
+}
+.gift li .userpic
+{
+	float:left;width:100px;
+}
+.gift li .userpic img
+{
+	max-height:90px;
+	max-width:80px;
+	_height:90px;
+	_width:80px;
+	border:1px solid #eeeeee;
+	padding:2px;
+}
+
+.gift li .userpic a:hover img
+{
+	border:1px solid #ff0000;
+	padding:2px;
+}
+
+.gift li .giftcontent
+{
+	text-align:left;
+	float:left;
+	margin-left:3px;
+	width:80px;
+}
+
+.gift1
+{
+	margin:5px 0;
+	width:98%;
+	float:left;
+	line-height:22px;
+}
+.gift1 ul
+{
+	margin:0;
+	padding:0;
+	text-align:center;
+}
+.gift1 li
+{
+	float:left;
+	display:inline;
+	width:254px;
+	height:115px;
+	border-bottom:1px solid #eeeeee;
+	margin:10px 0;
+}
+.gift1 li .userpic
+{
+	float:left;width:100px;
+}
+.gift1 li .userpic img
+{
+	max-height:90px;
+	max-width:80px;
+	_height:90px;
+	_width:80px;
+	border:1px solid #eeeeee;
+	padding:2px;
+}
+
+.gift1 li .userpic a:hover img
+{
+	border:1px solid #ff0000;
+	padding:2px;
+}
+
+.gift1 li .giftcontent
+{
+	text-align:left;
+	float:left;
+	margin-left:3px;
+	width:143px;
+}
+
+.pitem .aa
+{
+	width:470px;
+	float:left;
+}
+.pitem .bb
+{
+	float:left;
+}
+
+.pitem .bb img
+{
+	max-height:90px;
+	max-width:80px;
+	_height:90px;
+	_width:80px;
+	border:1px solid #eeeeee;
+	padding:2px;
+}
+.pitem .bb a:hover img
+{
+	border:1px solid #ff0000;
+	padding:2px;
+}

@@ -1,0 +1,114 @@
+﻿.productlistx a:link {
+	color: #432121;
+	text-decoration: none;
+	font-size: 12px;
+}
+
+.productlistx a:visited {
+	text-decoration: none;
+	color: #000000;
+}
+
+.productlistx a:hover {
+	color: #666666;
+}
+
+.productlistx a:active {
+    color: #666666;
+	text-decoration: none;
+}
+
+.productlistx {
+	visibility:visible;
+	margin:0px;
+	padding:0px;
+	position: relative;
+	font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
+	color: #000000;
+	font-size: 12px;
+	overflow: hidden;
+}
+
+.rollproductlists {
+	margin:0px;
+	padding:1px 0px 0px;
+	overflow:hidden;
+	width:100%;
+}
+
+.blkproductlistx {
+	border:0px; 
+	padding:0px; 
+	overflow: hidden;
+	ZOOM: 1; 
+	position: relative;
+	height:162px;
+	background:url(../images/rollbg.jpg) 17px 0 no-repeat;
+}
+
+.blkproductlistx .LeftButton {
+	background: url(../images/arrow.jpg) no-repeat 0px 0px;
+	left:0px;
+	float:left;
+	width:15px;
+	cursor: pointer;
+	position: absolute;
+	height:38px;
+	top:47px;
+}
+
+.blkproductlistx .RightButton {
+	background: url(../images/arrow.jpg) no-repeat -15px 0px;
+	right:0px;
+	float:right;
+	width:15px;
+	cursor: pointer;
+	position: absolute;
+	height:38px;
+	top:47px;
+}
+
+.blkproductlistx .Cont {
+	padding:14px 0px 0px;
+	margin:0px 0px 0px 30px;
+	text-align:center;
+
+}
+
+.blkproductlistx .box {
+	float:left;
+	text-align:center;
+	margin:0px 7px 0px 0px;
+}
+
+.box .fang{
+	padding:0px;
+	margin:0px;
+	text-align:center;
+	border:1px #e0e2e5 solid;
+}
+
+.box .picFit{
+
+}
+
+.blkproductlistx .box a:hover img {
+	
+}
+
+.box a.prodtitle:link,.box a.prodtitle:visited,.box a.prodtitle:active{
+display:block;
+color:#3d3d3d;
+font:12px/18px Verdana, Arial, Helvetica, sans-serif;
+text-decoration: none;
+text-align:center;
+margin:0px 6px 0px 0px;
+padding:6px 0px 6px 0px;
+}
+
+.box a.prodtitle:hover{
+display:block;
+color:#e10000;
+text-decoration: underline;
+font:12px/18px Verdana, Arial, Helvetica, sans-serif;
+}

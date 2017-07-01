@@ -1,0 +1,110 @@
+﻿#parse("_head.html")
+<div id="snsmenu">
+#parse("_menu.html")
+</div>
+<div id="snsbody">
+    #if($userid>0)
+    <div id="snshead1">
+        <span class="images l"><a href="$spaceurl"><img src="$headpic"></a></span>
+        <span class="l"><h3>$truename</h3> » <a href="$spaceurl">$truename的空间</a> &nbsp;  » <a href="$webpath/app/ask/?q=$userid">$truename的所有问题</a></span>
+        <span class="r"><a href="javascript:history.back();">返回上一页</a> &nbsp; <input id="kwd" name="kwd" value="#if($kwd)$kwd#else搜索问题#end" type="text" class="f-text w100" onclick="this.value=''" /> <input id="Button1" type="button" value="搜索" class="btn_gray2" onclick="search('ask','')" /></span>
+    </div>
+    #end
+    
+    <div class="itemmenu">
+        <ul>
+            <li><a href="$webpath/app/ask/default$exname?q=all">所有问题</a></li>
+            <li><a href="$webpath/app/ask/default$exname">待解决的问题</a></li>
+            <li><a href="$webpath/app/ask/default$exname?q=ok">已解决的问题</a></li> 
+            <li><a href="$webpath/app/ask/default$exname?q=quick">紧急问题</a></li> 
+            <li><a href="$webpath/app/ask/default$exname?q=hight">高分悬赏问题</a></li> 
+            #if($uid>0)
+            <li><a href="$webpath/app/ask/default$exname?q=my">我的问题</a></li>
+            <li><a href="$webpath/app/ask/default$exname?q=friend">朋友的问题</a></li>
+            #end
+            <li class="new"><a href="$webpath/app/ask/new$exname" class="newitem">我要提问</a></li> 
+            <li class="search"></li>
+        </ul>
+    </div>
+    <div id="snsbody-all">
+    <div class="hdtitle clearpix">
+        <span class="title"><a>$title</a></span><span class="share"><a href="$reporturl" target="_blank" class="a-report"></a><a href="javascript:;" onclick="sharetofriend('ask',$aid,$uid,'问答：$title')" class="a-share">分享</a></span>
+        <div class="nextreshow clearpix normal">已有 $click 次阅读 <span class="pike">|</span> $time <span class="pike">|</span> 悬赏积分：$jifen #if($showop)$showop#end</div>
+    </div>
+    <div class="xcontent">
+        <div class="center">#if($pic)$pic#end</div>
+        <div>$content</div>
+        <div class="center">#if($files)$files#end</div>
+    </div>
+    
+
+    <div class="line"></div>
+    <div id="snsmiddle">
+        <h3>问题答案 <a href="#commentcontent" class="normal">我要回答问题</a></h3>
+        #if($recordcount>0)
+                <ul>
+                #foreach($comm in $commlist)
+                    <li id="param_$comm.id" class="#if($comm.isbestclass)$comm.isbestclass#end">
+                        <div class="aa images center">
+                            <a href="$comm.spaceurl"><img src="$comm.headpic"></a>
+                        </div>
+                        <div class="bb">
+                            <div class="hdtitlecomment">
+                                <div class="ll"><a href="$comm.spaceurl">$comm.truename</a> <span class="time">$comm.time</span>#if($isclose==0&&$userid==$uid&&$comm.userid!=$uid)  <a href="javascript:;" onclick="setaskbest($comm.userid,$comm.id,$uid,$aid)">» 设为最佳答案</a> #end</div>
+                                <div class="rr">$comm.showop<a href="${reporturl}#param_$comm.id" target="_blank" class="a-report"></a></div>
+                            </div>
+                            <div class="ctx">$comm.isbest $comm.content</div>
+                        </div>
+                    </li>
+                #end
+                  <li class="pages">$pagelist</li>
+              </ul>
+        #else
+            <div>还没有答案</div>
+        #end      
+        #if($uid>0)    
+        <div class="pitem">
+            #if($isclose==0)
+                <h4>回复问题</h4>
+                <form action="" method="post">
+                    <textarea id="txttcontent" name="txttcontent" cols="20" rows="2" class="f-area"></textarea>
+                    <input id="txtislock" name="txtislock" value="$isclose" type="hidden" />
+                    <input id="nid" name="nid" value="$id" type="hidden" />
+                    <br />
+                    <a href="javascript:;"  title="插入表情" onclick="Interface('txttcontent','$skinstyle')"><img src="$templatepath/images/c.gif" /></a> 
+                    <input id="Submit1" type="submit" value="提交答案" class="btn_blue4" onclick="return checkdata();" />
+                </form>            
+            #else
+                问题已经关闭。
+            #end
+        </div>
+        #end
+    </div>
+    <div id="snsmiddleright">
+        <h3>高分悬赏</h3>
+         #if($hotcount>0)
+            <ul>
+            #foreach($hot in $hotlist)
+                <li>&bull; <a href="$hot.askurl" title="$hot.titles">$hot.title</a></li>
+            #end
+        #end
+    </ul>
+
+    </div>
+    </div>
+</div>
+<script type="text/javascript">
+    function checkdata()
+    {
+        var c= jQuery("#txttcontent").val();
+        if(c=="")
+        {
+            alert("填写要回答的内容");return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
+</script>
+#parse("_foot.html")

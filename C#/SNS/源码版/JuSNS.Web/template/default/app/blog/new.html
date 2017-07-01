@@ -1,0 +1,94 @@
+﻿#parse("_head.html")
+<div id="snsmenu">
+#parse("_menu.html")
+<script type="text/javascript" src="$webpath/library/xmleditor/xheditor-zh-cn.min.js"></script>
+</div>
+<div id="snsbody">
+    <div id="snshead">写日志 ($mytruename)</div>
+    <div class="itemmenu">
+        <ul>
+            <li><a href="$webpath/app/blog/default$exname">他们正在发博...</a></li>
+            <li><a href="$webpath/app/blog/default$exname?q=my">我的日志</a></li>
+            <li><a href="$webpath/app/blog/default$exname?q=friend">朋友的日志</a></li> 
+            <li><a href="$webpath/app/blog/visit$exname">我去看过的</a></li> 
+            <li class="current"><a href="cat$exname">发表新日志</a></li> 
+        </ul>
+    </div>
+    <form action="" method="post">
+    <div class="pitem">
+        <input id="txttitle"  name="txttitle" class="f-text" value="#if($title)$title#end" style="width:500px;" type="text" />
+    </div>
+  
+    <div class="pitem">
+           
+        <textarea runat="server" name="txtcontent"  class="xheditor-simple {upBtnText:'上传',upMultiple:5,upLinkUrl:'$editfile',upImgUrl:'$edit_pic',skin:'$editskin'}" id="txtcontent" style="width:100%;height:500px">#if($content)$content#end</textarea>
+    </div>
+    
+    <div class="pitem">
+        <em>个人分类</em>
+        <select name="myclassid" id="myclassid" onchange="showblogclassdelete(this);">
+        <option value="0">----我的分类----</option>
+        $myclasslist
+        </select> 
+        <span id="deleteblogclass" style="display:none;"><a href="javascript:;" onclick="deleteblogc($uid);">删除此分类</a> </span> &nbsp;
+        <a href="javascript:;" onclick="addsort();">增加分类</a>
+        <span style="display:none;" id="showsortspan">
+            <input id="sortname" name="sortname" class="f-text" type="text" /><input id="Button5" type="button" value="保存" class="btn_gray2" onclick="addsortsave($uid);" /> </span>
+    </div>
+    
+    <div class="pitem">
+        <em>系统分类</em>
+        <select name="systemclassid" id="systemclassid">
+        <option value="">----系统分类----</option>
+        $sysclasslist
+        </select>
+    </div>
+    
+    <div class="pitem">
+        <em>公开度</em><select name="privacy" id="privacy">
+        $privacy</select>
+    </div>
+    <div class="pitem">
+        <em>&nbsp;</em> <input id="isDraft" name="isDraft" type="checkbox" $draft value="1" />存为草稿
+        <input id="bid" name="bid" value="$bid" type="hidden" />
+    </div>
+
+    <div class="pitem1">
+      <em>&nbsp;</em><input id="Button1" type="submit" value="保存日志" class="btn_blue4" onclick="return checkdata();" /> <input id="Button4" type="reset" value="重新填写" class="btn_gray4" />
+    </div>
+    </form>
+</div>
+<script type="text/javascript">
+   function InserHTMLToEdits(ResultStr) 
+   {
+           var oEditor = FCKeditorAPI.GetInstance("txtcontent") ;
+           oEditor.InsertHtml("<img style=\"width:200px;\" class=\"editpic\" src=\""+ResultStr+"\" />");
+   }
+
+    function checkdata()
+    {
+        var t=jQuery("#txttitle").val();
+        if(t=="")
+        {
+             showErrorResult("请填写标题");
+            document.getElementById("txttitle").focus();
+            return false;
+        }
+         var Content =jQuery("#txtcontent").val();
+         if(Content=="") 
+         { 
+             showErrorResult("请填写日志内容");
+             return false; 
+         } 
+        
+        var sc=jQuery("#systemclassid").val();
+        if(sc=="")
+        {
+            showErrorResult("请选择分类");
+            document.getElementById("systemclassid").focus();
+            return false;
+        }
+        return true;
+    }
+</script>
+#parse("_foot.html")

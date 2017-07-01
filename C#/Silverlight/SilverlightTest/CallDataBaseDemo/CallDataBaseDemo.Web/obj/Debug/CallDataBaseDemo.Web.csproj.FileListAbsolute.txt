@@ -1,0 +1,33 @@
+C:\Documents and Settings\Administrator\桌面\CallDataBaseDemo\CallDataBaseDemo.Web\bin\CallDataBaseDemo.Web.dll
+C:\Documents and Settings\Administrator\桌面\CallDataBaseDemo\CallDataBaseDemo.Web\bin\CallDataBaseDemo.Web.pdb
+C:\Documents and Settings\Administrator\桌面\CallDataBaseDemo\CallDataBaseDemo.Web\bin\DAL.dll
+C:\Documents and Settings\Administrator\桌面\CallDataBaseDemo\CallDataBaseDemo.Web\bin\System.Web.Silverlight.dll
+C:\Documents and Settings\Administrator\桌面\CallDataBaseDemo\CallDataBaseDemo.Web\bin\DAL.pdb
+C:\Documents and Settings\Administrator\桌面\CallDataBaseDemo\CallDataBaseDemo.Web\bin\zh-Hans\System.Web.Silverlight.resources.dll
+C:\Documents and Settings\Administrator\桌面\CallDataBaseDemo\CallDataBaseDemo.Web\bin\zh-Hant\System.Web.Silverlight.resources.dll
+C:\Documents and Settings\Administrator\桌面\CallDataBaseDemo\CallDataBaseDemo.Web\bin\de\System.Web.Silverlight.resources.dll
+C:\Documents and Settings\Administrator\桌面\CallDataBaseDemo\CallDataBaseDemo.Web\bin\es\System.Web.Silverlight.resources.dll
+C:\Documents and Settings\Administrator\桌面\CallDataBaseDemo\CallDataBaseDemo.Web\bin\fr\System.Web.Silverlight.resources.dll
+C:\Documents and Settings\Administrator\桌面\CallDataBaseDemo\CallDataBaseDemo.Web\bin\it\System.Web.Silverlight.resources.dll
+C:\Documents and Settings\Administrator\桌面\CallDataBaseDemo\CallDataBaseDemo.Web\bin\ja\System.Web.Silverlight.resources.dll
+C:\Documents and Settings\Administrator\桌面\CallDataBaseDemo\CallDataBaseDemo.Web\bin\ko\System.Web.Silverlight.resources.dll
+C:\Documents and Settings\Administrator\桌面\CallDataBaseDemo\CallDataBaseDemo.Web\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\桌面\CallDataBaseDemo\CallDataBaseDemo.Web\obj\Debug\CallDataBaseDemo.Web.dll
+C:\Documents and Settings\Administrator\桌面\CallDataBaseDemo\CallDataBaseDemo.Web\obj\Debug\CallDataBaseDemo.Web.pdb
+F:\Silverlight\SilverlightTest\CallDataBaseDemo\CallDataBaseDemo.Web\bin\CallDataBaseDemo.Web.dll
+F:\Silverlight\SilverlightTest\CallDataBaseDemo\CallDataBaseDemo.Web\bin\CallDataBaseDemo.Web.pdb
+F:\Silverlight\SilverlightTest\CallDataBaseDemo\CallDataBaseDemo.Web\bin\System.Web.Silverlight.dll
+F:\Silverlight\SilverlightTest\CallDataBaseDemo\CallDataBaseDemo.Web\bin\de\System.Web.Silverlight.resources.dll
+F:\Silverlight\SilverlightTest\CallDataBaseDemo\CallDataBaseDemo.Web\bin\es\System.Web.Silverlight.resources.dll
+F:\Silverlight\SilverlightTest\CallDataBaseDemo\CallDataBaseDemo.Web\bin\fr\System.Web.Silverlight.resources.dll
+F:\Silverlight\SilverlightTest\CallDataBaseDemo\CallDataBaseDemo.Web\bin\it\System.Web.Silverlight.resources.dll
+F:\Silverlight\SilverlightTest\CallDataBaseDemo\CallDataBaseDemo.Web\bin\ja\System.Web.Silverlight.resources.dll
+F:\Silverlight\SilverlightTest\CallDataBaseDemo\CallDataBaseDemo.Web\bin\ko\System.Web.Silverlight.resources.dll
+F:\Silverlight\SilverlightTest\CallDataBaseDemo\CallDataBaseDemo.Web\bin\zh-Hans\System.Web.Silverlight.resources.dll
+F:\Silverlight\SilverlightTest\CallDataBaseDemo\CallDataBaseDemo.Web\bin\zh-Hant\System.Web.Silverlight.resources.dll
+F:\Silverlight\SilverlightTest\CallDataBaseDemo\CallDataBaseDemo.Web\obj\Debug\ResolveAssemblyReference.cache
+F:\Silverlight\SilverlightTest\CallDataBaseDemo\CallDataBaseDemo.Web\obj\Debug\CallDataBaseDemo.Web.dll
+F:\Silverlight\SilverlightTest\CallDataBaseDemo\CallDataBaseDemo.Web\obj\Debug\CallDataBaseDemo.Web.pdb
+F:\Silverlight\SilverlightTest\CallDataBaseDemo\CallDataBaseDemo.Web\bin\DAL.dll
+F:\Silverlight\SilverlightTest\CallDataBaseDemo\CallDataBaseDemo.Web\bin\MySql.Data.dll
+F:\Silverlight\SilverlightTest\CallDataBaseDemo\CallDataBaseDemo.Web\bin\DAL.pdb

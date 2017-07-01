@@ -1,0 +1,13 @@
+ body{
+	font-size:12px;
+    margin:0px;
+	padding:0px;
+	text-align:center;
+	background: #21386A;
+	color:#555;
+	font-family: Georgia,Verdana,Tahoma,sans-serif;
+}
+ p{margin:3px;}
+ img {max-width: 100%;height: auto;}
+ select{font-family: Georgia,Verdana, Arial}
+ th{background:#D5CBBE;border-bottom:1px solid #795B50}

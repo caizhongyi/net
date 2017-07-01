@@ -1,0 +1,42 @@
+﻿<UserControl  
+    x:Class="DeepEarthPrototype.Page"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"	
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"  
+    xmlns:DeepEarth="clr-namespace:DeepEarth;assembly=DeepEarth" 
+    xmlns:DeepControls="clr-namespace:DeepEarth.Controls;assembly=DeepEarth"   
+    xmlns:DeepProtoControls="clr-namespace:DeepEarthPrototype.Controls"
+    mc:Ignorable="d" d:DesignWidth="677" d:DesignHeight="472">
+
+    <Grid x:Name="LayoutRoot" >
+
+        <!-- Map Control -->
+        <DeepEarth:Map x:Name="map" Margin="0,0,0,0" Style="{StaticResource PrototypeMapStyle}">
+            <DeepControls:CoordControl VerticalAlignment="Bottom" HorizontalAlignment="Right" />
+            <DeepControls:ScaleControl VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="12,12,12,40" />
+        </DeepEarth:Map>
+
+        <!-- SidePanel Control -->
+        <DeepProtoControls:SidePanelControl x:Name="sidePanelControl" HorizontalAlignment="Right" Margin="0,120,8,80"/>
+
+        <!-- Nav Control -->
+        <DeepControls:NavControl x:Name="navControl" RotationOn="True" >
+
+            <StackPanel Orientation="Horizontal" MinHeight="48.111" >
+
+                <Button x:Name="ToggleSidePanel" Click="ToggleSidePanel_Click" Margin="2,8,2,8" Style="{StaticResource StandardButton}">
+                    <ToolTipService.ToolTip>
+                        <TextBlock Text="Toggle SidePanel" />
+                    </ToolTipService.ToolTip>
+                    <Image x:Name="ToggleSidePanelImage" Source="Resources/ToolBar/Tools.png"/>
+                </Button> 
+
+                <DeepProtoControls:ToolBarItems x:Name="ToolBarItemsPanel"/>
+                
+            </StackPanel>
+            
+        </DeepControls:NavControl>
+    </Grid>
+
+</UserControl>

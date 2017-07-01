@@ -1,0 +1,5 @@
+实列对像扩展
+Date.prototype.getMaxDate=function()
+{}
+Data.getMaxDate=function()
+{}

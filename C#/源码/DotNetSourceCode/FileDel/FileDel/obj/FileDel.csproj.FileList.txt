@@ -1,0 +1,8 @@
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\FileDel.Form1.resources
+obj\Debug\FileDel.Properties.Resources.resources
+obj\Debug\FileDel.csproj.GenerateResource.Cache
+bin\Debug\FileDel.exe
+bin\Debug\FileDel.pdb
+obj\Debug\FileDel.exe
+obj\Debug\FileDel.pdb

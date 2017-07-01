@@ -1,0 +1,58 @@
+﻿/* 1、页面主导航的样式。 */
+div.nav
+{
+    width: 210px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    text-decoration: underline;
+}
+div.nav .mainNav
+{
+    margin-left: 10px;
+}
+div.nav .mainNav .mainNav_List
+{
+    min-height: 24px;
+    _height: 24px;
+    background: url(../Images/MainNavBack.gif) repeat-x top left;
+    line-height: 24px;
+    color: #ffffff;
+    cursor: pointer;
+    text-decoration: underline;
+    
+}
+
+/* 2、页面子导航的样式。 */
+div.nav .subNav
+{
+    background: #85a3c2; 
+    border-bottom: solid 1px #b1c6dc;
+}
+div.nav .subNav .subNav_List
+{
+    min-height: 24px;
+    _height: 24px;
+    line-height: 24px;
+    color: #333333;
+}
+
+/* 3、页面链接的样式。 */
+div.nav .mainNav .mainNav_List a
+{
+    padding-left: 20px;
+    color: #ffffff;
+    text-decoration: none;
+}
+div.nav .mainNav .mainNav_List a:hover
+{
+    text-decoration: underline;
+}
+div.nav .mainNav .mainNav_List a:link
+{
+    color: #ffffff;
+}
+div.nav .mainNav .mainNav_List a:visited
+{
+    color: #ffffff;
+}

@@ -1,0 +1,45 @@
+C:\Users\Administrator\Desktop\YYFly\YYFly.Web\bin\YYFly.Web.dll
+C:\Users\Administrator\Desktop\YYFly\YYFly.Web\bin\YYFly.Web.pdb
+C:\Users\Administrator\Desktop\YYFly\YYFly.Web\bin\System.Web.Silverlight.dll
+C:\Users\Administrator\Desktop\YYFly\YYFly.Web\bin\de\System.Web.Silverlight.resources.dll
+C:\Users\Administrator\Desktop\YYFly\YYFly.Web\bin\es\System.Web.Silverlight.resources.dll
+C:\Users\Administrator\Desktop\YYFly\YYFly.Web\bin\fr\System.Web.Silverlight.resources.dll
+C:\Users\Administrator\Desktop\YYFly\YYFly.Web\bin\it\System.Web.Silverlight.resources.dll
+C:\Users\Administrator\Desktop\YYFly\YYFly.Web\bin\ja\System.Web.Silverlight.resources.dll
+C:\Users\Administrator\Desktop\YYFly\YYFly.Web\bin\ko\System.Web.Silverlight.resources.dll
+C:\Users\Administrator\Desktop\YYFly\YYFly.Web\bin\zh-Hans\System.Web.Silverlight.resources.dll
+C:\Users\Administrator\Desktop\YYFly\YYFly.Web\bin\zh-Hant\System.Web.Silverlight.resources.dll
+C:\Users\Administrator\Desktop\YYFly\YYFly.Web\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\YYFly\YYFly.Web\obj\Debug\YYFly.Web.dll
+C:\Users\Administrator\Desktop\YYFly\YYFly.Web\obj\Debug\YYFly.Web.pdb
+C:\Documents and Settings\webabcd\桌面\YYFly\YYFly.Web\bin\YYFly.Web.dll
+C:\Documents and Settings\webabcd\桌面\YYFly\YYFly.Web\bin\YYFly.Web.pdb
+C:\Documents and Settings\webabcd\桌面\YYFly\YYFly.Web\bin\System.Web.Silverlight.dll
+C:\Documents and Settings\webabcd\桌面\YYFly\YYFly.Web\bin\de\System.Web.Silverlight.resources.dll
+C:\Documents and Settings\webabcd\桌面\YYFly\YYFly.Web\bin\es\System.Web.Silverlight.resources.dll
+C:\Documents and Settings\webabcd\桌面\YYFly\YYFly.Web\bin\fr\System.Web.Silverlight.resources.dll
+C:\Documents and Settings\webabcd\桌面\YYFly\YYFly.Web\bin\it\System.Web.Silverlight.resources.dll
+C:\Documents and Settings\webabcd\桌面\YYFly\YYFly.Web\bin\ja\System.Web.Silverlight.resources.dll
+C:\Documents and Settings\webabcd\桌面\YYFly\YYFly.Web\bin\ko\System.Web.Silverlight.resources.dll
+C:\Documents and Settings\webabcd\桌面\YYFly\YYFly.Web\bin\zh-Hans\System.Web.Silverlight.resources.dll
+C:\Documents and Settings\webabcd\桌面\YYFly\YYFly.Web\bin\zh-Hant\System.Web.Silverlight.resources.dll
+C:\Documents and Settings\webabcd\桌面\YYFly\YYFly.Web\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\webabcd\桌面\YYFly\YYFly.Web\obj\Debug\YYFly.Web.dll
+C:\Documents and Settings\webabcd\桌面\YYFly\YYFly.Web\obj\Debug\YYFly.Web.pdb
+C:\Documents and Settings\webabcd\桌面\YYFly\YYFly.Web\obj\Debug\YYFly.Web.g.resources
+C:\Users\Administrator\Desktop\YYFly\YYFly.Web\obj\Debug\YYFly.Web.g.resources
+E:\downcode\YYFly\YYFly.Web\bin\YYFly.Web.dll
+E:\downcode\YYFly\YYFly.Web\bin\YYFly.Web.pdb
+E:\downcode\YYFly\YYFly.Web\bin\System.Web.Silverlight.dll
+E:\downcode\YYFly\YYFly.Web\bin\de\System.Web.Silverlight.resources.dll
+E:\downcode\YYFly\YYFly.Web\bin\es\System.Web.Silverlight.resources.dll
+E:\downcode\YYFly\YYFly.Web\bin\fr\System.Web.Silverlight.resources.dll
+E:\downcode\YYFly\YYFly.Web\bin\it\System.Web.Silverlight.resources.dll
+E:\downcode\YYFly\YYFly.Web\bin\ja\System.Web.Silverlight.resources.dll
+E:\downcode\YYFly\YYFly.Web\bin\ko\System.Web.Silverlight.resources.dll
+E:\downcode\YYFly\YYFly.Web\bin\zh-Hans\System.Web.Silverlight.resources.dll
+E:\downcode\YYFly\YYFly.Web\bin\zh-Hant\System.Web.Silverlight.resources.dll
+E:\downcode\YYFly\YYFly.Web\obj\Debug\ResolveAssemblyReference.cache
+E:\downcode\YYFly\YYFly.Web\obj\Debug\YYFly.Web.g.resources
+E:\downcode\YYFly\YYFly.Web\obj\Debug\YYFly.Web.dll
+E:\downcode\YYFly\YYFly.Web\obj\Debug\YYFly.Web.pdb

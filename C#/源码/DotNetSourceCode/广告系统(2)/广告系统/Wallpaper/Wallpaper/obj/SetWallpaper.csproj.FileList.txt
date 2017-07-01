@@ -1,0 +1,5 @@
+bin\Debug\SetWallpaper.dll
+bin\Debug\SetWallpaper.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\SetWallpaper.dll
+obj\Debug\SetWallpaper.pdb

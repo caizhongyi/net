@@ -1,0 +1,93 @@
+/*-----------超链接样式---------------
+ 说明: 伪类:link :visited :hover分别代表超链接的通常、被访问后、和鼠标接触链接是的样式
+ a标签代表通用超链接样式
+ .menuA代表Blog导航条菜单的样式
+ .titleA代表日志标题的样式
+ .sideA代表侧栏的超链接样式
+ .CategoryA代表树形分类的链接样式
+ .more代表更多链接的样式
+------------------------------------*/
+ a:link,a:visited{
+ text-decoration:none;
+ color:#666;
+}
+ a:hover{
+ color:#fff; 
+ background: #556B2F;
+}
+ .menuA:link,.menuA:visited{
+ float:left;
+ height:28px;
+ text-align:center;
+ padding:0px 4px 0px 4px;
+ background:#E3CE96 url(menu_main.jpg) 0px 0px;
+ text-decoration:none;
+ color:#493107;
+ line-height:210%;
+}  
+ .menuA:hover{
+ background:#E3CE96 url(menu_main.jpg) 0px -28px;
+ color:#493107
+}
+ .titleA:link,.titleA:visited{
+ text-decoration:none;
+ font-weight:bold;
+ font-family:verdana,宋体;
+ text-align:left;
+ color: #F26011;
+}
+ .titleA:hover{
+ color: #556B2F;
+ text-decoration:none;
+ background: url(hoverBG3.gif) 0 11px no-repeat;
+}
+ .sideA:link,.sideA:visited{
+ color: #666;
+ text-decoration:none;
+ padding-left:16px;
+ background: url(hoverBG.gif) 0px 10px no-repeat;
+ height:16px;
+ overflow:hidden;
+ display:block;
+ border-bottom: 1px dashed #ccc;
+ width:170px;
+}
+ .sideA:hover{
+ color: #000;
+ padding-left:16px;
+ background: url(hoverBG.gif) 0px -4px no-repeat;
+ height:16px;
+ overflow: hidden;
+ border-bottom: 1px solid #fff;
+}
+ .CategoryA:link,.CategoryA:visited{
+ text-decoration:none;
+ background: url(hoverBG3.gif) -3px 15px no-repeat;
+}
+ .CategoryA:hover{
+ text-decoration:none;
+ background: url(hoverBG3.gif) -3px 9px no-repeat;
+ color: #000;
+}
+ 
+ .more:link,.more:visited{
+ font-weight:bold;
+ background: url(hoverBG2.gif) 0px 19px no-repeat;
+ padding-left:18px;
+ margin:5px;
+ text-decoration:none;
+ border-bottom: 1px dashed #ccc;
+}
+ .more:hover{
+ color: #556B2F;
+ border-bottom: none;
+ background: url(hoverBG2.gif) 0px 9px no-repeat;
+}  
+ .blogsetA:link,.blogsetA:visited{padding:0px 9px 4px 16px ; background:url(../../images/tools.gif) no-repeat;text-decoration:none}
+ .mp3A:link,.mp3A:visited{padding:0px 0px 4px 16px; background:url(../../images/mm_snd.gif) no-repeat;text-decoration:none}
+ .collA:link,.collA:visited{padding:0px 0px 4px 16px; background:url(../../images/MyFa.gif) no-repeat;text-decoration:none}
+ .aboutA:link,.aboutA:visited{padding:0px 0px 4px 16px; background:url(../../images/ico_skdaq.gif) no-repeat;text-decoration:none}
+ .normalA:link,.normalA:visited{padding:0px 12px 4px 16px; background:url(../../images/icon_normal.gif) no-repeat;text-decoration:none}
+ .listA:link,.listA:visited{padding:0px 0px 4px 16px; background:url(../../images/icon_topic.gif) no-repeat;text-decoration:none}
+ .commentA:link,.commentA:visited{padding:0px 0px 4px 14px; background:url(../../images/icon_offsite_red.gif) no-repeat -2px 3px;text-decoration:none}
+ /*---超链接样式定义结束---*/

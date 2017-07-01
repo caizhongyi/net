@@ -1,0 +1,9 @@
+F:\lib\c#\database\DAL\bin\Debug\DBAccess.dll
+F:\lib\c#\database\DAL\bin\Debug\DBAccess.pdb
+F:\lib\c#\database\DAL\obj\Debug\DBAccess.dll
+F:\lib\c#\database\DAL\obj\Debug\DBAccess.pdb
+F:\lib\c#\DBAccess\DBAccess\bin\Debug\DBAccess.dll
+F:\lib\c#\DBAccess\DBAccess\bin\Debug\DBAccess.pdb
+F:\lib\c#\DBAccess\DBAccess\obj\Debug\DBAccess.dll
+F:\lib\c#\DBAccess\DBAccess\obj\Debug\DBAccess.pdb
+F:\lib\c#\DBAccess\DBAccess\obj\Debug\DBAccess.csprojResolveAssemblyReference.cache

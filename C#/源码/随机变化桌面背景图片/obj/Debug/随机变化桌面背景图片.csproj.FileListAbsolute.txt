@@ -1,0 +1,7 @@
+F:\源码\随机变化桌面背景图片\obj\Debug\随机变化桌面背景图片.exe
+F:\源码\随机变化桌面背景图片\obj\Debug\随机变化桌面背景图片.pdb
+F:\源码\随机变化桌面背景图片\bin\Debug\随机变化桌面背景图片.exe
+F:\源码\随机变化桌面背景图片\bin\Debug\随机变化桌面背景图片.pdb
+F:\源码\随机变化桌面背景图片\obj\Debug\ResolveAssemblyReference.cache
+F:\源码\随机变化桌面背景图片\obj\Debug\随机变化桌面背景图片.MainForm.resources
+F:\源码\随机变化桌面背景图片\obj\Debug\随机变化桌面背景图片.csproj.GenerateResource.Cache

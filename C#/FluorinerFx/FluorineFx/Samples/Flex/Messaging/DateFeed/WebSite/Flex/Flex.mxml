@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" backgroundColor="#FFFFFF" creationComplete="initComp()" layout="absolute">
+	<mx:Script>
+		public function initComp():void 
+		{   
+			consumer.subscribe();        
+		}        
+		
+		public function toggle():void 
+		{            
+			feeder.toggle();        
+		}        
+		import mx.rpc.events.ResultEvent;        
+		import mx.messaging.events.MessageEvent;        
+		
+		public function messageHandler(event:MessageEvent):void 
+		{        
+			var body:Object = event.message.body;
+			output.text = body.userId + ": " + body.msg;
+		}    
+	</mx:Script>    
+	<mx:RemoteObject id="feeder" destination="fluorine">
+		<mx:method name="toggle"/>    
+	</mx:RemoteObject> 
+	<mx:Consumer id="consumer" destination="datefeed" message="messageHandler(event)"/>
+	<mx:Box x="20" y="20">
+		<mx:VBox>
+			<mx:Button label="Toggle Date Feed" click="toggle()"/>
+			<mx:HBox>
+				<mx:Label text="Date Feed:" />
+				<mx:Label id="output" text="..." />		
+			</mx:HBox>
+		</mx:VBox>
+	</mx:Box>
+</mx:Application>

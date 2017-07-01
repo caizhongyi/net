@@ -1,0 +1,56 @@
+.Login {
+	
+	
+	
+	color: #CCCCCC;
+	font-weight: bold;
+	background-repeat: no-repeat;
+	background-image: url(../Images/login_03.gif);
+	height: 430px;
+	width: 687px;
+	
+
+	background-position: center center;
+}
+.loginhead {
+	background-image: url(../Images/login_01.gif);
+	background-repeat: no-repeat;
+	height: 265px;
+	width: 100%;
+	list-style-image: url(../Images/login_01.gif);
+	position: static;
+}
+.loginLeft {
+	background-image: url(../Images/login_02.gif);
+	background-repeat: no-repeat;
+	height: 430px;
+	width: 338px;
+}
+.loginRight {
+	background-image: url(../Images/login_04.gif);
+	background-repeat: no-repeat;
+	height: 430px;
+	width: 241px;
+}
+.loginfoot {
+	background-image: url(../Images/login_05.gif);
+	background-repeat: no-repeat;
+	text-decoration: blink;
+	height: 205px;
+	width: 100%;
+}
+.loginUseName {
+	margin-top: 146px;
+	margin-right: 45px;
+}
+.loginPwd {
+	margin-top: 61px;
+	margin-right: 40px;
+}
+.loginBt {
+	margin-top: 40px;
+	margin-right: 40px;
+}
+.login_all {
+	width: 1280px;
+}

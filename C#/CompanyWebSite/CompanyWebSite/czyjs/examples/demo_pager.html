@@ -1,0 +1,64 @@
+﻿<html>
+	<head>
+	<title></title>
+<script type="text/javascript" src="../czy-js-all.js"></script>
+<link rel="stylesheet" href="../czy-css-all.css" type="text/css"/>
+<script type="text/javascript">
+var AjaxPagerByAllData;
+var nav;
+window.onload=function()
+{
+        
+	    nav=new czyjs.UI.AjaxPager({
+	 	randerTo        :'AjaxPager',//
+		//beforeNumCount:2,//
+		//behindNumCount:2,//
+		pageSize        :6,//
+		totalCount      :50,//
+        navLabelVis     :false,
+		fun             :getdata,
+		className       :"AjaxPager-Nav",
+        id              :"aj"
+	    } );
+        /*
+        AjaxPagerByAllData=new czyjs.UI.AjaxPagerByAllData({
+	 	contenter:document.getElementById('EasyFormContent'),//
+		dataPagerWidth:400,//
+		dataPagerHeight:200,//
+		beforeNumCount:4,//
+		behindNumCount:4,//
+		dataPageSize:6,//
+		ntotalPage:10,//
+		moveSheep:10,//
+		direction:1//
+	 } );
+	 AjaxPagerByAllDataGetData();
+	 */
+   
+	
+}
+function getdata(index)
+{
+   alert("cur:"+nav.currentPage+",totalPage:,"+nav.totalPage+",totalCount:"+nav.totalCount+",pageSize:"+nav.pageSize);
+}
+  /*
+function AjaxPagerByAllDataGetData()
+{
+	
+        for(var i=0;i<AjaxPagerByAllData.pagerUlObj.childNodes.length;i++)
+        {
+	        AjaxPagerByAllData.pagerUlObj.childNodes[i].innerHTML=i;
+        }
+	
+}
+ */
+
+</script>
+
+	</head>
+	<body>
+<div id="AjaxPager"></div>
+<div id="EasyFormContent"></div>
+		
+	</body>
+</html>

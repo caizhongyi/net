@@ -1,0 +1,62 @@
+﻿#parse("_head.html")
+<link href="$templatepath/css/app/gift.css" rel="stylesheet" type="text/css" />
+<div id="snssysmenu">
+#parse("_menusystem.html")
+</div>
+<div id="snsbody1">
+    <div id="snshead">系统设置</div>
+    <div class="itemmenu">
+        <ul>
+            <li><a href="news$exname">资讯</a></li>
+            <li class="current"><a href="group$exname">社群</a></li>
+            <li><a href="topic$exname">话题</a></li>
+            <li><a href="blog$exname">博客</a></li>
+            <li><a href="twitter$exname">微博</a></li>
+            <li><a href="photo$exname">相册</a></li>
+            <li><a href="shop$exname">品牌</a></li>
+            <li><a href="active$exname">活动</a></li>
+            <li><a href="ask$exname">问答</a></li>
+            <li><a href="gift$exname">礼物</a></li>
+            <li><a href="poke$exname">招呼</a></li>
+            <li><a href="vote$exname">投票</a></li>
+            <li><a href="fav$exname">收藏</a></li>
+            <li class="search"> &nbsp; 搜索：<input id="kwd" name="kwd" value="#if($kwd)$kwd#else搜索#end" type="text" class="f-text w100" onclick="this.value=''" /> <input id="Button1" type="button" value="搜索" class="btn_gray2" onclick="search('groupm','$q')" /></li>
+    </ul>
+    </div>
+    
+    <div class="itemmenu1">
+        <ul>
+            <li><a href="group$exname">所有社群</a></li>
+            <li><a href="group$exname?light=1">名人机构</a></li>
+            <li><a href="$webpath/app/group/default$exname?q=my">我的社群</a></li>
+            <li><a href="groupclass$exname">社群分类管理</a></li>
+            <li class="current"><a href="groupclass_add$exname">$cpagetitle</a></li>
+            <li><a href="javascript:;" onclick="deletestart('group');">初始化社群</a></li>
+        </ul>
+    </div>
+
+    <div class="system">
+          <form id="form1" action="" method="post">
+            <div class="pitem">
+                <em>所属分类</em>
+                <select id="parentid" name="parentid">
+                    <option value="0">一级分类</option>
+                    $classlist
+                </select>
+            </div>
+            <div class="pitem">
+                <em>分类名称</em>
+                <input id="className" name="className" type="text" value="#if($className)$className#end" class="f-text" />
+            </div>
+            
+            <div class="pitem">
+                <em>&nbsp;</em>
+                <input name="Text1" id="asname" type="submit" class="btn_blue2"  value="保存" />
+            </div>
+            
+          </form>
+
+    </div>
+    
+</div>
+#parse("_foot.html")

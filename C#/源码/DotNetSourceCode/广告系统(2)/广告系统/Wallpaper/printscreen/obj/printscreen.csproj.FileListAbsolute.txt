@@ -1,0 +1,5 @@
+C:\Users\Administrator\Desktop\AdSystem\printscreen\printscreen\bin\Debug\printscreen.dll
+C:\Users\Administrator\Desktop\AdSystem\printscreen\printscreen\bin\Debug\printscreen.pdb
+C:\Users\Administrator\Desktop\AdSystem\printscreen\printscreen\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\AdSystem\printscreen\printscreen\obj\Debug\printscreen.dll
+C:\Users\Administrator\Desktop\AdSystem\printscreen\printscreen\obj\Debug\printscreen.pdb

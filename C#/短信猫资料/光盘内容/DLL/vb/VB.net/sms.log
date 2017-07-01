@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UpgradeLog>
+    <Settings>
+        <Setting
+            Name = "日志文件 [LogFile]: "
+            Value = "sms.log"
+        />
+        <Setting
+            Name = "为类生成接口 [GenerateInterfacesForClasses]: "
+            Value = "FALSE"
+        />
+        <Setting
+            Name = "项目名 [ProjectName]: "
+            Value = "sms"
+        />
+        <Setting
+            Name = "输出名 [OutputName]: "
+            Value = "sms.vbproj"
+        />
+        <Setting
+            Name = "输出目录 [OutputDir]: "
+            Value = "G:\短信项目\软件产品\开发接口\正式版\湖南省超高压输变电公司\VBNET版\smsvb\SMS.NET"
+        />
+        <Setting
+            Name = "项目路径 [ProjectPath]: "
+            Value = "G:\短信项目\软件产品\开发接口\正式版\湖南省超高压输变电公司\VBNET版\smsvb\sms.vbp"
+        />
+        <Setting
+            Name = "将项目迁移至 [MigrateProjectTo]: "
+            Value = "0"
+        />
+    </Settings>
+    <File
+        OldPath = "G:\短信项目\软件产品\开发接口\正式版\湖南省超高压输变电公司\VBNET版\smsvb\sms.frm"
+        NewPath = "G:\短信项目\软件产品\开发接口\正式版\湖南省超高压输变电公司\VBNET版\smsvb\SMS.NET\sms.vb"
+        FileType = "Form"
+        Upgraded = "True"
+    >
+        <Section Name = "Sms_Delete_Button_Click" >
+            <Issue
+                Type = "Runtime"
+                Number = "2065"
+                ObjectName = "Screen"
+                ObjectType = "Screen"
+                PME = "MousePointer"
+            >Screen 属性 Screen.MousePointer 具有新的行为。</Issue>
+        </Section>
+        <Section Name = "Sms_Receive_Button_Click" >
+            <Issue
+                Type = "Runtime"
+                Number = "2065"
+                ObjectName = "Screen"
+                ObjectType = "Screen"
+                PME = "MousePointer"
+            >Screen 属性 Screen.MousePointer 具有新的行为。</Issue>
+        </Section>
+        <Section Name = "Sms_Disconnection_Button_Click" >
+            <Issue
+                Type = "Runtime"
+                Number = "2065"
+                ObjectName = "Screen"
+                ObjectType = "Screen"
+                PME = "MousePointer"
+            >Screen 属性 Screen.MousePointer 具有新的行为。</Issue>
+        </Section>
+        <Section Name = "Sms_Connection_Button_Click" >
+            <Issue
+                Type = "Compile"
+                Number = "1039"
+                PME = "Load"
+            >不支持 Load 语句。</Issue>
+            <Issue
+                Type = "Runtime"
+                Number = "2065"
+                ObjectName = "Screen"
+                ObjectType = "Screen"
+                PME = "MousePointer"
+            >Screen 属性 Screen.MousePointer 具有新的行为。</Issue>
+        </Section>
+        <Section Name = "Sms_Send_Button_Click" >
+            <Issue
+                Type = "Runtime"
+                Number = "2065"
+                ObjectName = "Screen"
+                ObjectType = "Screen"
+                PME = "MousePointer"
+            >Screen 属性 Screen.MousePointer 具有新的行为。</Issue>
+        </Section>
+    </File>
+    <File
+        OldPath = "G:\短信项目\软件产品\开发接口\正式版\湖南省超高压输变电公司\VBNET版\smsvb\sms.bas"
+        NewPath = "G:\短信项目\软件产品\开发接口\正式版\湖南省超高压输变电公司\VBNET版\smsvb\SMS.NET\loadsms.vb"
+        FileType = "Module"
+        Upgraded = "True"
+    />
+</UpgradeLog>
+

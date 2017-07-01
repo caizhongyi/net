@@ -1,0 +1,79 @@
+﻿<Window
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity" xmlns:Interactivity_Behaviors="clr-namespace:Interactivity.Behaviors;assembly=Interactivity" xmlns:il="clr-namespace:Microsoft.Expression.Interactivity.Layout;assembly=Microsoft.Expression.Interactions" x:Class="TestApp.Window1"
+    Title="Window1" Height="600" Width="800" mc:Ignorable="d">
+    <Window.Resources>
+        
+    	<DataTemplate x:Key="ItemTemplate1">
+    		<Grid>
+    			<Grid.ColumnDefinitions>
+    				<ColumnDefinition Width="Auto"/>
+    				<ColumnDefinition Width="*"/>
+    			</Grid.ColumnDefinitions>
+    			<Image Width="32" Height="32" HorizontalAlignment="Left" Source="{Binding Image, Mode=Default}"/>
+    			<TextBlock TextWrapping="Wrap" d:LayoutOverrides="Width, Height" Grid.Column="1" Text="{Binding Name, Mode=Default}"/>
+    		</Grid>
+    	</DataTemplate>
+    	<DataTemplate x:Key="TabItemTemplate1">
+    		<Grid>
+    			<Image HorizontalAlignment="Left" VerticalAlignment="Top" Width="16" Height="16" Source="{Binding Image, Mode=Default}"/>
+    		</Grid>
+    	</DataTemplate>
+    	<DataTemplate x:Key="TabContentDataTemplate1">
+    		<Grid>
+    			<TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" Text="{Binding Name, Mode=Default}" TextWrapping="Wrap"/>
+    		</Grid>
+    	</DataTemplate>
+    	<DataTemplate x:Key="MenuDataTemplate1">
+    		<Grid>
+				<Menu>
+    				<MenuItem Header="{Binding CompanyName, Mode=Default}" ItemsSource="{Binding Children}"
+					DisplayMemberPath="Name"/>
+				</Menu>
+    		</Grid>
+    	</DataTemplate>
+    	<ItemsPanelTemplate x:Key="ItemsPanelTemplate1">
+    		<WrapPanel/>
+    	</ItemsPanelTemplate>
+        
+    </Window.Resources>
+	<DockPanel DataContext="{Binding Source={StaticResource SampleDataSource}}">
+		<TextBlock Text="Click Control Key and then drag any one of the items in the itemcintrol derived controls" TextWrapping="Wrap" DockPanel.Dock="Top" FontWeight="Bold" FontSize="13.333"/>
+		<Menu VerticalAlignment="Top" ItemTemplate="{DynamicResource MenuDataTemplate1}" ItemsSource="{Binding Collection, Mode=Default}" DockPanel.Dock="Top">
+			<i:Interaction.Behaviors>
+				<Interactivity_Behaviors:ItemsControlMouseDragElementBehavior/>
+			</i:Interaction.Behaviors>
+		</Menu>
+		<Grid DataContext="{Binding Source={StaticResource SampleDataSource}}" Width="785.6">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="400"/>
+				<ColumnDefinition/>
+			</Grid.ColumnDefinitions>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition/>
+			</Grid.RowDefinitions>
+			<TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" Text="Custom ItemsControl " TextWrapping="Wrap"/>
+			<ItemsControl Margin="0,27,6,6" ItemTemplate="{DynamicResource ItemTemplate1}" ItemsPanel="{DynamicResource ItemsPanelTemplate1}" ItemsSource="{Binding Collection, Mode=OneWay}" BorderBrush="Black" BorderThickness="1">
+				<i:Interaction.Behaviors>
+					<Interactivity_Behaviors:ItemsControlMouseDragElementBehavior/>
+				</i:Interaction.Behaviors>
+			</ItemsControl>
+			<ListBox Grid.Column="1" ItemTemplate="{DynamicResource TabContentDataTemplate1}" ItemsSource="{Binding Collection, Mode=Default}" Margin="0,28,0,0">
+				<i:Interaction.Behaviors>
+					<Interactivity_Behaviors:ItemsControlMouseDragElementBehavior/>
+				</i:Interaction.Behaviors>
+			</ListBox>
+			<GridSplitter HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Height="5" Grid.ColumnSpan="2" ResizeDirection="Rows"/>
+			<GridSplitter Width="5" Grid.RowSpan="2" ResizeDirection="Columns"/>
+			<TabControl Grid.Row="1" ItemTemplate="{DynamicResource TabItemTemplate1}" ItemsSource="{Binding Collection, Mode=Default}" ContentTemplate="{DynamicResource TabContentDataTemplate1}">
+				<i:Interaction.Behaviors>
+					<Interactivity_Behaviors:ItemsControlMouseDragElementBehavior/>
+				</i:Interaction.Behaviors>
+			</TabControl>
+			<Button HorizontalAlignment="Left" Margin="8,6,0,0" VerticalAlignment="Top" Width="75" Content="Add Items" Visibility="Hidden" Grid.Column="1" Grid.Row="1" Click="Button_Click"/>
+			<TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" Text="ListBox" TextWrapping="Wrap" Grid.Column="2"/>
+		</Grid>
+	</DockPanel>
+</Window>

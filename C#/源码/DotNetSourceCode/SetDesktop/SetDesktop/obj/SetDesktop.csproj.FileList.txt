@@ -1,0 +1,8 @@
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\SetDesktop.Form1.resources
+obj\Debug\SetDesktop.Properties.Resources.resources
+obj\Debug\SetDesktop.csproj.GenerateResource.Cache
+bin\Debug\SetDesktop.exe
+bin\Debug\SetDesktop.pdb
+obj\Debug\SetDesktop.exe
+obj\Debug\SetDesktop.pdb

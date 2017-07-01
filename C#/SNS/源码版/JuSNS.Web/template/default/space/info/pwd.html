@@ -1,0 +1,85 @@
+﻿#parse("_head.html")
+<div id="snsmenu">
+#parse("_menu.html")
+</div>
+<div id="snsbody">
+    <div id="snshead">修改密码</div>
+
+    <div class="itemmenu">
+        <ul>
+            <li class="current"><a href="profile$exname">基本资料</a></li>
+            <li><a href="nowcity$exname">居住地</a></li>
+            <li><a href="head$exname">修改头像</a></li>
+            <li><a href="links$exname">联系方式</a></li>
+            <li><a href="edu$exname">教育情况</a></li>
+            <li><a href="work$exname">工作情况</a></li>
+            <li><a href="like$exname">个人爱好</a></li>
+            <li><a href="privacy$exname">隐私设置</a></li>
+        </ul>
+  </div>
+
+    <div>${username} &nbsp; ${email} &nbsp; ${mobile}${bindmobile} 
+        <span id="hideMobile" style="display:none;">
+            <input value="" class="f-text" type="text" id="mMobile" name="mMobile" /> <input type="button" name="MobileModify" id="MobileModify" onclick="MobileModifys();" class="f-button" value="填写手机"/>
+        </span>
+     (<a href="pwd$exname">修改登录密码</a>)</div>
+    <form action="$webpath/space/info/pwd${exname}" method="post">
+        <div class="pitem"><em>现在的密码：</em>
+        <input type="password" name="txtpassword" id="txtpassword" maxlength="20" value="" class="f-text" />
+            <span class="errors" id="spanpassword" style="display:none;"></span>
+        </div>
+        
+        <div class="pitem"><em>新密码：</em>
+        <input type="password" name="txtnewpassword" id="txtnewpassword" maxlength="20" value="" class="f-text" />
+            <span class="errors" id="spannewpassword" style="display:none;"></span>
+        </div>
+        <div class="pitem"><em>确认新密码：</em>
+        <input type="password" name="txtnewpassword1" id="txtnewpassword1" maxlength="20" value="" class="f-text" />
+            <span class="errors" id="spannewpassword1" style="display:none;"></span>
+        </div>
+        
+        <div class="pitem1"><em>&nbsp;</em>
+            <input type="submit" name="button1" id="Submit1" class="btn_blue4" onclick="return checkdata();"  value="修改密码"/>
+            <input type="reset" name="button1" id="Submit2" class="btn_gray2"  value="重填"/>
+        </div>
+    </form>
+    </div>
+    <script type="text/javascript">
+        function MobileModifys()
+        {
+            var mobile=jQuery("#mMobile").val();
+            var uid=$uid;
+            modifymobile(uid,mobile);
+        }
+        function bindmobile(mb,flag)
+        {
+            bindmobiles("${mobilesendcontent}",flag);
+        }
+        
+        function checkdata()
+        {
+            var password=jQuery("#txtpassword").val();
+            var newpassword=jQuery("#txtnewpassword").val();
+            var newpassword1=jQuery("#txtnewpassword1").val();
+            if(password=="")
+            {
+                jQuery("#spanpassword").show();
+                jQuery("#spanpassword").html("请填写现在的密码。");
+                return false;
+            }
+
+            if(newpassword==""||newpassword.length<3)
+            {
+                jQuery("#spannewpassword").show();
+                jQuery("#spannewpassword").html("请填写新密码。密码长度为：3～18个字符。");return false;
+            }
+            if(newpassword!=newpassword1)
+            {
+                jQuery("#spannewpassword1").show();
+                jQuery("#spannewpassword1").html("两次密码不一致。");return false;
+            }
+            
+        }
+        
+    </script>
+#parse("_foot.html")

@@ -1,0 +1,1 @@
+//string ConnStr = "Server=.;DataBase=sq_dbggcmxt;UID=sq_dbggcmxt;PWD=yunzhou168"

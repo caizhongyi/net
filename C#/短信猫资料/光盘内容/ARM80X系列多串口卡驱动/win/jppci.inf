@@ -1,0 +1,170 @@
+;********************************************************************
+;*     File:   JPPCI.inf
+;*                   
+;*     Description:
+;*             Multifunction installer for JPPCI products (W9X/ME/2K/XP/2003)
+;*             Loads the enumerators, which create the child devnodes
+;*      
+;********************************************************************
+
+[Version]
+Signature=$CHICAGO$
+Class=MultiFunction
+ClassGuid={4D36E971-E325-11CE-BFC1-08002BE10318}
+Provider=%mfg%
+DriverVer=12/15/2006, 2.2
+
+[DestinationDirs]
+DefaultDestDir=11           ; LDID_SYS
+Drv.Copy=11                 ; LDID_SYS
+Inf.Copy=17                 ; LDID_INF
+UI32.Copy=11                ; LDID_SYS
+Drv.NT.Copy=12              ; LDID_DRIVER
+
+; Install class "Multifunction"
+;----------------------------------------------------------
+[ClassInstall]
+AddReg=MF_Class.AddReg
+
+[MF_Class.AddReg]
+HKR,,,,%MF_ClassName%
+
+[ClassInstall32.NT]
+AddReg=MF_Class.NT.AddReg
+
+[MF_Class.NT.AddReg]
+HKR,,,,%MF_ClassName%
+HKR,,Class,,"MultiFunction"
+; Drivers
+;----------------------------------------------------------
+[ControlFlags]
+ExcludeFromSelect=PCI\VEN_10EE&DEV_0100&SUBSYS_4E540000
+ExcludeFromSelect=PCI\VEN_10EE&DEV_0100&SUBSYS_4E540002
+ExcludeFromSelect=PCI\VEN_10EE&DEV_0100&SUBSYS_4E540004
+ExcludeFromSelect=PCI\VEN_10EE&DEV_0100&SUBSYS_4E540008
+
+[Manufacturer]
+%mfg%=mfg
+
+;List of available devices
+[mfg]
+%PCI\VEN_10EE&DEV_0100&SUBSYS_4E540000% = PCI_JPTSER,   PCI\VEN_10EE&DEV_0100&SUBSYS_4E540000
+%PCI\VEN_10EE&DEV_0100&SUBSYS_4E540002% = PCI_JPTSER,   PCI\VEN_10EE&DEV_0100&SUBSYS_4E540002
+%PCI\VEN_10EE&DEV_0100&SUBSYS_4E540004% = PCI_JPTSER,   PCI\VEN_10EE&DEV_0100&SUBSYS_4E540004
+%PCI\VEN_10EE&DEV_0100&SUBSYS_4E540008% = PCI_JPTSER,   PCI\VEN_10EE&DEV_0100&SUBSYS_4E540008
+
+%PCI\VEN_10EE&DEV_0100&SUBSYS_4E540042% = PCI_JPTSER,   PCI\VEN_10EE&DEV_0100&SUBSYS_4E540042
+%PCI\VEN_10EE&DEV_0100&SUBSYS_4E540044% = PCI_JPTSER,   PCI\VEN_10EE&DEV_0100&SUBSYS_4E540044
+%PCI\VEN_10EE&DEV_0100&SUBSYS_4E540048% = PCI_JPTSER,   PCI\VEN_10EE&DEV_0100&SUBSYS_4E540048
+
+%PCI\VEN_10EE&DEV_0100&SUBSYS_4E540082% = PCI_JPTSER,   PCI\VEN_10EE&DEV_0100&SUBSYS_4E540082
+%PCI\VEN_10EE&DEV_0100&SUBSYS_4E540084% = PCI_JPTSER,   PCI\VEN_10EE&DEV_0100&SUBSYS_4E540084
+%PCI\VEN_10EE&DEV_0100&SUBSYS_4E540088% = PCI_JPTSER,   PCI\VEN_10EE&DEV_0100&SUBSYS_4E540088
+
+%PCI\VEN_10EE&DEV_0100&SUBSYS_4E5400C2% = PCI_JPTSER,   PCI\VEN_10EE&DEV_0100&SUBSYS_4E5400C2
+%PCI\VEN_10EE&DEV_0100&SUBSYS_4E5400C4% = PCI_JPTSER,   PCI\VEN_10EE&DEV_0100&SUBSYS_4E5400C4
+%PCI\VEN_10EE&DEV_0100&SUBSYS_4E5400C8% = PCI_JPTSER,   PCI\VEN_10EE&DEV_0100&SUBSYS_4E5400C8
+
+[PCI_JPTSER]
+DriverVer=11/15/2005, 2.0
+CopyFiles=Drv.Copy, Inf.copy
+AddReg=Drv.Reg,DriverVer.AddReg,Uninstall.AddReg
+DelReg=DriverVer.DelReg
+
+[PCI_JPTSER.NT]
+CopyFiles=Drv.NT.Copy, DLL32.Copy
+AddReg=DriverVer.AddReg,Drv.NT.Reg, Uninstall32.AddReg
+DelReg=DriverVer.DelReg
+
+[PCI_JPTSER.NT.Services]
+AddService = jptmf, 0x00000002, jptmf_Service_Inst
+
+; ****************** copyfiles, registry etc.
+[Drv.Copy]
+jptmf.vxd
+jptser.vxd
+jptui.dll
+jptun9x.dll
+
+[Drv.NT.Copy]
+jptmf.sys
+jptser.sys
+
+[DLL32.Copy]
+jptun2k.dll
+jptui32.dll
+
+[Inf.Copy]
+JPPCI.inf
+JPPCI2.inf
+
+[Drv.Reg]
+HKR,,DevLoader,0,jptmf.vxd
+HKR,,DriverDesc,0,"JP PCI bus enumerator"
+HKR,,EnumPropPages,,"jptui.dll,EnumPropPages"
+
+[Drv.NT.Reg]
+HKR,,EnumPropPages32,,"jptui32.dll,EnumPropPages"
+
+[jptmf_Service_Inst]
+DisplayName    = %jptmf_driverdescstring%
+ServiceType    = 1               ; SERVICE_KERNEL_DRIVER
+StartType      = 1               ; SERVICE_SYSTEM_START
+ErrorControl   = 0               ; SERVICE_ERROR_IGNORE
+ServiceBinary  = %12%\jptmf.sys
+LoadOrderGroup = Extended base
+
+[DriverVer.AddReg]
+HKR,,Ver,,%JPPCIVersion%
+
+[DriverVer.DelReg]
+HKR,,Ver
+
+[Uninstall.AddReg]
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\JPT_CARD,DisplayName,0,%UninstallName%
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\JPT_CARD,UninstallString,0,"rundll32 jptun9x.dll,uninstall_driver"
+
+[Uninstall32.AddReg]
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\JPT_CARD,DisplayName,0,%UninstallName%
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\JPT_CARD,UninstallString,0,"rundll32 jptun2k.dll,uninstall_driver"
+
+[SourceDisksNames]
+1=%drvdisk%,,
+
+[SourceDisksFiles]
+jptmf.vxd=1
+jptser.vxd=1
+jptui.dll=1
+jptun9x.dll=1
+jptmf.sys=1
+jptser.sys=1
+;jptun2k.dll=1
+jptui32.dll=1
+JPPCI.inf=1
+JPPCI2.inf=1
+
+[Strings]
+MF_ClassName="Multifunction adapters"
+JPPCIVersion="4.0"
+
+mfg= "OEM."
+UninstallName="JP PCI serial card"
+drvDisk="JP PCI serial card disk"
+PCI\VEN_10EE&DEV_0100&SUBSYS_4E540000="JP PCI 8 RS232 serial card"
+PCI\VEN_10EE&DEV_0100&SUBSYS_4E540002="JP PCI 2 RS232 serial card"
+PCI\VEN_10EE&DEV_0100&SUBSYS_4E540004="JP PCI 4 RS232 serial card"
+PCI\VEN_10EE&DEV_0100&SUBSYS_4E540008="JP PCI 8 RS232 serial card"
+
+PCI\VEN_10EE&DEV_0100&SUBSYS_4E540042="JP PCI 2 RS485 serial card"
+PCI\VEN_10EE&DEV_0100&SUBSYS_4E540044="JP PCI 4 RS485 serial card"
+PCI\VEN_10EE&DEV_0100&SUBSYS_4E540048="JP PCI 8 RS485 serial card"
+
+PCI\VEN_10EE&DEV_0100&SUBSYS_4E540082="JP PCI 2 RS485 serial card"
+PCI\VEN_10EE&DEV_0100&SUBSYS_4E540084="JP PCI 4 RS485 serial card"
+PCI\VEN_10EE&DEV_0100&SUBSYS_4E540088="JP PCI 8 RS485 serial card"
+
+PCI\VEN_10EE&DEV_0100&SUBSYS_4E5400C2="JP PCI 2 RS232/RS485 serial card"
+PCI\VEN_10EE&DEV_0100&SUBSYS_4E5400C4="JP PCI 4 RS232/RS485 serial card"
+PCI\VEN_10EE&DEV_0100&SUBSYS_4E5400C8="JP PCI 8 RS232/RS485 serial card"
+
+jptmf_driverdescstring="JP PCI port enumerator"

@@ -1,0 +1,53 @@
+﻿<RootNodes>
+   <Node>
+      <Icon>customer.bmp</Icon>
+      <Text>艾德高科技</Text>
+      <Nodes>
+         <Node>
+            <Icon>order.bmp</Icon>
+            <Text>10359 成先生</Text>
+            <Nodes>
+               <Node>
+                  <Icon>product.bmp</Icon>
+                  <Text>饼干</Text>
+                  <OnClick>alert('饼干')</OnClick>
+                  <Nodes />
+               </Node>
+               <Node>
+                  <Icon>product.bmp</Icon>
+                  <Text>温馨奶酪</Text>
+                  <OnClick>alert('温馨奶酪')</OnClick>
+                  <Nodes />
+               </Node>
+            </Nodes>
+         </Node>
+      </Nodes>
+   </Node>
+   <Node>
+      <Icon>customer.bmp</Icon>
+      <Text>霸力建设</Text>
+      <Nodes>
+         <Node>
+            <Icon>order.bmp</Icon>
+            <Text>10858 余小姐</Text>
+            <Nodes>
+               <Node>
+                  <Icon>product.bmp</Icon>
+                  <Text>海鲜粉</Text>
+                  <OnClick>alert('海鲜粉')</OnClick>
+                  <Nodes />
+               </Node>
+            </Nodes>
+         </Node>
+      </Nodes>
+   </Node>
+</RootNodes>
+
+<XML ID="oMetaData">
+  <METADATA>
+     <AUTHOR>John Smith</AUTHOR>
+     <GENERATOR>Visual Notepad</GENERATOR>
+     <PAGETYPE>Reference</PAGETYPE>
+     <ABSTRACT>Specifies a data island</ABSTRACT>
+  </METADATA>
+</XML>

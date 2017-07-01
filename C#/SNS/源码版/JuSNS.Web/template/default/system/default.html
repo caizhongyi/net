@@ -1,0 +1,83 @@
+﻿#parse("_head.html")
+<div id="snssysmenu">
+#parse("_menusystem.html")
+</div>
+<div id="snsbody1">
+    <div id="snshead"><span style="float:left;width:100px;">会员管理</span><span style="float:right;font-size:12px;font-weight:normal;width:400px;">$jusnsversion</span></div>
+    <div class="itemmenu">
+        <ul>
+            <li#if($css_null)$css_null#end><a href="default$exname">会员管理</a></li>
+            <li#if($css_2)$css_2#end><a href="default$exname?q=2">未邮件激活会员</a></li> 
+            <li#if($css_5)$css_5#end><a href="default$exname?q=5">正常会员</a></li> 
+            <li#if($css_1)$css_1#end><a href="default$exname?q=1">被锁定会员</a></li> 
+            <li><a href="vip$exname">VIP会员申请</a></li> 
+            <li><a href="javascript:;" onclick="deleteAll($uid,$uid,'userall')">删除全部会员</a></li> 
+            <li class="search"> &nbsp; 搜索：<input id="kwd" name="kwd" value="#if($kwd)$kwd#else搜索会员#end" type="text" class="f-text w100" onclick="this.value=''" /> <input id="Button1" type="button" value="搜索" class="btn_gray2" onclick="search('users','$q')" /></li>
+        </ul>
+    </div>
+    
+
+    <div class="system">
+          #if($recordcount>0)
+                <table  id="mtable">
+                <tr>
+                    <th>姓名</th>
+                    <th>邮件</th>
+                    <th style="text-align:center;">性别</th>
+                    <th>注册时间</th>
+                    <th>最后登录</th>
+                    <th style="text-align:center;">登录</th>
+                    <th style="text-align:center;">积分</th>
+                    <th style="text-align:center;">金币</th>
+                    <th style="text-align:center;">帐户金额</th>
+                    <th style="text-align:center;">推荐</th>
+                    <th style="text-align:center;">VIP</th>
+                    <th style="text-align:center;">操作</th>
+                </tr>
+                #foreach($info in $infolist)
+                <tr id="param_$info.userid">
+                    <td><a href="$info.spaceurl" target="_blank">$info.truename</a></td>
+                    <td>$info.email</td>
+                    <td style="text-align:center;">$info.sex</td>
+                    <td>$info.regtime</td>
+                    <td>$info.lastlogintime</td>
+                    <td style="text-align:center;">$info.logintimes</td>
+                    <td style="text-align:center;">$info.integral</td>
+                    <td style="text-align:center;">$info.inteyb</td>
+                    <td style="text-align:center;">$info.money</td>
+                    <td style="text-align:center;">#if($info.isrec==1)<span class="reshow">是</span>#else否#end</td>
+                    <td style="text-align:center;">#if($info.isvip)<span class="reshow">是</span>#else否#end</td>
+                    <td style="font-family:Verdana;text-align:center;">
+                    <a href="javascript:;" onclick="deleteAll($info.userid,$uid,'user')" title="删除">d</a>
+                    #if($info.isrec==1)
+                        <a href="javascript:;" title="点击取消推荐" onclick="RecAll($info.userid,$uid,0,'user')">r</a>
+                    #else
+                        <a href="javascript:;" title="点击推荐会员" onclick="RecAll($info.userid,$uid,1,'user')" class="gray_9">r</a>
+                    #end
+                    #if($info.isvip)
+                        <a href="javascript:;" title="点击取消VIP会员" onclick="RecAll($info.userid,$uid,0,'userVip')">v</a>
+                    #else
+                       <a href="javascript:;" title="点击设置为VIP会员" onclick="RecAll($info.userid,$uid,1,'userVip')" class="gray_9">v</a>
+                    #end
+                    #if($info.state==1)
+                        <a href="javascript:;" title="取消锁定" onclick="SetALLState($info.userid,$uid,5,'user')" class="gray_9">l</a>
+                    #else
+                        <a href="javascript:;" title="锁定会员" onclick="SetALLState($info.userid,$uid,1,'user')">l</a>
+                    #end
+                    #if($info.admin==1)
+                        <a href="javascript:;" title="取消管理员" onclick="RecAll($info.userid,$uid,0,'useradmin')">a</a>
+                    #else
+                        <a href="javascript:;" title="设为管理员" onclick="RecAll($info.userid,$uid,1,'useradmin')" class="gray_9">a</a>
+                    #end
+                </tr>
+                #end
+             </table>
+              <div class="pages">$pagelist</div>
+              <div class="pitem reshow"> &nbsp; d：删除，r：推荐，v：VIP会员，l：会员状态，a：设置管理员</div>
+        #else
+            <div>还没有记录</div>
+        #end       
+    </div>
+    
+</div>
+#parse("_foot.html")

@@ -1,0 +1,15 @@
+E:\caizhongyi\MyWork\Library\Company.BBL\obj\Debug\ResolveAssemblyReference.cache
+E:\caizhongyi\MyWork\Library\Company.BBL\bin\Debug\Company.BBL.dll
+E:\caizhongyi\MyWork\Library\Company.BBL\bin\Debug\Company.BBL.pdb
+E:\caizhongyi\MyWork\Library\Company.BBL\bin\Debug\Company.Mondel.dll
+E:\caizhongyi\MyWork\Library\Company.BBL\bin\Debug\MyClass.dll
+E:\caizhongyi\MyWork\Library\Company.BBL\bin\Debug\MyDAL.dll
+E:\caizhongyi\MyWork\Library\Company.BBL\bin\Debug\Newtonsoft.Json.dll
+E:\caizhongyi\MyWork\Library\Company.BBL\bin\Debug\AspNetPager.dll
+E:\caizhongyi\MyWork\Library\Company.BBL\bin\Debug\MySql.Data.dll
+E:\caizhongyi\MyWork\Library\Company.BBL\bin\Debug\dotnetCHARTING.dll
+E:\caizhongyi\MyWork\Library\Company.BBL\bin\Debug\MyDAL.pdb
+E:\caizhongyi\MyWork\Library\Company.BBL\bin\Debug\Company.Mondel.pdb
+E:\caizhongyi\MyWork\Library\Company.BBL\bin\Debug\MyClass.pdb
+E:\caizhongyi\MyWork\Library\Company.BBL\obj\Debug\Company.BBL.dll
+E:\caizhongyi\MyWork\Library\Company.BBL\obj\Debug\Company.BBL.pdb

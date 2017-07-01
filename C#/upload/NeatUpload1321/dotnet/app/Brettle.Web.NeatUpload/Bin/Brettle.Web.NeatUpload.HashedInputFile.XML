@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Brettle.Web.NeatUpload.HashedInputFile</name>
+    </assembly>
+    <members>
+        <member name="P:Brettle.Web.NeatUpload.HashingFilesystemUploadedFile.Hash">
+            <summary>
+            The cryptographic hash of the uploaded file.</summary>
+            <remarks>
+            <see cref="P:Brettle.Web.NeatUpload.HashingFilesystemUploadedFile.HashSize"/> provides the length of the
+            of the hash in bits.</remarks>
+        </member>
+        <member name="P:Brettle.Web.NeatUpload.HashingFilesystemUploadedFile.HashSize">
+            <summary>
+            The length of the of the cryptographic hash in bits.</summary>
+            <remarks>
+            <see cref="P:Brettle.Web.NeatUpload.HashingFilesystemUploadedFile.Hash"/> provides the hash itself.</remarks>
+        </member>
+        <member name="T:Brettle.Web.NeatUpload.HashedInputFile">
+            <summary>
+            <see cref="T:Brettle.Web.NeatUpload.InputFile"/> that provides access to the cryptographic hash of the file contents when used with
+            the HashingFilesystemUploadStorageProvider 
+            </summary>
+            <remarks>
+            You can use the <see cref="P:Brettle.Web.NeatUpload.HashedInputFile.Hash"/> property to access the hash of the uploaded file.</remarks>
+        </member>
+        <member name="P:Brettle.Web.NeatUpload.HashedInputFile.Hash">
+            <summary>
+            The cryptographic hash of the uploaded file.</summary>
+            <remarks>
+            <see cref="P:Brettle.Web.NeatUpload.HashedInputFile.HashSize"/> provides the length of the
+            of the hash in bits.</remarks>
+        </member>
+        <member name="P:Brettle.Web.NeatUpload.HashedInputFile.HashSize">
+            <summary>
+            The length of the of the cryptographic hash in bits.</summary>
+            <remarks>
+            <see cref="P:Brettle.Web.NeatUpload.HashedInputFile.Hash"/> provides the hash itself.</remarks>
+        </member>
+    </members>
+</doc>

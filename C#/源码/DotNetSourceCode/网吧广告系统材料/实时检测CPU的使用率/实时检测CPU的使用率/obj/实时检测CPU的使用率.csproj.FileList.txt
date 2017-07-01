@@ -1,0 +1,5 @@
+bin\Debug\实时检测CPU的使用率.exe
+bin\Debug\实时检测CPU的使用率.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\实时检测CPU的使用率.exe
+obj\Debug\实时检测CPU的使用率.pdb

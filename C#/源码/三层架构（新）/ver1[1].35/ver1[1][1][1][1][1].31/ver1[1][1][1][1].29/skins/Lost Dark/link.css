@@ -1,0 +1,29 @@
+﻿/*-----------超链接样式---------------
+ 说明: 伪类:link :visited :hover分别代表超链接的通常、被访问后、和鼠标接触链接是的样式
+ a标签代表通用超链接样式
+ .menuA代表Blog导航条菜单的样式
+ .titleA代表日志标题的样式
+ .sideA代表侧栏的超链接样式
+ .CategoryA代表树形分类的链接样式
+ .more代表更多链接的样式
+------------------------------------*/
+ a:link,a:visited{text-decoration:none;color:#FF6600;}
+ a:hover{color:#F0E68C;text-decoration:underline}
+ .sidepanel a:link,.sidepanel a:visited{text-decoration:none;color:#fff;}
+ .sidepanel a:hover{color:#fff;text-decoration:underline}
+ #container #foot a:link,#container #foot a:visited{text-decoration:none;color:#FFF;}
+ #container #foot a:hover{color:#FFF;text-decoration:underline}
+ .menuA:link,.menuA:visited{display:block; float:left; height:21px; margin:0; padding:0;font: bold 12px/21px "Trebuchet MS", Arial, Helvetica, sans-serif; padding:0 14px 0 14px; color:#EAEAEA;
+	background-color:#242424; text-decoration:none; height:21px;text-decoration:none;}  
+ .menuA:hover{color:#EAEAEA; background-color:#0867C3;text-decoration:none;} 
+ .titleA:link,.titleA:visited{font-size:14px;text-decoration:none;font-weight:bold;text-align:center;color:#FFF;}
+ .titleA:hover{color:#a5a5a5;text-decoration:underline;}
+ .sideA:link,.sideA:visited{
+	background:url(images/left_side_arrow.gif) no-repeat 0 9px; padding: 0 0 0 11px; display:block; height:24px;font:12px/24px Arial, Helvetica, sans-serif; color:#B6B6B5; text-decoration:none; background-color:#171717; display:block;
+	}
+ .sideA:hover{background-color:#454545; color:#B6B6B5;t}
+ .CategoryA:link,.CategoryA:visited{text-decoration:none;}
+ .CategoryA:hover{text-decoration:underline;}
+ .more:link,.more:visited{font-weight:bold;background:url(images/read_more_arrow.gif) no-repeat 0px 0px;padding-left:18px;margin:5px;text-decoration:none;}
+ .more:hover{background:url(images/read_more_arrow.gif) no-repeat 0px -15px;}  
+ /*---超链接样式定义结束---*/

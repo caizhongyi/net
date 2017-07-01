@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+<title>${cpagetitle} - ${pagetitle}</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="$templatepath/css/home.css" rel="stylesheet" type="text/css" />
+<link href="$templatepath/css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="$webpath/library/js/jquery.min.js"></script>
+<script type="text/javascript" src="$webpath/library/js/public.js"></script>
+<script type="text/javascript" src="$webpath/library/js/common.js"></script>
+<script type="text/javascript" src="$webpath/library/js/centerwindow.js"></script>
+<style type="text/css">body{width:auto;}</style>
+</head>
+<body>
+<div style="text-align:center;">
+    <div  style="display:none;" id="top_rightmsg"></div>
+    <div  style="display:none;" id="top_errormsg"></div>
+</div>
+#if($errors)<div  id="toperrors" class="errors">错误：$errors</div>#end
+#if($rights)<div  id="toprights" class="rights">$rights</div>#end
+<div class="clearpix"></div>

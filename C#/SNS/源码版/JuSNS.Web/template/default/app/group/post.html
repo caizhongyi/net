@@ -1,0 +1,121 @@
+﻿#parse("_head.html")
+<div id="snsmenu">
+#parse("_menu.html")
+</div>
+<script type="text/javascript" src="$webpath/library/xmleditor/xheditor-zh-cn.min.js"></script>
+<div id="snsbody">
+    <div id="snshead"><span class="l">$cpagetitle</span><span class="r"><input id="kwd" name="kwd" value="#if($kwd)$kwd#else搜索话题#end" type="text" class="f-text w100" onclick="this.value=''" /> <input id="Button1" type="button" value="搜索" class="btn_gray2" onclick="search('grouptopic','$gid')" /></span></div>
+
+    <div id="snsbody-all">
+          <div class="grouplist">
+                <div class="images l">
+                    <img src="$portrait" onerror="this.src='$templatepath/images/nopic.gif'" />
+                </div>
+                <div class="bulletin">
+                    <h3>$GroupName</h3>
+                    <div class="info">$Bulletin</div>
+                </div>
+          </div>
+      <div class="itemmenu">
+        <ul>
+            <li><a href="$webpath/app/group/group$exname?gid=$gid">$groupname首页</a></li>
+            <li><a href="$webpath/app/group/list$exname?gid=$gid">话题区($topiccount)</a></li>
+            <!--<li><a href="ative$exname?gid=$gid">活动区($ativecount)</a></li>-->
+            <li><a href="$webpath/app/group/album$exname?gid=$gid">相册区($albumcount)</a></li>
+            <li><a href="$webpath/app/group/files$exname?gid=$gid">附件共享区($filescount)</a></li>
+            <li><a href="$webpath/app/group/member$exname?gid=$gid">所有成员($membercount)</a></li>
+            <li><a href="$webpath/app/group/list$exname?gid=$gid&q=best">精华区</a></li>
+            <li class="current"><a href="$webpath/app/group/post$exname?gid=$gid">发表话题中...</a></li> 
+        </ul>
+        
+    </div>
+    
+    <form name="form1" id="form1" action="" method="post">
+            <div class="pitem">
+                <em>主题</em>
+                 <input name="txttitle" id="txttitle" type="text" class="f-text" style="width:80%" />   
+            </div>
+            <div class="pitem">
+                <em>内容</em>
+            <textarea runat="server" name="txtcontent"  class="xheditor-simple {upBtnText:'上传',upMultiple:5,upLinkUrl:'$editfile',upImgUrl:'$edit_pic',skin:'$editskin'}" id="txtcontent" style="width:81%;height:300px">#if($content)$content#end</textarea>
+            </div>
+            <div class="pitem">
+                <em>&nbsp;</em>
+                #if(!$errors)
+                <input id="Submit1" type="button" value="发表" class="btn_blue2" onclick="javascript:saveTopicdata($gid,$uid)" />
+                #else
+                    <input id="Submit3" type="button" value="群成员才能发布主题" class="btn_blue10" disabled="disabled" />
+                #end
+                <input id="Submit2" type="button" value="返回" class="btn_gray2" onclick="javascript:history.back();" />
+            </div>
+    
+    </form>
+    
+    
+    </div>
+</div>
+<script type="text/javascript">
+    function saveTopicdata(gid,uid)
+    {
+        var title=jQuery("#txttitle").val();
+        var content=jQuery("#txtcontent").val();
+        if(content=="")
+        {
+             showErrorResult("内容必须填写");
+             return;
+        }
+        if(title=="")
+        {
+            showErrorResult("标题必须填写");
+            return;
+        }
+
+        loading();
+        jQuery.post("$webpath/app/group/post"+ExName+"?gid="+gid+"", { txtcontent:content,txttile:title, gid:gid, param:Math.random() }, 
+          function(msg)
+          {
+                switch(msg)
+                {
+                    case "-2":
+                        showErrorResult("您不是本群成员，不能发言。");
+                        break;
+                    case "-1":
+                        showErrorResult("登录后才能发表帖子");
+                        break;
+                    case "0":
+                        showErrorResult("发表失败");
+                        break;
+                    case "1":
+                        showRightResult("发表成功");
+                        break;
+                    case "2":
+                        showRightResult("发表成功，管理员审核后显示。");
+                        break;
+                }
+                        loadingclear();
+                if(msg==2)
+                {
+                     setTimeout(function() 
+                     {
+                        //获得帖子转向
+                        window.location.href="$webpath/app/group/list"+ExName+"?gid="+gid;
+                      }, 1000);
+                }
+                else if(msg==1)
+                {
+                     setTimeout(function() 
+                     {
+                        jQuery.get("post"+ExName+"", { action:"maxid",uid:uid, gid:gid, param:Math.random() }, 
+                        function(tid)
+                        {
+                        //获得帖子转向
+                            window.location.href="$webpath/app/group/topic"+ExName+"?gid="+gid+"&tid="+tid;
+                        }
+                        );
+                      }, 2000);
+                }
+          }
+        );          
+    }
+</script>
+#parse("_foot.html")

@@ -1,0 +1,58 @@
+﻿#parse("_head.html")
+<link href="$templatepath/css/app/favorite.css" rel="stylesheet" type="text/css" />
+<div id="snsmenu">
+#parse("_menu.html")
+</div>
+<div id="snsbody">
+    <div id="snshead"><span class="l">$cpagetitle</span><span class="r"><input id="kwd" name="kwd" value="#if($kwd)$kwd#else搜索#end" type="text" class="f-text w100" onclick="this.value=''" /> <input id="Button1" type="button" value="搜索" class="btn_gray2" onclick="search('favorite','$q')" /></span></div>
+
+    <div class="itemmenu">
+        <ul>
+            <li><a href="$webpath/app/favorite/default$exname">所有人收藏</a></li>
+            #if($uid>0)
+                <li><a href="$webpath/app/favorite/default$exname?q=my">我的收藏</a></li>
+                <li><a href="$webpath/app/favorite/default$exname?q=friend">朋友的收藏</a></li>
+            #end
+            <li class="current"><a href="$webpath/app/favorite/new$exname">添加收藏</a></li>
+        </ul>
+    </div>
+        <form id="form1" action="" method="post">
+        <div class="pitem">
+            <em>名称 <span class="reshow">*</span></em>
+                <input id="title" name="title" class="f-text bigsize"  type="text" style="width:60%;" />
+         </div>
+        <div class="pitem">
+            <em>网址 <span class="reshow">*</span></em>
+                <input id="url" name="url" class="f-text"  type="text" style="width:60%;" />
+         </div>
+        <div class="pitem">
+            <em>分类</em>
+                <select id="classid" name="classid">
+                    <option value="0">选择分类</option>
+                    $classlist
+                </select>
+         </div>
+         
+        <div class="pitem">
+            <em>说明</em>
+                <textarea id="content" name="content" class="f-text"  type="text" style="width:60%;height:50px;"></textarea>
+         </div>
+         
+        <div class="pitem">
+            <em>所有人可见</em>
+                <input id="ispub" name="ispub" type="checkbox"  value="1"></input> 是
+         </div>
+         
+            <div class="pitem1">
+                <em>&nbsp;</em>
+                <input id="Button2" type="submit" value="添加收藏" class="btn_blue4" />
+                <input id="Submit1" type="reset" value="重新填写" class="btn_gray4" />
+            </div>
+         
+        </form>
+    
+
+    
+</div>
+
+#parse("_foot.html")

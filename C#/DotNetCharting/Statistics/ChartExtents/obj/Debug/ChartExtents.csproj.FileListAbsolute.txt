@@ -1,0 +1,11 @@
+F:\NET2.0\Statistics\Statistics\ChartExtents\bin\Debug\ChartExtents.dll
+F:\NET2.0\Statistics\Statistics\ChartExtents\bin\Debug\ChartExtents.pdb
+F:\NET2.0\Statistics\Statistics\ChartExtents\bin\Debug\dotnetCHARTING.dll
+F:\NET2.0\Statistics\Statistics\ChartExtents\obj\Debug\ResolveAssemblyReference.cache
+F:\NET2.0\Statistics\Statistics\ChartExtents\obj\Debug\ChartExtents.dll
+F:\NET2.0\Statistics\Statistics\ChartExtents\obj\Debug\ChartExtents.pdb
+E:\caizhongyi\DotNetCharting\Statistics\ChartExtents\bin\Debug\ChartExtents.dll
+E:\caizhongyi\DotNetCharting\Statistics\ChartExtents\bin\Debug\ChartExtents.pdb
+E:\caizhongyi\DotNetCharting\Statistics\ChartExtents\obj\Debug\ResolveAssemblyReference.cache
+E:\caizhongyi\DotNetCharting\Statistics\ChartExtents\obj\Debug\ChartExtents.dll
+E:\caizhongyi\DotNetCharting\Statistics\ChartExtents\obj\Debug\ChartExtents.pdb

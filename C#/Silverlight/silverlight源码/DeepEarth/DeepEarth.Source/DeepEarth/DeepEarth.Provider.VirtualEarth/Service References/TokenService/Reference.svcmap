@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="d9ec3827-ec48-40b2-ad2a-0481a692f4ce" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:52638/DeepEarthPrototypeWeb/Services/VETokenService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="VETokenService.wsdl" MetadataType="Wsdl" ID="fadef328-ded8-4511-97de-b0231f9af451" SourceId="1" SourceUrl="http://localhost:52638/DeepEarthPrototypeWeb/Services/VETokenService.svc?wsdl" />
+    <MetadataFile FileName="VETokenService.xsd" MetadataType="Schema" ID="67a44506-5eda-4abc-9758-ffb1a6e35271" SourceId="1" SourceUrl="http://localhost:52638/DeepEarthPrototypeWeb/Services/VETokenService.svc?xsd=xsd0" />
+    <MetadataFile FileName="VETokenService1.wsdl" MetadataType="Wsdl" ID="596f5362-d059-4149-8634-43f3b6e29635" SourceId="1" SourceUrl="http://localhost:52638/DeepEarthPrototypeWeb/Services/VETokenService.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="VETokenService1.xsd" MetadataType="Schema" ID="ddeaecba-88c0-4de3-be40-48bfa83b40e9" SourceId="1" SourceUrl="http://localhost:52638/DeepEarthPrototypeWeb/Services/VETokenService.svc?xsd=xsd1" />
+    <MetadataFile FileName="VETokenService.disco" MetadataType="Disco" ID="db430d20-3e69-4b96-af74-b5e1a401c83e" SourceId="1" SourceUrl="http://localhost:52638/DeepEarthPrototypeWeb/Services/VETokenService.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

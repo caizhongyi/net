@@ -1,0 +1,27 @@
+﻿#parse("_headno.html")
+    <div class="history">
+    <div class="pitem"><a href="history$exname">全部</a> | <a href="history$exname?uf=0">增加</a> | <a href="history$exname?uf=1">减少</a></div>
+            <div class="heads">
+                <div class="t1">标题</div>
+                <div class="t2">积分</div>
+                <div class="t3">$gpoint</div>
+                <div class="t4">帐户</div>
+                <div class="t5">状态</div>
+                <div class="t6">时间</div>
+            </div>
+             #if($recordcount>0)
+                <ul>
+                #foreach($info in $infolist)
+                <li id="param_$info.id">
+                   <div class="ts1">$info.Content</div>
+                   <div class="ts2">$info.Point</div>
+                   <div class="ts3">$info.GPoint</div>
+                   <div class="ts4">$info.GPoint</div>
+                   <div class="ts5">$info.UTF</div>
+                   <div class="ts6 time">$info.time</div>
+                </li>
+                #end
+              </ul>
+              <div class="pages">$pagelist</div>
+        #end       
+    </div>

@@ -1,0 +1,36 @@
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\SLMusicPlayer\SLMusicPlayer\Bin\Debug\AppManifest.xaml
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\SLMusicPlayer\SLMusicPlayer\Bin\Debug\SLMusicPlayer.dll
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\SLMusicPlayer\SLMusicPlayer\Bin\Debug\SLMusicPlayer.pdb
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\SLMusicPlayer\SLMusicPlayer\Bin\Debug\SLMusicPlayer.xap
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\SLMusicPlayer\SLMusicPlayer\Bin\Debug\TestPage.html
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\SLMusicPlayer\SLMusicPlayer\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\SLMusicPlayer\SLMusicPlayer\obj\Debug\App.g.cs
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\SLMusicPlayer\SLMusicPlayer\obj\Debug\Page.g.cs
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\SLMusicPlayer\SLMusicPlayer\obj\Debug\SLMusicPlayer.g.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\SLMusicPlayer\SLMusicPlayer\obj\Debug\SLMusicPlayer.dll
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\SLMusicPlayer\SLMusicPlayer\obj\Debug\SLMusicPlayer.pdb
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\SLMusicPlayer\SLMusicPlayer\obj\Debug\XapCacheFile.xml
+E:\downcode\SLMusicPlayer\SLMusicPlayer\Bin\Debug\AppManifest.xaml
+E:\downcode\SLMusicPlayer\SLMusicPlayer\Bin\Debug\SLMusicPlayer.dll
+E:\downcode\SLMusicPlayer\SLMusicPlayer\Bin\Debug\SLMusicPlayer.pdb
+E:\downcode\SLMusicPlayer\SLMusicPlayer\Bin\Debug\SLMusicPlayer.xap
+E:\downcode\SLMusicPlayer\SLMusicPlayer\Bin\Debug\TestPage.html
+E:\downcode\SLMusicPlayer\SLMusicPlayer\obj\Debug\ResolveAssemblyReference.cache
+E:\downcode\SLMusicPlayer\SLMusicPlayer\obj\Debug\App.g.cs
+E:\downcode\SLMusicPlayer\SLMusicPlayer\obj\Debug\Page.g.cs
+E:\downcode\SLMusicPlayer\SLMusicPlayer\obj\Debug\SLMusicPlayer.g.resources
+E:\downcode\SLMusicPlayer\SLMusicPlayer\obj\Debug\SLMusicPlayer.dll
+E:\downcode\SLMusicPlayer\SLMusicPlayer\obj\Debug\SLMusicPlayer.pdb
+E:\downcode\SLMusicPlayer\SLMusicPlayer\obj\Debug\XapCacheFile.xml
+G:\SilverLight音乐播放器仿百度音乐抢鲜族源码\SLMusicPlayer\Bin\Debug\AppManifest.xaml
+G:\SilverLight音乐播放器仿百度音乐抢鲜族源码\SLMusicPlayer\Bin\Debug\SLMusicPlayer.dll
+G:\SilverLight音乐播放器仿百度音乐抢鲜族源码\SLMusicPlayer\Bin\Debug\SLMusicPlayer.pdb
+G:\SilverLight音乐播放器仿百度音乐抢鲜族源码\SLMusicPlayer\Bin\Debug\SLMusicPlayer.xap
+G:\SilverLight音乐播放器仿百度音乐抢鲜族源码\SLMusicPlayer\Bin\Debug\TestPage.html
+G:\SilverLight音乐播放器仿百度音乐抢鲜族源码\SLMusicPlayer\obj\Debug\ResolveAssemblyReference.cache
+G:\SilverLight音乐播放器仿百度音乐抢鲜族源码\SLMusicPlayer\obj\Debug\App.g.cs
+G:\SilverLight音乐播放器仿百度音乐抢鲜族源码\SLMusicPlayer\obj\Debug\Page.g.cs
+G:\SilverLight音乐播放器仿百度音乐抢鲜族源码\SLMusicPlayer\obj\Debug\SLMusicPlayer.g.resources
+G:\SilverLight音乐播放器仿百度音乐抢鲜族源码\SLMusicPlayer\obj\Debug\SLMusicPlayer.dll
+G:\SilverLight音乐播放器仿百度音乐抢鲜族源码\SLMusicPlayer\obj\Debug\SLMusicPlayer.pdb
+G:\SilverLight音乐播放器仿百度音乐抢鲜族源码\SLMusicPlayer\obj\Debug\XapCacheFile.xml

@@ -1,0 +1,12 @@
+obj\Release\Files.exe
+bin\Release\Files.exe
+obj\Release\ResolveAssemblyReference.cache
+obj\Release\Files.Form1.resources
+obj\Release\Files.csproj.GenerateResource.Cache
+bin\Debug\Files.exe
+bin\Debug\Files.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\Files.Form1.resources
+obj\Debug\Files.csproj.GenerateResource.Cache
+obj\Debug\Files.exe
+obj\Debug\Files.pdb

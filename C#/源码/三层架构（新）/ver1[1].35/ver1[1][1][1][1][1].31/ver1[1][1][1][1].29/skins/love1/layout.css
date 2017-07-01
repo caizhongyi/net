@@ -1,0 +1,407 @@
+﻿/*---主体样式---*/
+  #container{
+  width:740px;
+  margin:0 auto;
+  margin-bottom:10px;
+  padding:0;
+  text-align:center;
+  padding-top:20px;
+  }
+  
+  /*---顶部样式---*/
+  #container #header{
+  height:222px;
+  width:550px;
+  margin:0 auto;
+  padding: 0;
+  background: url(mainBG.jpg);
+  float: left;
+  }
+  #container #header #blogname{
+  margin:0 auto;
+  font-size:24px;
+  color:#FFFFFF;
+  text-align:left;
+  font-weight:bold;
+  width: 530px;
+  height: 191px;
+  background: url(header.jpg) no-repeat;
+  position: relative;
+  top: 30px;
+  z-index: 9;
+  display: block;
+  text-indent: 12px;
+  line-height: 40px;
+  }
+  #container #header #blogname #blogTitle{
+  font-size:12px;
+  font-weight: normal;
+  margin:110px 15px 0px 8px;
+  height:16px;
+  color: #FF6699;
+  text-align:right;
+  }
+  #container #header #menu{
+  text-align: right;
+  height:24px;
+  width: 530px;
+  display: block;
+  margin: -186px 0 0 20px!important;
+  margin: -184px 0 0 20px;
+  }
+  #container #header #menu #Left{width:0px;float:left;}
+  #container #header #menu #Right{width:0px;float:right;}  
+  #container #header #menu ul{
+  list-style:none;
+  margin:0;
+  padding:0;
+  float:left;
+  height: 24px;
+  line-height: 200%;
+  } 
+  #container #header #menu ul li{
+  float:left;
+  height: 24px;
+  background: url(left.gif) no-repeat left top;
+  margin: 0 0 0 2px;
+  text-align: center;
+  text-indent: -3px;
+  }  
+   .menuL{}
+   .menuR{}  
+   .menuDiv{
+	width:0px;
+	padding:0px;
+	margin:0;
+	height: 20px;
+	}/*---菜单分割线---*/
+   /*---内容样式---*/
+  #container #Tbody{
+  width:740px;
+  margin:0 auto;
+  text-align:left;
+  padding-top: 24px!important;
+  padding:0;
+  height: auto;
+  background:#FFFFFF 550px 0px no-repeat!important; 
+  background:#FFFFFF 550px 0px no-repeat;
+  }
+  /*---工具条--*/
+  #sidebar{
+  width:190px;
+  display: block;
+  position: relative;
+  top: -233px;
+  text-align:center;
+  color:#574D31;
+  background: url(sidebarBG.jpg) no-repeat;
+  float: right;
+  }
+  #innersidebar{}
+  #sidebar-topimg{margin-top:270px;}
+  #sidebar-bottomimg{}
+  /*---工具箱样式--*/
+  .sidepanel{
+  width:190px;
+  margin:0 auto!important; 
+  margin:0px;
+  }
+  .Ptitle{
+  
+  line-height:24px;
+  text-align:left;
+  padding-left:5px;
+  font-weight:bold;
+  font-size:12px;
+  margin:0px;
+  color:#003300;
+  }  
+  .Pcontent{
+  text-align:left;
+  padding: 0 0 5px 10px;
+  line-height:160%;
+  color:#003300;
+  margin-top: -5px;
+  }  
+  .Pcontent #Calendar_Body{
+  	margin-top: -1px;
+  }
+  .Pcontent .LinkTable{
+  	margin-top: -1px;
+  }
+  .Pfoot{
+  margin:0;
+  padding: 0;
+  }  
+  /*---主内容--*/ 
+  #mainContent{
+  float:left;
+  width: 550px;
+  background: url(mainBG.jpg) repeat-y;
+  }
+  #innermainContent{
+  overflow: visible;
+  }
+  #mainContent-topimg{
+  overflow:hidden;
+  }
+  #mainContent-bottomimg{
+  overflow:hidden;
+  }
+  .content-width{
+  width:510px;
+  margin: 0 auto;
+  }/*--主内容元素的全局宽度--*/
+  /*---主内容页数--*/
+  .pageContent{
+  margin:0 auto;
+  padding:3px;
+  text-align:left;
+  height:18px;
+  display: block;
+  } 
+  .NavTitle{
+  float:left;
+  font-weight:bold;
+  }
+  .page{
+  padding-right:5px;
+  height:18px;
+ 
+  }
+  .page ul{
+  list-style:none;
+  margin:0px;
+  padding:0px
+  } 
+  .page ul li{
+  float:left;
+  padding:0px 3px 0px 3px;
+  } 
+  .page ul li.PageL {
+  width:9px;
+  height:16px;
+  }
+  .page ul li.PageR {
+  width:9px;
+  height:16px;
+  }
+  .PageLbutton{
+  background:url('../../images/BttnLeft.gif') 0px 0px;
+  width:9px;
+  height:16px;
+  display:block;
+  }
+  .PageRbutton{
+  background:url('../../images/BttnRight.gif') 0px 0px;
+  width:9px;
+  height:16px;
+  display:block;
+  }
+  /*---内容框--*/
+  .Content{
+  margin: 20px auto!important;
+  margin:10px auto;
+  font-family:Georgia,Courier New,宋体;
+  }    
+  /*---日志标题框--*/
+  .Content-top{
+  height:38px;
+  display: block;
+  color:#666;
+  text-align:left;
+  }
+  .Content-top .ContentLeft{
+  }
+  .Content-top .ContentRight{
+  }
+  .Content-top .ContentTitle{
+  font-size:14px;
+  display:block;
+  color:#006666;
+  margin-top: 10px;
+  }
+  .Content-top .ContentAuthor{
+  text-align:left;
+  font-size:12px;
+  display:inline;
+  position: relative;
+  top: -44px!important;
+  top: -52px;
+  font-weight: bolder;
+  } 
+  /*---日志内容框--*/
+  .Content-body{
+  overflow: hidden;
+  text-align: left;
+  width:510px;
+  line-height:170%;
+  position: relative;
+  top: -15px!important;
+  top: -30px;
+  display: inline;
+  }
+  
+  /*---日志内容底部--*/
+  .Content-bottom{
+  text-align:right;
+  background:url('logdown.gif') no-repeat bottom;
+  height:25px;
+  padding:3px 2px 8px 2px;
+  margin-top: 0!important;
+  margin-top: -20px;
+  }
+  .Content-bottom .ContentBLeft{
+  }
+  .Content-bottom .ContentBRight{
+  }  
+
+  /*---日志其他信息--*/
+  .Content-Info {
+  margin:-5px 4px 6px 4px;
+  padding:0px;
+  height: 20px;
+  display: block;
+  position: relative;
+  top: -10px!important;
+  top: -25px;
+  }
+  .Content-Info .InfoAuthor{
+  text-align:left
+  }
+  .Content-Info .InfoOther{
+  float:right;
+  text-align:right;
+  }
+  /*--评论框--*/
+  .comment{
+  text-align:left;
+  margin:0px 12px 4px 12px;
+  }
+  .commentinfo{
+  font-size:11px;
+  color:#999;
+  }
+  .commenttop{
+  border-bottom:1px dotted #6B5D52;
+  padding:4px;
+  margin-top: 25px;
+  }
+  .commentcontent{
+  padding:10px;
+  line-height:140%;
+  overflow:hidden;
+  
+  }
+  /*---UBB框--*/ 
+  .UBBPanel{
+  border: 1px solid #999;
+  background:#CFE8E8;
+  }
+  .UBBTitle{
+  font-weight:bold;
+  padding:4px;
+  background:#FF6699;
+  border-bottom:1px dotted #B4A79C;
+  }
+  .UBBContent{
+  padding:6px;
+  line-height:160%;
+  background:#FFFFFF;
+  }
+  .UBBContent TEXTAREA {
+  width:448px;
+  margin-bottom:2px;
+  }
+  :link.UBBLink,:visited.UBBLink{
+  font-size:11px;
+  font-family:verdana;
+  }
+  /*---信息框--*/
+  #MsgContent{
+  float:left;
+  margin: 0 auto;
+  width:550px;
+  padding:1px; 
+  background:#FFFBF2;
+  }
+  #MsgContent #MsgHead{
+  padding:4px;
+  color:#555;
+  text-align:center;
+  font-weight:bold;
+  }
+  #MsgContent #MsgBody{
+  text-align:center;
+  line-height:180%;
+  float: left;
+  margin: 0 auto;
+  }
+
+  .LDialog{
+  border:1px solid #795B50;
+  margin:3px auto;
+  padding:1px;
+  }
+  .LDialog .LHead{
+  background:#BBA097;
+  padding:1px;
+  color:#fff;
+  text-align:center;
+  font-weight:bold;
+  }
+  .LDialog .LBody{
+  padding:4px;
+  line-height:200%;
+  }
+
+
+/*信息框图标以及文字*/
+   .MessageText{
+	height:50px;
+	margin-right:38px;
+	}
+   .MessageIcon{
+	background:url(../../images/Message.jpg) 0 -3px no-repeat;
+	width:48px;
+	height:48px;
+	float:left;
+	}
+   .ErrorIcon{
+	background:url(../../images/Error.jpg) 0 -3px no-repeat;
+	width:48px;
+	height:48px;
+	float:left;
+	}
+   .WarningIcon{
+	background:url(../../images/Warning.jpg) 0 -3px no-repeat;
+	width:48px;
+	height:48px;
+	float:left;
+	}   
+   .QuestionIcon{
+	background:url(../../images/Question.jpg) no-repeat;
+	width:48px;
+	height:48px;
+	float:left;
+	}
+  /*---底部样式---*/
+  #container #foot{
+  font-family:Georgia;
+  float: left;
+  padding-top: 10px;
+  font-size: 11px;
+  background: url(mainBG.jpg);
+  width:550px;
+  text-align:center;
+  }
+  /*---文件上传框样式---*/
+  .attachmentBody{
+  margin:0px;
+  font-size:12px;
+  background:#F8F6E9
+  }
+  .CateIcon{
+  	display: none;
+  }
+  

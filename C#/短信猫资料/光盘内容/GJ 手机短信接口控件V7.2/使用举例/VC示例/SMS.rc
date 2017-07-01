@@ -1,0 +1,279 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\SMS.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\SMS.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 235, 55
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 SMS"
+FONT 9, "宋体"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "SMS 1.0 版",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "版权所有 (C) 2006",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "确定",IDOK,178,7,50,14,WS_GROUP
+END
+
+IDD_SMS_DIALOG DIALOGEX 0, 0, 510, 392
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "SMS"
+FONT 9, "宋体", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,453,128,50,14
+    PUSHBUTTON      "取消",IDCANCEL,453,144,50,14,NOT WS_VISIBLE
+    CONTROL         "",IDC_SMSGATE1,"{7DADDF3A-0EEC-434E-B2FB-9C355E179D3A}",
+                    WS_TABSTOP,7,327,300,6
+    GROUPBOX        "连接手机",IDC_STATIC,7,7,297,58
+    LTEXT           "端口(COM):",IDC_STATIC,14,20,43,11
+    COMBOBOX        IDC_COMBO_PORT,60,18,34,337,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "短信中心:",IDC_STATIC,97,19,36,11
+    EDITTEXT        IDC_EDIT_SMS_SERVER,135,17,82,15,ES_AUTOHSCROLL
+    LTEXT           "速率:",IDC_STATIC,220,18,22,11
+    EDITTEXT        IDC_EDIT_SPEED,244,19,50,13,ES_AUTOHSCROLL
+    PUSHBUTTON      "连接（初始化手机）",IDC_BUTTON_INIT,11,41,283,15
+    GROUPBOX        "发信量",IDC_STATIC,7,76,296,103
+    LTEXT           "手机号码：",IDC_STATIC,7,91,41,13
+    EDITTEXT        IDC_EDIT_MOBILE_NUMBER,48,89,103,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "发送普通信息",IDC_BUTTON_SEND_NORMAL,154,90,55,13
+    PUSHBUTTON      "发送二进制数据",IDC_BUTTON_SEND_BINARY,217,91,63,13
+    LTEXT           "短信内容：",IDC_STATIC,7,113,41,13
+    EDITTEXT        IDC_EDIT_SMS_BODY,48,110,234,50,ES_MULTILINE | 
+                    WS_VSCROLL
+    CONTROL         "发送报告",IDC_CHECK_REPORT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,163,62,14
+    GROUPBOX        "读信息",IDC_STATIC,7,187,295,35
+    LTEXT           "参数值：",IDC_STATIC,7,202,33,18
+    COMBOBOX        IDC_COMBO_RECV_INDEX,41,200,47,192,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "收信息",IDC_BUTTON_RECV,94,200,47,14
+    GROUPBOX        "手工删信息",IDC_STATIC,7,227,294,54
+    RADIOBUTTON     "已读信息",IDC_RADIO_DEL_READ,7,237,72,16
+    RADIOBUTTON     "所有信息",IDC_RADIO_DEL_ALL,7,259,72,16
+    PUSHBUTTON      "删除信息",IDC_BUTTON_DEL_SMS,82,248,50,13
+    GROUPBOX        "设置自动接收新信息",IDC_STATIC,7,287,294,37
+    RADIOBUTTON     "自动接收开",IDC_RADIO_AUTO_RECV_ON,28,300,75,15
+    RADIOBUTTON     "自动接收关",IDC_RADIO_AUTO_RECV_OFF,180,300,75,15
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "SMS Microsoft 基础类应用程序\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "SMS\0"
+            VALUE "LegalCopyright", "版权所有 (C) 2006\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "SMS.EXE\0"
+            VALUE "ProductName", "SMS 应用程序\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_SMS_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 503
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 385
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_SMS_DIALOG DLGINIT
+BEGIN
+    IDC_SMSGATE1, 0x376, 140, 0
+0x0000, 0x0000, 0xb293, 0x0000, 0x0088, 0x0000, 0x0003, 0x0008, 0xf20b, 
+0x4757, 0x0020, 0x0000, 0x005f, 0x0065, 0x0078, 0x0074, 0x0065, 0x006e, 
+0x0074, 0x0078, 0x2e82, 0x0000, 0x0003, 0x0008, 0xf20a, 0x4757, 0x0020, 
+0x0000, 0x005f, 0x0065, 0x0078, 0x0074, 0x0065, 0x006e, 0x0074, 0x0079, 
+0x00ee, 0x0000, 0x0008, 0x000a, 0xf6ad, 0x3550, 0xffc0, 0xffff, 0x0073, 
+0x006d, 0x0073, 0x0073, 0x0065, 0x0072, 0x0076, 0x0069, 0x0063, 0x0065, 
+0x000e, 0x0000, 0x002b, 0x0038, 0x0036, 0x0031, 0x0033, 0x0038, 0x0030, 
+0x0030, 0x0032, 0x0031, 0x0030, 0x0035, 0x0030, 0x0030, 
+    IDC_COMBO_PORT, 0x403, 2, 0
+0x0031, 
+    IDC_COMBO_PORT, 0x403, 2, 0
+0x0032, 
+    IDC_COMBO_PORT, 0x403, 2, 0
+0x0033, 
+    IDC_COMBO_PORT, 0x403, 2, 0
+0x0034, 
+    IDC_COMBO_PORT, 0x403, 2, 0
+0x0035, 
+    IDC_COMBO_PORT, 0x403, 2, 0
+0x0036, 
+    IDC_COMBO_PORT, 0x403, 2, 0
+0x0037, 
+    IDC_COMBO_PORT, 0x403, 2, 0
+0x0038, 
+    IDC_COMBO_RECV_INDEX, 0x403, 9, 0
+0xb4ce, 0xc1b6, 0xc5d0, 0xa2cf, "\000" 
+    IDC_COMBO_RECV_INDEX, 0x403, 9, 0
+0xd1d2, 0xc1b6, 0xc5d0, 0xa2cf, "\000" 
+    IDC_COMBO_RECV_INDEX, 0x403, 9, 0
+0xf9cb, 0xd0d3, 0xc5d0, 0xa2cf, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "关于 SMS(&A)..."
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE 4, 2
+#pragma code_page(936)
+#endif //_WIN32
+#include "res\SMS.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.chs\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

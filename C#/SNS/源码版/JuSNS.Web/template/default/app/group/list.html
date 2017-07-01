@@ -1,0 +1,59 @@
+﻿#parse("_head.html")
+<div id="snsmenu">
+#parse("_menu.html")
+</div>
+<div id="snsbody">
+    <div id="snshead"><span class="l">$cpagetitle</span><span class="r"><input id="kwd" name="kwd" value="#if($kwd)$kwd#else搜索话题#end" type="text" class="f-text w100" onclick="this.value=''" /> <input id="Button1" type="button" value="搜索" class="btn_gray2" onclick="search('grouptopic','$gid')" /></span></div>
+
+    <div id="snsbody-all">
+          <div class="grouplist">
+                <div class="images l">
+                    <img src="$portrait" onerror="this.src='$templatepath/images/nopic.gif'" />
+                </div>
+                <div class="bulletin">
+                    <div class="info">$Bulletin</div>
+                </div>
+          </div>
+      <div class="itemmenu">
+        <ul>
+            <li><a href="$webpath/app/group/group$exname?gid=$gid">$groupname首页</a></li>
+            <li#if($css_null) $css_null#end><a href="$webpath/app/group/list$exname?gid=$gid">话题区($topiccount)</a></li>
+            <!--<li><a href="ative$exname?gid=$gid">活动($ativecount)</a></li>-->
+            <li><a href="$webpath/app/group/album$exname?gid=$gid">相册($albumcount)</a></li>
+            <li><a href="$webpath/app/group/files$exname?gid=$gid">文件共享($filescount)</a></li>
+            <li><a href="$webpath/app/group/member$exname?gid=$gid">所有成员($membercount)</a></li>
+            <li#if($css_best) $css_best#end><a href="$webpath/app/group/list$exname?gid=$gid&q=best">精华区</a></li>
+            <li class="new"><a href="$webpath/app/group/post$exname?gid=$gid" class="newitem">发表话题</a></li> 
+        </ul>
+        
+    </div>
+    
+    <div class="grouptopic">
+        <div class="title">
+            <div class="tle">话题</div>
+            <div class="view">浏览</div>
+            <div class="reply">回复数</div>
+            <div class="posttime">发布时间</div>
+            <div class="rtime">回复时间</div>
+            <div class="author">发表人</div>
+            <div class="op"></div>
+        </div>
+        #foreach($info in $infolist)
+        <div class="content" id="param_$info.id">
+            <div class="tle"><a href="$info.topicurl" title="$info.titleall">$info.title</a></div>
+            <div class="view">$info.clicks</div>
+            <div class="reply">$info.replynumber</div>
+            <div class="posttime time">$info.time</div>
+            <div class="rtime time">$info.replytime</div>
+            <div class="author"><a href="$info.spaceurl" target="_blank" title="查看$info.truename的空间"><img src="$info.headpic" align="absmiddle" /></a></div>
+            <div class="author1"><a href="$info.spaceurl" target="_blank">$info.truename</a></div>
+            <div class="op">$info.showop1$info.showop$info.showrec</div>
+        </div>
+        #end
+        <div class="pages">$pagelist</div>
+    </div>
+    
+    </div>
+</div>
+
+#parse("_foot.html")

@@ -1,0 +1,5 @@
+C:\Documents and Settings\Administrator\桌面\网吧广告系统客户端(12.9)\桌面设计(12.9)\设置桌面背景\bin\Debug\SetWallpaper.dll
+C:\Documents and Settings\Administrator\桌面\网吧广告系统客户端(12.9)\桌面设计(12.9)\设置桌面背景\bin\Debug\SetWallpaper.pdb
+C:\Documents and Settings\Administrator\桌面\网吧广告系统客户端(12.9)\桌面设计(12.9)\设置桌面背景\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\桌面\网吧广告系统客户端(12.9)\桌面设计(12.9)\设置桌面背景\obj\Debug\SetWallpaper.dll
+C:\Documents and Settings\Administrator\桌面\网吧广告系统客户端(12.9)\桌面设计(12.9)\设置桌面背景\obj\Debug\SetWallpaper.pdb

@@ -1,0 +1,6 @@
+obj\Debug\ResolveAssemblyReference.cache
+bin\Debug\WbClient.dll
+bin\Debug\WbClient.pdb
+obj\Debug\WbClient.dll
+obj\Debug\WbClient.pdb
+bin\Debug\WbClient.dll.config

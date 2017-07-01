@@ -1,0 +1,26 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace SetWallpaper
+{
+    public class Factory
+    {
+        public static IChangeWallpaperService GetNewPicture()
+        {
+            return new ChangeWallpaperService();
+        }
+        public static IChangeAdPictureService GetNewAdPicture()
+        {
+            return new ChangeAdPictureService();
+        }
+        public static IRegistryKey GetRegistryKey()
+        {
+            return new RegistryKey();
+        }
+        public static IPrintScreen GetPritScreen()
+        {
+            return new PrintScreen ();
+        }
+    }
+}

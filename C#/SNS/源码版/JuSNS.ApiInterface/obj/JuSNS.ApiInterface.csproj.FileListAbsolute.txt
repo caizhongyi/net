@@ -1,0 +1,16 @@
+E:\simplt\JuNET\JuSNS.ApiInterface\bin\Debug\JuSNS.ApiInterface.dll
+E:\simplt\JuNET\JuSNS.ApiInterface\bin\Debug\JuSNS.ApiInterface.pdb
+E:\simplt\JuNET\JuSNS.ApiInterface\bin\Debug\JuSNS.Common.dll
+E:\simplt\JuNET\JuSNS.ApiInterface\bin\Debug\JuSNS.Config.dll
+E:\simplt\JuNET\JuSNS.ApiInterface\bin\Debug\JuSNS.Factory.dll
+E:\simplt\JuNET\JuSNS.ApiInterface\bin\Debug\JuSNS.Model.dll
+E:\simplt\JuNET\JuSNS.ApiInterface\bin\Debug\Google.GData.Contacts.dll
+E:\simplt\JuNET\JuSNS.ApiInterface\bin\Debug\Google.GData.Extensions.dll
+E:\simplt\JuNET\JuSNS.ApiInterface\bin\Debug\Google.GData.Client.dll
+E:\simplt\JuNET\JuSNS.ApiInterface\bin\Debug\JuSNS.Factory.pdb
+E:\simplt\JuNET\JuSNS.ApiInterface\bin\Debug\JuSNS.Model.pdb
+E:\simplt\JuNET\JuSNS.ApiInterface\bin\Debug\JuSNS.Common.pdb
+E:\simplt\JuNET\JuSNS.ApiInterface\bin\Debug\JuSNS.Config.pdb
+E:\simplt\JuNET\JuSNS.ApiInterface\obj\Debug\ResolveAssemblyReference.cache
+E:\simplt\JuNET\JuSNS.ApiInterface\obj\Debug\JuSNS.ApiInterface.dll
+E:\simplt\JuNET\JuSNS.ApiInterface\obj\Debug\JuSNS.ApiInterface.pdb

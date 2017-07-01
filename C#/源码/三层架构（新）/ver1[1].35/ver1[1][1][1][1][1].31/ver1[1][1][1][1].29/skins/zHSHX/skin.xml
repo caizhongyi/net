@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<SkinSet>
+ <SkinName>红色幻想</SkinName>
+ <SkinDesigner>Jaro</SkinDesigner>
+ <pubDate>2005-11-06</pubDate>
+ <DesignerURL>http://www.showfeel.com/</DesignerURL>
+ <DesignerMail>showfeel@gmail.com</DesignerMail>
+ <Flash>
+  <UseFlash>-1</UseFlash>
+  <FlashPath>head.swf</FlashPath>
+  <FlashWidth>550</FlashWidth>
+  <FlashHeight>400</FlashHeight>
+  <FlashAlign>right</FlashAlign>
+  <FlashTop>0</FlashTop>
+  <FlashTransparent>-1</FlashTransparent>
+ </Flash>
+</SkinSet>

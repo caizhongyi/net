@@ -1,0 +1,21 @@
+F:\类库\WPF Demo\photoapp\csharp\bin\Debug\images\market 031.jpg
+F:\类库\WPF Demo\photoapp\csharp\bin\Debug\images\market 032.jpg
+F:\类库\WPF Demo\photoapp\csharp\bin\Debug\images\market 034.jpg
+F:\类库\WPF Demo\photoapp\csharp\bin\Debug\images\market 039.jpg
+F:\类库\WPF Demo\photoapp\csharp\bin\Debug\images\market 040.jpg
+F:\类库\WPF Demo\photoapp\csharp\bin\Debug\SDKSample.exe
+F:\类库\WPF Demo\photoapp\csharp\bin\Debug\SDKSample.pdb
+F:\类库\WPF Demo\photoapp\csharp\obj\Debug\ResolveAssemblyReference.cache
+F:\类库\WPF Demo\photoapp\csharp\obj\Debug\PhotoView.baml
+F:\类库\WPF Demo\photoapp\csharp\obj\Debug\MainWindow.g.cs
+F:\类库\WPF Demo\photoapp\csharp\obj\Debug\PhotoView.g.cs
+F:\类库\WPF Demo\photoapp\csharp\obj\Debug\app.g.cs
+F:\类库\WPF Demo\photoapp\csharp\obj\Debug\SDKSample_Content.g.cs
+F:\类库\WPF Demo\photoapp\csharp\obj\Debug\GeneratedInternalTypeHelper.g.cs
+F:\类库\WPF Demo\photoapp\csharp\obj\Debug\SDKSample_MarkupCompile.cache
+F:\类库\WPF Demo\photoapp\csharp\obj\Debug\SDKSample_MarkupCompile.lref
+F:\类库\WPF Demo\photoapp\csharp\obj\Debug\app.baml
+F:\类库\WPF Demo\photoapp\csharp\obj\Debug\MainWindow.baml
+F:\类库\WPF Demo\photoapp\csharp\obj\Debug\SDKSample.g.resources
+F:\类库\WPF Demo\photoapp\csharp\obj\Debug\SDKSample.exe
+F:\类库\WPF Demo\photoapp\csharp\obj\Debug\SDKSample.pdb

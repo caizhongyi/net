@@ -1,0 +1,89 @@
+﻿#parse("_head.html")
+<div id="snsmenu">
+#parse("_menu.html")
+</div>
+<div id="snsbody">
+    <div id="snshead">道具中心</div>
+    #if($errors)
+    <div  id="toperrors" class="errors">$errors</div>
+    #else
+        <div class="itemmenu">
+            <ul>
+                <li class="current"><a href="default$exname">道具中心</a></li>
+                <li><a href="magic$exname">我的道具</a></li>
+                <li><a href="record$exname?q=0">道具记录</a></li>
+            </ul>
+        </div>
+         <div class="itemmenu1">
+            <ul>
+                <li#if($css_null) $css_null #end><a href="default$exname">默认</a></li>
+                <li#if($css_1) $css_1 #end><a href="default$exname?q=1">热门</a></li>
+            </ul>
+        </div>     
+
+        #if($recordcount>0)
+            <div>
+                <ul>
+                #foreach($magic in $magiclist)
+                <li>
+                    <div class="imageb"><a href="javascript:void(0);" onclick="buymagic($magic.id,'$magic.mname',$magic.number)"><img src="$magic.magicpic" /></a></div>
+                    <div><span class="strong">$magic.mname</span> <span class="nextreshow">(已售出$magic.buynumber件)</span></div>
+                    <div>$magic.mdesc</div>
+                    <div><span class="reshow">$magic.point</span>积分/个 <span class="reshow">$magic.gpoint</span>$gpoint/个</div>
+                    <div><input id="Button1" type="button" value="购买" class="btn_gray2" onclick="buymagic($magic.id,'$magic.mname',$magic.number)" /></div>
+                    
+                </li>
+                #end
+            </ul>
+            </div>
+            <div class="pages">$pagelist</div>
+        #else
+            <div>还没有道具</div>
+        #end        
+
+    #end
+</div>
+<script type="text/javascript">
+    function buymagic(mid,mname,number)
+    {
+        var formcontent = "<iframe src=\"info$exname?mid="+mid+"\" style=\"width:100%;height:250px;border:0;\" frameborder=\"NO\" border=\"0\" framespacing=\"0\"></iframe>";
+        formcontent+="<div style=\"text-align:center;\">选择购买数量：<input type='text' style='width:50px;' maxlength='3' class='f-text' id='buynumberinput' value='1' />  最多购买<span class=\"reshow\">"+number+"</span>个</div>";
+        var W = WinTip("<div>购买道具："+mname+"</div>", formcontent);
+        W.ConfirmButton="购买";
+        W.Width=500;
+        W.Confirm=function()
+        {
+            var buynumber=jQuery("#buynumberinput").val();
+            if(isNaN(buynumber))
+            {
+                alert("请填写数字");jQuery("#buynumberinput").val("1");return;
+            }
+            if(buynumber>number)
+            {
+                alert("最多购买"+number+"个");return;
+            }
+            var uid=$uid;
+            jQuery.get(ajaxUrl, { action:"BuyMagic", mid:mid, uid:uid,num:buynumber, param:Math.random() }, 
+              function(msg)
+              {
+                 if(msg.indexOf("succs")>-1)
+                 {
+                    var W1 = WinTip("购买成功", "成功购买了"+buynumber+"个"+mname+"");
+                    W1.Create();
+                    setTimeout(function() {
+                        W1.Close();
+                    }, 2000);
+                 }
+                 else
+                 {
+                    var W2 = WinTip("购买失败", msg);
+                    W2.Create();
+                 }
+              }
+            );                       
+         }
+        W.Create();
+    }
+</script>
+    
+#parse("_foot.html")

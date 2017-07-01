@@ -1,0 +1,11 @@
+bin\Debug\AdSystem.exe
+bin\Debug\AdSystem.pdb
+bin\Debug\SetWallpaper.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\AdSystem.Form1.resources
+obj\Debug\AdSystem.Properties.Resources.resources
+obj\Debug\AdSystem.csproj.GenerateResource.Cache
+obj\Debug\AdSystem.exe
+obj\Debug\AdSystem.pdb
+obj\Debug\AdSystem.Form2.resources
+bin\Debug\SetWallpaper.dll

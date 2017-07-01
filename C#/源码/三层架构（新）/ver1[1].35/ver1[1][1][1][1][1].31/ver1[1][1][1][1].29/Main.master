@@ -1,0 +1,146 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Main.master.cs" Inherits="Main" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="UTF-8">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Language" content="UTF-8" />
+	<title></title>
+	<link rel="stylesheet" rev="stylesheet" href="skins/<%=skinName %>/global.css" type="text/css" media="all" /><!--全局样式表-->
+	<link rel="stylesheet" rev="stylesheet" href="skins/<%=skinName %>/layout.css" type="text/css" media="all" /><!--层次样式表-->
+	<link rel="stylesheet" rev="stylesheet" href="skins/<%=skinName %>/typography.css" type="text/css" media="all" /><!--局部样式表-->
+	<link rel="stylesheet" rev="stylesheet" href="skins/<%=skinName %>/link.css" type="text/css" media="all" /><!--超链接样式表-->
+</head>
+<body>
+<form id="Form1" action="" enctype="multipart/form-data"  runat="server">
+<div id="container">
+ <!--顶部-->
+  <div id="header">
+   <div id="blogname">一梦三四年
+       <div id="blogTitle">小桥流水人家 古道西风瘦马 断肠人在刷牙</div>
+   </div>
+   		<div id="menu">
+   		    <div id="Left"></div>
+   		    <div id="Right"></div>
+   		    <ul><li class="menuL"></li>
+   		    <li><a class="menuA" href="Default.aspx" title="相册首页">Index</a></li>
+   		    <li class="menuDiv"></li>
+   		    <li><a class="menuA" href="#" title="">TagsCloud</a></li>
+   		    <li class="menuR"></li></ul>
+   		</div>
+  </div>
+
+ <!--内容-->
+  <div id="Tbody">
+  <div id="mainContent">
+   <div id="innermainContent">
+       <div id="mainContent-topimg"></div>
+	   
+	   <div id="Content_ContentList" class="content-width">
+	    <asp:ContentPlaceHolder ID="MainContentPH" runat="server">
+        
+        </asp:ContentPlaceHolder>
+	   </div>
+	   
+       <div id="mainContent-bottomimg"></div>
+   </div>
+   </div>
+   
+
+   
+   <div id="sidebar">
+	   <div id="innersidebar">
+		      <div id="sidebar-topimg"><!--工具条顶部图象--></div>
+			     <div id="Side_Category" class="sidepanel">
+			      <h4 class="Ptitle">Category</h4>
+			      <div class="Pcontent">
+			      <a class="CategoryA" href="#" title="日志首页">Index</a><br/>
+			      <a class="CategoryA" href="#" title="">TagsCloud</a><br/>
+			      </div>
+			      <div class="Pfoot"></div>
+			    </div>
+			   <div id="Side_User" class="sidepanel">
+			    <h4 class="Ptitle">User Panel</h4>
+			    <div class="Pcontent"> 
+			    
+			    <asp:Panel ID="User_Login" runat="server">
+                   
+                <asp:TextBox CssClass="userpass"  ID="UserName" runat="server"></asp:TextBox>
+                <asp:TextBox CssClass="userpass"   ID="Password" runat="server" TextMode="Password" MaxLength="12" Width="150"></asp:TextBox>
+                <br/>
+                <asp:Button  CssClass="userbutton"  ID="Button1" runat="server"  Text="登录" OnClick="Button1_Click" />
+                <asp:Label ID="Label1" runat="server" Visible="false" Text="Label"></asp:Label>
+                
+                </asp:Panel>
+                    &nbsp;&nbsp;
+                
+                 <asp:Panel ID="User_Success" Visible="false" runat="server">
+                      <b><%=Session["UserName"] %></b>，欢迎你!<br/>
+			         <br/>
+			          <a href="AlbumnAdd.aspx" class="sideA" accesskey="3">创建相册</a>
+			          <a href="AlbumnList.aspx" class="sideA" accesskey="N">相册管理</a>
+			          <a href="#" class="sideA" accesskey="D">编辑草稿</a>
+			          <a href="#" class="sideA" accesskey="M">修改个人资料</a>
+			          <asp:LinkButton CssClass="sideA" ID="LogoutLink" runat="server" OnClick="LogoutLink_Click" CausesValidation="False">退出系统</asp:LinkButton>
+                 </asp:Panel>
+                    
+                
+                </div>
+			      <div class="Pfoot"></div>
+			   </div>
+			   
+		      <div id="Side_BlogInfo" class="sidepanel">
+		       <h4 class="Ptitle">Statistics</h4>
+		       <div class="Pcontent">日志: <a href="#"><b>0</b> 篇</a><br/>
+                评论: <a href="#"><b>0</b> 个</a><br/>
+                引用: <a href="#"><b>0</b> 个</a><br/>
+                留言: <b>0</b> 个<br/>
+                会员: <a href="#"><b>1</b> 人</a><br/>
+                访问: <b>4</b> 次<br/>
+                在线: <b>2</b> 人<br/>
+                建站时间: <strong>2005-06-20</strong>
+               </div>
+               <div class="Pfoot"></div>
+              </div>
+              
+              <div id="Side_Comment" class="sidepanel">
+              <h4 class="Ptitle">Recent Comments</h4>
+              <div class="Pcontent">		
+               <div class="commentTable">
+	           </div>
+	          </div>
+	          <div class="Pfoot"></div></div><div id="Side_Archive" class="sidepanel"><h4 class="Ptitle">Archive</h4><div class="Pcontent"></div><div class="Pfoot"></div></div><div id="Side_Search" class="sidepanel"><h4 class="Ptitle">Search</h4><div class="Pcontent">
+    关键字 <input class="userpass" name="SearchContent"/>
+    <div style="OVERFLOW: hidden; HEIGHT: 3px">&nbsp;</div>
+    类　型 <select name="searchType">
+    <option value="title" selected="selected">日志标题</option>
+    <option value="Content">日志内容</option>
+    <option value="Comments">日志评论</option>
+    <option value="trackback">引用通告</option>
+    </select> <input class="userbutton" type="submit" value="查 找"/>
+</div><div class="Pfoot"></div></div><div id="Side_Links" class="sidepanel"><h4 class="Ptitle">Links</h4><div class="Pcontent"><div class="LinkTable"> </div><div align="right"><a href="#">更多链接… </a></div></div><div class="Pfoot"></div></div><div id="Side_Support" class="sidepanel"><h4 class="Ptitle">Support</h4><div class="Pcontent"><div style="PADDING-RIGHT: 4px; PADDING-LEFT: 4px; PADDING-BOTTOM: 4px; PADDING-TOP: 4px; TEXT-ALIGN: left"><a href="http://validator.w3.org/check/referer" target="_blank"></a> &nbsp;<a href="http://jigsaw.w3.org/css-validator/validator-uri.html" target="_blank"></a> <a href="#" target="_blank"></a>&nbsp;<a href="#" target="_blank"></a>&nbsp;<a href="http://www.mozilla.org/products/firefox/" target="_blank"></a> 
+    <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True">
+        <asp:ListItem Value="lovely">可爱滴</asp:ListItem><asp:ListItem Value="lovebook">爱情白皮书</asp:ListItem>
+        
+        <asp:ListItem>Lost Dark</asp:ListItem>
+        <asp:ListItem>zbanboSKIN</asp:ListItem>
+        <asp:ListItem>zHSHX</asp:ListItem>
+        <asp:ListItem>yueyeqingl</asp:ListItem>
+    </asp:DropDownList><a href="http://www.creativecommons.cn/licenses/by-nc-sa/1.0/" target="_blank"></a></div></div><div class="Pfoot"></div></div>
+		     <div id="sidebar-bottomimg"></div>
+	   </div>
+   </div>
+   <div style="clear: both;height:1px;overflow:hidden;margin-top:-1px;"></div>
+ </div>
+  
+ <!--底部-->
+  <div id="foot">
+    <p>Powered By <a href="http://www.pjhome.net" target="_blank"><strong>PJBlog2 v2.6 build 02</strong></a> CopyRight 2005, <strong>PJBlog2</strong> <a href="http://validator.w3.org/check/referer" target="_blank">xhtml</a> | <a href="http://jigsaw.w3.org/css-validator/validator-uri.html">css</a></p>
+    <p style="font-size:11px;">Processed in <b>0.031250</b> second(s) , <b>1</b> queries , <a href="http://www.tzhblog.com.cn" target="_blank"><strong>Sreski</strong></a> Design By <a href="mailto:tzh@tzhblog.com.cn" target="_blank"><strong>TZH-Lordvoldemont</strong></a>
+    <br/><a href="http://www.miibeian.gov.cn" style="font-size:12px"><b></b></a>
+    </p>
+   </div>
+ </div>
+</form>
+</body>
+</html>

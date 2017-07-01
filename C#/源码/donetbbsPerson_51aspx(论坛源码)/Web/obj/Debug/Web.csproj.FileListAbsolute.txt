@@ -1,0 +1,30 @@
+D:\donetbbsPerson_51aspx\Web\bin\Dos.dll
+D:\donetbbsPerson_51aspx\Web\bin\Dos.pdb
+D:\donetbbsPerson_51aspx\Web\bin\WebSite.dll
+D:\donetbbsPerson_51aspx\Web\bin\DataProviders.dll
+D:\donetbbsPerson_51aspx\Web\bin\DoNetBbs.dll
+D:\donetbbsPerson_51aspx\Web\bin\Control.dll
+D:\donetbbsPerson_51aspx\Web\bin\DosOrg.dll
+D:\donetbbsPerson_51aspx\Web\bin\Components.dll
+D:\donetbbsPerson_51aspx\Web\bin\WebSite.pdb
+D:\donetbbsPerson_51aspx\Web\bin\DataProviders.pdb
+D:\donetbbsPerson_51aspx\Web\bin\DoNetBbs.pdb
+D:\donetbbsPerson_51aspx\Web\bin\Components.pdb
+D:\donetbbsPerson_51aspx\Web\obj\Debug\ResolveAssemblyReference.cache
+D:\donetbbsPerson_51aspx\Web\obj\Debug\Dos.dll
+D:\donetbbsPerson_51aspx\Web\obj\Debug\Dos.pdb
+C:\Documents and Settings\Administrator\桌面\源码帝国\donetbbsPerson_51aspx\Web\bin\Dos.dll
+C:\Documents and Settings\Administrator\桌面\源码帝国\donetbbsPerson_51aspx\Web\bin\Dos.pdb
+C:\Documents and Settings\Administrator\桌面\源码帝国\donetbbsPerson_51aspx\Web\bin\WebSite.dll
+C:\Documents and Settings\Administrator\桌面\源码帝国\donetbbsPerson_51aspx\Web\bin\DataProviders.dll
+C:\Documents and Settings\Administrator\桌面\源码帝国\donetbbsPerson_51aspx\Web\bin\DoNetBbs.dll
+C:\Documents and Settings\Administrator\桌面\源码帝国\donetbbsPerson_51aspx\Web\bin\Control.dll
+C:\Documents and Settings\Administrator\桌面\源码帝国\donetbbsPerson_51aspx\Web\bin\DosOrg.dll
+C:\Documents and Settings\Administrator\桌面\源码帝国\donetbbsPerson_51aspx\Web\bin\Components.dll
+C:\Documents and Settings\Administrator\桌面\源码帝国\donetbbsPerson_51aspx\Web\bin\WebSite.pdb
+C:\Documents and Settings\Administrator\桌面\源码帝国\donetbbsPerson_51aspx\Web\bin\DataProviders.pdb
+C:\Documents and Settings\Administrator\桌面\源码帝国\donetbbsPerson_51aspx\Web\bin\DoNetBbs.pdb
+C:\Documents and Settings\Administrator\桌面\源码帝国\donetbbsPerson_51aspx\Web\bin\Components.pdb
+C:\Documents and Settings\Administrator\桌面\源码帝国\donetbbsPerson_51aspx\Web\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\桌面\源码帝国\donetbbsPerson_51aspx\Web\obj\Debug\Dos.dll
+C:\Documents and Settings\Administrator\桌面\源码帝国\donetbbsPerson_51aspx\Web\obj\Debug\Dos.pdb

@@ -1,0 +1,33 @@
+﻿    </div>
+    <div id="footer">
+        <div>
+        ${footerhtml}
+        </div>
+        <div class="powered">
+        Processed in  ${processtime} second(s), ${querycount} queries. Powered by <a href="http://www.loachs.com" target="_blank" title="Loachs ${version}">Loachs</a>
+        </div>
+    </div>
+<script type="text/javascript">
+
+           var _gaq = _gaq || [];
+           _gaq.push(['_setAccount', 'UA-24114971-2']);
+           _gaq.push(['_trackPageview']);
+
+           (function () {
+               var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+               ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+               var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+           })();
+
+</script>
+
+<script type="text/javascript">
+    (function () {
+        var selfurl = window.location.href, siteurl, regex = /(^\w+:\/\/)((\w|\.)+)(:\d+)?\//;
+        var results = regex.exec(selfurl + "/"); if (results == null) siteurl = selfurl; else siteurl = results[1] + results[2];
+        document.write("<scr" + "ipt src=\"" + "http://sitemap.cn.yahoo.com/inlink.js?url=" + encodeURIComponent(siteurl) + "&site=1&sty=1\" charset=\"UTF-8\"></scr" + "ipt>");
+    })();
+</script>
+</div>
+</body>
+</html>

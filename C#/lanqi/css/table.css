@@ -1,0 +1,68 @@
+﻿/* eqifa 表格样式 */
+
+.table{ border:1px solid #C5E1F7; width:100%; border-collapse:collapse; clear:both;}
+.table td,tr{border:1px solid #C5E1F7;}
+.table_1{ border:1px solid #C5E1F7; width:70%; border-collapse:collapse; clear:both;}
+.table_1 td,tr{border:1px solid #C5E1F7;}
+
+.table_2{ border:1px solid #fff; width:100%; border-collapse:collapse; clear:both;}
+.table_2 td,tr{border:1px solid #fff; height:20px;}
+
+.table_3{ border:1px solid #CDCDCD; width:100%; border-collapse:collapse; clear:both;}
+.table_3 td,tr{border:1px solid #CDCDCD;}
+
+.table_4{ border:1px solid #CDCDCD; width:600px; border-collapse:collapse; clear:both;}
+.table_4 td,tr{border:1px solid #CDCDCD;}
+
+.table_border{ border:1px solid #C5E1F7;}
+
+.td_top{ background:#E8F1FF; padding:5px 0px; text-align:center; color: #366; font-size:12px;}
+.td_top_1{ background:#E8F1FF;  padding:5px 0px; text-align:left; padding-left:5px; color: #366;}
+.td_top_2{ background:#E8F1FF;  padding:5px; text-align:right; color: #366;}
+.td_top_3{ background:#E8F1FF;  padding:5px; text-align:right; color: #366; }
+.td_top_0627{ background:#EEE; padding:5px 0px; text-align:center; color: #000;}
+.td_top_0710{ background:#EEE; padding:5px; text-align:right; color: #000;}
+.td_top_0710_1{  background:#EEE; padding:10px; text-align:right; color: #000;  width:100px; font-weight:bold;}
+.td_left{ padding:5px 0px; text-align:left; padding-left:5px; padding-right:5px;}
+.td_right{ padding:5px 0px; text-align:right; padding-right:5px;padding-left:5px;}
+.td_middle{ text-align: center; padding:5px 0px; padding:5px; font-size:12px;}
+.td_middle_1{ text-align: center; padding:5px; border-left:1px solid #fff; border-right:1px solid #fff;}
+
+.td_text{ padding:2px 0px; padding-left:10px; text-decoration:underline; color:#333;}
+a.td_text:hover{ padding:2px 0px; padding-left:10px; text-decoration:underline; color:#333;}
+
+.td_text2{ padding:2px 0px; text-decoration:underline; color:#333;}
+a.td_text2:hover{ padding:2px 0px; text-decoration:underline; color:#333;}
+
+.td_color{ background:#F8FAFB;}
+.td_color_1{ background:#E8F1FF;}
+
+.td_text_1{ text-overflow:ellipsis; width:300px; word-wrap:break-word;}
+.td_text_2{ width:300px; word-wrap:break-word; overflow-y:auto; overflow-x:hidden; height:80px;}
+
+.line{ border-bottom:1px dashed #ccc; margin-left:10px; margin-right:10px; height:4px; font-size:4px; overflow:hidden; margin-bottom:10px;}
+
+  /* 注册 */
+.zhuce_table{ width:100%; border-collapse:collapse; clear:both; border:1px solid #fff;}  
+.zhuce_table td,tr{ padding:6px 3px;} 
+
+  /* 登陆 */
+.denglu_table{ width:100%; border-collapse:collapse; clear:both; border:none;}  
+.denglu_table td,tr{ padding:6px 3px;}  
+ 
+  
+
+  /* 支付 */
+.zhifu_bg{ margin-right:5px; background:url(../img/zhufu_bg.jpg) repeat-x; height:35px; line-height:35px; font-size:14px; font-weight:bold; padding-left:10px;}
+.zhifu_top{ background:#E8F1FF; height:25px; line-height:25px;  padding-left:10px; padding-right:10px; font-size:12px;}
+.zhifu_middle_text{ padding-left:10px; padding-right:10px; font-size:12px; color:#666; border-bottom:1px dashed #666; padding-top:10px; padding-bottom:10px;}
+
+
+  /* 添加连接列表样式头部 */
+.link_top{ border:1px solid #FFFFFF; background-image:url(../img/index_biaoti.jpg); background-repeat:repeat-x; height:26px;}
+.link_top_title{ background:url(../img/index_icon1.jpg) no-repeat left center; margin-left:10px; font-size:12px; font-weight:bold; height:26px; line-height:26px; padding-left:10px;}
+
+.button_padding{ text-align:center; padding:3px;}
+
+/* 新搜索 */
+.new_sousuo{font-size:14px; color:#000; padding-left:15px; padding-top:6px; padding-bottom:6px; margin-bottom:10px; background:#E8F1FF; border:1px solid #C5E1F7;}

@@ -1,0 +1,68 @@
+﻿#parse("_headshop.html")
+<div id="shopbody">
+    <div class="menu">
+        <ul>
+            <li><a href="../shop/default$exname?sid=$sid">店铺首页</a></li>
+            <li><a href="news$exname?sid=$sid">店铺公告</a></li>
+            <li><a href="goods$exname?sid=$sid">商品展示</a></li>
+            <li class="current"><a href="mbuy$exname?sid=$sid">超级采购团</a></li>
+            <li><a href="shopinfo$exname?sid=$sid">联系我们</a></li>
+        </ul>
+    </div>
+    <div class="shopbodyleft">
+        <div class="per">
+            &nbsp; &nbsp; <img src="$templatepath/images/join_bg.gif" align="middle" />&nbsp; 加盟时间：$jointime
+        </div>
+        <div class="per">
+            <div class="title">商家基本信息</div>
+            <span>$shopname</span><br />
+            <div class="p"><label>地址：</label><em>$address</em></div>
+            <div class="p"><label>电话：</label><em>$tel</em></div>
+            <div class="p"><label>传真：</label><em>$fax</em></div>
+            <div class="p"><label>联系人：</label><em>$linkman</em></div>
+            <div class="p"><label>介绍：</label><em>$content</em></div>
+        </div>
+        <div class="per">
+            <div class="title">商家告示</div>
+           #if($recordcount>0)
+                <ul>
+                #foreach($info in $infolist)
+                <li id="param_$info.id">
+                   <a href="$info.shopnewsurl" target="_blank">$info.title</a>
+                </li>
+                #end
+              </ul>
+        #else
+            <div>还没有记录</div>
+        #end   
+        </div>
+    </div>
+    <div class="shopbodyright">
+    <div class="title">团购信息</div>
+    <div id="menulist">
+     #foreach($multe in $multelist)
+        <div style="display: block;">
+        <dl style="background-position: 0pt 0pt;">
+        <dt>
+        #if($multe.timeout)<img height="35" width="35" src="$templatepath/images/over.gif" alt="">#end
+        <a href="$multe.multeurl" target="_blank"><img height="100" width="140" src="$multe.photo" alt=""   onerror="this.src='$shoppicpath/default.jpg'"></a>
+        </dt>
+        <dd>
+        <h4><a href="$multe.multeurl" target="_blank">$multe.title</a></h4>
+        <ul>
+        <li class="">日期：$multe.starttime到$multe.endtime</li>
+        <li class="">参与人数：$multe.joinmember人</li>
+        <li class=""><a href="$multe.multeurl" target="_blank">进去看看</a></li>
+        </ul>
+        </dd>
+        </dl>
+        </div>
+    #end
+              <div class="pages">$pagelist</div>
+</div>    
+  
+            
+    </div>
+</div>
+
+#parse("_foot.html")

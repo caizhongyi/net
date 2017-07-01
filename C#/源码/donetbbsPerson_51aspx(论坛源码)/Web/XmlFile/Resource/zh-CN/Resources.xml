@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WebSite>
+  <resource name="Resource_WebSiteName">东网论坛</resource>
+  <resource name="Resource_WebSiteDeFaultTitle">网站首页</resource>
+  <resource name="Resource_WebSiteForumTitle">论坛</resource>
+  <resource name="Resource_WebSiteShowTopicInfoTitle">浏览文章</resource>
+  <resource name="Resource_WebSiteUserLoginTitle">用户登录</resource>
+  <resource name="Resource_WebSiteUserLoginOutTitle">退出成功</resource>
+  <resource name="Resource_WebSiteForgottenPasswordTitle">找回密码</resource>
+  <resource name="Resource_WebSiteUserRegTitle">注册用户</resource>
+  <resource name="Resource_WebSiteEditUserInfoTitle">修改个人信息</resource>
+  <resource name="Resource_WebSiteDisplayUserInfoTitle">浏览{0}的用户信息</resource>
+
+  
+  <resource name="Resource_MiiBeia">暂无备案</resource>
+  <resource name="Resource_HomePage">首页</resource>
+  <resource name="Resource_Forums">论坛</resource>
+
+  <resource name="Resource_DisableForm">来源错误</resource>
+  
+<resource name="Resource_MessagesMenuTitle">短信提示</resource>
+  <resource name="Resource_UserOnLineStatic">联机(O)</resource>
+  <resource name="Resource_UserOnLineNotStatic">脱机(F)</resource>
+  <resource name="Resource_SiteDate-ymdhts">y年m月d日 h时t分s秒</resource>
+  <resource name="Resource_SiteDate-ymdh">y年m月d日 h时</resource>
+  <resource name="Resource_SiteDate-ymd">y年m月d日</resource>
+  <resource name="Resource_SiteDate-mdhts">m月d日 h时t分s秒</resource>
+  <resource name="Resource_SiteDate-ymdht">m月d日 h时t分</resource>
+  <resource name="Resource_SiteDate-dhts">d日 h时t分s秒</resource>
+  <resource name="Resource_SiteDate-dht">d日 h时t分</resource>
+  <resource name="Resource_UserInfo-ymd">y-m-d</resource>
+  <resource name="WebSiteBoardListNavigate0">论坛列表</resource>
+  <resource name="WebSiteBoardListNavigate1">查看新贴</resource>
+  <resource name="WebSiteBoardListNavigate2">热门文章</resource>
+  <resource name="WebSiteBoardListNavigate3">精华文章</resource>
+  <resource name="WebSiteBoardListNavigate4">推荐文章</resource>
+  <resource name="WebSiteBoardListNavigate5">我发表的主题</resource>
+  <resource name="WebSiteBoardListNavigate6">我参与的主题</resource>
+  
+  <resource name="WebSiteShowTopicInfoNavigate">浏览帖子信息</resource>
+  <resource name="WebSiteShowTopicInfoArTicleFloor">楼主</resource>
+  <resource name="WebSiteShowTopicInfoArTicleFloorNumber">第{0}楼</resource>
+  <resource name="Resource_PostInfoTitle">发表文章 </resource>
+  <resource name="Resource_RePostInfoTitle">回复文章 </resource>
+  <resource name="Resource_EditPostInfoTitle">修改文章 </resource>
+  <resource name="Resource_EditRePostInfoTitle">修改回复文章 </resource>
+
+  <resource name="Resource_UserNotLogin">请先登录！</resource>
+
+  <resource name="Resource_WebSiteShowInfoErr">你所查看的帖子不存在！</resource>
+
+  <resource name="Resource_WebSiteShowInfoFalse">你所浏览的帖子已经被关闭了！</resource>
+
+  <resource name="Resource_WebSiteShowInfoRole">你所属的角色不能浏览该文章！</resource>
+  <resource name="Resource_WebSiteShowInfoGroup">你所属的俱乐部不能浏览该文章！</resource>
+  <resource name="Resource_WebSiteShowInfoReply">需要回复后才能浏览该文章！</resource>
+  <resource name="Resource_WebSiteShowInfoNotMoney">你没有足够的金钱浏览该文章！</resource>
+
+  <resource name="Resource_WebSiteShowInfoPayMoney">你支付了{0}个金币浏览该文章！</resource>
+
+  <resource name="Resource_WebSiteEditInfoErr">您没有权限修改该文章！</resource>
+  <resource name="Resource_DisableFormUrlErr">不接受外部发送！</resource>
+  <resource name="Resource_PostInfoBoardErr">你不能在该板块发布信息，请另外选择吧！</resource>
+  <resource name="Resource_PostInfoBoardFalse">你要发布信息的板块已经被关闭了！</resource>
+  <resource name="Resource_PostInfoBoardPowerErr">你所属的角色不能在该论坛发布文章！</resource>
+  <resource name="Resource_PostReInfoBoardPowerErr">你所属的角色不能在该论坛回复文章！</resource>
+  <resource name="Resource_PostInfoUserNameExist">请输入用户名称！</resource>
+  <resource name="Resource_PostInfoUserPassWordExist">请输入用户密码！</resource>
+  <resource name="Resource_PostInfoUserNotExist">该用户不存在！</resource>
+  <resource name="Resource_PostInfoUserPassWordErr">用户密码错误！</resource>
+  <resource name="Resource_PostInfoComplete">发布成功！</resource>
+  <resource name="Resource_PostReInfoComplete">回复成功！</resource>
+  <resource name="Resource_PostEditInfoComplete">修改成功！</resource>
+
+  <resource name="Resource_PostInfoUserNameIllegal">用户名称含有非法字符！</resource>
+  <resource name="Resource_PostInfoTitleIllegal">帖子的标题含有非法字符！</resource>
+  <resource name="Resource_PostInfoBodyIllegal">帖子的内容含有非法字符</resource>
+  <resource name="Resource_PostInfoTitleNotExist">请输入文章标题！</resource>
+  <resource name="Resource_PostInfoBodNotExist">请输入帖子的内容！</resource>
+  <resource name="Resource_PostReInfoNotExist">你所回复的帖子不存在！</resource>
+  <resource name="Resource_PostReInfoFalse">你所回复的帖子已经被关闭了！</resource>
+  <resource name="Resource_PostReInfoPowerErr">你所属的角色不能回复该帖子！</resource>
+  <resource name="Resource_PostReInfoGroupErr">你所属的俱乐部不能回复该文章！</resource>
+
+  <resource name="Resource_PostEditInfoNotExist">你所修改的帖子不存在！</resource>
+  <resource name="Resource_PostEditInfoErr">您没有权限修改该文章！</resource>
+  <resource name="Resource_TopicInfoEditHistory">修改By：{0}({1}),{2}&lt;br&gt;</resource>
+
+  <resource name="Resource_TopicManagerNotExist">请选择你要操作的主题！</resource>
+  <resource name="Resource_TopicManagerTypeNotExist">请选择你操作方式！</resource>
+  <resource name="Resource_TopicManagerBoardNotExist">请选择你要把您选择的主题转移到那个论坛！</resource>
+  <resource name="Resource_TopicManagerBoardPowerErr">你所属的角色不能操作文章！</resource>
+  
+  
+  <resource name="Resource_BoardEmpty">请选择你要发布的论坛</resource>
+  <resource name="Resource_BoardNotExist">您选择的论坛不存在</resource>
+  
+  <resource name="Resource_TopicManagerComplete">操作{0}条帖子，其中成功{1}条!</resource>
+
+  <resource name="Resource_UserLoginUserNameNotExist">请输入用户名称！</resource>
+  <resource name="Resource_UserLoginUserPassWordNotExist">请输入用户密码！</resource>
+  <resource name="Resource_UserLoginUserErr">该用户不存在！</resource>
+  <resource name="Resource_UserLoginUserPassWordErr">用户密码错误！</resource>
+  <resource name="Resource_UserLoginUserFalseErr">该用户已经被禁闭了！</resource>
+
+  <resource name="Resource_UserRegUserNameExist">该用户名称已经被其他用户抢先注册了！</resource>
+  <resource name="Resource_UserRegUserEmailExist">该邮件地址已经被其他用户抢先注册了！</resource>
+
+  <resource name="Resource_UserRegUserNameIllegal">用户名称含有非法字符！</resource>
+  <resource name="Resource_UserRegUserNickNameIllegal">用户昵称含有非法字符！</resource>
+  <resource name="Resource_UserRegUserSignIllegal">个人签名含有非法字符！</resource>
+  <resource name="Resource_UserRegUserAboutIllegal">个人说明含有非法字符！</resource>
+  <resource name="Resource_UserIPIllegal">你的IP地址是非法的！</resource>
+  <resource name="Resource_UserRegComplete">注册成功！</resource>
+  <resource name="Resource_EditUserInfoComplete">修改成功！</resource>
+  <resource name="Resource_ForgottenPasswordComplete">找回密码成功!\n用户名：{0}\n新密码：{1} \n请重新登录，要保管好你的密码哦</resource>
+  
+  <resource name="Resource_SystemErr">系统错误，请重新进入！</resource>
+  <resource name="Resource_UserPassWordAnswerNotExist">请输入密码答案</resource>
+  <resource name="Resource_UserPassWordAnswerErr">密码答案错误</resource>
+  <resource name="Resource_UserEmailNotExist">请输入邮件地址</resource>
+  <resource name="Resource_UserPassWordSubmitOk">确定修改</resource>
+  <resource name="Resource_UserPassWordFortGotPassWordErr">请重新进入</resource>
+  <resource name="Resource_UserPassWordNotPassWord">两次输入的密码不一致</resource>
+  <resource name="Resource_ShowUserInfoNotExist">你要查看的用户信息不存在！</resource>
+  <resource name="Resource_UserEmailNotEmail">两次输入的邮件地址不一致</resource>
+  <resource name="Resource_UserEmailInvalid">请输入有效的邮件地址</resource>
+
+  
+  <resource name="Resource_ShowUserPrivacy">保密</resource>
+  <resource name="Resource_ShowUserPrivacyLogin">登录才能查看</resource>
+  <resource name="Resource_ShowUserPrivacyFriend">只对其好友公开</resource>
+
+  <resource name="Resource_UserMaritalStatus0">保密</resource>
+  <resource name="Resource_UserMaritalStatus1">未婚</resource>
+  <resource name="Resource_UserMaritalStatus2">已婚</resource>
+  <resource name="Resource_UserMaritalStatus3">离异</resource>
+  <resource name="Resource_UserMaritalStatus4">丧偶</resource>
+
+  <resource name="Resource_UserSexM">男生</resource>
+  <resource name="Resource_UserSexF">女生</resource>
+  <resource name="Resource_UserSexN">保密</resource>
+
+
+  <resource name="Resource_WebSiteUpFileRoleErr">你所属的角色不能上传文件</resource>
+  <resource name="Resource_WebSiteUpFileNotExist">请选择你要上传的文件</resource>
+  <resource name="Resource_WebSiteUpFileSizeErr">文件大小不能超过{0}K,你正在上传的文件为{1}K</resource>
+  <resource name="Resource_WebSiteUpFileTypeErr">只能上传 {0} 格式的文件</resource>
+  
+  <resource name="Resource_WebSiteSelectGroupRoleTitle">请选择你要加入的角色</resource>
+  <resource name="Resource_WebSiteSelectGroupTitle">请选择您要加入的俱乐部</resource>
+  <resource name="Resource_WebSiteSelectRoleTitle">请选择您要加入的权限</resource>
+
+  <resource name="Resource_WebSiteViewTopicPlayMoney">{0}，在{1}查看你发表的文章{2},给你支付了{3}个金币</resource>
+  <resource name="Resource_WebSiteMessagesNoticeTitle">系统提示</resource>
+  <resource name="Resource_WebSiteMessagesReTopic">{0}，在{1}回复了你发表的文章{2}</resource>
+
+  <resource name="Resource_WebSiteEmailReTopicTitle">东网论坛，回帖提示</resource>
+  <resource name="Resource_WebSiteEmailReTopic">{0}，在{1}回复了你发表的文章{2}</resource>
+  
+</WebSite>

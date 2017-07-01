@@ -1,0 +1,19 @@
+﻿body{ font-size:13px;overflow:hidden;}
+ul{ margin:0px; padding:0px;  list-style-type:none;}
+
+.buttonClass{ border:1px solid #9db3e6; background-color:#edf0f6; cursor:pointer;FILTER: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#EBF0F4,endColorStr=#FFFFFF);}
+
+.contenter{ text-align:center; overflow:hidden;  margin-left:auto ; margin-right:auto;}
+.content{ width:400px;  margin-left:auto;margin-right:auto; }
+.new_content{width:900px; text-align:left; margin:40px;}
+.item{ margin-bottom:10px;  width:88%;margin-left:auto ; margin-right:auto;}
+.item_btn{ text-align:center;}
+.txt_sideBar1{ float:left; width:120px; }
+.btn_sideBar{ text-align:center ; margin-left:auto ; margin-right:auto;}
+.txt_content{}
+
+.buttoncss{border:1px solid #cccccc;FILTER: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#EBF0F4,endColorStr=#FFFFFF);}
+
+.fdset{ border:1px solid #9db3e6; overflow:hidden;}
+.fdset_title{ background-color:#edf0f6; height:25px; line-height:25px;  text-indent:21px; font-weight:bold;}
+.fdset_content{ padding:25px;text-align:left;}

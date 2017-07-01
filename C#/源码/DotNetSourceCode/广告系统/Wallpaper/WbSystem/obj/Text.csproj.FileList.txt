@@ -1,0 +1,11 @@
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\Text.Properties.Resources.resources
+obj\Debug\Text.csproj.GenerateResource.Cache
+bin\Debug\Text.exe
+bin\Debug\Text.pdb
+obj\Debug\Text.exe
+obj\Debug\Text.pdb
+obj\Debug\Text.AdForm.resources
+obj\Debug\Text.BackForm.resources
+bin\Debug\SetWallpaper.dll
+bin\Debug\SetWallpaper.pdb

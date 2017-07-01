@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" xmlns="*">
+
+	<mx:Script>
+		<![CDATA[
+		import mx.utils.ObjectUtil;
+		import mx.rpc.events.FaultEvent;
+		import mx.rpc.events.ResultEvent;
+
+		import mx.messaging.*;
+		import mx.messaging.messages.*;
+		import mx.messaging.events.*;
+		import mx.controls.*;
+		
+		private function subscribe():void
+		{
+			consumer.selector = "User = '" + txtUser.text + "'";
+			consumer.subscribe();
+			//please note we do not set a selector in this sample for the "backoffice" queue so you will receive notification for all connected clients
+			consumerBO.subscribe();
+			appViews.selectedChild = orderView;
+		}		
+
+		private function messageHandler(event:MessageEvent):void
+		{
+			Alert.show("Notification queue Order Id: " + event.message.body.Id, "Order processing");
+		}
+
+		private function messageHandlerBO(event:MessageEvent):void
+		{
+			Alert.show("BackOffice queue Order Id: " + event.message.body.Id, "Order processing");
+		}
+		
+        private function messagefaultHandler(event:MessageFaultEvent):void 
+        {
+			// Handle fault event.
+			Alert.show(event.faultString, "Error");
+        }
+		
+		private function placeOrder():void
+		{
+			var order:Order = new Order();
+			order.Product = "Bolts";
+			order.Quantity = 10;
+			order.User = txtUser.text;
+			var message:AsyncMessage = new AsyncMessage();
+			message.body = order;
+			producer.send(message);
+		}
+		
+		]]>
+	</mx:Script>
+	
+	<mx:Consumer id="consumer" destination="orderNotifications" message="messageHandler(event)" fault="messagefaultHandler(event)"/> 
+	<mx:Producer id="producer" destination="orderProcessor" fault="messagefaultHandler(event)"/>
+	<mx:Consumer id="consumerBO" destination="backOffice" message="messageHandlerBO(event)" fault="messagefaultHandler(event)"/> 
+
+  <mx:ViewStack id="appViews" width="100%" height="100%" creationPolicy="all">
+  <!--login view-->
+    <mx:HBox horizontalAlign="center" verticalAlign="middle" id="connectView" width="100%" height="100%">
+      <mx:Panel title="Connect" id="connectPanel" horizontalScrollPolicy="off" verticalScrollPolicy="off">
+        <mx:Form id="connectForm">
+          <mx:FormItem label="Username:">
+            <mx:TextInput id="txtUser"/>
+          </mx:FormItem>
+        </mx:Form>
+        <mx:ControlBar>
+          <mx:Spacer width="100%" id="spacer1"/>
+          <mx:Button label="Connect" id="connectButton"
+              enabled="{(txtUser.text.length == 0 ) ? false : true}"
+              toolTip="{connectButton.enabled == true ? 'Click to connect' : 'Enter username'}" 
+              click="subscribe()"/>
+        </mx:ControlBar>
+      </mx:Panel>
+    </mx:HBox>
+  <!--end loginView-->
+    <mx:HBox horizontalAlign="center" verticalAlign="middle" id="orderView" width="100%" height="100%">
+      <mx:Canvas id="orderPanel" width="650" height="516" backgroundColor="#e6e6e6">
+		<mx:Button label="Place Order" click="placeOrder();"/>
+      </mx:Canvas>
+    </mx:HBox>
+  </mx:ViewStack>
+</mx:Application>

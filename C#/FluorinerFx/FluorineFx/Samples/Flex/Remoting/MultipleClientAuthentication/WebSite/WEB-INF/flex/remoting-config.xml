@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service id="remoting-service"
+    class="flex.messaging.services.RemotingService"
+    messageTypes="flex.messaging.messages.RemotingMessage">
+
+	  <!-- DO NOT CHANGE <adapters> SECTION-->
+    <adapters>
+        <adapter-definition id="dotnet" class="FluorineFx.Remoting.RemotingAdapter" default="true"/>
+    </adapters>
+
+    <default-channels>
+        <channel ref="my-amf"/>
+    </default-channels>
+
+    <destination id="fluorine">
+        <properties>
+            <source>*</source>
+        </properties>        
+        <security>
+			    <security-constraint ref="privileged-users"/>
+		    </security>
+    </destination>
+
+    <destination id="login">
+      <properties>
+        <source>ServiceLibrary.MyLoginService</source>
+      </properties>
+    </destination>
+
+  <!-- Configure a destination 
+		source: Fully qualified class name of the .NET object (remote object)
+		scope: Indicates whether the object is available in the request scope, the application scope, or the session scope -->
+	<!-- 
+    <destination id="destination name">
+        <properties>
+            <source>Fully qualified class name of the .NET object</source>
+            <scope>request</scope>
+        </properties>
+    </destination>
+    -->
+</service>

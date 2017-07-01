@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" creationComplete="init();">
+
+<mx:Script> 
+     <![CDATA[
+     		import mx.collections.ArrayCollection; 
+			import flash.net.*;
+			import flash.events.*;
+			import flash.utils.*;
+			import mx.controls.*;
+			import mx.core.UIComponent;
+
+			//NetConnection.defaultObjectEncoding = flash.net.ObjectEncoding.AMF0;
+			//SharedObject.defaultObjectEncoding  = flash.net.ObjectEncoding.AMF0;
+			
+			// echoResponder is used when nc.call("echo", echoResponder ...) is called.
+			private var echoResponder:Responder = new Responder(echoResult, echoStatus);
+			
+			// SharedObject and NetConnection vars
+			private var nc:NetConnection;
+			public var ro:SharedObject;
+            
+            private function init():void 
+            { 
+				writeln("Initializing application... in player: " + flash.system.Capabilities.version + "\n");
+				// create new connection add listeners
+            	nc = new NetConnection();            	
+				nc.addEventListener(NetStatusEvent.NET_STATUS, netStatus);
+				nc.addEventListener(SecurityErrorEvent.SECURITY_ERROR, netSecurityError);
+            } 
+            
+            private function connect():void
+            {
+    			connectButton.enabled = false;
+    			nc.connect("rtmp://localhost:1936/ChatApp", username.text, password.text);
+    			nc.client = this;
+            }
+
+            private function disconnect():void
+            {
+		        nc.close();
+            }
+            
+            private function netSecurityError(event:SecurityErrorEvent):void {
+	            writeln("netSecurityError: " + event);
+	        }
+             
+			private function netStatus(event:NetStatusEvent):void 
+			{
+				// Write out information about connection events:
+	            writeln("netStatus: " + event);
+	            var info:Object = event.info;
+	            for(var p:String in info) {
+	                writeln(p + " : " + info[p]);
+	            }
+	            writeln("");
+
+				switch (info.code) 
+				{
+					case "NetConnection.Connect.Success" :
+						appViews.selectedChild = chatView;
+	            		connectButton.enabled = true;
+	            		sendButton.enabled = true; 
+	            		
+	            		writeln("Connecting non-persistent Remote SharedObject...\n");
+						ro = SharedObject.getRemote("ChatUsers", nc.uri);
+						if(ro){
+							ro.addEventListener(SyncEvent.SYNC, OnSync);
+							ro.connect(nc);
+							ro.client = this; // refers to the scope of application and public funtions
+						}
+						getServerTime(); // get local time
+					   break;
+					case "NetConnection.Connect.Closed" :
+						appViews.selectedChild = connectView;
+						connectButton.enabled = true;
+	            		sendButton.enabled = false;  
+					   break;
+					case "NetConnection.Connect.Failed" :
+						Alert.show("Connect failed");
+					break;
+					case "NetConnection.Connect.Rejected" :
+						Alert.show("Connection rejected");
+						appViews.selectedChild = connectView;
+						connectButton.enabled = true;
+					   break;
+					default :
+					   //statements
+					   break;
+				}
+			}
+			
+			private function OnSync(event:SyncEvent):void 
+			{
+				// Show the ChangeList:
+				var info:Object;
+				var currentIndex:Number;
+				var currentNode:Object;
+				var changeList:Array = event.changeList;
+				var temp:Array = new Array();
+				
+				writeln("---- Shared Object Data -----");
+				for(var p:String in ro.data){ 
+					writeln("OnSync> RO: " + p + ": " + ro.data[p]);
+					temp.push(ro.data[p]);
+				}
+				this.usersList.dataProvider = temp; //update list of users
+
+				for (var i:Number=0; i < changeList.length; i++) 
+				{
+					info =  changeList[i];
+					for (var k:String in info){
+						writeln("OnSync> changeList[" + i + "]." + k + ": " + info[k]);
+					}
+				}
+			}
+		
+			/** echoResult is called when the echoResponder gets a result from the nc.call("echoMessage"..) */
+	        private function echoResult(msg:String):void{
+	        	writeln("echoResult: " + msg + "\n");
+	        	this.serverTime.text = msg;
+	        }
+	        
+	        /** echoResult is called when the echoResponder gets a error after a nc.call("echoMessage"..) */
+	        private function echoStatus(event:Event):void{
+	        	writeln("echoStatus: " + event);
+	        }
+	        
+			/** sendMessage is called when the sendButton is pressed to test ns.send */
+			private function sendMessage():void{
+				// call our remote function and send the message to all connected clients
+				nc.call("msgFromClient", null, sendMessageInput.text);
+				sendMessageInput.text = "";
+			}
+			
+			/** get server tme  */
+			private function getServerTime():void{
+				nc.call("getServerTime", echoResponder,  sendMessageInput.text);
+			}
+
+			/** showMessage is the function called by the inStream. See the netStatus function */
+			public function showMessage(msg:String):void{
+				writeln("showMessage: " + msg + "\n");
+			}
+			
+			public function setUserID(msg:Number):void{
+				writeln("showMessage: " + msg + "\n");
+			}
+			
+			public function setHistory(msg:String):void{
+				writeln("showHistory: " + msg + "\n");
+			}
+			
+			public function msgFromSrvr(msg:String):void{
+				writeMessage(msg);
+			}	
+					
+			/** 
+			 * writeln writes text into the traceArea TextArea instead of using trace. 
+			 * Note to get scrolling to the bottom of the TextArea to work validateNow()
+			 * must be called before scrolling.
+			 */		
+			public function writeln(msg:String):void{
+				traceArea.text += msg + "\n";
+				traceArea.validateNow();
+				traceArea.verticalScrollPosition = traceArea.maxVerticalScrollPosition;
+			}
+			
+			/** 
+			 * writeMessage writes text into the main chat text area
+			 */		
+			public function writeMessage(msg:String):void{
+				messageArea.text += msg + "\n";
+				messageArea.validateNow();
+				messageArea.verticalScrollPosition = messageArea.maxVerticalScrollPosition;
+			}
+     ]]> 
+ </mx:Script> 
+     
+  <mx:ViewStack id="appViews" width="100%" height="100%" creationPolicy="all">
+  <!--login view-->
+    <mx:HBox horizontalAlign="center" verticalAlign="middle" id="connectView" width="100%" height="100%">
+      <mx:Panel title="Connect" id="connectPanel" horizontalScrollPolicy="off" verticalScrollPolicy="off">
+        <mx:Form id="connectForm">
+          <mx:FormItem label="Username:">
+            <mx:TextInput id="username"/>
+          </mx:FormItem>
+          <mx:FormItem label="Password:">
+            <mx:TextInput id="password"  displayAsPassword="true"/>
+          </mx:FormItem>
+        </mx:Form>
+        <mx:ControlBar>
+          <mx:Spacer width="100%" id="spacer1"/>
+          <mx:Button label="Connect" id="connectButton"
+              enabled="{(username.text.length == 0 ) ? false : true}"
+              toolTip="{connectButton.enabled == true ? 'Click to connect' : 'Enter username and password'}" 
+              click="connect()"/>
+        </mx:ControlBar>
+      </mx:Panel>
+    </mx:HBox>
+  <!--end loginView-->
+    <mx:HBox horizontalAlign="center" verticalAlign="middle" id="chatView" width="100%" height="100%">
+      <mx:Canvas id="chatPanel" width="650" height="516" backgroundColor="#e6e6e6">
+		<mx:List width="127" height="210" x="513" y="66" id="usersList"/>
+		<mx:TextArea width="495" height="210" id="messageArea" wordWrap="true" x="10" y="66"/>
+		<mx:TextInput text="hello" id="sendMessageInput"  width="366" x="77" y="284"/>
+		<mx:Button label="Send" id="sendButton" enabled="false" click="sendMessage();" x="451" y="284"/>
+		<mx:Button label="Disconnect" id="disconnectButton" click="disconnect();" x="513" y="284" width="90"/>
+		<mx:TextInput id="serverTime"  width="243" x="397" y="10"/>
+		<mx:TextArea width="630" height="156" id="traceArea" wordWrap="true" x="10" y="350"/>
+		<mx:Label x="10" y="324" text="Trace Window" fontWeight="bold"/>
+		<mx:Label x="10" y="40" text="Message Window" fontWeight="bold"/>
+		<mx:Label x="513" y="40" text="Users" fontWeight="bold"/>
+		<mx:Label x="319" y="12" text="Local Time:"/>
+		<mx:Label x="10" y="286" text="Message:"/>
+      </mx:Canvas>
+    </mx:HBox>
+  </mx:ViewStack>
+</mx:Application>

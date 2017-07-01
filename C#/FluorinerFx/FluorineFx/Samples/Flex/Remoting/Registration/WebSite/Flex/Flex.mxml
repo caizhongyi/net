@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute">
+
+  <mx:Script>
+    <![CDATA[
+	    import mx.rpc.events.ResultEvent;
+	    import mx.utils.ObjectUtil;
+	    import mx.controls.Alert;
+	    import mx.rpc.events.FaultEvent;
+	
+		private function prepareRegister():void
+		{
+			appViews.selectedChild=registerView;
+			loginRO.GetCaptcha();
+		}
+		
+	    private function getCaptchaResult(event:ResultEvent):void {
+	    	var byteArr:ByteArray = event.result as ByteArray;
+			var loader:Loader = new Loader();
+			loader.contentLoaderInfo.addEventListener(Event.COMPLETE,loaderCompleteHandler);
+			loader.loadBytes(byteArr);	    	
+     	}		
+		
+		private function loaderCompleteHandler(event:Event):void
+		{
+			var loader:Loader = (event.target as LoaderInfo).loader;
+			loader.contentLoaderInfo.removeEventListener(Event.COMPLETE,loaderCompleteHandler);
+			imgCaptcha.source = loader;
+		}
+		
+		private function register():void
+		{
+			loginRO.Register(registerUsername.text, registerPassword.text, registerEmail.text, captchaCode.text);
+		}
+		
+		
+	    private function registerResult(event:ResultEvent):void {
+			logIn(registerUsername.text, registerPassword.text);
+	    }
+	    
+	    /* Call the login service*/
+	    private function logIn(username:String, password:String):void{		
+	      //use remote object method setCredentials to
+	      //enable Flex to send the values required 
+		    loginRO.logout();
+        	loginRO.setCredentials(username, password);
+	    	loginRO.Login();
+	    }
+	
+	    /*Call logout*/
+	    private function logOut():void
+	    {		
+		    loginRO.logout();
+        	appViews.selectedChild = loginView;
+	    }
+
+	    private function getSecureData():void
+	    {		
+		    fluorineRO.GetSecureData();
+	    }
+
+      	/* Display error messages returned */
+	    private function serverFault(event:FaultEvent):void{
+       		Alert.show( ObjectUtil.toString(event.fault.faultString), "Error", mx.controls.Alert.OK );
+	    }
+      
+	    private function loginResult(event:ResultEvent):void {
+		    var result:Boolean = event.result as Boolean;
+        	appViews.selectedChild = secureView;
+     	}
+      
+	    private function loginFault(event:FaultEvent):void{
+        	//Alert.show("Authentication failed", "Errors", mx.controls.Alert.OK);
+        	Alert.show( ObjectUtil.toString(event.fault), "Authentication failed" );
+	    }
+      
+	    private function getSecureDataResult(event:ResultEvent):void {
+		    var result:String = event.result as String;
+        Alert.show(result, "Secure data", mx.controls.Alert.OK);
+      }
+      
+    ]]>
+  </mx:Script>
+
+  <mx:ViewStack id="appViews" width="100%" height="100%">
+  <!--login view-->
+    <mx:HBox horizontalAlign="center" verticalAlign="middle" id="loginView" width="100%" height="100%">
+      <mx:Panel title="Login" id="loginPanel" horizontalScrollPolicy="off" verticalScrollPolicy="off">
+        <mx:Form id="loginForm">
+          <mx:FormItem label="Username:">
+            <mx:TextInput id="username"/>
+          </mx:FormItem>
+          <mx:FormItem label="Password:">
+            <mx:TextInput id="password"  displayAsPassword="true"/>
+          </mx:FormItem>
+        </mx:Form>
+        <mx:ControlBar>
+	      <mx:LinkButton id="registerLink"  label="Need to Register?" click="prepareRegister()"/>
+          <mx:Spacer width="100%" id="spacer1"/>
+          <mx:Button label="Login" id="loginButton"
+              enabled="{(username.text.length == 0 || password.text.length == 0) ? false : true}"
+              toolTip="{loginButton.enabled == true ? 'Click to submit' : 'Enter username and password'}" 
+              click="logIn(username.text, password.text)" />
+        </mx:ControlBar>
+      </mx:Panel>
+    </mx:HBox>
+  <!--end loginView-->
+  <!--registerView-->
+    <mx:HBox horizontalAlign="center" verticalAlign="middle" id="registerView" width="100%" height="100%">
+      <mx:Panel title="Register" id="registerPanel" horizontalScrollPolicy="off" verticalScrollPolicy="off" width="330">
+        <mx:Form id="registerForm">
+          <mx:FormItem label="Username:">
+            <mx:TextInput id="registerUsername" width="200"/>
+          </mx:FormItem>
+          <mx:FormItem label="Password:">
+            <mx:TextInput id="registerPassword"  displayAsPassword="true" width="200"/>
+          </mx:FormItem>
+          <mx:FormItem label="Email:">
+            <mx:TextInput id="registerEmail"  width="200"/>
+          </mx:FormItem>
+          <mx:FormItem>
+            <mx:Image id="imgCaptcha" width="200" height="50" />
+          </mx:FormItem>
+          <mx:FormItem label="">
+            <mx:Label text="Enter the code shown above:" />
+          </mx:FormItem>
+          <mx:FormItem label="">
+            <mx:TextInput id="captchaCode" width="200"/>
+          </mx:FormItem>
+        </mx:Form>
+        <mx:ControlBar>
+          <mx:LinkButton id="loginLink" label="Return to Login" click="appViews.selectedChild=loginView"/>
+          <mx:Spacer width="100%" id="spacer2"/>
+          <mx:Button label="Register" id="registerButton"
+              enabled="{(registerUsername.text.length == 0 || registerPassword.text.length == 0 || registerEmail.text.length == 0 || captchaCode.text.length == 0) ? false : true}"
+              toolTip="{registerButton.enabled == true ? 'Click to register' : 'Please fill in the required information'}" 
+              click="register()" />
+        </mx:ControlBar>
+      </mx:Panel>
+    </mx:HBox>
+  <!--end registerView-->
+
+  <!--secure area view, made visible after a successful login-->
+    <mx:HBox id="secureView" width="100%" height="100%">
+      <mx:ApplicationControlBar dock="true" paddingTop="0" paddingBottom="0" width="100%" >
+        <mx:Label text="Action:" />
+        <mx:Spacer width="5"/>
+        <mx:Button label="Get" click="getSecureData()"/>
+        <mx:Spacer width="5"/>
+        <mx:Button label="Logout" click="logOut()"/>
+      </mx:ApplicationControlBar>
+    </mx:HBox>
+  <!--end secure area view-->
+  </mx:ViewStack>
+
+  <mx:RemoteObject id="loginRO" destination="login">
+    <mx:method name="Login" result="loginResult(event)" fault="loginFault(event)" />
+    <mx:method name="GetCaptcha" result="getCaptchaResult(event)" fault="serverFault(event)" />
+    <mx:method name="Register" result="registerResult(event)" fault="serverFault(event)" />
+  </mx:RemoteObject>
+
+  <mx:RemoteObject id="fluorineRO" destination="fluorine" source="ServiceLibrary.SecureService">
+    <mx:method name="GetSecureData" result="getSecureDataResult(event)" fault="serverFault(event)" />
+  </mx:RemoteObject>
+	
+</mx:Application>

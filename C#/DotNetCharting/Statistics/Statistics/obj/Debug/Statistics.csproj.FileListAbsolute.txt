@@ -1,0 +1,15 @@
+F:\NET2.0\Statistics\Statistics\Statistics\obj\Debug\ResolveAssemblyReference.cache
+F:\NET2.0\Statistics\Statistics\Statistics\bin\Statistics.dll
+F:\NET2.0\Statistics\Statistics\Statistics\bin\Statistics.pdb
+F:\NET2.0\Statistics\Statistics\Statistics\bin\ChartExtents.dll
+F:\NET2.0\Statistics\Statistics\Statistics\bin\dotnetCHARTING.dll
+F:\NET2.0\Statistics\Statistics\Statistics\bin\ChartExtents.pdb
+F:\NET2.0\Statistics\Statistics\Statistics\obj\Debug\Statistics.dll
+F:\NET2.0\Statistics\Statistics\Statistics\obj\Debug\Statistics.pdb
+E:\caizhongyi\DotNetCharting\Statistics\Statistics\bin\Statistics.dll
+E:\caizhongyi\DotNetCharting\Statistics\Statistics\bin\Statistics.pdb
+E:\caizhongyi\DotNetCharting\Statistics\Statistics\bin\ChartExtents.dll
+E:\caizhongyi\DotNetCharting\Statistics\Statistics\bin\ChartExtents.pdb
+E:\caizhongyi\DotNetCharting\Statistics\Statistics\obj\Debug\ResolveAssemblyReference.cache
+E:\caizhongyi\DotNetCharting\Statistics\Statistics\obj\Debug\Statistics.dll
+E:\caizhongyi\DotNetCharting\Statistics\Statistics\obj\Debug\Statistics.pdb

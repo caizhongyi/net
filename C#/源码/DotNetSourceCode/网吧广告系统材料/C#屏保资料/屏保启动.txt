@@ -1,0 +1,14 @@
+using System.Runtime.InteropServices; 
+
+
+        [DllImport("user32.dll")]
+        private static extern int SendMessageA(int hWnd, int Msg, int wParam, int lParam);
+
+        private const int HWND_BROADCAST = 0xffff;
+        private const int WM_SYSCOMMAND = 0x112;
+        private const int SC_SCREENSAVE = 0xf140;
+
+        public void  screenSaveStart()
+        {
+                       SendMessageA(HWND_BROADCAST, WM_SYSCOMMAND, SC_SCREENSAVE, 0);
+        }

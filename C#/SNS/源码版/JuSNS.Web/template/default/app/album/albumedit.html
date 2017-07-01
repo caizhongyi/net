@@ -1,0 +1,61 @@
+﻿#parse("_head.html")
+<div id="snsmenu">
+#parse("_menu.html")
+</div>
+<div id="snsbody">
+    <div id="snshead">编辑相册【$albumaName】</div>
+    <div class="itemmenu">
+        <ul>
+            <li><a href="$webpath/app/album/photo$exname">最新图片</a></li>
+            <li><a href="$webpath/app/album/default$exname">所有相册</a></li>
+            <li><a href="$webpath/app/album/default$exname?q=my">我的相册</a></li>
+            <li><a href="$webpath/app/album/default$exname?q=friend">朋友的相册</a></li> 
+            <li class="current"><a>编辑相册</a></li> 
+            #if($gid>0)
+                <li><a href="$webpath/app/group/group$exname?gid=$gid">返回群组</a></li> 
+            #end
+            <li class="new"><a href="$webpath/app/album/photoadd$exname?aid=$aid&gid=$gid&groupname=$groupname" class="newitem">上传图片</a></li> 
+            <li class="search">搜索：<input id="kwd" name="kwd" value="#if($kwd)$kwd#else搜索相册#end" type="text" class="f-text w100" onclick="this.value=''" /> <input id="Button1" type="button" value="搜索" class="btn_gray2" onclick="search('album','')" /></li>
+        </ul>
+    </div>
+    <form action="" method="post">
+        <h4>编辑相册</h4>
+        <div class="pitem">
+            <em>相册名称</em>
+            <input id="albumname" name="albumname" class="f-text" type="text" value="$albumaName" />
+        </div>
+        <div class="pitem">
+            <em>相册简介</em>
+            <textarea id="albumdesc" name="albumdesc" class="f-text" type="text" style="width:50%;height:50px;">$albumdesc</textarea>
+        </div>
+        <div class="pitem">
+            <em>隐私设置</em>
+            <select id="Privacy" name="Privacy">
+                $privacy
+            </select>
+        </div>
+        <div class="pitem1">
+            <em>&nbsp;</em>
+            <input id="Button3" type="submit" value="保存相册" class="btn_blue4" onclick="return checkdata();" />
+            <input id="Submit1" type="reset" value="重新填写" class="btn_gray4" onclick="return checkdata();" />
+        </div>
+    </form>
+</div>
+<script type="text/javascript">
+
+    function checkdata()
+    {
+        var albumname=jQuery("#albumname").val();
+        if(albumname=="")
+        {
+            alert("请填写相册名称");
+            document.getElementById("albumname").focus();
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
+</script>
+#parse("_foot.html")

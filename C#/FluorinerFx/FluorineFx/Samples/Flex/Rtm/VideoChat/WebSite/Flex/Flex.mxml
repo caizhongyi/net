@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" creationComplete="startCamera()">
+
+	<mx:Script>
+		<![CDATA[
+			import mx.core.UIComponent;
+			import mx.controls.Alert;
+			import mx.rpc.events.FaultEvent;
+			import mx.rpc.events.ResultEvent;
+
+			private var nc:NetConnection = null;
+			private var camera:Camera;
+			private var microphone:Microphone;
+			private var nsPublish:NetStream = null;                      
+			private var nsPlay:NetStream = null;      
+			private var videoRemote:Video;
+			private var timer:Timer;
+	
+			private function startCamera():void
+			{	
+				videoRemote = new Video(160,120);
+				var uiComponent:UIComponent = new UIComponent();
+				uiComponent.addChild( videoRemote );	
+				uiComponent.width=160;		
+				uiComponent.height=120;
+				videoRemoteParent.addChild(uiComponent);
+				videoRemote.width=160;
+				videoRemote.height=120;
+				// get the default Flash camera and microphone
+				camera = Camera.getCamera();
+				microphone = Microphone.getMicrophone();
+			
+				camera.setMode(160, 120, 15, false);
+				camera.setQuality(0, 75);
+				camera.setKeyFrameInterval(24);
+				microphone.rate = 8;
+				
+				subscribeName.text = "testing";
+				publishName.text = "testing";
+					
+				enablePlayControls(false);
+				timer = new Timer(500);
+				timer.addEventListener("timer", timerHandler);
+			}
+			
+			private function doConnect():void
+			{
+				if (nc == null)
+				{
+					nc = new NetConnection();
+					nc.connect(connectStr.text);
+					
+					// get status information from the NetConnection object
+					nc.addEventListener( NetStatusEvent.NET_STATUS, handleConnectionNetStatus );
+					
+					connectButton.label = "Stop";
+					
+					timer.start();
+					
+					//videoCamera.clear();
+					videoCamera.attachCamera(camera);
+					
+					enablePlayControls(true);
+				}
+				else
+				{
+					if (nsPublish != null)
+					{
+						nsPublish.attachCamera(null);
+						nsPublish.attachAudio(null);
+					}
+					nsPublish = null;
+					
+					if (nsPlay != null)
+					{
+						//nsPlay.attachVideo(null);
+						nsPlay.attachAudio(null);
+					}
+					nsPlay = null;
+
+					videoCamera.attachCamera(null);
+					//videoRemote.attachAudio(null);
+					//videoCamera.clear();
+					
+					//videoRemote.attachVideo(null);
+					//videoRemote.attachAudio(null);
+					videoRemote.attachNetStream(null);
+					videoRemote.clear();
+					
+					nc.close();
+					nc = null;
+					
+					enablePlayControls(false);
+			
+					doSubscribe.label = 'Play';
+					doPublish.label = 'Publish';
+					
+					connectButton.label = "Connect";
+					prompt.text = "";
+				}
+			}
+			
+			private function handleConnectionNetStatus( event:NetStatusEvent ):void
+			{
+				trace("nc: "+event.info.code+" ("+event.info.description+")");
+				if (event.info.code == "NetConnection.Connect.Failed")
+					prompt.text = "Connection failed: Try rtmp://[server-ip-address]/VideoChat";
+				else if (event.info.code == "NetConnection.Connect.Rejected")
+					prompt.text = event.info.description;
+			
+			}
+			
+			private function enablePlayControls(isEnable:Boolean):void
+			{
+				doPublish.enabled = isEnable;
+				doSubscribe.enabled = isEnable;
+				publishName.enabled = isEnable;
+				subscribeName.enabled = isEnable;
+			}
+			
+			// function to monitor the frame rate and buffer length
+			private function timerHandler(event:TimerEvent):void
+			{
+				if (nsPlay != null)
+				{
+					fpsText.text = (Math.round(nsPlay.currentFPS*1000)/1000)+" fps";
+					bufferLenText.text = (Math.round(nsPlay.bufferLength*1000)/1000)+" secs";
+				}
+				else
+				{
+					fpsText.text = "";
+					bufferLenText.text = "";
+				}
+			}
+			
+			private function subscribe():void
+			{
+				if (doSubscribe.label == 'Play')
+				{
+					// create a new NetStream object for video playback
+					nsPlay = new NetStream(nc);
+					
+					// trace the NetStream status information
+					nsPlay.addEventListener( NetStatusEvent.NET_STATUS, handlePlayNetStatus );
+					
+					// set the buffer time to zero since it is chat
+					nsPlay.bufferTime = 0;
+					
+					// subscribe to the named stream
+					nsPlay.play(subscribeName.text);
+					
+					// attach to the stream
+					//videoRemote.attachVideo(nsPlay);
+					//videoRemote.attachAudio(nsPlay);
+					videoRemote.attachNetStream(nsPlay);
+					doSubscribe.label = 'Stop';
+				}
+				else
+				{		
+					// here we are shutting down the connection to the server
+					
+					//videoRemote.attachVideo(null);
+					//videoRemote.attachAudio(null);
+					videoRemote.attachNetStream(null);
+					nsPlay.play(null);
+					nsPlay.close();
+					
+					doSubscribe.label = 'Play';
+				}
+			}
+			
+			private function handlePlayNetStatus( event:NetStatusEvent ):void
+			{
+				trace("nsPlay: "+event.info.code+" ("+event.info.description+")");
+				if (event.info.code == "NetStream.Play.StreamNotFound" || event.info.code == "NetStream.Play.Failed")
+					prompt.text = event.info.description;
+			}			
+			
+			private function publish():void
+			{
+				if (doPublish.label == 'Publish')
+				{
+					// create a new NetStream object for video publishing
+					nsPublish = new NetStream(nc);
+					nsPublish.addEventListener( NetStatusEvent.NET_STATUS, handlePublishNetStatus );
+					
+					// set the buffer time to zero since it is chat
+					nsPublish.bufferTime = 0;
+				
+					// attach the camera and microphone to the server
+					nsPublish.attachCamera(camera);
+					nsPublish.attachAudio(microphone);
+					
+					// publish the stream by name
+					nsPublish.publish(publishName.text);
+					
+					doPublish.label = 'Stop';
+				}
+				else
+				{
+					// here we are shutting down the connection to the server
+					nsPublish.attachCamera(null);
+					nsPublish.attachAudio(null);
+					nsPublish.publish(null);
+					nsPublish.close();
+			
+					doPublish.label = 'Publish';
+				}
+			}
+	
+			private function handlePublishNetStatus( event:NetStatusEvent ):void
+			{
+				trace("nsPublish: "+event.info.code+" ("+event.info.description+")");
+				if (event.info.code == "NetStream.Play.StreamNotFound" || event.info.code == "NetStream.Play.Failed")
+					prompt.text = event.info.description;
+			}	
+				
+	        public function faultHandler(event:FaultEvent):void 
+	        {
+	             Alert.show("Fault",  event.fault.toString());
+	        }
+        			
+		]]>
+	</mx:Script>
+	
+	<mx:Panel title="VideoChat" >
+		<mx:HBox>
+			<mx:VBox width="50%">
+				<mx:VideoDisplay id="videoCamera" width="160" height="120"/>
+				<mx:ControlBar paddingLeft="0">
+					<mx:TextInput id="publishName" text="testing"/>
+					<mx:Button id="doPublish" click="publish()" label="Publish"/>
+				</mx:ControlBar>
+			</mx:VBox>
+			<mx:VBox width="50%">
+				<mx:Canvas id="videoRemoteParent" width="160" height="120" horizontalScrollPolicy="off" verticalScrollPolicy="off"/>
+				<mx:ControlBar paddingLeft="0">
+					<mx:TextInput id="subscribeName" text="testing"/>
+					<mx:Button id="doSubscribe" click="subscribe()" label="Play"/>
+				</mx:ControlBar>
+			</mx:VBox>
+		</mx:HBox>
+		<mx:HBox width="100%">
+			<mx:Label id="fpsText"/>
+			<mx:Spacer width="100%"/>
+			<mx:Label id="bufferLenText"/>
+		</mx:HBox>
+		<mx:ControlBar width="100%" paddingLeft="0">
+			<mx:TextInput id="connectStr" text="rtmp://localhost/VideoChat" width="100%"/>
+			<mx:Button id="connectButton" click="doConnect()" label="Connect"/>
+		</mx:ControlBar>
+		<mx:Label id="prompt"/>
+	</mx:Panel>
+	
+</mx:Application>

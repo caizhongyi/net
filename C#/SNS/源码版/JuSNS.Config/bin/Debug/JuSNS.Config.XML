@@ -1,0 +1,434 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JuSNS.Config</name>
+    </assembly>
+    <members>
+        <member name="P:JuSNS.Config.PokeConfig.Count">
+            <summary>
+            配置个数
+            </summary>
+        </member>
+        <member name="T:JuSNS.Config.PokeActionInfo">
+            <summary>
+            招呼信息
+            </summary>
+        </member>
+        <member name="P:JuSNS.Config.PokeActionInfo.Number">
+            <summary>
+            序号
+            </summary>
+        </member>
+        <member name="P:JuSNS.Config.PokeActionInfo.Value">
+            <summary>
+            短招呼
+            </summary>
+        </member>
+        <member name="P:JuSNS.Config.PokeActionInfo.More">
+            <summary>
+            招呼详细
+            </summary>
+        </member>
+        <member name="T:JuSNS.Config.DynConfig">
+            <summary>
+            用户动态的配置文件
+            </summary>
+        </member>
+        <member name="P:JuSNS.Config.DynConfig.Config">
+            <summary>
+            返回配置
+            </summary>
+        </member>
+        <member name="T:JuSNS.Config.SecretConfig">
+            <summary>
+            安全相关的配置
+            </summary>
+        </member>
+        <member name="M:JuSNS.Config.SecretConfig.#cctor">
+            <summary>
+            静态构造函数
+            </summary>
+        </member>
+        <member name="M:JuSNS.Config.SecretConfig.Reload">
+            <summary>
+            重新读取Config文件，重新取值
+            </summary>
+        </member>
+        <member name="P:JuSNS.Config.SecretConfig.UserKey">
+            <summary>
+            会员密码密钥
+            </summary>
+        </member>
+        <member name="P:JuSNS.Config.SecretConfig.UserIV">
+            <summary>
+            会员加密向量
+            </summary>
+        </member>
+        <member name="P:JuSNS.Config.SecretConfig.AdminKey">
+            <summary>
+            管理员密钥
+            </summary>
+        </member>
+        <member name="P:JuSNS.Config.SecretConfig.AdminIV">
+            <summary>
+            管理员加密向量
+            </summary>
+        </member>
+        <member name="P:JuSNS.Config.SecretConfig.UserSeparator">
+            <summary>
+            会员数字签名
+            </summary>
+        </member>
+        <member name="P:JuSNS.Config.SecretConfig.AdminSeparator">
+            <summary>
+            管理员数字签名
+            </summary>
+        </member>
+        <member name="P:JuSNS.Config.SecretConfig.InviteKey">
+            <summary>
+            邀请注册的加密key
+            </summary>
+        </member>
+        <member name="P:JuSNS.Config.SecretConfig.InviteIV">
+            <summary>
+            邀请注册的加密IV
+            </summary>
+        </member>
+        <member name="P:JuSNS.Config.SecretConfig.InviteSeparator">
+            <summary>
+            邀请注册的数字签名
+            </summary>
+        </member>
+        <member name="P:JuSNS.Config.SecretConfig.UserAppSeparator">
+            <summary>
+            用户应用程序数字签名
+            </summary>
+        </member>
+        <member name="P:JuSNS.Config.SecretConfig.UserAppKey">
+            <summary>
+            用户应用程序加密Key
+            </summary>
+        </member>
+        <member name="P:JuSNS.Config.SecretConfig.UserAppIV">
+            <summary>
+            用户应用程序加密IV
+            </summary>
+        </member>
+        <member name="T:JuSNS.Config.PicConfig">
+            <summary>
+            图片缩略图相关的配置
+            </summary>
+        </member>
+        <member name="M:JuSNS.Config.PicConfig.#cctor">
+            <summary>
+            静态构造函数
+            </summary>
+        </member>
+        <member name="M:JuSNS.Config.PicConfig.Reload">
+            <summary>
+            重新读取Config文件，重新取值
+            </summary>
+        </member>
+        <member name="M:JuSNS.Config.PicConfig.GetPortrtBrevi(System.String)">
+            <summary>
+            取得头象的相关的缩略图信息
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Config.PicConfig.GetPhotoBrevi(System.String)">
+            <summary>
+            获取照片相关的缩略图信息
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="P:JuSNS.Config.PicConfig.AppServer">
+            <summary>
+            应用图片服务器
+            </summary>
+        </member>
+        <member name="P:JuSNS.Config.PicConfig.AppDir">
+            <summary>
+            应用目录
+            </summary>
+        </member>
+        <member name="P:JuSNS.Config.PicConfig.PhotoRoot">
+            <summary>
+            获取原始图片根目录
+            </summary>
+        </member>
+        <member name="P:JuSNS.Config.PicConfig.ProtraitRoot">
+            <summary>
+            获取原始头象根目录
+            </summary>
+        </member>
+        <member name="P:JuSNS.Config.PicConfig.ProtraitServer">
+            <summary>
+            获取头象服务器
+            </summary>
+        </member>
+        <member name="P:JuSNS.Config.PicConfig.PhotoServer">
+            <summary>
+            获取照片服务器
+            </summary>
+        </member>
+        <member name="P:JuSNS.Config.PicConfig.Portrait">
+            <summary>
+            头象缩略图配置信息
+            </summary>
+        </member>
+        <member name="P:JuSNS.Config.PicConfig.Photo">
+            <summary>
+            照片缩略图配置信息
+            </summary>
+        </member>
+        <member name="P:JuSNS.Config.PicConfig.BlogServer">
+            <summary>
+            日志图片服务器
+            </summary>
+        </member>
+        <member name="P:JuSNS.Config.PicConfig.BlogOrigDir">
+            <summary>
+            原始日志图片根目录
+            </summary>
+        </member>
+        <member name="P:JuSNS.Config.PicConfig.BlogBrevDir">
+            <summary>
+            缩略日志图片根目录
+            </summary>
+        </member>
+        <member name="P:JuSNS.Config.PicConfig.GroupHead">
+            <summary>
+            头像配置
+            </summary>
+        </member>
+        <member name="P:JuSNS.Config.PicConfig.GroupDir">
+            <summary>
+            群组头像目录
+            </summary>
+        </member>
+        <member name="P:JuSNS.Config.PicConfig.GroupServer">
+            <summary>
+            群组头像服务器
+            </summary>
+        </member>
+        <member name="P:JuSNS.Config.PicConfig.SoapPass">
+            <summary>
+            取得soappass
+            </summary>
+        </member>
+        <member name="T:JuSNS.Config.PicConfigInfo">
+            <summary>
+            照片,头像相关的配置信息
+            </summary>
+        </member>
+        <member name="P:JuSNS.Config.PicConfigInfo.X">
+            <summary>
+            宽度
+            </summary>
+        </member>
+        <member name="P:JuSNS.Config.PicConfigInfo.Directory">
+            <summary>
+            保存目标
+            </summary>
+        </member>
+        <member name="P:JuSNS.Config.PicConfigInfo.Y">
+            <summary>
+            高度
+            </summary>
+        </member>
+        <member name="P:JuSNS.Config.PicConfigInfo.Priority">
+            <summary>
+            优先,0表示宽度优先,否则表示高度优先
+            </summary>
+        </member>
+        <member name="T:JuSNS.Config.EmailConfig">
+            <summary>
+            邮件相关的配置
+            </summary>
+        </member>
+        <member name="M:JuSNS.Config.EmailConfig.#cctor">
+            <summary>
+            静态构造函数
+            </summary>
+        </member>
+        <member name="M:JuSNS.Config.EmailConfig.Reload">
+            <summary>
+            重新读取Config文件，重新取值
+            </summary>
+        </member>
+        <member name="M:JuSNS.Config.EmailConfig.GetEmailLoginUrl(System.String)">
+            <summary>
+            取得邮箱对应的登录网页地址
+            </summary>
+            <param name="emailAddress"></param>
+            <returns></returns>
+        </member>
+        <member name="P:JuSNS.Config.EmailConfig.mode">
+            <summary>
+            邮件组件方式
+            </summary>
+        </member>
+        <member name="P:JuSNS.Config.EmailConfig.host">
+            <summary>
+            服务器
+            </summary>
+        </member>
+        <member name="P:JuSNS.Config.EmailConfig.port">
+            <summary>
+            端口
+            </summary>
+        </member>
+        <member name="P:JuSNS.Config.EmailConfig.from">
+            <summary>
+            发送邮件地址
+            </summary>
+        </member>
+        <member name="P:JuSNS.Config.EmailConfig.username">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:JuSNS.Config.EmailConfig.password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:JuSNS.Config.EmailConfig.enablessl">
+            <summary>
+            SSL加密
+            </summary>
+        </member>
+        <member name="P:JuSNS.Config.EmailConfig.retrieve">
+            <summary>
+            密码找回的邮件内容
+            </summary>
+        </member>
+        <member name="P:JuSNS.Config.EmailConfig.register">
+            <summary>
+            注册发送邮件内容
+            </summary>
+        </member>
+        <member name="P:JuSNS.Config.EmailConfig.emailactive">
+            <summary>
+            注册激活邮件内容
+            </summary>
+        </member>
+        <member name="P:JuSNS.Config.EmailConfig.modifyemail">
+            <summary>
+            修改电子邮件后发送的邮件内容
+            </summary>
+        </member>
+        <member name="P:JuSNS.Config.EmailConfig.invite">
+            <summary>
+            邀请好友加入邮件内容
+            </summary>
+        </member>
+        <member name="T:JuSNS.Config.SiteTemplateConfig">
+            <summary>
+            模板配置
+            </summary>
+        </member>
+        <member name="M:JuSNS.Config.SiteTemplateConfig.#ctor(System.String)">
+            <summary>
+            取得模板内容
+            </summary>
+            <param name="tempname">模板名称</param>
+        </member>
+        <member name="P:JuSNS.Config.SiteTemplateConfig.HTML">
+            <summary>
+            模板内容
+            </summary>
+        </member>
+        <member name="T:JuSNS.Config.UserApiConfig">
+            <summary>
+            用户API文件配置读取
+            </summary>
+        </member>
+        <member name="M:JuSNS.Config.UserApiConfig.GetType(System.Int32)">
+            <summary>
+            取得应用类别
+            </summary>
+            <param name="type">类别编号</param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Config.UserApiConfig.#cctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:JuSNS.Config.UserApiConfig.Reload">
+            <summary>
+            重新加载配置文件
+            </summary>
+        </member>
+        <member name="P:JuSNS.Config.UserApiConfig.SysConfig">
+            <summary>
+            取得用户API系统配置
+            </summary>
+        </member>
+        <member name="P:JuSNS.Config.UserApiConfig.AppType">
+            <summary>
+            应用类别
+            </summary>
+        </member>
+        <member name="M:JuSNS.Config.emailsetConfig.#cctor">
+            <summary>
+            静态构造函数
+            </summary>
+        </member>
+        <member name="M:JuSNS.Config.emailsetConfig.Reload">
+            <summary>
+            重新读取Config文件，重新取值
+            </summary>
+        </member>
+        <member name="P:JuSNS.Config.emailsetConfig.letter">
+            <summary>
+            邮件内容
+            </summary>
+        </member>
+        <member name="M:JuSNS.Config.BaseConfig.GetConfigValue(System.String)">
+            <summary>
+            读JuSite.config取配置文件
+            </summary>
+            <param name="Target"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Config.BaseConfig.GetBaseConfigValue(System.String)">
+            <summary>
+            读base.config取配置文件
+            </summary>
+            <param name="Target"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Config.BaseConfig.GetConfigValue(System.String,System.String,System.Boolean[])">
+            <summary>
+            读JuSite.config取配置文件
+            </summary>
+            <param name="Target"></param>
+            <param name="ConfigPathName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Config.SysConfig.#cctor">
+            <summary>
+            静态构造函数
+            </summary>
+        </member>
+        <member name="M:JuSNS.Config.SysConfig.Reload(System.Boolean)">
+            <summary>
+            重新读取Config文件，重新取值
+            </summary>
+        </member>
+        <member name="P:JuSNS.Config.SysConfig.KeyWord">
+            <summary>
+            关键字
+            </summary>
+        </member>
+        <member name="P:JuSNS.Config.SysConfig.UserName">
+            <summary>
+            姓名
+            </summary>
+        </member>
+    </members>
+</doc>

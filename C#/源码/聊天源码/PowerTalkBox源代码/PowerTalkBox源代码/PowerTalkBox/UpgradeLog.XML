@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="PowerTalkBox">
+</Property><Property Name="解决方案文件" Value="F:\聊天源码\PowerTalkBox源代码\PowerTalkBox源代码\PowerTalkBox\PowerTalkBox.sln">
+</Property><Property Name="用户选项文件" Value="F:\聊天源码\PowerTalkBox源代码\PowerTalkBox源代码\PowerTalkBox\PowerTalkBox.suo">
+</Property><Property Name="Date" Value="2009年6月14日">
+</Property><Property Name="Time" Value="12:27">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="PowerTalkBox.sln" Description="文件已成功备份为 F:\聊天源码\PowerTalkBox源代码\PowerTalkBox源代码\PowerTalkBox\Backup\PowerTalkBox.sln">
+</Event><Event ErrorLevel="0" Project="" Source="PowerTalkBox.suo" Description="文件已成功备份为 F:\聊天源码\PowerTalkBox源代码\PowerTalkBox源代码\PowerTalkBox\Backup\PowerTalkBox.suo">
+</Event><Event ErrorLevel="0" Project="PowerTalkBox" Source="PowerTalkBox.csproj" Description="项目文件已成功备份为 F:\聊天源码\PowerTalkBox源代码\PowerTalkBox源代码\PowerTalkBox\Backup\PowerTalkBox.csproj">
+</Event><Event ErrorLevel="0" Project="PowerTalkBox" Source="Design\Html.cs" Description="文件已成功备份为 F:\聊天源码\PowerTalkBox源代码\PowerTalkBox源代码\PowerTalkBox\Backup\Design\Html.cs">
+</Event><Event ErrorLevel="0" Project="PowerTalkBox" Source="Design\PowerTalkBoxDesigner.cs" Description="文件已成功备份为 F:\聊天源码\PowerTalkBox源代码\PowerTalkBox源代码\PowerTalkBox\Backup\Design\PowerTalkBoxDesigner.cs">
+</Event><Event ErrorLevel="0" Project="PowerTalkBox" Source="Design\UserNameTest.cs" Description="文件已成功备份为 F:\聊天源码\PowerTalkBox源代码\PowerTalkBox源代码\PowerTalkBox\Backup\Design\UserNameTest.cs">
+</Event><Event ErrorLevel="0" Project="PowerTalkBox" Source="Enum\ContrlList.cs" Description="文件已成功备份为 F:\聊天源码\PowerTalkBox源代码\PowerTalkBox源代码\PowerTalkBox\Backup\Enum\ContrlList.cs">
+</Event><Event ErrorLevel="0" Project="PowerTalkBox" Source="Events\Args.cs" Description="文件已成功备份为 F:\聊天源码\PowerTalkBox源代码\PowerTalkBox源代码\PowerTalkBox\Backup\Events\Args.cs">
+</Event><Event ErrorLevel="0" Project="PowerTalkBox" Source="Events\Events.cs" Description="文件已成功备份为 F:\聊天源码\PowerTalkBox源代码\PowerTalkBox源代码\PowerTalkBox\Backup\Events\Events.cs">
+</Event><Event ErrorLevel="0" Project="PowerTalkBox" Source="PowerTalk.cs" Description="文件已成功备份为 F:\聊天源码\PowerTalkBox源代码\PowerTalkBox源代码\PowerTalkBox\Backup\PowerTalk.cs">
+</Event><Event ErrorLevel="0" Project="PowerTalkBox" Source="PowerTalkBox.cs" Description="文件已成功备份为 F:\聊天源码\PowerTalkBox源代码\PowerTalkBox源代码\PowerTalkBox\Backup\PowerTalkBox.cs">
+</Event><Event ErrorLevel="0" Project="PowerTalkBox" Source="Properties\AssemblyInfo.cs" Description="文件已成功备份为 F:\聊天源码\PowerTalkBox源代码\PowerTalkBox源代码\PowerTalkBox\Backup\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="PowerTalkBox" Source="Properties\Resources.Designer.cs" Description="文件已成功备份为 F:\聊天源码\PowerTalkBox源代码\PowerTalkBox源代码\PowerTalkBox\Backup\Properties\Resources.Designer.cs">
+</Event><Event ErrorLevel="0" Project="PowerTalkBox" Source="ToolBarContrls\Bars.cs" Description="文件已成功备份为 F:\聊天源码\PowerTalkBox源代码\PowerTalkBox源代码\PowerTalkBox\Backup\ToolBarContrls\Bars.cs">
+</Event><Event ErrorLevel="0" Project="PowerTalkBox" Source="UpLoader.cs" Description="文件已成功备份为 F:\聊天源码\PowerTalkBox源代码\PowerTalkBox源代码\PowerTalkBox\Backup\UpLoader.cs">
+</Event><Event ErrorLevel="0" Project="PowerTalkBox" Source="PowerTalkBox.bmp" Description="文件已成功备份为 F:\聊天源码\PowerTalkBox源代码\PowerTalkBox源代码\PowerTalkBox\Backup\PowerTalkBox.bmp">
+</Event><Event ErrorLevel="0" Project="PowerTalkBox" Source="Properties\Resources.resx" Description="文件已成功备份为 F:\聊天源码\PowerTalkBox源代码\PowerTalkBox源代码\PowerTalkBox\Backup\Properties\Resources.resx">
+</Event><Event ErrorLevel="0" Project="PowerTalkBox" Source="PowerTalkBox.csproj" Description="项目已成功转换">
+</Event><Event ErrorLevel="3" Project="PowerTalkBox" Source="PowerTalkBox.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="PowerTalkBox.sln" Description="成功转换解决方案">
+</Event><Event ErrorLevel="3" Project="" Source="PowerTalkBox.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="PowerTalkBox" Source="PowerTalkBox.csproj" Description="扫描完成: 项目文件不需要升级。">
+</Event></UpgradeLog>

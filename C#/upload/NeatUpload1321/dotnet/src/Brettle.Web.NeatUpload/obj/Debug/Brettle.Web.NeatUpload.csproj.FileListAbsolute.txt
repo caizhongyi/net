@@ -1,0 +1,14 @@
+F:\51aspx开发\reference\NeatUpload\NeatUpload-1.3.21\dotnet\src\Brettle.Web.NeatUpload\install\bin\Brettle.Web.NeatUpload.XML
+F:\51aspx开发\reference\NeatUpload\NeatUpload-1.3.21\dotnet\src\Brettle.Web.NeatUpload\install\bin\Brettle.Web.NeatUpload.dll
+F:\51aspx开发\reference\NeatUpload\NeatUpload-1.3.21\dotnet\src\Brettle.Web.NeatUpload\install\bin\Brettle.Web.NeatUpload.pdb
+F:\51aspx开发\reference\NeatUpload\NeatUpload-1.3.21\dotnet\src\Brettle.Web.NeatUpload\install\bin\en-US\Brettle.Web.NeatUpload.resources.dll
+F:\51aspx开发\reference\NeatUpload\NeatUpload-1.3.21\dotnet\src\Brettle.Web.NeatUpload\install\bin\fr\Brettle.Web.NeatUpload.resources.dll
+F:\51aspx开发\reference\NeatUpload\NeatUpload-1.3.21\dotnet\src\Brettle.Web.NeatUpload\obj\Debug\ResolveAssemblyReference.cache
+F:\51aspx开发\reference\NeatUpload\NeatUpload-1.3.21\dotnet\src\Brettle.Web.NeatUpload\obj\Debug\NeatUpload.Strings.resources
+F:\51aspx开发\reference\NeatUpload\NeatUpload-1.3.21\dotnet\src\Brettle.Web.NeatUpload\obj\Debug\NeatUpload.Strings.en-US.resources
+F:\51aspx开发\reference\NeatUpload\NeatUpload-1.3.21\dotnet\src\Brettle.Web.NeatUpload\obj\Debug\NeatUpload.Strings.fr.resources
+F:\51aspx开发\reference\NeatUpload\NeatUpload-1.3.21\dotnet\src\Brettle.Web.NeatUpload\obj\Debug\Brettle.Web.NeatUpload.csproj.GenerateResource.Cache
+F:\51aspx开发\reference\NeatUpload\NeatUpload-1.3.21\dotnet\src\Brettle.Web.NeatUpload\obj\Debug\en-US\Brettle.Web.NeatUpload.resources.dll
+F:\51aspx开发\reference\NeatUpload\NeatUpload-1.3.21\dotnet\src\Brettle.Web.NeatUpload\obj\Debug\fr\Brettle.Web.NeatUpload.resources.dll
+F:\51aspx开发\reference\NeatUpload\NeatUpload-1.3.21\dotnet\src\Brettle.Web.NeatUpload\obj\Debug\Brettle.Web.NeatUpload.dll
+F:\51aspx开发\reference\NeatUpload\NeatUpload-1.3.21\dotnet\src\Brettle.Web.NeatUpload\obj\Debug\Brettle.Web.NeatUpload.pdb

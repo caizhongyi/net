@@ -1,0 +1,28 @@
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\SLMusicPlayer\SLMusicPlayer.Web\bin\SLMusicPlayer.Web.dll
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\SLMusicPlayer\SLMusicPlayer.Web\bin\SLMusicPlayer.Web.pdb
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\SLMusicPlayer\SLMusicPlayer.Web\bin\System.Web.Silverlight.dll
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\SLMusicPlayer\SLMusicPlayer.Web\bin\de\System.Web.Silverlight.resources.dll
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\SLMusicPlayer\SLMusicPlayer.Web\bin\es\System.Web.Silverlight.resources.dll
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\SLMusicPlayer\SLMusicPlayer.Web\bin\fr\System.Web.Silverlight.resources.dll
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\SLMusicPlayer\SLMusicPlayer.Web\bin\it\System.Web.Silverlight.resources.dll
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\SLMusicPlayer\SLMusicPlayer.Web\bin\ja\System.Web.Silverlight.resources.dll
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\SLMusicPlayer\SLMusicPlayer.Web\bin\ko\System.Web.Silverlight.resources.dll
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\SLMusicPlayer\SLMusicPlayer.Web\bin\zh-Hans\System.Web.Silverlight.resources.dll
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\SLMusicPlayer\SLMusicPlayer.Web\bin\zh-Hant\System.Web.Silverlight.resources.dll
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\SLMusicPlayer\SLMusicPlayer.Web\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\SLMusicPlayer\SLMusicPlayer.Web\obj\Debug\SLMusicPlayer.Web.dll
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\SLMusicPlayer\SLMusicPlayer.Web\obj\Debug\SLMusicPlayer.Web.pdb
+E:\downcode\SLMusicPlayer\SLMusicPlayer.Web\bin\SLMusicPlayer.Web.dll
+E:\downcode\SLMusicPlayer\SLMusicPlayer.Web\bin\SLMusicPlayer.Web.pdb
+E:\downcode\SLMusicPlayer\SLMusicPlayer.Web\bin\System.Web.Silverlight.dll
+E:\downcode\SLMusicPlayer\SLMusicPlayer.Web\bin\de\System.Web.Silverlight.resources.dll
+E:\downcode\SLMusicPlayer\SLMusicPlayer.Web\bin\es\System.Web.Silverlight.resources.dll
+E:\downcode\SLMusicPlayer\SLMusicPlayer.Web\bin\fr\System.Web.Silverlight.resources.dll
+E:\downcode\SLMusicPlayer\SLMusicPlayer.Web\bin\it\System.Web.Silverlight.resources.dll
+E:\downcode\SLMusicPlayer\SLMusicPlayer.Web\bin\ja\System.Web.Silverlight.resources.dll
+E:\downcode\SLMusicPlayer\SLMusicPlayer.Web\bin\ko\System.Web.Silverlight.resources.dll
+E:\downcode\SLMusicPlayer\SLMusicPlayer.Web\bin\zh-Hans\System.Web.Silverlight.resources.dll
+E:\downcode\SLMusicPlayer\SLMusicPlayer.Web\bin\zh-Hant\System.Web.Silverlight.resources.dll
+E:\downcode\SLMusicPlayer\SLMusicPlayer.Web\obj\Debug\ResolveAssemblyReference.cache
+E:\downcode\SLMusicPlayer\SLMusicPlayer.Web\obj\Debug\SLMusicPlayer.Web.dll
+E:\downcode\SLMusicPlayer\SLMusicPlayer.Web\obj\Debug\SLMusicPlayer.Web.pdb

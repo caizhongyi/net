@@ -1,0 +1,42 @@
+﻿/* 1、重置浏览器默认值。 */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,
+blockquote,th,td {margin:0; padding:0; }
+table { border-collapse:collapse; border-spacing:0; }
+fieldset,img { border:0; }
+address,caption,cite,code,dfn,em,strong,th,var { font-style:normal; font-weight:normal; }
+ol,ul { list-style:none; }
+caption,th { text-align:left; }
+h1,h2,h3,h4,h5,h6 { font-size:100%; font-weight:normal; }
+q:before,q:after { content:“; }
+abbr,acronym { border:0; }
+html {font-size: 62.5%;}
+
+/* 2、系统的全局样式。 */
+body
+{
+    background: #999999;
+    font-size: 1.4em;
+    font-family: Arial,宋体;
+    color: #000000;
+    text-align: left;
+}
+/* 内容容器 */
+div.container
+{
+    width: 100%;
+}
+/* 正在加载 */
+div.load
+{ 
+    width: 250px;
+    height: 50px;
+    border: solid 2px #333333;
+    background: #FFFFFF;
+    text-align: center;
+    padding: 10px;
+    position: absolute; 
+    top: 50%; 
+    left: 50%;
+    margin-left: -125px;
+    margin-top: -25px; 
+}

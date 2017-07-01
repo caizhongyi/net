@@ -1,0 +1,8 @@
+obj\Debug\ResolveAssemblyReference.cache
+bin\Components.dll
+bin\Components.pdb
+bin\DoNetBbs.dll
+bin\DosOrg.dll
+obj\Debug\Components.dll
+obj\Debug\Components.pdb
+bin\DataProviders.dll

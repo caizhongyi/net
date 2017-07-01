@@ -1,0 +1,97 @@
+<!--
+function Hide() {//Òþ²Ø²ã
+closead();
+}
+
+function showpos() 
+{ 
+var pos=document.body.scrollTop; 
+pos=pos; 
+if(pos==0) 
+paddingB.style.display="none"; 
+else 
+paddingB.style.display="block"; 
+paddingB.style.height=pos+"px"; 
+//document.title=pos; 
+} 
+
+function showposs() 
+{ 
+var pos=document.body.scrollTop; 
+pos=pos; 
+if(pos==0) 
+paddingBb.style.display="none"; 
+else 
+paddingBb.style.display="block"; 
+paddingBb.style.height=pos+"px"; 
+//document.title=pos; 
+} 
+
+function closead() 
+{ 
+addiv.style.display="none"; 
+} 
+
+function closead2() 
+{ 
+addiv2.style.display="none"; 
+} 
+
+function showad4() 
+{
+addiv4.style.display="";
+
+}
+function closead4() 
+{ 
+addiv4.style.display="none"; 
+} 
+function move()  
+{ 
+document.getElementById("addiv4").style.top =  (document.body.scrollTop?document.body.scrollTop:document.documentElement.scrollTop) + 320 + 'px'; 
+setTimeout("move();",1800) 
+} 
+
+function showad() 
+{ 
+addiv.style.display="";
+} 
+
+function opps()
+{
+window.open('http://www.aspqq.com/xz.asp','88','top=0,left=100,width=304,height=219,scrollbars=no,resizable=no,status=yes,z-look=yes,alwaysRaised=yes,location=no,depended=no,center:yes');
+}
+
+function fcu()
+{
+var str1 =document.getElementById("div1").innerHTML;
+var str2='yqjt';
+var rValue=str1.indexOf(str2);
+if (rValue > -1)
+{
+window.focus();
+yqs();
+showad4();
+}
+}
+
+function popo(){ 
+var xxmlhttp = new ActiveXObject("Microsoft.XMLHTTP"); 
+xxmlhttp.open("GET", "http://www.aspqq.com/f_del.asp?fuse="+fuse.value+"&use="+use.value+"&fsid="+fsid.value,true); 
+xxmlhttp.send(null)
+} 
+
+function yqs()
+{
+document.getElementById("addiv3").src="http://www.aspqq.com/k_yq_jc.asp?kuse="+kuse.value+"&sjs="+sjs.value+""; 
+}
+
+function onner()
+{
+document.getElementById("kjs").src="http://www.aspqq.com/kf3.asp?kuse="+kuse.value+"&sjs="+sjs.value+""; 
+fcu();
+setTimeout("onner()", 8000); 
+} 
+onner()
+
+-->

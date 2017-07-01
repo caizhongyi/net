@@ -1,0 +1,35 @@
+﻿<html>
+	<head>
+	<title></title>
+<script type="text/javascript" src="../czy-js-all.js"></script>
+<link rel="stylesheet" href="../czy-css-all.css" type="text/css"/>
+<style type="text/css">
+#drag{ height:50px; width:50px; background-color:Red;}
+</style>
+<script type="text/javascript">
+
+window.onload=function()
+{
+     czyjs.Element.CreateElement(
+     {
+        id:"test", //元素ID
+	    name:"test", //无素名称
+	    className:'', //样式选择器名称
+	    contenter:'', // 为body则为body对像,为
+	    elementType:'div' //无素类型
+     }
+     )
+    alert(document.body.innerHTML);
+}
+
+
+
+</script>
+
+	</head>
+	<body>
+<div id="drag"></div>
+
+		
+	</body>
+</html>

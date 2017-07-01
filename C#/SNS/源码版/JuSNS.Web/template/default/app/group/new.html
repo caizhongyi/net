@@ -1,0 +1,145 @@
+﻿#parse("_head.html")
+<script type="text/javascript" src="$webpath/library/js/area.js"></script>
+<script type="text/javascript" src="$webpath/library/xmleditor/xheditor-zh-cn.min.js"></script>
+<div id="snsmenu">
+#parse("_menu.html")
+</div>
+<div id="snsbody">
+    <div id="snshead"><span class="l">创建$groupname</span><span class="r"><input id="kwd" name="kwd" value="#if($kwd)$kwd#else搜索社群#end" type="text" class="f-text w100" onclick="this.value=''" /> <input id="Button1" type="button" value="搜索" class="btn_gray2" onclick="search('group','$q')" /></span></div>
+
+    <div >
+    <div class="itemmenu">
+        <ul>
+            <li><a href="$webpath/app/group/grouptopic$exname">最新话题</a></li>
+            <li><a href="$webpath/app/group/default$exname">所有$groupname</a></li>
+            <li><a href="$webpath/app/group/default$exname?q=rec">推荐$groupname</a></li> 
+            <li><a href="$webpath/app/group/default$exname?q=join">我加入的$groupname</a></li>
+            <li><a href="$webpath/app/group/default$exname?q=my">我的$groupname</a></li>
+            <li><a href="$webpath/app/group/default$exname?q=friend">朋友的$groupname</a></li> 
+            #if($islight)
+                <li><a href="$webpath/app/group/default$exname?q=light" class="light">名人机构$groupname</a></li> 
+            #end
+            <li class="current"><a href="javascript:;">$cpagetitle</a></li> 
+        </ul>
+        
+    </div>
+    </div>
+    <div id="snsbody-all">
+       <form action="" method="post" enctype="multipart/form-data">
+            <div class="pitem">
+                <em>$groupname名称</em><input id="groupname" name="groupname" type="text" value="#if($gname)$gname#end" class="f-text" style="width:300px;" />
+            </div>
+            <div class="pitem">
+                <em>$groupname简介/公告</em><textarea id="bulletin" name="bulletin" style="height:150px;width:480px;" class="xheditor-mini {upBtnText:'上传',upMultiple:5,upLinkUrl:'$editfile',upImgUrl:'$edit_pic',skin:'$editskin'}">#if($bulletin)$bulletin#end</textarea>
+            </div>       
+            <div class="pitem">
+                <em>$groupname分类</em>
+                 <select name="classid" id="classid">
+                    ${classlist}
+                </select>
+            </div>        
+             
+            <div class="pitem">
+                <em>所在地区</em>
+                <select name="provinceid" id="provinceid" onchange="ChangeProv(this);">
+                    <option value="0" selected="selected"></option>
+                    <script type="text/javascript">
+                            var returnvalue = "";
+                            for (i=0; i<Area.length; i++) 
+                            {
+                                if(Area[i][1]==$areaid)
+                                {
+                                    returnvalue += "<option value='" + Area[i][1] + "' selected>" + Area[i][2] + "</option>";
+                                }
+                                else
+                                {
+                                    returnvalue += "<option value='" + Area[i][1] + "'>" + Area[i][2] + "</option>";
+                                }                            
+                           }
+                            document.write(returnvalue);
+                    </script>  
+                </select>
+                <select name="cityid" id="cityid" style="display: none;"></select>
+            </div>        
+            <div class="pitem">
+                <em>隐私设置</em>
+                 <select name="privacy" id="privacy">
+                    ${privacy}
+                </select>
+            </div>        
+            <div class="pitem">
+                <em>加入$groupname设置</em>
+                 <select name="publics" id="publics">
+                    ${publics}
+                </select>
+            </div>        
+            <div class="pitem">
+                <em>$groupname图片</em>
+                <input id="Portrait"  name="Portrait" class="f-file" type="file" />
+                <input id="hidportrait"  name="hidportrait" class="f-file" type="hidden" value="#if($portrait)$portrait#end" />
+            </div>    
+            <div class="pitem">
+                <em>$groupname模板</em>
+                 <select name="skinDir" id="skinDir">
+                    <option value="default">默认模板</option>
+                </select>
+            </div> 
+            <div class="pitem"><em>条款</em>
+                <label><input id="agreecontent" name="agreecontent" type="checkbox" value="1" />同意条款</label> <a href="$webpath/help?q=agree" target="_blank">查看条款</a>
+            </div>
+            <div class="pitem1">
+                <em>&nbsp;</em>
+                <input id="Submit1" type="submit" value="$cpagetitle" class="btn_blue6" onclick="return checkdata();" />
+                <input id="reset1" type="reset" value="重新填写" class="btn_gray4" />
+            </div>    
+        </form>
+    </div>
+</div>
+<script type="text/javascript">
+    function checkdata()
+    {
+        var gname=jQuery("#groupname").val();
+        var classid=jQuery("#classid").val();
+        if(gname=="")
+        {
+            showErrorResult("请填写$groupname名称");
+            return false;
+        }
+        if(classid=="0")
+        {
+            showErrorResult("请填写$groupname分类");
+            return false;
+        }
+        if(!document.getElementById("agreecontent").checked)
+        {
+            showErrorResult("必须要同意条款才能注册。");return false;
+        }
+        return true;
+    }
+    
+function ChangeProv(obj) 
+{
+    var objcity = document.getElementById('cityid');
+    objcity.style.display = '';
+    objcity.options.length = 0;
+    var m=0;  
+    var sitem=$sitem;
+    for (i=0; i<Area.length; i++) 
+    {
+        if(Area[i][0] == obj.value&&Area[i][0] !="0")
+        {
+            var opt = document.createElement('option');
+            opt.value = Area[i][1];
+            opt.innerHTML = Area[i][2];
+            objcity.appendChild(opt);
+               if(Area[i][1]==sitem)
+                {
+                    document.getElementById("cityid").options[m].selected=true;
+                }
+                m++;
+        }
+    }
+}  
+ChangeProv(document.getElementById("provinceid"));
+</script>
+#parse("_foot.html")

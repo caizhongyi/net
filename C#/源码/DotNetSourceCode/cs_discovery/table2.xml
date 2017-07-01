@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xsl:stylesheet version='1.0' xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+	<!--
+   配合 xml.aspx 使用表格输出数据的XSLT文件
+   
+   编制 袁永福 2007-12-28
+-->
+	<xsl:include href="head.xml" />
+	<xsl:output method='xml' />
+	<xsl:template match='/'>
+		<html>
+			<head>
+				<title>使用XSLT察看数据</title>
+			</head>
+			<body>
+				<xsl:call-template name="head" />
+				<table border='1'>
+					<!-- 输出表头 -->
+					<tr bgcolor="#dddddd">
+						<td>序号</td>
+						<xsl:for-each select="Table/Record[position()=1]/*">
+							<td>
+								<xsl:value-of select="name()" />
+							</td>
+						</xsl:for-each>
+					</tr>
+					<xsl:for-each select="Table/Record">
+						<!-- 输出一条记录  -->
+						<tr>
+							<td bgcolor="#dddddd">
+								<xsl:value-of select="position()" />
+							</td>
+							<xsl:for-each select="*">
+								<td>
+									<!-- 输出一个字段的数据 -->
+									<xsl:choose>
+										<xsl:when test="@Null='1'">
+											<b>[NULL]</b>
+										</xsl:when>
+										<xsl:otherwise>
+											<xsl:value-of select="." />
+										</xsl:otherwise>
+									</xsl:choose>
+								</td>
+							</xsl:for-each>
+						</tr>
+					</xsl:for-each>
+				</table>
+			</body>
+		</html>
+	</xsl:template>
+</xsl:stylesheet>

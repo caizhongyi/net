@@ -1,0 +1,98 @@
+﻿#parse("_headshop.html")
+<div id="shopbody">
+    <div class="menu">
+        <ul>
+            <li><a href="../shop/default$exname?sid=$sid">店铺首页</a></li>
+            <li><a href="news$exname?sid=$sid">店铺公告</a></li>
+            <li><a href="goods$exname?sid=$sid">商品展示</a></li>
+            <li><a href="mbuy$exname?sid=$sid">超级采购团</a></li>
+            <li class="current"><a href="shopinfo$exname?sid=$sid">联系我们</a></li>
+        </ul>
+    </div>
+    <div class="shopbodyleft">
+        <div class="per">
+            &nbsp; &nbsp; <img src="$templatepath/images/join_bg.gif" align="middle" />&nbsp; 加盟时间：$jointime
+        </div>
+        <div class="per">
+            <div class="title">商家基本信息</div>
+            <span>$shopname</span><br />
+            <div class="p"><label>地址：</label><em>$address</em></div>
+            <div class="p"><label>电话：</label><em>$tel</em></div>
+            <div class="p"><label>传真：</label><em>$fax</em></div>
+            <div class="p"><label>联系人：</label><em>$linkman</em></div>
+            <div class="p"><label>介绍：</label><em>$content</em></div>
+        </div>
+        <div class="per">
+            <div class="title">商家告示</div>
+           #if($recordcount>0)
+                <ul>
+                #foreach($info in $infolist)
+                <li id="param_$info.id">
+                   <a href="$info.shopnewsurl" target="_blank">$info.title</a>
+                </li>
+                #end
+              </ul>
+        #else
+            <div>还没有记录</div>
+        #end   
+        </div>
+    </div>
+    <div class="shopbodyright">
+    <div class="title">网上店铺名称：$shopname</div>
+     <div class="contact_bt" style="margin-left:15px;">
+				<dl class="contact">
+				    <dt>店铺实体名称：$shoprname</dt>
+				    <dd>公司：$company</dd>
+					<dd>联系人：$linkman</dd>
+					<dd>电话：$tel</dd>
+					<dd>传真：$fax</dd>
+					<dd>地址：$address</dd>
+					<dd>办公地址：$caddress</dd>
+				</dl>
+			</div>
+
+<div id="shopcomment" style="width:99%;margin-left:15px;">
+        <div class="line"></div>
+        <h3>评论店铺 <a href="#commentcontent" class="normal">我要评论</a></h3>
+        #if($recordcounts>0)
+                <ul>
+                #foreach($comm in $commlist)
+                    <li id="param_$comm.id">
+                        <div class="aa images center">
+                            <a href="$comm.spaceurl"><img src="$comm.headpic"></a>
+                        </div>
+                        <div class="bb">
+                            <div class="hdtitlecomment">
+                                <div class="ll"><a href="$comm.spaceurl">$comm.truename</a> <span class="time">$comm.time</span></div>
+                                <div class="rr">$comm.showop<a href="${reporturl}#param_$comm.id" target="_blank" class="a-report"></a></div>
+                            </div>
+                            <div class="ctx">$comm.content</div>
+                        </div>
+                    </li>
+                #end
+                  <li class="pages">$pagelists</li>
+              </ul>
+        #else
+            <div>还没有评论</div>
+        #end      
+        #if($uid>0)    
+        <div class="pitem">
+        <h4>发表评论</h4>
+        <form action="" method="post">
+            <textarea id="commentcontent" name="commentcontent" cols="20" rows="2" class="f-area"></textarea>
+            <input id="userid" name="userid" value="$userid" type="hidden" />
+            <br />
+            <a href="javascript:;"  title="插入表情" onclick="Interface('commentcontent','$skinstyle')"><img src="$templatepath/images/c.gif" /></a> 
+            <input id="Submit1" type="submit" value="提交评论" class="btn_blue4" onclick="return checkdata();" />
+        </form>
+            
+        </div>
+        #end
+    </div></div>    
+
+
+            
+    </div>
+</div>
+
+#parse("_foot.html")

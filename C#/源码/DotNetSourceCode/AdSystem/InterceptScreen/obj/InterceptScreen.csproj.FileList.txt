@@ -1,0 +1,5 @@
+bin\Debug\InterceptScreen.dll
+bin\Debug\InterceptScreen.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\InterceptScreen.dll
+obj\Debug\InterceptScreen.pdb

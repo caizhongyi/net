@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<services-config>
+    <services>
+        <default-channels>
+          <channel ref="my-rtmp"/>
+        </default-channels>      
+        <service id="message-service" class="flex.messaging.services.MessageService" messageTypes="flex.messaging.messages.AsyncMessage">
+			    <adapters>
+				    <adapter-definition id="marketFeedAdapter" class="ServiceLibrary.MarketFeedAdapter" default="true"/>
+			    </adapters>
+          <destination id="marketdata">
+				    <adapter ref="marketFeedAdapter"/>
+            <channels>
+                <channel ref="my-rtmp"/>
+            </channels>
+            <properties>
+              <server>
+                <allow-subtopics>true</allow-subtopics>
+              </server>
+            </properties>
+          </destination>
+        </service>
+    </services>
+
+    <channels>
+        <channel-definition id="my-rtmp" class="mx.messaging.channels.RTMPChannel">
+            <endpoint uri="rtmp://{server.name}:1951" class="flex.messaging.endpoints.RTMPEndpoint"/>
+        </channel-definition>        
+    </channels>
+</services-config>

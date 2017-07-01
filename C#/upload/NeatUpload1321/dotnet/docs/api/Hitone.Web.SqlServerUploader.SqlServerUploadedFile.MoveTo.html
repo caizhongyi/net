@@ -1,0 +1,47 @@
+<html dir="LTR">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" />
+    <meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5" />
+    <title>SqlServerUploadedFile.MoveTo Method</title>
+    <xml>
+    </xml>
+    <link rel="stylesheet" type="text/css" href="MSDN.css" />
+  </head>
+  <body id="bodyID" class="dtBODY">
+    <div id="nsbanner">
+      <div id="bannerrow1">
+        <table class="bannerparthead" cellspacing="0">
+          <tr id="hdr">
+            <td class="runninghead">NeatUpload Documentation</td>
+            <td class="product">
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div id="TitleRow">
+        <h1 class="dtH1">SqlServerUploadedFile.MoveTo Method </h1>
+      </div>
+    </div>
+    <div id="nstext">
+      <p> If called, this stream is considered "verified" and is allowed to stay in the datadase. If this is never called, the row is deleted </p>
+      <div class="syntax">public override <a href="http://msdn.microsoft.com/library/default.asp?url=/library/en-us/cpref/html/frlrfSystemVoidClassTopic.asp">void</a> MoveTo(<br />   <a href="http://msdn.microsoft.com/library/default.asp?url=/library/en-us/cpref/html/frlrfSystemStringClassTopic.asp">string</a> <i>path</i>,<br />   <a href="Brettle.Web.NeatUpload.MoveToOptions.html">MoveToOptions</a> <i>opts</i><br />);</div>
+      <h4 class="dtH4">Parameters</h4>
+      <dl>
+        <dt>
+          <i>path</i>
+        </dt>
+        <dd>
+                <code>Optional</code> If specified, and the target data table has a FileNameField specified, the filename is changed. If <code>null</code> the filename remains the same</dd>
+        <dt>
+          <i>opts</i>
+        </dt>
+        <dd>Ignored</dd>
+      </dl>
+      <h4 class="dtH4">Remarks</h4>
+      <p>This slightly aquard behaviour is due to the NeatUpload framework, where "MoveTo" is the only suitable method exposed by InputFile</p>
+      <h4 class="dtH4">See Also</h4>
+      <p>
+        <a href="Hitone.Web.SqlServerUploader.SqlServerUploadedFile.html">SqlServerUploadedFile Class</a> | <a href="Hitone.Web.SqlServerUploader.html">Hitone.Web.SqlServerUploader Namespace</a></p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,59 @@
+//网吧信息表
+wb_id  		//网吧ID
+wb_Name		//网吧名
+wb_IP		//网吧IP
+wb_Area  	//网吧地域
+wb_Tel/	        /网吧联系电话
+wb_Time		//网吧记录时间
+wb_Remark	//备注
+
+
+//广告信息表
+Ad_id		//广告ID
+Ad_Name		//广告名
+Ad_url		//广告图片地址
+Ad_Opearation   //是否发布
+AD_clickNumber	//广告点击次数
+Ad_time		//发布广告的时间
+Ad_Remark 	//广告备注
+
+//网吧子表
+wb_c_id		//网吧分机ID
+wb_id		//网吧ID
+wb_c_ip		//网吧分机IP
+wb_c_time	//网吧分机记录时间
+
+//用户信息表
+user_id		//用户ID
+user_name	//用户姓名
+user_pwd	//用户密码
+user_right	//用户权限
+user_time	//用户记录时间
+user_remark	//用户备注
+
+
+//客户信息表
+client_id	//客户ID
+client_name	//客户姓名
+client_sex	//客户性别
+client_tel	//客户联系方式
+client_address	//客户地址
+client_time	//客户记录时间
+client_remark	//客户备注
+
+//广告类型表
+ad_typeID		//广告类型
+Ad_id	        //网吧ID
+ad_TypeName	//广告类型明
+
+//广告网吧表
+wb_id		//网吧ID
+Ad_id		//广告ID
+
+//网吧客户表
+wb_id  		//网吧ID
+client_id	//客户ID
+
+ad_client //广告客户表
+ad_id
+client_id

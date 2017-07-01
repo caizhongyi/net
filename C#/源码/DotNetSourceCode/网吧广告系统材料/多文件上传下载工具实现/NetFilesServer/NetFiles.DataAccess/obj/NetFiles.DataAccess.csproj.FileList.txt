@@ -1,0 +1,6 @@
+bin\Debug\NetFiles.DataAccess.dll
+bin\Debug\NetFiles.DataAccess.pdb
+bin\Debug\HFSoft.dll
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\NetFiles.DataAccess.dll
+obj\Debug\NetFiles.DataAccess.pdb

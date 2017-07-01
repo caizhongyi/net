@@ -1,0 +1,11 @@
+
+
+运行原理：通过PhysicalMemory函数实现对物理内存的访问，更改活动进程链，实现隐藏进程的目的
+,程序运行时会释放一个隐藏的HideProcess.dll里面有隐藏进程的实现过程，然后注入到要隐藏的
+进程中，就实现了隐藏任意进程的目的，程序压缩后39.5K,源代码与程序打包供下载。。。。。。
+
+HideProcess Ver 1.0 Powerd By CoolDiyer
+
+Usage:
+        HideProcess [ PName | PID ]
+

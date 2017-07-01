@@ -1,0 +1,17 @@
+C:\Documents and Settings\Administrator\桌面\网吧广告系统客户端(12.9)\桌面设计(12.9)\设置桌面广告\bin\Debug\WbSystem.exe.config
+C:\Documents and Settings\Administrator\桌面\网吧广告系统客户端(12.9)\桌面设计(12.9)\设置桌面广告\obj\Debug\WbSystem.exe
+C:\Documents and Settings\Administrator\桌面\网吧广告系统客户端(12.9)\桌面设计(12.9)\设置桌面广告\obj\Debug\WbSystem.pdb
+C:\Documents and Settings\Administrator\桌面\网吧广告系统客户端(12.9)\桌面设计(12.9)\设置桌面广告\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\桌面\网吧广告系统客户端(12.9)\桌面设计(12.9)\设置桌面广告\obj\Debug\WbSystem.AdForm.resources
+C:\Documents and Settings\Administrator\桌面\网吧广告系统客户端(12.9)\桌面设计(12.9)\设置桌面广告\obj\Debug\WbSystem.BackForm.resources
+C:\Documents and Settings\Administrator\桌面\网吧广告系统客户端(12.9)\桌面设计(12.9)\设置桌面广告\obj\Debug\GetIpInfo.GetIpForm.resources
+C:\Documents and Settings\Administrator\桌面\网吧广告系统客户端(12.9)\桌面设计(12.9)\设置桌面广告\obj\Debug\WbSystem.NewsInfoForm.resources
+C:\Documents and Settings\Administrator\桌面\网吧广告系统客户端(12.9)\桌面设计(12.9)\设置桌面广告\obj\Debug\GunDongDeZi.NoticeBar.resources
+C:\Documents and Settings\Administrator\桌面\网吧广告系统客户端(12.9)\桌面设计(12.9)\设置桌面广告\obj\Debug\WbSystem.PictureInfoForm.resources
+C:\Documents and Settings\Administrator\桌面\网吧广告系统客户端(12.9)\桌面设计(12.9)\设置桌面广告\obj\Debug\WbSystem.Properties.Resources.resources
+C:\Documents and Settings\Administrator\桌面\网吧广告系统客户端(12.9)\桌面设计(12.9)\设置桌面广告\obj\Debug\WbSystem.WriteNewInfoForm.resources
+C:\Documents and Settings\Administrator\桌面\网吧广告系统客户端(12.9)\桌面设计(12.9)\设置桌面广告\obj\Debug\WbSystem.csproj.GenerateResource.Cache
+C:\Documents and Settings\Administrator\桌面\网吧广告系统客户端(12.9)\桌面设计(12.9)\设置桌面广告\bin\Debug\WbSystem.exe
+C:\Documents and Settings\Administrator\桌面\网吧广告系统客户端(12.9)\桌面设计(12.9)\设置桌面广告\bin\Debug\WbSystem.pdb
+C:\Documents and Settings\Administrator\桌面\网吧广告系统客户端(12.9)\桌面设计(12.9)\设置桌面广告\bin\Debug\SetWallpaper.dll
+C:\Documents and Settings\Administrator\桌面\网吧广告系统客户端(12.9)\桌面设计(12.9)\设置桌面广告\bin\Debug\SetWallpaper.pdb

@@ -1,0 +1,14 @@
+G:\GobangSource\Five.Web\bin\Five.Web.dll
+G:\GobangSource\Five.Web\bin\Five.Web.pdb
+G:\GobangSource\Five.Web\bin\System.Web.Silverlight.dll
+G:\GobangSource\Five.Web\bin\zh-Hans\System.Web.Silverlight.resources.dll
+G:\GobangSource\Five.Web\bin\zh-Hant\System.Web.Silverlight.resources.dll
+G:\GobangSource\Five.Web\bin\de\System.Web.Silverlight.resources.dll
+G:\GobangSource\Five.Web\bin\es\System.Web.Silverlight.resources.dll
+G:\GobangSource\Five.Web\bin\fr\System.Web.Silverlight.resources.dll
+G:\GobangSource\Five.Web\bin\it\System.Web.Silverlight.resources.dll
+G:\GobangSource\Five.Web\bin\ja\System.Web.Silverlight.resources.dll
+G:\GobangSource\Five.Web\bin\ko\System.Web.Silverlight.resources.dll
+G:\GobangSource\Five.Web\obj\Debug\ResolveAssemblyReference.cache
+G:\GobangSource\Five.Web\obj\Debug\Five.Web.dll
+G:\GobangSource\Five.Web\obj\Debug\Five.Web.pdb

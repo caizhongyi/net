@@ -1,0 +1,157 @@
+﻿<UserControl x:Class="DC.FileUpload.FileUploadRowControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:vsm="clr-namespace:System.Windows;assembly=System.Windows"
+    xmlns:app="clr-namespace:DC.FileUpload">
+    <UserControl.Resources>
+        <app:ByteConverter x:Key="ByteConverter"/>
+        <Style x:Key="TextStyle" TargetType="TextBlock">
+            <!--<Setter Property="Foreground" Value="#ff444444" />-->
+            <Setter Property="FontSize" Value="12" />
+        </Style>
+        <Style x:Key="ButtonStyle" TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid x:Name="grid" RenderTransformOrigin="0.5,0.5" Cursor="Hand" Background="#01ffffff">
+                            <Image Source="images/Delete.png" />
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+    <Border x:Name="LayoutRoot" CornerRadius="5" BorderBrush="AntiqueWhite" BorderThickness="1">
+    	<vsm:VisualStateManager.VisualStateGroups>
+    		<vsm:VisualStateGroup x:Name="StatusGroup">
+    			<vsm:VisualState x:Name="Pending"/>
+    			<vsm:VisualState x:Name="Resizing">
+    				<Storyboard>
+    					<ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="resizeImage" Storyboard.TargetProperty="(UIElement.Visibility)">
+    						<DiscreteObjectKeyFrame KeyTime="00:00:00">
+    							<DiscreteObjectKeyFrame.Value>
+    								<Visibility>Visible</Visibility>
+    							</DiscreteObjectKeyFrame.Value>
+    						</DiscreteObjectKeyFrame>
+    					</ObjectAnimationUsingKeyFrames>
+    					<ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="pendingImage" Storyboard.TargetProperty="(UIElement.Visibility)">
+    						<DiscreteObjectKeyFrame KeyTime="00:00:00">
+    							<DiscreteObjectKeyFrame.Value>
+    								<Visibility>Collapsed</Visibility>
+    							</DiscreteObjectKeyFrame.Value>
+    						</DiscreteObjectKeyFrame>
+    					</ObjectAnimationUsingKeyFrames>
+    				</Storyboard>
+    			</vsm:VisualState>
+    			<vsm:VisualState x:Name="Error">
+    				<Storyboard>
+    					<ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="errorImage" Storyboard.TargetProperty="(UIElement.Visibility)">
+    						<DiscreteObjectKeyFrame KeyTime="00:00:00">
+    							<DiscreteObjectKeyFrame.Value>
+    								<Visibility>Visible</Visibility>
+    							</DiscreteObjectKeyFrame.Value>
+    						</DiscreteObjectKeyFrame>
+    					</ObjectAnimationUsingKeyFrames>
+    					<ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="pendingImage" Storyboard.TargetProperty="(UIElement.Visibility)">
+    						<DiscreteObjectKeyFrame KeyTime="00:00:00">
+    							<DiscreteObjectKeyFrame.Value>
+    								<Visibility>Collapsed</Visibility>
+    							</DiscreteObjectKeyFrame.Value>
+    						</DiscreteObjectKeyFrame>
+    					</ObjectAnimationUsingKeyFrames>
+    				</Storyboard>
+    			</vsm:VisualState>
+    			<vsm:VisualState x:Name="Complete">
+    				<Storyboard>
+    					<ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="pendingImage" Storyboard.TargetProperty="(UIElement.Visibility)">
+    						<DiscreteObjectKeyFrame KeyTime="00:00:00">
+    							<DiscreteObjectKeyFrame.Value>
+    								<Visibility>Collapsed</Visibility>
+    							</DiscreteObjectKeyFrame.Value>
+    						</DiscreteObjectKeyFrame>
+    					</ObjectAnimationUsingKeyFrames>
+    					<ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="completeImage" Storyboard.TargetProperty="(UIElement.Visibility)">
+    						<DiscreteObjectKeyFrame KeyTime="00:00:00">
+    							<DiscreteObjectKeyFrame.Value>
+    								<Visibility>Visible</Visibility>
+    							</DiscreteObjectKeyFrame.Value>
+    						</DiscreteObjectKeyFrame>
+    					</ObjectAnimationUsingKeyFrames>
+    					<ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="removeButton" Storyboard.TargetProperty="(UIElement.Visibility)">
+    						<DiscreteObjectKeyFrame KeyTime="00:00:00">
+    							<DiscreteObjectKeyFrame.Value>
+    								<Visibility>Collapsed</Visibility>
+    							</DiscreteObjectKeyFrame.Value>
+    						</DiscreteObjectKeyFrame>
+    					</ObjectAnimationUsingKeyFrames>
+    				</Storyboard>
+    			</vsm:VisualState>
+    			<vsm:VisualState x:Name="Uploading">
+    				<Storyboard>
+    					<ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="progressBar" Storyboard.TargetProperty="(UIElement.Visibility)">
+    						<DiscreteObjectKeyFrame KeyTime="00:00:00">
+    							<DiscreteObjectKeyFrame.Value>
+    								<Visibility>Visible</Visibility>
+    							</DiscreteObjectKeyFrame.Value>
+    						</DiscreteObjectKeyFrame>
+    					</ObjectAnimationUsingKeyFrames>
+    					<ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="pendingImage" Storyboard.TargetProperty="(UIElement.Visibility)">
+    						<DiscreteObjectKeyFrame KeyTime="00:00:00">
+    							<DiscreteObjectKeyFrame.Value>
+    								<Visibility>Collapsed</Visibility>
+    							</DiscreteObjectKeyFrame.Value>
+    						</DiscreteObjectKeyFrame>
+    					</ObjectAnimationUsingKeyFrames>
+    				</Storyboard>
+    			</vsm:VisualState>
+    		</vsm:VisualStateGroup>
+    	</vsm:VisualStateManager.VisualStateGroups>
+        <Border.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0,0">
+                <GradientStop Color="AliceBlue" Offset="1.5"/>
+                <GradientStop Color="#FFCCD5E4" />
+            </LinearGradientBrush>
+        </Border.Background>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition MaxHeight="200" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="65" />
+                <ColumnDefinition Width="60" />
+                <ColumnDefinition Width="75" />
+                <ColumnDefinition Width="25" />
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Orientation="Vertical" Grid.Column="0">
+                <Border Margin="3">
+                    <Border.OpacityMask>
+                        <LinearGradientBrush EndPoint="0.875,0.5" StartPoint="0.125,0.5">
+                            <GradientStop Color="#FF000000" Offset="0.80"/>
+                            <GradientStop Color="#00FFFFFF" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Border.OpacityMask>
+                    <TextBlock Style="{StaticResource TextStyle}" Text="{Binding Name,Mode=OneWay}" />
+                </Border>
+                
+            </StackPanel>
+            <Image x:Name="imagePreview" HorizontalAlignment="Left" Visibility="Collapsed" MaxHeight="200" Margin="3" Grid.Row="1" Grid.ColumnSpan="5" />
+            
+            <TextBlock Style="{StaticResource TextStyle}" Text="{Binding Status,Mode=OneWay}" Grid.Column="1" Margin="3" />
+            <TextBlock Style="{StaticResource TextStyle}" Text="{Binding FileLength,Converter={StaticResource ByteConverter},Mode=OneWay}" Grid.Column="2" Margin="3" />
+            
+            <Grid Grid.Column="3" Height="16" VerticalAlignment="Center">
+                <ProgressBar x:Name="progressBar" Minimum="0" Maximum="{Binding FileLength}" Value="{Binding BytesUploaded}" Visibility="Collapsed" />                
+                <Image x:Name="errorImage" Source="images/Warning.png" Height="16" Width="16" Visibility="Collapsed" />
+                <Image x:Name="resizeImage" Source="images/resize.png" Height="16" Width="16" Visibility="Collapsed" />
+                <Image x:Name="completeImage" Source="images/complete.png" Height="16" Width="16" Visibility="Collapsed" />
+                <Image x:Name="pendingImage" Source="images/pending.png" Height="16" Width="16" />
+            </Grid>
+            
+            <Button x:Name="removeButton" Grid.Column="4" Height="16" Width="16" VerticalAlignment="Center" Style="{StaticResource ButtonStyle}" Margin="3" >
+            </Button>
+        </Grid>
+    </Border>
+</UserControl>

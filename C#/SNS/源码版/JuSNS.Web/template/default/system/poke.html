@@ -1,0 +1,39 @@
+﻿#parse("_head.html")
+<div id="snssysmenu">
+#parse("_menusystem.html")
+</div>
+<div id="snsbody1">
+    <div id="snshead">招呼管理</div>
+    <div class="itemmenu">
+        <ul>
+            <li><a href="news$exname">资讯</a></li>
+            <li><a href="group$exname">社群</a></li>
+            <li><a href="topic$exname">话题</a></li>
+            <li><a href="blog$exname">博客</a></li>
+            <li><a href="twitter$exname">微博</a></li>
+            <li><a href="photo$exname">相册</a></li>
+            <li><a href="shop$exname">品牌</a></li>
+            <li><a href="active$exname">活动</a></li>
+            <li><a href="ask$exname">问答</a></li>
+            <li><a href="gift$exname">礼物</a></li>
+            <li class="current"><a href="poke$exname">招呼</a></li>
+            <li><a href="vote$exname">投票</a></li>
+            <li><a href="fav$exname">收藏</a></li>
+        </ul>
+    </div>
+    
+
+    <p class="system pitem1">
+    <br /><br />
+       <input id="Button1" type="button" class="btn_blue10" onclick="deletestart('poke');" value="清空所有招呼" />
+    </p>
+
+    
+</div>
+#parse("_foot.html")
+<script type="text/javascript">
+    function showtc(cid)
+    {
+        jQuery("#cc_"+cid).toggle();
+    }
+</script>

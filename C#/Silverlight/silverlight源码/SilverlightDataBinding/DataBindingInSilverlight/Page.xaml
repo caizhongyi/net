@@ -1,0 +1,59 @@
+<UserControl
+	xmlns="http://schemas.microsoft.com/client/2007"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	x:Class="DataBindingInSilverlight.Page"
+	Width="640" Height="480" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" xmlns:DataBindingInSilverlight="clr-namespace:DataBindingInSilverlight">
+	<UserControl.Resources>
+		<DataBindingInSilverlight:Library x:Key="LibraryDS" d:IsDataSource="True"/>
+	</UserControl.Resources>
+	<Grid x:Name="LayoutRoot" Background="White" >
+		<Grid.RowDefinitions>
+			<RowDefinition Height="0.167*"/>
+			<RowDefinition Height="0.833*"/>
+		</Grid.RowDefinitions>
+		<TextBlock x:Name="Title"
+		    HorizontalAlignment="Center" 
+		    VerticalAlignment="Center" 
+		    FontFamily="Verdana" FontSize="24" 
+		    Foreground="#FF0F43E7" 
+		    Text="Data Binding In Silverlight"/>
+		    
+		<ListBox x:Name="BooksListBox" 
+		    Margin="50,50,50,50"  
+		    Grid.Row="1" 
+		    ItemsSource="{Binding Books, Mode=OneWay, Source={StaticResource LibraryDS}}">
+		    
+		    <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal" Margin="5">
+                        <TextBlock 
+                            VerticalAlignment="Bottom" 
+                            FontFamily="Comic Sans MS" 
+                            FontSize="16" Foreground="red" 
+                            Text="{Binding Title}"/>
+					    <TextBlock 
+					        VerticalAlignment="Bottom" 
+					        FontFamily="Verdana" FontSize="14" 
+					        Foreground="Black" Text=" (ISBN: " />
+						<TextBlock 
+						    VerticalAlignment="Bottom" 
+						    FontFamily="Verdana" FontSize="14" 
+						    Foreground="Black" 
+						    Text="{Binding ISBN10}"/>
+						<TextBlock 
+						    VerticalAlignment="Bottom" 
+						    FontFamily="Verdana" FontSize="14" 
+						    Foreground="Black" 
+						    Text=") List price:  " />
+						<TextBlock 
+						    VerticalAlignment="Bottom" 
+						    FontFamily="Verdana" FontSize="14" 
+						    Foreground="Black" 
+						    Text="{Binding CoverPrice}" />
+                   </StackPanel>
+                                    
+                </DataTemplate>		    
+		    </ListBox.ItemTemplate>
+		    </ListBox>
+	</Grid>       
+</UserControl>

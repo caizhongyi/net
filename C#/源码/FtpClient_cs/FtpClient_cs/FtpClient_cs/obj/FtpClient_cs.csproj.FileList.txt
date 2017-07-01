@@ -1,0 +1,10 @@
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\FtpClient_cs.FTPClientForm.resources
+obj\Debug\FtpClient_cs.Properties.Resources.resources
+obj\Debug\FtpClient_cs.csproj.GenerateResource.Cache
+bin\Debug\FtpClient_cs.exe
+bin\Debug\FtpClient_cs.pdb
+bin\Debug\FtpClientDll_cs.dll
+bin\Debug\FtpClientDll_cs.pdb
+obj\Debug\FtpClient_cs.exe
+obj\Debug\FtpClient_cs.pdb

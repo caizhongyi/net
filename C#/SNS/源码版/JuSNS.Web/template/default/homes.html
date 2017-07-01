@@ -1,0 +1,67 @@
+﻿#parse("_head.html")
+<style type="text/css">
+.dynnews .content{float:left;width:770px;overflow:hidden;padding:5px;}
+.dynnews .content ul{float:left;width:770px;margin:0;padding:0;}
+.dynnews .content li{float:left;width:99%;display:block;margin:3px 0;padding:3px 0;border-bottom:1px solid  #F8F8F8;}
+.dynnews .content li span{float:left;padding-left:20px;width:620px;overflow:hidden;height:26px;}
+</style>
+<div id="snsmenu">
+#parse("_menu.html")
+</div>
+<div id="snsbody">
+   <div id="snsbody-all">
+        <div class="dynnews" style="width:98%;">
+            <div class="title" style="width:100%;">
+            <div class="aa">#if($unames)$unames的#end社区动态</div>
+            <div class="bb">
+                <ul id="dynul">
+                    <li#if($css_null)$css_null#end><a href="homes$exname?uid=$guid">全部</a></li>
+                    <li#if($css_dyn-photo)$css_dyn-photo#end><a  href="homes$exname?q=dyn-photo&uid=$guid">照片</a></li>
+                    <li#if($css_dyn-blog)$css_dyn-blog#end><a  href="homes$exname?q=dyn-blog&uid=$guid">日记</a></li>
+                    <li#if($css_dyn-twitter)$css_dyn-twitter#end><a  href="homes$exname?q=dyn-twitter&uid=$guid">微博</a></li>
+                    <li#if($css_dyn-group)$css_dyn-group#end><a  href="homes$exname?q=dyn-group&uid=$guid">社群</a></li>
+                    <li#if($css_dyn-share)$css_dyn-share#end><a  href="homes$exname?q=dyn-share&uid=$guid">分享</a></li>
+                    <li#if($css_dyn-state)$css_dyn-state#end><a  href="homes$exname?q=dyn-state&uid=$guid">状态</a></li>
+                    <li#if($css_dyn-other)$css_dyn-other#end><a  href="homes$exname?q=dyn-other&uid=$guid">其他</a></li>
+                </ul>
+            </div>
+            </div>
+            <div class="content">
+                <ul id="dyn-content">
+                 #foreach($info in $infolist)
+                     $info.dynall
+                 #end
+                </ul>
+            </div>
+             <div class="pages">$pagelist</div>
+        </div>
+</div>
+</div>
+
+#parse("_foot.html")
+<script type="text/javascript">
+
+function colosedyn(did,userid,uid)
+{
+    if(uid==0)
+    {
+           showErrorResult("请先登录");return;
+    }
+    if (!confirm("确定要屏蔽此用户吗？\n屏蔽后将不能接受他的动态。")) return;
+    jQuery.get(ajaxUrl, { action:"CloseDynAjax", userid:userid,uid:uid, param:Math.random() }, 
+    function(msg)
+    {
+        if(msg.indexOf("succs")>-1)
+        {
+             $("#param_" + did + "").remove();
+             showRightResult("屏蔽成功，下次登录将看不到此用户的动态");
+        }
+        else
+        {
+           showErrorResult("操作失败");
+        }
+    }
+   );          
+}
+
+</script>

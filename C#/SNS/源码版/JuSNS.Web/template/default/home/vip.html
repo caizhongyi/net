@@ -1,0 +1,93 @@
+﻿#parse("_head.html")
+<script type="text/javascript" src="$webpath/library/js/date/WdatePicker.js"></script>
+<div id="snsmenu">
+#parse("_menu.html")
+</div>
+<div id="snsbody">
+    <div id="snshead"><span class="l">VIP会员</span></div>
+   <div id="snsbody-all">
+   <div class="itemmenu">
+        <ul>
+            <li class="current"><a href="vip$exname">VIP会员</a></li>
+            <li><a href="level$exname">会员等级</a></li>
+        </ul>
+    </div>
+      <div class="pitem1 clearpix">
+      
+        <p class="strong reshow">&bull; 加入VIP会员可以做什么？</p>
+        <p class="">1. 尊贵的VIP标志显示<img src="$templatepath/images/isvip.gif" title="VIP会员" />。</p>
+        <p class="">2. 每天升级点数增加。</p>
+        <p class="">3. 无限创建社群。</p>
+        <p class="">4. 获得积分增加一倍。</p>
+      </div>
+        <div class="pitem1 clearpix">
+                #if($isvip)
+                    <p class="reshow">你已经是VIP会员，到期时间：$today</p>
+                #else
+                    <p class="reshow">$button</p>
+                #end
+        </div>
+</div>
+</div>
+
+#parse("_foot.html")
+<script type="text/javascript">
+    function JoinVip(uid,moth)
+    {
+        var content="<div style=\"text-align:center;\">申请VIP到：<input id=\"month\" name=\"month\" value=\""+moth+"\" onFocus=\"WdatePicker({dateFmt:'yyyy-MM-dd'})\" class=\"f-text\"></input><br />申请理由 ：<input id=\"joincontents\" name=\"joincontents\" value=\"\"  class=\"f-text\"></input>";
+        var  W = WinTip("申请VIP", content);
+        W.ConfirmButton="确定申请VIP";
+        if(uid==0)
+        {
+             W=WinTip("请先登录", "登录后才能操作");
+             setTimeout(function() 
+             {
+                W.Close();
+              }, 2000);
+        }
+        else
+        {
+            W.Confirm=function()
+            {
+                var month=jQuery("#month").val();
+                var joincontents=jQuery("#joincontents").val();
+                if(month=="")
+                {
+                    alert("请填写申请多少个月");return;
+                }
+                   jQuery.post(ajaxUrl, { action:"JoinVipAjax", uid:uid,today:month,joincontents:joincontents,param:Math.random() }, 
+                  function(msg)
+                  {
+                     var  W1="";
+                     if(msg=="1")
+                     {
+                        W1 = WinTip("申请成功！", "<span style=\"color:Green;\">申请成功，等待管理员审核。</span>");
+                         W1.Create();        
+                         setTimeout(function() 
+                         {
+                            window.location.href=location.href;
+                            W1.Close();
+                          }, 2000);
+                     }
+                    else if(msg=="-1")
+                    {
+                        W1 = WinTip("申请失败", "<span style=\"color:Red;\">申请失败，您已经申请过了。</span>");
+                         W1.Create();        
+                         setTimeout(function() 
+                         {
+                            W1.Close();
+                          }, 2000);               
+                     }
+                     else
+                     {
+                         W1 = WinTip("发生错误", "<span style=\"color:Red;\">申请失败，发生异常</span>");
+                         W1.Create();        
+                         return;
+                     }
+                  }
+                );                         
+            }
+        }
+        W.Create();    
+    }
+</script>

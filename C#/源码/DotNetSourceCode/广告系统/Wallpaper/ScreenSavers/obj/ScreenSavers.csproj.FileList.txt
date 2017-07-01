@@ -1,0 +1,8 @@
+bin\Debug\ScreenSavers.exe
+bin\Debug\ScreenSavers.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\ScreenSavers.FormScreen.resources
+obj\Debug\ScreenSavers.Properties.Resources.resources
+obj\Debug\ScreenSavers.csproj.GenerateResource.Cache
+obj\Debug\ScreenSavers.exe
+obj\Debug\ScreenSavers.pdb

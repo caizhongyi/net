@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute">
+
+	<mx:Script>
+		<![CDATA[
+			import mx.core.UIComponent;
+			import mx.controls.Alert;
+			import mx.rpc.events.FaultEvent;
+			import mx.rpc.events.ResultEvent;
+
+			private var nc:NetConnection = null;
+			private var nsPlay:NetStream = null;      
+			
+			private function doConnect():void
+			{
+				if (nc == null)
+				{
+					nc = new NetConnection();
+					nc.connect(connectStr.text);
+					
+					// get status information from the NetConnection object
+					nc.addEventListener( NetStatusEvent.NET_STATUS, handleConnectionNetStatus );
+					
+					connectButton.label = "Stop";
+					
+					enablePlayControls(true);
+				}
+				else
+				{
+					nsPlay.close();
+					nsPlay = null;
+					nc.close();
+					nc = null;
+					enablePlayControls(false);
+					connectButton.label = "Connect";
+					prompt.text = "";
+				}
+			}
+			
+			private function handleConnectionNetStatus( event:NetStatusEvent ):void
+			{
+				trace("nc: "+event.info.code+" ("+event.info.description+")");
+				if (event.info.code == "NetConnection.Connect.Failed")
+					prompt.text = "Connection failed: Try rtmp://[server-ip-address]/WebRadio";
+				else if (event.info.code == "NetConnection.Connect.Rejected")
+					prompt.text = event.info.description;
+			
+			}
+			
+			private function enablePlayControls(isEnable:Boolean):void
+			{
+			}
+			
+			private function subscribe():void
+			{
+				if (doSubscribe.label == 'Play')
+				{
+					// create a new NetStream object for video playback
+					nsPlay = new NetStream(nc);
+					
+					// trace the NetStream status information
+					nsPlay.addEventListener( NetStatusEvent.NET_STATUS, handlePlayNetStatus );
+					
+					// set the buffer time to zero since it is chat
+					nsPlay.bufferTime = 0;
+					
+					// subscribe to the named stream
+					nsPlay.play("webradio");
+					
+					doSubscribe.label = 'Stop';
+				}
+				else
+				{		
+					// here we are shutting down the connection to the server
+					
+					nsPlay.play(null);
+					nsPlay.close();
+					
+					doSubscribe.label = 'Play';
+				}
+			}
+			
+			private function handlePlayNetStatus( event:NetStatusEvent ):void
+			{
+				trace("nsPlay: "+event.info.code+" ("+event.info.description+")");
+				if (event.info.code == "NetStream.Play.StreamNotFound" || event.info.code == "NetStream.Play.Failed")
+					prompt.text = event.info.description;
+			}			
+			
+	        public function faultHandler(event:FaultEvent):void 
+	        {
+	             Alert.show("Fault",  event.fault.toString());
+	        }
+        			
+		]]>
+	</mx:Script>
+	
+	<mx:Panel title="WebRadio" >
+		<mx:HBox>
+			<mx:VBox width="100%">
+				<mx:ControlBar paddingLeft="0">
+					<mx:Button id="doSubscribe" click="subscribe()" label="Play"/>
+				</mx:ControlBar>
+			</mx:VBox>
+		</mx:HBox>
+		<mx:HBox width="100%">
+			<mx:Label id="fpsText"/>
+			<mx:Spacer width="100%"/>
+			<mx:Label id="bufferLenText"/>
+		</mx:HBox>
+		<mx:ControlBar width="100%" paddingLeft="0">
+			<mx:TextInput id="connectStr" text="rtmp://localhost/WebRadio" width="100%"/>
+			<mx:Button id="connectButton" click="doConnect()" label="Connect"/>
+		</mx:ControlBar>
+		<mx:Label id="prompt"/>
+	</mx:Panel>
+	
+</mx:Application>

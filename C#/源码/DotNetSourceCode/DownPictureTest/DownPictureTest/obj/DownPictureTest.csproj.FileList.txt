@@ -1,0 +1,8 @@
+obj\Debug\DownPictureTest.exe
+obj\Debug\DownPictureTest.pdb
+bin\Debug\DownPictureTest.exe
+bin\Debug\DownPictureTest.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\DownPictureTest.Form1.resources
+obj\Debug\DownPictureTest.Properties.Resources.resources
+obj\Debug\DownPictureTest.csproj.GenerateResource.Cache

@@ -1,0 +1,14 @@
+C:\Users\Brandon\Documents\Visual Studio 2008\Projects\SilverlightApplication1\SilverlightApplication1\Bin\Debug\AppManifest.xaml
+C:\Users\Brandon\Documents\Visual Studio 2008\Projects\SilverlightApplication1\SilverlightApplication1\Bin\Debug\SilverlightApplication1.dll
+C:\Users\Brandon\Documents\Visual Studio 2008\Projects\SilverlightApplication1\SilverlightApplication1\Bin\Debug\SilverlightApplication1.pdb
+C:\Users\Brandon\Documents\Visual Studio 2008\Projects\SilverlightApplication1\SilverlightApplication1\Bin\Debug\SilverlightApplication1.xap
+C:\Users\Brandon\Documents\Visual Studio 2008\Projects\SilverlightApplication1\SilverlightApplication1\Bin\Debug\TestPage.html
+C:\Users\Brandon\Documents\Visual Studio 2008\Projects\SilverlightApplication1\SilverlightApplication1\Bin\Debug\System.Windows.Interactivity.dll
+C:\Users\Brandon\Documents\Visual Studio 2008\Projects\SilverlightApplication1\SilverlightApplication1\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Brandon\Documents\Visual Studio 2008\Projects\SilverlightApplication1\SilverlightApplication1\obj\Debug\App.g.cs
+C:\Users\Brandon\Documents\Visual Studio 2008\Projects\SilverlightApplication1\SilverlightApplication1\obj\Debug\MainPage.g.cs
+C:\Users\Brandon\Documents\Visual Studio 2008\Projects\SilverlightApplication1\SilverlightApplication1\obj\Debug\SilverlightApplication1.g.resources
+C:\Users\Brandon\Documents\Visual Studio 2008\Projects\SilverlightApplication1\SilverlightApplication1\obj\Debug\SilverlightApplication1.dll
+C:\Users\Brandon\Documents\Visual Studio 2008\Projects\SilverlightApplication1\SilverlightApplication1\obj\Debug\SilverlightApplication1.pdb
+C:\Users\Brandon\Documents\Visual Studio 2008\Projects\SilverlightApplication1\SilverlightApplication1\obj\Debug\XapCacheFile.xml
+C:\Users\Brandon\Documents\Visual Studio 2008\Projects\SilverlightApplication1\SilverlightApplication1\Bin\Debug\Microsoft.Expression.Interactions.dll

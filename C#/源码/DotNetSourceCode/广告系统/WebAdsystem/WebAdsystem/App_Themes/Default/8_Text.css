@@ -1,0 +1,49 @@
+﻿hr
+{
+    border: dashed 2px #CCCCCC;
+}
+h1
+{
+    color: #336699;
+    font-size: 1.8em;
+    font-weight: bold;
+}
+p
+{
+    line-height: 1.8em;
+    text-indent: 2.0em;
+}
+ul.decimal 
+{
+    line-height: 1.8em;
+    list-style: inside decimal;
+    margin: 0px 0px 10px 0px;
+}
+
+div.task
+{
+    background: #666666;
+    border: solid 1px #333333;
+    color: #eeeeee;
+    padding: 10px;
+}
+
+/* 3、页面链接的样式。 */
+a
+{
+    color: #336699;
+    text-decoration: none;
+}
+a:hover
+{
+    text-decoration: underline;
+}
+a:link
+{
+    color: #336699;
+    text-decoration: none;
+}
+a:visited
+{
+    color: #336699;
+}

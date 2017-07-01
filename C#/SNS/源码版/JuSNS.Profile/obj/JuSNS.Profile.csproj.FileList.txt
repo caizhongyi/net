@@ -1,0 +1,7 @@
+bin\Debug\JuSNS.Profile.dll
+bin\Debug\JuSNS.Profile.pdb
+bin\Debug\JuSNS.Config.dll
+bin\Debug\JuSNS.Config.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\JuSNS.Profile.dll
+obj\Debug\JuSNS.Profile.pdb

@@ -1,0 +1,5 @@
+C:\Users\Administrator\Desktop\AdSystem\Wallpaper\Wallpaper\bin\Debug\SetWallpaper.dll
+C:\Users\Administrator\Desktop\AdSystem\Wallpaper\Wallpaper\bin\Debug\SetWallpaper.pdb
+C:\Users\Administrator\Desktop\AdSystem\Wallpaper\Wallpaper\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\AdSystem\Wallpaper\Wallpaper\obj\Debug\SetWallpaper.dll
+C:\Users\Administrator\Desktop\AdSystem\Wallpaper\Wallpaper\obj\Debug\SetWallpaper.pdb

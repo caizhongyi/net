@@ -1,0 +1,225 @@
+﻿#parse("_head.html")
+<div id="snsmenu">
+#parse("_menu.html")
+</div>
+<div id="snsbody">
+    <div class="homemiddle">
+        #if($notemail)
+        <div style="margin:5px 3px 8px 3px;font-weight:bold;">您还没有验证电子邮件，<a href="$webpath/activation$exname?type=1&email=$email" class="reshow">点击验证电子邮件</a></div>
+        #end   
+        #if($isshow)
+            #if($announce!="")
+            <div id="dnynewshome">
+				    <div class="announce">系统公告</div>
+				    <div class="dnycontenthome">
+				         <ul class="annbodylis">
+				            $announce
+				         </ul>
+				    </div>
+				    <div class="dnycontenthomes"><a href="javascript:clearannounce();"><img src="$templatepath/images/closedyn.gif" title="不在显示" /></a></div>
+		    </div>
+		    #end
+		#end
+        <div class="userhead">
+            <div class="aa imagebs center">
+                <a href="$webpath/space/info/head$exname"><img src="${portrait2}" /></a>
+                <p class="info"><a href="${myspace}">我的主页</a> &nbsp; <a href="$webpath/space/info/head$exname">修改头像</a></p>
+                <p><a href="$webpath/space/info/profile$exname">个人资料</a> &nbsp; <a href="$webpath/space/info/privacy$exname">隐私设置</a></p>
+            </div>
+            <div class="bb">
+                <p class="name">$mytruename<a href="$webpath/home/level$exname"><img src="$templatepath/images/level_${memberleves}.gif" title="$memberleves级($mlnumber天)" /></a> #if($isvip)<a href="$webpath/home/vip$exname"><img src="$templatepath/images/isvip.gif" title="VIP会员" /></a>#end <em id="twitterupdate">$twitter</em></p>
+                <p>
+                <div class="state_box">
+                    <div class="st_tl"></div>
+                    <div class="st_mbx">
+                        <div class="st_wbx">
+                        <textarea class="st_htxt" name="twitercontent" id="twitercontent" type="text"  onclick="checktxt(this);" onfocus="checktxt(this);">你正在做什么？</textarea>&nbsp;<a href="javascript:;"  title="插入表情" onclick="Interface('twitercontent','$skinstyle');document.getElementById('twitercontent').focus();"><img src="$templatepath/images/c.gif" /></a> </div>
+                        <div class="st_apbt">
+                        <div class="st_apm">
+                            <a href="$webpath/app/album/new$exname" class="sl2">传照片</a>
+                            <a href="$webpath/app/blog/new$exname" class="sl2">写日记</a>
+                            <a href="$webpath/app/poke/default$exname?r=add" class="sl2">打招呼</a>
+                            <a href="$webpath/app/gift/default$exname" class="sl2">送礼物</a>
+                        </div>
+                        <div class="st_rbs1"><input type="button" value="发布" class="btn_blue2" onclick="posttwitter($uid);"  /></div>
+                        </div>
+                    </div>
+                    <div class="st_bl"></div>
+              </div>
+                </p>
+                <div class="pitems"><em class="right">性别：</em>$sex</div>
+                #if($birthday)<div class="pitems"><em class="right">出生日期：</em>$birthday</div>#end
+                <div class="pitems"><em class="right">居住地：</em>$nowcity</div>
+                <div class="pitems"><em class="right">积分/$gpoint：</em>$integral个积分，$inteyb个$gpoint | <a href="javascript:;" onclick="viewhistory('$uid');">查看帐户收支记录！</a></div>
+                <p class="pitems"><em class="right">访问者：</em>$click人来看过你的空间</p>
+            </div>
+            
+        </div>
+        <p class="pitems">
+         <div class="request">
+                       <span class="rcorner-s1"><span class="rcorner-s1-l"></span></span>
+                       <span class="rcorner-s1-bottom"><span class="rcorner-s1-bottom-l"></span></span>
+                        <ul class="icon-list" id="messageBox">
+                            #if($friendinfo>0)<li class="reshow strong"><a href="info/friend$exname">$friendinfo个好友请求</a></li>#else<li><a href="info/friend$exname">$friendinfo个好友请求</a></li>#end
+                            #if($groupinfo>0)<li class="reshow strong"><a href="info/group$exname">$groupinfo个群组请求</a></li>#else<li><a href="info/group$exname">$groupinfo个群组请求</a></li>#end
+                            #if($noteinfo>0)<li class="reshow strong"><a href="info/note$exname">$noteinfo个通知信息</a></li>#else<li><a href="info/note$exname">$noteinfo个通知信息</a></li>#end
+                            #if($boxinfo>0)<li class="reshow strong"><a href="box">$boxinfo个短信</a></li>#else<li><a href="box">$boxinfo个短信</a></li>#end
+                            #if($celinfo>0)<li class="reshow strong"><a href="../app/calend/my$exname">$celinfo个提醒</a></li>#else<li><a href="../app/calend/my$exname">$celinfo个提醒</a></li>#end
+						</ul>
+		    </div>
+        </p>
+        
+        <div class="dynnews">
+            <div class="title">
+            <div class="aa">好友动态</div>
+            <div class="bb">
+                <ul id="dynul">
+                    <li class="current" id="dyn-all" onclick="showdyn(this,'dyn-all')"><a href="javascript:;">全部</a></li>
+                    <li id="dyn-photo" onclick="showdyn(this,'dyn-photo')"><a  href="javascript:;">照片</a></li>
+                    <li id="dyn-blog" onclick="showdyn(this,'dyn-blog')"><a  href="javascript:;">日记</a></li>
+                    <li id="dyn-twitter" onclick="showdyn(this,'dyn-twitter')"><a  href="javascript:;">微博</a></li>
+                    <li id="dyn-group" onclick="showdyn(this,'dyn-group')"><a  href="javascript:;">社群</a></li>
+                    <li id="dyn-share" onclick="showdyn(this,'dyn-share')"><a  href="javascript:;">分享</a></li>
+                    <li id="dyn-state" onclick="showdyn(this,'dyn-state')"><a  href="javascript:;">状态</a></li>
+                    <li id="dyn-system" onclick="showdyn(this,'dyn-system')"><a  href="javascript:;">系统</a></li>
+                    <li id="dyn-other" onclick="showdyn(this,'dyn-other')"><a  href="javascript:;">其他</a></li>
+                </ul>
+            </div>
+            </div>
+            <div class="content">
+                <ul id="dyn-content">
+                 $dynall
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="homeright">
+        <div class="title"><span>来访者</span><em><a href="$webpath/home/friend/visit$exname">更多</a></em></div>
+        <div class="listcontent">
+            <ul>
+             #foreach($visit in $visitlist)
+                <li class="imagesno"><a href="$visit.spaceurl" title="访问$visit.truename空间"><img src="$visit.userhead" /><br />$visit.truename</a></li>
+            #end
+            </ul>
+        </div>
+        <div class="title"><span>同城网友</span><em><a href="$webpath/home/friend/city$exname?q=city">更多</a></em></div>
+        <div class="listcontent">
+            <ul>
+             #foreach($city in $citylist)
+                <li class="imagesno"><a href="$city.spaceurl" title="访问$city.truename空间"><img src="$city.userhead" /><br />$city.truename</a></li>
+            #end
+            </ul>
+        </div>
+
+        <div class="title"><span>我的好友</span><em><a href="$webpath/home/friend/default$exname">更多</a></em></div>
+        <div class="listcontent">
+            <ul>
+             #foreach($frd in $frdlist)
+                <li class="imagesno"><a href="$frd.spaceurl" title="访问$frd.truename空间"><img src="$frd.userhead" /><br />$frd.truename</a></li>
+            #end
+            </ul>
+        </div>
+        <div class="title">刚刚注册用户</div>
+        <div class="listcontent">
+            <ul>
+             #foreach($reg in $reglist)
+                <li class="imagesno"><a href="$reg.spaceurl" title="访问$reg.truename空间"><img src="$reg.userhead" /><br />$reg.truename</a></li>
+            #end
+            </ul>
+        </div>
+        <div class="title"><img src="$templatepath/images/inv.gif" align="middle" /> <a href="$webpath/home/friend/invite$exname">邀请朋友和您一起玩</a></div>
+        <div class="title"><img src="$templatepath/images/ram.gif" align="middle" /> <a href="$webpath/home/friend/city$exname?q=city">随便看看结识新朋友</a></div>
+    </div>
+</div>
+#parse("_foot.html")
+<script type="text/javascript">
+function showdyn(obj,divid)
+{
+    jQuery("#dynul li").removeClass();
+    obj.className="current";
+    loading();
+    jQuery.get("default"+ExName+"", { action:"SendDyn", divid:divid, param:Math.random() }, 
+    function(msg)
+    {
+        jQuery("#dyn-content").html(msg);
+        loadingclear();
+    }
+   );          
+}
+function checktxt(obj)
+{
+    if(obj.value=="你正在做什么？")
+    {
+        obj.value="";
+    }
+    obj.style.height="35px";
+    
+}
+function posttwitter(uid)
+{
+    var twitercontent=jQuery("#twitercontent").val();
+    if(twitercontent==""||twitercontent.length<3||twitercontent=="你正在做什么？")
+    {
+        showErrorResult("内容必须填写，切需要大于2个字符！");return;
+    }
+    jQuery.get(ajaxUrl, { action:"SendTwitterAjax", cont:twitercontent,uid:uid, param:Math.random() }, 
+    function(msg)
+    {
+        if(msg.indexOf("succs")>-1)
+        {
+             showRightResult("发布成功");
+             document.getElementById("twitterupdate").innerHTML=msg.replace("succs","");
+        }
+        else if(msg.indexOf("nopass")>-1)
+        {
+           showErrorResult(msg.replace("nopass",""));
+        }
+        else
+        {
+           showErrorResult(msg.replace("errors",""));
+        }
+    }
+    );          
+
+}
+function viewhistory(uid)
+{
+        var url="info/history"+ExName+"?uid="+uid+"";
+        var formcontent = "<iframe src=\"\" style=\"width:100%;_width:96%;height:360px;border:0;\" frameborder=\"NO\" border=\"0\" framespacing=\"0\"></iframe>";
+        var W = WinTip("<div>查看积分记录</div>", formcontent);
+        W.Width=800;
+        W.Create();       
+        document.getElementsByTagName("iframe")[0].src = url;
+}
+function colosedyn(did,userid,uid)
+{
+    if (!confirm("确定要屏蔽此用户吗？\n屏蔽后将不能接受他的动态。")) return;
+    jQuery.get(ajaxUrl, { action:"CloseDynAjax", userid:userid,uid:uid, param:Math.random() }, 
+    function(msg)
+    {
+        if(msg.indexOf("succs")>-1)
+        {
+             $("#param_" + did + "").remove();
+             showRightResult("屏蔽成功，下次登录将看不到此用户的动态");
+        }
+        else if(msg.indexOf("closeed")>-1)
+        {
+           showErrorResult("此用户已经屏蔽过了");
+        }
+        else
+        {
+           showErrorResult("操作失败");
+        }
+    }
+   );          
+}
+function clearannounce()
+{
+    jQuery.get(ajaxUrl, { action:"SetSysShowAjax", userid:0, param:Math.random() }, 
+    function(msg)
+    {
+        $("#dnynewshome").remove();
+    }
+   );     
+}
+</script>

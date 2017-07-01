@@ -1,0 +1,5 @@
+bin\Debug\JuSNS.Config.dll
+bin\Debug\JuSNS.Config.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\JuSNS.Config.dll
+obj\Debug\JuSNS.Config.pdb

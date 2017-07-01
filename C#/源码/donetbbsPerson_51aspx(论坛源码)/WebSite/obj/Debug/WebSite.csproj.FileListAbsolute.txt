@@ -1,0 +1,12 @@
+D:\donetbbsPerson_51aspx\WebSite\bin\WebSite.dll
+D:\donetbbsPerson_51aspx\WebSite\bin\WebSite.pdb
+D:\donetbbsPerson_51aspx\WebSite\bin\Components.dll
+D:\donetbbsPerson_51aspx\WebSite\bin\Control.dll
+D:\donetbbsPerson_51aspx\WebSite\bin\DataProviders.dll
+D:\donetbbsPerson_51aspx\WebSite\bin\DosOrg.dll
+D:\donetbbsPerson_51aspx\WebSite\bin\DataProviders.pdb
+D:\donetbbsPerson_51aspx\WebSite\bin\DoNetBbs.pdb
+D:\donetbbsPerson_51aspx\WebSite\bin\Components.pdb
+D:\donetbbsPerson_51aspx\WebSite\obj\Debug\ResolveAssemblyReference.cache
+D:\donetbbsPerson_51aspx\WebSite\obj\Debug\WebSite.dll
+D:\donetbbsPerson_51aspx\WebSite\obj\Debug\WebSite.pdb

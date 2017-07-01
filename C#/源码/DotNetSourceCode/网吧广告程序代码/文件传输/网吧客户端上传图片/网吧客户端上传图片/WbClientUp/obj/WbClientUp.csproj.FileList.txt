@@ -1,0 +1,8 @@
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\WbClientUp.csproj.GenerateResource.Cache
+bin\Debug\WbClientUp.exe
+bin\Debug\WbClientUp.pdb
+obj\Debug\WbClientUp.Properties.Resources.resources
+obj\Debug\WbClientUp.exe
+obj\Debug\WbClientUp.pdb
+obj\Debug\WbClientUp.Form1.resources

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="CallDataBaseDemo">
+</Property><Property Name="解决方案文件" Value="C:\Documents and Settings\Administrator\桌面\CallDataBaseDemo\CallDataBaseDemo.sln">
+</Property><Property Name="Date" Value="2009年6月16日">
+</Property><Property Name="Time" Value="10:12:24">
+</Property></Properties><Event ErrorLevel="0" Project="DAL" Source="DAL\DAL.csproj" Description="项目文件已成功备份为 C:\Documents and Settings\Administrator\桌面\CallDataBaseDemo\Backup\DAL.csproj">
+</Event><Event ErrorLevel="0" Project="DAL" Source="DAL\DALFactory.cs" Description="文件已成功备份为 C:\Documents and Settings\Administrator\桌面\CallDataBaseDemo\Backup\DALFactory.cs">
+</Event><Event ErrorLevel="0" Project="DAL" Source="DAL\Dao\AdvInfo\IAdvInfo.cs" Description="文件已成功备份为 C:\Documents and Settings\Administrator\桌面\CallDataBaseDemo\Backup\Dao\AdvInfo\IAdvInfo.cs">
+</Event><Event ErrorLevel="0" Project="DAL" Source="DAL\Dao\AdvInfo\IAdvIssueInfo.cs" Description="文件已成功备份为 C:\Documents and Settings\Administrator\桌面\CallDataBaseDemo\Backup\Dao\AdvInfo\IAdvIssueInfo.cs">
+</Event><Event ErrorLevel="0" Project="DAL" Source="DAL\Dao\AdvInfo\IAdvPriceInfo.cs" Description="文件已成功备份为 C:\Documents and Settings\Administrator\桌面\CallDataBaseDemo\Backup\Dao\AdvInfo\IAdvPriceInfo.cs">
+</Event><Event ErrorLevel="0" Project="DAL" Source="DAL\Dao\AdvInfo\IAdvTypeInfo.cs" Description="文件已成功备份为 C:\Documents and Settings\Administrator\桌面\CallDataBaseDemo\Backup\Dao\AdvInfo\IAdvTypeInfo.cs">
+</Event><Event ErrorLevel="0" Project="DAL" Source="DAL\Dao\City\IAreaInfo.cs" Description="文件已成功备份为 C:\Documents and Settings\Administrator\桌面\CallDataBaseDemo\Backup\Dao\City\IAreaInfo.cs">
+</Event><Event ErrorLevel="0" Project="DAL" Source="DAL\Dao\City\ICityInfo.cs" Description="文件已成功备份为 C:\Documents and Settings\Administrator\桌面\CallDataBaseDemo\Backup\Dao\City\ICityInfo.cs">
+</Event><Event ErrorLevel="0" Project="DAL" Source="DAL\Dao\City\ICountryInfo.cs" Description="文件已成功备份为 C:\Documents and Settings\Administrator\桌面\CallDataBaseDemo\Backup\Dao\City\ICountryInfo.cs">
+</Event><Event ErrorLevel="0" Project="DAL" Source="DAL\Dao\City\IProvinceInfo.cs" Description="文件已成功备份为 C:\Documents and Settings\Administrator\桌面\CallDataBaseDemo\Backup\Dao\City\IProvinceInfo.cs">
+</Event><Event ErrorLevel="0" Project="DAL" Source="DAL\Dao\Customer\IHyRecord.cs" Description="文件已成功备份为 C:\Documents and Settings\Administrator\桌面\CallDataBaseDemo\Backup\Dao\Customer\IHyRecord.cs">
+</Event><Event ErrorLevel="0" Project="DAL" Source="DAL\Dao\Customer\ITFindPassWord.cs" Description="文件已成功备份为 C:\Documents and Settings\Administrator\桌面\CallDataBaseDemo\Backup\Dao\Customer\ITFindPassWord.cs">
+</Event><Event ErrorLevel="0" Project="DAL" Source="DAL\Dao\Customer\IUserIdeaInfo.cs" Description="文件已成功备份为 C:\Documents and Settings\Administrator\桌面\CallDataBaseDemo\Backup\Dao\Customer\IUserIdeaInfo.cs">
+</Event><Event ErrorLevel="0" Project="DAL" Source="DAL\Dao\Customer\IUserIdeaTypeInfo.cs" Description="文件已成功备份为 C:\Documents and Settings\Administrator\桌面\CallDataBaseDemo\Backup\Dao\Customer\IUserIdeaTypeInfo.cs">
+</Event><Event ErrorLevel="0" Project="DAL" Source="DAL\Dao\Customer\IUserInfoManage.cs" Description="文件已成功备份为 C:\Documents and Settings\Administrator\桌面\CallDataBaseDemo\Backup\Dao\Customer\IUserInfoManage.cs">
+</Event><Event ErrorLevel="0" Project="DAL" Source="DAL\Dao\Customer\IUserLogin.cs" Description="文件已成功备份为 C:\Documents and Settings\Administrator\桌面\CallDataBaseDemo\Backup\Dao\Customer\IUserLogin.cs">
+</Event><Event ErrorLevel="0" Project="DAL" Source="DAL\Dao\Customer\IUserRegist.cs" Description="文件已成功备份为 C:\Documents and Settings\Administrator\桌面\CallDataBaseDemo\Backup\Dao\Customer\IUserRegist.cs">
+</Event><Event ErrorLevel="0" Project="DAL" Source="DAL\Dao\Customer\IUserPublishMsg.cs" Description="文件已成功备份为 C:\Documents and Settings\Administrator\桌面\CallDataBaseDemo\Backup\Dao\Customer\IUserPublishMsg.cs">
+</Event><Event ErrorLevel="0" Project="DAL" Source="DAL\Dao\Group\IGroup_CustomerInfo.cs" Description="文件已成功备份为 C:\Documents and Settings\Administrator\桌面\CallDataBaseDemo\Backup\Dao\Group\IGroup_CustomerInfo.cs">
+</Event><Event ErrorLevel="0" Project="DAL" Source="DAL\Dao\Group\IGroupInfo.cs" Description="文件已成功备份为 C:\Documents and Settings\Administrator\桌面\CallDataBaseDemo\Backup\Dao\Group\IGroupInfo.cs">
+</Event><Event ErrorLevel="0" Project="DAL" Source="DAL\Dao\AdvInfo\IIssueAreaInfo.cs" Description="文件已成功备份为 C:\Documents and Settings\Administrator\桌面\CallDataBaseDemo\Backup\Dao\AdvInfo\IIssueAreaInfo.cs">
+</Event><Event ErrorLevel="0" Project="DAL" Source="DAL\Dao\Integral\IIntegral.cs" Description="文件已成功备份为 C:\Documents and Settings\Administrator\桌面\CallDataBaseDemo\Backup\Dao\Integral\IIntegral.cs">
+</Event><Event ErrorLevel="0" Project="DAL" Source="DAL\Dao\IProfession.cs" Description="文件已成功备份为 C:\Documents and Settings\Administrator\桌面\CallDataBaseDemo\Backup\Dao\IProfession.cs">
+</Event><Event ErrorLevel="0" Project="DAL" Source="DAL\Dao\Present\IPresent.cs" Description="文件已成功备份为 C:\Documents and Settings\Administrator\桌面\CallDataBaseDemo\Backup\Dao\Present\IPresent.cs">
+</Event><Event ErrorLevel="0" Project="DAL" Source="DAL\Dao\Reserved\IReserveInfo.cs" Description="文件已成功备份为 C:\Documents and Settings\Administrator\桌面\CallDataBaseDemo\Backup\Dao\Reserved\IReserveInfo.cs">
+</Event><Event ErrorLevel="0" Project="DAL" Source="DAL\impl\AdvInfo\AdvInfoDao.cs" Description="文件已成功备份为 C:\Documents and Settings\Administrator\桌面\CallDataBaseDemo\Backup\impl\AdvInfo\AdvInfoDao.cs">
+</Event><Event ErrorLevel="0" Project="DAL" Source="DAL\impl\AdvInfo\AdvIssueInfoDao.cs" Description="文件已成功备份为 C:\Documents and Settings\Administrator\桌面\CallDataBaseDemo\Backup\impl\AdvInfo\AdvIssueInfoDao.cs">
+</Event><Event ErrorLevel="0" Project="DAL" Source="DAL\impl\AdvInfo\AdvPriceInfoDao.cs" Description="文件已成功备份为 C:\Documents and Settings\Administrator\桌面\CallDataBaseDemo\Backup\impl\AdvInfo\AdvPriceInfoDao.cs">
+</Event><Event ErrorLevel="0" Project="DAL" Source="DAL\impl\AdvInfo\AdvTypeInfoDao.cs" Description="文件已成功备份为 C:\Documents and Settings\Administrator\桌面\CallDataBaseDemo\Backup\impl\AdvInfo\AdvTypeInfoDao.cs">
+</Event><Event ErrorLevel="0" Project="DAL" Source="DAL\impl\AdvInfo\IssueAreaDao.cs" Description="文件已成功备份为 C:\Documents and Settings\Administrator\桌面\CallDataBaseDemo\Backup\impl\AdvInfo\IssueAreaDao.cs">
+</Event><Event ErrorLevel="0" Project="DAL" Source="DAL\impl\City\AreaInfoDao.cs" Description="文件已成功备份为 C:\Documents and Settings\Administrator\桌面\CallDataBaseDemo\Backup\impl\City\AreaInfoDao.cs">
+</Event><Event ErrorLevel="0" Project="DAL" Source="DAL\impl\City\CityInfoDao.cs" Description="文件已成功备份为 C:\Documents and Settings\Administrator\桌面\CallDataBaseDemo\Backup\impl\City\CityInfoDao.cs">
+</Event><Event ErrorLevel="0" Project="DAL" Source="DAL\impl\City\CountryInfoDao.cs" Description="文件已成功备份为 C:\Documents and Settings\Administrator\桌面\CallDataBaseDemo\Backup\impl\City\CountryInfoDao.cs">
+</Event><Event ErrorLevel="0" Project="DAL" Source="DAL\impl\City\ProvinceInfoDao.cs" Description="文件已成功备份为 C:\Documents and Settings\Administrator\桌面\CallDataBaseDemo\Backup\impl\City\ProvinceInfoDao.cs">
+</Event><Event ErrorLevel="0" Project="DAL" Source="DAL\impl\Customer\HyRecordDao.cs" Description="文件已成功备份为 C:\Documents and Settings\Administrator\桌面\CallDataBaseDemo\Backup\impl\Customer\HyRecordDao.cs">
+</Event><Event ErrorLevel="0" Project="DAL" Source="DAL\impl\Customer\TFindPassWord.cs" Description="文件已成功备份为 C:\Documents and Settings\Administrator\桌面\CallDataBaseDemo\Backup\impl\Customer\TFindPassWord.cs">
+</Event><Event ErrorLevel="0" Project="DAL" Source="DAL\impl\Customer\UserIdeaInfoDao.cs" Description="文件已成功备份为 C:\Documents and Settings\Administrator\桌面\CallDataBaseDemo\Backup\impl\Customer\UserIdeaInfoDao.cs">
+</Event><Event ErrorLevel="0" Project="DAL" Source="DAL\impl\Customer\UserIdeaTypeInfoDao.cs" Description="文件已成功备份为 C:\Documents and Settings\Administrator\桌面\CallDataBaseDemo\Backup\impl\Customer\UserIdeaTypeInfoDao.cs">
+</Event><Event ErrorLevel="0" Project="DAL" Source="DAL\impl\Customer\UserInfoManageDao.cs" Description="文件已成功备份为 C:\Documents and Settings\Administrator\桌面\CallDataBaseDemo\Backup\impl\Customer\UserInfoManageDao.cs">
+</Event><Event ErrorLevel="0" Project="DAL" Source="DAL\impl\Customer\UserLoginDao.cs" Description="文件已成功备份为 C:\Documents and Settings\Administrator\桌面\CallDataBaseDemo\Backup\impl\Customer\UserLoginDao.cs">
+</Event><Event ErrorLevel="0" Project="DAL" Source="DAL\impl\Customer\UserPublishMsg.cs" Description="文件已成功备份为 C:\Documents and Settings\Administrator\桌面\CallDataBaseDemo\Backup\impl\Customer\UserPublishMsg.cs">
+</Event><Event ErrorLevel="0" Project="DAL" Source="DAL\impl\Customer\UserRegistDao.cs" Description="文件已成功备份为 C:\Documents and Settings\Administrator\桌面\CallDataBaseDemo\Backup\impl\Customer\UserRegistDao.cs">
+</Event><Event ErrorLevel="0" Project="DAL" Source="DAL\impl\Group\GroupInfoDao.cs" Description="文件已成功备份为 C:\Documents and Settings\Administrator\桌面\CallDataBaseDemo\Backup\impl\Group\GroupInfoDao.cs">
+</Event><Event ErrorLevel="0" Project="DAL" Source="DAL\impl\Group\Group_CustomerInfoDao.cs" Description="文件已成功备份为 C:\Documents and Settings\Administrator\桌面\CallDataBaseDemo\Backup\impl\Group\Group_CustomerInfoDao.cs">
+</Event><Event ErrorLevel="0" Project="DAL" Source="DAL\impl\Integral\IntegralDao.cs" Description="文件已成功备份为 C:\Documents and Settings\Administrator\桌面\CallDataBaseDemo\Backup\impl\Integral\IntegralDao.cs">
+</Event><Event ErrorLevel="0" Project="DAL" Source="DAL\Dao\Present\IPersonalScoreInfo.cs" Description="文件已成功备份为 C:\Documents and Settings\Administrator\桌面\CallDataBaseDemo\Backup\Dao\Present\IPersonalScoreInfo.cs">
+</Event><Event ErrorLevel="0" Project="DAL" Source="DAL\impl\Present\PersonalScoreInfo.cs" Description="文件已成功备份为 C:\Documents and Settings\Administrator\桌面\CallDataBaseDemo\Backup\impl\Present\PersonalScoreInfo.cs">
+</Event><Event ErrorLevel="0" Project="DAL" Source="DAL\impl\Present\PresentDao.cs" Description="文件已成功备份为 C:\Documents and Settings\Administrator\桌面\CallDataBaseDemo\Backup\impl\Present\PresentDao.cs">
+</Event><Event ErrorLevel="0" Project="DAL" Source="DAL\impl\Profession.cs" Description="文件已成功备份为 C:\Documents and Settings\Administrator\桌面\CallDataBaseDemo\Backup\impl\Profession.cs">
+</Event><Event ErrorLevel="0" Project="DAL" Source="DAL\impl\Reserved\ReserveInfoDao.cs" Description="文件已成功备份为 C:\Documents and Settings\Administrator\桌面\CallDataBaseDemo\Backup\impl\Reserved\ReserveInfoDao.cs">
+</Event><Event ErrorLevel="0" Project="DAL" Source="DAL\Properties\AssemblyInfo.cs" Description="文件已成功备份为 C:\Documents and Settings\Administrator\桌面\CallDataBaseDemo\Backup\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="DAL" Source="DAL\sql\Util.cs" Description="文件已成功备份为 C:\Documents and Settings\Administrator\桌面\CallDataBaseDemo\Backup\sql\Util.cs">
+</Event><Event ErrorLevel="0" Project="DAL" Source="DAL\DAL.csproj" Description="项目已成功转换">
+</Event><Event ErrorLevel="3" Project="DAL" Source="DAL\DAL.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="DAL" Source="DAL\DAL.csproj" Description="扫描完成: 项目文件不需要升级。">
+</Event></UpgradeLog>

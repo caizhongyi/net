@@ -1,0 +1,11 @@
+F:\51aspx开发\reference\NeatUpload\NeatUpload-1.3.21\dotnet\src\Extensions\Brettle.Web.NeatUpload.GreyBoxProgressBar\install\bin\Brettle.Web.NeatUpload.GreyBoxProgressBar.XML
+F:\51aspx开发\reference\NeatUpload\NeatUpload-1.3.21\dotnet\src\Extensions\Brettle.Web.NeatUpload.GreyBoxProgressBar\install\bin\Brettle.Web.NeatUpload.GreyBoxProgressBar.dll
+F:\51aspx开发\reference\NeatUpload\NeatUpload-1.3.21\dotnet\src\Extensions\Brettle.Web.NeatUpload.GreyBoxProgressBar\install\bin\Brettle.Web.NeatUpload.GreyBoxProgressBar.pdb
+F:\51aspx开发\reference\NeatUpload\NeatUpload-1.3.21\dotnet\src\Extensions\Brettle.Web.NeatUpload.GreyBoxProgressBar\install\bin\Brettle.Web.NeatUpload.dll
+F:\51aspx开发\reference\NeatUpload\NeatUpload-1.3.21\dotnet\src\Extensions\Brettle.Web.NeatUpload.GreyBoxProgressBar\install\bin\Brettle.Web.NeatUpload.pdb
+F:\51aspx开发\reference\NeatUpload\NeatUpload-1.3.21\dotnet\src\Extensions\Brettle.Web.NeatUpload.GreyBoxProgressBar\install\bin\Brettle.Web.NeatUpload.xml
+F:\51aspx开发\reference\NeatUpload\NeatUpload-1.3.21\dotnet\src\Extensions\Brettle.Web.NeatUpload.GreyBoxProgressBar\install\bin\en-US\Brettle.Web.NeatUpload.resources.dll
+F:\51aspx开发\reference\NeatUpload\NeatUpload-1.3.21\dotnet\src\Extensions\Brettle.Web.NeatUpload.GreyBoxProgressBar\install\bin\fr\Brettle.Web.NeatUpload.resources.dll
+F:\51aspx开发\reference\NeatUpload\NeatUpload-1.3.21\dotnet\src\Extensions\Brettle.Web.NeatUpload.GreyBoxProgressBar\obj\Debug\ResolveAssemblyReference.cache
+F:\51aspx开发\reference\NeatUpload\NeatUpload-1.3.21\dotnet\src\Extensions\Brettle.Web.NeatUpload.GreyBoxProgressBar\obj\Debug\Brettle.Web.NeatUpload.GreyBoxProgressBar.dll
+F:\51aspx开发\reference\NeatUpload\NeatUpload-1.3.21\dotnet\src\Extensions\Brettle.Web.NeatUpload.GreyBoxProgressBar\obj\Debug\Brettle.Web.NeatUpload.GreyBoxProgressBar.pdb

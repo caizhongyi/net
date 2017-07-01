@@ -1,0 +1,87 @@
+﻿body
+{
+    font-size: 12px;
+}
+A{TEXT-DECORATION: none;}
+A:link {color: #000000;}
+A:visited {color: #000000}
+A:active {color: #000000}
+A:hover{COLOR: #FF6600;position: relative; right: 0px; top: 1px}
+.size
+{
+    font-size: 12px;
+}
+
+TD
+{
+FONT-FAMILY: 宋体; FONT-SIZE: 9pt;
+color: #000000;
+line-height: 150%; 
+
+}
+Input
+{
+BACKGROUND-COLOR: #FFFDFB; 
+BORDER-BOTTOM: #89a5e6 1px solid;
+BORDER-LEFT: #89a5e6 1px solid;
+BORDER-RIGHT: #89a5e6 1px solid;
+BORDER-TOP: #89a5e6 1px solid;
+COLOR: #205064;
+HEIGHT: 18px;
+border-color: #B2C2D7 #B2C2D7 #B2C2D7 #B2C2D7; font-size: 8pt
+}
+Button
+{
+FONT-SIZE: 9pt;HEIGHT: 25px; 
+
+}
+Select
+{
+FONT-SIZE: 9pt;HEIGHT: 20px;
+
+}
+
+.kuang
+{
+    border-top-style: none;
+    border-bottom: #a3ceeb thin solid;
+    border-right-style: none;
+    border-left-style: none;
+}
+.bw
+{
+    font-weight: bold;
+    font-size: 12px;
+    color: #ffffff;
+   
+    background-image: url(Images/bg_list.gif);
+    background-repeat: repeat-x;
+}
+.l
+{
+    border-left: gainsboro 0.1mm solid;
+    border-top-style: none;
+    border-bottom-style: none;
+    border-right-style: none;
+}
+.r
+{
+    border-right: lightgrey 0.01mm solid;
+    border-top-style: none;
+    border-bottom-style: none;
+    border-left: lightgrey 0.01mm solid;
+}
+.xian
+{
+    border-right: lightgrey 0.01mm dashed;
+    border-top: lightgrey 0.01mm dashed;
+    border-left: lightgrey 0.01mm dashed;
+    border-bottom: lightgrey 0.01mm dashed;
+}
+.xia
+{
+    border-top-style: none;
+    border-bottom:  lightgrey 0.01mm dashed;
+    border-right-style: none;
+    border-left-style: none;
+}

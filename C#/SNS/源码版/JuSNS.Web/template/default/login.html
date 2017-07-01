@@ -1,0 +1,83 @@
+﻿#parse("_head.html")
+<div style="text-align:left;width:480px;margin:30px auto 10px auto;">
+<div class="logins" style="width:100%;">
+<div class="login_box">
+    <div class="pitem1 reshow strong">用户登录</div>
+    <div class="line"></div>
+    <form action="" method="post">
+        <div class="pitem1"><em>用户名或邮件${mobile}：</em>
+        <input type="text" name="username" id="username" maxlength="20" onblur="javascript:checkusername()" value=""  class="f-text" style="width:150px;" /> <span class="errors" id="spanusername" style="display:none;"></span>
+        </div>
+        <div class="pitem"><em>登录密码：</em>
+        <input type="password" name="password" id="password" maxlength="18" value="" onblur="javascript:checkpassword()" class="f-text" style="width:150px;" /> <span class="errors" id="spanpassword" style="display:none;"></span>
+        </div>
+        #if($iscode==1)
+        <div class="pitem"><em>请填写答案：</em><img src="$webpath/library/page/verifycode${exname}" style="width:75px;height:25px" id="vimgs" align="absmiddle" /><input type="text" name="vcode" id="vcode"  maxlength="5" value="" class="f-text" style="width:40px;" /> 
+            <span class="errors" id="spanvcode" style="display:none;"></span><span class="rights" id="spanvcode1" style="display:none;"></span>&nbsp; <a href="javascript:void(0)" onclick="document.getElementById('vimgs').src='$webpath/library/page/verifycode${exname}?v='+Math.random()+''">换一张</a>
+        </div>
+        #end
+        <div class="pitem1"><em>&nbsp;</em><input type="submit" name="button1" id="SubmitSend" class="button"  value=""/> 
+        <input type="button" name="button1" class="button1" onclick="javascript:window.location.href='$webpath/register${exname}'"  value=""/><input type="hidden" name="urls"  value="$urls" /> 
+        </div>
+        <div class="pitem"><em>&nbsp;</em><label for="autologin"> <input type="checkbox" name="autologin" id="autologin" value="1" />自动登录</label></div>
+    </form>
+</div>
+</div>
+</div>
+
+ <script type="text/javascript">
+        function checkusername()
+        {
+             var err="";
+             var username=document.getElementById("username").value;
+             if(username=="")
+             {
+                err+="填写用户名\n";
+             }
+             if(err!="")
+             {
+                document.getElementById("spanusername").style.display="";
+                document.getElementById("spanusername").innerHTML=err;
+                 return false;
+             }
+             else
+             {
+                document.getElementById("spanusername").style.display="none";
+                return true;
+             }      
+        }
+        
+        function checkpassword()
+        {
+             var err="";
+             var password=document.getElementById("password").value;
+             if(password=="")
+             {
+                err+="密码不能为空";
+             }
+             if(err!="")
+             {
+                document.getElementById("spanpassword").style.display="";
+                document.getElementById("spanpassword").innerHTML=err;
+                 return false;
+             }
+             else
+             {
+                document.getElementById("spanpassword").style.display="none";
+                return true;
+             }                     
+        }        
+        
+        function checkdata()
+        {
+            if(!(checkusername()&&checkpassword()))
+            {
+                return false;   
+            }
+            else
+            {
+                return true;
+            }
+        }
+  </script>
+#parse("_foot.html")

@@ -1,0 +1,92 @@
+﻿#parse("_head.html")
+<div id="snsmenu">
+#parse("_menu.html")
+</div>
+<div id="snsbody">
+    <div id="snshead"><span class="l">$cpagetitle</span><span class="r"><input id="kwd" name="kwd" value="#if($kwd)$kwd#else搜索话题#end" type="text" class="f-text w100" onclick="this.value=''" /> <input id="Button1" type="button" value="搜索" class="btn_gray2" onclick="search('grouptopic','$gid')" /></span></div>
+
+    <div id="snsbody-sec">
+          <div class="grouplist">
+                <div class="images l">
+                    <img src="$portrait" onerror="this.src='$templatepath/images/nopic.gif'" />
+                </div>
+                <div class="bulletin">
+                    <div class="info">$Bulletin<br /><a href="javascript:;" onclick="sharetofriend('group',$gid,$uid,'社群：$GroupName')" class="a-share">分享</a></div>
+                </div>
+          </div>
+      <div class="itemmenu">
+        <ul>
+            <li class="current"><a href="$webpath/app/group/group$exname?gid=$gid">$groupname首页</a></li>
+            <li><a href="$webpath/app/group/list$exname?gid=$gid">话题区($topiccount)</a></li>
+            <li><a href="$webpath/app/group/album$exname?gid=$gid">相册($albumcount)</a></li>
+            <li><a href="$webpath/app/group/files$exname?gid=$gid">文件共享($filescount)</a></li>
+            <li><a href="$webpath/app/group/member$exname?gid=$gid">所有成员($membercount)</a></li>
+            <li><a href="$webpath/app/group/list$exname?gid=$gid&q=best">精华区</a></li>
+            <li class="new"><a href="$webpath/app/group/post$exname?gid=$gid" class="newitem">发表话题</a></li> 
+        </ul>
+        
+    </div>
+    <div class="topiclist">
+        <div class="hdtitle"><span class="l">群话题区(共$topiccount条)</span><span class="r normal"><a href="$webpath/app/group/list$exname?gid=$gid">所有话题</a></span></div>
+        <div class="title">
+            <div class="tle">话题</div>
+            <div class="view">浏览</div>
+            <div class="reply">回复数</div>
+            <div class="author">作者</div>
+            <div class="rtime">回复时间</div>
+        </div>
+        #foreach($info in $infolist)
+        <div class="content">
+            <div class="tle"><a href="$info.topicurl">$info.title</a></div>
+            <div class="view">$info.clicks</div>
+            <div class="reply">$info.replynumber</div>
+            <div class="author"><a href="$info.spaceurl" target="_blank" title="查看$info.truename的空间"><img src="$info.headpic" align="absmiddle" /></a></div>
+            <div class="author1"><a href="$info.spaceurl" target="_blank">$info.truename</a></div>
+            <div class="rtime time">$info.time</div>
+        </div>
+        #end
+    </div>
+
+         
+    </div>
+    <div id="snsbody-right">
+        <div class="hdcontent1">
+            <ul>
+                <li><a href="$webpath/app/group">返回$groupname列表</a></li>
+                <li><a href="$reporturl" target="_blank">不良信息举报</a></li>
+                #if($ismember)
+                    #if($isadmin)
+                    <li><a href="$webpath/app/group/invite$exname?gid=$gid">邀请好友加入</a></li>
+                    <li><a href="$webpath/app/group/new$exname?gid=$gid">设置$groupname</a></li>
+                    #end
+                    <li><a href="javascript:;" onclick="OutGroup($gid,$uid)">退出该$groupname</a></li>
+                #else
+                    <li><a href="javascript:;" onclick="JoinGroup($gid,$uid)">加入该$groupname</a></li>
+                #end
+            </ul>
+        </div>
+        <div class="hdtitle"><span class="l">$groupname成员</span><span class="r normal"><a href="$webpath/app/group/member$exname?gid=$gid">所有成员</a></span></div>
+        <div class="groupmember">
+            <ul>
+                 #foreach($mem in $memlist)
+                    <li class="images"><a href="$mem.spaceurl" target="_blank"><img src="$mem.headpic" align="absmiddle" /> <br />$mem.truename</a></li>
+                #end
+            </ul>
+        </div>
+        
+        <div class="hdtitle clearpix"><span class="l">新加入成员</span><span class="r normal"><a href="$webpath/app/group/member$exname?gid=$gid">所有成员</a></span></div>
+        <div class="groupmember">
+            <ul>
+                 #foreach($mem1 in $mem1list)
+                    <li class="images"><a href="$mem1.spaceurl" target="_blank"><img src="$mem1.headpic" align="absmiddle" /> <br />$mem1.truename</a></li>
+                #end
+            </ul>
+        </div>
+    </div>
+    
+
+    
+    
+</div>
+
+#parse("_foot.html")

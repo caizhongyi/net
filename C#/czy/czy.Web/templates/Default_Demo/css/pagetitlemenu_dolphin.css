@@ -1,0 +1,22 @@
+﻿div.titlemenu_dolphin{
+margin:0px 23px 0px;
+padding:20px 0px 12px 0px;
+}
+
+div.titlemenu_dolphin a.titlemenu_dolphin:link,div.titlemenu_dolphin a.titlemenu_dolphin:visited,div.titlemenu_dolphin a.titlemenu_dolphin:active{
+display:block;
+text-decoration: none;
+font:12px/15px Verdana, Arial, Helvetica, sans-serif;
+height:26px;
+text-align:left;
+background:url(../images/dot2.jpg) 0px 0px no-repeat;
+padding-left:48px;
+color:#3d3d3d;
+}
+
+div.titlemenu_dolphin a.titlemenu_dolphin:hover{
+display:block;
+color: #e10000; 
+text-decoration: none;
+font:12px/15px Verdana, Arial, Helvetica, sans-serif;
+}

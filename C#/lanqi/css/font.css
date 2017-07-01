@@ -1,0 +1,138 @@
+﻿/* eqifa 文字样式 */
+
+.font_bottom{ padding-left:20px; padding-right:20px; text-decoration:none; color:#000;}
+a.font_bottom:hover{ padding-left:20px; padding-right:20px; text-decoration:none; color:#000;}
+
+.font_gray{ color:#999; font-size:12px; text-decoration:none;}
+
+.font_green{ color:#679900; font-size:14px; font-weight:bold; font-family:Arial, Helvetica, sans-serif; text-decoration: underline;}
+a.font_green:hover{ color:#679900; font-size:14px; font-weight:bold; text-decoration: underline;}
+
+.font_green_1{ color:#679900; font-size:12px; }
+a.font_green_1:hover{ color:#679900; font-size:12px; }
+
+.font_green_2{ color:#679900; font-size:14px; font-weight:bold; font-family:Arial, Helvetica, sans-serif; }
+a.font_green_2:hover{ color:#679900; font-size:14px; font-weight:bold; }
+
+.font_blue{ color:#5E9FE1; font-size:14px; font-weight:bold; font-family:Arial, Helvetica, sans-serif; text-decoration: underline;}
+a.font_blue:hover{ color:#5E9FE1; font-size:14px; font-weight:bold; font-family:Arial, Helvetica, sans-serif; text-decoration: underline;}
+
+.font_blue_1{ color:#5E9FE1; font-size:12px;   text-decoration: underline;}
+a.font_blue_1:hover{ color:#5E9FE1; font-size:12px;  text-decoration: underline;}
+
+.font_blue_2{ color:#16387C; font-size:12px;   text-decoration: underline;}
+a.font_blue_2:hover{ color:#FF3300; font-size:12px;  text-decoration: underline;}
+
+.font_blue_3{ color:#5E9FE1; font-size:12px; background:url(../images/icon.gif) no-repeat left center; padding-left:10px; text-decoration: underline;}
+a.font_blue_3:hover{ color:#5E9FE1; font-size:12px; background:url(../images/icon.gif) no-repeat left center; padding-left:10px; text-decoration: underline; }
+
+.font_blue_4{ font-size:14px; color:#0099CC;}
+a.font_blue_4:hover{ font-size:14px; color: #FF6600; text-decoration:underline;}
+
+.font_blue_5{ color:#5E9FE1; font-size:12px;}
+a.font_blue_5:hover{ color:#5E9FE1; font-size:12px;}
+
+.font_blue_number{ color:#5E9FE1; font-size:12px; font-family:Arial, Helvetica, sans-serif; text-decoration: underline;}
+a.font_blue_number:hover{ color:#5E9FE1; font-size:12px; font-family:Arial, Helvetica, sans-serif; text-decoration: underline;}
+
+.font_black{ color:#000; font-weight:bold;}
+a.font_black:hover{ color:#000; font-weight:bold;}
+
+.font_black_1{ color:#000; text-decoration:underline;}
+a.font_black_1:hover{ color:#000; text-decoration:underline;}
+
+.font_black_2{ color:#000; text-decoration:underline; font-weight:normal;}
+a.font_black_2:hover{ color:#000; text-decoration:underline; font-weight:normal;}
+
+.font_black_3{ color:#000; text-decoration:underline; font-weight:normal; font-size:12px;}
+a.font_black_3:hover{ color:#000; text-decoration:underline; font-weight:normal; font-size:12px;}
+
+
+.font_nav{  height:20px; line-height:20px; padding-left:8px; padding-right:8px; display:block;}
+a.font_nav:hover{ background:url(../images/top_navbg_1.gif) no-repeat left center; color:#FFF; text-decoration: underline;}
+
+.font_icon_1{ height:44px; line-height:44px; background:url(../images/icon_1.jpg) no-repeat left center; font-size:14px; font-weight:bold; padding-left:30px; color:#000;}
+.font_icon_2{ height:44px; line-height:44px; background:url(../images/icon_2.jpg) no-repeat left center; font-size:14px; font-weight:bold; padding-left:30px; color:#000;}
+.font_icon_3{ height:28px; line-height:28px; background:url(../images/icon_3.jpg) left center no-repeat; padding-left:25px; font-weight:normal;}
+.font_icon_4{ height:31px; line-height:31px; background:url(../images/icon_4.jpg) left center no-repeat; color:#000; font-size:14px; padding-left:40px; }
+.font_icon_5{ height:40px; line-height:40px; background:url(../images/index/icon_5.jpg) no-repeat left center; font-size:14px; font-weight:bold; padding-left:40px; color:#73ADE7;}
+
+.font_red{ color:#FF0000; font-family:Arial, Helvetica, sans-serif;}
+
+.font_red_1{ color:#FF0000; text-decoration: underline;}
+a.font_red_1:hover{ color:#FF0000; text-decoration: underline;}
+
+.font_table_number{ padding:0px 5px;}
+a.font_table_number{ padding:0px 5px;}
+
+.font_bold{ font-weight:bold;}
+a.font_bold:hover{ font-weight:bold; text-decoration:none;}
+
+.font_underline{ text-decoration:underline;}
+a.font_underline:hover{ text-decoration:underline;}
+
+.font_underline{ text-decoration:underline; padding-left:5px; padding-right:5px;}
+a.font_underline:hover{ text-decoration:underline; padding-left:5px; padding-right:5px;}
+
+ /* 注册 */
+ .zhuce_font{ color:#73ADE7; font-size:14px; font-weight:bold; border-bottom:1px dashed #73ADE7; height:25px; line-height:25px;}
+ .zhuce_font_1{ color:#FF0000; font-size:20px;}
+  .zhuce_font_new{ color:#000; font-size:14px; font-weight:bold; border-bottom:1px dashed #ccc; height:25px; line-height:25px;}
+ 
+ /* 登陆 */
+ .denglu_font{ font-size:14px; font-weight:bold; color:#000; background:url(../images/icon_6.gif) no-repeat left center; margin-left:20px; padding-left:14px; height:35px; line-height:35px;}
+ 
+ .font_14{ font-size:14px; text-decoration:none;}
+ a.font_14:hover{ font-size:14px; text-decoration:none;}
+ 
+ .font_gonggao{ text-decoration:none;}
+ a.font_gonggao:hover{ text-decoration:none; color: #0099CC;}
+ 
+ .zhandian_dui_font{ height:44px; line-height:44px; background:url(../images/zhandian_dui.jpg) no-repeat left center; font-size:14px; font-weight:bold; padding-left:50px;}
+ 
+ .zhandian_cuo_font{ height:44px; line-height:44px; background:url(../images/Wrong.jpg) no-repeat left center; font-size:12px; font-weight:bold; padding-left:50px;}
+ 
+ /* 二级菜单 */ 
+.font_top2{ color:#000; text-decoration:none;} 
+a.font_top2:hover{ color:#0033FF; font-weight:bold; text-decoration:none;} 
+ 
+  /* 验证 */
+ .yanzheng_1{  background: #E2F5FF url(../images/icon_10.jpg) no-repeat 7px 3px;  border:1px solid #00A8FF; padding:3px 5px 3px 26px; }
+ .yanzheng_2{  background: #FFF2E9 url(../images/icon_11.jpg) no-repeat 7px 3px;  border:1px solid #FF6600; padding:3px 5px 3px 26px; }
+ .yanzheng_3{  background: #E7FBFF url(../images/icon_12.jpg) no-repeat 7px 3px;  border:1px solid #ADDFFF; padding:3px 5px 3px 26px; }
+ .yanzheng_4{  background: #E8F1FF url(../images/icon_10.jpg) no-repeat 7px 3px;  border:1px solid #C5E1F7; padding:3px 5px 3px 26px; }
+ 
+ .font14_bold{ font-size:14px; font-weight:bold; text-decoration:underline;}
+ a.font14_bold:hover{ font-size:14px; font-weight:bold; text-decoration:underline;}
+ 
+ 
+ /* 公告样式 */
+.gonggao_index{ margin:0px; padding:0px; list-style:none;}
+.gonggao_index li{ padding:3px 5px; border-bottom:1px dashed #eee; margin:0px 3px;}
+
+
+.Tip{ background:url(../images/icon_10_1.jpg) left center no-repeat; height:60px; line-height:60px; padding-left:20px; font-size:14px; width:500px; margin:0px auto;}
+
+ /* 连接列表样式 */
+.list_left{ color:#0099CC; float: left; height:23px; line-height:23px; padding-left:10px;}
+.list_right{ color:#0099CC; float: right; height:23px; line-height:23px; padding-right:30px;}
+
+.list_font{ margin:0px; padding:0px; list-style:none; line-height:150%;}
+.list_font li{ padding:3px 5px; border-bottom:1px dashed #eee; margin:0px 3px;}
+
+
+.tit_0406{ width:800px; margin:0px auto; padding-bottom:10px; text-align:center;}
+.yanse0406{ width:19px; height:19px; border:1px solid  #999; background-color: #99CCCC; float: left; margin-left:10px;}
+.yanse0406_1{ width:19px; height:19px; border:1px solid  #999; background:url(../images/04.jpg) no-repeat; float: left; margin-left:10px;}
+.left_margin{ float:left; margin-left:30px; *margin-left:30px!important; *margin-left:15px;}
+
+/* 提示说明 */
+.icon_0414{ background:url(../images/icon_0414.jpg) no-repeat left center; padding-left:40px; height:40px; line-height:40px;}
+
+
+/* 广告活动-分类样式 */
+.font_title_0602{ color:#479DD5; text-decoration: none; float:left; padding-right:14px; padding-left:14px; border-right:1px dashed #7AC2E5; width:145px; font-size:14px; padding-top:6px; padding-bottom:6px;}
+a.font_title_0602:hover{ color:#479DD5; text-decoration: underline; float:left; padding-right:14px; padding-left:14px; border-right:1px dashed #7AC2E5; width:145px; font-size:14px; padding-top:6px; padding-bottom:6px;}
+
+.font_title_0602_1{ color:#479DD5; text-decoration: none; float:left; padding-right:14px; padding-left:14px; width:145px; font-size:14px; padding-top:6px; padding-bottom:6px;}
+a.font_title_0602_1:hover{ color:#479DD5; text-decoration: underline; float:left; padding-right:14px; padding-left:14px; width:145px; font-size:14px; padding-top:6px; padding-bottom:6px;}

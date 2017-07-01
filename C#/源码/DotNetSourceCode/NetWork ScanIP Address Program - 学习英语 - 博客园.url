@@ -1,0 +1,16 @@
+[DEFAULT]
+BASEURL=http://jhtchina.cnblogs.com/articles/183320.html
+[DOC#1410]
+BASEURL=res://C:\WINDOWS\system32\shdoclc.dll/dnserror.htm
+ORIGURL=http://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-4210569241504288&dt=1224749865953&lmt=1224749865&output=html&slotname=0005772978&correlator=1224749865953&url=http%3A%2F%2Fjhtchina.cnblogs.com%2Farticles%2F183320.html&ea=0&frm=0&ga_vid=484463022.1224749866&ga_sid=1224749866&ga_hid=419525051&flash=9.0.124.0&u_h=900&u_w=1440&u_ah=870&u_aw=1440&u_cd=16&u_tz=480&u_his=1&u_java=true
+[DOC#1517]
+BASEURL=res://C:\WINDOWS\system32\shdoclc.dll/dnserror.htm
+ORIGURL=http://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-4210569241504288&dt=1224749866421&lmt=1224749866&prev_slotnames=0005772978&output=html&slotname=1397853083&correlator=1224749865953&url=http%3A%2F%2Fjhtchina.cnblogs.com%2Farticles%2F183320.html&ea=0&frm=0&ga_vid=484463022.1224749866&ga_sid=1224749866&ga_hid=419525051&flash=9.0.124.0&u_h=900&u_w=1440&u_ah=870&u_aw=1440&u_cd=16&u_tz=480&u_his=1&u_java=true
+[DOC#1884]
+BASEURL=res://C:\WINDOWS\system32\shdoclc.dll/dnserror.htm
+ORIGURL=http://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-4210569241504288&dt=1224749866500&lmt=1224749866&prev_slotnames=0005772978%2C1397853083&output=html&slotname=0808384890&correlator=1224749865953&url=http%3A%2F%2Fjhtchina.cnblogs.com%2Farticles%2F183320.html&ea=0&frm=0&ga_vid=484463022.1224749866&ga_sid=1224749866&ga_hid=419525051&flash=9.0.124.0&u_h=900&u_w=1440&u_ah=870&u_aw=1440&u_cd=16&u_tz=480&u_his=1&u_java=true
+[InternetShortcut]
+URL=http://jhtchina.cnblogs.com/articles/183320.html
+Modified=7085ED25E834C901ED
+IconFile=http://jhtchina.cnblogs.com/favicon.ico
+IconIndex=1

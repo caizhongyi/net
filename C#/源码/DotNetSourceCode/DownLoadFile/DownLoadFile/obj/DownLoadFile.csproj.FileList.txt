@@ -1,0 +1,8 @@
+bin\Debug\DownLoadFile.exe
+bin\Debug\DownLoadFile.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\DownLoadFile.Form1.resources
+obj\Debug\DownLoadFile.Properties.Resources.resources
+obj\Debug\DownLoadFile.csproj.GenerateResource.Cache
+obj\Debug\DownLoadFile.exe
+obj\Debug\DownLoadFile.pdb

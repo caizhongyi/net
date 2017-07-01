@@ -1,0 +1,22 @@
+Install step:
+step 1:
+	make
+step 2:
+	make install
+step 3:
+	cp rc.jpt /etc/rc.d
+step 4:
+	edit /etc/inittab by vi, add following in last line,
+	
+	jpt::sysinit:/etc/rc.d/rc.jpt
+
+step 5:
+	reboot linux, and check if jpt activated by command "lsmod | grep jpt"
+
+note: ttynames are assigned as follow example,
+      1st card : ttyn0  --- ttyn15
+      2nd card : ttyn16 --- ttyn31
+      3rd card : ttyn32 --- ttyn47
+      4th card : ttyn48 --- ttyn63
+      5th card : ttyn64 --- ttyn79
+	

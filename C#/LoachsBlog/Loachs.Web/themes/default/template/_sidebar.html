@@ -1,0 +1,74 @@
+<div id="sidebar">
+    <div id="search" class="widget">
+        <h3>search</h3>
+        <form id="searchform" action="${siteurl}search.aspx" method="get" >
+            <input type="text" id="keyword" name="keyword" value="${searchkeyword}" /> <input type="submit" value="search"/>
+        </form>
+    </div>
+    <div id="authors" class="widget">
+        <h3>author</h3>
+        <ul>
+        #foreach($item in $authors)
+            <li><a href="${item.url}"  title="${item.description}">${item.name}</a><span>(${item.postcount})</span></li>
+        #end
+        </ul>
+    </div>
+    <div id="categories" class="widget">
+        <h3>class</h3>
+        <ul>
+        #foreach($item in $categories)
+            <li><a href="${item.url}" title="${item.description}">${item.name}</a><span>(${item.count})</span></li>
+        #end
+        </ul>
+    </div>
+    <div id="recentposts" class="widget">
+        <h3>new note</h3>
+        <ul>
+        #foreach($item in ${recentposts})
+            <li><a href="${item.url}" title="${item.title}">${item.title}</a></li>
+        #end
+        </ul>
+    </div>
+    <div id="recentcomments" class="widget">
+        <h3>new comment</h3>
+        <ul>
+        #foreach($item in $recentcomments)
+            <li><a href="${item.url}" title="${item.name} post in ${item.createdate}">${item.title}</a></li>
+        #end
+        </ul>
+    </div>
+    <div id="monthlist" class="widget">
+        <h3>category</h3>
+        <ul>
+        #foreach($item in $archives)
+            <li><a href="${item.url}" title="">${item.date.tostring("MM-yyyy")}</a><span>(${item.count})</span></li>
+        #end
+        </ul>
+    </div>
+    <div id="recenttags" class="widget">
+        <h3>tag</h3>
+        <ul>
+        #foreach($item in $recenttags)
+            <li><a href="${item.url}" title="${item.description}">${item.name}</a><span>(${item.count})</span></li>
+        #end
+        </ul>
+    </div>
+    <div id="generallinks" class="widget">
+        <h3>links</h3>
+        <ul>
+        #foreach($item in $generallinks)
+            <li><a href="${item.url}" title="${item.description}" target="${item.target}">${item.name}</a></li>
+        #end
+        </ul>
+    </div>
+    <div  id="statistics" class="widget">
+        <h3>Stat</h3>
+        <ul>
+            <li>article:<span>${postcount} </span></li>
+            <li>comment:<span>${commentcount} </span></li>
+            <li>author:<span>${authorcount} </span></li>
+            <li>access:<span>${viewcount} </span></li>
+            <li>rrs:<span><a href="${feedurl}">article</a> <a href="${feedcommenturl}">comment</a> </span></li>
+        </ul>
+    </div>
+</div>

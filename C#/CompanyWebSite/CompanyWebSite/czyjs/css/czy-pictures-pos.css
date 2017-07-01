@@ -1,0 +1,19 @@
+﻿@charset "utf-8";
+/* CSS Document */
+.left{ float:left}
+.right{ float:right}
+
+/*公共部分
+-------------------------------------------------*/
+.flascroll{width:950px;height:243px;position:relative;overflow:hidden;font-family:Verdana, Arial, Helvetica, sans-serif;background:#fff;}/*整个框架大小，可随意更改，可按需要是否加边框*/
+.flascroll .loading{position:absolute;z-index:9999;width:100%;height:186px;background:#fff url(../images/15250-loading.gif) center -50px no-repeat;color:#666;font-size:12px;text-align:center;padding-top:60px;}
+.flascroll .ts_bg{position:absolute;bottom:0;z-index:1;width:100%;height:36px;background:#000;filter:alpha(opacity=40);opacity:0.4;}
+.flascroll .pics{ width:100%; height:100%;}
+.flascroll .pics li{position:absolute;top:0px;left:0px;}
+.flascroll .pics li img{filter:alpha(opacity=0);opacity:0;width:100%; height:100%;}/*图片大小与框架保持一致*/
+.flascroll .ts li{position:absolute;z-index:2;left:0;bottom:-32px;height:32px;line-height:32px;font-size:14px;font-weight:bold;padding-left:16px;}
+.flascroll .ts li a{color:#fff; text-decoration:none;}/*标题链接样式*/
+.flascroll .btn,.btn_bg{position:absolute;z-index:3;bottom:10px;right:20px;color:#000;font-size:12px;}
+.flascroll .btn li,.btn_bg li{float:left;width:15px;height:15px;line-height:15px;overflow:hidden;text-align:center;margin-right:2px; text-align:center; }
+.flascroll .btn_bg li{background:url(../images/icon4.gif) no-repeat; /*filter:alpha(opacity=50);opacity:0.5;*/ color:#000;}
+.flascroll .btn li.current {background:url(../images/icon3.gif) no-repeat; color:#fff;}

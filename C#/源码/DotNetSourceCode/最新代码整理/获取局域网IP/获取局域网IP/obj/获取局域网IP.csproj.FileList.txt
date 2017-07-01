@@ -1,0 +1,8 @@
+bin\Debug\获取局域网IP.exe
+bin\Debug\获取局域网IP.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\获取局域网IP.csproj.GenerateResource.Cache
+obj\Debug\获取局域网IP.exe
+obj\Debug\获取局域网IP.pdb
+obj\Debug\DataKeepInfo.Form1.resources
+obj\Debug\DataKeepInfo.Properties.Resources.resources

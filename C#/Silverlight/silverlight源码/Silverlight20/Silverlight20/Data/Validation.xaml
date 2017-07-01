@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="Silverlight20.Data.Validation"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:custom="clr-namespace:Silverlight20.Data">
+    
+    <StackPanel HorizontalAlignment="Left" BindingValidationError="StackPanel_BindingValidationError" >
+        
+        <StackPanel.Resources>
+            <custom:MyValidation x:Name="myValidation"/>
+        </StackPanel.Resources>
+        
+        <TextBox x:Name="textBox">
+            <TextBox.Text>
+                <Binding 
+                    Source="{StaticResource myValidation}"  
+                    Mode="TwoWay" 
+                    Path="Count"
+                    NotifyOnValidationError="True" 
+                    ValidatesOnExceptions="True"/>
+            </TextBox.Text>
+        </TextBox>
+        
+        <TextBox x:Name="textBox2" />
+           
+    </StackPanel>
+    
+</UserControl>

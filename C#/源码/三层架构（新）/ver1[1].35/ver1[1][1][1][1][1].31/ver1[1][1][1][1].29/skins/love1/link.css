@@ -1,0 +1,87 @@
+﻿/*-----------超链接样式---------------
+ 说明: 伪类:link :visited :hover分别代表超链接的通常、被访问后、和鼠标接触链接是的样式
+ a标签代表通用超链接样式
+ .menuA代表Blog导航条菜单的样式
+ .titleA代表日志标题的样式
+ .sideA代表侧栏的超链接样式
+ .CategoryA代表树形分类的链接样式
+ .more代表更多链接的样式
+------------------------------------*/
+ a:link,a:visited{
+ text-decoration:none;
+ color:#FF6699;
+ }
+ a:hover{
+ color:#003300;
+ text-decoration: none;
+ }
+ .menuA:link,.menuA:visited{
+ font-weight: bolder;
+ padding:0px 4px;
+ text-decoration:none;
+ color:#FFFFFF;
+ float:left;
+ margin-left: 5px;
+ background: url(right.gif) no-repeat right top;
+ }  
+ .menuA:hover{
+ background: url(right.gif) no-repeat right top;
+ color:#FF6600;
+ font-weight: bolder;
+ } 
+ .titleA:link,.titleA:visited{
+ text-decoration:none;
+ font-weight:bold;
+ font-family:verdana,宋体;
+ text-align:left;
+ color:#003300;
+ }
+ .titleA:hover{
+ color:#FF6699;
+ text-decoration:none;
+ }
+ .sideA:link,.sideA:visited{
+ background: url(sidearrow0.gif) 0 6px no-repeat;
+ text-decoration:none;
+ color: #003300;
+ height:16px;
+ overflow:hidden;
+ display:block;
+ width:155px;
+ margin: 2px 0;
+ padding-left: 15px;
+ }
+ .sideA:hover{
+ background: url(sidearrow.gif) 1px 6px no-repeat;
+ text-decoration:none;
+ color:#808080;
+ height:16px;
+ overflow:hidden;
+ }
+ .CategoryA:link,.CategoryA:visited{
+ text-decoration:none;
+ color: #003300;
+ padding-left:0px
+ }
+ .CategoryA:hover{
+ color: #808080;
+ text-decoration: none;
+ }
+ 
+ .more:link,.more:visited{
+ font-weight:bold;
+ padding-left:5px;
+ margin:5px;
+ text-decoration:none;
+ }
+ .more:hover{
+ text-decoration:none;
+ }  
+ .blogsetA:link,.blogsetA:visited{padding:0px 9px 4px 16px ; background:url(../../images/tools.gif) no-repeat;text-decoration:none}
+ .mp3A:link,.mp3A:visited{padding:0px 0px 4px 16px; background:url(../../images/mm_snd.gif) no-repeat;text-decoration:none}
+ .collA:link,.collA:visited{padding:0px 0px 4px 16px; background:url(../../images/MyFa.gif) no-repeat;text-decoration:none}
+ .aboutA:link,.aboutA:visited{padding:0px 0px 4px 16px; background:url(../../images/ico_skdaq.gif) no-repeat;text-decoration:none}
+ .normalA:link,.normalA:visited{padding:0px 12px 4px 16px; background:url(../../images/icon_normal.gif) no-repeat;text-decoration:none}
+ .listA:link,.listA:visited{padding:0px 0px 4px 16px; background:url(../../images/icon_topic.gif) no-repeat;text-decoration:none}
+ .commentA:link,.commentA:visited{padding:0px 0px 4px 14px; background:url(../../images/icon_offsite_red.gif) no-repeat -2px 3px;text-decoration:none}
+ /*---超链接样式定义结束---*/

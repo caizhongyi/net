@@ -1,0 +1,5 @@
+bin\Debug\DoNetBbs.dll
+bin\Debug\DoNetBbs.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\DoNetBbs.dll
+obj\Debug\DoNetBbs.pdb

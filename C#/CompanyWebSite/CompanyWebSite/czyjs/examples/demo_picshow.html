@@ -1,0 +1,43 @@
+﻿<html>
+	<head>
+	<title></title>
+<script type="text/javascript" src="../czy-js-all.js"></script>
+<link rel="stylesheet" href="../czy-css-all.css" type="text/css"/>
+<script type="text/javascript">
+
+window.onload=function()
+{
+        
+//	    new czyjs.UI.PicShow({
+//	    randerTo: "pic", //
+//		width:500,//
+//		height:300,//
+//		count:3,//
+//		picName:"pic",//
+//		picType:"jpg",
+//		root:"pic",
+//		second:5,
+//        id:"db"
+//	 } );
+    new czyjs.UI.PicturesPos({
+	    randerTo: "Div1", //
+		//width:500,//
+		//height:300,//
+		pics:["pic/flaimg1.jpg","pic/flaimg2.jpg","pic/flaimg3.jpg","pic/flaimg4.jpg",,"pic/pic0.jpg"],//
+        id:"db"
+	 } );
+
+	
+}
+
+
+
+</script>
+
+	</head>
+	<body>
+<div id="pic"></div>
+<div id="Div1"></div>
+		
+	</body>
+</html>

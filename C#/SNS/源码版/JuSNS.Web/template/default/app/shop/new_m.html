@@ -1,0 +1,204 @@
+﻿#parse("_head.html")
+<script type="text/javascript" src="$webpath/library/js/date/WdatePicker.js"></script>
+<script type="text/javascript" src="$webpath/library/xmleditor/xheditor-zh-cn.min.js"></script>
+<script type="text/javascript" src="$webpath/library/js/area.js"></script>
+<link href="$templatepath/css/app/shop.css" rel="stylesheet" type="text/css" />
+<div id="snsmenu">
+#parse("_menu.html")
+</div>
+<div id="snsbody">
+    <div id="snshead"><span class="l">$cpagetitle</span><span class="r"><input id="kwd" name="kwd" value="#if($kwd)$kwd#else搜索#end" type="text" class="f-text w100" onclick="this.value=''" /> <input id="Button1" type="button" value="搜索" class="btn_gray2" onclick="search('goods','$q')" /></span></div>
+
+        <div class="itemmenu">
+        <ul>
+            <li><a href="$webpath/app/shop/default$exname">所有$shop</a></li>
+            <li><a href="$webpath/app/shop/default$exname?q=city">同城$shop</a></li>
+            <li><a href="$webpath/app/shop/default$exname?q=rec">推荐$shop</a></li>
+           <li><a href="$webpath/app/shop/default$exname?q=friend">好友的$shop</a></li>
+            <li><a href="$webpath/app/shop/default$exname?q=my">我的$shop</a></li>
+            <li class="lipoke"></li>
+             <li><a href="$webpath/app/shop/list$exname">所有店铺</a></li>
+            <li><a href="$webpath/app/shop/list$exname?q=rec">推荐商铺</a></li>
+            <li><a href="$webpath/app/shop/list$exname?q=city">同城店铺</a></li>
+            <li><a href="$webpath/app/shop/list$exname?q=friend">好友的店铺</a></li>
+            <li><a href="$webpath/app/shop/list$exname?q=my">我的店铺</a></li>
+            <li class="lipoke"></li>
+            <li><a href="$webpath/app/shop/multebuy$exname">超级团购</a></li>
+        </ul>
+    </div>
+    #if($uid>0)
+    <div class="itemmenu1">
+        <ul>
+            <li class="new"><a href="$webpath/app/shop/new$exname" class="newitem">发起$shop</a></li> 
+            <li class="current"><a href="$webpath/app/shop/new_m$exname" >发起团购</a></li> 
+            #if(!$isshop)
+            <li class="new"><a href="$webpath/app/shop/new_shop$exname" class="newitem">店铺入驻</a></li> 
+            #end
+        </ul>
+    </div>
+    #end
+    <div id="ativemiddleall">
+            
+ <form id="form1" method="post" action="" enctype="multipart/form-data">
+         #if($goodsname>0)
+        <div class="pitem strong reshow boder">
+               为$shop【<a href="$webpath/app/shop/goods$exname?gid=$gid" title="点击查看" target="_blank">$goodsname</a>】发起团购
+            </div>   
+            #end   
+            <div class="pitem">
+                <em>团购名称 <span class="reshow">*</span></em> 
+                <input id="txtTitle" name="txtTitle" class="f-text" value="#if($Title)$Title#end" type="text" style="width:442px;" />
+            </div>
+            
+            <div class="pitem">
+                <em>人数 <span class="reshow">*</span></em>
+                最少人数：<input id="txtMinMember" name="txtMinMember"value="#if($MinMember)$MinMember#else 0#end"  onkeyup="isNumber(this)" class="f-text" type="text" style="width:20%;"/>
+                最大人数：<input id="txtMaxMember" name="txtMaxMember" class="f-text" value="#if($MaxMember)$MaxMember#else 0#end"  onkeyup="isNumber(this)" type="text" style="width:20%;" />
+            </div>
+            
+        
+            <div class="pitem">
+                <em>有效期</em>
+                开始时间：<input id="txtStartTime" name="txtStartTime" value="#if($StartTime)$StartTime#end" class="f-text" type="text" onFocus="WdatePicker({isShowWeek:true})" style="width:20%;" /> 结束时间：<input id="txtEndTime" name="txtEndTime" value="#if($EndTime)$EndTime#end" class="f-text" type="text" onFocus="WdatePicker({isShowWeek:true})" style="width:20%;" /> 不填写表示没有期限
+            </div>
+            <div class="pitem">
+                <em>团购价格</em>
+                <input id="txtPrice" name="txtPrice" value="#if($Price)$Price#else 0#end"  onkeyup="isNumber(this)" class="f-text" type="text" style="width:442px;" /> 0表示待定
+            </div>
+
+            <div class="pitem">
+                <em>团购地址</em>
+                  <select id="provinceID" name="provinceID" onchange="ChangeProv(this);">
+                    <option value="0">选择省份</option>
+                     <script type="text/javascript">
+                            var returnvalue = "";
+                            for (i=0; i<Area.length; i++) 
+                            {
+                                if(Area[i][0] == "0")
+                                {
+                                    if(Area[i][1]==$areaid)
+                                    {
+                                        returnvalue += "<option value='" + Area[i][1] + "' selected>" + Area[i][2] + "</option>";
+                                    }
+                                    else
+                                    {
+                                        returnvalue += "<option value='" + Area[i][1] + "'>" + Area[i][2] + "</option>";
+                                    }
+                                }
+                            }
+                            document.write(returnvalue);
+                    </script>  
+                </select>
+                  <select id="CityID" name="CityID">
+                  <option value="0">选择城市</option>
+                </select>
+                地址：<input id="txtaddress" name="txtaddress" class="f-text" value="#if($AddRess)$AddRess#end" type="text" style="width:233px;" />
+            </div>
+            <div class="pitem">
+                <em>联系电话/手机</em>
+                <input id="txtLinkStyle" name="txtLinkStyle" value="#if($LinkStyle)$LinkStyle#end" value="" maxlength="50" class="f-text" type="text" style="width:442px;" />
+            </div>    
+            <div class="pitem">
+                <em>团购详情</em>
+                 
+                <textarea runat="server" name="txtcontent"  class="xheditor-simple {upBtnText:'上传',upMultiple:5,upLinkUrl:'$editfile',upImgUrl:'$edit_pic',skin:'$editskin'}" id="txtcontent" style="width:80%;height:300px">#if($Content)$Content#end</textarea>
+            </div> 
+              <div class="pitem">
+                <em>团购封面图片</em>
+                <input id="photopic" name="photopic" type="file" /><input id="hidephoto" name="hidephoto" value="#if($photo)$photo#end" class="f-text" type="hidden" />
+            </div>
+                     
+            <div class="pitem">
+                <em>关键字</em>
+                <input id="keywords1" name="keywords1" value="#if($keywords1)$keywords1#end" class="f-text" type="text" maxlength="9" style="width:12%;" />，<input id="keywords2" name="keywords2" value="#if($keywords2)$keywords2#end" maxlength="9" class="f-text" type="text" style="width:12%;" />，<input id="keywords3" name="keywords3" maxlength="9" value="#if($keywords3)$keywords3#end" class="f-text" type="text" style="width:12%;" />
+            </div>            
+            <div class="pitem1">
+                <em>&nbsp;</em>
+                <input id="Button2" type="submit" value="$cpagetitle" class="btn_blue6" onclick="return checkdata();" />
+                <input id="Submit1" type="reset" value="重新填写" class="btn_gray4" />
+            </div>
+        </form>
+    
+    </div>
+    
+</div>
+
+#parse("_foot.html")
+<script type="text/javascript">
+    function checkdata()
+    {
+        var txtGoodsName=jQuery("#txtTitle").val();
+        var err="";
+        if(txtGoodsName=="")
+        {
+            err+="团购名称<br />";
+        }        
+        if(err!="")
+        {
+            showErrorResult("以下必须填写：<br />"+err)
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
+    function Uploadphoto()
+    {
+        jQuery("#showphoto").show();
+        jQuery("#editupload").hide();
+    }
+    function Uploadphoto1()
+    {
+        jQuery("#editupload").show();
+       jQuery("#showphoto").hide();
+     }
+
+    function sexpress(obj)
+    {
+        if(obj.value!="0")
+        {
+            jQuery("#showexpress").show();    
+        }
+        else
+        {
+            jQuery("#showexpress").hide();    
+        }
+    }
+    function ismbuy(obj)
+    {
+        if(obj.checked)
+        {
+            jQuery("#showmulte").show();    
+        }
+        else
+        {
+            jQuery("#showmulte").hide();    
+        }
+    }
+    function ChangeProv(obj) 
+    {
+        var objcity = document.getElementById('CityID');
+        objcity.style.display = '';
+        objcity.options.length = 0;
+        var m=0;  
+        var sitem=$sitem;
+        for (i=0; i<Area.length; i++) 
+        {
+            if(Area[i][0] == obj.value&&Area[i][0] !="0")
+            {
+                var opt = document.createElement('option');
+                opt.value = Area[i][1];
+                opt.innerHTML = Area[i][2];
+                objcity.appendChild(opt);
+               if(Area[i][1]==sitem)
+                {
+                    document.getElementById("CityID").options[m].selected=true;
+                }
+                m++;
+            }
+        }        
+      
+    }
+    ChangeProv(document.getElementById("provinceID"));
+</script>

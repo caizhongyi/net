@@ -1,0 +1,87 @@
+<data transition="CrossFadeTransition">
+	<album
+		title="spring travel"
+		description="At March 29,2008,we travel together to Songpo Park"
+		image="photos/sp1.jpg">
+		<slide
+			title="March·Green·Spring"
+			description="Beautiful spring, green of spring! I like!"
+			image="photos/p1.jpg"
+			thumbnail="photos/sp1.jpg" />
+		<slide
+			title="Three greatest beauty girls"
+			description="Three greatest beauty girls of our class"
+			image="photos/p2.jpg"
+			thumbnail="photos/sp2.jpg" />
+		<slide
+			title="It's me!"
+			description="My back has a lot of terrorists!"
+			image="photos/p3.jpg"
+			thumbnail="photos/sp3.jpg" />
+		<slide
+			title="beauty!"
+			description="Look!our class have many beauty girls!"
+			image="photos/p4.jpg"
+			thumbnail="photos/sp4.jpg" />
+	</album>
+		<album
+		title="sample album"
+		description="sample album"
+		image="samplePhotos/t15.jpg">
+		<slide
+			title="sample album"
+			description="sample album"
+			image="samplePhotos/s08.jpg"
+			thumbnail="samplePhotos/t08.jpg" />
+		<slide
+			title="sample album"
+			description="sample album"
+			image="samplePhotos/s09.jpg"
+			thumbnail="samplePhotos/t09.jpg" />
+		<slide
+			title="sample album!"
+			description="sample album"
+			image="samplePhotos/s10.jpg"
+			thumbnail="samplePhotos/t10.jpg" />
+		<slide
+			title="sample album"
+			description="sample album"
+			image="samplePhotos/s11.jpg"
+			thumbnail="samplePhotos/t11.jpg" />
+					<slide
+			title="sample album"
+			description="sample album"
+			image="samplePhotos/s12.jpg"
+			thumbnail="samplePhotos/t12.jpg" />
+		<slide
+			title="sample album"
+			description="sample album"
+			image="samplePhotos/s13.jpg"
+			thumbnail="samplePhotos/t13.jpg" />
+		<slide
+			title="sample album"
+			description="sample album"
+			image="samplePhotos/s14.jpg"
+			thumbnail="samplePhotos/t14.jpg" />
+		<slide
+			title="sample album"
+			description="sample album"
+			image="samplePhotos/s15.jpg"
+			thumbnail="samplePhotos/t15.jpg" />
+					<slide
+			title="sample album"
+			description="sample album"
+			image="samplePhotos/s17.jpg"
+			thumbnail="samplePhotos/t17.jpg" />
+		<slide
+			title="sample album"
+			description="sample album"
+			image="samplePhotos/s18.jpg"
+			thumbnail="samplePhotos/t18.jpg" />
+		<slide
+			title="sample album"
+			description="sample album"
+			image="samplePhotos/s19.jpg"
+			thumbnail="samplePhotos/t19.jpg" />
+	</album>
+</data>

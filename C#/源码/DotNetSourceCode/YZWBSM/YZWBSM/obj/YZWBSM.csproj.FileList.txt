@@ -1,0 +1,8 @@
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\YZWBSM.Form1.resources
+obj\Debug\YZWBSM.Properties.Resources.resources
+obj\Debug\YZWBSM.csproj.GenerateResource.Cache
+bin\Debug\YZWBSM.exe
+bin\Debug\YZWBSM.pdb
+obj\Debug\YZWBSM.exe
+obj\Debug\YZWBSM.pdb

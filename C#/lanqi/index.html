@@ -1,0 +1,808 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>东海旅游购物网</title>
+<style type="text/css">
+/* common styling */
+/* set up the overall width of the menu div, the font and the margins */
+.menu {
+	width:979px;
+	margin:0;
+}
+/* remove the bullets and set the margin and padding to zero for the unordered list */
+.menu ul {
+	padding:0;
+	margin:0;
+	list-style-type: none;
+}
+/* float the list so that the items are in a line and their position relative so that the drop down list will appear in the right place underneath each list item */
+.menu ul li {
+	float:left;
+	position:relative;
+}
+/* style the links to be 104px wide by 30px high with a top and right border 1px solid white. Set the background color and the font size. */
+.menu ul li a, .menu ul li a:visited {
+	display:block;
+	text-align:center;
+	text-decoration:none;
+	width:121px;
+	height:30px;
+	color:#000;
+	border:1px solid #fff;
+	border-width:1px 1px 0 0;
+	line-height:30px;
+	font-size:13px;
+	font-weight: bold;
+	background-color: #E8E8E8;
+}
+/* make the dropdown ul invisible */
+.menu ul li ul {
+	display: none;
+}
+/* specific to non IE browsers */
+/* set the background and foreground color of the main menu li on hover */
+.menu ul li:hover a {
+	color:#fff;
+	background:#b3ab79;
+}
+/* make the sub menu ul visible and position it beneath the main menu list item */
+.menu ul li:hover ul {
+	display:block;
+	position:absolute;
+	top:31px;
+	left:0;
+	width:105px;
+}
+/* style the background and foreground color of the submenu links */
+.menu ul li:hover ul li a {
+	display:block;
+	background:#faeec7;
+	color:#000;
+}
+/* style the background and forground colors of the links on hover */
+.menu ul li:hover ul li a:hover {
+	z-index:1;
+	background:#dfc184;
+	color:#000;
+}
+</style>
+<!--[if lte IE 6]>
+<style type="text/css">
+/* styling specific to Internet Explorer IE5.5 and IE6. Yet to see if IE7 handles li:hover */
+/* Get rid of any default table style */
+table {
+border-collapse:collapse;
+margin:0; 
+padding:0;
+}
+/* ignore the link used by 'other browsers' */
+.menu ul li a.hide, .menu ul li a:visited.hide {
+display:none;
+}
+/* set the background and foreground color of the main menu link on hover */
+.menu ul li a:hover {
+color:#fff; 
+background:#b3ab79;
+}
+/* make the sub menu ul visible and position it beneath the main menu list item */
+.menu ul li a:hover ul {
+display:block; 
+position:absolute; 
+top:32px; 
+left:0; 
+width:105px;
+}
+/* style the background and foreground color of the submenu links */
+.menu ul li a:hover ul li a {
+background:#faeec7; 
+color:#000;
+}
+/* style the background and forground colors of the links on hover */
+.menu ul li a:hover ul li a:hover {
+background:#dfc184; 
+color:#000;
+}
+</style>
+<![endif]-->
+
+</head>
+<script type="text/javascript" src="js/1.js"></script>
+<link href="css/a.css" rel="stylesheet" type="text/css" />
+<body>
+<div id="box">
+  <div id="top">
+    <div class="bennr">
+      <div class="logo"><img src="images/dx_03.jpg" width="231" height="77" /></div>
+      <div class="anniu">
+        <p><a href="Login.html">注册</a></p>
+        <p><a href="Login.html">登陆</a></p>
+         <p><a href="Login.html">收藏我们</a></p>
+            <p><a href="Login.html">个人中心</a></p>
+      </div>
+    </div>
+  </div>
+<div class="clr"></div>
+  <div class="navigate2"> <div class="menu" style="z-index:2">
+    <ul style="z-index:2">
+      <li style="z-index:2"><a href="index.html">首&nbsp;&nbsp;&nbsp;页</a> </li>
+      <li style="z-index:2"><a class="hide" href="index.html">福州旅游</a>
+        <!--[if lte IE 6]>
+<a href=""index.html">福州旅游
+<table><tr><td>
+<![endif]-->
+        <ul>
+          <li><a href="spies.html" title="a coded list of spies">spies menu</a></li>
+          <li><a href="vertical.html" title="a horizontal vertical menu">vertical menu</a></li>
+          <li><a href="expand.html" title="an enlarging unordered list">enlarging list</a></li>
+          <li><a href="enlarge.html" title="an unordered list with link images">link images</a></li>
+          <li><a href="cross.html" title="non-rectangular links">non-rectangular</a></li>
+          <li><a href="jigsaw.html" title="jigsaw links">jigsaw links</a></li>
+          <li><a href="circles.html" title="circular links">circular links</a></li>
+        </ul>
+        <!--[if lte IE 6]>
+</td></tr></table>
+</a>
+<![endif]-->
+      </li>
+      <li style="z-index:2"><a class="hide" href="#">琅岐旅游</a>
+        <!--[if lte IE 6]>
+<a href="#">琅岐旅游
+<table><tr><td>
+<![endif]-->
+        <ul>
+          <li><a href="../layouts/bodyfix.html" title="Cross browser fixed layout">Fixed 1</a></li>
+          <li><a href="../layouts/body2.html" title="Cross browser fixed layout">Fixed 2</a></li>
+          <li><a href="../layouts/body4.html" title="Cross browser fixed layout">Fixed 3</a></li>
+          <li><a href="../layouts/body5.html" title="Cross browser fixed layout">Fixed 4</a></li>
+          <li><a href="../layouts/minimum.html" title="A simple minimum width layout">minimum width</a></li>
+        </ul>
+        <!--[if lte IE 6]>
+</td></tr></table>
+</a>
+<![endif]-->
+      </li>
+      <li style="z-index:2"><a class="hide" href="#">长乐旅游</a>
+        <!--[if lte IE 6]>
+<a href="#">长乐旅游
+<table><tr><td>
+<![endif]-->
+        <ul>
+          <li><a href="spies.html" title="a coded list of spies">spies menu</a></li>
+          <li><a href="vertical.html" title="a horizontal vertical menu">vertical menu</a></li>
+          <li><a href="expand.html" title="an enlarging unordered list">enlarging list</a></li>
+          <li><a href="enlarge.html" title="an unordered list with link images">link images</a></li>
+          <li><a href="cross.html" title="non-rectangular links">non-rectangular</a></li>
+          <li><a href="jigsaw.html" title="jigsaw links">jigsaw links</a></li>
+          <li><a href="circles.html" title="circular links">circular links</a></li>
+        </ul>
+        <!--[if lte IE 6]>
+</td></tr></table>
+</a>
+<![endif]-->
+      </li>
+      <li style="z-index:2"><a class="hide" href="#">连江旅游</a>
+        <!--[if lte IE 6]>
+<a href="#">连江旅游
+<table><tr><td>
+<![endif]-->
+        <ul>
+          <li><a href="../mozilla/dropdown.html" title="A drop down menu">drop down menu</a></li>
+          <li><a href="../mozilla/cascade.html" title="A cascading menu">cascading menu</a></li>
+          <li><a href="../mozilla/content.html" title="Using content:">content:</a></li>
+          <li><a href="../mozilla/moxbox.html" title=":hover applied to a div">mozzie box</a></li>
+          <li><a href="../mozilla/rainbow.html" title="I can build a rainbow">rainbow box</a></li>
+          <li><a href="../mozilla/snooker.html" title="Snooker cue">snooker cue</a></li>
+          <li><a href="../mozilla/target.html" title="Target Practise">target practise</a></li>
+          <li><a href="../mozilla/splittext.html" title="Two tone headings">two tone headings</a></li>
+          <li><a href="../mozilla/shadow_text.html" title="Shadow text">shadow text</a></li>
+        </ul>
+        <!--[if lte IE 6]>
+</td></tr></table>
+</a>
+<![endif]-->
+      </li>
+      <li style="z-index:2"><a class="hide" href="#">马尾旅游</a>
+        <!--[if lte IE 6]>
+<a href="#">马尾旅游
+<table><tr><td>
+<![endif]-->
+        <ul>
+          <li><a href="../ie/exampleone.html" title="Example one">example one</a></li>
+          <li><a href="../ie/weft.html" title="Weft fonts">weft fonts</a></li>
+          <li><a href="../ie/exampletwo.html" title="Vertical align">vertical align</a></li>
+        </ul>
+        <!--[if lte IE 6]>
+</td></tr></table>
+</a>
+<![endif]-->
+      </li>
+      <li style="z-index:2"><a class="hide" href="#">福清旅游</a>
+        <!--[if lte IE 6]>
+<a href="#">福清旅游
+<table><tr><td>
+<![endif]-->
+        <ul>
+          <li><a href="../opacity/colours.html" title="colour wheel">opaque colours</a></li>
+          <li><a href="../opacity/picturemenu.html" title="a menu using opacity">opaque menu</a></li>
+          <li><a href="../opacity/png.html" title="partial opacity">partial opacity</a></li>
+          <li><a href="../opacity/png2.html" title="partial opacity II">partial opacity II</a></li>
+        </ul>
+        <!--[if lte IE 6]>
+</td></tr></table>
+</a>
+<![endif]-->
+      </li>
+      <li style="z-index:2"><a class="hide" href="#">闽侯旅游</a>
+        <!--[if lte IE 6]>
+<a href="#">闽侯旅游
+<table><tr><td>
+<![endif]-->
+        <ul>
+          <li><a href="../opacity/colours.html" title="colour wheel">opaque colours</a></li>
+          <li><a href="../opacity/picturemenu.html" title="a menu using opacity">opaque menu</a></li>
+          <li><a href="../opacity/png.html" title="partial opacity">partial opacity</a></li>
+          <li><a href="../opacity/png2.html" title="partial opacity II">partial opacity II</a></li>
+        </ul>
+        <!--[if lte IE 6]>
+</td></tr></table>
+</a>
+<![endif]-->
+      </li>
+    </ul>
+    <!-- clear the floats if required -->
+    <div class="clear"> </div>
+  </div>
+  <div class="clr" style="clear:both"></div>
+  <div class="menu" style="z-index:0">
+    <ul style="z-index:0">
+      <li style="z-index:0"><a class="hide" href="#">平潭旅游</a>
+        <!--[if lte IE 6]>
+<a href="#">平潭旅游
+<table><tr><td>
+<![endif]-->
+        <ul>
+          <li><a href="../menu/zero_dollars.html" title="The zero dollar ads page">zero dollars</a></li>
+          <li><a href="../menu/embed.html" title="Wrapping text around images">wrapping text</a></li>
+          <li><a href="../menu/form.html" title="Styling forms">styled form</a></li>
+          <li><a href="../menu/nodots.html" title="Removing active/focus borders">active focus</a></li>
+          <li><a href="../menu/shadow_boxing.html" title="Multi-position drop shadow">shadow boxing</a></li>
+          <li><a href="../menu/old_master.html" title="Image Map for detailed information">image map</a></li>
+          <li><a href="../menu/bodies.html" title="fun with background images">fun backgrounds</a></li>
+          <li><a href="../menu/fade_scroll.html" title="fade-out scrolling">fade scrolling</a></li>
+          <li><a href="../menu/em_images.html" title="em size images compared">em sized images</a></li>
+        </ul>
+        <!--[if lte IE 6]>
+</td></tr></table>
+</a>
+<![endif]-->
+      </li>
+      <li style="z-index:0"><a class="hide" href="#">厦门旅游</a>
+        <!--[if lte IE 6]>
+<a href="#">厦门旅游
+<table><tr><td>
+<![endif]-->
+        <ul>
+          <li><a href="spies.html" title="a coded list of spies">spies menu</a></li>
+          <li><a href="vertical.html" title="a horizontal vertical menu">vertical menu</a></li>
+          <li><a href="expand.html" title="an enlarging unordered list">enlarging list</a></li>
+          <li><a href="enlarge.html" title="an unordered list with link images">link images</a></li>
+          <li><a href="cross.html" title="non-rectangular links">non-rectangular</a></li>
+          <li><a href="jigsaw.html" title="jigsaw links">jigsaw links</a></li>
+          <li><a href="circles.html" title="circular links">circular links</a></li>
+        </ul>
+        <!--[if lte IE 6]>
+</td></tr></table>
+</a>
+<![endif]-->
+      </li>
+      <li style="z-index:0"><a class="hide" href="#">莆田旅游</a>
+        <!--[if lte IE 6]>
+<a href="#">莆田旅游
+<table><tr><td>
+<![endif]-->
+        <ul>
+          <li><a href="../layouts/bodyfix.html" title="Cross browser fixed layout">Fixed 1</a></li>
+          <li><a href="../layouts/body2.html" title="Cross browser fixed layout">Fixed 2</a></li>
+          <li><a href="../layouts/body4.html" title="Cross browser fixed layout">Fixed 3</a></li>
+          <li><a href="../layouts/body5.html" title="Cross browser fixed layout">Fixed 4</a></li>
+          <li><a href="../layouts/minimum.html" title="A simple minimum width layout">minimum width</a></li>
+        </ul>
+        <!--[if lte IE 6]>
+</td></tr></table>
+</a>
+<![endif]-->
+      </li>
+      <li style="z-index:0"><a class="hide" href="#">上海旅游</a>
+        <!--[if lte IE 6]>
+<a href="#">上海旅游
+<table><tr><td>
+<![endif]-->
+        <ul>
+          <li><a href="spies.html" title="a coded list of spies">spies menu</a></li>
+          <li><a href="vertical.html" title="a horizontal vertical menu">vertical menu</a></li>
+          <li><a href="expand.html" title="an enlarging unordered list">enlarging list</a></li>
+          <li><a href="enlarge.html" title="an unordered list with link images">link images</a></li>
+          <li><a href="cross.html" title="non-rectangular links">non-rectangular</a></li>
+          <li><a href="jigsaw.html" title="jigsaw links">jigsaw links</a></li>
+          <li><a href="circles.html" title="circular links">circular links</a></li>
+        </ul>
+        <!--[if lte IE 6]>
+</td></tr></table>
+</a>
+<![endif]-->
+      </li>
+      <li style="z-index:0"><a class="hide" href="#">浙江旅游</a>
+        <!--[if lte IE 6]>
+<a href="#">浙江旅游
+<table><tr><td>
+<![endif]-->
+        <ul>
+          <li><a href="../mozilla/dropdown.html" title="A drop down menu">drop down menu</a></li>
+          <li><a href="../mozilla/cascade.html" title="A cascading menu">cascading menu</a></li>
+          <li><a href="../mozilla/content.html" title="Using content:">content:</a></li>
+          <li><a href="../mozilla/moxbox.html" title=":hover applied to a div">mozzie box</a></li>
+          <li><a href="../mozilla/rainbow.html" title="I can build a rainbow">rainbow box</a></li>
+          <li><a href="../mozilla/snooker.html" title="Snooker cue">snooker cue</a></li>
+          <li><a href="../mozilla/target.html" title="Target Practise">target practise</a></li>
+          <li><a href="../mozilla/splittext.html" title="Two tone headings">two tone headings</a></li>
+          <li><a href="../mozilla/shadow_text.html" title="Shadow text">shadow text</a></li>
+        </ul>
+        <!--[if lte IE 6]>
+</td></tr></table>
+</a>
+<![endif]-->
+      </li>
+      <li style="z-index:0"><a class="hide" href="#">台湾旅游</a>
+        <!--[if lte IE 6]>
+<a href="#">台湾旅游
+<table><tr><td>
+<![endif]-->
+        <ul>
+          <li><a href="../ie/exampleone.html" title="Example one">example one</a></li>
+          <li><a href="../ie/weft.html" title="Weft fonts">weft fonts</a></li>
+          <li><a href="../ie/exampletwo.html" title="Vertical align">vertical align</a></li>
+        </ul>
+        <!--[if lte IE 6]>
+</td></tr></table>
+</a>
+<![endif]-->
+      </li>
+      <li style="z-index:0"><a class="hide" href="#">其他城市</a>
+        <!--[if lte IE 6]>
+<a href="#">其他城市
+<table><tr><td>
+<![endif]-->
+        <ul>
+          <li><a href="../opacity/colours.html" title="colour wheel">opaque colours</a></li>
+          <li><a href="../opacity/picturemenu.html" title="a menu using opacity">opaque menu</a></li>
+          <li><a href="../opacity/png.html" title="partial opacity">partial opacity</a></li>
+          <li><a href="../opacity/png2.html" title="partial opacity II">partial opacity II</a></li>
+        </ul>
+        <!--[if lte IE 6]>
+</td></tr></table>
+</a>
+<![endif]-->
+      </li>
+      <li style="z-index:0"><a class="hide" href="#">商品目录</a>
+        <!--[if lte IE 6]>
+<a href="#">商品目录
+<table><tr><td>
+<![endif]-->
+        <ul>
+          <li><a href="../opacity/colours.html" title="colour wheel">opaque colours</a></li>
+          <li><a href="../opacity/picturemenu.html" title="a menu using opacity">opaque menu</a></li>
+          <li><a href="../opacity/png.html" title="partial opacity">partial opacity</a></li>
+          <li><a href="../opacity/png2.html" title="partial opacity II">partial opacity II</a></li>
+        </ul>
+        <!--[if lte IE 6]>
+</td></tr></table>
+</a>
+<![endif]-->
+      </li>
+    </ul>
+    <!-- clear the floats if required -->
+    <div class="clear"> </div>
+  </div>
+  <div class="clr"></div>
+    
+    
+  
+  </div>
+  <div id="center">
+    <div class="center_up">
+      <ul>
+        <li><a href="#">大众论坛</a></li>
+        <li><a href="#">旅游摄影</a></li>
+        <li><a href="#">旅游趣闻</a></li>
+        <li><a href="#">生活百宝箱</a></li>
+        <li><a href="#">美容养颜</a></li>
+        <li><a href="#">健身之道</a></li>
+        <li><a href="#">云水禅音</a></li>
+        <li><a href="#">学做美食</a></li>
+        <li><a href="#">家居风水</a></li>
+        <li><a href="#">家庭教育</a></li>
+        <li><a href="#">传统文化</a></li>
+        <li><a href="Learning Center.html">学习园地</a></li>
+        <li><a href="#">文摘荟萃</a></li>
+        <li><a href="#">开心一笑</a></li>
+        <li><a href="Religion.html">宗教百典</a></li>
+        <li><a href="#">故事会</a></li>
+        <li><a href="#">华佗神医秘方</a></li>
+      </ul>
+    </div>
+    <div class="center_in">
+      <div class="in_left"><img src="images/dx_11.jpg" width="653" height="409" /></div>
+      <div class="in_right">
+        <div class="xinwen"><a href="news.html"><img src="images/dx_13.jpg"/></a></div>
+        <div class="xinwen2">
+          <h1><a href="news.html">121212`12sad</a></h1>
+
+        </div>
+        <ul>
+          <li><a href="#"><img src="images/dx_19.jpg" width="165" height="54" border="0"/></a></li>
+          <li><a href="#"><img src="images/dx_21.jpg" width="165" height="55" border="0"/></a></li>
+          <li><a href="#"><img src="images/dx_23.jpg" width="165" height="55" border="0"/></a></li>
+        </ul>
+      </div>
+      <div class="clr"></div>
+      <div class="in_next">
+        <div class="huadong">
+          <div class="up">
+            <ul>
+              <li id="left" onMouseOver="show1()"><img src="images/dx_26.jpg" width="160" height="31" /></li>
+              <li id="right" onMouseOver="show2()"><img src="images/dx_27.jpg" width="160" height="31" /></li>
+              <li id="right" onMouseOver="show3()"><img src="images/dx_29.jpg" width="160" height="31" /></li>
+            </ul>
+          </div>
+          <div class="clr"></div>
+          <div class="bo1"><img src="images/dx_1_1.jpg" width="20" height="360" /></div>
+          <div class="bo2">
+            <!-- content1 -->
+            <div id="content1">
+              <div class="cont_1">
+                <dl>
+                  <dd><img src="images/dx_09.jpg"/></dd>
+                  <dt class="dt_1">三星w799</dt>
+                  <dt>三星w799</dt>
+                  <dt class="bt_2">现价7299<span class="ds">元</span></dt>
+                </dl >
+                <dl>
+                  <dd><img src="images/dx_09.jpg"/></dd>
+                  <dt class="dt_1">三星w799</dt>
+                  <dt>三星w799</dt>
+                  <dt class="bt_2">现价7299<span class="ds">元</span></dt>
+                </dl >
+                <dl>
+                  <dd><img src="images/dx_09.jpg"/></dd>
+                  <dt class="dt_1">三星w799</dt>
+                  <dt>三星w799</dt>
+                  <dt class="bt_2">现价7299<span class="ds">元</span></dt>
+                </dl >
+                <dl>
+                  <dd><img src="images/dx_09.jpg"/></dd>
+                  <dt class="dt_1">三星w799</dt>
+                  <dt>三星w799</dt>
+                  <dt class="bt_2">现价7299<span class="ds">元</span></dt>
+                </dl >
+                <dl>
+                  <dd><img src="images/dx_09.jpg"/></dd>
+                  <dt class="dt_1">三星w799</dt>
+                  <dt>三星w799</dt>
+                  <dt class="bt_2">现价7299<span class="ds">元</span></dt>
+                </dl >
+                <dl>
+                  <dd><img src="images/dx_09.jpg"/></dd>
+                  <dt class="dt_1">三星w799</dt>
+                  <dt>三星w799</dt>
+                  <dt class="bt_2">现价7299<span class="ds">元</span></dt>
+                </dl >
+              </div>
+              <div class="cont_2"><a href="More.html">更多>></a></div>
+            </div>
+            <!-- content1 -->
+            <!-- content2 -->
+            <div id="content2">
+              <div class="cont_1">
+                <dl>
+                  <dd><img src="images/dx_10.jpg"/></dd>
+                  <dt class="dt_1">三星w799</dt>
+                  <dt>三星w799</dt>
+                  <dt class="bt_2">现价7299<span class="ds">元</span></dt>
+                </dl >
+                <dl>
+                  <dd><img src="images/dx_09.jpg"/></dd>
+                  <dt class="dt_1">三星w799</dt>
+                  <dt>三星w799</dt>
+                  <dt class="bt_2">现价7299<span class="ds">元</span></dt>
+                </dl >
+                <dl>
+                  <dd><img src="images/dx_10.jpg"/></dd>
+                  <dt class="dt_1">三星w799</dt>
+                  <dt>三星w799</dt>
+                  <dt class="bt_2">现价7299<span class="ds">元</span></dt>
+                </dl >
+                <dl>
+                  <dd><img src="images/dx_09.jpg"/></dd>
+                  <dt class="dt_1">三星w799</dt>
+                  <dt>三星w799</dt>
+                  <dt class="bt_2">现价7299<span class="ds">元</span></dt>
+                </dl >
+                <dl>
+                  <dd><img src="images/dx_10.jpg"/></dd>
+                  <dt class="dt_1">三星w799</dt>
+                  <dt>三星w799</dt>
+                  <dt class="bt_2">现价7299<span class="ds">元</span></dt>
+                </dl >
+                <dl>
+                  <dd><img src="images/dx_09.jpg"/></dd>
+                  <dt class="dt_1">三星w799</dt>
+                  <dt>三星w799</dt>
+                  <dt class="bt_2">现价7299<span class="ds">元</span></dt>
+                </dl >
+              </div>
+              <div class="cont_2"><a href="#">更多>></a></div>
+            </div>
+            <!-- content2 -->
+            <!-- content3 -->
+            <div id="content3">
+              <div class="cont_1">
+                <dl>
+                  <dd><img src="images/dx_09.jpg"/></dd>
+                  <dt class="dt_1">三星w799</dt>
+                  <dt>三星w799</dt>
+                  <dt class="bt_2">现价7299<span class="ds">元</span></dt>
+                </dl >
+                <dl>
+                  <dd><img src="images/dx_10.jpg"/></dd>
+                  <dt class="dt_1">三星w799</dt>
+                  <dt>三星w799</dt>
+                  <dt class="bt_2">现价7299<span class="ds">元</span></dt>
+                </dl >
+                <dl>
+                  <dd><img src="images/dx_09.jpg"/></dd>
+                  <dt class="dt_1">三星w799</dt>
+                  <dt>三星w799</dt>
+                  <dt class="bt_2">现价7299<span class="ds">元</span></dt>
+                </dl >
+                <dl>
+                  <dd><img src="images/dx_10.jpg"/></dd>
+                  <dt class="dt_1">三星w799</dt>
+                  <dt>三星w799</dt>
+                  <dt class="bt_2">现价7299<span class="ds">元</span></dt>
+                </dl >
+                <dl>
+                  <dd><img src="images/dx_09.jpg"/></dd>
+                  <dt class="dt_1">三星w799</dt>
+                  <dt>三星w799</dt>
+                  <dt class="bt_2">现价7299<span class="ds">元</span></dt>
+                </dl >
+                <dl>
+                  <dd><img src="images/dx_10.jpg"/></dd>
+                  <dt class="dt_1">三星w799</dt>
+                  <dt>三星w799</dt>
+                  <dt class="bt_2">现价7299<span class="ds">元</span></dt>
+                </dl >
+              </div>
+              <div class="cont_2"><a href="#">更多>></a></div>
+            </div>
+            <!-- content3 -->
+          </div>
+          <div class="bo3"><img src="images/dx_1_3.jpg" width="14" height="360" /></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="clr"></div>
+  <div class="ruzhu">
+    <div class="p_1">商家入驻</div>
+    <div class="ruzhu_2"><a href="More.html">更多>></a></div>
+  </div>
+  <p class="center_next1"><img src="images/dx_1_33_1.jpg" width="18" height="448"/></p>
+  <div class="center_next2">
+    <dl>
+      <dd><a href="#"><img src="images/dx_48.jpg" width="154" height="155" /></a></dd>
+      <dt>三星w799 </dt>
+      <dt>三星w799</dt>
+      <dt class="ds">现价7299元</dt>
+    </dl
+  
+  
+  
+    >
+    <dl>
+      <dd><a href="#"><img src="images/dx_48.jpg" width="154" height="155" /></a></dd>
+      <dt>三星w799 </dt>
+      <dt>三星w799</dt>
+      <dt class="ds">现价7299元</dt>
+    </dl
+  
+  
+    >
+    <dl>
+      <dd><a href="#"><img src="images/dx_48.jpg" width="154" height="155" /></a></dd>
+      <dt>三星w799 </dt>
+      <dt>三星w799</dt>
+      <dt class="ds">现价7299元</dt>
+    </dl
+  
+  
+    >
+    <dl>
+      <dd><a href="#"><img src="images/dx_48.jpg" width="154" height="155" /></a></dd>
+      <dt>三星w799 </dt>
+      <dt>三星w799</dt>
+      <dt class="ds">现价7299元</dt>
+    </dl
+  
+  
+    >
+    <dl>
+      <dd><a href="#"><img src="images/dx_48.jpg" width="154" height="155" /></a></dd>
+      <dt>三星w799 </dt>
+      <dt>三星w799</dt>
+      <dt class="ds">现价7299元</dt>
+    </dl
+  
+  
+    >
+    <dl>
+      <dd><a href="#"><img src="images/dx_48.jpg" width="154" height="155" /></a></dd>
+      <dt>三星w799 </dt>
+      <dt>三星w799</dt>
+      <dt class="ds">现价7299元</dt>
+    </dl
+  
+  
+    >
+    <dl>
+      <dd><a href="#"><img src="images/dx_48.jpg" width="154" height="155" /></a></dd>
+      <dt>三星w7999</dt>
+      <dt>三星w799</dt>
+      <dt class="ds">现价7299元</dt>
+    </dl
+  
+  
+    >
+    <dl>
+      <dd><a href="#"><img src="images/dx_48.jpg" width="154" height="155" /></a></dd>
+      <dt>三星w799 </dt>
+      <dt>三星w799</dt>
+      <dt class="ds">现价7299元</dt>
+    </dl
+  
+  
+    >
+    <dl>
+      <dd><a href="#"><img src="images/dx_48.jpg" width="154" height="155" /></a></dd>
+      <dt>三星w799 </dt>
+      <dt>三星w799</dt>
+      <dt class="ds">现价7299元</dt>
+    </dl
+  
+  
+    >
+    <dl>
+      <dd><a href="#"><img src="images/dx_48.jpg" width="154" height="155" /></a></dd>
+      <dt>三星w799 </dt>
+      <dt>三星w799</dt>
+      <dt class="ds">现价7299元</dt>
+    </dl >
+   
+  </div>
+  <p class="center_next3"><img src="images/dx_1_33_2.jpg" width="18" height="448" /></p>
+  <div class="clr"></div>
+  
+  
+  
+  
+<!--- 友情链接 -->
+  <div class="guanggao_2" style="padding-bottom:10px; margin-top:10px" >
+
+  <div class="p_1" style="margin-top:7px">旅行社招商</div>
+ <div class="clr"></div>
+ <ul>
+ <li><a href="#"><img src="images/guanggao-1.jpg" width="190" height="171" /></a></li>
+ <li><a href="#"><img src="images/guanggao-1.jpg" width="190" height="171" /></a></li>
+ <li><a href="#"><img src="images/guanggao-1.jpg"  width="190" height="171" /></a></li>
+ <li><a href="#"><img src="images/guanggao-1.jpg" width="190" height="171" /></a></li>
+ <li><a href="#"><img src="images/guanggao-1.jpg" width="190" height="171" /></a></li>
+ 
+  <li><a href="#"><img src="images/guanggao-1.jpg" width="190" height="171" /></a></li>
+ <li><a href="#"><img src="images/guanggao-1.jpg" width="190" height="171" /></a></li>
+ <li><a href="#"><img src="images/guanggao-1.jpg"  width="190" height="171" /></a></li>
+ <li><a href="#"><img src="images/guanggao-1.jpg" width="190" height="171" /></a></li>
+ <li><a href="#"><img src="images/guanggao-1.jpg" width="190" height="171" /></a></li>
+ </ul>
+  </div>
+  
+  <div class="clr"></div>
+<!--- 友情链接 -->
+
+
+
+
+
+
+  
+  <div id="next_1"><DIV id="scroll_div">
+<div id="scroll_begin">
+<table><tr id="mytr">
+<td><a href="#"><img src="images/01.jpg" width="200" height="137"  ><br>你要的文字</a></td>
+<td><a href="#"><img src="images/02.jpg" width="200" height="137"   /><br>
+  你要的文字</a></td>
+<td><a href="#"><img src="images/03.jpg" width="200" height="137"  ><br>你要的文字</a></td>
+<td><a href="#"><img src="images/04.jpg" width="200" height="137"  ><br>你要的文字</a></td>
+<td><a href="#"><img src="images/01.jpg" width="200" height="137"  ><br>你要的文字</a></td>
+<td><a href="#"><img src="images/02.jpg" width="200" height="137"   /><br>
+  你要的文字</a></td>
+<td><a href="#"><img src="images/03.jpg" width="200" height="137"  ><br>你要的文字</a></td>
+<td><a href="#"><img src="images/04.jpg" width="200" height="137"  ><br>你要的文字</a></td><td><a href="#"><img src="images/01.jpg" width="200" height="137"  ><br>你要的文字</a></td>
+<td><a href="#"><img src="images/02.jpg" width="200" height="137"   /><br>
+  你要的文字</a></td>
+<td><a href="#"><img src="images/03.jpg" width="200" height="137"  ><br>你要的文字</a></td>
+<td><a href="#"><img src="images/04.jpg" width="200" height="137"  ><br>你要的文字</a></td>
+
+</tr></table>
+</div>
+  <div id="scroll_end">
+  </div>
+</DIV>
+  <script>
+var speed=20
+var scroll_end = document.getElementById("scroll_end");
+var scroll_div = document.getElementById("scroll_div");
+scroll_end.innerHTML=scroll_begin.innerHTML
+function Marquee(){
+if(scroll_div.scrollLeft<=0)
+scroll_div.scrollLeft+=scroll_begin.offsetWidth
+else{
+scroll_div.scrollLeft--
+}
+}
+var MyMar=setInterval(Marquee,speed)
+scroll_div.onmouseover=function() {clearInterval(MyMar)}
+scroll_div.onmouseout=function() {MyMar=setInterval(Marquee,speed)}
+</script>
+  
+
+</div>  
+
+
+
+
+<!--- 友情链接 -->
+
+<div class="clr"></div>
+<div class="youqing_2">
+<ul>
+<li><a href="#">友情链接</a></li>
+<li><a href="#">友情链接</a></li>
+<li><a href="#">友情链接</a></li>
+<li><a href="#">友情链接</a></li>
+<li><a href="#">友情链接</a></li>
+<li><a href="#">友情链接</a></li>
+<li><a href="#">友情链接</a></li>
+<li><a href="#">友情链接</a></li>
+<li><a href="#">友情链接</a></li>
+<li><a href="#">友情链接</a></li>
+<li><a href="#">友情链接</a></li>
+<li><a href="#">友情链接</a></li>
+<li><a href="#">更多>></a></li>
+</ul>
+
+
+</div>
+<div class="clr"></div>
+
+
+
+<!--- 友情链接 -->
+
+
+    <div id="next_2" style="font-size:12px; line-height:20px">免责声明：本站部分文章、图片来源于互联网，如果侵犯了您的权益，请及时与我们联系，我们会尽快为您处理。（联系邮箱 ：donghaifz@sina.com ，QQ :1104212890 ) 谢谢 ！！<br />
+ 中国福建省福州市东海旅游网 国家信息产业部备案号： 闽ICP备案号：10207499 <br />
+All contents copyright@donghai99.com All rights reserved. </div>
+ </div>
+</body>
+</html>

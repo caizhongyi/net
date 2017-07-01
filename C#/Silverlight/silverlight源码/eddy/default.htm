@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><!--from slcenter.cn Silverlight开源中心-->
+	<script type="text/javascript" src="Silverlight.js"></script>
+	<script type="text/javascript" src="2_page.xaml.js"></script>
+	<style type="text/css">
+		#silverlightControlHost {
+			height:600px;
+			width:900px;
+		}
+		#errorLocation {
+			font-size: small;
+			color: Gray;
+		}
+	</style>
+	<script type="text/javascript">
+		function createSilverlight()
+		{
+			var scene = new wpfhome_3Dturn.Page();
+			Silverlight.createObjectEx({
+				source: "2_Page.xaml",
+				parentElement: document.getElementById("silverlightControlHost"),
+				id: "SilverlightControl",
+				properties: {
+					width: "100%",
+					height: "100%",
+					version: "1.0"
+				},
+				events: {
+					onLoad: Silverlight.createDelegate(scene, scene.handleLoad),
+					onError: function(sender, args) {
+						var errorDiv = document.getElementById("errorLocation");
+						if (errorDiv != null) {
+							var errorText = args.errorType + "- " + args.errorMessage;
+									
+							if (args.ErrorType == "ParserError") {
+								errorText += "<br>File: " + args.xamlFile;
+								errorText += ", line " + args.lineNumber;
+								errorText += " character " + args.charPosition;
+							}
+							else if (args.ErrorType == "RuntimeError") {
+								errorText += "<br>line " + args.lineNumber;
+								errorText += " character " +  args.charPosition;
+							}
+							errorDiv.innerHTML = errorText;
+						}	
+					}
+				}
+			});
+		}
+
+
+		if (!window.Silverlight) 
+			Silverlight = {};
+
+		Silverlight.createDelegate = function(instance, method) {
+			return function() {
+				return method.apply(instance, arguments);
+			}
+		}
+	</script>
+</head>
+
+<body style="margin:0px;background-color:black;overflow:hidden;">
+	<div id="silverlightControlHost">
+		<script type="text/javascript">
+		    createSilverlight();
+		</script>
+	</div>
+	<div id='errorLocation'></div>
+</body>
+</html>
+

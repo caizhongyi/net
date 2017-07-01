@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute">
+    <mx:Script>
+    <![CDATA[
+    	import example.externalizable.AssetVO;
+    	import example.externalizable.ContactVO;
+    	import example.externalizable.AgreementVO;
+        import mx.collections.ArrayCollection;
+        import mx.controls.Alert;
+        import mx.rpc.events.FaultEvent;
+        import mx.rpc.events.ResultEvent;
+
+        [Bindable]
+        public var agreements:ArrayCollection
+        
+        // Create a compile time dependency on AgreementVO class.
+        //private static var agreement:AgreementVO;
+
+        public function resultHandler(event:ResultEvent):void 
+        {
+            agreements = event.result as ArrayCollection;
+        }
+
+        public function faultHandler(event:FaultEvent):void 
+        {
+             Alert.show("Fault",  event.fault.toString());
+        }
+        
+        private function sendAgreement():void
+        {
+        	var agreement:AgreementVO = new AgreementVO();
+        	var contact:ContactVO = new ContactVO(1, "Seller");
+        	agreement.seller = contact;
+        	agreement.assets.addItem(new AssetVO(1, "Asset1"));
+        	agreement.assets.addItem(new AssetVO(2, "Asset2"));
+        	remoteObject.ProcessAgreement(agreement);
+        }
+    ]]>
+    </mx:Script>
+
+    <mx:RemoteObject id="remoteObject" destination="fluorine" source="ServiceLibrary.SampleService" 
+        fault="faultHandler(event)">
+		<mx:method name="GetAgreements" result="resultHandler(event)"/>
+		<mx:method name="ProcessAgreement"/>
+	</mx:RemoteObject>     
+
+    <mx:Panel title="Externalizable Example" height="400" width="600" 
+        paddingTop="10" paddingLeft="10" paddingRight="10">
+
+        <mx:DataGrid id="grid" width="100%" rowCount="5" dataProvider="{agreements}">
+            <mx:columns>
+                <mx:DataGridColumn dataField="id" headerText="Id"/>
+                <mx:DataGridColumn dataField="dateCreated" headerText="DateCreated"/>
+            </mx:columns>
+        </mx:DataGrid>
+
+        <mx:Form width="100%">
+            <mx:FormItem label="Id">
+                <mx:Label text="{grid.selectedItem.id}"/>
+            </mx:FormItem>
+            <mx:FormItem label="DateCreated">
+                <mx:Label text="{grid.selectedItem.dateCreated}"/>
+            </mx:FormItem>
+            <mx:FormItem label="Seller">
+                <mx:TextArea text="{grid.selectedItem.seller.name}"/>
+            </mx:FormItem>
+        </mx:Form>
+
+        <mx:Button label="Get Agreements" click="remoteObject.GetAgreements()" />
+        <mx:Button label="Send Agreement" click="sendAgreement()" />
+    </mx:Panel>
+	
+</mx:Application>

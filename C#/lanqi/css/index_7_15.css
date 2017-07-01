@@ -1,0 +1,503 @@
+﻿* {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; LIST-STYLE-TYPE: none
+}
+BODY {
+	FONT-SIZE: 12px; COLOR: #555555; FONT-FAMILY: Arial
+}
+A:link {
+	COLOR: #555555; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #555555; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #ff8400; TEXT-DECORATION: underline
+}
+.clearing {
+	FONT-SIZE: 0px; BORDER-TOP: transparent 1px solid; VISIBILITY: hidden; CLEAR: both; LINE-HEIGHT: 0; HEIGHT: 0px
+}
+A.hover {
+	COLOR: #ff8400
+}
+.red {
+	COLOR: #ff8400
+}
+IMG {
+	BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px
+}
+
+
+
+.collaborate {
+	BACKGROUND-POSITION: 100px 100px; BACKGROUND-IMAGE: url(http://img.alimama.cn/images/index/080522/bg/index_bg2.gif); BACKGROUND-REPEAT: no-repeat
+}
+.site_info DT {
+	BACKGROUND-POSITION: 100px 100px; BACKGROUND-IMAGE: url(http://img.alimama.cn/images/index/080522/bg/index_bg2.gif); BACKGROUND-REPEAT: no-repeat
+}
+.categories .cg_ul_link LI A {
+	BACKGROUND-POSITION: 100px 100px; BACKGROUND-IMAGE: url(../images/index/index_icon_bg.gif); BACKGROUND-REPEAT: no-repeat
+}
+.category DT {
+	BACKGROUND-POSITION: 100px 100px; BACKGROUND-IMAGE: url(../images/index/index_icon_bg.gif); BACKGROUND-REPEAT: no-repeat
+}
+.category DD A:hover {
+	BACKGROUND-POSITION: 100px 100px; BACKGROUND-IMAGE: url(../images/index/index_icon_bg.gif); BACKGROUND-REPEAT: no-repeat
+}
+.bargain {
+	BACKGROUND-POSITION: 100px 100px; BACKGROUND-IMAGE: url(../images/index/index_icon_bg.gif); BACKGROUND-REPEAT: no-repeat
+}
+.scroll_left {
+	BACKGROUND-POSITION: 100px 100px; BACKGROUND-IMAGE: url(../images/index/index_icon_bg.gif); BACKGROUND-REPEAT: no-repeat
+}
+.scroll_right {
+	BACKGROUND-POSITION: 100px 100px; BACKGROUND-IMAGE: url(../images/index/index_icon_bg.gif); BACKGROUND-REPEAT: no-repeat
+}
+.star_body I {
+	BACKGROUND-POSITION: 100px 100px; BACKGROUND-IMAGE: url(../images/index/index_icon_bg.gif); BACKGROUND-REPEAT: no-repeat
+}
+.more_a_red {
+	BACKGROUND-POSITION: 100px 100px; BACKGROUND-IMAGE: url(../images/index/index_icon_bg.gif); BACKGROUND-REPEAT: no-repeat
+}
+.club_ul LI {
+	BACKGROUND-POSITION: 100px 100px; BACKGROUND-IMAGE: url(../images/index/index_icon_bg.gif); BACKGROUND-REPEAT: no-repeat
+}
+.club_a_more {
+	BACKGROUND-POSITION: 100px 100px; BACKGROUND-IMAGE: url(../images/index/index_icon_bg.gif); BACKGROUND-REPEAT: no-repeat
+}
+.collaborate LI {
+	BACKGROUND-POSITION: 100px 100px; BACKGROUND-IMAGE: url(../images/index/index_icon_bg.gif); BACKGROUND-REPEAT: no-repeat
+}
+.more_a_red {
+	PADDING-RIGHT: 6px; BACKGROUND-POSITION: 26px -86px; FLOAT: right; MARGIN: -20px 10px 0px 0px
+}
+.categories .cg_top {
+	PADDING-LEFT: 100px; BACKGROUND-POSITION: left top
+}
+.categories .cg_tr {
+	PADDING-RIGHT: 10px; BACKGROUND-POSITION: right top
+}
+.categories .cg_tb {
+	PADDING-LEFT: 20px; BORDER-TOP: #f86c00 2px solid; BACKGROUND-POSITION: left -60px; COLOR: #7f7f7f; LINE-HEIGHT: 38px; BACKGROUND-REPEAT: repeat-x; HEIGHT: 39px
+}
+.categories .cg_bottom {
+	PADDING-LEFT: 10px; FONT-SIZE: 0px; BACKGROUND-POSITION: left -44px; LINE-HEIGHT: 0; HEIGHT: 6px
+}
+.categories .cg_br {
+	PADDING-RIGHT: 10px; FONT-SIZE: 0px; BACKGROUND-POSITION: right -44px; LINE-HEIGHT: 0; HEIGHT: 6px
+}
+.categories .cg_bb {
+	FONT-SIZE: 0px; LINE-HEIGHT: 0; BORDER-BOTTOM: #f86c00 2px solid; HEIGHT: 4px; BACKGROUND-COLOR: #fff
+}
+.categories .cg_body {
+	BORDER-RIGHT: #f86c00 2px solid; BORDER-TOP: #f86c00 0px solid; BORDER-LEFT: #f86c00 2px solid; BORDER-BOTTOM: #f86c00 0px solid; HEIGHT: 540px
+}
+.categories .cg_text {
+	FLOAT: left
+}
+.categories .cg_allcount {
+	FLOAT: left; OVERFLOW: hidden; WIDTH: 182px; PADDING-TOP: 4px; HEIGHT: 30px; _width: 176px
+}
+.categories .cg_ul_link {
+	FLOAT: right; MARGIN: 10px 0px 0px; WIDTH: 290px; _width: 296px
+}
+.categories .cg_ul_link LI {
+	FLOAT: left; MARGIN: 0px 10px; _margin: 0 8px
+}
+.categories .cg_ul_link LI A {
+	PADDING-LEFT: 16px; FONT-SIZE: 14px; BACKGROUND-POSITION: left 2px; LINE-HEIGHT: 18px; DISPLAY: block
+}
+.categories .cg_ul_link LI A:hover {
+	BACKGROUND-POSITION: left -23px
+}
+.category {
+	BORDER-TOP: #dedfe0 1px solid
+}
+.category LI {
+	BORDER-RIGHT: #d6d6d6 1px dotted; PADDING-RIGHT: 3px; PADDING-LEFT: 3px; FLOAT: left; PADDING-BOTTOM: 0px; WIDTH: 91px; PADDING-TOP: 10px; BORDER-BOTTOM: #ebeced 1px solid
+}
+.category LI.onmouse {
+	BACKGROUND-COLOR: #f2f4f5
+}
+.category DT {
+	BACKGROUND-POSITION: 4px -42px
+}
+.category DT A {
+	PADDING-LEFT: 12px; FONT-WEIGHT: bold; FONT-SIZE: 14px; LINE-HEIGHT: 22px
+}
+.category DD A {
+	PADDING-LEFT: 12px; LINE-HEIGHT: 18px; DISPLAY: block
+}
+.category DD A:hover {
+	BACKGROUND-POSITION: 5px -84px
+}
+.categories .category_li1 {
+	OVERFLOW: hidden; HEIGHT: 194px
+}
+.categories .category_li2 {
+	OVERFLOW: hidden; HEIGHT: 122px
+}
+.categories .category_li3 {
+	OVERFLOW: hidden; HEIGHT: 104px
+}
+.cg_order {
+	PADDING-RIGHT: 8px; PADDING-LEFT: 8px; PADDING-BOTTOM: 10px; OVERFLOW: hidden; PADDING-TOP: 6px; _width: 670px; _padding-top: 10px
+}
+.cg_order LI {
+	FLOAT: left; WIDTH: 222px
+}
+.cg_order DT {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; LINE-HEIGHT: 20px
+}
+.cg_order DT.img_dt {
+	PADDING-RIGHT: 4px; FLOAT: left; WIDTH: 45px; HEIGHT: 68px
+}
+.cg_order DT.img_dt IMG {
+	WIDTH: 44px; HEIGHT: 66px
+}
+.cg_order DD {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FLOAT: left; PADDING-BOTTOM: 2px; MARGIN-RIGHT: 14px; PADDING-TOP: 2px
+}
+.bg_a {
+	POSITION: relative; BACKGROUND-COLOR: #eff1f3
+}
+.bg_a .tl {
+	FONT-SIZE: 0px; POSITION: absolute; OVERFLOW: hidden; WIDTH: 4px; LINE-HEIGHT: 0; HEIGHT: 4px
+}
+.bg_a .tr {
+	FONT-SIZE: 0px; POSITION: absolute; OVERFLOW: hidden; WIDTH: 4px; LINE-HEIGHT: 0; HEIGHT: 4px
+}
+.bg_a .bl {
+	FONT-SIZE: 0px; POSITION: absolute; OVERFLOW: hidden; WIDTH: 4px; LINE-HEIGHT: 0; HEIGHT: 4px
+}
+.bg_a .br {
+	FONT-SIZE: 0px; POSITION: absolute; OVERFLOW: hidden; WIDTH: 4px; LINE-HEIGHT: 0; HEIGHT: 4px
+}
+.bg_a .tl {
+	LEFT: 0px; BACKGROUND-POSITION: left -110px; TOP: 0px
+}
+.bg_a .tr {
+	RIGHT: 0px; BACKGROUND-POSITION: right -110px; TOP: 0px
+}
+.bg_a .bl {
+	LEFT: 0px; BACKGROUND-POSITION: left -121px; BOTTOM: 0px
+}
+.bg_a .br {
+	RIGHT: 0px; BACKGROUND-POSITION: right -121px; BOTTOM: 0px
+}
+.bg_b {
+	PADDING-RIGHT: 4px; PADDING-LEFT: 4px; PADDING-BOTTOM: 4px; POSITION: relative; PADDING-TOP: 4px; BACKGROUND-COLOR: #fff
+}
+.bg_b .tl {
+	FONT-SIZE: 0px; POSITION: absolute; OVERFLOW: hidden; WIDTH: 3px; LINE-HEIGHT: 0; HEIGHT: 3px
+}
+.bg_b .tr {
+	FONT-SIZE: 0px; POSITION: absolute; OVERFLOW: hidden; WIDTH: 3px; LINE-HEIGHT: 0; HEIGHT: 3px
+}
+.bg_b .bl {
+	FONT-SIZE: 0px; POSITION: absolute; OVERFLOW: hidden; WIDTH: 3px; LINE-HEIGHT: 0; HEIGHT: 3px
+}
+.bg_b .br {
+	FONT-SIZE: 0px; POSITION: absolute; OVERFLOW: hidden; WIDTH: 3px; LINE-HEIGHT: 0; HEIGHT: 3px
+}
+.bg_b .tl {
+	LEFT: -1px; BACKGROUND-POSITION: left -130px; TOP: -1px
+}
+.bg_b .tr {
+	RIGHT: -1px; BACKGROUND-POSITION: right -130px; TOP: -1px
+}
+.bg_b .bl {
+	LEFT: -1px; BACKGROUND-POSITION: left -135px; BOTTOM: -1px
+}
+.bg_b .br {
+	RIGHT: -1px; BACKGROUND-POSITION: right -135px; BOTTOM: -1px
+}
+.bg_c {
+	BORDER-RIGHT: #f86c00 2px solid; PADDING-RIGHT: 4px; PADDING-LEFT: 4px; BORDER-TOP: #f86c00 2px solid; PADDING-BOTTOM: 4px; POSITION: relative; BORDER-LEFT: #f86c00 2px solid; PADDING-TOP: 4px; BORDER-BOTTOM: #f86c00 2px solid; BACKGROUND-COLOR: #fff
+}
+.bg_c .tl {
+	FONT-SIZE: 0px; POSITION: absolute; OVERFLOW: hidden; WIDTH: 4px; LINE-HEIGHT: 0; HEIGHT: 4px
+}
+.bg_b .tr {
+	FONT-SIZE: 0px; POSITION: absolute; OVERFLOW: hidden; WIDTH: 4px; LINE-HEIGHT: 0; HEIGHT: 4px
+}
+.bg_b .bl {
+	FONT-SIZE: 0px; POSITION: absolute; OVERFLOW: hidden; WIDTH: 4px; LINE-HEIGHT: 0; HEIGHT: 4px
+}
+.bg_b .br {
+	FONT-SIZE: 0px; POSITION: absolute; OVERFLOW: hidden; WIDTH: 4px; LINE-HEIGHT: 0; HEIGHT: 4px
+}
+.bg_c .tl {
+	LEFT: -2px; BACKGROUND-POSITION: left -150px; TOP: -2px
+}
+.bg_c .tr {
+	RIGHT: -2px; BACKGROUND-POSITION: right -150px; TOP: -2px
+}
+.bg_c .bl {
+	LEFT: -2px; BACKGROUND-POSITION: left -155px; BOTTOM: -2px
+}
+.bg_c .br {
+	RIGHT: -2px; BACKGROUND-POSITION: right -155px; BOTTOM: -2px
+}
+.bg_d {
+	POSITION: relative; BACKGROUND-COLOR: #eff5fc
+}
+.bg_d .tl {
+	FONT-SIZE: 0px; POSITION: absolute; OVERFLOW: hidden; WIDTH: 5px; LINE-HEIGHT: 0; HEIGHT: 5px
+}
+.bg_d .tr {
+	FONT-SIZE: 0px; POSITION: absolute; OVERFLOW: hidden; WIDTH: 5px; LINE-HEIGHT: 0; HEIGHT: 5px
+}
+.bg_d .bl {
+	FONT-SIZE: 0px; POSITION: absolute; OVERFLOW: hidden; WIDTH: 5px; LINE-HEIGHT: 0; HEIGHT: 5px
+}
+.bg_d .br {
+	FONT-SIZE: 0px; POSITION: absolute; OVERFLOW: hidden; WIDTH: 5px; LINE-HEIGHT: 0; HEIGHT: 5px
+}
+.bg_d .tl {
+	LEFT: 0px; BACKGROUND-POSITION: left -190px; TOP: 0px
+}
+.bg_d .tr {
+	RIGHT: 0px; BACKGROUND-POSITION: right -190px; TOP: 0px
+}
+.bg_d .bl {
+	LEFT: 0px; BACKGROUND-POSITION: left -195px; BOTTOM: 0px
+}
+.bg_d .br {
+	RIGHT: 0px; BACKGROUND-POSITION: right -195px; BOTTOM: 0px
+}
+.bg_e {
+	BORDER-RIGHT: #bfcfde 1px solid; BORDER-TOP: #bfcfde 1px solid; MARGIN: 4px auto; POSITION: relative; BORDER-LEFT: #bfcfde 1px solid; BORDER-BOTTOM: #bfcfde 1px solid; BACKGROUND-COLOR: #fff
+}
+.bg_e .top {
+	PADDING-LEFT: 16px; FONT-WEIGHT: bold; FONT-SIZE: 14px; BACKGROUND-POSITION: left -250px; POSITION: relative; COLOR: #004f98; LINE-HEIGHT: 23px; PADDING-TOP: 4px; BACKGROUND-REPEAT: repeat-x; HEIGHT: 24px
+}
+.bg_e .tl {
+	FONT-SIZE: 0px; POSITION: absolute; OVERFLOW: hidden; WIDTH: 4px; LINE-HEIGHT: 0; HEIGHT: 4px
+}
+.bg_e .tr {
+	FONT-SIZE: 0px; POSITION: absolute; OVERFLOW: hidden; WIDTH: 4px; LINE-HEIGHT: 0; HEIGHT: 4px
+}
+.bg_e .bl {
+	FONT-SIZE: 0px; POSITION: absolute; OVERFLOW: hidden; WIDTH: 4px; LINE-HEIGHT: 0; HEIGHT: 4px
+}
+.bg_e .br {
+	FONT-SIZE: 0px; POSITION: absolute; OVERFLOW: hidden; WIDTH: 4px; LINE-HEIGHT: 0; HEIGHT: 4px
+}
+.bg_e .tl {
+	LEFT: -1px; BACKGROUND-POSITION: left -240px; TOP: -1px
+}
+.bg_e .tr {
+	RIGHT: -1px; BACKGROUND-POSITION: right -240px; TOP: -1px
+}
+.bg_e .bl {
+	LEFT: -1px; BACKGROUND-POSITION: left -245px; BOTTOM: -1px
+}
+.bg_e .br {
+	RIGHT: -1px; BACKGROUND-POSITION: right -245px; BOTTOM: -1px
+}
+A.scroll_left {
+	BACKGROUND-POSITION: left -165px; FLOAT: left; WIDTH: 10px; DISPLAY: block; HEIGHT: 32px
+}
+A.scroll_right {
+	BACKGROUND-POSITION: -25px -165px; FLOAT: right; WIDTH: 10px; DISPLAY: block; HEIGHT: 32px
+}
+A.scroll_left:hover {
+	BACKGROUND-POSITION: left -200px
+}
+A.scroll_right:hover {
+	BACKGROUND-POSITION: -25px -200px
+}
+.bargain {
+	PADDING-RIGHT: 4px; MARGIN-TOP: 10px; PADDING-LEFT: 4px; BACKGROUND-POSITION: left -300px; PADDING-BOTTOM: 4px; POSITION: relative; PADDING-TOP: 4px; HEIGHT: 166px
+}
+.bargain H3 {
+	PADDING-LEFT: 32px; FONT-SIZE: 14px; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; PADDING-TOP: 6px
+}
+.bargain_b {
+	BORDER-RIGHT: #cdd4da 1px solid; BORDER-TOP: #cdd4da 1px solid; MARGIN-LEFT: 2px; BORDER-LEFT: #cdd4da 1px solid; BORDER-BOTTOM: #cdd4da 1px solid; _height: 1%
+}
+.bargain_body {
+	OVERFLOW: hidden; WIDTH: 647px; HEIGHT: 126px; _width: 644px
+}
+.bargain_body UL {
+	WIDTH: 900px
+}
+.bargain_body LI {
+	BORDER-RIGHT: #d9d9d9 1px dotted; PADDING-RIGHT: 4px; PADDING-LEFT: 4px; FLOAT: left; PADDING-BOTTOM: 4px; WIDTH: 207px; PADDING-TOP: 4px
+}
+.bargain_body DT {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 6px; FONT-SIZE: 14px; MARGIN-BOTTOM: 4px; PADDING-BOTTOM: 2px; PADDING-TOP: 0px; BORDER-BOTTOM: #e5e5e5 1px solid
+}
+.bargain_body DD {
+	PADDING-RIGHT: 4px; PADDING-LEFT: 0px; PADDING-BOTTOM: 2px; PADDING-TOP: 2px
+}
+.bargain_body DD SPAN {
+	MARGIN-TOP: -16px; FLOAT: right; COLOR: #ff8400
+}
+.bargain_body .dd_img {
+	PADDING-RIGHT: 8px; PADDING-LEFT: 4px; FLOAT: left; PADDING-BOTTOM: 0px; WIDTH: 48px; PADDING-TOP: 0px; HEIGHT: 95px
+}
+.bargain_b .b_scroll {
+	MARGIN-TOP: 50px
+}
+.site_more {
+	MARGIN-TOP: 10px
+}
+.star_order {
+	PADDING-RIGHT: 4px; PADDING-LEFT: 0px; BACKGROUND-POSITION: left -560px; FLOAT: left; PADDING-BOTTOM: 4px; POSITION: relative; OVERFLOW: hidden; WIDTH: 276px; PADDING-TOP: 2px; HEIGHT: 256px
+}
+.star_order H3 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 64px; FONT-SIZE: 14px; PADDING-BOTTOM: 4px; PADDING-TOP: 4px
+}
+.star_order .star_ul {
+	Z-INDEX: 2; LEFT: 0px; POSITION: absolute
+}
+.star_order .star_ul LI {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 5px; WIDTH: 58px; CURSOR: pointer; PADDING-TOP: 5px; TEXT-ALIGN: center
+}
+.star_order .star_ul LI.current {
+	BACKGROUND-POSITION: left -160px; WIDTH: 62px; COLOR: #ff8400
+}
+.star_order .star_body {
+	MARGIN-LEFT: 59px; HEIGHT: 220px; _width: 204px
+}
+.star_body UL {
+	DISPLAY: none
+}
+.star_body LI {
+	BORDER-BOTTOM: #b2b2b2 1px dotted
+}
+.star_body LI A {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 4px; PADDING-BOTTOM: 2px; OVERFLOW: hidden; PADDING-TOP: 3px; WHITE-SPACE: nowrap; DISPLAY: block; HEIGHT: 16px; _width: 198px
+}
+.star_body LI A:hover {
+	BACKGROUND-COLOR: #f1f1f1; TEXT-DECORATION: none
+}
+.star_body I {
+	MARGIN-TOP: 1px; FONT-SIZE: 11px; BACKGROUND-POSITION: left -140px; FLOAT: left; WIDTH: 13px; COLOR: #fff; LINE-HEIGHT: 12px; MARGIN-RIGHT: 4px; FONT-STYLE: normal; FONT-FAMILY: Arial; DISPLAY: block; HEIGHT: 13px; TEXT-ALIGN: center
+}
+.star_body I.red {
+	BACKGROUND-POSITION: left -110px
+}
+.star_body .star_com {
+	MARGIN-TOP: -15px; FLOAT: right; OVERFLOW: hidden; BACKGROUND-COLOR: #fff; TEXT-ALIGN: right; _width: 65px
+}
+.star_body SPAN.red {
+	FONT-WEIGHT: bold; FONT-FAMILY: Arial
+}
+.site_info {
+	FLOAT: left; MARGIN: 0px 0px 0px 10px; OVERFLOW: hidden; WIDTH: 400px
+}
+.site_info LI {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 10px; FLOAT: left; PADDING-BOTTOM: 10px; WIDTH: 180px; PADDING-TOP: 10px; HEIGHT: 94px
+}
+.site_info LI.bottom_order {
+	BORDER-BOTTOM: #fddcc2 1px solid
+}
+.site_info DT {
+	BACKGROUND-POSITION: left -290px; FLOAT: left; WIDTH: 22px; COLOR: #fff; PADDING-TOP: 12px; HEIGHT: 72px; TEXT-ALIGN: center
+}
+.site_info DD {
+	MARGIN: 8px 0px 0px 26px; OVERFLOW: hidden; WIDTH: 150px; WHITE-SPACE: nowrap
+}
+.club_body A:link {
+	COLOR: #347aba
+}
+.club_body A:visited {
+	COLOR: #347aba
+}
+.club_body A:hover {
+	COLOR: #ff8400; TEXT-DECORATION: underline
+}
+.club_body .club_a_more {
+	PADDING-RIGHT: 5px; FONT-WEIGHT: normal; FONT-SIZE: 12px; BACKGROUND-POSITION: right -236px; FLOAT: right; MARGIN: -20px 10px 0px 0px; LINE-HEIGHT: 16px
+}
+.club_body A.club_a_more:hover {
+	BACKGROUND-POSITION: right -256px
+}
+.club_ul LI {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 10px; BACKGROUND-POSITION: 4px -61px; PADDING-BOTTOM: 2px; OVERFLOW: hidden; LINE-HEIGHT: 18px; PADDING-TOP: 2px; WHITE-SPACE: nowrap; TEXT-ALIGN: left; _width: 216px
+}
+.club_small_ul LI {
+	_width: 132px
+}
+.club_hot {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 40px; FONT-SIZE: 14px; BACKGROUND-POSITION: left -205px; PADDING-BOTTOM: 10px; MARGIN: 4px 0px 0px 10px; COLOR: #004f98; PADDING-TOP: 2px
+}
+.club_hot_ul {
+	MARGIN: 2px 8px 12px
+}
+.club_hot_ul LI {
+	FLOAT: left; WIDTH: 100px
+}
+.bg_e_body {
+	PADDING-RIGHT: 6px; PADDING-LEFT: 6px; PADDING-BOTTOM: 6px; OVERFLOW: hidden; PADDING-TOP: 6px; TEXT-ALIGN: center
+}
+.club_leftdt {
+	PADDING-RIGHT: 4px; PADDING-LEFT: 4px; FLOAT: left; PADDING-BOTTOM: 4px; MARGIN: 4px 0px 0px; OVERFLOW: hidden; WIDTH: 70px; PADDING-TOP: 4px; HEIGHT: 96px; TEXT-ALIGN: center
+}
+.club_leftdt IMG {
+	PADDING-BOTTOM: 6px
+}
+.bg_e_body DD {
+	MARGIN-LEFT: 80px; BORDER-LEFT: #c4c4c4 1px dotted
+}
+.club_hot_id {
+	PADDING-BOTTOM: 2px; OVERFLOW: hidden; HEIGHT: 100px
+}
+.club_pocket_id {
+	HEIGHT: 150px
+}
+.club_active_id {
+	HEIGHT: 130px
+}
+.club_lief_id {
+	HEIGHT: 183px; _height: 184px
+}
+.club_pocket_id2 {
+	MARGIN-TOP: 10px; HEIGHT: 170px
+}
+.club_ad_id {
+	MARGIN-TOP: 10px
+}
+.collaborate_buyer {
+	PADDING-RIGHT: 4px; MARGIN-TOP: 10px; PADDING-LEFT: 4px; PADDING-BOTTOM: 4px; PADDING-TOP: 4px; _height: 196px
+}
+.collaborate LI A {
+	COLOR: #0075b9
+}
+.collaborate LI A:hover {
+	COLOR: #ff8400
+}
+.collaborate {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 220px; BACKGROUND-POSITION: 10px -406px; PADDING-BOTTOM: 0px; MARGIN: 10px; PADDING-TOP: 10px; _height: 100px
+}
+.collaborate LI {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 6px; BACKGROUND-POSITION: left -273px; FLOAT: left; PADDING-BOTTOM: 2px; OVERFLOW: hidden; WIDTH: 100px; LINE-HEIGHT: 16px; PADDING-TOP: 2px; WHITE-SPACE: nowrap
+}
+.buy_ok {
+	PADDING-BOTTOM: 2px; HEIGHT: 85px; _height: 86px
+}
+.buy_ok_head {
+	FONT-WEIGHT: normal; FONT-SIZE: 12px; MARGIN-BOTTOM: 1px; PADDING-BOTTOM: 1px; COLOR: #347aba
+}
+.buyer_scroll {
+	MARGIN: 14px 6px 0px; _margin: 14px 2px 0 2px
+}
+.buy_ok_ul {
+	OVERFLOW: hidden; WIDTH: 888px;  _width: 898px
+}
+.buy_ok_ul UL {
+	WIDTH: 1100px
+}
+.buy_ok_ul LI {
+	 FLOAT: left; PADDING-BOTTOM: 0px; MARGIN: 7px 1px; WIDTH: 136px; PADDING-TOP: 0px; text-align:center;
+}
+.buy_ok_ul_1 {
+	OVERFLOW: hidden; WIDTH: 700px;}
+.buy_ok_ul_1 UL {
+	WIDTH: 700px
+}
+.buy_ok_ul_1 LI {
+	 FLOAT: left; PADDING-BOTTOM: 0px; MARGIN: 3px 1px; WIDTH: 136px; PADDING-TOP: 0px; text-align:center;
+}

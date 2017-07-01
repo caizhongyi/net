@@ -1,0 +1,30 @@
+﻿#selectFilesLink a, #uploadFilesLink a, #clearFilesLink a {
+	color: #0000CC;
+	background-color: #FFFFFF;
+}
+ 
+#selectFilesLink a:visited, #uploadFilesLink a:visited, #clearFilesLink a:visited {
+	color: #0000CC;
+	background-color: #FFFFFF;
+}
+ 
+#uploadFilesLink a:hover, #clearFilesLink a:hover {	
+	color: #FFFFFF;
+	background-color: #000000;
+}
+
+.czy-yahoo-upload{line-height:25px;}
+.czy-yahoo-upload ul{margin:0px; list-style-type:none;}
+.czy-yahoo-upload .czy-progress{ margin-top:10px;}
+
+.czy-yahoo-upload .czy-upload-header{}
+.czy-yahoo-upload .czy-upload-header .czy-header-left{}
+.czy-yahoo-upload .czy-upload-header .czy-header-right{}
+.czy-yahoo-upload .czy-upload-header .czy-header-center{}
+.czy-yahoo-upload .czy-upload-data{border:solid 1px #999999; height:400px;}
+.czy-yahoo-upload .czy-upload-data .czy-data-header{  padding:10px;background-image:url(../images/upload/czy-data-header-bg.gif); margin:0px; overflow:hidden;line-height:25px; height:25px;}
+.czy-yahoo-upload .czy-upload-data .czy-data-header li{ float:left; text-align:center; width:12%;}
+.czy-yahoo-upload .czy-upload-data .czy-upload-list{ padding:10px;overflow:hidden;width:100%; }
+.czy-yahoo-upload .czy-upload-data .czy-upload-list li{ }
+.czy-yahoo-upload .czy-upload-data .czy-upload-listItem{ overflow:hidden;}
+.czy-yahoo-upload .czy-upload-data .czy-upload-listItem li{float:left;text-align:center; width:12%; }

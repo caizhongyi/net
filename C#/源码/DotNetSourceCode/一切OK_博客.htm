@@ -1,0 +1,865 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0031)http://hi.baidu.com/sbanyv/blog -->
+<!--STATUS OK--><HTML><HEAD><TITLE>一切OK_博客</TITLE><LINK title=订阅该空间的博客文章 
+href="http://hi.baidu.com/sbanyv/rss" type=application/rss+xml rel=alternate>
+<META http-equiv=content-type content="text/html; charset=gb2312">
+<STYLE type=text/css>#layout {
+	TABLE-LAYOUT: fixed
+}
+#layout TD.c2t1 {
+	PADDING-LEFT: 10px
+}
+#layout TD.c2t2 {
+	WIDTH: 20px
+}
+#layout TD.c2t3 {
+	PADDING-RIGHT: 10px; WIDTH: 24%
+}
+</STYLE>
+
+<SCRIPT src="一切OK_博客.files/global.js" type=text/javascript></SCRIPT>
+
+<SCRIPT language=javascript>
+<!--
+function montourl(dmonth)
+{
+	var str=dmonth;
+	var str=str.replace("年","");
+	var str=str.replace("月",""); 
+	return str;
+}
+function formatonlinpic()
+{
+var picobj=document.getElementsByName("onlinepic");
+var picnum=picobj.length;
+	
+	for(var i=0;i<picnum;i++)
+	{
+		if(picobj[i].width>200)
+		{
+			picobj[i].width=200;
+		}
+		if(picobj[i].height>200)
+		{
+			picobj[i].height=200;
+		}
+	}
+
+}
+
+var k=0,j=0,x=0;
+var allkey="f26f3009446c27cf3bc763c7_";
+
+function blogdel(str)
+{
+	var pop=new Popup({ contentType:3,isReloadOnClose:false,width:340,height:80});
+	pop.setContent("title","删除文章");
+	pop.setContent("confirmCon","您确定要彻底删除这篇文章及其所有评论吗？");
+	pop.setContent("callBack",delCallback);
+	pop.setContent("parameter",{fid:str,popup:pop});
+	pop.build();
+	pop.show();
+	return false;
+}
+
+function delCallback(para)
+{
+	var o_pop=para["popup"];
+	o_pop.config.contentType=1;
+	o_pop.setContent("contentUrl","");
+	o_pop.reBuild();
+	G(para["fid"]).target=o_pop.iframeIdName;
+	eval("document."+para["fid"]).submit();
+}
+
+function mod_editCat(url)
+{
+	var pop=new Popup({ contentType:1, isReloadOnClose:true, width:440, height:390 });
+	pop.setContent("title","编辑分类");
+	pop.setContent("contentUrl",url);
+	pop.build();
+	pop.show();
+	return false;
+}
+ String.prototype.encodeHTML = function () {
+   return this.replace(/./g, function(s) {
+        return  ('&#' + s.charCodeAt(0) +";");
+   });
+ };
+ var XSSspRefURL = window.location.href.encodeHTML();
+
+//-->
+</SCRIPT>
+
+<META content="MSHTML 6.00.2900.5659" name=GENERATOR></HEAD>
+<BODY onload=formatonlinpic()>
+<CENTER>
+<SCRIPT type=text/javascript>
+/*<![CDATA[*/
+if(top.location != self.location){
+	top.location = self.location;
+}
+var myref = encodeURIComponent("http://hi.baidu.com/sbanyv/blog");
+/*]]>*/
+</SCRIPT>
+<LINK href="一切OK_博客.files/mods.css" type=text/css rel=stylesheet><LINK 
+href="一切OK_博客.files/6695e04567a98226cffca336.css" type=text/css 
+rel=stylesheet><LINK href="一切OK_博客.files/space.css" type=text/css 
+rel=stylesheet>
+<STYLE type=text/css>.stage {
+	BACKGROUND: url(http://img.baidu.com/hi/img/tempbg4b.jpg)
+}
+#usrbar {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 0px; FONT-SIZE: 12px; BACKGROUND: #ffffff; FILTER: alpha(opacity=65); PADDING-BOTTOM: 3px; WIDTH: 100%; COLOR: #000000; LINE-HEIGHT: 19px; PADDING-TOP: 4px; FONT-FAMILY: Arial; LETTER-SPACING: normal; HEIGHT: 19px; TEXT-ALIGN: right; moz-opacity: 0.5
+}
+#usrbar A {
+	COLOR: #0000cc; TEXT-DECORATION: underline
+}
+#usrbar A:link {
+	COLOR: #0000cc; TEXT-DECORATION: underline
+}
+#usrbar A:visited {
+	COLOR: #0000cc; TEXT-DECORATION: underline
+}
+#ft {
+	CLEAR: both; FONT-SIZE: 12px; COLOR: #666666; LINE-HEIGHT: 20px; FONT-FAMILY: Arial; HEIGHT: 20px; TEXT-ALIGN: center
+}
+#ft A {
+	COLOR: #7777cc; TEXT-DECORATION: underline
+}
+#ft A:link {
+	COLOR: #7777cc; TEXT-DECORATION: underline
+}
+#ft A:visited {
+	COLOR: #7777cc; TEXT-DECORATION: underline
+}
+#usrbar {
+	LETTER-SPACING: normal
+}
+#usrbar A {
+	LETTER-SPACING: normal
+}
+#usrbar A:link {
+	LETTER-SPACING: normal
+}
+#usrbar A:visited {
+	LETTER-SPACING: normal
+}
+#ft {
+	LETTER-SPACING: normal
+}
+#ft A {
+	LETTER-SPACING: normal
+}
+#ft A:link {
+	LETTER-SPACING: normal
+}
+#ft A:visited {
+	LETTER-SPACING: normal
+}
+</STYLE>
+
+<DIV id=usrbar><NOBR><A href="http://www.baidu.com/" target=_blank>百度首页</A> | <A 
+id=hi_index href="http://hi.baidu.com/" target=_blank>百度空间</A>
+<SCRIPT type=text/javascript>
+		document.write('| <a href="http://passport.baidu.com/?login&tpl=sp&tpl_reg=sp&u=http://hi.baidu.com' + encodeURIComponent('/sbanyv/blog') + '">登录</a>');
+		</SCRIPT>
+ </NOBR></DIV>
+<DIV id=main align=left><!--[if IE]>
+<SCRIPT>
+var objmain = document.getElementById("main");
+function updatesize(){ var bodyw = window.document.body.offsetWidth; if(bodyw <= 790) objmain.style.width="772px"; else if(bodyw >= 1016) objmain.style.width="996px"; else objmain.style.width="100%"; }
+updatesize(); window.onresize = updatesize;
+</SCRIPT>
+<![endif]-->
+<DIV id=header>
+<DIV class=lc>
+<DIV class=rc></DIV></DIV>
+<DIV class=tit><A class=titlink title="sbanyv的空间 http://hi.baidu.com/sbanyv" 
+href="http://hi.baidu.com/sbanyv">一切OK</A></DIV>
+<DIV class=desc>一切的一切都OK！！！</DIV>
+<DIV id=tabline></DIV>
+<DIV id=tab><A href="http://hi.baidu.com/sbanyv">主页</A><A class=on 
+href="http://hi.baidu.com/sbanyv/blog">博客</A><A 
+href="http://hi.baidu.com/sbanyv/album">相册</A><SPAN>|</SPAN><A 
+href="http://hi.baidu.com/sbanyv/profile">个人档案</A> <SPAN>|</SPAN><A 
+href="http://hi.baidu.com/sbanyv/friend">好友</A> </DIV></DIV>
+<DIV class=stage>
+<TABLE id=layout cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD class=c2t1 vAlign=top>
+      <DIV class=mod id=mod_bloglist>
+      <TABLE class=modth cellSpacing=0 cellPadding=0 width="100%" border=0>
+        <TBODY>
+        <TR>
+          <TD class=modtl width=7>&nbsp;</TD>
+          <TD class=modtc noWrap>
+            <DIV class=modhead><SPAN class=modtit>文章列表</SPAN></DIV></TD>
+          <TD class=modtc noWrap align=right></TD>
+          <TD class=modtr width=7>&nbsp;</TD></TR></TBODY></TABLE>
+      <DIV class=modbox id=m_blog>
+      <DIV class=tit><A 
+      href="http://hi.baidu.com/sbanyv/blog/item/7b753c60ac164842ebf8f81a.html" 
+      target=_blank>用C#获取进程信息(转)</A></DIV>
+      <DIV class=date>2008-10-07 10:08</DIV>
+      <TABLE style="TABLE-LAYOUT: fixed">
+        <TBODY>
+        <TR>
+          <TD>
+            <DIV class=cnt>本文将以一个简单的例子来说明如何使用C#获得当前处于激活状态的进程并读取某个特定ID 进程的基本信息。 
+            现在有很多软件都具有读取系统进程的功能，比较著名的是Customizer XP，它是一个用来设置Windows XP 
+            系统各种设置的软件。这个软件其中有一个功能就是能够打开或关闭系统运行时加载的程序。当然，本文没有做到Customizer XP 
+            那么美观和细化的程度，但是我想只要知道了基本的方法，制作这样的功能是很简单的。 这个例子使用了.NET Framework 
+            的Process 
+      类来获得激活进程的信息，给出了当前激活进程的列表，并且能够显示某一个进程</DIV></TD></TR></TBODY></TABLE>
+      <DIV class=more><A 
+      href="http://hi.baidu.com/sbanyv/blog/item/7b753c60ac164842ebf8f81a.html" 
+      target=_blank>阅读全文&gt;&gt;</A></DIV>
+      <DIV class=opt><A title=查看该分类中所有文章 
+      href="http://hi.baidu.com/sbanyv/blog/category/&Auml;&not;&Egrave;&Iuml;·&Ouml;&Agrave;à">类别：默认分类</A>
+      <SCRIPT language=javascript>
+	allkey +="7b753c60ac164842ebf8f81a"+"_";
+	</SCRIPT>
+       | <A title=查看该文章的所有评论 
+      href="http://hi.baidu.com/sbanyv/blog/item/7b753c60ac164842ebf8f81a.html#comment">评论(0)</A> 
+      | <A title=浏览全文 
+      href="http://hi.baidu.com/sbanyv/blog/item/7b753c60ac164842ebf8f81a.html">浏览(<SPAN 
+      id=fArea></SPAN>)</A>
+      <SCRIPT language=javascript>var tps = "<span id='div"+x+"'></span>";x++;document.getElementById("fArea").id = "fArea" + x;document.getElementById("fArea"+x).innerHTML = tps;</SCRIPT>
+       </DIV>
+      <DIV class=line></DIV>
+      <DIV class=tit><A 
+      href="http://hi.baidu.com/sbanyv/blog/item/8186c6236f8e3842ad34dec8.html" 
+      target=_blank>Oracle spool 用法小结</A></DIV>
+      <DIV class=date>2008-09-12 15:04</DIV>
+      <TABLE style="TABLE-LAYOUT: fixed">
+        <TBODY>
+        <TR>
+          <TD>
+            <DIV class=cnt>
+            <H2><FONT size=2>关于SPOOL(SPOOL是SQLPLUS的命令，不是SQL语法里面的东西。)</FONT></H2>
+            <P>对于SPOOL数据的SQL，最好要自己定义格式，以方便程序直接导入,SQL语句如：<BR>select 
+            taskindex||'|'||commonindex||'|'||tasktype||'|'||to_number(to_char(sysdate,'YYYYMMDD')) 
+            from ssrv_sendsms_task;</P>
+            <P>spool常用的设置<BR>set colsep' ';　　　 //域输出分隔符<BR>set echo 
+            off;　　　　//显示start启动的脚本中的每个sql命令，缺省为on<BR>set feedback 
+            off;　　//回显本次sql命令处理的记录条数，缺省为on<BR>set</P></DIV></TD></TR></TBODY></TABLE>
+      <DIV class=more><A 
+      href="http://hi.baidu.com/sbanyv/blog/item/8186c6236f8e3842ad34dec8.html" 
+      target=_blank>阅读全文&gt;&gt;</A></DIV>
+      <DIV class=opt><A title=查看该分类中所有文章 
+      href="http://hi.baidu.com/sbanyv/blog/category/&Auml;&not;&Egrave;&Iuml;·&Ouml;&Agrave;à">类别：默认分类</A>
+      <SCRIPT language=javascript>
+	allkey +="8186c6236f8e3842ad34dec8"+"_";
+	</SCRIPT>
+       | <A title=查看该文章的所有评论 
+      href="http://hi.baidu.com/sbanyv/blog/item/8186c6236f8e3842ad34dec8.html#comment">评论(0)</A> 
+      | <A title=浏览全文 
+      href="http://hi.baidu.com/sbanyv/blog/item/8186c6236f8e3842ad34dec8.html">浏览(<SPAN 
+      id=fArea></SPAN>)</A>
+      <SCRIPT language=javascript>var tps = "<span id='div"+x+"'></span>";x++;document.getElementById("fArea").id = "fArea" + x;document.getElementById("fArea"+x).innerHTML = tps;</SCRIPT>
+       </DIV>
+      <DIV class=line></DIV>
+      <DIV class=tit><A 
+      href="http://hi.baidu.com/sbanyv/blog/item/24266e121bc73757f919b851.html" 
+      target=_blank>VS 2005调试时出现“无法附加。绑定句柄无效”的解决办法！</A></DIV>
+      <DIV class=date>2008-09-04 09:45</DIV>
+      <TABLE style="TABLE-LAYOUT: fixed">
+        <TBODY>
+        <TR>
+          <TD>
+            <DIV class=cnt>
+            <P><FONT face=黑体 size=2>今天在做.net程序的时候，运行了一下Microsoft Visual Studio 
+            2005，结果调试时出现“无法附加。绑定句柄无效”的错误信息。于是百度一下就知道了原来要启动Terminal 
+            Services服务。</FONT></P>
+            <P><FONT face=黑体 size=2>运行-&gt;Services.msc找到Terminal 
+            Services服务，点右键，再点属性，我选择手动，再点右击它，启动它，一切就OK！</FONT></P>
+            <P><FONT style="BACKGROUND-COLOR: #f4f4f4" face=黑体 size=2>Terminal 
+            Services服务介绍： <BR>允许多位用户连接并</FONT></P></DIV></TD></TR></TBODY></TABLE>
+      <DIV class=more><A 
+      href="http://hi.baidu.com/sbanyv/blog/item/24266e121bc73757f919b851.html" 
+      target=_blank>阅读全文&gt;&gt;</A></DIV>
+      <DIV class=opt><A title=查看该分类中所有文章 
+      href="http://hi.baidu.com/sbanyv/blog/category/&Auml;&not;&Egrave;&Iuml;·&Ouml;&Agrave;à">类别：默认分类</A>
+      <SCRIPT language=javascript>
+	allkey +="24266e121bc73757f919b851"+"_";
+	</SCRIPT>
+       | <A title=查看该文章的所有评论 
+      href="http://hi.baidu.com/sbanyv/blog/item/24266e121bc73757f919b851.html#comment">评论(1)</A> 
+      | <A title=浏览全文 
+      href="http://hi.baidu.com/sbanyv/blog/item/24266e121bc73757f919b851.html">浏览(<SPAN 
+      id=fArea></SPAN>)</A>
+      <SCRIPT language=javascript>var tps = "<span id='div"+x+"'></span>";x++;document.getElementById("fArea").id = "fArea" + x;document.getElementById("fArea"+x).innerHTML = tps;</SCRIPT>
+       </DIV>
+      <DIV class=line></DIV>
+      <DIV class=tit><A 
+      href="http://hi.baidu.com/sbanyv/blog/item/b03c02fb251e86126c22eb58.html" 
+      target=_blank>常用图标符号</A></DIV>
+      <DIV class=date>2008-03-14 16:34</DIV>
+      <TABLE style="TABLE-LAYOUT: fixed">
+        <TBODY>
+        <TR>
+          <TD>
+            <DIV class=cnt>
+            <H4 style="MARGIN-BOTTOM: 0px"><FONT color=#fe6c95><FONT 
+            size=5>&nbsp;&nbsp; <U>常用图标符号</U></FONT></FONT></H4>
+            <DIV class=bvMsg>
+            <DIV>
+            <P><FONT color=#ff00cc size=5>◢ ◣ ◥ ◤ ▽ &#9639; &#9640; &#9635; &#9636; &#9637; &#9638; &#9641; &#9688; &#9689; ▓ &#9618; &#9617; Café 
+            № ＠ ㊣ &#8482; ℡ 凸 の &#3665;&#1758;&#3665; &#3665;&#1769;&#65204; &#65204;&#1769;&#3665; o(&#8231;'''&#8231;)o &#65377;&#9685;&#8255;&#9685;&#65377; 
+            べò&#8889;&#8881;&#8923;</FONT></P></DIV></DIV></DIV></TD></TR></TBODY></TABLE>
+      <DIV class=more><A 
+      href="http://hi.baidu.com/sbanyv/blog/item/b03c02fb251e86126c22eb58.html" 
+      target=_blank>阅读全文&gt;&gt;</A></DIV>
+      <DIV class=opt><A title=查看该分类中所有文章 
+      href="http://hi.baidu.com/sbanyv/blog/category/&Auml;&not;&Egrave;&Iuml;·&Ouml;&Agrave;à">类别：默认分类</A>
+      <SCRIPT language=javascript>
+	allkey +="b03c02fb251e86126c22eb58"+"_";
+	</SCRIPT>
+       | <A title=查看该文章的所有评论 
+      href="http://hi.baidu.com/sbanyv/blog/item/b03c02fb251e86126c22eb58.html#comment">评论(2)</A> 
+      | <A title=浏览全文 
+      href="http://hi.baidu.com/sbanyv/blog/item/b03c02fb251e86126c22eb58.html">浏览(<SPAN 
+      id=fArea></SPAN>)</A>
+      <SCRIPT language=javascript>var tps = "<span id='div"+x+"'></span>";x++;document.getElementById("fArea").id = "fArea" + x;document.getElementById("fArea"+x).innerHTML = tps;</SCRIPT>
+       </DIV>
+      <DIV class=line></DIV>
+      <DIV class=tit><A 
+      href="http://hi.baidu.com/sbanyv/blog/item/45ad94cef160430792457e97.html" 
+      target=_blank>C# WinForm 文件上传下载 (附源码)</A></DIV>
+      <DIV class=date>2008-03-11 17:06</DIV>
+      <TABLE style="TABLE-LAYOUT: fixed">
+        <TBODY>
+        <TR>
+          <TD>
+            <DIV class=cnt>
+            <P><FONT face=黑体 size=3>一．概述： <BR>&nbsp;&nbsp; 
+            <BR>　　本文通过一个实例向大家介绍用Visual 
+            C#进行Internet通讯编程的一些基本知识。我们知道.Net类包含了请求/响应层、应用协议层、传输层等层次。在本程序中，我们运用了位于请求/响应层的WebRequest类以及WebClient类等来实现高抽象程度的Internet通讯服务。本程序的功能是完成网络文件的下载。 
+            <BR>&nbsp;&nbsp; <BR>　　二．实现原理： <BR>&nbsp;&nbsp; 
+            <BR>　　程序实现的原理比较简单，主要用到了WebClient类和FileStream类。其中WebCl</FONT></P></DIV></TD></TR></TBODY></TABLE>
+      <DIV class=more><A 
+      href="http://hi.baidu.com/sbanyv/blog/item/45ad94cef160430792457e97.html" 
+      target=_blank>阅读全文&gt;&gt;</A></DIV>
+      <DIV class=opt><A title=查看该分类中所有文章 
+      href="http://hi.baidu.com/sbanyv/blog/category/&Auml;&not;&Egrave;&Iuml;·&Ouml;&Agrave;à">类别：默认分类</A>
+      <SCRIPT language=javascript>
+	allkey +="45ad94cef160430792457e97"+"_";
+	</SCRIPT>
+       | <A title=查看该文章的所有评论 
+      href="http://hi.baidu.com/sbanyv/blog/item/45ad94cef160430792457e97.html#comment">评论(3)</A> 
+      | <A title=浏览全文 
+      href="http://hi.baidu.com/sbanyv/blog/item/45ad94cef160430792457e97.html">浏览(<SPAN 
+      id=fArea></SPAN>)</A>
+      <SCRIPT language=javascript>var tps = "<span id='div"+x+"'></span>";x++;document.getElementById("fArea").id = "fArea" + x;document.getElementById("fArea"+x).innerHTML = tps;</SCRIPT>
+       </DIV>
+      <DIV class=line></DIV>
+      <DIV class=tit><A 
+      href="http://hi.baidu.com/sbanyv/blog/item/1dbe21c65a437b1f9c163d67.html" 
+      target=_blank>如何让资源管理器成为默认打开方式</A></DIV>
+      <DIV class=date>2008-03-07 12:17</DIV>
+      <TABLE style="TABLE-LAYOUT: fixed">
+        <TBODY>
+        <TR>
+          <TD>
+            <DIV 
+            class=cnt>在不同的磁盘、文件夹下进行文件的复制、剪切和粘贴时，使用系统提供的“资源管理器”的方式打开“我的电脑”，然后在其左侧的窗格中直接进行磁盘和文件夹的切换是非常方便的。但我们每次打开资源管理器的方法一般都是右键单击“我的电脑”或我的文档、网上邻居、回收站、开始(菜单)、各个磁盘或文件夹，然后在弹出的快捷菜单中再选择“资源管理器”。为了今后再进行这种操作时能够免去这些繁杂的步骤，我们可以简单设置一下，让“资源管理器”成为打开“我的电脑”和</DIV></TD></TR></TBODY></TABLE>
+      <DIV class=more><A 
+      href="http://hi.baidu.com/sbanyv/blog/item/1dbe21c65a437b1f9c163d67.html" 
+      target=_blank>阅读全文&gt;&gt;</A></DIV>
+      <DIV class=opt><A title=查看该分类中所有文章 
+      href="http://hi.baidu.com/sbanyv/blog/category/&Auml;&not;&Egrave;&Iuml;·&Ouml;&Agrave;à">类别：默认分类</A>
+      <SCRIPT language=javascript>
+	allkey +="1dbe21c65a437b1f9c163d67"+"_";
+	</SCRIPT>
+       | <A title=查看该文章的所有评论 
+      href="http://hi.baidu.com/sbanyv/blog/item/1dbe21c65a437b1f9c163d67.html#comment">评论(2)</A> 
+      | <A title=浏览全文 
+      href="http://hi.baidu.com/sbanyv/blog/item/1dbe21c65a437b1f9c163d67.html">浏览(<SPAN 
+      id=fArea></SPAN>)</A>
+      <SCRIPT language=javascript>var tps = "<span id='div"+x+"'></span>";x++;document.getElementById("fArea").id = "fArea" + x;document.getElementById("fArea"+x).innerHTML = tps;</SCRIPT>
+       </DIV>
+      <DIV class=line></DIV>
+      <DIV class=tit><A 
+      href="http://hi.baidu.com/sbanyv/blog/item/b7787af53abe7d27bc3109f1.html" 
+      target=_blank>Visual Studio 2008 十大新功能</A></DIV>
+      <DIV class=date>2007-08-24 23:07</DIV>
+      <TABLE style="TABLE-LAYOUT: fixed">
+        <TBODY>
+        <TR>
+          <TD>
+            <DIV class=cnt>
+            <DIV align=center><SPAN style="FONT-SIZE: 22pt">不仅只是编辑器</SPAN></DIV>
+            <DIV align=right><SPAN style="FONT-SIZE: 14pt">——写在Visual Studio 
+            2008发布之前</SPAN></DIV>
+            <DIV><FONT 
+            face="Times New Roman"><SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN></FONT></DIV>
+            <DIV style="TEXT-INDENT: 28pt"><SPAN 
+            style="FONT-SIZE: 14pt">VS2005还没有最终稳定的版本，但是我想在微软的某个办公室，一个项目组正在研究发展Visual 
+            Studio 
+        2008这个版本。我看了一下表，现在的时间是公元2006-3-9日，离</SPAN></DIV></DIV></TD></TR></TBODY></TABLE>
+      <DIV class=more><A 
+      href="http://hi.baidu.com/sbanyv/blog/item/b7787af53abe7d27bc3109f1.html" 
+      target=_blank>阅读全文&gt;&gt;</A></DIV>
+      <DIV class=opt><A title=查看该分类中所有文章 
+      href="http://hi.baidu.com/sbanyv/blog/category/&Auml;&not;&Egrave;&Iuml;·&Ouml;&Agrave;à">类别：默认分类</A>
+      <SCRIPT language=javascript>
+	allkey +="b7787af53abe7d27bc3109f1"+"_";
+	</SCRIPT>
+       | <A title=查看该文章的所有评论 
+      href="http://hi.baidu.com/sbanyv/blog/item/b7787af53abe7d27bc3109f1.html#comment">评论(1)</A> 
+      | <A title=浏览全文 
+      href="http://hi.baidu.com/sbanyv/blog/item/b7787af53abe7d27bc3109f1.html">浏览(<SPAN 
+      id=fArea></SPAN>)</A>
+      <SCRIPT language=javascript>var tps = "<span id='div"+x+"'></span>";x++;document.getElementById("fArea").id = "fArea" + x;document.getElementById("fArea"+x).innerHTML = tps;</SCRIPT>
+       </DIV>
+      <DIV class=line></DIV>
+      <DIV class=tit><A 
+      href="http://hi.baidu.com/sbanyv/blog/item/46421e54f8540b56564e00a8.html" 
+      target=_blank>更换XP文件夹背景</A></DIV>
+      <DIV class=date>2007-08-20 11:52</DIV>
+      <TABLE style="TABLE-LAYOUT: fixed">
+        <TBODY>
+        <TR>
+          <TD>
+            <DIV class=cnt>在Win 
+            XP以前，我们都可以设置文件夹背景，比如你打开一个文件夹，你可以设置一幅赏心悦目的背景图，这样会增加“XP”，但是Win 
+            XP中却没有这项功能。可是很奇怪我的一个朋友的Win XP却可以设置背景。其实他也不是设置，他是从win2000升级到Win 
+            XP的，在win2000中他设置了背景，在Win 
+            XP中，这个背景还是有效的，我花了些时间终于找到了原因，原来有背景的文件夹里都有个desktop.ini文件，于是我在自己的机器上找，找到了很多 
+            desktop.ini，但是这些都没有用，大概是Win 
+        XP去除了这项功能之后，所有的desktop.ini里就没了设置</DIV></TD></TR></TBODY></TABLE>
+      <DIV class=more><A 
+      href="http://hi.baidu.com/sbanyv/blog/item/46421e54f8540b56564e00a8.html" 
+      target=_blank>阅读全文&gt;&gt;</A></DIV>
+      <DIV class=opt><A title=查看该分类中所有文章 
+      href="http://hi.baidu.com/sbanyv/blog/category/&Auml;&not;&Egrave;&Iuml;·&Ouml;&Agrave;à">类别：默认分类</A>
+      <SCRIPT language=javascript>
+	allkey +="46421e54f8540b56564e00a8"+"_";
+	</SCRIPT>
+       | <A title=查看该文章的所有评论 
+      href="http://hi.baidu.com/sbanyv/blog/item/46421e54f8540b56564e00a8.html#comment">评论(0)</A> 
+      | <A title=浏览全文 
+      href="http://hi.baidu.com/sbanyv/blog/item/46421e54f8540b56564e00a8.html">浏览(<SPAN 
+      id=fArea></SPAN>)</A>
+      <SCRIPT language=javascript>var tps = "<span id='div"+x+"'></span>";x++;document.getElementById("fArea").id = "fArea" + x;document.getElementById("fArea"+x).innerHTML = tps;</SCRIPT>
+       </DIV>
+      <DIV class=line></DIV>
+      <DIV class=tit><A 
+      href="http://hi.baidu.com/sbanyv/blog/item/24501b08011fcb970a7b820a.html" 
+      target=_blank>CPU温度与测试工具</A></DIV>
+      <DIV class=date>2007-08-20 09:46</DIV>
+      <TABLE style="TABLE-LAYOUT: fixed">
+        <TBODY>
+        <TR>
+          <TD>
+            <DIV class=cnt>
+            <DIV class=cnt>
+            <P><FONT size=3>最近发现不少人对自己CPU的温度问题比较疑惑，下面我就温度给大家讨论一下。</FONT></P>
+            <P><FONT size=3>CPU的正常温度 
+            <BR>保证在温升30度的范围内一般是稳定的。也就是说，cpu的耐收温度为65度，按夏天最高35度来计算，则允许cpu温升为30度。按此类推，如果你的环 
+            境温度现在是20度，cpu最好就不要超过50度。温度当然是越低越好。不管你超频到什么程度，都不要使你的cpu高过环境温度30度以上。 
+            <BR>现在要补充说明几点： <BR>1. 温度和电压的问题。 
+          <BR>温度提高是由于U</FONT></P></DIV></DIV></TD></TR></TBODY></TABLE>
+      <DIV class=more><A 
+      href="http://hi.baidu.com/sbanyv/blog/item/24501b08011fcb970a7b820a.html" 
+      target=_blank>阅读全文&gt;&gt;</A></DIV>
+      <DIV class=opt><A title=查看该分类中所有文章 
+      href="http://hi.baidu.com/sbanyv/blog/category/&Auml;&not;&Egrave;&Iuml;·&Ouml;&Agrave;à">类别：默认分类</A>
+      <SCRIPT language=javascript>
+	allkey +="24501b08011fcb970a7b820a"+"_";
+	</SCRIPT>
+       | <A title=查看该文章的所有评论 
+      href="http://hi.baidu.com/sbanyv/blog/item/24501b08011fcb970a7b820a.html#comment">评论(4)</A> 
+      | <A title=浏览全文 
+      href="http://hi.baidu.com/sbanyv/blog/item/24501b08011fcb970a7b820a.html">浏览(<SPAN 
+      id=fArea></SPAN>)</A>
+      <SCRIPT language=javascript>var tps = "<span id='div"+x+"'></span>";x++;document.getElementById("fArea").id = "fArea" + x;document.getElementById("fArea"+x).innerHTML = tps;</SCRIPT>
+       </DIV>
+      <DIV class=line></DIV>
+      <DIV class=tit><A 
+      href="http://hi.baidu.com/sbanyv/blog/item/ffda101085407afec3ce79c2.html" 
+      target=_blank>C#类实现MD5的加密——另一高级应用</A></DIV>
+      <DIV class=date>2007-08-08 10:37</DIV>
+      <TABLE style="TABLE-LAYOUT: fixed">
+        <TBODY>
+        <TR>
+          <TD>
+            <DIV class=cnt>
+            <P><BR>#region Code Descriptions 
+            V20061219<BR>//------------------------------------------------------------------------------<BR>// 
+            ClassName:&nbsp;&nbsp;&nbsp; JKLib.Security.MyMD5<BR>// Function 
+            :&nbsp;&nbsp;&nbsp; MD5 加密算法algorithm implemented in 
+            C#<BR>//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            Computes the hash value for the specified byte 
+            array.<BR>//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</P></DIV></TD></TR></TBODY></TABLE>
+      <DIV class=more><A 
+      href="http://hi.baidu.com/sbanyv/blog/item/ffda101085407afec3ce79c2.html" 
+      target=_blank>阅读全文&gt;&gt;</A></DIV>
+      <DIV class=opt><A title=查看该分类中所有文章 
+      href="http://hi.baidu.com/sbanyv/blog/category/&Auml;&not;&Egrave;&Iuml;·&Ouml;&Agrave;à">类别：默认分类</A>
+      <SCRIPT language=javascript>
+	allkey +="ffda101085407afec3ce79c2"+"_";
+	</SCRIPT>
+       | <A title=查看该文章的所有评论 
+      href="http://hi.baidu.com/sbanyv/blog/item/ffda101085407afec3ce79c2.html#comment">评论(0)</A> 
+      | <A title=浏览全文 
+      href="http://hi.baidu.com/sbanyv/blog/item/ffda101085407afec3ce79c2.html">浏览(<SPAN 
+      id=fArea></SPAN>)</A>
+      <SCRIPT language=javascript>var tps = "<span id='div"+x+"'></span>";x++;document.getElementById("fArea").id = "fArea" + x;document.getElementById("fArea"+x).innerHTML = tps;</SCRIPT>
+       </DIV>
+      <DIV class=line></DIV>
+      <DIV class=tit><A 
+      href="http://hi.baidu.com/sbanyv/blog/item/2dbd5ffa932db39559ee9001.html" 
+      target=_blank>反编译工具Reflector下载</A></DIV>
+      <DIV class=date>2007-07-29 20:39</DIV>
+      <TABLE style="TABLE-LAYOUT: fixed">
+        <TBODY>
+        <TR>
+          <TD>
+            <DIV class=cnt>
+            <DIV class=postTitle><A class=postTitle2 
+            href="http://www.cnblogs.com/cnmawei/archive/2007/06/15/784587.html"><FONT 
+            color=#56b6e9>反编译工具Reflector下载(集成两个常用.net插件,FileGenerator和FileDisassembler)</FONT></A> 
+            </DIV>
+            <P>Reflector是一款比较强大的反编译工具,相信很多朋友都用过它,但reflector本身有很多局限性,比如只能一个一个的查看方法等,但幸好reflector支持插件功能目前网上有很多reflector的插件,本人找取了两个应用范围很广,并且广受好评的插件:Reflector.FileDisassembler和Reflector.File</P></DIV></TD></TR></TBODY></TABLE>
+      <DIV class=more><A 
+      href="http://hi.baidu.com/sbanyv/blog/item/2dbd5ffa932db39559ee9001.html" 
+      target=_blank>阅读全文&gt;&gt;</A></DIV>
+      <DIV class=opt><A title=查看该分类中所有文章 
+      href="http://hi.baidu.com/sbanyv/blog/category/&Auml;&not;&Egrave;&Iuml;·&Ouml;&Agrave;à">类别：默认分类</A>
+      <SCRIPT language=javascript>
+	allkey +="2dbd5ffa932db39559ee9001"+"_";
+	</SCRIPT>
+       | <A title=查看该文章的所有评论 
+      href="http://hi.baidu.com/sbanyv/blog/item/2dbd5ffa932db39559ee9001.html#comment">评论(8)</A> 
+      | <A title=浏览全文 
+      href="http://hi.baidu.com/sbanyv/blog/item/2dbd5ffa932db39559ee9001.html">浏览(<SPAN 
+      id=fArea></SPAN>)</A>
+      <SCRIPT language=javascript>var tps = "<span id='div"+x+"'></span>";x++;document.getElementById("fArea").id = "fArea" + x;document.getElementById("fArea"+x).innerHTML = tps;</SCRIPT>
+       </DIV>
+      <DIV class=line></DIV>
+      <DIV class=tit><A 
+      href="http://hi.baidu.com/sbanyv/blog/item/cff68e33b3984441ad4b5f05.html" 
+      target=_blank>使用.NET Reflector插件FileDisassembler还原源码</A></DIV>
+      <DIV class=date>2007-07-29 20:35</DIV>
+      <TABLE style="TABLE-LAYOUT: fixed">
+        <TBODY>
+        <TR>
+          <TD>
+            <DIV class=cnt>
+            <P>.NET Reflector，它是一个类浏览器和反编译器，可以分析程序集并向您展示它的所有秘密。.NET 
+            框架向全世界引入了可用来分析任何基于 .NET 
+            的代码（无论它是单个类还是完整的程序集）的反射概念。反射还可以用来检索有关特定程序集中包含的各种类、方法和属性的信息。使用 .NET 
+            Reflector，您可以浏览程序集的类和方法，可以分析由这些类和方法生成的 Microsoft 中间语言 
+            (MSIL)，并且可以反编译这些类和方法并查看 C# 或 Visual Basic ?.NET 中的等价类和方法。 
+            <BR><BR>为了演示 .NET Reflector 
+      的工作方式，我将加载和分析</P></DIV></TD></TR></TBODY></TABLE>
+      <DIV class=more><A 
+      href="http://hi.baidu.com/sbanyv/blog/item/cff68e33b3984441ad4b5f05.html" 
+      target=_blank>阅读全文&gt;&gt;</A></DIV>
+      <DIV class=opt><A title=查看该分类中所有文章 
+      href="http://hi.baidu.com/sbanyv/blog/category/&Auml;&not;&Egrave;&Iuml;·&Ouml;&Agrave;à">类别：默认分类</A>
+      <SCRIPT language=javascript>
+	allkey +="cff68e33b3984441ad4b5f05"+"_";
+	</SCRIPT>
+       | <A title=查看该文章的所有评论 
+      href="http://hi.baidu.com/sbanyv/blog/item/cff68e33b3984441ad4b5f05.html#comment">评论(0)</A> 
+      | <A title=浏览全文 
+      href="http://hi.baidu.com/sbanyv/blog/item/cff68e33b3984441ad4b5f05.html">浏览(<SPAN 
+      id=fArea></SPAN>)</A>
+      <SCRIPT language=javascript>var tps = "<span id='div"+x+"'></span>";x++;document.getElementById("fArea").id = "fArea" + x;document.getElementById("fArea"+x).innerHTML = tps;</SCRIPT>
+       </DIV>
+      <DIV class=line></DIV>
+      <DIV class=tit><A 
+      href="http://hi.baidu.com/sbanyv/blog/item/b03c02fb7a2dd7146c22eb4f.html" 
+      target=_blank>在C#中运用SQLDMO备份和恢复SQL Server数据库</A></DIV>
+      <DIV class=date>2007-07-29 19:28</DIV>
+      <TABLE style="TABLE-LAYOUT: fixed">
+        <TBODY>
+        <TR>
+          <TD>
+            <DIV class=cnt>
+            <DIV><FONT color=#0000ff>1.注册SQLDMO.DLL组件 <BR></FONT><FONT 
+            color=#0000ff><BR>DMO由一个动态链接库SQLDMO.DLL文件(在C:\Program 
+            Files\Microsoft SQL 
+            Server\80\Tools\Binn目录下)和一个语言支持包SQLDMO.RLL文件(在C:\Program 
+            Files\Microsoft SQL 
+            Server\80\COM\Resources\2052),在操作系统里注册DMO可以这样进行:</FONT></DIV>
+            <DIV><BR>1.把DLL文件持拷贝到C:\WINDOWS\system32目录下<BR>2.在C:\WINDOWS\system32目录下建立一个新文件夹:resources,在里面再建一个新文件夹2052,然后把RLL文件拷贝到2052中.即</DIV></DIV></TD></TR></TBODY></TABLE>
+      <DIV class=more><A 
+      href="http://hi.baidu.com/sbanyv/blog/item/b03c02fb7a2dd7146c22eb4f.html" 
+      target=_blank>阅读全文&gt;&gt;</A></DIV>
+      <DIV class=opt><A title=查看该分类中所有文章 
+      href="http://hi.baidu.com/sbanyv/blog/category/&Auml;&not;&Egrave;&Iuml;·&Ouml;&Agrave;à">类别：默认分类</A>
+      <SCRIPT language=javascript>
+	allkey +="b03c02fb7a2dd7146c22eb4f"+"_";
+	</SCRIPT>
+       | <A title=查看该文章的所有评论 
+      href="http://hi.baidu.com/sbanyv/blog/item/b03c02fb7a2dd7146c22eb4f.html#comment">评论(2)</A> 
+      | <A title=浏览全文 
+      href="http://hi.baidu.com/sbanyv/blog/item/b03c02fb7a2dd7146c22eb4f.html">浏览(<SPAN 
+      id=fArea></SPAN>)</A>
+      <SCRIPT language=javascript>var tps = "<span id='div"+x+"'></span>";x++;document.getElementById("fArea").id = "fArea" + x;document.getElementById("fArea"+x).innerHTML = tps;</SCRIPT>
+       </DIV>
+      <DIV class=line></DIV>
+      <DIV class=tit><A 
+      href="http://hi.baidu.com/sbanyv/blog/item/d13163a8636a0bb3ca130c6d.html" 
+      target=_blank>关于TreeView控件专题</A></DIV>
+      <DIV class=date>2007-07-25 14:45</DIV>
+      <TABLE style="TABLE-LAYOUT: fixed">
+        <TBODY>
+        <TR>
+          <TD>
+            <DIV class=cnt>关于TreeView控件专题 <BR>1.下载地址 <BR><A 
+            href="http://msdn.microsoft.com/downloads...ols/default.asp"><FONT 
+            color=#0066a7>http://msdn.microsoft.com/downloads...ols/default.asp</FONT></A> 
+            <BR>安装后，通过“自定义工具箱”-&gt;“.net框架组件”把TreeView添加到工具箱里 
+            <DIV>2.运行时无法显示 
+            <BR>一般是TreeView的版本问题，最好下载英文版自动安装版本重新安装，安装前应该先到添加删除程序里卸掉原版本 </DIV>
+            <DIV>3.显示格式出错（非树状显示） 
+        <BR>TreeView要求客户端浏览器版本为IE5.5及以上，最</DIV></DIV></TD></TR></TBODY></TABLE>
+      <DIV class=more><A 
+      href="http://hi.baidu.com/sbanyv/blog/item/d13163a8636a0bb3ca130c6d.html" 
+      target=_blank>阅读全文&gt;&gt;</A></DIV>
+      <DIV class=opt><A title=查看该分类中所有文章 
+      href="http://hi.baidu.com/sbanyv/blog/category/&Auml;&not;&Egrave;&Iuml;·&Ouml;&Agrave;à">类别：默认分类</A>
+      <SCRIPT language=javascript>
+	allkey +="d13163a8636a0bb3ca130c6d"+"_";
+	</SCRIPT>
+       | <A title=查看该文章的所有评论 
+      href="http://hi.baidu.com/sbanyv/blog/item/d13163a8636a0bb3ca130c6d.html#comment">评论(0)</A> 
+      | <A title=浏览全文 
+      href="http://hi.baidu.com/sbanyv/blog/item/d13163a8636a0bb3ca130c6d.html">浏览(<SPAN 
+      id=fArea></SPAN>)</A>
+      <SCRIPT language=javascript>var tps = "<span id='div"+x+"'></span>";x++;document.getElementById("fArea").id = "fArea" + x;document.getElementById("fArea"+x).innerHTML = tps;</SCRIPT>
+       </DIV>
+      <DIV class=line></DIV>
+      <DIV class=tit><A 
+      href="http://hi.baidu.com/sbanyv/blog/item/2649c02b5588b3f8e6cd4087.html" 
+      target=_blank>四个要诀提升个人执行力</A></DIV>
+      <DIV class=date>2007-07-25 14:04</DIV>
+      <TABLE style="TABLE-LAYOUT: fixed">
+        <TBODY>
+        <TR>
+          <TD>
+            <DIV class=cnt>
+            <P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-ALIGN: center" 
+            align=center><STRONG style="mso-bidi-font-weight: normal"><SPAN 
+            style="FONT-SIZE: 14pt">四个要诀提升个人执行力</SPAN></STRONG></P>
+            <P class=MsoNormal 
+            style="MARGIN: 0cm 0cm 0pt"><SPAN>何谓执行力按照<ST1:PERSONNAME 
+            productid="余世维">余世维</ST1:PERSONNAME>博士的说法，执行力“就是按质按量地完成工作任务”的能力。个人执行力的强弱取决于两个要素</SPAN></P></DIV></TD></TR></TBODY></TABLE>
+      <DIV class=more><A 
+      href="http://hi.baidu.com/sbanyv/blog/item/2649c02b5588b3f8e6cd4087.html" 
+      target=_blank>阅读全文&gt;&gt;</A></DIV>
+      <DIV class=opt><A title=查看该分类中所有文章 
+      href="http://hi.baidu.com/sbanyv/blog/category/&Auml;&not;&Egrave;&Iuml;·&Ouml;&Agrave;à">类别：默认分类</A>
+      <SCRIPT language=javascript>
+	allkey +="2649c02b5588b3f8e6cd4087"+"_";
+	</SCRIPT>
+       | <A title=查看该文章的所有评论 
+      href="http://hi.baidu.com/sbanyv/blog/item/2649c02b5588b3f8e6cd4087.html#comment">评论(0)</A> 
+      | <A title=浏览全文 
+      href="http://hi.baidu.com/sbanyv/blog/item/2649c02b5588b3f8e6cd4087.html">浏览(<SPAN 
+      id=fArea></SPAN>)</A>
+      <SCRIPT language=javascript>var tps = "<span id='div"+x+"'></span>";x++;document.getElementById("fArea").id = "fArea" + x;document.getElementById("fArea"+x).innerHTML = tps;</SCRIPT>
+       </DIV>
+      <DIV class=line></DIV>
+      <SCRIPT language=javascript>
+	function setpv(allnum)
+	{
+		var num = allnum.split('_');
+	    var h=num.length-1;
+	         for(i=0;i<h;i++){
+	
+	                   if(document.getElementById("div"+i))		
+					  { document.getElementById("div"+i).innerHTML = num[i] ;}
+	
+			 }
+	}
+	</SCRIPT>
+
+      <DIV id=page><A 
+      href="http://hi.baidu.com/sbanyv/blog/index/0">[首页]</A>&nbsp;1 <A 
+      href="http://hi.baidu.com/sbanyv/blog/index/1">[2]</A>&nbsp;<A 
+      href="http://hi.baidu.com/sbanyv/blog/index/1">[下一页]</A>&nbsp;</DIV></DIV>
+      <TABLE height=8 cellSpacing=0 cellPadding=0 width="100%" border=0>
+        <TBODY>
+        <TR>
+          <TD class=modbl width=7>&nbsp;</TD>
+          <TD class=modbc>&nbsp;</TD>
+          <TD class=modbr width=7>&nbsp;</TD></TR></TBODY></TABLE></DIV>
+    <TD class=c2t2>&nbsp;</TD>
+    <TD class=c2t3 vAlign=top>
+      <DIV class=mod id=mod_artclg>
+      <TABLE class=modth cellSpacing=0 cellPadding=0 width="100%" border=0>
+        <TBODY>
+        <TR>
+          <TD class=modtl width=7>&nbsp;</TD>
+          <TD class=modtc noWrap>
+            <DIV class=modhead><SPAN class=modtit>文章分类</SPAN></DIV></TD>
+          <TD class=modtc noWrap align=right></TD>
+          <TD class=modtr width=7>&nbsp;</TD></TR></TBODY></TABLE>
+      <DIV class=modbox id=m_artclg>
+      <DIV class=item><A title=查看该分类中所有文章 
+      href="http://hi.baidu.com/sbanyv/blog/category/&Auml;&not;&Egrave;&Iuml;·&Ouml;&Agrave;à">默认分类</A>(20)</DIV>
+      <DIV class=line></DIV></DIV>
+      <TABLE height=8 cellSpacing=0 cellPadding=0 width="100%" border=0>
+        <TBODY>
+        <TR>
+          <TD class=modbl width=7>&nbsp;</TD>
+          <TD class=modbc>&nbsp;</TD>
+          <TD class=modbr width=7>&nbsp;</TD></TR></TBODY></TABLE></DIV>
+      <DIV class=mod id=mod_filed>
+      <TABLE class=modth cellSpacing=0 cellPadding=0 width="100%" border=0>
+        <TBODY>
+        <TR>
+          <TD class=modtl width=7>&nbsp;</TD>
+          <TD class=modtc noWrap>
+            <DIV class=modhead><SPAN class=modtit>文章存档</SPAN></DIV></TD>
+          <TD class=modtr width=7>&nbsp;</TD></TR></TBODY></TABLE>
+      <DIV class=modbox id=m_filed>
+      <SCRIPT language=javascript>
+	    document.write('<DIV class="item"><A href="/sbanyv/blog/calendar/'+montourl("2008年10月")+'">2008年10月</A>(1)</DIV>');
+</SCRIPT>
+
+      <DIV class=line></DIV>
+      <SCRIPT language=javascript>
+	    document.write('<DIV class="item"><A href="/sbanyv/blog/calendar/'+montourl("2008年09月")+'">2008年09月</A>(2)</DIV>');
+</SCRIPT>
+
+      <DIV class=line></DIV>
+      <SCRIPT language=javascript>
+	    document.write('<DIV class="item"><A href="/sbanyv/blog/calendar/'+montourl("2008年03月")+'">2008年03月</A>(3)</DIV>');
+</SCRIPT>
+
+      <DIV class=line></DIV>
+      <SCRIPT language=javascript>
+	    document.write('<DIV class="item"><A href="/sbanyv/blog/calendar/'+montourl("2007年08月")+'">2007年08月</A>(4)</DIV>');
+</SCRIPT>
+
+      <DIV class=line></DIV>
+      <SCRIPT language=javascript>
+	    document.write('<DIV class="item"><A href="/sbanyv/blog/calendar/'+montourl("2007年07月")+'">2007年07月</A>(9)</DIV>');
+</SCRIPT>
+
+      <DIV class=line></DIV>
+      <SCRIPT language=javascript>
+	    document.write('<DIV class="item"><A href="/sbanyv/blog/calendar/'+montourl("2007年06月")+'">2007年06月</A>(1)</DIV>');
+</SCRIPT>
+
+      <DIV class=line></DIV></DIV>
+      <TABLE height=8 cellSpacing=0 cellPadding=0 width="100%" border=0>
+        <TBODY>
+        <TR>
+          <TD class=modbl width=7>&nbsp;</TD>
+          <TD class=modbc>&nbsp;</TD>
+          <TD class=modbr width=7>&nbsp;</TD></TR></TBODY></TABLE></DIV>
+      <DIV class=mod id=mod_comment>
+      <TABLE class=modth cellSpacing=0 cellPadding=0 width="100%" border=0>
+        <TBODY>
+        <TR>
+          <TD class=modtl width=7>&nbsp;</TD>
+          <TD class=modtc noWrap>
+            <DIV class=modhead><SPAN class=modtit>最新文章评论</SPAN></DIV></TD>
+          <TD class=modtc noWrap align=right>&nbsp;</TD>
+          <TD class=modtr width=7>&nbsp;</TD></TR></TBODY></TABLE>
+      <DIV class=modbox id=m_comment style="CLEAR: both; POSITION: relative">
+      <SCRIPT> 
+	var x=0;var html="";
+function writecmt(cmturl,cmtname){
+	if(cmturl==""){
+		html = "<a target='_blank'>"+cmtname+"</a>";
+	}else{
+		html = "<a href='"+cmturl+"' target='_blank'>"+cmtname+"</a>";
+	}
+	document.write(html);
+}
+</SCRIPT>
+
+      <DIV class=item><SPAN id=cmtArea>
+      <SCRIPT>
+<!--
+	writecmt("http://hi.baidu.com/cjml_1982","cjml_1982");	
+//-->
+</SCRIPT>
+      </SPAN><BR><A class=cnt 
+      href="http://hi.baidu.com/sbanyv/blog/item/24266e121bc73757f919b851.html/cmtid/0a87707fd337f70f28388a16#0a87707fd337f70f28388a16">有空想请教下 
+      .net呢 呵呵<BR></A></DIV>
+      <DIV class=line></DIV>
+      <DIV class=item><SPAN id=cmtArea>
+      <SCRIPT>
+<!--
+	writecmt("","匿名网友");	
+//-->
+</SCRIPT>
+      </SPAN><BR><A class=cnt 
+      href="http://hi.baidu.com/sbanyv/blog/item/24501b08011fcb970a7b820a.html/cmtid/0f530dafe99c81fcfbed5088#0f530dafe99c81fcfbed5088">好样的 
+      </A></DIV>
+      <DIV class=line></DIV>
+      <DIV class=item><SPAN id=cmtArea>
+      <SCRIPT>
+<!--
+	writecmt("http://hi.baidu.com/diewu","蝶舞聆听");	
+//-->
+</SCRIPT>
+      </SPAN><BR><A class=cnt 
+      href="http://hi.baidu.com/sbanyv/blog/item/b03c02fb251e86126c22eb58.html/cmtid/4446283e417d743a70cf6ca9#4446283e417d743a70cf6ca9">收藏~~~ 
+      </A></DIV>
+      <DIV class=line></DIV>
+      <DIV class=item><SPAN id=cmtArea>
+      <SCRIPT>
+<!--
+	writecmt("http://hi.baidu.com/laoyaotask","laoyaotask");	
+//-->
+</SCRIPT>
+      </SPAN><BR><A class=cnt 
+      href="http://hi.baidu.com/sbanyv/blog/item/b03c02fb251e86126c22eb58.html/cmtid/de12acf2ec1bbf14b07ec507#de12acf2ec1bbf14b07ec507">乖乘你是咋弄上去的啊 
+      在哪里找这么多罕见的 东东 呵呵 不过是好东东 俺收藏了 谢... </A></DIV>
+      <DIV class=line></DIV>
+      <DIV class=item><SPAN id=cmtArea>
+      <SCRIPT>
+<!--
+	writecmt("mailto:9292287@qq.com","匿名网友");	
+//-->
+</SCRIPT>
+      </SPAN><BR><A class=cnt 
+      href="http://hi.baidu.com/sbanyv/blog/item/2dbd5ffa932db39559ee9001.html/cmtid/d13163a8a0e348b7cb130cf1#d13163a8a0e348b7cb130cf1">一堆毒和木马 
+      我根本就不能运行 </A></DIV>
+      <DIV class=line></DIV>
+      <DIV class=item><A 
+      href="http://hi.baidu.com/sys/search?type=9&amp;hi=sbanyv&amp;region=3" 
+      target=_blank>更多评论&gt;&gt;</A></DIV></DIV>
+      <TABLE height=8 cellSpacing=0 cellPadding=0 width="100%" border=0>
+        <TBODY>
+        <TR>
+          <TD class=modbl width=7>&nbsp;</TD>
+          <TD class=modbc>&nbsp;</TD>
+          <TD class=modbr width=7>&nbsp;</TD></TR></TBODY></TABLE></DIV>
+      <DIV id=comm_info><A href="http://hi.baidu.com/sbanyv/rss" 
+      target=_blank><IMG title=订阅RSS alt=订阅RSS src="一切OK_博客.files/rss.gif" 
+      align=absMiddle border=0></A>&nbsp;&nbsp;<A 
+      href="http://www.baidu.com/search/whatisrss.html" 
+      target=_blank>什么是RSS？</A> </DIV></TD></TR></TBODY></TABLE></DIV></DIV>
+<SCRIPT>
+var hstr="/sbanyv/brwstat?key1=15";
+document.write("<script src='"+hstr+"&key2="+allkey+"'><\/script>");
+</SCRIPT>
+
+<SCRIPT>
+if(document.getElementById("mod_bloglist"))
+{
+	var imgarray = document.getElementById("mod_bloglist").getElementsByTagName('img');
+	var imgw = document.getElementById("mod_bloglist").offsetWidth;
+	imgw =imgw-40;
+	for(var i=0; i<imgarray.length; i++){
+	if(imgarray[i].className=="blogimg" && imgarray[i].width>=imgw) imgarray[i].width=imgw;
+	}
+}
+</SCRIPT>
+<BR><BR>
+<CENTER>
+<DIV id=ft>&copy;2008 Baidu</DIV></CENTER></CENTER><IMG style="DISPLAY: none" src=""> 
+</BODY></HTML>

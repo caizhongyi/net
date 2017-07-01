@@ -1,0 +1,2846 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<WebSite>
+  <html name="Resource_WebSiteHead">
+    <!--
+      <title>{$WebSite_WebSiteTitle}</title>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<META content="MSHTML 6.00.3790.2759" name=GENERATOR>
+<META content="东网论坛，donetbbs，c# bbs，csharpbbs，东网论坛官方网站，.net论坛，c#论坛，c#社区" name=description>
+<META content=东网论坛，东网论坛官方网站，.net论坛，c#论坛，c#社区，csharpbbs name=keywords>
+      <div id="WebSiteHiddenDiv" style="display:none;"></div>
+      <link rel="stylesheet" id="WebSite_System_Css" type="text/css" href="/style/{$WebSite_PageStyle}" />
+      <script language = "javaScript" src = "/JScript/WebSiteJavaScript.js" type="text/javascript"></script>
+    -->
+    </html>
+  <html name="Resource_WebSiteWebTop">
+    <!--
+<div class="topbar_top"></div>
+<DIV class=topbar_mid >
+  <DIV style="float:right;margin-top:10px; padding-right:10px;">
+<DIV style="CURSOR: hand">收藏本页</DIV>
+<DIV><A href="http://www.donetbbs.com/Services.aspx">联系我们</A></DIV>
+<DIV><A 
+href="http://www.donetbbs.com">论坛帮助</A></DIV></DIV>
+  <DIV style="float:left;margin-top:10px;">
+  <A href="http://www.donetbbs.com"><IMG 
+src="/images/WebSite_WebLog.gif" border=0 align="absbottom"></A>
+  </DIV>
+<DIV style="margin-top:10px;"> 
+
+
+
+<script type="text/javascript">
+google_ad_client = "pub-6610952874794299";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+</script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+
+
+<IFRAME 
+      marginWidth=0 marginHeight=0 src="/Images/donetbbs_ad/donetbbs_banner_ad.html" frameBorder=0 
+      width=0 scrolling=no 
+      height=0> </IFRAME>
+
+
+
+
+</DIV>            
+</div>
+<div class="topbar_bottom"></div>
+-->
+  </html>
+
+  <html name="Resource_WebSitePageEndBottom">
+    <!--
+<div style="margin-top:10px;wdith:60%;">
+  <div style="width:100%; text-align:center; ">
+    <div>Powered By <a href = "http://www.donetbbs.com" target = "_blank">东网论坛</a> {$WebSite_Version}</div>
+    <div>Copyright &copy;DoNetBbs.com <a href="http://www.donetbbs.com" target="_blank"><font face=Verdana, Arial, Helvetica, sans-serif><b>{$WebSite_WebSiteName}</b></font></a></div>
+    <div>页面执行时间 {$WebSiteRunTime} 毫秒&nbsp;&nbsp;<a href="http://www.miibeian.gov.cn/" target="_blank">{$WebSite_MiiBeian}</a></div>
+  </div>
+</div>
+-->
+  </html>
+
+  <html name="Resource_WebSiteNavigate">
+    <!--
+<div class="topbar_menu" >
+  {$WebSite_UserLoginControl}
+  <div  class="menudiv"><a href="/DeFault.aspx">首页</a></div>
+  <div class="menudiv"><a href="/Forums/DeFault.aspx">论坛</a></div>
+  <div  class="menudiv"><a href="/Search/Search.aspx">搜索</a></div>
+  <div  class="menudiv"><a onMouseOver="DosJscriptShowmenu(event,'WebSiteStylemenu')"  style="cursor:default;" >风格</a></div>
+  <div  class="menudiv"><a onMouseOver="DosJscriptShowmenu(event,'Menu_BoardNavigate')"  style="cursor:default;" >站内导航</a></div>
+  {$WebSite_UserLoginPanl}
+  {$WebSite_UserLoginOut}
+  <div class="Dos_menu_popup" id="WebSiteStylemenu" onMouseOut="DosJscriptOnMouseOutMenu(this)">
+    <div class="menuitems">
+	<a href="javascript:JavascriptSetStyle('DeFaultStyle.css');JavascriptPostXml('actions=ChangeUserStyle&Style=DeFaultStyle.css',false);">默认风格</a> <br />	  
+              <a href="javascript:JavascriptSetStyle('BlueStyle.css');JavascriptPostXml('actions=ChangeUserStyle&Style=BlueStyle.css',false);">蓝色风情</a> <br />
+	</div>
+  </div>
+  
+  <div class="Dos_menu_popup" id="Menu_BoardNavigate" onMouseOut="DosJscriptOnMouseOutMenu(this)" >
+  <div class="menuitems">  
+      <a href="/Forums/DeFault.aspx?type=5">我发表的主题</a> <br />
+      <a href="/Forums/DeFault.aspx?type=6">我参与的主题</a> <br />
+	  <a href="/Forums/DeFault.aspx?type=1">最新主题</a> <br />
+	  <a href="/Forums/DeFault.aspx?type=2">热门主题</a> <br />
+	  <a href="/Forums/DeFault.aspx?type=3">精华主题</a> <br />
+	  <a href="/Forums/DeFault.aspx?type=4">推荐主题</a>
+  </div>
+</div>
+</div>
+-->
+  </html>
+
+
+  <html name="Resource_WebSiteUserLoginPanl">
+    <!--
+ <div  class="menudiv"><a href="/admin/default.aspx">控制面板</a></div>
+ -->
+  </html>
+  <html name="Resource_WebSiteUserLoginControlLogined">
+    <!--
+<div class="menudiv"><b>欢迎您，{$UserNickName}</b> <a href="/UserInfo/Login.aspx" >重登录</a></div>
+  <div class="menudiv">
+<a onMouseOver="DosJscriptShowmenu(event,'WebSiteUserStatic')"  style="cursor:default;" >
+我的状态
+</a>
+</div>
+
+<div class="Dos_menu_popup" id="WebSiteUserStatic" onMouseOut="DosJscriptOnMouseOutMenu(this)">
+  <div class="menuitems"> 
+       <a href="javascript:JavascriptPostXml('actions=UserOnlineStatus&Status=UserOnLine',true);">联机(O)</a> <br />
+      <a href="javascript:JavascriptPostXml('actions=UserOnlineStatus&Status=UserBusyLine',true);">忙碌(B)</a> <br />
+      <a href="javascript:JavascriptPostXml('actions=UserOnlineStatus&Status=UserRightBack',true);">马上回来(E)</a> <br />
+	  <a href="javascript:JavascriptPostXml('actions=UserOnlineStatus&Status=UserLeave',true);">离开(A)</a> <br />
+	  <a href="javascript:JavascriptPostXml('actions=UserOnlineStatus&Status=UserTelephone',true);">接听电话(P)</a> <br />
+	  <a href="javascript:JavascriptPostXml('actions=UserOnlineStatus&Status=UserOutMeal',true);">外出就餐(L)</a> <br />
+	  <a href="javascript:JavascriptPostXml('actions=UserOnlineStatus&Status=UserOffLine',true);">脱机(F)</a>
+    
+  </div>
+</div>
+<div class="menudiv"><a href="/UserInfo/EditUserInfo.aspx">资料管理</a></div>
+-->
+  </html>
+
+  <html name="Resource_WebSite_UserLoginOut">
+    <!--
+  <div class="menudiv"><a href="/UserInfo/UserLoginOut.aspx">退出</a></div>
+-->
+  </html>
+  <html name="Resource_WebSiteUserLoginControlOut">
+    <!--
+<div class="menudiv"><b>欢迎您，{$UserNickName}</b> <a href="/UserInfo/Login.aspx" >登录</a> <a href="/UserInfo/CreateUser.aspx" >注册</a></div>
+-->
+  </html>
+
+  <html name="Resource_WebSiteDeFault">
+    <!--
+   <div style="width:100%; ">
+<div style="width:75%; float:left;">
+<div class="tabletop" style="margin-top:10px;padding-left:4px;padding-top:4px;"><font face="Wingdings" color="666666">v</font> 精彩主题 </div>
+<div class="mainbar2"  style="height:970px">
+{$WebSite_DeFaultInfo}
+</div>
+</div>
+<div style="width:25%; float:right;padding-left:10px;">
+<div class="tabletop" style="margin-top:10px;padding-left:4px;padding-top:4px;"><font face="Wingdings" color="666666">v</font> 用户信息</div>
+<div class="mainbar2">
+
+{$WebSite_DeFaultUserLoginInfo}
+
+
+</div>
+
+<div class="tabletop" style="margin-top:10px;padding-left:4px;padding-top:4px;"><font face="Wingdings" color="666666">v</font> 最新帖子</div>
+<div class="mainbar2" >
+{$WebSite_DeFaultNewTopic}
+</div>
+
+<div class="tabletop" style="margin-top:10px;padding-left:4px;padding-top:4px;"><font face="Wingdings" color="666666">v</font> 推荐主题</div>
+<div class="mainbar2" >
+{$WebSite_DeFaultReCommendTopic}
+</div>
+
+<div class="tabletop" style="margin-top:10px;padding-left:4px;padding-top:4px;"><font face="Wingdings" color="666666">v</font> 精华主题</div>
+<div class="mainbar2" >
+{$WebSite_DeFaultBestTopic}
+</div>
+
+<div class="tabletop" style="margin-top:10px;padding-left:4px;padding-top:4px;"><font face="Wingdings" color="666666">v</font> 热门主题</div>
+<div class="mainbar2" >
+{$WebSite_DeFaultHotTopic}
+</div>
+</div>
+</div>
+-->
+  </html>
+
+  <html name="WebSite_DeFaultInfo">
+    <!--
+    <div style="width:100%">
+    <div style="text-align :left;overflow:hidden;float:left;margin-top:0px;padding-left:4px;width:30%;height:140px;"><a href="/Forums/ShowTopicInfo.aspx?TopicID={$TopicID}" target="_blank"><img src="{$TopicImages}" border="0"></a></div>
+    <div style="text-align :left;overflow:hidden;float:right;margin-top:0px;padding-left:4px;width:70%;height:140px;">
+    <div style="width:100%"> <a href="/Forums/default.aspx?boardid={$BoardID}"><b>{$BoardName}</b></a>  <a href="/Forums/ShowTopicInfo.aspx?TopicID={$TopicID}" target="_blank">{$TopicTitle}</a></div>
+    <div style="width:100%; height:100px;">{$TopicInfoText}</div>
+    <div style="width:100%;text-align :right"><a href="/userinfo/UserInfo.aspx?UserID={$TopicPostUserID}" target="_blank">{$TopicPostUserNickName}</a> {$TopicPostTime}</div>
+    
+    </div>
+    </div>
+    <div style="width:98%; background-image:url(/Images/lines/dash.gif)">
+    </div>
+    -->
+</html>
+
+  <html name="WebSite_DeFaultTopic">
+    <!--
+    <div>
+    <div style="text-align :left;overflow:hidden;float:left;margin-top:0px;padding-left:4px;width:30%;height:18px;"><a href="/Forums/default.aspx?boardid={$BoardID}">{$BoardName}</a></div>
+    <div style="text-align :left;overflow:hidden;float:right;margin-top:0px;width:70%;height:18px;"><a href="/Forums/ShowTopicInfo.aspx?TopicID={$TopicID}" target="_blank">{$TopicTitle}</a></div>
+    </div>
+    -->
+  </html>
+  
+  
+  <html name="Resource_DeFaultUserNotLoginInfo">
+    <!--
+<div style="text-align :left; margin-left:10px">
+  <div style="margin-right:20px;text-align :left;">
+    <div>请您登录</div>
+    <div>用户名称：
+      <input tyep="text" name="UserName" id="UserName" style="width:80px;" />         
+    </div>
+    <div>用户密码：
+
+     <input name="UserPassWord" type="password" id="UserPassWord"  style="width:80px;" onkeydown="if(event.keyCode==13){javascript:JavaScrptWebSitePost();}" /> 
+     </div>
+      
+<div style="margin-top:8px;margin-bottom:8px;text-align :center;">
+<input type="hidden" name="CookieDate" value="0">
+  <input type="hidden" name="actions" value="UserLogin">
+    <input type="hidden" name="UserOnLineStatic" value="UserOnLine">
+    <input name="buttonreg" type="button" onclick="window.location='/UserInfo/CreateUser.aspx';" value="注册" />
+    &nbsp;&nbsp;
+      <input name="button" type="button" onclick="JavaScrptWebSitePost();" value="登录" />
+    </div>
+  </div>
+</div>
+-->
+  </html>
+
+  <html name="Resource_DeFaultUserLoginInfo">
+    <!--
+<div>
+  <div style="text-align :left;float:left;margin-top:10px;width:30%;overflow:hidden">
+  <a href="/UserInfo/UserInfo.aspx?UserID={$UserID}" ><img src="{$UserFace}" width="60px"  border="0" /></a>
+  </div>
+  
+  <div style="text-align :left; width:70%;float:right;">欢迎您 <b>{$UserNickName}</b></div>
+
+  <div> (<a id="DosUserOnLineStatic">{$UserOnLineStatic}</a>)</div>
+   <div>信誉 <b>{$UserPrestige}</b> 在线：<b>{$UserOnlineTime}</b> 分钟 </div>
+  
+  
+</div>
+-->
+  </html>
+  
+  <html name="Resource_WebSiteBbsUserLoginHead">
+    <!--
+<div class="tabletop" style="margin-top:10px;"></div>
+<div class="mainbar" style="height:120px;text-align :left;">
+<div id="tdleft" style="height:120px; width:50%;">
+{$WebSiteBbsUserLoginHeadUserLoginInfo}
+</div>
+   
+  <div style="height:120px;float:left;width:49%;">
+    <div style="padding:10px;">
+      <div style="float:left;width:140px;height:20px;line-height:20px;">会员总数：<b>{$Forum_UserNumber}</b> 人</div>
+      <div style="float:left;height:20px;line-height:20px;">
+      最新会员：[ <a href="/UserInfo/UserInfo.aspx?UserID={$Forum_LastUserID}" ><b>{$Forum_LastUserNickName}</b></a> ]</div>
+      <br />
+      <hr />
+	  <div style="width:90%;">
+      <div style="float:left;width:140px;height:20px;line-height:20px;">今日发贴：<font class="redfont"><b>{$Forum_TodayNumber}</b></font> 篇</div>
+      <div style="float:left;height:20px;line-height:20px;"> 主题总数：<b>{$Forum_TopicNumber}</b> 篇</div>
+	  </div>
+	  <div style="width:90%;">
+      <div style="float:left;width:140px;height:20px;line-height:20px;">昨日发帖：<b>{$Forum_YesTerdayNumber}</b> 篇</div>
+      <div style="float:left;height:20px;line-height:20px;"> 帖子总数：<b>{$Forum_PostNumber}</b> 篇</div>
+	  </div>
+      <div style="float:left;width:96%;">最高日发帖：<b>{$Forum_MaxPostNumber}</b> 篇，发生时间：{$Forum_MaxPostDate}</div>
+    </div>
+  </div>
+</div>
+<div class="mainbar1" style="text-align :center;height:20px;line-height:20px;">
+  <div style="padding:3px 0px;height:20px;text-indent:20px;"> <a href="DeFault.aspx?type=1">查看新贴</a> <font face="Wingdings" color="666666">v</font> <a href="DeFault.aspx?type=2">热门话题</a> <font face="Wingdings" color="666666">v</font> <a href="DeFault.aspx?type=3">精华文章</a> <font face="Wingdings" color="666666">v</font> <a href="DeFault.aspx?type=4">推荐文章</a>  </div>
+</div>
+-->
+  </html>
+  <html name="Resource_WebSiteBbsUserLoginHeadUserLoginInfo">
+    <!--
+<div style="padding:10px; width:100%">
+  <div style="float:left;width:80px;height:100px;overflow :hidden;"><a href="../UserInfo/UserInfo.aspx?UserID={$UserID}" title="查看我的信息"><img src="{$UserFace}" alt="查看我的信息" height="60" style="margin-top:12px;margin-left:2px;border:0px" /></a></div>
+  <div style="float:left;">
+    <div>您的帐号 <b>{$UserName}</b> (<a id="DosUserOnLineStatic">{$UserOnLineStatic}</a>)</div>
+    <hr />
+    <div>信誉 <b>{$UserPrestige}</b> 登录 <b>{$UserLoginNumber}</b> 次 在线：<b>{$UserOnlineTime}</b> 分钟 </div>
+    <div>人民币：<b>{$UserTrueMoney} 元</b> 经验：<b>{$UserExp} 点</b> 积分：<b>{$UserPoint} </b> 金币：<b>{$UserMoney} 个</b> 点券：<b>{$UserTicket} 点</b></div>
+    <div>发表：<b>{$UserPostNumber} 篇</b> 主题：<b>{$UserTopicNumber} 篇</b> 回复：<b>{$UserReTopicNumber} 篇</b> 被删：<b>{$UserDelTopicNumber} 篇</b></div>
+  </div>
+</div>
+-->
+  </html>
+  <html name="Resource_WebSiteBbsUserLoginHeadUserLoginInfoNot">
+    <!--
+<div style="padding:10px; width:100%">
+  <div style="float:right;margin-right:20px;">
+    <div>欢迎访问 <b>{$WebSite_WebSiteName}</b> 您还没有［<a href="/UserInfo/CreateUser.aspx" class="cblue">注册</a>］或［<a href="/UserInfo/Login.aspx" class="cblue">登录</a>］</div>
+    <div>用户名称：
+      <input tyep="text" name="UserName" id="UserName" style="width:80px;" />         
+    </div>
+    <div>用户密码：
+
+     <input name="UserPassWord" type="password" id="UserPassWord"  style="width:80px;" onkeydown="if(event.keyCode==13){javascript:JavaScrptWebSitePost();}" /> 
+     
+      Cookie
+      <select name="CookieDate">
+        <option value="0">不保存</option>
+        <option value="86400" selected="selected">保存一天</option>
+        <option value="2592000">保存一月</option>
+        <option value="31536000">保存一年</option>
+      </select>
+
+  <input type="hidden" name="actions" value="UserLogin">
+    <input type="hidden" name="UserOnLineStatic" value="UserOnLine">
+      <input name="button" type="button" onclick="JavaScrptWebSitePost();" value="登录" />
+    </div>
+    <div style="margin-top:10px;"> </div>
+  </div>
+</div>
+-->
+  </html>
+
+
+  <html name="Resource_WebSiteBbsBoardHead">
+    <!--
+<div class="tabletop" style="margin-top:10px;"> 
+<div style="float:left;text-align : left; text-indent:5px; margin-top:4px;">
+<img  src="/images/plus.gif" border="0" /> <a href="DeFault.aspx?boardid={$BoardID}" title="进入本分类论坛">{$BoardName}</a></div>
+</div>
+-->
+  </html>
+  <html name="Resource_WebSiteBbsBoardBody">
+    <!--
+<div class="mainbar" style="height:60px;">
+{$WebSitePowerShowBoard}   
+  <div class="index_left_states">
+  {$BoardListStates}
+  </div>
+  <div style="text-align :left;"> 
+  {$BoardImages}  
+      <div><a href="DeFault.aspx?boardid={$BoardID}" title="进入本分类论坛">{$BoardName}</a></div>
+      <div style="overflow :hidden;height:16px;">
+      <font face="Arial"><img alt="" src="/images/Forum_readme.gif" align="middle" />{$BoardAbout}</font>
+      </div>
+      <div>{$SubForumsList}</div>
+      
+  </div>
+</div>
+<div class="mainbar2" style="height:25px;overflow :hidden;">
+  <div class="index_right" style="height:25px;"> <img src="/images/Forums/Forum_today.gif" alt="今日发贴数" style="margin-top:8px;" /><font color="red"> {$BoardTodayPostNumber} </font> <img src="/images/Forums/Forum_topic.gif" alt="主题贴数" /> {$BoardTopicNumber} <img src="/images/Forums/Forum_post.gif" alt="发贴总数" /> {$BoardPostNumber}</div>
+  <div class="index_left_states" style="height:25px;"></div>
+  <div style="text-align : left; text-indent:5px;">版主：{$BoardMasterList}</div>
+</div>
+-->
+  </html>
+  <html name="Resource_WebSiteBbsBoardImages">
+    <!--
+  <a href="DeFault.aspx?boardid={$BoardID}"><img src="{$BoardImages}" alt="" class="boardlogo" /></a>
+  -->
+  </html>
+
+  <html name="Resource_WebSiteUserInfo">
+    <!--
+<a href="/UserInfo/UserInfo.aspx?userid={$AddUserID}" >{$AddUserNickName}</a>
+-->
+  </html>
+
+  <html name="Resource_WebSiteBoardListStatesNotNews">
+    <!--
+<img alt="没有新的帖子" src="/images/Forums/Forum_nonews.gif" />
+-->
+  </html>
+  <html name="Resource_WebSiteBoardListStatesIsNews">
+    <!--
+<img alt="有新的帖子" src="/images/Forums/Forum_isnews.gif" />-->
+  </html>
+  <html name="Resource_WebSiteBoardListStatesLock">
+    <!--
+<img alt="被锁定的论坛" src="/images/Forums/Forum_lock.gif" />
+-->
+  </html>
+
+
+  <html name="Resource_WebSiteShowBoardInfo">
+    <!--
+  <div class="index_right" style="height:44px;line-height:normal;margin-top:4px;">
+    <div style="WIDTH: 236px; overflow:hidden;">主题：<a href="ShowTopicInfo.aspx?ToPicID={$BoardLastTopicID}" target="_blank">{$BoardLastTopicTitle}</a></div>
+    <div>发贴：<a href="/UserInfo/UserInfo.aspx?UserID={$BoardLastTopicUserID}">{$BoardLastTopicUserNickName}</a></div>
+    <div>日期：{$BoardLastTopicTime}</div>
+  </div>
+-->
+  </html>
+  
+  <html name="Resource_WebSitePowerShowBoard">
+    <!--
+    <div class="index_right" style="height:44px;line-height:normal;margin-top:4px;">
+  您所属的角色不能浏览该论坛
+   </div>
+-->
+  </html>
+
+  <html name="Resource_WebSiteErrShowBoard">
+    <!--
+    <div class="index_right" style="height:44px;line-height:normal;margin-top:4px;">
+  该论坛已经被关闭了！
+   </div>
+-->
+  </html>
+
+  <html name="Resource_WebSiteSubBbsBoardBody">
+    <!--
+<div style="float:left;"><a href="DeFault.aspx?boardid={$SubBoardID}" title="进入子类论坛">{$SubBoardName}</a></div>
+-->
+  </html>
+
+  <html name="Resource_WebSiteBbsCountInfo">
+    <!--
+<div class="tabletop" style="margin-top:10px;">&nbsp;&nbsp;-=&gt; 论坛基本情况</div>
+<div class="mainbar3" style="height:65px;border-bottom:0px; ">
+  <div style="padding:5px 10px 0px 10px;line-height:20px;height:60px;">
+    <div style="float:left;width:30%;text-align : left;"> <font class="bluefont">■</font> 当前在线：<b>{$Forum_AllOnline}</b> 人<br />
+        <font class="bluefont">■</font> 在线会员：<b>{$Forum_UserOnline}</b> 人<br />
+        <font class="bluefont">■</font> 在线访客：<b>{$Forum_GuestOnline}</b> 人 </div>
+    <div style="float:left;width:30%;text-align : left;"> <font class="bluefont">■</font> 建站时间：<b>{$Forum_StartDate}</b><br />
+        <font class="bluefont">■</font> 最高在线：<b>{$Forum_MaxOnline}</b> 人<br />
+        <font class="bluefont">■</font> 发生时间：<b>{$Forum_MaxOnlineDate}</b> </div>
+    <div style="float:left;width:39%;text-align : left;"> <font class="bluefont">■</font> 您的IP是：<b>{$UserIP}</b><br />
+        <font class="bluefont">■</font> 操作系统：<b>{$UserSystem}</b><br />
+        <font class="bluefont">■</font> 浏 览 器：<b>{$UserExplorer}</b> </div>
+  </div>
+</div>
+<div class="mainbar3">
+  <div class="mainbar0" style="padding:5px 10px 5px 10px;line-height:18px;text-align : left;display:none;" id="onlinetr"></div>
+</div>
+-->
+  </html>
+
+
+
+  <html name="Resource_WebSiteBoardNavigate">
+    <!--
+<div class="boardNavigate" style="text-align : left;height:25px;line-height:25px;margin-top:10px;">
+<div style="float:right;">{$WebSitePageListTopInfo}</div>
+  <div style="float:left;"><img src="/images/Forum_nav.gif" style="margin:8px 4px 8px;4px;" alt="" /></div>
+{$WebSiteBoardAllListNavigate}
+{$WebSiteBoardListNavigate}
+</div>
+-->
+  </html>
+
+
+  <html name="Resource_WebSiteBoardAddMenuHead">
+    <!--
+ <div class="menudiv"><a onMouseOver="DosJscriptShowmenu(event,'WebAddMenu{$WebSiteBoardAddMenuID}')"  href=/Forums/DeFault.aspx>
+ {$WebSiteSiteName}</a>→
+ </div>
+-->
+  </html>
+  <html name="Resource_WebSiteBoardAddMenu">
+    <!--
+ <div class="Dos_menu_popup" id="WebAddMenu{$WebSiteBoardAddMenuID}" onMouseOut="DosJscriptOnMouseOutMenu(this)">
+    <div class="menuitems">
+	{$WebSiteBoardAddMenuList}
+	</div>
+</div>
+	-->
+  </html>
+  <html name="Resource_WebSiteBoardAddMenuList">
+    <!--
+<a href="/Forums/DeFault.aspx?boardid={$BoardMenuListBoardID}" title="&nbsp;{$BoardMenuListBoardName}">&nbsp;{$BoardMenuListBoardName}</a><br />
+-->
+  </html>
+
+
+  <html name="Resource_WebSiteBoardOptionMenuList">
+    <!--	
+<option value={$BoardMenuListBoardID} {$BoardMenuListSelected} >&nbsp;{$BoardMenuListBoardName}</option>
+-->
+  </html>
+
+  <html name="Resource_WebSiteBoardListMenu">
+    <!--	
+ <div class="menudiv"><a href="/Forums/DeFault.aspx?boardid={$BoardMenuListBoardID}" title="{$BoardMenuListBoardName}">&nbsp;{$BoardMenuListBoardName}</a>→</div>
+ -->
+  </html>
+  <html name="Resource_WebSiteBoardAbout">
+    <!--	
+<div class="boardabout" style="text-align : left;">
+  <div style="text-align : left;width:100%; ">&gt;&gt; {$BoardAbout} </div>
+</div>
+-->
+  </html>
+
+  <html name="Resource_WebSiteBoardListPostMenu">
+    <!--
+<div class="main" style="margin-top:4px;margin-bottom:4px;height:28px;">
+<div class="PageBack" ><a  href="javascript:history.go(-1);">后 退</a></div>
+<div class="PageReload" ><a href="javascript:location.reload();">刷 新</a></div>
+<div class="posttopic" title="发表一个新帖子" ><a href="/Forums/Post.aspx?BoardID={$PostBoardID}">发 表</a></div>
+<div class="retopic" title="回复帖子" style="display:{$WebSiteRePostDisplay}" ><a href="/Forums/Post.aspx?actions=re&TopicID={$TopicID}">回复</a></div>
+
+{$WebSiteTopicViewNumber}
+</div>
+-->
+  </html>
+
+  <html name="Resource_WebSiteBoardErr">
+    <!--	
+<div class="mainbar1" style="text-align : left;margin-top:10px;">
+<div style="float:left;padding-top:4px; "> 
+  <img src="/images/status-err.gif" /> 
+  </div>
+  该论坛不存在，或者已经被关闭!
+</div>
+-->
+  </html>
+
+
+  <html name="Resource_WebSitePowerBoardErr">
+    <!--	
+<div class="mainbar1" style="text-align : left;margin-top:10px;">
+<div style="float:left;padding-top:4px; "> 
+  <img src="/images/status-err.gif" /> 
+  </div>
+    您所属的角色不能浏览该论坛!
+</div>
+-->
+  </html>
+
+
+  <html name="Resource_WebSiteTopicStatic1">
+    <!--
+<img align="absmiddle" src="/images/Forums/folder.gif" alt="开放的话题" /> 
+-->
+  </html>
+  <html name="Resource_WebSiteTopicStatic2">
+    <!--
+<img align="absmiddle" src="/images/Forums/hotfolder.gif" alt="回复超过10贴" /> 
+-->
+  </html>
+  <html name="Resource_WebSiteTopicStatic3">
+    <!--
+<img align="absmiddle" src="/images/Forums/lockfolder.gif" alt="锁定的话题" /> 
+-->
+  </html>
+  <html name="Resource_WebSiteTopicStatic4">
+    <!--
+<img align="absmiddle" src="/images/Forums/isbest.gif" alt="精华贴的话题" /> 
+-->
+  </html>
+  <html name="Resource_WebSiteTopicStatic5">
+    <!--
+<img align="absmiddle" src="/images/Forums/commend.gif" alt="推荐的话题" /> 
+-->
+  </html>
+  <html name="Resource_WebSiteTopicStatic6">
+    <!--
+<img align="absmiddle" src="/images/Forums/ztop.gif" alt="总固顶" />
+-->
+  </html>
+  <html name="Resource_WebSiteTopicStatic7">
+    <!--
+<img align="absmiddle" src="/images/Forums/istop.gif" alt="板块固顶" />
+-->
+  </html>
+
+  <html name="Resource_WebSiteTopicRePostStatic1">
+    <!--
+    <div style="float:left;margin-top:4px;margin-left:4px;"><img align="absmiddle" src="/images/plus.gif" alt="有回复的话题" /> </div>
+    -->
+  </html>
+  <html name="Resource_WebSiteTopicRePostStatic2">
+    <!--
+<div style="float:left;margin-top:4px;margin-left:4px;"><img align="absmiddle" src="/images/nofollow.gif" alt="暂无回复的话题" /> </div> 
+-->
+  </html>
+
+  
+  <html name="Resource_WebSiteBoardTopicListExampl">
+    <!--	
+<div class="tabletop" style="margin-top:10px;">&nbsp;&nbsp;-=&gt; 东网官方网站 图例
+</div>
+<div class="mainbar3" style="height:30px; ">
+<div style="padding:10px;line-height:20px; margin-left:130px;">
+<div style="width:12%;float:left;">
+<img align="absmiddle" src="/images/Forums/folder.gif" alt="开放的话题" /> 
+开放的话题
+
+</div>
+<div style="width:12%;float:left;">
+<img align="absmiddle" src="/images/Forums/hotfolder.gif" alt="回复超过10贴" /> 
+回复超过10贴
+
+</div>
+<div style="width:12%;float:left;">
+<img align="absmiddle" src="/images/Forums/lockfolder.gif" alt="锁定的话题" /> 
+锁定的话题
+
+</div>
+<div style="width:12%;float:left;">
+<img align="absmiddle" src="/images/Forums/isbest.gif" alt="精华贴的话题" /> 
+精华贴的话题
+
+</div>
+<div style="width:12%;float:left;">
+<img align="absmiddle" src="/images/Forums/commend.gif" alt="推荐的话题" /> 
+推荐的话题
+</div>
+<div style="float:left;">
+<img align="absmiddle" src="/images/Forums/ztop.gif" alt="总固顶" />
+<img align="absmiddle" src="/images/Forums/istop.gif" alt="板块固顶" />  (总、版)固顶话题
+</div>
+</div>
+</div>
+-->
+  </html>
+
+
+  
+  <html name="Resource_WebSiteTopicDiagramExample">
+    <!--
+<div  style="text-align : center;margin-top:10px;"> <img src="/images/Forums/Forum_nonews.gif" align="absmiddle" alt="没有新的帖子" /> 
+没有新的帖子	
+　　<img src="/images/Forums/Forum_isnews.gif" align="absmiddle" alt="有新的帖子" /> 
+有新的帖子		
+　　<img src="/images/Forums/Forum_lock.gif" align="absmiddle" alt="被锁定的论坛" /> 
+被锁定的论坛
+</div>
+-->
+  </html>
+
+  <html name="Resource_WebSiteTopicStaticCheckBox">
+    <!--
+<input name="WebSiteTopicStaticCheckBox" value="{$TopicID}" type="checkbox"  />
+-->
+  </html>
+
+  <html name="Resource_WebSiteArticleBoardList">
+    <!--
+<div style="float:left;">
+<b>
+<a href="/Forums/DeFault.aspx?boardid={$WebSiteArticleBoardID}" >{$WebSiteArticleBoardName}</a>
+</b>
+</div>
+-->
+  </html>
+  
+  <html name="Resource_WebSiteBoardTopicNavigate">
+    <!--
+<div class="mainbar1">
+<div  style="float:right;"><a href="DeFault.aspx?type=2&boardid={$BoardID}" title="查看本版热门文章"><font color="#FF0000">热门文章</font></a> | <a href="DeFault.aspx?type=3&boardid={$BoardID}" title="查看本版精华文章">精华文章</a> | <a href="DeFault.aspx?type=4&boardid={$BoardID}" title="查看本版推荐文章">推荐文章</a> |  <a href="DeFault.aspx?type=5&boardid={$BoardID}" title="查看本版我发表的文章">我的文章</a>  | <a href="DeFault.aspx?type=6&boardid={$BoardID}" title="查看本版我参与的文章">我的参与</a> | <a href="?ManagerIDs=1&{$WebSitePageSearchUrl}" title="管理文章">管理</a></div>
+<div style="float:left;">
+
+<img src="/Images/team.gif" />
+</div>
+
+<div style="float:left;text-indent:5px;">
+版主：{$BoardMasterList}
+</div>
+</div>
+-->
+  </html>
+
+
+  <html name="Resource_WebSiteBoardSubjectInfoe">
+    <!--
+
+<div class="mainbar3">
+<div style="float:left;text-indent:5px;">专题：</div>
+{$WebSiteBoardBoardSubjectInfo}
+</div>
+-->
+  </html>
+  <html name="Resource_WebSiteBoardSubjectInfoeBar">
+    <!--
+[{$BoardSubjectNumber}] [<a href="DeFault.aspx?boardid={$BoardSubjectBoardID}&topicmode={$BoardSubjectNumber}"> {$BoardSubjectName} </a>]&nbsp;&nbsp;
+-->
+  </html>
+
+  <html name="Resource_WebSiteBoardTopicHead">
+    <!--
+<div class="tabletop" style="margin-top:10px;text-align:center;">
+    <div class="list_r">
+        <div class="list1" style="width:80px;text-align:center; padding-top:4px;">作 者</div>
+        <div class="list1" style="width:50px;text-align:center; padding-top:4px;">回复</div>
+        <div class="list1" style="width:50px;text-align:center; padding-top:4px;">人气</div>
+        <div style="text-align:center; padding-top:4px;">
+        最后更新
+        </div>
+    </div>
+    <div class="list1" style="text-align:center; padding-top:4px;">
+    状态
+    </div class="list1" style="text-align:center; padding-top:4px;">
+    <div  style="text-align:center; padding-top:4px;">
+    主 题  (<img src="/Images/plus.gif" alt="有回复的文章" /> 有回复的文章)
+    </div>
+</div>
+-->
+  </html>
+  <html name="Resource_WebSiteBoardTopicListInfo">
+    <!--
+<div class="list">
+<div class="list_r1">
+<div class="list_a">
+<a href="/UserInfo/UserInfo.aspx?UserID={$UserID}">{$UserNickName}</a></div>
+<div class="list_c">{$TopicReNumber}</div>
+<div class="list_c">{$TopicViewNumber}</div><div class="list_t">
+{$TopicLastReTime}</div>
+<font color="#FF0000">|</font>
+<a href="/UserInfo/UserInfo.aspx?UserID={$ReUserID}" >{$ReUserNickName}</a>
+</div>
+<div style="float:right;"> </div>
+<div class="list_s">
+{$WebSiteTopicStatic}
+</div>
+{$WebSiteTopicRePostStatic}
+{$WebSiteArticleBoardList}
+<div style="margin-top:-2px;">
+ <a href="ShowTopicInfo.aspx?TopicID={$TopicID}" title="{$TopicTitle}&#xA;作者：{$UserNickName}&#xA;发表于：{$TopicPostTime}" target="_blank">
+{$TopicTitle}</a>
+ </div>
+</div>
+-->
+  </html>
+
+  <html name="Resource_WebSiteTopicListErr">
+    <!--	
+<div class="mainbar1" style="text-align : left;margin-top:10px;">
+<div style="float:left;padding-top:4px; "> 
+  <img src="/images/status-err.gif" /> 
+  </div>
+  抱歉,根据你输入的查询条件，没有找到相对应的信息!
+</div>
+-->
+  </html>
+
+
+  <html name="Resource_WebSiteTopicManager">
+    <!--
+ <div class="list"  style="padding-top:4px;">
+ <div style="float:left; padding-left::4px; ">
+  <input name="WebSiteChkAll" type="checkbox" id="WebSiteChkAll" onClick="WebSiteJavaScriptCheckAll('WebSiteTopicStaticCheckBox');" />
+  全选/取消  
+  <input type="radio" name="actiontype" value="1" onclick="WebSiteJavaScriptManage(this);" />
+精华操作
+<input type="radio" name="actiontype" value="2" checked="checked"  onclick="WebSiteJavaScriptManage(this);" />
+推荐操作
+  <input type="radio" name="actiontype" value="3"  onclick="WebSiteJavaScriptManage(this);" />
+删除操作
+  <input type="radio" name="actiontype" value="4"  onclick="WebSiteJavaScriptManage(this);" />
+锁定操作
+<input type="radio" name="actiontype" value="5"  onclick="WebSiteJavaScriptManage(this);" />
+至顶操作
+<input type="radio" name="actiontype" value="6"  onclick="WebSiteJavaScriptManage(this);" />
+总至顶操作
+<input type="radio" name="actiontype" value="7"  onclick="WebSiteJavaScriptManage(this);" />
+移动操作
+  </div>
+   <div style="float:left; display:none;" id="WebSiteMoveBar">
+  <select name="MoveBoardID" id="MoveBoardID">
+    <option value="0">::移动帖子请选择::</option>
+	{$WebSiteBoardOptionApplication}
+	</select>
+	</div>
+	 <div style="float:left">
+   
+	<input type="hidden" name="actions" value="ManageTopic">
+  <input name="ActType" type="button" id="ActType" onClick="JavaScrptWebSitePost();" value="确定操作" />
+  </div>
+</div>
+-->
+  </html>
+
+  <html name="Resource_WebSiteBoardTopicPageListInfo">
+    <!--
+<div class="mainbar1" style="margin-top:10px;">
+  
+  <div style="FLOAT: right">
+    <div >  
+	  <div style=" float:right; margin-top:2px;">
+	  <select name="BoardJumpList" id="BoardJumpList" onchange="if(this.options[this.selectedIndex].value!='')location='DeFault.aspx?boardid='+this.options[this.selectedIndex].value;">
+	   <option value="0">论坛跳转到…</option>
+		{$WebSiteBoardOptionApplication}
+	  </select>	  
+	  </div><DIV class=list_img 
+style="MARGIN-TOP: 0px; MARGIN-LEFT: 2px; COLOR: #ff0000; float:right;margin-right:20px;">
+  {$WebSitePageListBottomInfo}
+  </div>
+</div>
+  </div>
+</div>
+-->
+  </html>
+
+  <html name="Resource_WebSiteSlectList">
+    <!-- 
+<select name="SelectList{$SelectList}">
+{$WebSiteSlectList}
+</select>
+-->
+  </html>
+  <html name="Resource_WebSiteOptionList">
+    <!-- 
+  <option value="{$OptionVolue}" {$OptionSelected}>{$OptionTitle}</option>
+  -->
+  </html>
+
+
+  <html name="Resource_WebSitePageListBottomInfo">
+    <!--
+<div>
+<div class="list_img" style="text-align:center; " title="本页主题">
+{$WebSitePageNumber}/{$WebSiteCountNumber}条</div>
+<div class="list_img" style="text-align:center; ">&nbsp;{$WebSiteCurrentPage}/{$WebSiteCountPage}页&nbsp;</div>
+<div class="list_img" style="text-align:left; margin-top:0px; margin-left:0px; color:#FF0000 ">
+<a href="?{$PageListFirstGoUrl}"><img src="/images/First.gif" border="0" alt="首页" /></a>
+</div>
+<div class="list_img" style="text-align:left; margin-top:0px; margin-left:0px; color:#FF0000 ">
+  <a href="?{$PageListPrevGoUrl}" ><img src="/images/Previous.gif" border="0" alt="上{$PageGoNextPage}页" /></a>
+</div>
+<div class="list_img" style="text-align:left; margin-top:0px; margin-left:0px; color:#FF0000 ">
+ {$WebSitePageListNumberGoUrl}
+</div>
+<div class="list_img" style="text-align:left; margin-top:0px; margin-left:0px; color:#FF0000 ">
+<a href="?{$PageListNextGoUrl}" target=""><img src="/images/Next.gif" border="0" alt="下{$PageGoNextPage}页" /><a>
+</div>
+<div class="list_img" style="text-align:left; margin-top:0px; margin-left:0px; color:#FF0000 ">
+<a href="?{$PageListLastGoUrl}" ><img src="/images/Last.gif" border="0" alt="尾页" /><a>
+</div>
+</div>
+<div class="list_img" style="text-align:left; margin-top:2px; margin-left:2px; color:#FF0000;display:{$DisplayPageInput} ">
+  <input type="text" name="page{$PageInputName}" size="1" value="1" class="PageInput"  onkeydown="if(event.keyCode==13){javascript:window.location='?page='+document.all.page{$PageInputName}.value+'&{$WebSitePageSearchUrl}';}"/>
+  <input type="button" value="GO" name="GoSubmit" class="PageInput" onclick="window.location='?page='+document.all.page{$PageInputName}.value+'&{$WebSitePageSearchUrl}'" />
+</div>
+-->
+  </html>
+
+  <html name="Resource_WebSitePageListNumberGoUrl">
+    <!--
+<a href="?{$WebSitePageSearchUrl}" >{$WebSitePageListNumber}</a>
+-->
+  </html>
+
+  <html name="Resource_WebSiteTopicViewNumber">
+    <!--
+<div style="float:right; margin-top:4px;" >你是本贴的第<b> {0} </b>次阅读者</div>
+-->
+  </html>
+
+
+
+  <html name="Resource_WebSiteShowTopicInfoMenuTitle">
+    <!--
+<div class="tabletop" style="margin-top:10px;">
+<div style="text-align : right;float:right;">
+<img src="/images/Forums/Boardmanage.gif" alt="" style="margin-top:2px;cursor: default; margin-right:10px;"  onMouseOver="DosJscriptShowmenu(event,'WebSiteShowPageTitle')"  />
+</div>
+<div style="padding-left:4px;height:22px;float:left;margin-top:2px;"><div style="float:left;">阅读主题：</div>{$TopicTitle}</div>
+</div>
+<div class="Dos_menu_popup" id="WebSiteShowPageTitle"  onMouseOut="DosJscriptOnMouseOutMenu(this)">
+<div style="height:20px;margin-top:2px;">
+<a href="javascript:WebSiteJavaScriptSetPage('WebSiteShowPage','WebSiteUserPage','1');JavascriptPostXml('actions=ChangeShowPage&ShowPageType=1',false);">简单版面</a>
+</div>
+<div style="height:20px;">
+<a href="javascript:WebSiteJavaScriptSetPage('WebSiteShowPage','WebSiteUserPage','2');JavascriptPostXml('actions=ChangeShowPage&ShowPageType=0',false);">一般版面</a>
+</div>
+
+</div>
+-->
+  </html>
+
+  <html name="Resource_WebSiteShowTopicImages">
+    <!--
+  <div  style="float:left;"><img src={$TopicImages}  width="350" border="0" align="absmiddle" onclick="window.open('{$TopicImages}');" style="cursor:hand;"></img></div>
+    
+    -->
+  </html>
+  <html name="Resource_WebSiteShowTopicInfoBody">
+    <!--
+<div class="postlary{$BoardLaberNum}">
+<div class="postuserinfo" id="WebSiteUserPage">
+{$WebSiteShowTopicInfoUserInfo}
+</div>
+<div class="postie" id="WebSiteShowPage" >
+{$WebSiteTopicPostUserInfo}
+<hr />
+<div style="height:22px;line-height:22px;">
+<div style="float:left;">
+<img src="{$TopicInfoFace}" alt="发贴心情" /></div><b>
+{$TopicTitle}</b> &nbsp;&nbsp;{$TopicInfoPostTime}</div>
+<div style="height:200px;width:97%;padding-right:0px; overflow-x: hidden;font-size:9pt;line-height:normal;text-indent:24px;margin-top:10px;word-wrap : break-word ;word-break : break-all ;" onload="this.style.overflowX='auto';" id="TopicInfo{$TopicInfoID}">
+
+{$TopicInfoHtml}
+</div>
+
+<div style="text-align : right;">
+<br />{$TopicInfoEditHistory}
+</div>
+
+<div style="float:right;">
+<img src="/images/Forums/sigline.gif" /><br />{$UserSign}</div>
+</div>
+</div>
+-->
+  </html>
+
+
+  <html name="Resource_WebSiteShowTopicInfoUserInfo">
+    <!--
+<div style="padding: 10px 0px 0px 5px;line-height:30px;height:30px;">
+<div style="float:left;width :100px;filter:glow(color='#9898BA',strength='2');"><b><font color="#FF0000">{$UserNickName}</font></b></div>
+<div style="float:left;text-indent:0px;margin:0px;">
+{$UserOnLineStatic}
+</div>
+</div>
+<div><img src="{$UserFace}" alt="" width="32" height="32" /></div>
+<div><img style="margin:5px 0px 5px 0px;" src="{$UserLevelPic}" /></div>
+<div>用户名称：{$UserName}</div>
+<div>用户等级：{$UserClass}</div>
+<div>用户信誉：{$UserPrestige}</div>
+<div>在线时间：{$UserOnlineTime} 分钟</div>
+<div>用户积分：{$UserPoint}</div>
+<div>用户经验：{$UserExp}</div>
+<div>用户魅力：{$UserCP}</div>
+<div>虚拟货币：{$UserMoney}</div>
+<div>发表文章：{$UserTopicNumber}</div>
+<div>回复文章：{$UserReTopicNumber}</div>
+-->
+  </html>
+
+  <html name="Resource_WebSiteShowTopicInfoGuestInfo">
+    <!--
+<div style="padding: 10px 0px 0px 5px;line-height:30px;height:30px;">
+<div style="float:left;width :120px;filter:glow(color='#9898BA',strength='2');"><b><font color="#FF0000">{$UserNickName}</font></b></div>
+</div>
+-->
+  </html>
+  <html name="Resource_WebSiteShowTopicInfoUserInfoMenu">
+    <!--
+<div>
+<div style="float:right;">
+<img src="/images/TopicFloor.gif" border="0" align="middle" />{$ArTicleFloor}</div>
+<a href="{$UserSpace}" title="访问{$UserNickName}的个人空间" target="_blank"><img src="/images/Forums/UserSpaceIcon.gif" border="0" align="middle" /></a>
+<a href="{$UserBlogs}" title="访问{$UserNickName}的个人博客" target="_blank"><img src="/images/Forums/UserBlogsIcon.gif" border="0" align="middle" /></a>
+<a href="{$UserPhotos}" title="访问{$UserNickName}的个人相册" target="_blank"><img src="/images/Forums/PhotosIcon.gif" border="0" align="middle" /></a>
+<a href="/UserInfo/UserInfo.aspx?UserID={$UserID}" ><img src="/images/Forums/UserProfileIcon.gif" border="0" alt="查看{$UserNickName}的个人资料" align="middle" /></a>
+<a href="/Forums/DeFault.aspx?type=7&KeyWord={$UserNickName}&s1=1" ><img src="/images/Forums/FindIcon.gif" border="0" alt="搜索{$UserNickName}的所有贴子" align="middle" /></a>
+</div>
+-->
+  </html>
+
+  <html name="Resource_WebSiteShowTopicInfoGuestMenu">
+    <!--
+<div style="width:100%">
+<div style="float:right;">
+<img src="/images/TopicFloor.gif" border="0" align="middle" />{$ArTicleFloor}</div>
+</div>
+-->
+  </html>
+  <html name="Resource_WebSiteShowTopicBottom">
+    <!--
+<div class="postbottom" >
+<div class="postuserinfo" style="height:28px;"><div style="float:left;">
+<img border="0" src="/images/TopicIPIocn.gif" style="margin:4px;" />
+{$TopicInfoUserIP}
+</div></div>
+<div class="postie" style="height:28px;padding:0px;text-indent:10px;">
+<div style="float:right;margin-right:5px;">
+{$WebSiteShowTopicBottomManagerTitle}
+<img src="/images/p_up.gif
+" alt="至顶部" style="margin:4px;border:0px; cursor:hand;" onClick="document.body.scrollTop=0;" />
+</div><div></div></div>
+</div>
+-->
+  </html>
+  <html name="Resource_WebSiteShowTopicBottomManagerTitleRePost">
+    <!--
+<a href="Post.aspx?actions=re&TopicID={$TopicID}"><img src="/images/Forums/reply_a.gif" border="0" alt="回复这个贴子" style="margin:4px;border:0px;" /></a>
+-->
+  </html>
+  <html name="Resource_WebSiteShowTopicBottomManagerTitleEditPost">
+    <!--
+<a href="Post.aspx?actions=edit&TopicInfoID={$TopicInfoID}"><img src="/images/Forums/EDIT.gif" border="0" alt="编辑这个贴子" style="margin:4px;border:0px;" /></a>
+-->
+  </html>
+  <html name="Resource_WebSiteShowTopicBottomManagerTitleDelPost">
+    <!--
+<a href="javascript:WebSiteDeleteTopicInfo('{$deleteTopicInfoID}','{$deleteFalseTopic}')"><img src="/images/Forums/a_delete.gif" border="0" alt="删除这个贴子" style="margin:4px;border:0px;" /></a>
+-->
+  </html>
+
+
+
+  <html name="Resource_WebSiteEditBody">
+    <!--
+<div class="tabletop" style="margin-top:10px;">
+  <div style="height:24px;float:left;text-indent:10px;">{$WebSitePostInfoTitle}</div>
+</div>
+<div class="list" id="WebSiteUserNameDiv" >
+  <div class="list_a" style="width:200px; text-align:center; ">用户名称 ： </div>
+  <div class="list_img" style="text-align:left; margin-top:3px; margin-left:10px; ">
+    <input type="text" name="UserName" value="" style="width:150px;" >
+  </div>
+  <div class="list_img" style="text-align:left; margin-top:1px; margin-left:10px; color:#FF0000 "> *<a href="/UserInfo/CreateUser.aspx" target="_blank">你没有注册吗？</a>
+</div>
+
+<div class="list_img" style="margin-top:1px; margin-left:10px; color:#0033ff "> 
+  <input name="GuestPost" type="checkbox" value="1" >
+  *匿名发布文章，不需要密码
+</div>
+
+</div><div class="list" id="WebSiteUserPassWordDiv">
+  <div class="list_a" style="width:200px;  text-align:center; ">用户密码： </div>
+  <div class="list_img" style="text-align:left; margin-top:3px; margin-left:10px; ">
+    <input type="password" name="UserPassWord" value="" style="width:150px;" >
+</div>
+  <div class="list_img" style="text-align:left; margin-top:1px; margin-left:10px;  color:#FF0000 "> *<a href="/UserInfo/ForGotPassword.aspx" target="_blank">忘记密码了吗？</a>
+</div>
+   </div>
+   
+	<input type="hidden" name="TopicInfoID" value="">
+	<input type="hidden" name="actions" value="ReTopic">
+	
+	
+<div class="mainbar2" style="text-align:left; height:430px; background-color:#fff;">
+  <div class="list_a"  style="width:200px; text-align:center; height:430px;">内容
+<div class="postuserinfo"><div style="height:30px;line-height:30px;">发表表情</div>
+<div style="height:190px;border:1px inset;background-color: #fff;padding:4px;text-indent:0px;overflow:auto;overflow-y:scroll;">
+{$TopicExpression}
+</div>
+</div>
+</div>
+<div style="text-align:center; margin-top:1px; margin-left:0px; background:#FFFFFF ;">
+
+<div style="width:98%;height:400px;">
+<SCRIPT language=javascript src="/DoNetEditor/default/DoNetEditor.js"></SCRIPT>
+
+<script>
+function window.onload()
+		{
+			LoadEditor('/DoNetEditor/default/','PostBodyHtml');
+      }
+</script>
+<TEXTAREA name="PostBodyHtml" id="PostBodyHtml" style="WIDTH: 100%; height:100%;behavior:url(#default#savehistory);"></TEXTAREA>
+</div>
+</div>
+</div>
+
+
+<div class="mainbar1" style="text-align:center; height:30px;margin-top:10px; ">
+     <input type="button" value="Ok!发表文章" name="Submit" style="margin:3px;" onClick="JavaScrptWebSitePost()" />
+<input  style="margin:3px;" type="reset" name="Clear" value="清空内容！" onClick="JavaScrptWebSitePostClearReset()" />
+</div>
+-->
+
+  </html>
+
+
+  <html name="Resource_TopicExpression">
+    <!--
+<input type="radio" value="/images/Forums/topicface/face1.gif" name="TopicInfoFace" checked="checked" />
+<img src="/images/Forums/topicface/face1.gif" alt="" />
+<input type="radio" value="/images/Forums/topicface/face2.gif" name="TopicInfoFace" />
+<img src="/images/Forums/topicface/face2.gif" alt="" />
+<input type="radio" value="/images/Forums/topicface/face3.gif" name="TopicInfoFace"  />
+<img src="/images/Forums/topicface/face3.gif" alt="" />
+<input type="radio" value="
+/images/Forums/topicface/face4.gif" name="TopicInfoFace"  />
+<img src="/images/Forums/topicface/face4.gif" alt="" />
+<input type="radio" value="/images/Forums/topicface/face5.gif" name="TopicInfoFace"  />
+<img src="/images/Forums/topicface/face5.gif" alt="" />
+<input type="radio" value="/images/Forums/topicface/face6.gif" name="TopicInfoFace"  />
+<img src="/images/Forums/topicface/face6.gif" alt="" />
+<input type="radio" value="/images/Forums/topicface/face7.gif" name="TopicInfoFace"  />
+<img src="/images/Forums/topicface/face7.gif" alt="" />
+<input type="radio" value="/images/Forums/topicface/face8.gif" name="TopicInfoFace"  />
+<img src="/images/Forums/topicface/face8.gif" alt="" />
+<input type="radio" value="/images/Forums/topicface/face9.gif" name="TopicInfoFace" />
+<img src="/images/Forums/topicface/face9.gif" alt="" />
+<input type="radio" value="/images/Forums/topicface/face10.gif" name="TopicInfoFace" />
+<img src="/images/Forums/topicface/face10.gif" alt="" />
+<input type="radio" value="/images/Forums/topicface/face11.gif" name="TopicInfoFace"  />
+<img src="/images/Forums/topicface/face11.gif" alt="" />
+<input type="radio" value="/images/Forums/topicface/face12.gif" name="TopicInfoFace"  />
+<img src="/images/Forums/topicface/face12.gif" alt="" />
+<input type="radio" value="/images/Forums/topicface/face13.gif" name="TopicInfoFace"  />
+<img src="/images/Forums/topicface/face13.gif" alt="" />
+<input type="radio" value="/images/Forums/topicface/face14.gif" name="TopicInfoFace"  />
+<img src="/images/Forums/topicface/face14.gif" alt="" />
+<input type="radio" value="/images/Forums/topicface/face15.gif" name="TopicInfoFace"  />
+<img src="/images/Forums/topicface/face15.gif" alt="" />
+<input type="radio" value="/images/Forums/topicface/face16.gif" name="TopicInfoFace"  />
+<img src="/images/Forums/topicface/face16.gif" alt="" />
+<input type="radio" value="/images/Forums/topicface/face17.gif" name="TopicInfoFace"  />
+<img src="/images/Forums/topicface/face17.gif" alt="" />
+<input type="radio" value="/images/Forums/topicface/face18.gif" name="TopicInfoFace"  />
+<img src="/images/Forums/topicface/face18.gif" alt="" />
+-->
+  </html>
+
+
+
+  <html name="Resource_PostBody">
+    <!--
+ <div class="tabletop" style="margin-top:10px;">
+  <div style="height:24px;float:left;text-indent:10px;">{$PostInfoTitle}</div>
+</div>
+<div class="list" >
+  <div class="list_a" style="width:200px; text-align:center; ">用户名 ： </div>
+  <div class="list_img" style="text-align:left; margin-top:3px; margin-left:10px; ">
+   <input type="text" name="UserName" value=""  style="width:150px;">
+    <input type="hidden" name="TopicInfoID" value="">
+	<input type="hidden" name="actions" value="CreateTopic">
+  </div>
+  <div class="list_img" style="text-align:left; margin-top:1px; margin-left:10px; color:#FF0000 "> *<a href="../UserInfo/CreateUser.aspx" target="_blank">你没有注册吗？</a>
+</div>
+
+
+<div class="list_img" style="margin-top:1px; margin-left:10px; color:#0033ff "> 
+  <input type="checkbox" name="GuestPost" value="1" >
+  *匿名发布文章，不需要密码
+</div>
+
+</div><div class="list">
+  <div class="list_a" style="width:200px;  text-align:center; ">用户密码： </div>
+  <div class="list_img" style="text-align:left; margin-top:3px; margin-left:10px; ">
+    <input type="password" name="UserPassWord" value="********" id="UserPassWord"  style="width:150px;">
+</div>
+  <div class="list_img" style="text-align:left; margin-top:1px; margin-left:10px;  color:#FF0000 "> *<a href="../UserInfo/ForgottenPassword.aspx" target="_blank">忘记密码了吗？</a>
+</div>
+   </div>
+   
+<div class="list">
+  <div class="list_a" style="width:200px; text-align:center;  ">主题标题：</div>
+  <div class="list_img" style=" text-align:left; margin-top:3px; margin-left:10px; ">
+    <input name="TopicInfoTitle" type="text" size="50" value="">
+</div>
+
+
+<div class="list_img" style=" text-align:left; margin-top:3px; margin-left:10px; display:none; ">
+    <select name="TopicSpecialTitle">
+    <option value="" selected>标题特效</option>
+    <option value="1">红框醒目</option>
+    <option value="2">蓝框醒目</option>
+    <option value="3">绿框醒目</option>
+    <option value="4">紫框醒目</option>
+    <option value=5>红框霓虹</option>
+    <option value=6>蓝框霓虹</option>
+    <option value=7>绿框霓虹</option>
+    <option value=8>紫框霓虹</option>
+    </select>
+</div>
+
+</div>
+
+
+<div class="list" id="WebSiteTopicType">
+  <div class="list_a" style="width:200px; text-align:center;  ">主题类别：</div>
+  <div class="list_img" style=" text-align:left; margin-top:3px; margin-left:20px; ">
+    <select onChange="WebSite_SetMyArray()" name="TopicParentID" id="TopicParentID" >
+      <option value="0" selected>文章所属于论坛</option>
+    </select>
+    <select name="TopicSubjectID" id="TopicSubjectID">
+      <option value="0" selected>文章所属专题</option>
+    </select>
+  </div>
+  
+</div>
+
+
+   
+ <div class="list" id="WebSiteTopicImages">
+  <div class="list_a"  style="width:200px;  text-align:center; ">相关图片： </div>
+  <div class="list_img" style="text-align:left; margin-top:1px; margin-left:20px; ">   
+  
+  
+  <div id="InputFileUrlDiv" style="display:;">
+  <input name="TopicImages" type="text" id="TipicImages" size="50">
+  <input type="checkbox" name="CheckBoxUploadFile" onclick="JsCheckUpLoadFile('0','CheckBoxUploadFile','CheckBoxUserFile','InputFileUrlDiv','UserUpLoadFileDiv');" />
+  上传本地图片
+  </div>
+  
+  <div style="display:none;" id="UserUpLoadFileDiv">
+  <div  style="float:left;">
+  <IFRAME 
+style="LEFT: 8.54em; WIDTH: 21.5em; TOP: 1.06em; HEIGHT: 2.12em" 
+src="/UserUploadFile.aspx" frameBorder=0 scrolling=no id="UploadFileIframe" name="UploadFileIframe"></IFRAME>
+</div>
+<div  style="float:left; margin-top:2px; margin-left:10px;">
+<input type="button" name="SubmitUploadFile" value="确定上传"  onclick="DosJavaScriptUpLoadFile('UploadFileIframe','TopicImages','','CheckBoxUploadFile','CheckBoxUserFile','InputFileUrlDiv','UserUpLoadFileDiv');" />
+<input type="checkbox" name="CheckBoxUserFile" onclick="JsCheckUpLoadFile('1','CheckBoxUploadFile','CheckBoxUserFile','InputFileUrlDiv','UserUpLoadFileDiv');" />
+  上传本地图片
+</div>
+</div>
+
+
+  </div>  
+</div>
+
+
+
+<div class="mainbar2" style="text-align:left; height:430px; background-color:#fff;">
+  <div class="list_a"  style="width:200px; text-align:center; height:430px;">内容
+<div class="postuserinfo"><div style="height:30px;line-height:30px;">发表表情</div>
+<div style="height:190px;border:1px inset;background-color: #fff;padding:4px;text-indent:0px;overflow:auto;overflow-y:scroll;">
+
+{$TopicExpression}
+</div>
+</div>
+</div>
+<div style="text-align:center; margin-top:1px; margin-left:0px; background:#FFFFFF ;">
+
+<div style="width:98%;height:400px;">
+<SCRIPT language=javascript src="/DoNetEditor/default/DoNetEditor.js"></SCRIPT>
+
+<script>
+function window.onload()
+		{
+			LoadEditor('/DoNetEditor/default/','PostBodyHtml');
+      }
+</script>
+<TEXTAREA name="PostBodyHtml" id="PostBodyHtml" style="WIDTH: 100%;border-left:0px;border-top:0px; height:100%;behavior:url(#default#savehistory);" ></TEXTAREA>
+</div>
+</div>
+</div>
+
+
+<div class="list" style="height:65px;  ">
+  <div class="list_a"  style="width:200px;  text-align:center; height:65px;">心情图片： </div>
+  <div class="list_img" style="text-align:left; margin-top:0px; margin-left:10px; height:65px; " id="emot">
+  </div> 
+    <script>
+   var Forum_Emot='/images/Forums/emot/';
+  for (var i=1;i<=124;i++)
+   {
+   	Forum_Emot+="<><><>em"+i+".gif"
+   }
+</script>
+<script language=javascript src=/JScript/WebSitePostEmotJavaScript.js></script>
+
+</div>
+
+<div class="list">
+  <div class="list_a"  style="width:200px;  text-align:center; ">浏览、回复： </div>
+  <div class="list_img" style="text-align:left; margin-top:3px; margin-left:10px; "> 需要支付
+      <input name="PostBuyMoney" type="text" value="0" size="2" />
+    个金币才能浏览
+    <input type="checkbox" name="TopicInfoReply" value="1"  />
+        
+        回复才能浏览  
+    </div><div style="float:right;">
+    <input name="TopicInfoViewRole" type="hidden" value="" size="2" />
+    <input name="TopicInfoRePostRole" type="hidden" value="" size="2" />
+    <input name="TopicInfoViewUserGroup" type="hidden" value="" size="2" />
+    <input name="TopicInfoRePostUserGroup" type="hidden" value="" size="2" />
+    <a href="javascript:WebSiteShowViewPower('0','TopicInfoViewRole');">浏览角色</a> 
+    <a href="javascript:WebSiteShowViewPower('0','TopicInfoRePostRole');">回复角色</a> 
+    <a href="javascript:WebSiteShowViewPower('1','TopicInfoViewUserGroup');">浏览俱乐部</a>  
+    <a href="javascript:WebSiteShowViewPower('1','TopicInfoRePostUserGroup');">回复俱乐部</a> 
+    
+   <script language = "javaScript" src = "/JScript/WebSiteJScriptSeletGroup.js" type="text/javascript"></script>
+        </div>
+</div>
+<div class="list">
+  <div class="list_a"  style="width:200px;  text-align:center; ">高级设置： </div>
+  <div class="list_img" style="text-align:left; margin-top:3px; margin-left:10px; ">
+    签名：<input name="SignFalse" type="radio" value="1" >不显示<input name="SignFalse" type="radio" value="0" checked>显示  
+{$Resource_WebSiteReTopicEmail}  
+<input name="TopicFalse" type="checkbox" value="1" >帖子锁定 
+{$WebSiteTopicInfoStatic}  
+  </div>  
+</div>
+   
+<div class="mainbar1" style="text-align:center; margin-top:10px;height:30px; ">
+     <input type="button" value="Ok!发表文章" name="Submit" style="margin:3px;" onClick="JavaScrptWebSitePost()" />
+<input  style="margin:3px;" type="reset" name="Clear" value="清空内容！" onClick="JavaScrptWebSitePostClearReset()" />
+</div>
+
+
+-->
+  </html>
+  <html name="Resource_WebSiteReTopicEmail">
+    <!-- 
+  回帖通知：<input name="RePostEmail" type="radio" value="0" checked>不通知 <input name="RePostEmail" type="radio" value="1" >邮件通知 
+<input name="RePostEmail" type="radio" value="2" >
+  短信通知
+  -->
+</html>
+  <html name="Resource_WebSiteTopicInfoStatic">
+    <!-- 
+<input name="TotalAtTop" type="checkbox" value="1" >固顶  
+<input name="AllTotalAtTop" type="checkbox" value="2" >总固顶  
+<input name="TopicBest" type="checkbox" value="1" >精华  
+<input name="TopicRecommend" type="checkbox" value="1" >推荐
+-->
+  </html>
+  <html name="Resource_WebSitePostBuyMoney">
+    <!--
+以下内容需要支付<strong>{$PostBuyMoney}</strong>金钱才可以浏览。<font color="#FF0000" style="cursor:hand" onclick="javascript:ShowPostBuyMoney('actions=ShowPostBuyMoney&TopicInfoID={$TopicInfoID}')">我要浏览</font>
+-->
+  </html>
+
+
+  <html name="Resource_WebSiteBoardTypeErr">
+    <!--	
+<div class="mainbar1" style="text-align : left;margin-top:10px;">
+<div style="float:left;padding-top:4px; "> 
+  <img src="/images/Forums/status-err.gif" /> 
+  </div>
+  出错了,该板块不允许发表文章！
+</div>
+-->
+  </html>
+
+  <html name="Resource_WebSiteBoardFalseView">
+    <!--	
+<div class="mainbar1" style="text-align : left;margin-top:10px;">
+<div style="float:left;padding-top:4px; "> 
+  <img src="/images/status-err.gif" /> 
+  </div>
+  出错了,你所属的角色没有权限浏览该板块的主题！
+</div>
+-->
+  </html>
+
+
+  <html name="Resource_WebSiteBoardFalseRePost">
+    <!--	
+<div class="mainbar1" style="text-align : left;margin-top:10px;">
+<div style="float:left;padding-top:4px; "> 
+  <img src="/images/status-err.gif" /> 
+  </div>
+  出错了,你所属的角色没有权限回复该板块的主题！
+</div>
+-->
+  </html>
+  
+  <html name="Resource_WebSiteTopicInfoListErr">
+    <!--	
+<div class="mainbar1" style="text-align : left;margin-top:10px;">
+<div style="float:left;padding-top:4px; "> 
+  <img src="/images/status-err.gif" /> 
+  </div>
+  出错了,没有找到相关的帖子！
+</div>
+-->
+  </html>
+  <html name="Resource_WebSiteBoardFalseEdit">
+    <!--	
+<div class="mainbar1" style="text-align : left;margin-top:10px;">
+<div style="float:left;padding-top:4px; "> 
+  <img src="/images/status-err.gif" /> 
+  </div>
+  出错了,你所属的角色没有权限编辑该信息！
+</div>
+-->
+  </html>
+  <html name="Resource_WebSiteTopicFalseErr">
+    <!--	
+<div class="mainbar1" style="text-align : left;margin-top:10px;">
+<div style="float:left;padding-top:4px; "> 
+  <img src="/images/status-err.gif" /> 
+  </div>
+  出错了,该帖子已经被管理员禁闭了！
+</div>
+-->
+  </html>
+
+  <html name="Resource_WebSiteUserInfoFalseErr">
+    <!--	
+<div class="mainbar1" style="text-align : left;margin-top:10px;">
+<div style="float:left;padding-top:4px; "> 
+  <img src="/images/status-err.gif" /> 
+  </div>
+  出错了,该用户已经被管理员禁闭了！
+</div>
+-->
+  </html>
+
+  <html name="Resource_WebSiteUserListFalseErr">
+    <!--	
+<div class="mainbar1" style="text-align : left;margin-top:10px;">
+<div style="float:left;padding-top:4px; "> 
+  <img src="/images/status-err.gif" /> 
+  </div>
+  系统提示,你没有权限查看用户列表！
+</div>
+-->
+  </html>
+
+  <html name="Resource_WebSiteUserLoginErr">
+    <!--	
+<div class="mainbar1" style="text-align : left;margin-top:10px;">
+<div style="float:left;padding-top:4px; "> 
+  <img src="/images/status-err.gif" /> 
+  </div>
+  系统提示,请登录后再来吧！
+</div>
+-->
+  </html>
+
+  <html name="Resource_WebSiteInfoNotExistErr">
+    <!--	
+<div class="mainbar1" style="text-align : left;margin-top:10px;">
+<div style="float:left;padding-top:4px; "> 
+  <img src="/images/status-err.gif" /> 
+  </div>
+  系统提示,你所查看的信息不存在！
+</div>
+-->
+  </html>
+
+  
+  <html name="Resource_WebSiteUserLoginBody">
+    <!--
+<div class="tabletop" style="margin-top:10px;">&nbsp;&nbsp;-=&gt; 用户登录</div>
+
+<div class="list" >
+    <div class="list_a" style="width:250px;text-align:left;padding-left:4px; ">  
+    用户名称
+    </div>
+    <div class="list_img" style="text-align:left; margin-top:3px; margin-left:10px;">
+    <input tyep="text" name="UserName" style="width:250px;" />    
+    </div>
+</div>
+
+<div class="list" >
+    <div class="list_a" style="width:250px;text-align:left;padding-left:4px; ">  
+    用户密码
+    </div>
+    <div class="list_img" style="text-align:left; margin-top:3px; margin-left:10px;">
+    <input name="UserPassWord" type="password" id="UserPassWord" style="width:250px;" onkeydown="if(event.keyCode==13){javascript:JavaScrptWebSitePost();}" />   
+
+    (<a href="/UserInfo/ForgottenPassword.aspx" >找回密码</a>) 
+    </div>
+</div>
+
+<div class="list" style="height:120px;">
+    <div class="list_a" style="width:250px;text-align:left; height:120px;padding-left:4px; ">  
+    <b>保存登录</b>
+    <br>
+    请选择你的资料保存时间，<br>方便你下次再次访问
+    </div>
+    <div class="list_img" style="text-align:left; margin-top:3px; margin-left:10px;">
+    
+    <div style="text-align:left; margin-top:3px; margin-left:10px;">
+<input type="radio" name="CookieDate" value="0" checked="checked" />
+    不保存，关闭浏览器就
+    </div>
+    <div style="text-align:left; margin-top:3px; margin-left:10px;">
+    <input type="radio" name="CookieDate" value="86400" />
+    保存一天
+    </div>
+    <div style="text-align:left; margin-top:3px; margin-left:10px;">
+    <input type="radio" name="CookieDate" value="2592000" />
+    保存一月
+    </div>
+    <div style="text-align:left; margin-top:3px; margin-left:10px;">
+    <input type="radio" name="CookieDate" value="31536000" />
+    保存一年            
+        </div>
+    </div>
+</div>
+
+<div class="list" >
+    <div class="list_a" style="width:250px;text-align:left;padding-left:4px; ">  
+    登录状态
+    </div>
+    <div class="list_img" style="text-align:left; margin-top:3px; margin-left:20px;">
+    
+<select name="UserOnLineStatic" id="UserOnLineStatic">
+<option selected="selected" value="UserOnLine">联机(O)</option>
+	<option value="UserBusyLine">忙碌(B)</option>
+	<option value="UserRightBack">马上回来(E)</option>
+	<option value="UserLeave">离开(A)</option>
+	<option value="UserTelephone">接听电话(P)</option>
+	<option value="UserOutMeal">外出就餐(L)</option>
+	<option value="UserOffLine">脱机(F)</option>
+	
+    
+</select>
+    
+    </div>
+</div>
+
+
+  <input type="hidden" name="actions" value="UserLogin">
+<div class="list" style="height:30px;text-align:center;padding-top:6px;" >
+  <input type="button" name="SubmitOk" value="确定登录" onClick="JavaScrptWebSitePost();" />
+      <input type="button" name="SubmitCacel" value="回上一页" onClick="history.go(-1);" />
+  </div>
+  -->
+  </html>
+
+  <html name="Resource_WebSiteUserLoginOut">
+    <!--
+<div class="tabletop" style="margin-top:10px;">&nbsp;&nbsp;-=&gt; 退出成功</div>
+<div class="list" style="height:100px;">
+  <div class="list_a" style="width:250px;  text-align:center;height:100px; ">  
+   </div>
+  <div class="list_img" style="text-align:left; margin-top:3px; margin-left:10px;height:100px; ">
+    您已经成功退出！
+</div>
+  </div>
+<div class="list" style="height:30px;text-align:center;padding-top:6px;" >
+  <input type="button" name="SubmitOk" value="重新登录" onClick="window.location='/UserInfo/Login.aspx';" />
+      <input type="button" name="SubmitCacel" value="回上一页" onClick="history.go(-1);" />
+  </div>
+  -->
+  </html>
+
+  <html name="Resource_WebSiteForgottenPassword">
+    <!-- 
+  <div class="tabletop" style="margin-top:10px; text-align:left;  padding-left:10px ">
+找回密码
+</div>
+
+      <div class="list" >
+        <div class="list_a" style="width:300px;  text-align:left;  padding-left:4px;">用户名称：</div>
+      <div class="list_img" style="margin-left:4px; margin-top:1px;">
+      <input name="UserName" type="text" maxlength="64" id="UserName" style="width:180px"  />
+     </div></div>
+	 
+	 
+	  
+	  <div class="list"  >
+        <div class="list_a" style="width:300px;  text-align:left;  padding-left:4px;">
+        密码答案： </div>
+      <div class="list_img" style="margin-left:4px; margin-top:1px;">
+      <input name="UserPassWordAnswer" type="text" maxlength="64" id="UserPassWordAnswer" style="width:180px"  />
+      </div>
+	  </div>	 
+	 
+	<div id="FortGotPassWordDiv" style="display:none;">  
+	  <div class="list" >
+        <div class="list_a" style="width:300px;  text-align:left;  padding-left:4px;">用户密码：</div>
+      <div class="list_img" style="margin-left:4px; margin-top:1px;">
+      <input name="FortGotPassWord" type="password" maxlength="64" id="FortGotPassWord" value="" style="width:180px"  readonly="true" />
+     </div></div>
+	 
+	 <div class="list" >
+        <div class="list_a" style="width:300px;  text-align:left;  padding-left:4px;">新 密 码：</div>
+      <div class="list_img" style="margin-left:4px; margin-top:1px;">
+      <input name="UserPassWord" type="password" maxlength="64" id="UserPassWord" style="width:180px"  />
+     </div></div>
+	 
+	 <div class="list" >
+        <div class="list_a" style="width:300px;  text-align:left;  padding-left:4px;">确定密码：</div>
+      <div class="list_img" style="margin-left:4px; margin-top:1px;">
+      <input name="UserPassWord2" type="password" maxlength="64" id="UserPassWord2" style="width:180px" onkeydown="if(event.keyCode==13){javascript:WebSiteJavaScrptFortGotPassWord()}" />
+     </div></div>
+	 </div>
+	  
+	  <input type="hidden" name="actions" value="ForgottenPassword">
+<div class="list" style="height:30px;text-align:center;padding-top:6px;" >
+  <input type="button" name="SubmitOk" value="判断答案" onClick="JavaScrptWebSitePost();" />
+      <input type="button" name="SubmitCacel" value="回上一页" onClick="history.go(-1);" />
+  </div>
+  
+  
+  
+  -->
+  </html>
+
+  
+  <html name="Resource_WebSiteBbsUserRegTable">
+    <!-- 
+<div class="tabletop" style="margin-top:10px; text-align:left;  padding-left:10px ">
+用户注册
+</div>
+
+<div class="MiniTableHead">
+ <div class="minitable" id="MiniTable1" onclick="JavaScriptWebSiteDiv('1','4')"> 基本资料 </div>
+<div class="minitableno" id="MiniTable2" onclick="JavaScriptWebSiteDiv('2','4')"> 详细资料</div>
+<div class="minitableno" id="MiniTable3" onclick="JavaScriptWebSiteDiv('3','4')"> 联系方式</div>
+<div class="minitableno" id="MiniTable4" onclick="JavaScriptWebSiteDiv('4','4')"> 其他资料</div>
+</div>
+
+<div id="MiniTableDiv1" style="display:; ">
+    <div class="list">
+            <div class="list_a" style="width:250px;  text-align:center; "> 会员名称： </div>
+            <div class="list_img" style="text-align:left; margin-top:3px; margin-left:10px; ">
+              <input name="UserName" type="text" maxlength="64" size="20" id="UserName" /></div>
+            <div class="list_img" style="text-align:left; margin-top:1px; margin-left:10px;"> 如:Tom1234</div>
+          </div>
+          <div class="list">
+            <div class="list_a" style="width:250px;  text-align:center; ">会员昵称： </div>
+            <div class="list_img" style="text-align:left; margin-top:3px; margin-left:10px; ">
+              <input name="UserNickName" type="text" maxlength="64" size="20" id="UserNickName" />
+            </div>
+          </div>
+            <div class="list">
+              <div class="list_a" style="width:250px;  text-align:center; ">登录密码： </div>
+              <div class="list_img" style="text-align:left; margin-top:3px; margin-left:10px; ">
+                <input name="UserPassWord" type="password" maxlength="64" size="22" id="UserPassWord" />
+               </div>
+              <div class="list_img" style="text-align:left; margin-top:1px; margin-left:10px; "> 请输入密码区分大小写</div>
+            </div>
+         
+            <div class="list">
+              <div class="list_a" style="width:250px;  text-align:center; ">确认密码： </div>
+              <div class="list_img" style="text-align:left; margin-top:3px; margin-left:10px; ">
+                <input name="UserPassWord2" type="password" maxlength="64" size="22" id="UserPassWord2" />
+              </div>
+              <div class="list_img" style="text-align:left; margin-top:1px; margin-left:10px;  "> 请再输一遍确认密码</div>
+            </div>
+            <div class="list">
+              <div class="list_a" style="width:250px;  text-align:center; ">密码答案： </div>
+              <div class="list_img" style="text-align:left; margin-top:3px; margin-left:10px; ">
+                <input name="UserPassWordAnswer" type="text" maxlength="64" size="20" id="UserPassWordAnswer" />
+              </div>
+              <div class="list_img" style="text-align:left; margin-top:1px; margin-left:10px;  "> 忘记密码要用的哦！</div>
+            </div>
+            <div class="list">
+            <div class="list_a" style="width:250px;  text-align:center; ">邮件地址： </div>
+            <div class="list_img" style="text-align:left; margin-top:3px; margin-left:10px; ">
+              <input name="UserEmail" type="text" maxlength="128" size="40" id="UserEmail" />
+              </div>
+            <div class="list_img" style="text-align:left; margin-top:1px; margin-left:10px; "> 请输入有效的Email</div>
+          </div>
+          <div class="list">
+            <div class="list_a" style="width:250px;  text-align:center; ">确认邮件： </div>
+            <div class="list_img" style="text-align:left; margin-top:3px; margin-left:10px; ">
+              <input name="UserEmail2" type="text" maxlength="128" size="40" id="UserEmail2" />
+              </div>
+            <div class="list_img" style="text-align:left; margin-top:1px; margin-left:10px;  "> 请再输一遍确认Email</div>
+          </div>
+        
+          <div class="list">
+            <div class="list_a" style="width:250px;  text-align:center; ">推 荐 人： </div>
+            <div class="list_img" style="text-align:left; margin-top:3px; margin-left:10px; ">
+              <input name="UserRecommendName" type="text" maxlength="64" size="20" id="UserRecommendName" />
+            </div>
+            <div class="list_img" style="text-align:left; margin-top:1px; margin-left:10px;"> 请输入推荐你注册的用户名称 </div>
+          </div>
+</div>
+
+
+<div id="MiniTableDiv2" style="display:none; ">
+
+ <div class="list">
+            <div class="list_a" style="width:250px;  text-align:center; "> 真实姓名： </div>
+            <div class="list_img" style="text-align:left; margin-top:3px; margin-left:10px; ">
+              <input name="UserTrueName" type="text" maxlength="64" size="20" id="UserTrueName" />
+            </div>
+          </div>
+          <div class="list">
+            <div class="list_a" style="width:250px;  text-align:center; "> 身份证号： </div>
+            <div class="list_img" style="text-align:left; margin-top:3px; margin-left:10px; ">
+              <input name="UserIdCard" type="text" maxlength="64" size="20" id="UserIdCard" />
+            </div>
+          </div>
+          <div class="list">
+            <div class="list_a" style="width:250px;  text-align:center; "> 你的性别： </div>
+            <div class="list_img" style="text-align:left; margin-top:3px; margin-left:20px; ">
+            <input id="UserSex_0" type="radio" name="UserSex" value="M" />
+                      男生<input id="UserSex_1" type="radio" name="UserSex" value="F" checked="checked" />
+                     女生<input id="UserSex_2" type="radio" name="UserSex" value="N" />
+                    保密
+            </div>
+          </div>
+          <div class="list">
+            <div class="list_a" style="width:250px;  text-align:center; "> 出生年月： </div>
+            <div class="list_img" style="text-align:left; margin-top:3px; margin-left:10px; ">
+              <input name="UserBirthday" type="text" value="1982-02-08" maxlength="64" size="20" id="UserBirthday" onfocus="setday(this)" readonly="readonly" />
+            </div>
+          </div>
+          <div class="list">
+            <div class="list_a" style="width:250px;  text-align:center; "> 来自那里： </div>
+            <div class="list_img" style="text-align:left; margin-top:3px; margin-left:20px; ">
+              <div style="margin:0">
+                <select name="prov" onclick="JavaScriptWebSiteSelectCity('prov','city','');">
+                </select>
+                &nbsp;&nbsp;
+                <select name="city" >
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="list">
+            <div class="list_a" style="width:250px;  text-align:center; "> 婚姻状况： </div>
+            <div class="list_img" style="text-align:left; margin-top:3px; margin-left:20px; ">
+              <input id="UserMaritalStatus_0" type="radio" name="UserMaritalStatus" value="0" checked="checked" />
+                保密<input id="UserMaritalStatus_1" type="radio" name="UserMaritalStatus" value="1" />
+                未婚<input id="UserMaritalStatus_1" type="radio" name="UserMaritalStatus" value="2" />
+                     已婚<input id="UserMaritalStatus_2" type="radio" name="UserMaritalStatus" value="3" />
+                     离异<input id="UserMaritalStatus_3" type="radio" name="UserMaritalStatus" value="4" />
+                    丧偶
+            </div>
+          </div>
+          <div class="list">
+            <div class="list_a" style="width:250px;  text-align:center; "> 毕业院校： </div>
+            <div class="list_img" style="text-align:left; margin-top:3px; margin-left:10px; ">
+              <input name="UserSchool" type="text" maxlength="64" size="35" id="UserSchool" />
+            </div>
+          </div>
+          <div class="list">
+            <div class="list_a" style="width:250px;  text-align:center; "> 工作单位： </div>
+            <div class="list_img" style="text-align:left; margin-top:3px; margin-left:10px; ">
+              <input name="UserWorkUnit" type="text" maxlength="64" size="35" id="UserWorkUnit" />
+            </div>
+          </div>
+          
+          
+</div>
+
+
+<div id="MiniTableDiv3" style="display:none; ">
+<div class="list">
+            <div class="list_a" style="width:250px;  text-align:center; "> 手机号码： </div>
+            <div class="list_img" style="text-align:left; margin-top:3px; margin-left:10px; ">
+              <input name="UserMobile" type="text" maxlength="64" size="20" id="UserMobile" />
+            </div>
+          </div>
+          <div class="list">
+            <div class="list_a" style="width:250px;  text-align:center; "> 联系电话： </div>
+            <div class="list_img" style="text-align:left; margin-top:3px; margin-left:10px; ">
+              <input name="UserContactTel" type="text" maxlength="64" size="20" id="UserContactTel" />
+            </div>
+          </div>
+          <div class="list">
+            <div class="list_a" style="width:250px;  text-align:center; "> OICQ号码： </div>
+            <div class="list_img" style="text-align:left; margin-top:3px; margin-left:10px; ">
+              <input name="UserOICQ" type="text" maxlength="64" size="20" id="UserOICQ" />
+            </div>
+          </div>
+          <div class="list">
+            <div class="list_a" style="width:250px;  text-align:center; "> 邮编号码： </div>
+            <div class="list_img" style="text-align:left; margin-top:3px; margin-left:10px; ">
+              <input name="UserCode" type="text" maxlength="64" size="20" id="UserCode" />
+            </div>
+          </div>
+          <div class="list">
+            <div class="list_a" style="width:250px;  text-align:center; "> 联系地址： </div>
+            <div class="list_img" style="text-align:left; margin-top:3px; margin-left:10px; ">
+              <input name="UserContactAddress" type="text" maxlength="64" size="35" id="UserContactAddress" />
+            </div>
+          </div>
+          <div class="list">
+            <div class="list_a" style="width:250px;  text-align:center; "> 个人网站： </div>
+            <div class="list_img" style="text-align:left; margin-top:3px; margin-left:10px; ">
+              <input name="UserWebAddress" type="text" maxlength="64" size="35" id="UserWebAddress" />
+            </div>
+          </div>
+          <div class="list">
+            <div class="list_a" style="width:250px;  text-align:center; "> 个人博客： </div>
+            <div class="list_img" style="text-align:left; margin-top:3px; margin-left:10px; ">
+              <input name="UserWebLog" type="text" maxlength="64" size="35" id="UserWebLog" />
+            </div>
+          </div>
+          <div class="list">
+            <div class="list_a" style="width:250px;  text-align:center; "> 个人相册： </div>
+            <div class="list_img" style="text-align:left; margin-top:3px; margin-left:10px; ">
+              <input name="UserWebGallery" type="text" maxlength="64" size="35" id="UserWebGallery" />
+            </div>
+          </div>
+</div>
+
+
+<div id="MiniTableDiv4" style="display:none; ">
+
+           {$UserSelectImagesBody}
+  <div class="list" style="height:72px">
+            <div class="list_a" style="width:250px;  text-align:center; height:72px "> 个人头像 </div>
+            <div class="list_img" style="text-align:left; margin-top:0px; margin-left:10px;   ">
+            <img id="UserFaceImages" border="0" align="absmiddle" src="/images/userface/Image26.gif" style="height:55px;width:69px;border-width:0px;" /> </div>
+            <div class="list_img" style="text-align:left; margin-top:10px; margin-left:10px; height:60px "> 
+            </div>
+            <div style="margin-left:5px; margin-top:10px;">
+            
+            
+            
+            
+             <input name="UserFace" type="text" value="/images/userface/Image26.gif" maxlength="256" id="AvatarUrl" style="width:168px;"  onpropertychange="document.all.UserFaceImages.src=''+this.value+''" />
+              <input name="SubmitFace" type="button" id="SubmitFace2" value="选择头像" onclick="JscriptUserFaceDiv('1','UserFaceDiv');" />
+            </div>
+          </div>
+          <div class="list">
+            <div class="list_a" style="width:250px;  text-align:center; "> 保密设置： </div>
+            <div class="list_img" style="text-align:left; margin-top:3px; margin-left:20px; ">
+              <select name="UserPrivacy" id="UserPrivacy">
+                <option selected="selected" value="1">用户资料公开</option>
+                <option value="0">用户资料保密</option>
+                <option value="2">只对注册用户公开</option>
+                <option value="3">只对好友公开</option>
+              </select>
+            </div>
+            
+             <div class="list_img" style="text-align:left; margin-top:3px; margin-left:20px; ">
+              <select name="UserReceiveType" id="UserReceiveType">
+                <option selected="selected" value="1">只接收注册用户的短信</option>
+                <option value="0">接收所有人的短信</option>
+                <option value="2">只接收好友的短信</option>
+                <option value="3">不接收任何短信</option>
+              </select>
+            </div>
+            
+          </div>
+          <div class="list" style="height:40px;">
+            <div class="list_a" style="width:250px;  text-align:center; height:40px; ">个性签名： </div>
+            <div class="list_img" style="text-align:left; margin-top:3px; margin-left:10px; ">
+              <textarea name="UserSign" rows="2" cols="4" id="UserSign" style="width:268px;"></textarea>
+            </div>
+          </div>
+          <div class="list" style="height:70px;">
+            <div class="list_a" style="width:250px;  text-align:center; height:70px; ">个人说明： </div>
+            <div class="list_img" style="text-align:left; margin-top:8px; margin-left:10px; ">
+              <textarea name="UserAbout" rows="2" cols="20" id="UserAbout" style="height:54px;width:268px;">这家伙很赖，什么都没有留下!</textarea>
+            </div>
+          </div>
+          
+</div>
+<div class="list" style="height:30px;text-align:center;padding-top:6px;" >
+  <input type="button" name="SubmitOk" value="确定注册" onClick="JavaScrptWebSitePost();" />
+      <input type="button" name="SubmitCacel" value="回上一页" onClick="history.go(-1);" />
+  </div>
+<script language = "javaScript" src = "/Jscript/WebSiteJScriptCity.js" type="text/javascript"></script>
+<script language = "javaScript" src = "/Jscript/WebSiteJScriptTime.js" type="text/javascript"></script>
+<script>
+JavaScriptWebSiteProvinceOptionMenu('prov');
+JavaScriptWebSiteSelectCity('prov','city','上海市市区');
+</script>
+<input type="hidden" name="actions" value="CreateUserInfo">
+-->
+
+</html>
+<html name="Resource_WebSiteEditUserBodyBody">
+  <!-- 
+<div class="MiniTableHead">
+ <div class="minitable" id="MiniTable1" onclick="JavaScriptWebSiteDiv('1','3')"> 基本资料 </div>
+<div class="minitableno" id="MiniTable2" onclick="JavaScriptWebSiteDiv('2','3')"> 详细资料</div>
+<div class="minitableno" id="MiniTable3" onclick="JavaScriptWebSiteDiv('3','3')"> 其他资料</div>
+</div>
+
+<div id="MiniTableDiv1">
+
+<div class="list">
+  <div class="list_a" style="width:250px;  text-align:center; ">  
+会员名称：
+   </div>
+  <div class="list_img" style="text-align:left; margin-top:3px; margin-left:10px; ">
+        <input name="UserName" type="text" value="" maxlength="64" size="20" readonly="readonly" id="UserName" />
+        <input name="UserID" type="hidden" value="" maxlength="64" size="20" id="UserID" />
+	
+</div>
+  <div class="list_img" style="text-align:left; margin-top:1px; margin-left:-10px; float:right; ">不能更改</div>
+  </div>
+   
+   <div class="list">
+  <div class="list_a" style="width:250px;  text-align:center; ">会员昵称： </div>
+  <div class="list_img" style="text-align:left; margin-top:3px; margin-left:10px; ">
+   <input name="UserNickName" type="text" value="" maxlength="64" size="20" id="UserNickName" />
+</div>
+   </div>
+  
+  
+<div class="list">
+  <div class="list_a" style="width:250px;  text-align:center; ">
+  真实姓名：
+   </div>
+  <div class="list_img" style="text-align:left; margin-top:3px; margin-left:10px; ">
+    <input name="UserTrueName" type="text" value="" maxlength="64" size="20" id="UserTrueName" />
+</div>
+  </div>
+   
+      <div class="list">
+  <div class="list_a" style="width:250px;  text-align:center; ">
+  你的性别：
+  </div>
+  <div class="list_img" style="text-align:left; margin-top:3px; margin-left:20px; ">
+      <input id="UserSex_0" type="radio" name="UserSex" value="M" />男生<input id="UserSex_1" type="radio" name="UserSex" value="F" />
+      女生<input id="UserSex_2" type="radio" name="UserSex" value="N" />保密
+</div>
+   </div>
+   
+   
+   
+  
+  
+
+   <div class="list">
+     <div class="list_a" style="width:250px;  text-align:center; ">会员密码： </div>
+     <div class="list_img" style="text-align:left; margin-top:3px; margin-left:10px; ">
+       <input name="UserPassWord" type="password" value="" maxlength="16" size="20"  id="UserPassWord"  />
+     </div>
+     <div class="list_img" style="text-align:left; margin-top:1px; margin-left:-10px; float:right; ">请输入会员密码，确保你能修改</div>
+   </div>
+   <div class="list">
+  <div class="list_a" style="width:250px;  text-align:center; ">修改密码： </div>
+  <div class="list_img" style="text-align:left; margin-top:3px; margin-left:10px; ">
+<input name="NewUserPassWord" type="password" value="" maxlength="16" size="20" id="NewUserPassWord" />
+		
+</div>
+
+  <div class="list_img" style="text-align:left; margin-top:1px; margin-left:-10px; float:right; ">如不修改，请留空</div>
+  
+   </div>
+
+
+
+    
+   <div class="list">
+  <div class="list_a" style="width:250px;  text-align:center; ">邮件地址： </div>
+  <div class="list_img" style="text-align:left; margin-top:3px; margin-left:10px; ">
+    <input name="UserEmail" type="text" value="" maxlength="128" size="40" id="UserEmail"  readonly="readonly" />
+
+			  </div>
+  <div class="list_img" style="text-align:left; margin-top:1px; margin-left:-10px; float:right; ">不能更改</div>
+   </div>
+   
+
+   <div class="list" >
+    <div class="list_a" style="width:250px;text-align:center; ">  
+    我的状态：
+    </div>
+    <div class="list_img" style="text-align:left; margin-top:3px; margin-left:20px;">
+    
+<select name="UserOnLineStatic" id="UserOnLineStatic">
+<option selected="selected" value="UserOnLine">联机(O)</option>
+	<option value="UserBusyLine">忙碌(B)</option>
+	<option value="UserRightBack">马上回来(E)</option>
+	<option value="UserLeave">离开(A)</option>
+	<option value="UserTelephone">接听电话(P)</option>
+	<option value="UserOutMeal">外出就餐(L)</option>
+	<option value="UserOffLine">脱机(F)</option>
+	
+
+</select>
+    
+    </div>
+</div>
+
+   
+   
+   
+   
+   
+   <div class="list">
+     <div class="list_a" style="width:250px;  text-align:center; ">推 荐 人：  </div>
+     <div class="list_img" style="text-align:left; margin-top:3px; margin-left:10px; ">
+    <input name="UserRecommendName" type="text" value="" maxlength="64" size="20" id="UserRecommendName" />     </div>
+     
+   </div>
+   
+      <div class="list" style="height:40px;">
+  <div class="list_a" style="width:250px;  text-align:center; height:40px; ">个性签名：
+  
+  </div>
+  <div class="list_img" style="text-align:left; margin-top:3px; margin-left:10px; ">
+  <textarea name="UserSign" rows="2" cols="4" id="UserSign" style="width:268px;"></textarea>
+  &nbsp;
+</div>
+   </div>
+	
+   <div class="list" style="height:90px;">
+  <div class="list_a" style="width:250px;  text-align:center; height:90px; ">个人说明：
+  </div>
+  <div class="list_img" style="text-align:left; margin-top:8px; margin-left:10px; ">
+   <textarea name="UserAbout" rows="2" cols="20" id="UserAbout" style="height:74px;width:268px;"></textarea>
+</div>
+   </div>
+   
+   
+</div>
+
+<div id="MiniTableDiv2" style="display:none; ">
+
+
+
+   <div class="list">
+  <div class="list_a" style="width:250px;  text-align:center; ">
+  身份证号：
+  </div>
+  <div class="list_img" style="text-align:left; margin-top:3px; margin-left:10px; ">
+    <input name="UserIdCard" type="text" value="" maxlength="32" size="20" id="UserIdCard" />
+</div>
+   </div>
+
+<div class="list">
+     <div class="list_a" style="width:250px;  text-align:center; ">
+      出生年月：
+     </div>
+     <div class="list_img" style="text-align:left; margin-top:3px; margin-left:10px; ">
+     <input name="UserBirthday" type="text" value="" maxlength="64" size="20" id="UserBirthday" onFocus="setday(this)" readonly="readonly" />
+     </div>
+   </div>
+   <div class="list">
+  <div class="list_a" style="width:250px;  text-align:center; ">
+  来自那里：
+   </div>
+  <div class="list_img" style="text-align:left; margin-top:3px; margin-left:20px; ">
+
+<select name="prov" onclick="JavaScriptWebSiteSelectCity('prov','city','');">
+      </select>
+&nbsp;&nbsp;
+<select name="city" >
+</select>
+              
+</div>
+   </div>
+   
+   <div class="list">
+  <div class="list_a" style="width:250px;  text-align:center; ">
+  
+  婚姻状况：
+   
+  
+  </div>
+  <div class="list_img" style="text-align:left; margin-top:3px; margin-left:20px; ">
+<input id="UserMaritalStatus_0" type="radio" name="UserMaritalStatus" value="0" />
+保密<input id="UserMaritalStatus_1" type="radio" name="UserMaritalStatus" value="1" />未婚<input id="UserMaritalStatus_2" type="radio" name="UserMaritalStatus" value="2" />已婚<input id="UserMaritalStatus_3" type="radio" name="UserMaritalStatus" value="3" />离异<input id="UserMaritalStatus_4" type="radio" name="UserMaritalStatus" value="4" />丧偶
+</div>
+   </div>
+   
+   <div class="list">
+  <div class="list_a" style="width:250px;  text-align:center; ">
+    毕业院校：
+  </div>
+  <div class="list_img" style="text-align:left; margin-top:3px; margin-left:10px; ">
+   <input name="UserSchool" type="text" maxlength="64" size="35" id="UserSchool" /> 
+  </div>
+   </div>
+   
+   <div class="list">
+   <div class="list_a" style="width:250px;  text-align:center; ">
+    工作单位：
+    </div><div class="list_img" style="text-align:left; margin-top:3px; margin-left:10px; ">
+   <input name="UserWorkUnit" type="text" maxlength="64" size="35" id="UserWorkUnit" /> 
+   
+   
+</div>
+  </div>
+  
+  
+
+<div class="list">
+ <div class="list_a" style="width:250px;  text-align:center; ">
+ 手机号码：
+  </div>
+  <div class="list_img" style="text-align:left; margin-top:3px; margin-left:10px; ">
+   <input name="UserMobile" type="text" maxlength="64" size="20" id="UserMobile" /> 
+</div>
+   </div>
+   <div class="list">
+    <div class="list_a" style="width:250px;  text-align:center; ">
+  联系电话：
+  </div>
+  <div class="list_img" style="text-align:left; margin-top:3px; margin-left:10px; ">
+   <input name="UserContactTel" type="text" maxlength="64" size="20" id="UserContactTel" /> 
+</div>
+   </div>
+   
+     <div class="list">
+      <div class="list_a" style="width:250px;  text-align:center; ">
+  OICQ号码：
+  </div>
+  <div class="list_img" style="text-align:left; margin-top:3px; margin-left:10px; ">
+   <input name="UserOICQ" type="text" maxlength="64" size="20" id="UserOICQ" /> 
+</div>
+</div>
+
+
+   <div class="list">
+    <div class="list_a" style="width:250px;  text-align:center; ">
+  邮编号码：
+  </div>
+  <div class="list_img" style="text-align:left; margin-top:3px; margin-left:10px; ">
+   <input name="UserCode" type="text" maxlength="64" size="20" id="UserCode" /> 
+</div>
+</div>
+   <div class="list">
+       <div class="list_a" style="width:250px;  text-align:center; ">
+ 联系地址：
+  </div>
+  <div class="list_img" style="text-align:left; margin-top:3px; margin-left:10px; ">
+   <input name="UserContactAddress" type="text" value="" maxlength="256" size="35" id="UserContactAddress" /> 
+</div>
+   </div>
+      <div class="list">
+       <div class="list_a" style="width:250px;  text-align:center; ">
+  个人网站：
+  </div>
+  <div class="list_img" style="text-align:left; margin-top:3px; margin-left:10px; ">
+   <input name="UserWebAddress" type="text" value="" size="35" id="UserWebAddress" /> 
+								
+</div>
+   </div>
+      <div class="list">
+         <div class="list_a" style="width:250px;  text-align:center; ">
+ 个人博客：
+  </div>
+  <div class="list_img" style="text-align:left; margin-top:3px; margin-left:10px; ">
+   <input name="UserWebLog" type="text" value="" size="35" id="UserWebLog" /> 
+   
+
+								
+</div>
+</div>
+   
+      <div class="list">
+         <div class="list_a" style="width:250px;  text-align:center; ">
+       个人相册：
+  </div>
+  <div class="list_img" style="text-align:left; margin-top:3px; margin-left:10px; ">
+   <input name="UserWebGallery" type="text" value="" size="35" id="UserWebGallery" /> 
+								
+        
+</div>
+</div>
+
+
+</div>
+
+
+<div id="MiniTableDiv3" style="display:none; ">
+
+  <div class="list">
+  <div class="list_a" style="width:250px;  text-align:center; ">
+    保密设置：
+  </div>
+  <div class="list_img" style="text-align:left; margin-top:3px; margin-left:20px; ">
+
+  <select name="UserPrivacy" id="UserPrivacy">
+                <option selected="selected" value="1">用户资料公开</option>
+                <option value="0">用户资料保密</option>
+                <option value="2">只对注册用户公开</option>
+                <option value="3">只对好友公开</option>
+              </select>
+
+</select>    
+</div>
+
+<div class="list_img" style="text-align:left; margin-top:3px; margin-left:20px; ">
+              <select name="UserReceiveType" id="UserReceiveType">
+                <option selected="selected" value="1">只接收注册用户的短信</option>
+                <option value="0">接收所有人的短信</option>
+                <option value="2">只接收好友的短信</option>
+                <option value="3">不接收任何短信</option>
+              </select>
+            </div>
+
+   </div>
+   
+    {$UserSelectImagesBody}
+   <div class="list" style="height:72px">
+     <div class="list_a" style="width:250px;  text-align:center; height:72px "> 个人头像 </div>
+     <div class="list_img" style="text-align:left; margin-top:0px; margin-left:20px;   ">
+	  <img id="UserFaceImages" border="0" align="absmiddle" src="{$UserFace}" style="height:55px;width:69px;border-width:0px;" /> </div>
+     <div class="list_img" style="text-align:left; margin-top:10px; margin-left:10px; height:60px "> </div>
+     <div style="margin-left:5px; margin-top:10px;">
+     
+      <div id="InputFileUrlDiv" style="display:;">
+      
+      
+<input name="UserFace" type="text" value="" maxlength="256" id="UserFace" style="width:168px;"  onpropertychange="document.all.UserFaceImages.src=''+this.value+''" />
+  <input name="SubmitFace2" type="button" id="SubmitFace" value="选择头像"  onclick="JscriptUserFaceDiv('1','UserFaceDiv');" />
+
+  </div> 
+       
+     </div>
+     <div style="margin-left:5px; margin-top:4px;">
+     
+     
+ <div style="display:;" id="UserUpLoadFileDiv">
+  <div  style="float:left;">
+<IFRAME 
+style="LEFT: 8.54em; WIDTH: 21.5em; TOP: 1.06em; HEIGHT: 2.12em" 
+src="/UserUploadFile.aspx" frameBorder=0 scrolling=no id="UploadFileIframe" name="UploadFileIframe"></IFRAME>
+</div>
+<div  style="float:left; margin-top:2px; margin-left:10px;">
+<input type="button" name="SubmitUploadFile" value="确定上传"  onclick="DosJavaScriptUpLoadFile('UploadFileIframe','UserFace','UserFaceImages','','','','');" />
+</div>
+</div>
+
+
+     </div>
+   </div>
+   
+   <div class="list" style=" height:266px;">
+     <div class="list_a" style="WIDTH: 250px; TEXT-ALIGN: center; height:266px;">个人兴趣： </div>
+	 <div style="height:266px; width:374px; overflow:auto;margin-left:260px;">
+	  	  <div class="list_img" 
+style="MARGIN-TOP: 4px; MARGIN-LEFT: 4px; TEXT-ALIGN: left; width:80px; ">
+       <input id="UserInterests" value="温柔体贴" type="checkbox" name="UserInterests" />
+       温柔体贴 </div>
+       
+       <div class="list_img" 
+style="MARGIN-TOP: 4px; MARGIN-LEFT: 4px; TEXT-ALIGN: left; width:80px; ">
+       <input id="UserInterests" value="心地善良" type="checkbox" name="UserInterests" />
+       心地善良 </div>
+       
+       <div class="list_img" 
+style="MARGIN-TOP: 4px; MARGIN-LEFT: 4px; TEXT-ALIGN: left; width:80px; ">
+       <input id="UserInterests" value="善解人意" type="checkbox" name="UserInterests" />
+       善解人意 </div>
+       
+       <div class="list_img" 
+style="MARGIN-TOP: 4px; MARGIN-LEFT: 4px; TEXT-ALIGN: left; width:80px; ">
+       <input id="UserInterests" value="思想开放" type="checkbox" name="UserInterests" />
+       思想开放 </div>
+       
+       <div class="list_img" 
+style="MARGIN-TOP: 4px; MARGIN-LEFT: 4px; TEXT-ALIGN: left; width:80px; ">
+       <input id="UserInterests" value="重色轻友" type="checkbox" name="UserInterests" />
+       重色轻友 </div>
+       
+       <div class="list_img" 
+style="MARGIN-TOP: 4px; MARGIN-LEFT: 4px; TEXT-ALIGN: left; width:80px; ">
+       <input id="UserInterests" value="诚实坦白" type="checkbox" name="UserInterests" />诚实坦白</div>
+       
+       <div class="list_img" 
+style="MARGIN-TOP: 4px; MARGIN-LEFT: 4px; TEXT-ALIGN: left; width:80px; ">
+       <input id="UserInterests" value="脾气暴躁" type="checkbox" name="UserInterests" />脾气暴躁</div>
+       
+       <div class="list_img" 
+style="MARGIN-TOP: 4px; MARGIN-LEFT: 4px; TEXT-ALIGN: left; width:80px; ">
+       <input id="UserInterests" value="好吃懒做" type="checkbox" name="UserInterests" />好吃懒做</div>
+       
+       <div class="list_img" 
+style="MARGIN-TOP: 4px; MARGIN-LEFT: 4px; TEXT-ALIGN: left; width:80px; ">
+       <input id="UserInterests" value="见异思迁" type="checkbox" name="UserInterests" />见异思迁</div>
+       
+       <div class="list_img" 
+style="MARGIN-TOP: 4px; MARGIN-LEFT: 4px; TEXT-ALIGN: left; width:80px; ">
+       <input id="UserInterests" value="狡猾多变" type="checkbox" name="UserInterests" />狡猾多变</div>
+       
+       <div class="list_img" 
+style="MARGIN-TOP: 4px; MARGIN-LEFT: 4px; TEXT-ALIGN: left; width:80px; ">
+       <input id="UserInterests" value="追求刺激" type="checkbox" name="UserInterests" />追求刺激</div>
+       
+       <div class="list_img" 
+style="MARGIN-TOP: 4px; MARGIN-LEFT: 4px; TEXT-ALIGN: left; width:80px; ">
+       <input id="UserInterests" value="热心助人" type="checkbox" name="UserInterests" />热心助人</div>
+       
+       <div class="list_img" 
+style="MARGIN-TOP: 4px; MARGIN-LEFT: 4px; TEXT-ALIGN: left; width:80px; ">
+       <input id="UserInterests" value="淡泊名利" type="checkbox" name="UserInterests" />淡泊名利</div>
+       
+       <div class="list_img" 
+style="MARGIN-TOP: 4px; MARGIN-LEFT: 4px; TEXT-ALIGN: left; width:80px; ">
+       <input id="UserInterests" value="多愁善感" type="checkbox" name="UserInterests" />多愁善感</div>
+       
+       <div class="list_img" 
+style="MARGIN-TOP: 4px; MARGIN-LEFT: 4px; TEXT-ALIGN: left; width:80px; ">
+       <input id="UserInterests" value="积极进取" type="checkbox" name="UserInterests" />积极进取</div>
+       
+       <div class="list_img" 
+style="MARGIN-TOP: 4px; MARGIN-LEFT: 4px; TEXT-ALIGN: left; width:80px; ">
+       <input id="UserInterests" value="成熟稳重" type="checkbox" name="UserInterests" />成熟稳重</div>
+       
+       <div class="list_img" 
+style="MARGIN-TOP: 4px; MARGIN-LEFT: 4px; TEXT-ALIGN: left; width:80px; ">
+       <input id="UserInterests" value="小心谨慎" type="checkbox" name="UserInterests" />小心谨慎</div>
+       
+       <div class="list_img" 
+style="MARGIN-TOP: 4px; MARGIN-LEFT: 4px; TEXT-ALIGN: left; width:80px; ">
+       <input id="UserInterests" value="快言快语" type="checkbox" name="UserInterests" />快言快语</div>
+       
+       <div class="list_img" 
+style="MARGIN-TOP: 4px; MARGIN-LEFT: 4px; TEXT-ALIGN: left; width:80px; ">
+       <input id="UserInterests" value="豪放不羁" type="checkbox" name="UserInterests" />豪放不羁</div>
+       
+       <div class="list_img" 
+style="MARGIN-TOP: 4px; MARGIN-LEFT: 4px; TEXT-ALIGN: left; width:80px; ">
+       <input id="UserInterests" value="爱管闲事" type="checkbox" name="UserInterests" />爱管闲事</div>
+       
+       <div class="list_img" 
+style="MARGIN-TOP: 4px; MARGIN-LEFT: 4px; TEXT-ALIGN: left; width:80px; ">
+       <input id="UserInterests" value="疑神疑鬼" type="checkbox" name="UserInterests" />疑神疑鬼</div>
+       
+       <div class="list_img" 
+style="MARGIN-TOP: 4px; MARGIN-LEFT: 4px; TEXT-ALIGN: left; width:80px; ">
+       <input id="UserInterests" value="聪明伶俐" type="checkbox" name="UserInterests" />聪明伶俐</div>
+       
+       <div class="list_img" 
+style="MARGIN-TOP: 4px; MARGIN-LEFT: 4px; TEXT-ALIGN: left; width:80px; ">
+       <input id="UserInterests" value="外向开朗" type="checkbox" name="UserInterests" />外向开朗</div>
+       
+       <div class="list_img" 
+style="MARGIN-TOP: 4px; MARGIN-LEFT: 4px; TEXT-ALIGN: left; width:80px; ">
+       <input id="UserInterests" value="多重性格" type="checkbox" name="UserInterests" />多重性格</div>
+       
+       <div class="list_img" 
+style="MARGIN-TOP: 4px; MARGIN-LEFT: 4px; TEXT-ALIGN: left; width:80px; ">
+       <input id="UserInterests" value="贪小便宜" type="checkbox" name="UserInterests" />贪小便宜</div>
+       
+       <div class="list_img" 
+style="MARGIN-TOP: 4px; MARGIN-LEFT: 4px; TEXT-ALIGN: left; width:80px; ">
+       <input id="UserInterests" value="圆滑老练" type="checkbox" name="UserInterests" />圆滑老练</div>
+       
+       <div class="list_img" 
+style="MARGIN-TOP: 4px; MARGIN-LEFT: 4px; TEXT-ALIGN: left; width:80px; ">
+       <input id="UserInterests" value="婆婆妈妈" type="checkbox" name="UserInterests" />婆婆妈妈</div>
+       
+       <div class="list_img" 
+style="MARGIN-TOP: 4px; MARGIN-LEFT: 4px; TEXT-ALIGN: left; width:80px; ">
+       <input id="UserInterests" value="循规蹈矩" type="checkbox" name="UserInterests" />循规蹈矩</div>
+       
+	 
+	 
+	 </div>
+   </div>
+
+</div>
+
+<input type="hidden" name="actions" value="EditUserInfo">
+<div class="list" style="height:30px;text-align:center;padding-top:6px;" >
+  <input type="button" name="SubmitOk" value="确定修改" onClick="JavaScrptWebSitePost();" />
+      <input type="button" name="SubmitCacel" value="回上一页" onClick="history.go(-1);" />
+  </div>
+  
+  <script language = "javaScript" src = "/Jscript/WebSiteJScriptCity.js" type="text/javascript"></script>
+<script language = "javaScript" src = "/Jscript/WebSiteJScriptTime.js" type="text/javascript"></script>
+<script>
+JavaScriptWebSiteProvinceOptionMenu('prov');
+JavaScriptWebSiteSelectCity('prov','city','{$UserComeFrom}');
+</script>
+
+-->
+  </html>
+
+  <html name="Resource_WebSiteShowUserInfo">
+    <!-- 
+
+<div class="tabletop" style="margin-top:10px; text-align:left;  padding-left:10px ">
+<B>查看 {$UserNickName} 的个人资料
+</B>
+</div>
+
+<div class="MiniTableHead">
+ <div class="minitable" id="MiniTable1" onclick="JavaScriptWebSiteDiv('1','2')"> 基本资料 </div>
+<div class="minitableno" id="MiniTable2" onclick="JavaScriptWebSiteDiv('2','2')"> 详细资料</div>
+</div>
+
+<div id="MiniTableDiv1">
+
+
+<div style="float:right;">
+
+<DIV style="POSITION: absolute; margin-left:-122px;text-align:center;background-color : #fff;overflow:auto;width:120px;height:100px;">
+<IMG boarder=0 src="{$UserFace}"> 
+</DIV>
+
+</div>
+
+
+<DIV class=list>
+
+<DIV class=list_a style="WIDTH: 250px; TEXT-ALIGN: center">会员名称： </DIV>
+
+<DIV class=list_img 
+style="MARGIN-LEFT: 10px; WIDTH: 150px; TEXT-ALIGN: left">{$UserName} </DIV>
+
+
+
+</DIV>
+
+
+<DIV class=list>
+<DIV class=list_a style="WIDTH: 250px; TEXT-ALIGN: center">会员昵称： </DIV>
+<DIV class=list_img 
+style="MARGIN-LEFT: 10px; WIDTH: 150px; TEXT-ALIGN: left">
+{$UserNickName} </DIV></DIV>
+<DIV class=list>
+<DIV class=list_a style="WIDTH: 250px; TEXT-ALIGN: center">身份证号： </DIV>
+<DIV class=list_img 
+style="MARGIN-LEFT: 10px; WIDTH: 150px; TEXT-ALIGN: left">
+{$UserIdCard}</DIV></DIV>
+<DIV class=list>
+<DIV class=list_a style="WIDTH: 250px; TEXT-ALIGN: center">邮件地址： </DIV>
+<DIV class=list_img 
+style="MARGIN-LEFT: 10px; WIDTH: 150px; TEXT-ALIGN: left">
+{$UserEmail}</DIV></DIV>
+<DIV class=list>
+<DIV class=list_a style="WIDTH: 250px; TEXT-ALIGN: center">会员积分： </DIV>
+<DIV class=list_img 
+style="MARGIN-LEFT: 10px; WIDTH: 150px; TEXT-ALIGN: left">
+{$UserPoint}
+ </DIV>
+<DIV class=list_a style="WIDTH: 250px; TEXT-ALIGN: center">会员等级： </DIV>
+<DIV class=list_img style="MARGIN-LEFT: 10px; TEXT-ALIGN: left">
+{$UserClassTitle}
+</DIV></DIV>
+<div class="list">
+  <div class="list_a" style="WIDTH: 250px; TEXT-ALIGN: center">个人信誉： </div>
+  <div class="list_img" 
+style="MARGIN-LEFT: 10px; WIDTH: 150px; TEXT-ALIGN: left"> {$UserPrestige}</div>
+  <div class="list_a" style="WIDTH: 250px; TEXT-ALIGN: center">
+  在线状态： </div>
+  <div class="list_img" style="MARGIN-LEFT: 10px; TEXT-ALIGN: left"> {$UserOnLineStatic}</div>
+</div>
+<DIV class=list>
+<DIV class=list_a style="WIDTH: 250px; TEXT-ALIGN: center">来自那里： </DIV>
+<DIV class=list_img 
+style="MARGIN-LEFT: 10px; WIDTH: 150px; TEXT-ALIGN: left">
+{$UserComeFrom}</DIV>
+<DIV class=list_a style="WIDTH: 250px; TEXT-ALIGN: center">手机号码： </DIV>
+<DIV class=list_img style="MARGIN-LEFT: 10px; TEXT-ALIGN: left">
+{$UserMobile}</DIV></DIV>
+<DIV class=list>
+<DIV class=list_a style="WIDTH: 250px; TEXT-ALIGN: center">真实姓名： </DIV>
+<DIV class=list_img 
+style="MARGIN-LEFT: 10px; WIDTH: 150px; TEXT-ALIGN: left">
+{$UserTrueName}</DIV>
+<DIV class=list_a style="WIDTH: 250px; TEXT-ALIGN: center">性 别： </DIV>
+<DIV class=list_img style="MARGIN-LEFT: 10px; TEXT-ALIGN: left">
+{$UserSex} </DIV></DIV>
+<DIV class=list>
+<DIV class=list_a style="WIDTH: 250px; TEXT-ALIGN: center">毕业院校： </DIV>
+<DIV class=list_img 
+style="MARGIN-LEFT: 10px; WIDTH: 150px; TEXT-ALIGN: left">
+{$UserSchool}</DIV>
+<DIV class=list_a style="WIDTH: 250px; TEXT-ALIGN: center">年 龄： </DIV>
+<DIV class=list_img style="MARGIN-LEFT: 10px; TEXT-ALIGN: left">
+{$UserBirthday}</DIV></DIV>
+<DIV class=list>
+<DIV class=list_a style="WIDTH: 250px; TEXT-ALIGN: center">推 荐 人： </DIV>
+<DIV class=list_img 
+style="MARGIN-LEFT: 10px; WIDTH: 150px; TEXT-ALIGN: left">
+{$UserRecommendName}</DIV>
+<DIV class=list_a style="WIDTH: 250px; TEXT-ALIGN: center">婚姻状况： </DIV>
+<DIV class=list_img style="MARGIN-LEFT: 10px; TEXT-ALIGN: left">
+{$UserMaritalStatus}</DIV></DIV>
+<DIV class=list style="HEIGHT: 52px">
+<DIV class=list_a style="WIDTH: 250px; HEIGHT: 52px; TEXT-ALIGN: center">个性签名： 
+</DIV>
+<DIV class=list_img 
+style="OVERFLOW: auto; WIDTH: 366px; HEIGHT: 50px; TEXT-ALIGN: left;margin-left:10px;">
+{$UserSign}</DIV></DIV>
+<DIV class=list style="HEIGHT: 130px">
+<DIV class=list_a style="WIDTH: 250px; HEIGHT: 130px; TEXT-ALIGN: center;">个人说明： 
+</DIV>
+<DIV class=list_img 
+style="OVERFLOW: auto; WIDTH: 400px; HEIGHT: 130px; TEXT-ALIGN: left;margin-left:10px;">
+{$UserAbout}</DIV></DIV>
+
+</div>
+
+<div id="MiniTableDiv2" style="display:none">
+
+
+
+<DIV class=list>
+  <div class="list_a" style="WIDTH: 250px; TEXT-ALIGN: center">登录次数：</div>
+  <DIV class=list_img 
+style="MARGIN-LEFT: 10px; WIDTH: 150px; TEXT-ALIGN: left">
+{$UserLoginNumber} 次</DIV>
+<DIV class=list_a style="WIDTH: 250px; TEXT-ALIGN: center">注册时间： </DIV>
+<DIV class=list_img style="MARGIN-LEFT: 10px; TEXT-ALIGN: left">
+{$UserRegTime}</DIV></DIV>
+<DIV class=list>
+<DIV class=list_a style="WIDTH: 250px; TEXT-ALIGN: center">俱 乐 部： </DIV>
+<DIV class=list_img 
+style="MARGIN-LEFT: 10px; WIDTH: 150px; TEXT-ALIGN: left">
+{$UserGroupID}
+</DIV>
+<DIV class=list_a style="WIDTH: 250px; TEXT-ALIGN: center">所属角色： </DIV>
+<DIV class=list_img style="MARGIN-LEFT: 10px; TEXT-ALIGN: left">
+{$UserRoleTitle}</DIV></DIV>
+<DIV class=list>
+<DIV class=list_a style="WIDTH: 250px; TEXT-ALIGN: center">用户经验： </DIV>
+<DIV class=list_img 
+style="MARGIN-LEFT: 10px; WIDTH: 150px; TEXT-ALIGN: left">
+{$UserExp} 点</DIV>
+<DIV class=list_a style="WIDTH: 250px; TEXT-ALIGN: center">用户魅力： </DIV>
+<DIV class=list_img style="MARGIN-LEFT: 10px; TEXT-ALIGN: left">
+{$UserCP} 点</DIV></DIV>
+<DIV class=list>
+<DIV class=list_a style="WIDTH: 250px; TEXT-ALIGN: center">虚拟货币： </DIV>
+<DIV class=list_img 
+style="MARGIN-LEFT: 10px; WIDTH: 150px; TEXT-ALIGN: left">
+{$UserMoney} 个</DIV>
+<DIV class=list_a style="WIDTH: 250px; TEXT-ALIGN: center">真实金钱： </DIV>
+<DIV class=list_img style="MARGIN-LEFT: 10px; TEXT-ALIGN: left">
+{$UserTrueMoney}</DIV></DIV>
+<DIV class=list>
+<DIV class=list_a style="WIDTH: 250px; TEXT-ALIGN: center">拥有点券： </DIV>
+<DIV class=list_img 
+style="MARGIN-LEFT: 10px; WIDTH: 150px; TEXT-ALIGN: left">
+{$UserTicket} 点</DIV>
+<DIV class=list_a style="WIDTH: 250px; TEXT-ALIGN: center">OICQ号码： </DIV>
+<DIV class=list_img style="MARGIN-LEFT: 10px; TEXT-ALIGN: left">
+{$UserOICQ}</DIV></DIV>
+<DIV class=list>
+<DIV class=list_a style="WIDTH: 250px; TEXT-ALIGN: center">发表总数： </DIV>
+<DIV class=list_img 
+style="MARGIN-LEFT: 10px; WIDTH: 150px; TEXT-ALIGN: left">
+{$UserPostNumber} 篇</DIV>
+<DIV class=list_a style="WIDTH: 250px; TEXT-ALIGN: center">最后活动： </DIV>
+<DIV class=list_img style="MARGIN-LEFT: 10px; TEXT-ALIGN: left">
+{$UserLastActTime}</DIV></DIV>
+<DIV class=list>
+<DIV class=list_a style="WIDTH: 250px; TEXT-ALIGN: center">发表主题： </DIV>
+<DIV class=list_img 
+style="MARGIN-LEFT: 10px; WIDTH: 150px; TEXT-ALIGN: left">
+{$UserTopicNumber} 篇</DIV>
+<DIV class=list_a style="WIDTH: 250px; TEXT-ALIGN: center">在线时间：</DIV>
+<DIV class=list_img style="MARGIN-LEFT: 10px; TEXT-ALIGN: left">
+{$UserOnlineTime} 分钟</DIV></DIV>
+<div class="list">
+  <div class="list_a" style="WIDTH: 250px; TEXT-ALIGN: center">回复主题： </div>
+  <div class="list_img" 
+style="MARGIN-LEFT: 10px; WIDTH: 150px; TEXT-ALIGN: left"> {$UserReTopicNumber} 篇</div>
+
+</div>
+<DIV class=list>
+<DIV class=list_a style="WIDTH: 250px; TEXT-ALIGN: center">个人网站： </DIV>
+<DIV class=list_img style="MARGIN-LEFT: 10px; TEXT-ALIGN: left">
+{$UserWebAddress}</DIV></DIV>
+<DIV class=list>
+<DIV class=list_a style="WIDTH: 250px; TEXT-ALIGN: center">个人博客： </DIV>
+<DIV class=list_img style="MARGIN-LEFT: 10px; TEXT-ALIGN: left">
+{$UserWebLog}</DIV></DIV>
+<DIV class=list>
+<DIV class=list_a style="WIDTH: 250px; TEXT-ALIGN: center">个人相册： </DIV>
+<DIV class=list_img style="MARGIN-LEFT: 10px; TEXT-ALIGN: left">
+{$UserWebGallery}</DIV></DIV>
+<DIV class=list>
+<DIV class=list_a style="WIDTH: 250px; TEXT-ALIGN: center">工作单位： </DIV>
+<DIV class=list_img style="MARGIN-LEFT: 10px; TEXT-ALIGN: left">
+{$UserWorkUnit}</DIV></DIV>
+<DIV class=list>
+<DIV class=list_a style="WIDTH: 250px; TEXT-ALIGN: center">联系地址： </DIV>
+<DIV class=list_img style="MARGIN-LEFT: 10px; TEXT-ALIGN: left">
+{$UserContactAddress}</DIV></DIV>
+<DIV class=list>
+<DIV class=list_a style="WIDTH: 250px; TEXT-ALIGN: center">联系电话： </DIV>
+<DIV class=list_img 
+style="MARGIN-LEFT: 10px; WIDTH: 150px; TEXT-ALIGN: left">
+{$UserContactTel}</DIV>
+<DIV class=list_a style="WIDTH: 250px; TEXT-ALIGN: center">邮编号码： </DIV>
+<DIV class=list_img style="MARGIN-LEFT: 10px; TEXT-ALIGN: left">
+{$UserCode}</DIV>
+</DIV>
+<DIV class=list style="HEIGHT: 78px">
+<DIV class=list_a style="WIDTH: 250px; HEIGHT: 150px; TEXT-ALIGN: center">个人性格： 
+</DIV>
+<DIV class=list_img 
+style="MARGIN-LEFT: 10px; OVERFLOW: auto; WIDTH: 400px; MARGIN-RIGHT: 0px; HEIGHT: 80px; TEXT-ALIGN: left">
+{$UserInterests}
+</DIV></DIV>
+
+
+</div>
+
+
+-->
+  </html>
+
+
+
+
+  <html name="Resource_WebSiteUserFaceBody">
+    <!-- 
+  <div style=" float:left; width:400px; background-color:#E1E1E1; display:none;position:absolute;" id="UserFaceDiv">
+
+    <div style=" float:left;MARGIN-TOP: 4px; MARGIN-LEFT: 4px; TEXT-ALIGN: left; "><img src="/images/userface/Image1.gif" onclick="JavaScript:JavascriptSetUserFace('/images/userface/Image1.gif','UserFaceDiv','UserFace','UserFaceImages');"  /></div><div style=" float:left;MARGIN-TOP: 4px; MARGIN-LEFT: 4px; TEXT-ALIGN: left; "><img src="/images/userface/Image2.gif" onclick="JavaScript:JavascriptSetUserFace('/images/userface/Image2.gif','UserFaceDiv','UserFace','UserFaceImages');"  /></div><div style=" float:left;MARGIN-TOP: 4px; MARGIN-LEFT: 4px; TEXT-ALIGN: left; "><img src="/images/userface/Image3.gif" onclick="JavaScript:JavascriptSetUserFace('/images/userface/Image3.gif','UserFaceDiv','UserFace','UserFaceImages');"  /></div><div style=" float:left;MARGIN-TOP: 4px; MARGIN-LEFT: 4px; TEXT-ALIGN: left; "><img src="/images/userface/Image4.gif" onclick="JavaScript:JavascriptSetUserFace('/images/userface/Image4.gif','UserFaceDiv','UserFace','UserFaceImages');"  /></div><div style=" float:left;MARGIN-TOP: 4px; MARGIN-LEFT: 4px; TEXT-ALIGN: left; "><img src="/images/userface/Image5.gif" onclick="JavaScript:JavascriptSetUserFace('/images/userface/Image5.gif','UserFaceDiv','UserFace','UserFaceImages');"  /></div><div style=" float:left;MARGIN-TOP: 4px; MARGIN-LEFT: 4px; TEXT-ALIGN: left; "><img src="/images/userface/Image6.gif" onclick="JavaScript:JavascriptSetUserFace('/images/userface/Image6.gif','UserFaceDiv','UserFace','UserFaceImages');"  /></div><div style=" float:left;MARGIN-TOP: 4px; MARGIN-LEFT: 4px; TEXT-ALIGN: left; "><img src="/images/userface/Image7.gif" onclick="JavaScript:JavascriptSetUserFace('/images/userface/Image7.gif','UserFaceDiv','UserFace','UserFaceImages');"  /></div><div style=" float:left;MARGIN-TOP: 4px; MARGIN-LEFT: 4px; TEXT-ALIGN: left; "><img src="/images/userface/Image8.gif" onclick="JavaScript:JavascriptSetUserFace('/images/userface/Image8.gif','UserFaceDiv','UserFace','UserFaceImages');"  /></div><div style=" float:left;MARGIN-TOP: 4px; MARGIN-LEFT: 4px; TEXT-ALIGN: left; "><img src="/images/userface/Image9.gif" onclick="JavaScript:JavascriptSetUserFace('/images/userface/Image9.gif','UserFaceDiv','UserFace','UserFaceImages');"  /></div><div style=" float:left;MARGIN-TOP: 4px; MARGIN-LEFT: 4px; TEXT-ALIGN: left; "><img src="/images/userface/Image10.gif" onclick="JavaScript:JavascriptSetUserFace('/images/userface/Image10.gif','UserFaceDiv','UserFace','UserFaceImages');"  /></div><div style=" float:left;MARGIN-TOP: 4px; MARGIN-LEFT: 4px; TEXT-ALIGN: left; "><img src="/images/userface/Image11.gif" onclick="JavaScript:JavascriptSetUserFace('/images/userface/Image11.gif','UserFaceDiv','UserFace','UserFaceImages');"  /></div><div style=" float:left;MARGIN-TOP: 4px; MARGIN-LEFT: 4px; TEXT-ALIGN: left; "><img src="/images/userface/Image12.gif" onclick="JavaScript:JavascriptSetUserFace('/images/userface/Image12.gif','UserFaceDiv','UserFace','UserFaceImages');"  /></div><div style=" float:left;MARGIN-TOP: 4px; MARGIN-LEFT: 4px; TEXT-ALIGN: left; "><img src="/images/userface/Image13.gif" onclick="JavaScript:JavascriptSetUserFace('/images/userface/Image13.gif','UserFaceDiv','UserFace','UserFaceImages');"  /></div><div style=" float:left;MARGIN-TOP: 4px; MARGIN-LEFT: 4px; TEXT-ALIGN: left; "><img src="/images/userface/Image14.gif" onclick="JavaScript:JavascriptSetUserFace('/images/userface/Image14.gif','UserFaceDiv','UserFace','UserFaceImages');"  /></div><div style=" float:left;MARGIN-TOP: 4px; MARGIN-LEFT: 4px; TEXT-ALIGN: left; "><img src="/images/userface/Image15.gif" onclick="JavaScript:JavascriptSetUserFace('/images/userface/Image15.gif','UserFaceDiv','UserFace','UserFaceImages');"  /></div><div style=" float:left;MARGIN-TOP: 4px; MARGIN-LEFT: 4px; TEXT-ALIGN: left; "><img src="/images/userface/Image16.gif" onclick="JavaScript:JavascriptSetUserFace('/images/userface/Image16.gif','UserFaceDiv','UserFace','UserFaceImages');"  /></div><div style=" float:left;MARGIN-TOP: 4px; MARGIN-LEFT: 4px; TEXT-ALIGN: left; "><img src="/images/userface/Image17.gif" onclick="JavaScript:JavascriptSetUserFace('/images/userface/Image17.gif','UserFaceDiv','UserFace','UserFaceImages');"  /></div><div style=" float:left;MARGIN-TOP: 4px; MARGIN-LEFT: 4px; TEXT-ALIGN: left; "><img src="/images/userface/Image18.gif" onclick="JavaScript:JavascriptSetUserFace('/images/userface/Image18.gif','UserFaceDiv','UserFace','UserFaceImages');"  /></div><div style=" float:left;MARGIN-TOP: 4px; MARGIN-LEFT: 4px; TEXT-ALIGN: left; "><img src="/images/userface/Image19.gif" onclick="JavaScript:JavascriptSetUserFace('/images/userface/Image19.gif','UserFaceDiv','UserFace','UserFaceImages');"  /></div><div style=" float:left;MARGIN-TOP: 4px; MARGIN-LEFT: 4px; TEXT-ALIGN: left; "><img src="/images/userface/Image20.gif" onclick="JavaScript:JavascriptSetUserFace('/images/userface/Image20.gif','UserFaceDiv','UserFace','UserFaceImages');"  /></div><div style=" float:left;MARGIN-TOP: 4px; MARGIN-LEFT: 4px; TEXT-ALIGN: left; "><img src="/images/userface/Image21.gif" onclick="JavaScript:JavascriptSetUserFace('/images/userface/Image21.gif','UserFaceDiv','UserFace','UserFaceImages');"  /></div><div style=" float:left;MARGIN-TOP: 4px; MARGIN-LEFT: 4px; TEXT-ALIGN: left; "><img src="/images/userface/Image22.gif" onclick="JavaScript:JavascriptSetUserFace('/images/userface/Image22.gif','UserFaceDiv','UserFace','UserFaceImages');"  /></div><div style=" float:left;MARGIN-TOP: 4px; MARGIN-LEFT: 4px; TEXT-ALIGN: left; "><img src="/images/userface/Image23.gif" onclick="JavaScript:JavascriptSetUserFace('/images/userface/Image23.gif','UserFaceDiv','UserFace','UserFaceImages');"  /></div><div style=" float:left;MARGIN-TOP: 4px; MARGIN-LEFT: 4px; TEXT-ALIGN: left; "><img src="/images/userface/Image24.gif" onclick="JavaScript:JavascriptSetUserFace('/images/userface/Image24.gif','UserFaceDiv','UserFace','UserFaceImages');"  /></div><div style=" float:left;MARGIN-TOP: 4px; MARGIN-LEFT: 4px; TEXT-ALIGN: left; "><img src="/images/userface/Image25.gif" onclick="JavaScript:JavascriptSetUserFace('/images/userface/Image25.gif','UserFaceDiv','UserFace','UserFaceImages');"  /></div><div style=" float:left;MARGIN-TOP: 4px; MARGIN-LEFT: 4px; TEXT-ALIGN: left; "><img src="/images/userface/Image26.gif" onclick="JavaScript:JavascriptSetUserFace('/images/userface/Image26.gif','UserFaceDiv','UserFace','UserFaceImages');"  /></div><div style=" float:left;MARGIN-TOP: 4px; MARGIN-LEFT: 4px; TEXT-ALIGN: left; "><img src="/images/userface/Image27.gif" onclick="JavaScript:JavascriptSetUserFace('/images/userface/Image27.gif','UserFaceDiv','UserFace','UserFaceImages');"  /></div><div style=" float:left;MARGIN-TOP: 4px; MARGIN-LEFT: 4px; TEXT-ALIGN: left; "><img src="/images/userface/Image28.gif" onclick="JavaScript:JavascriptSetUserFace('/images/userface/Image28.gif','UserFaceDiv','UserFace','UserFaceImages');"  /></div><div style=" float:left;MARGIN-TOP: 4px; MARGIN-LEFT: 4px; TEXT-ALIGN: left; "><img src="/images/userface/Image29.gif" onclick="JavaScript:JavascriptSetUserFace('/images/userface/Image29.gif','UserFaceDiv','UserFace','UserFaceImages');"  /></div><div style=" float:left;MARGIN-TOP: 4px; MARGIN-LEFT: 4px; TEXT-ALIGN: left; "><img src="/images/userface/Image30.gif" onclick="JavaScript:JavascriptSetUserFace('/images/userface/Image30.gif','UserFaceDiv','UserFace','UserFaceImages');"  /></div><div style=" float:left;MARGIN-TOP: 4px; MARGIN-LEFT: 4px; TEXT-ALIGN: left; "><img src="/images/userface/Image31.gif" onclick="JavaScript:JavascriptSetUserFace('/images/userface/Image31.gif','UserFaceDiv','UserFace','UserFaceImages');"  /></div><div style=" float:left;MARGIN-TOP: 4px; MARGIN-LEFT: 4px; TEXT-ALIGN: left; "><img src="/images/userface/Image32.gif" onclick="JavaScript:JavascriptSetUserFace('/images/userface/Image32.gif','UserFaceDiv','UserFace','UserFaceImages');"  /></div><div style=" float:left;MARGIN-TOP: 4px; MARGIN-LEFT: 4px; TEXT-ALIGN: left; "><img src="/images/userface/Image33.gif" onclick="JavaScript:JavascriptSetUserFace('/images/userface/Image33.gif','UserFaceDiv','UserFace','UserFaceImages');"  /></div><div style=" float:left;MARGIN-TOP: 4px; MARGIN-LEFT: 4px; TEXT-ALIGN: left; "><img src="/images/userface/Image34.gif" onclick="JavaScript:JavascriptSetUserFace('/images/userface/Image34.gif','UserFaceDiv','UserFace','UserFaceImages');"  /></div><div style=" float:left;MARGIN-TOP: 4px; MARGIN-LEFT: 4px; TEXT-ALIGN: left; "><img src="/images/userface/Image35.gif" onclick="JavaScript:JavascriptSetUserFace('/images/userface/Image35.gif','UserFaceDiv','UserFace','UserFaceImages');"  /></div><div style=" float:left;MARGIN-TOP: 4px; MARGIN-LEFT: 4px; TEXT-ALIGN: left; "><img src="/images/userface/Image36.gif" onclick="JavaScript:JavascriptSetUserFace('/images/userface/Image36.gif','UserFaceDiv','UserFace','UserFaceImages');"  /></div><div style=" float:left;MARGIN-TOP: 4px; MARGIN-LEFT: 4px; TEXT-ALIGN: left; "><img src="/images/userface/Image37.gif" onclick="JavaScript:JavascriptSetUserFace('/images/userface/Image37.gif','UserFaceDiv','UserFace','UserFaceImages');"  /></div><div style=" float:left;MARGIN-TOP: 4px; MARGIN-LEFT: 4px; TEXT-ALIGN: left; "><img src="/images/userface/Image38.gif" onclick="JavaScript:JavascriptSetUserFace('/images/userface/Image38.gif','UserFaceDiv','UserFace','UserFaceImages');"  /></div><div style=" float:left;MARGIN-TOP: 4px; MARGIN-LEFT: 4px; TEXT-ALIGN: left; "><img src="/images/userface/Image39.gif" onclick="JavaScript:JavascriptSetUserFace('/images/userface/Image39.gif','UserFaceDiv','UserFace','UserFaceImages');"  /></div><div style=" float:left;MARGIN-TOP: 4px; MARGIN-LEFT: 4px; TEXT-ALIGN: left; "><img src="/images/userface/Image40.gif" onclick="JavaScript:JavascriptSetUserFace('/images/userface/Image40.gif','UserFaceDiv','UserFace','UserFaceImages');"  /></div><div style=" float:left;MARGIN-TOP: 4px; MARGIN-LEFT: 4px; TEXT-ALIGN: left; "><img src="/images/userface/Image41.gif" onclick="JavaScript:JavascriptSetUserFace('/images/userface/Image41.gif','UserFaceDiv','UserFace','UserFaceImages');"  /></div><div style=" float:left;MARGIN-TOP: 4px; MARGIN-LEFT: 4px; TEXT-ALIGN: left; "><img src="/images/userface/Image42.gif" onclick="JavaScript:JavascriptSetUserFace('/images/userface/Image42.gif','UserFaceDiv','UserFace','UserFaceImages');"  /></div><div style=" float:left;MARGIN-TOP: 4px; MARGIN-LEFT: 4px; TEXT-ALIGN: left; "><img src="/images/userface/Image43.gif" onclick="JavaScript:JavascriptSetUserFace('/images/userface/Image43.gif','UserFaceDiv','UserFace','UserFaceImages');"  /></div><div style=" float:left;MARGIN-TOP: 4px; MARGIN-LEFT: 4px; TEXT-ALIGN: left; "><img src="/images/userface/Image44.gif" onclick="JavaScript:JavascriptSetUserFace('/images/userface/Image44.gif','UserFaceDiv','UserFace','UserFaceImages');"  /></div><div style=" float:left;MARGIN-TOP: 4px; MARGIN-LEFT: 4px; TEXT-ALIGN: left; "><img src="/images/userface/Image45.gif" onclick="JavaScript:JavascriptSetUserFace('/images/userface/Image45.gif','UserFaceDiv','UserFace','UserFaceImages');"  /></div><div style=" float:left;MARGIN-TOP: 4px; MARGIN-LEFT: 4px; TEXT-ALIGN: left; "><img src="/images/userface/Image46.gif" onclick="JavaScript:JavascriptSetUserFace('/images/userface/Image46.gif','UserFaceDiv','UserFace','UserFaceImages');"  /></div><div style=" float:left;MARGIN-TOP: 4px; MARGIN-LEFT: 4px; TEXT-ALIGN: left; "><img src="/images/userface/Image47.gif" onclick="JavaScript:JavascriptSetUserFace('/images/userface/Image47.gif','UserFaceDiv','UserFace','UserFaceImages');"  /></div><div style=" float:left;MARGIN-TOP: 4px; MARGIN-LEFT: 4px; TEXT-ALIGN: left; "><img src="/images/userface/Image48.gif" onclick="JavaScript:JavascriptSetUserFace('/images/userface/Image48.gif','UserFaceDiv','UserFace','UserFaceImages');"  /></div><div style=" float:left;MARGIN-TOP: 4px; MARGIN-LEFT: 4px; TEXT-ALIGN: left; "><img src="/images/userface/Image49.gif" onclick="JavaScript:JavascriptSetUserFace('/images/userface/Image49.gif','UserFaceDiv','UserFace','UserFaceImages');"  /></div><div style=" float:left;MARGIN-TOP: 4px; MARGIN-LEFT: 4px; TEXT-ALIGN: left; "><img src="/images/userface/Image50.gif" onclick="JavaScript:JavascriptSetUserFace('/images/userface/Image50.gif','UserFaceDiv','UserFace','UserFaceImages');"  /></div><div style=" float:left;MARGIN-TOP: 4px; MARGIN-LEFT: 4px; TEXT-ALIGN: left; "><img src="/images/userface/Image51.gif" onclick="JavaScript:JavascriptSetUserFace('/images/userface/Image51.gif','UserFaceDiv','UserFace','UserFaceImages');"  /></div><div style=" float:left;MARGIN-TOP: 4px; MARGIN-LEFT: 4px; TEXT-ALIGN: left; "><img src="/images/userface/Image52.gif" onclick="JavaScript:JavascriptSetUserFace('/images/userface/Image52.gif','UserFaceDiv','UserFace','UserFaceImages');"  /></div><div style=" float:left;MARGIN-TOP: 4px; MARGIN-LEFT: 4px; TEXT-ALIGN: left; "><img src="/images/userface/Image53.gif" onclick="JavaScript:JavascriptSetUserFace('/images/userface/Image53.gif','UserFaceDiv','UserFace','UserFaceImages');"  /></div><div style=" float:left;MARGIN-TOP: 4px; MARGIN-LEFT: 4px; TEXT-ALIGN: left; "><img src="/images/userface/Image54.gif" onclick="JavaScript:JavascriptSetUserFace('/images/userface/Image54.gif','UserFaceDiv','UserFace','UserFaceImages');"  /></div><div style=" float:left;MARGIN-TOP: 4px; MARGIN-LEFT: 4px; TEXT-ALIGN: left; "><img src="/images/userface/Image55.gif" onclick="JavaScript:JavascriptSetUserFace('/images/userface/Image55.gif','UserFaceDiv','UserFace','UserFaceImages');"  /></div><div style=" float:left;MARGIN-TOP: 4px; MARGIN-LEFT: 4px; TEXT-ALIGN: left; "><img src="/images/userface/Image56.gif" onclick="JavaScript:JavascriptSetUserFace('/images/userface/Image56.gif','UserFaceDiv','UserFace','UserFaceImages');"  /></div><div style=" float:left;MARGIN-TOP: 4px; MARGIN-LEFT: 4px; TEXT-ALIGN: left; "><img src="/images/userface/Image57.gif" onclick="JavaScript:JavascriptSetUserFace('/images/userface/Image57.gif','UserFaceDiv','UserFace','UserFaceImages');"  /></div><div style=" float:left;MARGIN-TOP: 4px; MARGIN-LEFT: 4px; TEXT-ALIGN: left; "><img src="/images/userface/Image58.gif" onclick="JavaScript:JavascriptSetUserFace('/images/userface/Image58.gif','UserFaceDiv','UserFace','UserFaceImages');"  /></div><div style=" float:left;MARGIN-TOP: 4px; MARGIN-LEFT: 4px; TEXT-ALIGN: left; "><img src="/images/userface/Image59.gif" onclick="JavaScript:JavascriptSetUserFace('/images/userface/Image59.gif','UserFaceDiv','UserFace','UserFaceImages');"  /></div><div style=" float:left;MARGIN-TOP: 4px; MARGIN-LEFT: 4px; TEXT-ALIGN: left; "><img src="/images/userface/Image60.gif" onclick="JavaScript:JavascriptSetUserFace('/images/userface/Image60.gif','UserFaceDiv','UserFace','UserFaceImages');"  /></div>
+    
+
+    <div style="width:100%; text-align:right; padding-right:10px; margin-top:4px; " >
+    </div>
+    <div style="width:100%; text-align:right; padding-right:10px; margin-top:4px; " >
+<font onclick="JscriptUserFaceDiv('0','UserFaceDiv')" style="cursor:default;">取消</font>
+    </div>
+  </div>
+  -->
+  </html>
+
+
+
+  <html name="Resource_WebSiteSearchInfo">
+    <!--
+<div class="tabletop" style="margin-top:10px;">&nbsp;&nbsp;-=&gt; 搜索文章</div>
+<div class="list">
+  <div class="list_a" style="width:250px;  text-align:center; ">
+  查询关键字
+   </div>
+  <div class="list_img" style="text-align:left; margin-top:3px; margin-left:10px; ">
+  <input name="KeyWord" type="text" id="KeyWord" style="width:250px;" onkeydown="if(event.keyCode==13){javascript:JsSearchTopic();return false;}" />   
+
+</div>
+  </div>
+  
+  <div class="list">
+  <div class="list_a" style="width:250px;  text-align:center; ">
+  帖子方式
+   </div>
+  <div class="list_img" style="text-align:left; margin-top:3px; margin-left:20px; ">
+  
+    <input type="checkbox" name="s5" value="1" checked="checked" />
+    主题标题
+      <input type="checkbox" name="s6" value="1" />
+主题内容 
+<input type="checkbox" name="s8" value="1" />
+回复标题
+<input type="checkbox" name="s7" value="1" />
+回复内容
+
+</div>
+  </div>
+  
+  <div class="list">
+  <div class="list_a" style="width:250px;  text-align:center; ">
+  作者方式
+   </div>
+  <div class="list_img" style="text-align:left; margin-top:3px; margin-left:20px; ">
+    
+    <input type="checkbox" name="s2" value="1" />
+作者名称
+  <input type="checkbox" name="s1" value="1" />
+  作者昵称
+  <input type="checkbox" name="s4" value="1" />
+回复者名称
+<input type="checkbox" name="s3" value="1" />
+回复者昵称
+
+</div>
+  </div>
+  
+  <div class="list">
+  <div class="list_a" style="width:250px;  text-align:center; ">
+  
+ 查询板块
+    
+   </div>
+  <div class="list_img" style="text-align:left; margin-top:3px; margin-left:20px; ">
+     <select onChange="WebSite_SetMyArray()" name="TopicParentID" id="TopicParentID" >
+      <option value="0" selected>文章所属于论坛</option>
+    </select>
+    <select name="TopicSubjectID" id="TopicSubjectID">
+      <option value="0" selected>文章所属专题</option>
+    </select>
+</div>
+  </div>
+  
+  <div class="list">
+  <div class="list_a" style="width:250px;  text-align:center; ">
+  发表日期
+   </div>
+  <div class="list_img" style="text-align:left; margin-top:3px; margin-left:20px; ">
+    <select name="ActAtrickTime">
+    <OPTION value="0">所有时间</OPTION>
+      <OPTION value="1">24小时内热门信息</OPTION>
+	<OPTION value="2">48小时内热门信息</OPTION>
+	<OPTION value="3">三天内热门信息</OPTION>
+	<OPTION value="7">一周内热门信息</OPTION>
+	<OPTION value="30">本月热门信息</OPTION>
+	<OPTION value="90">本季度热门信息</OPTION>
+	<OPTION value="365">年度热门信息</OPTION>
+    </select>
+</div>
+  </div>
+  
+  <div class="list" style="height:30px;text-align:center;padding-top:6px;" >
+  <input type="button" name="SubmitOk" value="确定搜索" onClick="JsSearchTopic();" />
+      <input type="button" name="SubmitCacel" value="回上一页" onClick="history.go(-1);" />
+  </div>
+-->
+  </html>
+
+
+  <html name="Resource_WebSiteUserListTable">
+    <!--
+<DIV class=mainbar1 style="margin-top:10px;">
+  <DIV style="FLOAT: left; padding-left:10px;padding-top:2px;">
+  <img alt="" src="/images/Forum_readme.gif" align="middle" />
+
+用户昵称<input type="text" name="SearchUserName" />
+全部
+<input type="radio" name="UserSexRad" value="" checked="checked" />
+男生
+<input type="radio" name="UserSexRad" value="M" />
+女生
+<input type="radio" name="UserSexRad" value="F" />
+<select name="SearchUserOld">
+  <option value="0" selected="selected">所有用户</option>
+  <option value="1">17岁以下</option>
+  <option value="2">18-24岁</option>
+  <option value="3">25-30岁</option>
+  <option value="4">31岁以上</option>
+</select>
+<input type="button" name="Submit" value=" 搜索 " onclick="javascript:JavaScriptSearchUser();" />
+
+
+</DIV>
+<div style="float:right; padding-right:10px;">
+{$WebSitePageListTopInfo}
+</div>
+</DIV>
+<DIV class=tabletop style="MARGIN-TOP: 10px; TEXT-ALIGN: center">
+  <DIV class=list_r>
+  <DIV class=list1 style="WIDTH: 50px; PADDING-TOP: 4px; TEXT-ALIGN: center"><A title=按性别排列 
+href="?UserOrder={$UserSexOrder}&{$WebSitePageSearchUrl}">性别</A> </DIV>
+  <DIV class=list1 
+style="WIDTH: 50px; PADDING-TOP: 4px; TEXT-ALIGN: center"><A title=按年龄排列 
+href="?UserOrder={$UserOldOrder}&{$WebSitePageSearchUrl}">年龄</A> </DIV>
+  <DIV class=list1 
+style="WIDTH: 50px; PADDING-TOP: 4px; TEXT-ALIGN: center"><A title=按积分排列 
+href="?UserOrder={$UserPointOrder}&{$WebSitePageSearchUrl}">积分</A> </DIV>
+  <DIV class=list1 
+style="WIDTH: 50px; PADDING-TOP: 4px; TEXT-ALIGN: center"><A title=按经验排列 
+href="?UserOrder={$UserExpOrder}&{$WebSitePageSearchUrl}">经验</A> </DIV>
+  <DIV class=list1 
+style="WIDTH: 50px; PADDING-TOP: 4px; TEXT-ALIGN: center"><A title=按发表数排列 
+href="?UserOrder={$UserPostOrder}&{$WebSitePageSearchUrl}">发表数</A> </DIV>
+  <DIV class=list1 
+style="WIDTH: 50px; PADDING-TOP: 4px; TEXT-ALIGN: center"><A title=按回复数排列 
+href="?UserOrder={$UserRePostOrder}&{$WebSitePageSearchUrl}">回复数</A> </DIV>
+  <DIV style="PADDING-TOP: 4px; TEXT-ALIGN:right"><A title=按在线状态排列 
+href="?UserOrder={$UserOnlineStaticOrder}&{$WebSitePageSearchUrl}">在线状态 </A> </DIV></DIV>
+  <DIV class=list1 style="PADDING-TOP: 4px; TEXT-ALIGN: center">排序</DIV>
+  <DIV style="PADDING-TOP: 4px; TEXT-ALIGN: center; "> <A title=按用户昵称排列 
+href="?UserOrder={$UserNameOrder}&{$WebSitePageSearchUrl}">用户昵称</A> </DIV>
+</DIV>
+
+
+    -->
+</html>
+  <html name="Resource_WebSiteUserListInfoTable">
+    <!--
+<DIV class="list">
+<DIV class="list_r1">
+  <DIV class="list_a" style="width:50px;">
+    {$UserSex}
+  </DIV>
+  <DIV class="list_c"  style="width:50px;">{$UserBirthday}</DIV>
+  <DIV class="list_a" style="width:50px;">
+    {$UserPoint}
+  </DIV>
+  <DIV class="list_c"  style="width:50px;">{$UserExp}</DIV>
+  <DIV class="list_a" style="width:50px;">
+{$UserPostNumber}
+  </DIV>
+  <DIV class="list_c"  style="width:50px;">{$UserReTopicNumber}</DIV>
+  <DIV style=" text-align:center; float:right; ">{$UserOnLineStatic}</DIV>
+</DIV>
+<DIV style="FLOAT: right"></DIV>
+<DIV class="list_s">{$ArTicleFloor}</DIV>
+<DIV style="MARGIN-TOP: -2px; text-align:center;">
+  <A 
+title="查看{$UserNickName}的个人资料" 
+href="UserInfo.aspx?UserID={$UserID}" 
+target="_blank">{$UserNickName}</A>
+</DIV>
+</DIV>
+
+-->
+</html>
+
+  <html name="Resource_WebSiteUserListBottonTable">
+    <!--
+<DIV class=mainbar1 style="margin-top:10px;">
+  <DIV style="FLOAT: right; TEXT-INDENT: 5px;padding-right:10px;">
+    {$WebSitePageListBottomInfo}
+  </DIV>
+</DIV>
+    -->
+  </html>
+
+  <html name="Resource_WebSiteDefautlWebSiteTable">
+    <!--
+  <table width="100%" height="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+    <tr>
+      <td align="center" valign="middle">
+        <table width="371" height="84" border="0" cellpadding="0" cellspacing="0">
+          <tr>
+            <td style="font-size:12px;"  align="left">WebSite 是一套根据Csharpbbs   设计的社区系统，数据库采用access，三层结构，对于.net技术不是很强的爱好者是很有帮助的，风格和csharpbbs是一样的，里面的有些功能，如发贴后才能浏览等都比csharpbbs强，其中用户的积分方式是采用不同角色给于不积分的，反正功能很多拉，简单易上手。</td>
+          </tr>
+        </table>
+        <table width="371" border="0" cellpadding="0" cellspacing="0">
+          <tr>
+            <td align="right" >
+              <a href="/Forums/DeFault.aspx" style="font-size:14px; color:#FF0000">进入论坛</a>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+
+  -->
+  </html>
+  <html name="Resource_WebSiteSelectGroupRole">
+    <!--
+  <div style="width:400px; height:300px;">
+    <div class="mainbar1" style="height:30px; padding-top:4px; text-align:left; padding-left:4px;">
+      <b>{$WebSiteSelectGroupRoleTitle}</b>
+    </div>
+    <DIV class="list" style="height:240px">
+      <div>
+        <div style="width:80px; padding-left:6px; text-align:left; float:left">可选择列表</div>
+        <div style="width:80px; padding-right:6px; text-align:right; float:right">已选择列表</div>
+        <div class="main"  style="width:40px; padding-left:6px; text-align:center; float:left; margin-left:87px;"></div>
+      </div>
+
+      <div>
+        <div style="width:160px; height:220px; padding-left:6px; text-align:left; float:left">
+          <select id="listAvailableRoles" ondblclick="copySelected(listAvailableRoles,listAssignedRoles);" multiple="multiple" name="listAvailableRoles" style="width:140px; height:220px">
+            {$WebSiteSlectList}
+          </select>
+        </div>
+        
+        
+        <div style="width:160px; height:220px; padding-right:6px; text-align:right; float:right">
+          <select id="listAssignedRoles" ondblclick="copySelected(listAssignedRoles,listAvailableRoles);" multiple="multiple" name="listAssignedRoles" style="width:140px; height:200px">
+          </select>
+        </div>
+        <div class="main"  style="width:40px; height:220px; padding-left:0px; text-align:center; float:left; margin-left:15px;">
+          <div>
+            <input name="button" type="button" onclick="copySelected(listAvailableRoles,listAssignedRoles)" value=" &gt; " />
+          </div>
+          <div>
+            <input name="button3" type="button" onclick="copySelected(listAssignedRoles,listAvailableRoles)" value=" &lt; " />
+          </div>
+          <div>
+            <input name="button2" type="button" onclick="copyAll(listAvailableRoles,listAssignedRoles)" value="&gt;&gt;" />
+          </div>
+          <div>
+            <input name="button" type="button" onclick="copyAll(listAssignedRoles,listAvailableRoles)" value="&lt;&lt;" />
+          </div>
+        </div>
+      </div>
+
+
+    </DIV>
+
+    <div class="mainbar2" style="height:30px; padding-top:4px;text-align:center">
+      <input name="GroupList" type="hidden" value="{$WebSiteGroupListValue}" />
+      <input name="GroupListName" type="hidden" value="{$WebSiteGroupListName}" />
+      <input type="button" name="SubmitOkorle"  onclick="JsSubmitSelectGroupOk()" value="确定操作" />
+      &nbsp;&nbsp;
+      <input type="button" name="SubmitCancleorle" value="取消操作" onclick="JsSubmitSelectGroupCancle();" />
+    </div>
+  </div>
+  -->
+  </html>
+</WebSite>

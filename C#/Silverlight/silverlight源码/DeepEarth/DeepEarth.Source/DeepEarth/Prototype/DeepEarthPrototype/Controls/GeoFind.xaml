@@ -1,0 +1,81 @@
+﻿<UserControl x:Class="DeepEarthPrototype.Controls.GeoFind"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+			 xmlns:vsm="clr-namespace:System.Windows;assembly=System.Windows">
+
+    <Grid x:Name="LayoutRoot">
+
+        <vsm:VisualStateManager.VisualStateGroups>
+            <vsm:VisualStateGroup x:Name="VisualStateGroup">
+            	<vsm:VisualStateGroup.Transitions>
+            		<vsm:VisualTransition GeneratedDuration="00:00:00.8000000"/>
+            	</vsm:VisualStateGroup.Transitions>
+                <vsm:VisualState x:Name="OpenGeoFindListBox">
+                    <Storyboard x:Name="OpenGeoFindListBoxStoryboard">
+                        <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="GeocodeFindResults" Storyboard.TargetProperty="(UIElement.Opacity)">
+                            <SplineDoubleKeyFrame KeyTime="00:00:00" Value="1"/>
+                        </DoubleAnimationUsingKeyFrames>
+                        <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="GeocodeFindResults" Storyboard.TargetProperty="(FrameworkElement.Height)">
+                            <SplineDoubleKeyFrame KeyTime="00:00:00" Value="170"/>
+                        </DoubleAnimationUsingKeyFrames>
+                    </Storyboard>
+                </vsm:VisualState>
+                <vsm:VisualState x:Name="CloseGeoFindListBox">
+                    <Storyboard x:Name="CloseGeoFindListBoxStoryboard" Completed="CloseGeoFindListBoxStoryboard_Completed">
+                        <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="GeocodeFindResults" Storyboard.TargetProperty="(UIElement.Opacity)">
+                            <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                        </DoubleAnimationUsingKeyFrames>
+                    </Storyboard>
+                </vsm:VisualState>
+            </vsm:VisualStateGroup>
+        </vsm:VisualStateManager.VisualStateGroups>
+
+        <StackPanel VerticalAlignment="Top">
+
+            <StackPanel VerticalAlignment="Top" Margin="3,0,3,3">
+
+                <TextBlock Text="Street Address" Margin="3,0,3,0" Foreground="White" HorizontalAlignment="Stretch"/>
+                <TextBox x:Name="StreetAddressText" Margin="3,0,3,0" 
+    				HorizontalContentAlignment="Stretch" 
+    				Height="21" 
+    				VerticalAlignment="Center" 
+    				ToolTipService.ToolTip="Enter Street Address Here (Optional)" 
+    				KeyUp="FindText_KeyUp" HorizontalAlignment="Stretch" />
+
+                <TextBlock Text="Town or City" Margin="3,0,3,0" Foreground="White" HorizontalAlignment="Stretch"/>
+                <TextBox x:Name="TownCityText" Margin="3,0,3,0" 
+    				HorizontalContentAlignment="Stretch" 
+    				Height="21" 
+    				VerticalAlignment="Center" 
+    				ToolTipService.ToolTip="Enter Town or City Here (Optional)" 
+    				KeyUp="FindText_KeyUp" HorizontalAlignment="Stretch" />
+
+                <TextBlock Text="Country or Region " Margin="3,0,3,0" Foreground="White" HorizontalAlignment="Stretch"/>
+                <TextBox x:Name="CountryRegionText" Margin="3,0,3,0" 
+    				HorizontalContentAlignment="Stretch" 
+    				Height="21" 
+    				VerticalAlignment="Center" 
+    				ToolTipService.ToolTip="Enter Country or Region Here (Optional)" 
+    				KeyUp="FindText_KeyUp" HorizontalAlignment="Stretch" />
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,3,0,3">
+
+                    <Button x:Name="Find" Style="{StaticResource StandardButton}" 
+                		ToolTipService.ToolTip="Click and Zoom to Location" Content="Find" Height="21" Width="50" HorizontalAlignment="Left" Margin="3,0,3,0" />
+
+                    <Button x:Name="Clear" Style="{StaticResource StandardButton}" 
+                		ToolTipService.ToolTip="Clear Location Selections" Content="Clear" Height="21" Width="50" HorizontalAlignment="Left" Margin="3,0,3,0" />
+
+                </StackPanel>
+            </StackPanel>
+            
+            <TextBlock Text="Find Results" Margin="3,3,3,0" Foreground="#FFFFFFFF" />
+            
+            
+            <ListBox x:Name="GeocodeFindResults" SelectionChanged="GeocodeFindResults_SelectionChanged"
+    			Margin="3,0,3,3" ItemTemplate="{StaticResource GeocodeResultTemplate}" Style="{StaticResource GeoFindListBoxStyle}" Opacity="0" Height="0" ScrollViewer.HorizontalScrollBarVisibility="Disabled"/>
+
+        </StackPanel>
+
+    </Grid>
+
+</UserControl>

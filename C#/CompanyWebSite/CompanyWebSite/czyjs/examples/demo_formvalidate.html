@@ -1,0 +1,44 @@
+﻿<html>
+	<head>
+	<title></title>
+<script type="text/javascript" src="../czy-js-all.js"></script>
+<link rel="stylesheet" href="../czy-css-all.css" type="text/css"/>
+<style type="text/css">
+#drag{ height:50px; width:50px; background-color:Red;}
+</style>
+<script type="text/javascript">
+
+window.onload=function()
+{
+	    new czyjs.Validate.FormValidateHelper(
+	    {
+	       userName:"Text1",
+	       pwd:"Text2",
+	       comParePwd:"Text3",
+	       email:"Text4",
+	       phone:"Text5",
+	       tel:"Text6",
+	       QQ:"Text7"
+	    }
+	    );
+
+}
+
+
+</script>
+
+	</head>
+	<body>
+<form runat="server" id="form1">
+<div><label for="Text1">*</label>用户名:<input id="Text1" type="text" Need="true"/><span id="Text1Msg"></span></div> 
+<div> <label for="Text2">*</label>密码:<input id="Text2" type="text" Need="true"/><span id="Text2Msg"></span></div> 
+ <div><label for="Text3">*</label>再次输入密码:<input id="Text3" type="text" Need="true"/><span id="Text3Msg"></span></div> 
+ <div> <label for="Text4">*</label>邮件:<input id="Text4" type="text" Need="true"/><span id="Text4Msg"></span></div> 
+ <div><label for="Text5">*</label>电话:<input id="Text5" type="text" Need="true"/><span id="Text5Msg"></span></div> 
+ <div><label for="Text6">*</label>手机:<input id="Text6" type="text" Need="true"/><span id="Text6Msg"></span></div> 
+<div>QQ:<input id="Text7" type="text" /><span id="Text7Msg"></span></div> 
+<input type="submit"  value="submit"/>
+</form>
+      
+	</body>
+</html>

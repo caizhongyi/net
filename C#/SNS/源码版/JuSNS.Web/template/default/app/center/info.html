@@ -1,0 +1,44 @@
+﻿#parse("_head.html")
+<script src="$webpath/library/js/date/WdatePicker.js" type="text/javascript"></script>
+<div id="snsmenu">
+#parse("_menu.html")
+</div>
+<div id="snsbody">
+    <div id="snshead">$cpagetitle</div>
+
+
+    <div class="itemmenu">
+        <ul>
+            <li class="current"><a href="javascript:;">应用程序详情</a></li>
+            <li><a href="$webpath/app/center/default$exname">应用列表</a></li>
+            <li><a href="$webpath/app/center/default$exname?q=hot">热门应用</a></li>
+            <li><a href="$webpath/app/center/default$exname?q=my">我安装的应用</a></li>
+            <li><a href="$webpath/app/center/default$exname?q=mys">我提交的应用</a></li>
+            <li><a href="$webpath/app/center/dev$exname">开发者中心</a></li>
+            <li><a href="$webpath/app/center/help$exname">开发者帮助中心</a></li>
+        </ul>
+    </div>
+    <div id="snsbody-sec" style="width:580px;">
+    <div class="app">
+            <div style="font-size:14px;margin:10px 0;font-weight:bold;width:99%;clear:both;float:left;"><img src="$apppath/$icon" align="middle" /> $cpagetitle</div>
+            <div class="pitem1 images"><a href="$spaceurl"><img src="$headpic" align="middle" /> 此程序由$truename开发</a></div>
+            <div class="pitem"><a href="$apppath/$pic" target="_blank" title="点击查看大图"><img src="$apppath/$pic" /></a></div>
+            <div class="pitem">$content</div>
+            <div class="pitem1 strong">安装协议</div>
+            <div class="pitem">$SetupContent</div>
+            <div class="pitem">人气：$clicks，安装次数:$setupnumber</div>
+    </div>
+    </div>
+     <div id="snsbody-right" style="width:200px;padding-top:30px;">
+         #if($issetup)
+            <div class="app-action-install reshow" style="width:120px;"><a href="javascript:;" onclick="joinapp($appid,$uid,0)">卸载程序</a></div>
+         #else
+            <div class="app-action-install"><a href="javascript:;" onclick="joinapp($appid,$uid,1)">同意协议，安装此程序</a></div>
+         #end
+     #if(!$isdev)
+        <div class="app-action-install1" style="margin-top:20px;"><a href="dev$exname">我也要成为开发者</a></div>
+     #end
+     
+     </div>
+</div>
+#parse("_foot.html")

@@ -1,0 +1,4 @@
+F:\源码\FtpClient_cs\FtpClient_cs\FtpClient_cs\obj\Debug\FtpClient_cs.exe
+F:\源码\FtpClient_cs\FtpClient_cs\FtpClient_cs\obj\Debug\FtpClient_cs.pdb
+F:\类库\C#\FtpClient_cs\FtpClient_cs\FtpClient_cs\obj\Debug\FtpClient_cs.exe
+F:\类库\C#\FtpClient_cs\FtpClient_cs\FtpClient_cs\obj\Debug\FtpClient_cs.pdb

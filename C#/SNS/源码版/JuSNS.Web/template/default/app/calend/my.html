@@ -1,0 +1,43 @@
+﻿#parse("_head.html")
+<link href="$templatepath/css/app/gift.css" rel="stylesheet" type="text/css" />
+<div id="snsmenu">
+#parse("_menu.html")
+</div>
+<div id="snsbody">
+    <div id="snshead">日历管理</div>
+    <div class="itemmenu">
+        <ul>
+            <li><a href="$webpath/app/calend/default$exname">创建日历</a></li>
+            <li class="current"><a href="$webpath/app/calend/my$exname">日历管理</a></li> 
+        </ul>
+    </div>
+    
+
+    <div class="calend">
+            <div class="heads">
+                <div class="calendt1">标题</div>
+                <div class="calendt2">开始时间</div>
+                <div class="calendt3">结束时间</div>
+                <div class="calendt4">提醒时间</div>
+                <div class="calendt5">内容</div>
+            </div>
+             #if($recordcount>0)
+                <ul>
+                #foreach($info in $infolist)
+                <li id="param_$info.id">
+                   <div class="calend1">$info.title $info.showop #if($info.showedit)$info.showedit#end</div>
+                   <div class="calend2">$info.starttime</div>
+                   <div class="calend3">$info.endtime</div>
+                   <div class="calend4">$info.tixingtime</div>
+                   <div class="calend5" title="$info.contentall">$info.content</div>
+                </li>
+                #end
+              </ul>
+              <div class="pages">$pagelist</div>
+        #else
+            <div>还没有记录</div>
+        #end       
+    </div>
+    
+</div>
+#parse("_foot.html")

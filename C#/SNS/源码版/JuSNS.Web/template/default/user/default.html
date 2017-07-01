@@ -1,0 +1,234 @@
+﻿#parse("_headspace.html")
+<div id="userspacebgcontral">
+    <div id="space_head">
+        <div class="headfist">
+            $username的个人主页
+        </div>
+        <div class="menu">
+            <ul>
+                <li class="current"><a href="$spaceurl">首页</a></li>
+                <li><a href="$webpath/user/twitter$exname?uid=$userid">微博</a></li>
+                <li><a href="$webpath/user/blog$exname?uid=$userid">博文</a></li>
+                <li><a href="$webpath/user/album$exname?uid=$userid">相片</a></li>
+                <li><a href="$webpath/user/ative$exname?uid=$userid">活动</a></li>
+                <li><a href="$webpath/user/shops$exname?uid=$userid">商品</a></li>
+                <li><a href="$webpath/user/ask$exname?uid=$userid">问答</a></li>
+                <li><a href="$webpath/user/vote$exname?uid=$userid">投票</a></li>
+                <li><a href="$webpath/homes$exname?uid=$userid">社区动态</a></li>
+                <li><a href="$webpath/home/friend/default$exname?uid=$userid">好友</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="space_bodyleft">
+        <div class="headpic">
+            <a><img src="$headpic" /></a>
+        </div>
+        <div class="profile">
+                #if($profile)<div class="vip">$profile</div>#end 
+                #if($uid>0)
+                <a href="$webpath/app/poke/default$exname?uid=$userid"  class="sicon-poke">打招呼</a> &nbsp; <a href="$webpath/home/box/mail$exname?fid=$userid&uid=$uid" class="sicon-mails">发消息</a><br />
+                   <a href="$webpath/app/gift/default$exname?uid=$userid" class="sicon-gift">送礼物</a> &nbsp; <a href="$spaceurl#gbookcontent" class="sicon-mail">留 &nbsp;&nbsp; 言</a><br />
+                    #if($friend)#if($uid!=$userid)<a href="javascript:;" onclick="ATTUser($userid,$uid)" class="sicon-att">关注他</a> &nbsp; <a href="javascript:;" onclick="addfriend($userid,'$username',$uid)" class="sicon-friend">加好友</a><br />
+                   #end#else<a href="javascript:;" onclick="colosedyn($userid,$uid)" class="toblack">屏蔽他的动态</a>#end
+               #end
+        </div>
+        #if($sex)<div class="uitem"> <em>性别：</em>$sex</div>#end
+        #if($constellation)<div class="uitem"> <em>星座：</em>$constellation</div>#end
+        #if($birthday)<div class="uitem"> <em>生日：</em>$birthday</div>#end
+        #if($add)<div class="uitem"> <em>居住地：</em>$add</div>#end
+        #if($home!=""&&$home)<div class="uitem"> <em>家乡：</em>$home</div>#end
+        #if($inter!=0&&$inter)<div class="uitem"> <em>积分：</em>$inter</div>#end
+        #if($interyb!=0&&$interyb)<div class="uitem"> <em>$gpoint：</em>$interyb</div>#end
+        #if($money!="0.00"&&$money)<div class="uitem"> <em>帐户：</em>$money</div>#end
+        <p style="height:15px;">&nbsp;</p>
+         #if($edurecordcount>0)
+        <div class="userflagtitle" style="width:95%;"><span>教育经历</span></div>
+        <div class="twitterlist">
+        <ul>
+            #foreach($edu in $edulist)
+                <li> &bull; <a href="$webpath/home/friend/search$exname?schoolname=$edu.schoolname&levels=$edu.levelsflag">[$edu.levels] $edu.schoolname</a> <span class="time">$edu.leaveyear</span></li>
+            #end
+        </ul>
+        </div>
+        #end
+         #if($careerrecordcount>0)
+        <div class="userflagtitle" style="width:95%;"><span>工作经历</span></div>
+        <div class="twitterlist">
+        <ul>
+            #foreach($career in $careerlist)
+                <li> &bull; <a href="$webpath/home/friend/search$exname?companyname=$career.company">$career.company</a> <span class="time">$career.leavetime</span></li>
+            #end
+        </ul>
+        </div>
+        #end
+
+        #if($twitrecordcount>0)
+        <div class="userflagtitle" style="width:95%;"><span>微博</span><em><a href="$webpath/app/twitter/default$exname?q=$userid">更多...</a></em></div>
+        <div class="twitterlist">
+        <ul>
+            #foreach($twit in $twitlist)
+                <li> &bull; <a href="$twit.twitterurl">$twit.content</a> <span class="time">$twit.time</span></li>
+            #end
+        </ul>
+        </div>
+        #end
+        #if($giftrecordcount>0)
+        <div class="userflagtitle" style="width:95%;"><span>收到的礼物</span><em><a href="$webpath/app/gift/default$exname?uid=$userid">我也要送礼物</a></em></div>
+         <div class="giftlist">
+        <ul>
+            #foreach($gift in $giftlist)
+                <li> 
+                <div class="aa">
+                <a href="$webpath/app/gift/default$exname"><img src="$gift.giftpic" /></a></div>
+                <div class="bb">
+                     <a href="$webpath/app/gift/default$exname">$gift.giftname</a><br />
+                     <a href="$gift.spaceurl">$gift.truename</a> 送<br />
+                     <span class="time">$gift.time</span>
+                </div>
+               
+                 </li>
+            #end
+        </ul>
+        </div>
+        #end
+
+    </div>
+    <div id="space_bodymiddle">
+        <div class="usernames">
+            $username&nbsp;#if($profile)$profile#end &nbsp; <span>来访者($visitnumber)</span>
+            #if($twitter!="")<p>$twitter <a href="$twitterurl#commentcontent">评论</a> &nbsp; <a href="$webpath/app/twitter/default$exname?q=$userid">更多微博...</a></p>#end
+        </div>
+        <div class="userflagtitle"><span>$username的动态</span><em><a href="$webpath/homes$exname?uid=$userid">更多...</a></em></div>
+        <div class="dynusernews">
+           <div class="content">
+                <ul id="dyn-content">
+                $dynlist
+                </ul>
+            </div>
+        </div>
+        #if($blogrecordcount>0)
+            <div class="userflagtitle"><span>博客</span><em><a href="$webpath/app/blog/default$exname?q=$userid">更多...</a></em></div>
+               <div class="bloglist">
+                <ul>
+                    #foreach($blog in $bloglist)
+                        <li>
+                           <div class="title"><a href="$blog.blogurl">$blog.title</a> <span class="time">$blog.time</span></div>
+                           <div class="content">$blog.content</div>
+                           <div class="comment"><a href="$blog.blogurl">阅读($blog.clicks)</a> &nbsp; <a href="$blog.blogurl#commentcontent">评论($blog.comments)</a></div>
+                         </li>
+                    #end
+                </ul>
+              </div>
+      #end
+       #if($albumrecordcount>0)
+        <div class="userflagtitle"><span>相册相片</span><em><a href="$webpath/app/album/default$exname?q=$userid">更多...</a></em></div>
+            <div class="albumlist">
+                <ul>
+                    #foreach($album in $albumlist)
+                        <li>
+                            <a href="$webpath/app/album/albumview$exname?aid=$album.albumid"><img src="$album.pic" /></a><br />
+                         </li>
+                    #end
+                </ul>
+              </div>
+        #end
+        #if(!$gbookvisiable)
+                <div class="userflagtitle" id="usergbook"><span>留言本</span></div>
+                <div class="gbooklist">
+                    <ul>
+                        #foreach($gbook in $gbooklist)
+                            <li>
+                                   <div class="center aa images"><a href="$gbook.spaceurl"><img src="$gbook.headpic" /><br />$gbook.truename</a></div> 
+                                   <div class="bb">
+                                    <div class="title"><a href="$gbook.spaceurl">$gbook.truename</a> 留言于 <span class="time">$gbook.time</span></div>
+                                    <div class="content">$gbook.content</div>
+                                   </div>                    
+                             </li>
+                        #end
+                    </ul>
+                  </div>
+                  #if($uid>0)
+                <form id="gbookpost" name="gbookpost">
+                    <div>留言给$username</div>
+                  <div class="pitem">
+                       <textarea name="gbookcontent" id="gbookcontent" class="f-area" style="width:99%;height:80px;"></textarea>
+                  </div>
+                  <div class="pitem1">
+                    <input  id="formbutton" type="button" class="btn_blue4" value="给他留言"  onclick="return sendgbook($userid,$uid);" />
+                  </div>
+                </form>
+                #end
+            #end
+    </div>
+    <div id="space_bodyright">
+    <div class="userflagtitle" style="width:95%;"><span>最近访客</span></div>
+    <div class="visitlist">
+        <ul>
+            #foreach($visit in $visitlist)
+                <li>
+                    <span class="images center"><a href="$visit.spaceurl"><img src="$visit.userhead" /><br />$visit.truename</a></span>
+                 </li>
+            #end
+        </ul>
+    </div>
+    #if(!$friendvisiable)
+    <div class="userflagtitle" style="width:95%;"><span>好友</span></div>
+    <div class="visitlist">
+        <ul>
+            #foreach($frd in $frdlist)
+                <li>
+                    <span class="images center"><a href="$frd.spaceurl"><img src="$frd.userhead" /><br />$frd.truename</a></span>
+                 </li>
+            #end
+        </ul>
+    </div>
+    #end
+    </div>
+</div>
+#parse("_foot.html")
+<script type="text/javascript">
+    function sendgbook(touid,uid)
+    {
+        var gbookcontent=jQuery("#gbookcontent").val();
+        if(gbookcontent=="")
+        {
+             showErrorResult("请填写留言内容！");return;
+        }
+        jQuery.get(ajaxUrl, { action:"SendGBook", gbookcontent:gbookcontent, touid:touid,uid:uid, param:Math.random() }, 
+          function(msg)
+          {
+             if(msg=="1")
+             {
+                 showRightResult("留言成功！");
+             }
+             else
+             {
+                 showErrorResult(msg);
+             }
+          }
+        );                 
+    }
+    function colosedyn(userid,uid)
+    {
+        if (!confirm("确定要屏蔽此用户吗？\n屏蔽后将不能接受他的动态。")) return;
+        jQuery.get(ajaxUrl, { action:"CloseDynAjax", userid:userid,uid:uid, param:Math.random() }, 
+        function(msg)
+        {
+            if(msg.indexOf("succs")>-1)
+            {
+                 showRightResult("屏蔽成功，下次登录将看不到此用户的动态");
+            }
+            else if(msg.indexOf("closeed")>-1)
+            {
+               showErrorResult("此用户已经屏蔽过了");
+            }
+            else
+            {
+               showErrorResult("操作失败");
+            }
+        }
+       );          
+    }
+
+</script>

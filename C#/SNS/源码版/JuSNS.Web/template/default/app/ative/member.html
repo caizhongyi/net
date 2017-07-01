@@ -1,0 +1,41 @@
+﻿#parse("_head.html")
+<link href="$templatepath/css/app/ative.css" rel="stylesheet" type="text/css" />
+<div id="snsmenu">
+#parse("_menu.html")
+</div>
+<div id="snsbody">
+    <div id="snshead"><span class="l">$cpagetitle</span><span class="r"><input id="kwd" name="kwd" value="#if($kwd)$kwd#else搜索活动#end" type="text" class="f-text w100" onclick="this.value=''" /> <input id="Button1" type="button" value="搜索" class="btn_gray2" onclick="search('ative','$q')" /></span></div>
+
+    <div >
+    <div class="itemmenu">
+        <ul>
+            <li ><a href="$webpath/app/ative/info$exname?aid=$aid">活动详情</a></li>
+            <li class="current"><a href="$webpath/app/ative/member$exname?aid=$aid">活动成员</a></li>
+            <li><a href="$webpath/app/ative/album$exname?aid=$aid">活动相册</a></li>
+            <li><a href="$webpath/app/ative/book$exname?aid=$aid">活动留言</a></li>
+            <li class="new"><a href="$webpath/app/ative/new$exname" class="newitem">发起活动</a></li> 
+        </ul>
+        
+    </div>
+    <div class="itemmenu1">
+        <ul>
+            <li#if($joincss)$joincss#end><a href="$webpath/app/ative/member$exname?aid=$aid">报名的成员</a></li>
+            <li#if($attcss)$attcss#end><a href="$webpath/app/ative/member$exname?aid=$aid&flag=1">关注的成员</a></li>
+        </ul>
+    </div>
+    </div>
+    <div id="ativemiddleall">
+            
+            <div class="memberlist">
+                #foreach($info in $infolist)
+                <li id="param_$info.id">
+                    <div class="l images center"><a href="$info.spaceurl" target="_blank"><img src="$info.headpic" /><br />$info.truename</a></div>
+                </li>
+                #end
+            </div>
+    
+    </div>
+    
+</div>
+
+#parse("_foot.html")

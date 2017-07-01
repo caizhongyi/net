@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "监控端", "监控端\监控端.csproj", "{C45FDEC7-BD05-4942-9D5E-9B643A340021}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "受控端", "受控端\受控端.csproj", "{1912A40B-E8F0-4556-A71B-8036073097F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "代理类", "代理类\代理类.csproj", "{BCB58EC4-C524-456F-AEC6-16ED8E0748A3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C45FDEC7-BD05-4942-9D5E-9B643A340021}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C45FDEC7-BD05-4942-9D5E-9B643A340021}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C45FDEC7-BD05-4942-9D5E-9B643A340021}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C45FDEC7-BD05-4942-9D5E-9B643A340021}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1912A40B-E8F0-4556-A71B-8036073097F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1912A40B-E8F0-4556-A71B-8036073097F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1912A40B-E8F0-4556-A71B-8036073097F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1912A40B-E8F0-4556-A71B-8036073097F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCB58EC4-C524-456F-AEC6-16ED8E0748A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCB58EC4-C524-456F-AEC6-16ED8E0748A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCB58EC4-C524-456F-AEC6-16ED8E0748A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCB58EC4-C524-456F-AEC6-16ED8E0748A3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

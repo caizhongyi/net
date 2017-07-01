@@ -1,0 +1,238 @@
+﻿#parse("_head.html")
+<script type="text/javascript" src="$webpath/library/js/area.js"></script>
+<div id="snsmenu">
+#parse("_menu.html")
+</div>
+<script type="text/javascript" src="$webpath/library/js/date/WdatePicker.js"></script>
+<script type="text/javascript" src="$webpath/library/xmleditor/xheditor-zh-cn.min.js"></script>
+<div id="snsbody">
+    <div id="snshead"><span class="l">发起活动</span><span class="r"><input id="kwd" name="kwd" value="#if($kwd)$kwd#else搜索活动#end" type="text" class="f-text w100" onclick="this.value=''" /> <input id="Button1" type="button" value="搜索" class="btn_gray2" onclick="search('ative','$q')" /></span></div>
+    <div >
+    <div class="itemmenu">
+        <ul>
+            <li><a href="$webpath/app/ative/default$exname">全部活动</a></li>
+            <li><a href="$webpath/app/ative/default$exname?q=ing">进行中的活动</a></li>
+            <li><a href="$webpath/app/ative/default$exname?q=ed">结束的活动</a></li>
+            <li><a href="$webpath/app/ative/default$exname?q=rec">推荐活动</a></li>
+            <li><a href="$webpath/app/ative/default$exname?q=city">同城活动</a></li> 
+            <li><a href="$webpath/app/ative/default$exname?q=my">我的活动</a></li>
+            <li><a href="$webpath/app/ative/default$exname?q=friend">朋友的活动</a></li>
+            <li class="current"><a href="$webpath/app/ative/new$exname?aid=$aid">$cpagetitle</a></li> 
+        </ul>
+        
+    </div>
+    </div>
+    <div id="snsbody-all">
+        <form id="form1" method="post" action="" enctype="multipart/form-data">
+        
+            <div class="pitem">
+                <em>活动标题</em>
+                <input id="txttitle" name="txttitle" class="f-text" value="#if($title)$title#end" type="text" style="width:60%;" /><input  id="aid" name="aid" type="hidden" value="$aid" /> <span class="reshow">*</span>
+            </div>
+            <div class="pitem">
+                <em>活动分类</em>
+                <select id="sltclassid" name="sltclassid">
+                    <option value="0">选择分类</option>
+                    $classlist
+                </select> <span class="reshow">*</span>
+            </div>
+            <div class="pitem">
+                <em>开始时间</em>
+                <input id="txtstarttime" name="txtstarttime"value="#if($starttime)$starttime#end" class="f-text" type="text" style="width:26%;" onFocus="WdatePicker({isShowWeek:true,dateFmt:'yyyy-MM-dd HH:mm:ss'})" /> <span class="reshow">*</span>
+                 结束时间
+                <input id="txtendtime" name="txtendtime" class="f-text" value="#if($endtime)$endtime#end" type="text" style="width:26%;" onFocus="WdatePicker({isShowWeek:true,dateFmt:'yyyy-MM-dd HH:mm:ss'})" /> <span class="reshow">*</span>
+            </div>
+            <div class="pitem">
+                <em>参数人员上限</em>
+                <input id="txtPersionNumber" name="txtPersionNumber" value="#if($persionnumber)$persionnumber#end"  onkeyup="isNumber(this)" value="0" maxlength="5" class="f-text" type="text" style="width:26%;" /> <span class="reshow">*</span> 0 表示不限制
+            </div>
+            <div class="pitem">
+                <em>报名结束时间</em>
+                <input id="txtBaoMingTime" name="txtBaoMingTime" class="f-text" value="#if($baomingtime)$baomingtime#end" type="text" style="width:26%;" onFocus="WdatePicker({isShowWeek:true,dateFmt:'yyyy-MM-dd HH:mm:ss'})" /> <span class="reshow">*</span>
+            </div>
+            <div class="pitem">
+                <em>活动详情</em>
+                <textarea id="txtcontent" name="txtcontent" cols="20" rows="2" class="xheditor-simple {upBtnText:'上传',upMultiple:5,upLinkUrl:'$editfile',upImgUrl:'$edit_pic',skin:'$editskin'}" style="width:80%;height:200px;">#if($content)$content#end</textarea>&nbsp;
+            </div>
+        
+            <div class="pitem">
+                <em>活动封面</em>
+               <!-- <a href="javascript:;" title="插入照片" onclick="Uploadphoto();"><img src="$templatepath/images/z.gif" /></a>-->
+                <span id="showphoto" style="display:;">
+                    <input id="hidephoto" name="hidephoto" value="$photo" type="hidden" />
+                    <input id="twitterphoto" name="twitterphoto" type="file" class="f-file" />
+                </span>
+            </div>
+            
+            <div class="pitem">
+                <em>活动要求</em>
+                <input id="txtNote" name="txtNote" value="#if($note)$note#end" class="f-text" type="text" style="width:60%;" />
+            </div>
+
+            <div class="pitem">
+                <em>活动地点</em>
+                  <select id="sltareaid" name="sltareaid" onchange="ChangeProv(this);">
+                    <option value="0">选择省份</option>
+                     <script type="text/javascript">
+                            var returnvalue = "";
+                            for (i=0; i<Area.length; i++) 
+                            {
+                                if(Area[i][0] == "0")
+                                {
+                                    if(Area[i][1]==$areaid)
+                                    {
+                                        returnvalue += "<option value='" + Area[i][1] + "' selected>" + Area[i][2] + "</option>";
+                                    }
+                                    else
+                                    {
+                                        returnvalue += "<option value='" + Area[i][1] + "'>" + Area[i][2] + "</option>";
+                                    }
+                                }
+                            }
+                            document.write(returnvalue);
+                    </script>  
+                </select>
+                  <select id="sltareaid1" name="sltareaid1">
+                  <option value="0">选择城市</option>
+                </select>
+                <input id="txtAddRess" name="txtAddRess" value="#if($address)$address#end" class="f-text" type="text" style="width:37.5%;" /> <span class="reshow">*</span>
+            </div>
+            <div class="pitem">
+                <em>费用制度</em>
+                <input id="txtMoney" name="txtMoney" class="f-text" value="#if($money)$money#end" type="text" style="width:60%;" />
+            </div>
+            
+           <div class="pitem">
+                <em>联系方式</em>
+                <textarea id="txtlinks" name="txtlinks" cols="20" rows="2" style="width:60%;height:60px;" class="f-text">#if($links)$links#end</textarea> <span class="reshow">*</span>200个字符以内
+            </div>
+ 
+
+            <div class="pitem">
+                <em>报名需要审核</em>
+                   <input id="radisCheck" name="radisCheck" type="checkbox" value="1" $ischeck />需要审核
+            </div>
+            <div class="pitem1">
+                <em>&nbsp;</em>
+                #if(!$errors)
+                <input id="Button2" type="submit" value="$cpagetitle" class="btn_blue6" onclick="return checkdata();" />
+                #end
+                <input id="Submit1" type="reset" value="重新填写" class="btn_gray4" />
+            </div>
+        </form>
+    </div>
+    
+</div>
+
+#parse("_foot.html")
+<script type="text/javascript">
+    function Uploadphoto()
+    {
+        jQuery("#showphoto").show();
+    }
+
+    function checkdata()
+    {
+         var title=jQuery("#txttitle").val();
+         var classid=jQuery("#sltclassid").val();
+         var txtstarttime=jQuery("#txtstarttime").val();
+         var txtendtime=jQuery("#txtendtime").val();
+         var txtPersionNumber=jQuery("#txtPersionNumber").val();
+         var txtBaoMingTime=jQuery("#txtBaoMingTime").val();
+         var txtAddRess=jQuery("#txtAddRess").val();
+         var txtlinks=jQuery("#txtlinks").val();
+         
+         if(title=="")
+         {
+            showErrorResult("请填写标题");
+            document.getElementById("txttitle").focus();
+            return false;
+         }
+          if(classid=="0")
+         {
+            showErrorResult("选择分类");
+            document.getElementById("sltclassid").focus();
+            return false;
+         }
+         if(txtstarttime=="")
+         {
+            showErrorResult("请填写开始时间");
+            document.getElementById("txtstarttime").focus();
+            return false;
+         }
+         if(txtendtime=="")
+         {
+            showErrorResult("请填写结束时间");
+            document.getElementById("txtendtime").focus();
+            return false;
+         }
+
+         var oEditor =FCKeditorAPI.GetInstance("txtcontent"); 
+         var Content=oEditor.GetXHTML(); 
+         if(Content=="") 
+         { 
+             oEditor.EditorDocument.body.innerHTML = "";
+             showErrorResult("请填写活动详情");
+             oEditor.Focus();
+             return false; 
+         }          
+
+         if(txtPersionNumber=="")
+         {
+            showErrorResult("请填写活动人数上限，不限填写0");
+            document.getElementById("txtPersionNumber").focus();
+            return false;
+         }
+         if(isNaN(txtPersionNumber))
+         {
+            showErrorResult("活动人数必须为数字");
+            document.getElementById("txtPersionNumber").focus();
+            return false;
+         }
+         
+          if(txtBaoMingTime=="")
+         {
+            showErrorResult("请填写报名截止时间");
+            document.getElementById("txtBaoMingTime").focus();
+            return false;
+         }
+          if(txtAddRess=="")
+         {
+            showErrorResult("请填写活动地址");
+            document.getElementById("txtAddRess").focus();
+            return false;
+         }
+          if(txtlinks=="")
+         {
+            showErrorResult("请填写联系方式");
+            document.getElementById("txtlinks").focus();
+            return false;
+         }
+         return true;
+
+    }
+    function ChangeProv(obj) 
+    {
+        var objcity = document.getElementById('sltareaid1');
+        objcity.style.display = '';
+        objcity.options.length = 0;
+        var m=0;  
+        var sitem=$sitem;
+        for (i=0; i<Area.length; i++) 
+        {
+            if(Area[i][0] == obj.value&&Area[i][0] !="0")
+            {
+                var opt = document.createElement('option');
+                opt.value = Area[i][1];
+                opt.innerHTML = Area[i][2];
+                objcity.appendChild(opt);
+               if(Area[i][1]==sitem)
+                {
+                    document.getElementById("sltareaid1").options[m].selected=true;
+                }
+                m++;
+            }
+        }    
+    }
+    ChangeProv(document.getElementById("sltareaid"));
+</script>

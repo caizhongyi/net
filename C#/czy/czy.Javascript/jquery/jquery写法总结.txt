@@ -1,0 +1,110 @@
+JQuery插件写法的总结 
+
+最近Web应用程序中越来越多地用到了JQuery等Web前端技术。这些技术框架有效地改善了用户的操作体验，同时也提高了开发人员构造丰富客户端UI的效率。JQuery本身提供了丰富的操作，但是，有时候我们需要根据我们自己的业务和系统特色（风格）构造一些我们常用的前端UI组件，而JQuery的插件给了我们一个较好的方式来构造这些UI组件，方便我们日后反复重用这些组件。 
+
+网上也有很多关于JQuery插件的文章，我也搜了一些，但是，这些文档太过离散，没有有效地组织并充分说明JQuey插件该如何编写，并且有哪几种形式，什么情况下使用哪种形式。下面，我将说明JQuery插件常用的写法，以及这些插件的常用场景。 
+
+
+-------------------------------------------------------------------------------- 
+
+
+首先，在具体说明编写插件之前，我们先假定一个使用场景：有一个HTML页面（或.aspx页面），页面上放置了一个5行3列的表格，即：<table></table>标记，具体代码如下： 
+
+<table id="newTable"> 
+    <tr> 
+        <td>1</td><td>1</td><td>1</td> 
+    </tr> 
+    <tr> 
+        <td>1</td><td>1</td><td>1</td> 
+    </tr> 
+    <tr> 
+        <td>1</td><td>1</td><td>1</td> 
+    </tr> 
+    <tr> 
+        <td>1</td><td>1</td><td>1</td> 
+    </tr> 
+    <tr> 
+        <td>1</td><td>1</td><td>1</td> 
+    </tr> 
+</table> 
+
+我要实现的功能是：鼠标移到表格的某一行时，当前行高亮显示，其他行正常。 
+
+OK，结合这个场景，我们进一步探讨如何利用JQuery插件实现上述功能。常用的JQuery插件有如下几种写法： 
+
+1. 对JQuery自身的扩展插件 
+顾名思义，这种插件是对JQuery自身的方法库进行扩展的。在使用的时候通过$.MethodName()的方式直接使用。 
+插件代码示例： 
+
+$.extend({ 
+    handleTableUI : function(table){ 
+        var thisTable = $("#" + table); 
+        
+        $(thisTable).find("tr").bind("mouseover", function () { 
+            $(this).css({ color: "#ff0011", background: "blue" }); 
+        }); 
+        $(thisTable).find("tr").bind("mouseout", function () { 
+            $(this).css({ color: "#000000", background: "white" }); 
+        }); 
+    } 
+}); 
+示例说明：当要对JQuery自身进行扩展的时候，需要采用$.extend();的形式进行开发，JQuery的extend()方法为我们提供了扩展JQuery自身的方式，在extend()方法中，我们采用{...}的形式编写具体的方法体。其中，最重要的是要定义我们自己的扩展方法，如示例中的handleTableUI。定义的方式是：方法名 : function(参数){ 方法体 }。通过此种方式我们就可以定义JQuery自己的扩展方法，而且这个方法可以在web页面通过智能提示显示出来。页面中调用的代码如下： 
+
+<script type="text/javascript"> 
+    $(document).ready(function () { 
+        $.handleTableUI("newTable"); 
+    }); 
+</script> 
+
+2. 对HTML标记或页面元素进行扩展 
+使用这种插件的扩展方式，在使用此插件时，需要首先引用经过JQuery包装的页面元素，如：$("#tableId").Method()。 
+插件代码示例： 
+(function ($) { 
+    $.fn.setTableUI = function(options){ 
+        var defaults = { 
+            evenRowClass:"evenRow", 
+            oddRowClass:"oddRow", 
+            activeRowClass:"activeRow" 
+        } 
+        var options = $.extend(defaults, options); 
+        this.each(function(){ 
+            var thisTable=$(this); 
+            $(thisTable).find("tr").bind("mouseover", function () { 
+                $(this).css({ color: "#ff0011", background: "blue" }); 
+            }); 
+            $(thisTable).find("tr").bind("mouseout", function () { 
+                $(this).css({ color: "#000000", background: "white" }); 
+            }); 
+        }); 
+    }; 
+})(jQuery); 
+示例说明：当要对页面元素进行JQuery扩展时，需要采用(function($){...})(JQuery);的方式进行开发。在“...”处，定义我们自己的方法，定义方式是：$.fn.自定义方法名 = function(参数){...};的形式定义扩展方法的具体内容。在页面调用的时候不同于对JQuery自身的扩展。具体调用代码如下： 
+
+<script type="text/javascript"> 
+    $(document).ready(function () { 
+        $("#newTable").setTableUI(); 
+    }); 
+</script> 
+
+3. 不要用在页面显式调用JQuery的方法，而是通过直接添加JQuery插件脚本引用，即可实现对该插件的调用。 
+一般，如果需要用到一些全局的JQuery插件，即：插件的方法不需要显式调用，而是引用脚本即可；同时，这种插件一般对整个Web页面起到全局配置或设置的作用，如：对<body></body>内部的内容进行整体布局，此时可以采用脚本引用的方式实现。 
+插件代码示例： 
+(function ($) { 
+    $.tableUI = { set: function () { 
+        var thisTable = $("table"); 
+        $(thisTable).find("tr").bind("mouseover", function () { 
+            $(this).css({ color: "#ff0011", background: "blue" }); 
+        }); 
+        $(thisTable).find("tr").bind("mouseout", function () { 
+            $(this).css({ color: "#000000", background: "white" }); 
+        }); 
+    } 
+    }; 
+    //此处需要进行自调用 
+    $(function () { 
+        $.tableUI.set(); 
+    }); 
+})(jQuery); 
+示例说明：如果上面这段代码在my.plugin.js文件中，那么，我们只需要在页面上添加对此脚本文件的引用即可，引用方式为：<script src="Scripts/my.plugin.js" type="text/javascript"></script> ，当然，在所有要用到JQuery的地方，需要首先添加对JQuery库脚本的引用。在引用型插件的代码中，最主要的就是在插件中要主动调用自己所写的插件方法，上面代码中有注释的地方。否则，我们写的插件代码将不会起作用。 
+
+http://my.oschina.net/play/blog/4528

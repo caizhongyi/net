@@ -1,0 +1,32 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+.gl_right_2{
+	float: right;
+	width: 73%;
+	border: 1px solid #CCC;
+	padding: 20px;
+}
+.gl_right_2 h1 {
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+.gl_right_2 dl {
+	margin-bottom: 10px;
+}
+
+.gl_right_2 dl dd {
+	font-size: 13px;
+	float: left;
+	width: 75px;
+	text-align: right;
+}
+.gl_right_2 dl .dtt_1 {
+	float: left;
+	margin-right: 5px;
+}
+.gl_right_2 p {
+	text-align: center;
+	margin-top: 10px;
+}

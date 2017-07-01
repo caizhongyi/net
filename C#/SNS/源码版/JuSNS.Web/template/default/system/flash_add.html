@@ -1,0 +1,54 @@
+﻿#parse("_head.html")
+<div id="snsmenu">
+#parse("_menu.html")
+</div>
+<div id="snsbody">
+    <div id="snshead">个人空间模板管理</div>
+
+    <div class="itemmenu">
+        <ul>
+          <li><a href="sys$exname">系统设置</a></li>
+            <li><a href="area$exname">地区</a></li> 
+            <li><a href="charge$exname">充值管理</a></li> 
+            <li><a href="template$exname">模板</a></li> 
+            <li class="current"><a href="indexconfig$exname">首页配置</a></li> 
+            <li><a href="uploads$exname">上传图片配置管理</a></li> 
+            <li><a href="start$exname">初始化</a></li> 
+            <li><a href="help$exname">帮助管理</a></li> 
+
+        </ul>
+  </div>  
+  <div class="system">
+        <div class="pitem"> <a href="flash$exname">首页幻灯片配置</a> | <a href="flash_add$exname">添加幻灯图片</a></div>
+        <form id="form1" action="" method="post" enctype="multipart/form-data">
+            <div class="pitem">
+                <em>大图地址</em>
+                <input id="BPIC" name="BPIC" type="file" />
+                <input id="HBPic" name="HBPic" value="#if($BPIC)$BPIC#end"  type="hidden" />
+            </div>
+        
+            <div class="pitem">
+                <em>小图地址</em>
+                    <input id="SPIC" name="SPIC" type="file" />
+                    <input id="HSPic" name="HSPic" value="#if($SPIC)$SPIC#end"  type="hidden" />
+
+            </div>
+            <div class="pitem">
+                <em>链接地址</em><input id="URL" name="URL" value="#if($URL)$URL#end" class="f-text" style="width:200px;"  type="text" />
+            </div>
+            <div class="pitem">
+                <em>排序</em><input id="OrderID" name="OrderID" value="#if($OrderID)$OrderID#end" style="width:200px;"  class="f-text" type="text" />
+            </div>            
+            <div class="pitem">
+                <em>锁定</em><input id="Islock" name="Islock" value="1"  type="checkbox" #if($IsLock)checked#end /> 是
+            </div>            
+            
+            <div class="pitem">
+                <em>&nbsp;</em><input id="Text2" name="sbb" value="保存" type="submit" class="btn_blue2" />
+            </div>
+        </form>
+  </div>
+ 
+         
+    </div>
+#parse("_foot.html")

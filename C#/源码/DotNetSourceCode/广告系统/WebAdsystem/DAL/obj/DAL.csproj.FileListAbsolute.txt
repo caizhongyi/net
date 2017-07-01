@@ -1,0 +1,5 @@
+C:\Users\Administrator\Desktop\广告系统\WebAdsystem\DAL\bin\Debug\DAL.dll
+C:\Users\Administrator\Desktop\广告系统\WebAdsystem\DAL\bin\Debug\DAL.pdb
+C:\Users\Administrator\Desktop\广告系统\WebAdsystem\DAL\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\广告系统\WebAdsystem\DAL\obj\Debug\DAL.dll
+C:\Users\Administrator\Desktop\广告系统\WebAdsystem\DAL\obj\Debug\DAL.pdb

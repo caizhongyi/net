@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FtpClient_cs", "FtpClient_cs\FtpClient_cs.csproj", "{0C6E2B26-8EF6-4DF5-8DE7-E77083158B8B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FtpClientDll_cs", "FtpClientDll_cs\FtpClientDll_cs.csproj", "{78E82EDB-FA17-4B00-9360-9D8DAD070F36}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0C6E2B26-8EF6-4DF5-8DE7-E77083158B8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C6E2B26-8EF6-4DF5-8DE7-E77083158B8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C6E2B26-8EF6-4DF5-8DE7-E77083158B8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C6E2B26-8EF6-4DF5-8DE7-E77083158B8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78E82EDB-FA17-4B00-9360-9D8DAD070F36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78E82EDB-FA17-4B00-9360-9D8DAD070F36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78E82EDB-FA17-4B00-9360-9D8DAD070F36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78E82EDB-FA17-4B00-9360-9D8DAD070F36}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

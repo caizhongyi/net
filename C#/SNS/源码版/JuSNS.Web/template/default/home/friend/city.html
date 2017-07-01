@@ -1,0 +1,41 @@
+﻿#parse("_head.html")
+<div id="snsmenu">
+#parse("_menu.html")
+</div>
+<div id="snsbody">
+
+    <div id="snshead">同城交友（$cityname）</div>
+    <div class="itemmenu">
+        <ul>
+            <li><a href="$webpath/home/friend/default$exname">我的好友</a></li>
+            <li><a href="$webpath/home/friend/dyn$exname">好友动态设置</a></li>
+            <li><a href="$webpath/home/friend/visit$exname">来访者</a></li>
+            <li#if($css_city) $css_city #end><a href="$webpath/home/friend/city$exname?q=city">同城</a></li>
+            <li><a href="$webpath/home/friend/pfriend$exname">可能认识的人</a></li>
+            <li><a href="$webpath/home/friend/search$exname">搜索朋友</a></li>
+            <li><a href="$webpath/home/friend/att$exname">关注我的人</a></li>
+            <li><a href="$webpath/home/friend/invite$exname">邀请朋友加入</a></li>
+        </ul>
+  </div>
+     
+    <div class="itemmenu1"><ul><li#if($css_-1) $css_-1 #end><a href="$webpath/home/friend/city$exname?sex=-1">所有</a></li><li#if($css_1) $css_1 #end><a href="$webpath/home/friend/city$exname?sex=1">同城帅哥</a></li> <li#if($css_0) $css_0 #end><a href="$webpath/home/friend/city$exname?sex=0">同城美女</a></li></ul></div>
+    
+    <div class="list">
+            <ul>
+                #foreach($city in $citylist)
+                    <li id="param${city.userid}">
+                    <div class="l images center"><a href="$city.spaceurl"><img src="$city.userhead" /><br />$city.truename</a></div>
+                    <div class="r">
+                        #if($visit.isfriend==false)
+                        <div><a href="javascript:void(0);" onclick="addfriend($city.userid,'$city.truename',$uid)" class="sicon-friend">加为好友</a></div>
+                        #end
+                        <div><a href="javascript:poke($city.userid,$uid)" class="sicon-poke">招呼</a> <a href="javascript:mail($city.userid,$uid)" title="给ta发消息" class="sicon-mail">消息</a></div>
+                        <div title="$city.twittermore" class="friendtwitter">$city.twitter</div>
+                     </div>
+                     </li>
+                #end
+            </ul>
+        </div>    
+</div>
+
+#parse("_foot.html")

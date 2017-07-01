@@ -1,0 +1,22 @@
+//下面是对json对象的增删查改操作 
+
+//声明json对象 
+
+var jsonObj2={persons:[{name:"jordan",sex:"m",age:"40"}, {name:"bryant",sex:"m",age:"28"}, {name:"McGrady",sex:"m",age:"27"} ]}; 
+
+var persons=jsonObj2.persons; 
+var str=""; 
+
+var person={name:"yaoMing",sex:"m",age:"26"}; 
+//以下为json对象的操作，去掉注释可以查看操作结果 
+//jsonObj2.persons.push(person);//数组最后加一条记录 
+//jsonObj2.persons.pop();//删除最后一项 
+//jsonObj2.persons.shift();//删除第一项 
+jsonObj2.persons.unshift(person);//数组最前面加一条记录 只要适合Javascript的方法都是可以用在JSON对象的数组中的！所以还有另外的方法splice( )进行crud操作！ //删除 
+//jsonObj2.persons.splice(0,2);//开始位置,删除个数 
+//替换不删除 
+var self={name:"tom",sex:"m",age:"24"}; 
+var brother={name:"Mike",sex:"m",age:"29"}; 
+jsonObj2.persons.splice(1,0,self,brother,self);//开始位置,删除个数,插入对象 
+//替换并删除 
+//jsonObj2.persons.splice(0,1,self,brother);//开始位置,删除个数,插入对象 

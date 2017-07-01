@@ -1,0 +1,51 @@
+﻿#parse("_head.html")
+<link href="$templatepath/css/app/gift.css" rel="stylesheet" type="text/css" />
+<div id="snssysmenu">
+#parse("_menusystem.html")
+</div>
+<div id="snsbody1">
+    <div id="snshead">系统设置</div>
+    <div class="itemmenu">
+        <ul>
+            <li><a href="sys$exname">系统设置</a></li>
+            <li class="current"><a href="area$exname">地区</a></li> 
+            <li><a href="charge$exname">充值管理</a></li> 
+            <li><a href="template$exname">模板</a></li> 
+            <li><a href="indexconfig$exname">首页配置</a></li> 
+            <li><a href="uploads$exname">上传图片配置管理</a></li> 
+            <li><a href="start$exname">初始化</a></li> 
+            <li><a href="help$exname">帮助管理</a></li> 
+    </ul>
+    </div>
+    
+     <div class="itemmenu1">
+        <ul>
+            <li class="current"><a href="area$exname">地区列表</a></li>
+            <li><a href="area_new$exname">添加地区</a></li>
+            <li><a href="createArea$exname">地区生成JS</a></li>
+            <li><a href="javascript:;" onclick="deletestart('area');">初始化地区</a></li>
+        </ul>
+    </div>
+
+    
+
+    <div class="system">
+            <table  id="mtable">
+                <tr>
+                    <th>地区名称</th>
+                    <th style="text-align:center;">状态</th>
+                    <th>操作</th>
+                </tr>
+                $classlist
+             </table>
+
+    </div>
+    
+</div>
+#parse("_foot.html")
+<script type="text/javascript">
+    function setconfig(path)
+    {
+        window.location.href="sysconfig"+ExName+"?path="+path;
+    }
+</script>

@@ -1,0 +1,48 @@
+﻿#parse("_headshop.html")
+<div id="shopbody">
+    <div class="menu">
+        <ul>
+            <li><a href="$webpath/user/shop/default$exname?sid=$sid">店铺首页</a></li>
+            <li class="current"><a href="$webpath/user/shop/news$exname?sid=$sid">店铺公告</a></li>
+            <li><a href="$webpath/user/shop/goods$exname?sid=$sid">商品展示</a></li>
+            <li><a href="$webpath/user/shop/mbuy$exname?sid=$sid">超级采购团</a></li>
+            <li><a href="$webpath/user/shop/shopinfo$exname?sid=$sid">联系我们</a></li>
+        </ul>
+    </div>
+    <div class="shopbodyleft">
+        <div class="per">
+            &nbsp; &nbsp; <img src="$templatepath/images/join_bg.gif" align="middle" />&nbsp; 加盟时间：$jointime
+        </div>
+        <div class="per">
+            <div class="title">商家基本信息</div>
+            <span>$shopname</span><br />
+            <div class="p"><label>地址：</label><em>$address</em></div>
+            <div class="p"><label>电话：</label><em>$tel</em></div>
+            <div class="p"><label>传真：</label><em>$fax</em></div>
+            <div class="p"><label>联系人：</label><em>$linkman</em></div>
+            <div class="p"><label>介绍：</label><em>$content</em></div>
+        </div>
+        <div class="per">
+            <div class="title">商家告示</div>
+           #if($recordcount>0)
+                <ul>
+                #foreach($info in $infolist)
+                <li id="param_$info.id">
+                   <a href="$info.shopnewsurl" target="_blank">$info.title</a>
+                </li>
+                #end
+              </ul>
+        #else
+            <div>还没有记录</div>
+        #end   
+        </div>
+    </div>
+    <div class="shopbodyright">
+        <div class="title">$newstitle</div>
+        <p class="time" style="margin-left:15px;">点击：$newsclicks ，发布时间：$newstime</p>    
+        <p style="margin-left:15px;font-size:14px;line-height:25px;">$newscontent</p>    
+        
+    </div>
+</div>
+
+#parse("_foot.html")

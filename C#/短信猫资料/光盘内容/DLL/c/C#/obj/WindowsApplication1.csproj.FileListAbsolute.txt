@@ -1,0 +1,7 @@
+E:\最新平台\短信猫资料\光盘内容\DLL\c\C#\obj\Debug\WindowsApplication1.exe
+E:\最新平台\短信猫资料\光盘内容\DLL\c\C#\obj\Debug\WindowsApplication1.pdb
+E:\最新平台\短信猫资料\光盘内容\DLL\c\C#\bin\Debug\WindowsApplication1.exe
+E:\最新平台\短信猫资料\光盘内容\DLL\c\C#\bin\Debug\WindowsApplication1.pdb
+E:\最新平台\短信猫资料\光盘内容\DLL\c\C#\obj\Debug\ResolveAssemblyReference.cache
+E:\最新平台\短信猫资料\光盘内容\DLL\c\C#\obj\Debug\WindowsApplication1.Form1.resources
+E:\最新平台\短信猫资料\光盘内容\DLL\c\C#\obj\Debug\WindowsApplication1.csproj.GenerateResource.Cache

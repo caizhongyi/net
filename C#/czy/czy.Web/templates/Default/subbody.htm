@@ -1,0 +1,134 @@
+﻿
+
+<div id='content' style='width:1002px;height:483px;background:url({#Data*URL#}images/cbg.jpg);margin:0px auto'>
+ 
+ 
+<!-- 图片/FLASH -->
+ 
+<div id='pdv_13093' class='pdv_class'  title='' style='width:807px;height:26px;top:0px;left:195px; z-index:1'>
+<div id='spdv_13093' class='pdv_content' style='overflow:hidden;width:100%;height:100%'>
+<div class="pdv_border" style="margin:0;padding:0;height:100%;border:0px  solid;background:;">
+	<div style="height:25px;margin:1px;display:none;">
+		<div style="float:left;margin-left:12px;line-height:25px;font-weight:bold;color:">
+		
+		</div>
+		<div style="float:right;margin-right:10px;display:none">
+		<a href="-1" style="line-height:25px;color:">更多</a>
+		</div>
+	</div>
+<div style="padding:0px">
+ 
+ 
+<img src="{#Data*URL#}images/1274149381.jpg" border="0" width="100%" />
+ 
+</div>
+</div>
+ 
+</div>
+</div>
+ 
+<!-- 网页标题(菜单) -->
+ 
+<div id='pdv_13103' class='pdv_class'  title='' style='width:195px;height:251px;top:0px;left:0px; z-index:11'>
+<div id='spdv_13103' class='pdv_content' style='overflow:visible;width:100%;'>
+<div class="pdv_border" style="border:0px;height:100%;padding:0;margin:0;">
+<div style="height:100%;">
+<div style="height:37px;border:0px;padding:0;margin:0;background:url({#Data*URL#}images/nav_title.jpg) 0px 0px no-repeat;">
+	<div style="float:right;width:10px;height:37px;background:url({#Data*URL#}images/nav_title.jpg) -890px 0px no-repeat;"></div>
+</div>
+<div style="margin:0px;padding:0px;">
+ <link href="{#Data*URL#}css/productclass_dolphin.css" rel="stylesheet" type="text/css" />
+<link href="{#Data*URL#}css/pagetitlemenu_dolphin.css" rel="stylesheet" type="text/css" />
+<div class="productclass_dolphin" >
+{#Data*ProductTitleList#}
+</div>
+ 
+</div>
+</div>
+</div>
+ 
+</div>
+</div>
+ 
+<!-- 当前位置提示条 -->
+ 
+<div id='pdv_13105' class='pdv_class'  title='当前位置' style='width:756px;height:20px;top:22px;left:234px; z-index:12'>
+<div id='spdv_13105' class='pdv_content' style='overflow:hidden;width:100%;height:100%'>
+<div class="pdv_border" style="border:0px;background:url({#Data*URL#}images/sub_title.jpg) no-repeat;padding:0px;margin:0px;height:100%;">
+<div style="float:right;width:10px;background:url({#Data*URL#}images/sub_title.jpg) -890px 0px no-repeat;"></div>
+<link href="{#Data*URL#}css/nav.css" rel="stylesheet" type="text/css" />
+<div id="nav">
+您现在的位置：<a href="Default.aspx">网站首页</a>>
+ {#Data*Title#}
+</div>
+ 
+</div>
+ 
+</div>
+</div>
+ 
+<!-- 网页内容详情 -->
+ 
+<div id='pdv_13106' class='pdv_class'  title='内容标题' style='width:744px;height:340px;top:50px;left:244px; z-index:13'>
+<div id='spdv_13106' class='pdv_content' style='overflow:hidden;width:100%;white-space:inherit'>
+<div class="pdv_border" style="margin:0;padding:0;height:100%;border:0px  solid;background:;">
+	<div style="height:25px;margin:1px;display:none;background:;">
+		<div style="float:left;margin-left:12px;line-height:25px;font-weight:bold;color:">
+		内容标题
+		</div>
+		<div style="float:right;margin-right:10px;display:none">
+		<a href="-1" style="line-height:25px;color:">更多</a>
+		</div>
+	</div>
+<div style="padding:0px">
+<link href="{#Data*URL#}css/pagecontent.css" rel="stylesheet" type="text/css" />
+<div id='pagecontent' class='page_content'>
+<div style='white-space:inherit; line-height:20px;'>
+<!--<img style="FLOAT: left; MARGIN: 0px 21px 5px 0px" alt="" src="{#Data*URL#}images/201005181274171040625.jpg" border=0 />
+-->
+{#Data*Content#}
+</div>
+</div>
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        $("#pagecontent").find("img").hide();
+        var w = $("#pagecontent")[0].offsetWidth;
+        $("#pagecontent").find("img").each(function () {
+            $(this).show();
+            if (this.offsetWidth > w) {
+                this.style.width = w + "px";
+                $().setBg();
+            }
+        });
+
+    });
+ 
+</script>
+ 
+</div>
+</div>
+ 
+</div>
+</div>
+ 
+<!-- HTML编辑区 -->
+ 
+<div id='pdv_13104' class='pdv_class'  title='' style='width:195px;height:220px;top:261px;left:0px; z-index:14'>
+<div id='spdv_13104' class='pdv_content' style='overflow:visible;width:100%;'>
+<div class="pdv_border" style="border:0px;height:100%;padding:0;margin:0;">
+<div style="height:100%;">
+<div style="height:37px;border:0px;padding:0;margin:0;background:url({#Data*URL#}images/contact_title.jpg) 0px 0px no-repeat;">
+	<div style="float:right;width:10px;height:37px;background:url({#Data*URL#}images/contact_title.jpg) -890px 0px no-repeat;"></div>
+</div>
+<div style="margin:0px;padding:10px; ">
+<div style="PADDING-LEFT: 14px; PADDING-BOTTOM: 14px;line-height:20px; ">
+{#Data*Contact#}
+</div>
+</div>
+</div>
+</div>
+ 
+</div>
+</div>
+</div>

@@ -1,0 +1,86 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "czy.MyClass", "czy.MyClass\czy.MyClass.csproj", "{A41FF14D-F522-4AF6-86C1-1B8028C725FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "czy.MyDAL", "czy.DAL\DAL\czy.MyDAL.csproj", "{FDA9BC28-9602-4CC9-AF0F-073B009EDFC9}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "czy.Javascript", "czy.Javascript\", "{9AF1CD98-6AAF-47DC-BE67-1A053A4AB46F}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/czy.Javascript"
+		Debug.AspNetCompiler.PhysicalPath = "czy.Javascript\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\czy.Javascript\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/czy.Javascript"
+		Release.AspNetCompiler.PhysicalPath = "czy.Javascript\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\czy.Javascript\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "6022"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "czy.SQLAccess", "czy.SQLCommon\czy.SQLAccess.csproj", "{D61C6A8B-9DF6-4483-A42D-B363DB76B350}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GMap", "czy.GMap\GMap.csproj", "{489C389A-EC9E-412D-8DB2-7321A4B45B75}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IFactory", "IFactory\IFactory.csproj", "{A0FA550E-2973-40CF-A2C0-B3FAF7A337C6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "czy.Web.Controls", "czy.Web.Controls\czy.Web.Controls.csproj", "{8FD0CAF2-4376-4E24-AB27-170B665F7E84}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "czy.Wpf.Library", "czy.WPF\czy.Wpf.Library\czy.Wpf.Library.csproj", "{8BC49D3A-94A3-43BD-A2F9-0BF333636339}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OledbIFactory", "OledbIFactory\OledbIFactory.csproj", "{778326DC-DA75-420F-941B-2330E18116F0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A41FF14D-F522-4AF6-86C1-1B8028C725FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A41FF14D-F522-4AF6-86C1-1B8028C725FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A41FF14D-F522-4AF6-86C1-1B8028C725FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A41FF14D-F522-4AF6-86C1-1B8028C725FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDA9BC28-9602-4CC9-AF0F-073B009EDFC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDA9BC28-9602-4CC9-AF0F-073B009EDFC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDA9BC28-9602-4CC9-AF0F-073B009EDFC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDA9BC28-9602-4CC9-AF0F-073B009EDFC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9AF1CD98-6AAF-47DC-BE67-1A053A4AB46F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AF1CD98-6AAF-47DC-BE67-1A053A4AB46F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AF1CD98-6AAF-47DC-BE67-1A053A4AB46F}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AF1CD98-6AAF-47DC-BE67-1A053A4AB46F}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{D61C6A8B-9DF6-4483-A42D-B363DB76B350}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D61C6A8B-9DF6-4483-A42D-B363DB76B350}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D61C6A8B-9DF6-4483-A42D-B363DB76B350}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D61C6A8B-9DF6-4483-A42D-B363DB76B350}.Release|Any CPU.Build.0 = Release|Any CPU
+		{489C389A-EC9E-412D-8DB2-7321A4B45B75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{489C389A-EC9E-412D-8DB2-7321A4B45B75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{489C389A-EC9E-412D-8DB2-7321A4B45B75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{489C389A-EC9E-412D-8DB2-7321A4B45B75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0FA550E-2973-40CF-A2C0-B3FAF7A337C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0FA550E-2973-40CF-A2C0-B3FAF7A337C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0FA550E-2973-40CF-A2C0-B3FAF7A337C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0FA550E-2973-40CF-A2C0-B3FAF7A337C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FD0CAF2-4376-4E24-AB27-170B665F7E84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FD0CAF2-4376-4E24-AB27-170B665F7E84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FD0CAF2-4376-4E24-AB27-170B665F7E84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FD0CAF2-4376-4E24-AB27-170B665F7E84}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8BC49D3A-94A3-43BD-A2F9-0BF333636339}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BC49D3A-94A3-43BD-A2F9-0BF333636339}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BC49D3A-94A3-43BD-A2F9-0BF333636339}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BC49D3A-94A3-43BD-A2F9-0BF333636339}.Release|Any CPU.Build.0 = Release|Any CPU
+		{778326DC-DA75-420F-941B-2330E18116F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{778326DC-DA75-420F-941B-2330E18116F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{778326DC-DA75-420F-941B-2330E18116F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{778326DC-DA75-420F-941B-2330E18116F0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

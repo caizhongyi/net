@@ -1,0 +1,11 @@
+F:\lib\c#\PDFViewerNET40\PDFToText_src\PdfToText\PDFToText\PDFToText\bin\Debug\PDFToText.exe.config
+F:\lib\c#\PDFViewerNET40\PDFToText_src\PdfToText\PDFToText\PDFToText\bin\Debug\PDFToText.exe
+F:\lib\c#\PDFViewerNET40\PDFToText_src\PdfToText\PDFToText\PDFToText\bin\Debug\PDFToText.pdb
+F:\lib\c#\PDFViewerNET40\PDFToText_src\PdfToText\PDFToText\PDFToText\bin\Debug\itextsharp.dll
+F:\lib\c#\PDFViewerNET40\PDFToText_src\PdfToText\PDFToText\PDFToText\bin\Debug\SharpZipLib.dll
+F:\lib\c#\PDFViewerNET40\PDFToText_src\PdfToText\PDFToText\PDFToText\obj\Debug\PDFToText.csprojResolveAssemblyReference.cache
+F:\lib\c#\PDFViewerNET40\PDFToText_src\PdfToText\PDFToText\PDFToText\obj\Debug\PDFToText.Form1.resources
+F:\lib\c#\PDFViewerNET40\PDFToText_src\PdfToText\PDFToText\PDFToText\obj\Debug\PDFToText.Properties.Resources.resources
+F:\lib\c#\PDFViewerNET40\PDFToText_src\PdfToText\PDFToText\PDFToText\obj\Debug\PDFToText.csproj.GenerateResource.Cache
+F:\lib\c#\PDFViewerNET40\PDFToText_src\PdfToText\PDFToText\PDFToText\obj\Debug\PDFToText.exe
+F:\lib\c#\PDFViewerNET40\PDFToText_src\PdfToText\PDFToText\PDFToText\obj\Debug\PDFToText.pdb

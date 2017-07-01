@@ -1,0 +1,60 @@
+C:\Projects\i4MarkupExtensions\MarkupExtensionsTest\obj\Debug\ResolveAssemblyReference.cache
+C:\Projects\i4MarkupExtensions\MarkupExtensionsTest\obj\Debug\Window1.baml
+C:\Projects\i4MarkupExtensions\MarkupExtensionsTest\obj\Debug\Window1.g.cs
+C:\Projects\i4MarkupExtensions\MarkupExtensionsTest\obj\Debug\App.g.cs
+C:\Projects\i4MarkupExtensions\MarkupExtensionsTest\obj\Debug\MarkupExtensionsTest_MarkupCompile.cache
+C:\Projects\i4MarkupExtensions\MarkupExtensionsTest\obj\Debug\MarkupExtensionsTest.g.resources
+C:\Projects\i4MarkupExtensions\MarkupExtensionsTest\obj\Debug\MarkupExtensionsTest.Properties.Resources.resources
+C:\Projects\i4MarkupExtensions\MarkupExtensionsTest\obj\Debug\MarkupExtensionsTest.csproj.GenerateResource.Cache
+C:\Projects\i4MarkupExtensions\MarkupExtensionsTest\bin\Debug\MarkupExtensionsTest.exe
+C:\Projects\i4MarkupExtensions\MarkupExtensionsTest\bin\Debug\MarkupExtensionsTest.pdb
+C:\Projects\i4MarkupExtensions\MarkupExtensionsTest\bin\Debug\i4MarkupExtensions.dll
+C:\Projects\i4MarkupExtensions\MarkupExtensionsTest\bin\Debug\i4MarkupExtensions.pdb
+C:\Projects\i4MarkupExtensions\MarkupExtensionsTest\bin\Debug\i4MarkupExtensions.xml
+C:\Projects\i4MarkupExtensions\MarkupExtensionsTest\obj\Debug\MarkupExtensionsTest.exe
+C:\Projects\i4MarkupExtensions\MarkupExtensionsTest\obj\Debug\MarkupExtensionsTest.pdb
+C:\Users\Administrator\Documents\Visual Studio 2008\Projects\i4MarkupExtensions\MarkupExtensionsTest\obj\Debug\MarkupExtensionsTest.exe
+C:\Users\Administrator\Documents\Visual Studio 2008\Projects\i4MarkupExtensions\MarkupExtensionsTest\obj\Debug\MarkupExtensionsTest.pdb
+C:\Users\Administrator\Documents\Visual Studio 2008\Projects\i4MarkupExtensions\MarkupExtensionsTest\bin\Debug\MarkupExtensionsTest.exe
+C:\Users\Administrator\Documents\Visual Studio 2008\Projects\i4MarkupExtensions\MarkupExtensionsTest\bin\Debug\MarkupExtensionsTest.pdb
+C:\Users\Administrator\Documents\Visual Studio 2008\Projects\i4MarkupExtensions\MarkupExtensionsTest\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Administrator\Documents\Visual Studio 2008\Projects\i4MarkupExtensions\MarkupExtensionsTest\obj\Debug\Window1.baml
+C:\Users\Administrator\Documents\Visual Studio 2008\Projects\i4MarkupExtensions\MarkupExtensionsTest\obj\Debug\Window1.g.cs
+C:\Users\Administrator\Documents\Visual Studio 2008\Projects\i4MarkupExtensions\MarkupExtensionsTest\obj\Debug\App.g.cs
+C:\Users\Administrator\Documents\Visual Studio 2008\Projects\i4MarkupExtensions\MarkupExtensionsTest\obj\Debug\MarkupExtensionsTest_MarkupCompile.cache
+C:\Users\Administrator\Documents\Visual Studio 2008\Projects\i4MarkupExtensions\MarkupExtensionsTest\obj\Debug\MarkupExtensionsTest.g.resources
+C:\Users\Administrator\Documents\Visual Studio 2008\Projects\i4MarkupExtensions\MarkupExtensionsTest\obj\Debug\MarkupExtensionsTest.Properties.Resources.resources
+C:\Users\Administrator\Documents\Visual Studio 2008\Projects\i4MarkupExtensions\MarkupExtensionsTest\obj\Debug\MarkupExtensionsTest.csproj.GenerateResource.Cache
+C:\Users\Administrator\Documents\Visual Studio 2008\Projects\i4MarkupExtensions\MarkupExtensionsTest\bin\Debug\Behaviors.dll
+C:\Users\Administrator\Documents\Visual Studio 2008\Projects\i4MarkupExtensions\MarkupExtensionsTest\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\Administrator\Documents\Visual Studio 2008\Projects\i4MarkupExtensions\MarkupExtensionsTest\bin\Debug\System.Windows.Interactivity.xml
+C:\Users\Administrator\Documents\Visual Studio 2008\Projects\i4MarkupExtensions\MarkupExtensionsTest\bin\Debug\Behaviors.pdb
+C:\Users\Administrator\Documents\Visual Studio 2008\Projects\i4MarkupExtensions\MarkupExtensionsTest\bin\Debug\de\System.Windows.Interactivity.resources.dll
+C:\Users\Administrator\Documents\Visual Studio 2008\Projects\i4MarkupExtensions\MarkupExtensionsTest\bin\Debug\en\System.Windows.Interactivity.resources.dll
+C:\Users\Administrator\Documents\Visual Studio 2008\Projects\i4MarkupExtensions\MarkupExtensionsTest\bin\Debug\es\System.Windows.Interactivity.resources.dll
+C:\Users\Administrator\Documents\Visual Studio 2008\Projects\i4MarkupExtensions\MarkupExtensionsTest\bin\Debug\fr\System.Windows.Interactivity.resources.dll
+C:\Users\Administrator\Documents\Visual Studio 2008\Projects\i4MarkupExtensions\MarkupExtensionsTest\bin\Debug\it\System.Windows.Interactivity.resources.dll
+C:\Users\Administrator\Documents\Visual Studio 2008\Projects\i4MarkupExtensions\MarkupExtensionsTest\bin\Debug\ja\System.Windows.Interactivity.resources.dll
+C:\Users\Administrator\Documents\Visual Studio 2008\Projects\i4MarkupExtensions\MarkupExtensionsTest\bin\Debug\ko\System.Windows.Interactivity.resources.dll
+C:\Users\Administrator\Documents\Visual Studio 2008\Projects\i4MarkupExtensions\MarkupExtensionsTest\bin\Debug\zh-Hans\System.Windows.Interactivity.resources.dll
+C:\Users\Administrator\Documents\Visual Studio 2008\Projects\i4MarkupExtensions\MarkupExtensionsTest\bin\Debug\zh-Hant\System.Windows.Interactivity.resources.dll
+C:\Users\Administrator\Documents\Visual Studio 2008\Projects\i4MarkupExtensions\MarkupExtensionsTest\bin\Debug\Microsoft.Practices.Unity.dll
+C:\Users\Administrator\Documents\Visual Studio 2008\Projects\i4MarkupExtensions\MarkupExtensionsTest\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Logging.dll
+C:\Users\Administrator\Documents\Visual Studio 2008\Projects\i4MarkupExtensions\MarkupExtensionsTest\bin\Debug\Microsoft.Practices.ObjectBuilder2.dll
+C:\Users\Administrator\Documents\Visual Studio 2008\Projects\i4MarkupExtensions\MarkupExtensionsTest\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\Users\Administrator\Documents\Visual Studio 2008\Projects\i4MarkupExtensions\MarkupExtensionsTest\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Logging.xml
+C:\Users\Administrator\Documents\Visual Studio 2008\Projects\i4MarkupExtensions\MarkupExtensionsTest\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.xml
+C:\Users\Administrator\Documents\Visual Studio 2008\Projects\i4MarkupExtensions\MarkupExtensionsTest\bin\Debug\MarkupExtensionsTest.exe.config
+C:\Users\Administrator\Documents\Visual Studio 2008\Projects\i4MarkupExtensions\MarkupExtensionsTest\bin\Debug\Microsoft.Expression.Interactions.dll
+C:\Users\Administrator\Documents\Visual Studio 2008\Projects\i4MarkupExtensions\MarkupExtensionsTest\bin\Debug\WPFToolkit.dll
+C:\Users\Administrator\Documents\Visual Studio 2008\Projects\i4MarkupExtensions\MarkupExtensionsTest\bin\Debug\WPFToolkit.pdb
+C:\Users\Administrator\Documents\Visual Studio 2008\Projects\i4MarkupExtensions\MarkupExtensionsTest\bin\Debug\Microsoft.Expression.Interactions.xml
+C:\Users\Administrator\Documents\Visual Studio 2008\Projects\i4MarkupExtensions\MarkupExtensionsTest\bin\Debug\de\Microsoft.Expression.Interactions.resources.dll
+C:\Users\Administrator\Documents\Visual Studio 2008\Projects\i4MarkupExtensions\MarkupExtensionsTest\bin\Debug\en\Microsoft.Expression.Interactions.resources.dll
+C:\Users\Administrator\Documents\Visual Studio 2008\Projects\i4MarkupExtensions\MarkupExtensionsTest\bin\Debug\es\Microsoft.Expression.Interactions.resources.dll
+C:\Users\Administrator\Documents\Visual Studio 2008\Projects\i4MarkupExtensions\MarkupExtensionsTest\bin\Debug\fr\Microsoft.Expression.Interactions.resources.dll
+C:\Users\Administrator\Documents\Visual Studio 2008\Projects\i4MarkupExtensions\MarkupExtensionsTest\bin\Debug\it\Microsoft.Expression.Interactions.resources.dll
+C:\Users\Administrator\Documents\Visual Studio 2008\Projects\i4MarkupExtensions\MarkupExtensionsTest\bin\Debug\ja\Microsoft.Expression.Interactions.resources.dll
+C:\Users\Administrator\Documents\Visual Studio 2008\Projects\i4MarkupExtensions\MarkupExtensionsTest\bin\Debug\ko\Microsoft.Expression.Interactions.resources.dll
+C:\Users\Administrator\Documents\Visual Studio 2008\Projects\i4MarkupExtensions\MarkupExtensionsTest\bin\Debug\zh-Hans\Microsoft.Expression.Interactions.resources.dll
+C:\Users\Administrator\Documents\Visual Studio 2008\Projects\i4MarkupExtensions\MarkupExtensionsTest\bin\Debug\zh-Hant\Microsoft.Expression.Interactions.resources.dll

@@ -1,0 +1,15 @@
+﻿.nextPagesBox { padding:8px 0; float:none; text-align:center; width:100% }
+.nextPagesBox .nextPage { float:left; }
+.nextPagesBox .nextPage label { float:left; display:block; height:19px; line-height:19px; overflow:hidden; padding:0 5px; margin:0 2px; color:#f60; border:1px solid #fff; text-decoration:none; font-family:Arial; }
+.nextPagesBox .nextPage font { float:left; display:block; height:19px; line-height:19px; overflow:hidden; padding:0 5px; margin:0 2px; font-size:12px; border:1px solid #fff; }
+.nextPagesBox .nextPage font { font-size:11px; color:#999; height:19px; line-height:19px; overflow:hidden; display:block; float:left; border:1px solid #ccc; margin:0 2px; padding:0 5px; font-family:Arial; }
+.nextPagesBox .nextPage a { float:left; display:block; height:19px; line-height:19px; overflow:hidden; padding:0 5px; margin:0 1px; color:#000; cursor:pointer; border:1px solid #ccc; text-decoration:none; font-family:Arial, '宋体'; }
+.nextPagesBox .nextPage a span { display:block; padding-top:0; *padding-top:1px; }
+.nextPagesBox .nextPage a:hover { border-color:#f30; color:#fff; background:#f60; }
+.nextPagesBox .nextPage input { height:17px; border:1px outset #ccc; font-size:12px; line-height:17px; margin-top:-1px; text-align:center; }
+.nextPagesBox .nextPage #AspNetPager1_btn { margin-left:4px; height:auto; *height:21px; padding:0 4px; padding-bottom:3px; *padding-bottom:0; line-height:14px; cursor:pointer; }
+.nextPagesBox .nextPage #AspNetPager2_btn { margin-left:4px; height:auto; *height:21px; padding:0 4px; padding-bottom:3px; *padding-bottom:0; line-height:14px; cursor:pointer; }
+.nextPagesBox .nextPage #AspNetPager3_btn { margin-left:4px; height:auto; *height:21px; padding:0 4px; padding-bottom:3px; *padding-bottom:0; line-height:14px; cursor:pointer; }
+.nextPagesBox .nextPage #AspNetPager4_btn { margin-left:4px; height:auto; *height:21px; padding:0 4px; padding-bottom:3px; *padding-bottom:0; line-height:14px; cursor:pointer; }
+.nextPagesBox .nextPage #Pager_btn body {
+}

@@ -1,0 +1,40 @@
+<html dir="LTR">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" />
+    <meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5" />
+    <title>ArmoredCookiesQueryParam Property</title>
+    <xml>
+    </xml>
+    <link rel="stylesheet" type="text/css" href="MSDN.css" />
+  </head>
+  <body id="bodyID" class="dtBODY">
+    <div id="nsbanner">
+      <div id="bannerrow1">
+        <table class="bannerparthead" cellspacing="0">
+          <tr id="hdr">
+            <td class="runninghead">NeatUpload Documentation</td>
+            <td class="product">
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div id="TitleRow">
+        <h1 class="dtH1">IMultiRequestUploadModule.ArmoredCookiesQueryParam Property</h1>
+      </div>
+    </div>
+    <div id="nstext">
+      <p> The name of the query parameter that can contain "protected" cookies that the module should use if it needs to make HTTP requests while processing a request. </p>
+      <div class="syntax">
+        <a href="http://msdn.microsoft.com/library/default.asp?url=/library/en-us/cpref/html/frlrfSystemStringClassTopic.asp">string</a> ArmoredCookiesQueryParam {get;}</div>
+      <p>
+      </p>
+      <h4 class="dtH4">Property Value</h4>
+      <p> The name of the query parameter that can contain "protected" cookies that the module should use if it needs to make HTTP requests while processing a request. </p>
+      <h4 class="dtH4">Remarks</h4>
+      <p>This is needed because the process making the request might be different from the browser that displays the rest of the web application. For example, Flash always sends IE's cookies which means that the correct cookies are not sent for Firefox users. The value of the query parameter must be the value returned by <a href="Brettle.Web.NeatUpload.IMultiRequestUploadModule.GetArmoredCookies.html">GetArmoredCookies</a>. For security reasons, the module must only use the cookies when processing requests to the <a href="Brettle.Web.NeatUpload.IMultiRequestUploadModule.UploadPath.html">UploadPath</a>.</p>
+      <h4 class="dtH4">See Also</h4>
+      <p>
+        <a href="Brettle.Web.NeatUpload.IMultiRequestUploadModule.html">IMultiRequestUploadModule Interface</a> | <a href="Brettle.Web.NeatUpload.html">Brettle.Web.NeatUpload Namespace</a></p>
+    </div>
+  </body>
+</html>

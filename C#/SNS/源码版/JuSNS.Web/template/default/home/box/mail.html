@@ -1,0 +1,119 @@
+﻿#parse("_head.html")
+<script type="text/javascript" src="$webpath/library/xmleditor/xheditor-zh-cn.min.js"></script>
+<div id="snsmenu">
+#parse("_menu.html")
+</div>
+<div id="snsbody">
+    <div id="snshead"><span class="l">发邮件</span></div>
+
+    <div class="itemmenu">
+        <ul>
+            <li><a href="$webpath/home/box/default$exname">收件箱</a></li>
+            <li><a href="$webpath/home/box/recive$exname">发件箱</a></li>
+            <li class="current"><a href="$webpath/home/box/mail$exname">发邮件</a></li>
+        </ul>
+    </div>
+    
+    <form id="form1" action="" method="post">
+            <div class="pitem">
+                <em>选择好友</em>
+                <input id="friends" readonly="readonly" name="friends" onclick="showfriend(this,$uid)" type="text" class="f-text" style="width:300px;" value="#if($susername)$susername#end" /><input id="hidefrienduid" value="#if($suid>0)$suid#end" name="hidefrienduid" type="hidden" /><input id="giftid" name="giftid" type="hidden" /> <a href="javascript:;" onclick="clearfriend();">重新选择</a>
+            </div>
+            <div class="pitem">
+                <em>标题</em>
+                <input id="title"  name="title" type="text" class="f-text" style="width:300px;" value="#if($title)$title#end" />
+            </div>
+             <div class="pitem">
+                <em>内容</em>
+              
+                <textarea id="txtcontent" name="txtcontent" cols="20" rows="2" class="xheditor-mini {skin:'$editskin'}" style="width:70%;height:200px">#if($content)$content#end</textarea>&nbsp;
+            </div>  
+            <div class="pitem1">
+                <em>&nbsp;</em>
+                <input id="Button2" type="submit" value="发送邮件" class="btn_blue4" onclick="return checkdata();" />
+                <input id="Submit1" type="reset" value="重新填写" class="btn_gray4" />
+            </div>
+                
+    </form>
+    
+</div>
+#parse("_foot.html")
+<script type="text/javascript">
+    function checkdata()
+    {
+        var hidefrienduid=jQuery("#hidefrienduid").val();
+        var title=jQuery("#title").val();
+        var err="";
+        if(hidefrienduid=="")
+        {
+            err+="至少选择一个好友<br />";
+        }        
+        if(title=="")
+        {
+            err+="邮件标题";
+        }        
+        if(err!="")
+        {
+            showErrorResult("以下必须填写：<br />"+err)
+            return false;
+        }
+        else
+        {
+            return true;
+        }    
+    }
+    function clearfriend()
+    {   
+           document.getElementById("friends").value="";
+           document.getElementById("hidefrienduid").value="";
+   }
+    function showfriend(obj,uid)
+    {
+        var formcontent = "<iframe src=\"$webpath/home/friend/friend"+ExName+"?uid="+uid+"\" style=\"width:99%;height:300px;border:0;\" frameborder=\"NO\" border=\"0\" framespacing=\"0\"></iframe>";
+        var W = WinTip("<div>选择好友</div>", formcontent);
+        W.Width=750;
+        W.Create();        
+
+    }
+    function inserttoFriend(friendname,frienduid)
+    {
+        var friends=jQuery("#friends").val();
+        var hidefrienduid=jQuery("#hidefrienduid").val();
+        if(hidefrienduid!="")
+        {
+            var arr=new Array();
+            arr = hidefrienduid.split(",");
+            var isvalue=false;
+            //检查是否有好友了
+            for(var i=0;i<arr.length;i++)
+            {
+                if(arr[i]==frienduid)
+                {
+                    isvalue=true;
+                }
+            }
+            if(isvalue)
+            {
+                alert("已经选择了此好友了。");return;
+            }
+            var maxs=$sendfriendnumber;
+            if(arr.length>(maxs-1))
+            {
+                alert("最多允许选择$sendfriendnumber个好友。");return;
+            }
+           document.getElementById("hidefrienduid").value=hidefrienduid+","+frienduid;
+        }
+        else
+        {
+           document.getElementById("hidefrienduid").value=frienduid;
+        }        
+        if(friends!="")
+        {
+           document.getElementById("friends").value=friends+","+friendname;
+        }
+        else
+        {
+           document.getElementById("friends").value=friendname;
+        }
+    }
+</script>

@@ -1,0 +1,12 @@
+网站添加如下MIME Types：
+
+.xaml application/xaml+xml 
+.xap application/x-Silverlight-app
+
+
+支持WPF和Clickonce应用程序，需要添加如下MIME Types：
+.manifest application/manifest 
+.application application/x-ms-application 
+.xbap application/x-ms-xbap 
+.deploy application/octet-stream 
+.xps application/vnd.ms-xpsdocument

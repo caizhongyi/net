@@ -1,0 +1,8 @@
+bin\Debug\PowerTalkBox.dll
+bin\Debug\PowerTalkBox.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\PowerTalkBox.PowerTalkBox.bmp
+obj\Debug\PowerTalkBox.Properties.Resources.resources
+obj\Debug\PowerTalkBox.csproj.GenerateResource.Cache
+obj\Debug\PowerTalkBox.dll
+obj\Debug\PowerTalkBox.pdb

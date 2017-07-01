@@ -1,0 +1,116 @@
+1、
+
+C#中用法：
+
+格式化货币（跟系统的环境有关，中文系统默认格式化人民币，英文系统格式化美元）示例：
+
+string.Format("{0:C}",0.2) 结果为：￥0.10 （英文操作系统结果：$0.10）
+
+默认格式化小数点后面保留两位小数，如果需要保留一位或者更多，可以指定位数
+string.Format("{0:C1}",10.05) 结果为：￥10.1 （截取会自动四舍五入）
+
+格式化多个Object实例 string.Format("会员价：{0:C}，优惠价{1:C}",99.15,109.25)
+
+WPF中用法：
+　　格式化货币示例：
+
+ <TextBox  Name="txtPrice" HorizontalAlignment="Left" Width="170" Height="24" VerticalAlignment="Top" Background="White">
+          <TextBox.Text>
+                   <Binding Path="Price" StringFormat="{}{0:C}"/>
+          </TextBox.Text>
+</TextBox>
+
+2、
+
+C#中用法：
+
+格式化十进制的数字（格式化成固定的位数，位数不能少于未格式化前，只支持整形）示例：
+
+string.Format("{0:D3}",99) 结果为：099 
+
+string.Format("{0:D2}",1234) 结果为：1234，（精度说明符指示结果字符串中所需的最少数字个数。）
+
+WPF中用法：
+
+格式化十进制的数字示例： 
+
+ <TextBox  Name="txtRoomCount" HorizontalAlignment="Left" Width="170" Height="24" VerticalAlignment="Top" Background="White">
+          <TextBox.Text>
+                   <Binding Path="RoomCount" StringFormat="{}{0:D2}"/>
+          </TextBox.Text>
+</TextBox>
+
+3、
+
+C#中用法：
+
+用分号隔开的数字，并指定小数点后的位数示例：
+
+string.Format("{0:N}", 12300) 结果为：12,300.00  （默认为小数点后面两位）
+
+string.Format("{0:N3}", 12300.1234) 结果为：12,300.123（自动四舍五入）
+
+WPF中用法：
+
+同格式化十进制的数字示例 
+
+4、
+
+C#中用法：
+
+格式化百分比示例：
+
+string.Format("{0:P}", 0.12341) 结果为：12.34% （默认保留百分的两位小数）
+
+string.Format("{0:P1}", 0.1256) 结果为：12.6% （自动四舍五入）
+
+WPF中用法：
+
+同格式化十进制的数字示例 
+
+5、
+
+C#中用法：
+
+零占位符和数字占位符示例：
+
+string.Format("{0:0000.00}", 12345.015) 结果为：12345.02 
+
+string.Format("{0:0000.00}", 123.015) 结果为：0123.02
+
+string.Format("{0:###.##}", 12345.015) 结果为：12345.02 
+
+string.Format("{0:####.#}", 123.015) 结果为：123194 
+
+WPF中用法：
+
+同格式化十进制的数字示例 
+
+6、
+
+C#中用法：
+
+日期格式化示例：
+
+string.Format("{0:d}",System.DateTime.Now) 结果为：2010-6-19 （月份位置不是06）
+
+string.Format("{0:D}",System.DateTime.Now) 结果为：2010年6月19日 
+
+string.Format("{0:f}",System.DateTime.Now) 结果为：2010年6月19日 20:30 
+
+string.Format("{0:F}",System.DateTime.Now) 结果为：2010年6月19日 20:30:10 
+
+string.Format("{0:g}",System.DateTime.Now) 结果为：2010-6-19 20:30
+
+string.Format("{0:G}",System.DateTime.Now) 结果为：2010-6-19 20:30:10
+
+string.Format("{0:m}",System.DateTime.Now) 结果为：6月19日
+
+string.Format("{0:t}",System.DateTime.Now) 结果为：20:30
+
+string.Format("{0:T}",System.DateTime.Now) 结果为：20:30:10 
+
+string.Format("{0:yyyy-MM-dd HH:mm}",System.DateTime.Now) 结果为：2010-6-19 20:30
+
+string.Format("{0:yyyy-MM-dd }",System.DateTime.Now) 结果为：2010-6-19 
+

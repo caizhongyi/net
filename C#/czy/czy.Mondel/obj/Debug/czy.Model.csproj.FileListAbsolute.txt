@@ -1,0 +1,15 @@
+F:\Library\C#\czy.CMSWebSite\czy.Mondel\bin\Debug\czy.Model.dll
+F:\Library\C#\czy.CMSWebSite\czy.Mondel\bin\Debug\czy.Model.pdb
+F:\Library\C#\czy.CMSWebSite\czy.Mondel\obj\Debug\ResolveAssemblyReference.cache
+F:\Library\C#\czy.CMSWebSite\czy.Mondel\obj\Debug\czy.Model.dll
+F:\Library\C#\czy.CMSWebSite\czy.Mondel\obj\Debug\czy.Model.pdb
+F:\Library\C#\czy.CMSWebSite\czy.Mondel\bin\Debug\czy.MyClass.dll
+F:\Library\C#\czy.CMSWebSite\czy.Mondel\bin\Debug\AspNetPager.dll
+F:\Library\C#\czy.CMSWebSite\czy.Mondel\bin\Debug\dotnetCHARTING.dll
+F:\Library\C#\czy.CMSWebSite\czy.Mondel\bin\Debug\Newtonsoft.Json.dll
+F:\Library\C#\czy.CMSWebSite\czy.Mondel\bin\Debug\czy.MyClass.pdb
+E:\caizhongyi\MyWork\czy.CMSWebSite\czy.Mondel\bin\Debug\czy.Model.dll
+E:\caizhongyi\MyWork\czy.CMSWebSite\czy.Mondel\bin\Debug\czy.Model.pdb
+E:\caizhongyi\MyWork\czy.CMSWebSite\czy.Mondel\obj\Debug\ResolveAssemblyReference.cache
+E:\caizhongyi\MyWork\czy.CMSWebSite\czy.Mondel\obj\Debug\czy.Model.dll
+E:\caizhongyi\MyWork\czy.CMSWebSite\czy.Mondel\obj\Debug\czy.Model.pdb

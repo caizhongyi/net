@@ -1,0 +1,16 @@
+﻿<Deployment xmlns="http://schemas.microsoft.com/client/2007/deployment" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" EntryPointAssembly="Cnzk.Library.Silverlight.Behaviors.Samples" EntryPointType="Cnzk.Library.Silverlight.Behaviors.Samples.App" RuntimeVersion="3.0.40818.0">
+  <Deployment.OutOfBrowserSettings>
+    <OutOfBrowserSettings ShortName="Cnzk.Library.Silverlight.Behaviors.Samples Application" EnableGPUAcceleration="False" ShowInstallMenuItem="True">
+      <OutOfBrowserSettings.Blurb>Application to demonstrate the use of MouseWheelScrollBehavior in and out of browser.</OutOfBrowserSettings.Blurb>
+      <OutOfBrowserSettings.WindowSettings>
+        <WindowSettings Title="Cnzk.Library.Silverlight.Behaviors.Samples Application" Height="600" Width="600" />
+      </OutOfBrowserSettings.WindowSettings>
+      <OutOfBrowserSettings.Icons />
+    </OutOfBrowserSettings>
+  </Deployment.OutOfBrowserSettings>
+  <Deployment.Parts>
+    <AssemblyPart x:Name="Cnzk.Library.Silverlight.Behaviors.Samples" Source="Cnzk.Library.Silverlight.Behaviors.Samples.dll" />
+    <AssemblyPart x:Name="Cnzk.Library.Silverlight.Behaviors" Source="Cnzk.Library.Silverlight.Behaviors.dll" />
+    <AssemblyPart x:Name="System.Windows.Interactivity" Source="System.Windows.Interactivity.dll" />
+  </Deployment.Parts>
+</Deployment>

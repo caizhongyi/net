@@ -1,0 +1,7 @@
+<OutOfBrowserSettings ShortName="Cnzk.Library.Silverlight.Behaviors.Samples Application" EnableGPUAcceleration="False" ShowInstallMenuItem="True">
+  <OutOfBrowserSettings.Blurb>Application to demonstrate the use of MouseWheelScrollBehavior in and out of browser.</OutOfBrowserSettings.Blurb>
+  <OutOfBrowserSettings.WindowSettings>
+    <WindowSettings Title="Cnzk.Library.Silverlight.Behaviors.Samples Application" Height="600" Width="600" />
+  </OutOfBrowserSettings.WindowSettings>
+  <OutOfBrowserSettings.Icons />
+</OutOfBrowserSettings>

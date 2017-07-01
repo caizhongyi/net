@@ -1,0 +1,54 @@
+﻿#parse("_head.html")
+<link href="$templatepath/css/app/vote.css" rel="stylesheet" type="text/css" />
+<div id="snsmenu">
+#parse("_menu.html")
+</div>
+<div id="snsbody">
+    <div id="snshead">$cpagetitle</div>
+
+
+    <div class="itemmenu">
+        <ul>
+            <li #if($css_null)$css_null#end><a href="$webpath/app/vote/default$exname">最新投票</a></li>
+            #if($uid>0)
+                <li#if($css_friend)$css_friend#end><a href="$webpath/app/vote/default$exname?q=friend">好友的投票</a></li>
+                <li#if($css_my)$css_my#end><a href="$webpath/app/vote/default$exname?q=my">我的投票</a></li>
+                <li#if($css_join)$css_join#end><a href="$webpath/app/vote/default$exname?q=join">我参与的投票</a></li>
+            #end
+            <li#if($css_hot)$css_hot#end><a href="$webpath/app/vote/default$exname?q=hot">热门投票</a></li>
+            <li><a href="$webpath/app/vote/new$exname" class="newitem">发起投票</a></li>
+        </ul>
+    </div>
+            #if($recordcount>0)
+            <div class="vote">
+                <ul>
+                #foreach($info in $infolist)
+                <li id="param_$info.id">
+                    <div class="aa images center">
+                       <a href="$info.spaceurl" class="title" title="查看$info.truename的空间" target="_blank"><img src="$info.headpic" /></a><br /><a href="$webpath/app/vote?q=$info.userid">$info.truename的投票</a><br /><a href="javascript:;" onclick="sharetofriend('vote',$info.id,$uid,'投票：$info.titlefilt ')" class="a-share">分享</a>
+                   </div>
+                   <div class="bb">
+                   <a href="$info.voteurl">$info.title</a> $info.showop $info.showrec
+                   <br />$info.option
+                   </div>
+                   <div class="cc">
+                         <div class="vote-act">
+		                        <a style="color:#999999;" href="$info.voteurl" class="vote-num">
+		                        <strong style="color:#E36B0F;">
+		                            $info.jcnt						
+		                        </strong>票
+		                        </a>
+		                        <a class="vote-link" style="color:#ffffff;" href=$info.voteurl">去投票</a>
+	                        </div>
+                   </div>
+                </li>
+                #end
+              </ul>
+              </div>
+              <div class="pages">$pagelist</div>
+        #else
+            <div>还没有记录</div>
+        #end      
+</div>
+
+#parse("_foot.html")

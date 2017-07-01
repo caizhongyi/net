@@ -1,0 +1,169 @@
+﻿#parse("_head.html")
+<div id="snsmenu">
+#parse("_menu.html")
+</div>
+<div id="snsbody">
+    <div id="snshead">隐私设置</div>
+
+    <div class="itemmenu">
+        <ul>
+            <li><a href="profile$exname">基本资料</a></li>
+            <li><a href="nowcity$exname">居住地</a></li>
+            <li><a href="head$exname">修改头像</a></li>
+            <li><a href="links$exname">联系方式</a></li>
+            <li><a href="edu$exname">教育情况</a></li>
+            <li><a href="work$exname">工作情况</a></li>
+            <li><a href="like$exname">个人爱好</a></li>
+            <li class="current"><a href="privacy$exname">隐私设置</a></li>
+        </ul>
+  </div>
+
+    <div class="pitem">${username} &nbsp; ${email} &nbsp; ${mobile}${bindmobile} 
+        <span id="hideMobile" style="display:none;">
+            <input value="" class="f-text" type="text" id="mMobile" name="mMobile" /> <input type="button" name="MobileModify" id="MobileModify" onclick="MobileModifys();" class="f-button" value="填写手机"/>
+        </span>
+     (<a href="pwd$exname">修改登录密码</a>)</div>
+    <form action="$webpath/space/info/privacy${exname}" method="post">
+    <h3>基本设置</h3>
+        <div class="pitem"> <em>
+            我的空间</em>
+            <select name="PrivSpace" id="PrivSpace">
+                $PrivSpace
+            </select>
+        </div>
+        <div class="pitem"> <em>
+            
+                个人信息</em>
+            <select name="PrivFavourite" id="PrivFavourite">
+                 $PrivFavourite
+            </select>
+        </div>
+        <div class="pitem"> <em>
+            
+                教育和工作信息</em>
+            <select name="PrivEducate" id="PrivEducate">
+                 $PrivEducate
+            </select>
+        </div>
+        <div class="pitem"> <em>
+            
+                我被圈的照片</em>
+            <select name="PrivLasso" id="PrivLasso">
+                 $PrivLasso
+            </select>
+         </div>
+        <div class="pitem"> <em>
+            
+                好友列表</em>
+            <select name="PrivFriends" id="PrivFriends">
+                 $PrivFriends
+            </select>
+        </div>
+        <div class="pitem"> <em>
+            
+                留言板</em>
+            <select name="PrivLeaveWord" id="PrivLeaveWord">
+                 $PrivLeaveWord
+            </select>
+        </div>
+        <div class="pitem"> <em>
+            
+                微博</em>
+            <select name="PrivMiniBlog" id="PrivMiniBlog">
+                $PrivMiniBlog
+            </select>
+        </div>
+        <div class="pitem"> <em>
+            
+                相册</em>
+            <a href="$webpath/app/album/default$exname?r=priv&uid=$uid">设置隐私</a>
+        </div>
+        <div class="pitem"> <em>
+            
+                分享</em>
+            <select name="PrivShare" id="PrivShare">
+                 $PrivShare
+            </select>
+        </div>
+        <div class="pitem"> <em>                                   
+        
+                群组</em>
+            <select name="PrivGroup" id="PrivGroup">
+                 $PrivGroup
+            </select>
+        </div>
+        <div class="pitem" style="display:none;"> <em>
+            
+                电影</em>
+            <select name="PrivMovies" id="PrivMovies">
+                 $PrivMovies
+            </select>
+        </div>
+        <div>
+            <h3>个人动态设置</h3>
+            <div>
+                将把修改个人资料等动作反映到个人动态里，方便朋友了解你的动态。<br />
+                你可以控制是否在下列动作发生时，在个人动态里发布相关信息。
+            </div>
+                <div>
+                        <input type="checkbox" id="ActUpdateData" name="ActUpdateData" value="1" $ActUpdateData  /> 个人资料更新
+               </div>
+                <div>
+                        <input type="checkbox" id="ActAddFriend" name="ActAddFriend" value="1"  $ActAddFriend />
+                        添加好友（邀请注册，注册）
+                   </div>
+                <div>
+                        <input type="checkbox" id="ActLeaveWord" name="ActLeaveWord" value="1"  $ActLeaveWord />
+                        留言板、问答、打招呼
+                </div>
+                <div>
+                        <input type="checkbox" id="ActPicComment" name="ActPicComment" value="1" $ActPicComment />
+                        相册
+                   </div>
+                <div>
+                        <input type="checkbox" id="ActDeliver" name="ActDeliver" value="1" $ActDeliver />
+                        账本、礼物、应用程序
+                   </div>
+                <div>
+                        <input type="checkbox" id="ActSecede" name="ActSecede" value="1" $ActSecede />
+                        群组
+                   </div>
+                <div>
+                        <input type="checkbox" id="ActLogComment" name="ActLogComment" value="1" $ActLogComment />
+                        日志、日记、新闻
+               </div>
+                <div>
+                        <input type="checkbox" id="ActMovieComment" name="ActMovieComment" value="1"  $ActMovieComment />
+                        电影、投票
+                 </div>
+                <div>
+                        <input type="checkbox" id="ActPhotoLasso" name="ActPhotoLasso" value="1"  $ActPhotoLasso />
+                        照片圈人
+                   
+                   </div>
+                <div>
+                   
+                        <input type="checkbox" id="ActShareComment" name="ActShareComment" value="1" $ActShareComment />
+                        分享
+               </div>
+                <div class="pitem1"> <em>&nbsp;</em>
+                    <input type="submit" class="btn_blue4" value="保存设置" />
+                    <input type="reset" class="btn_gray4" value="重新填写" />
+                </div>
+
+        </div>
+    </form>
+    </div>
+<script type="text/javascript">
+    function MobileModifys()
+    {
+        var mobile=jQuery("#mMobile").val();
+        var uid=$uid;
+        modifymobile(uid,mobile);
+    }
+    function bindmobile(mb,flag)
+    {
+        bindmobiles("${mobilesendcontent}",flag);
+    }
+</script>
+#parse("_foot.html")

@@ -1,0 +1,21 @@
+﻿#parse("_head.html")
+<div class="result">
+    <div class="welcome">恭喜您：<em>${username}</em> 已注册成功， 欢迎来到${sitename} ！ </div>
+    <p>您的资料未完善， 请进入设置<a href="$webpath/space/info/profile$exname?f=1">个人资料</a>及<a href="$webpath/space/info/head$exname?f=1">头像</a>。</p>
+    <div class="content">
+        <div class="title">以下为您的注册资料：</div>
+        <div class="item">用户名：$username</div>
+        <div class="item">电子邮件：$email</div>
+        <div class="item">姓名：$truename</div>
+        <div class="item">手机：$mobile</div>
+        <div class="title">帐户状态：</div>
+        <div class="item">$state</div>
+    </div>
+    <div class="pitem1">
+        <em>您现在可以：</em>
+        <input type="button" value="登录社区" class="btn_blue4" onclick="javascript:window.location.href='$webpath/home/default$exname'" />
+        <input type="button" value="完善资料" class="btn_blue4" onclick="javascript:window.location.href='$webpath/space/info/profile$exname?f=1'" />
+        <input type="button" value="上传头像" class="btn_blue4" onclick="javascript:window.location.href='$webpath/space/info/head$exname?f=1'" />
+    </div>
+</div>
+#parse("_foot.html")

@@ -1,0 +1,58 @@
+﻿#parse("_head.html")
+<div id="snssysmenu">
+#parse("_menusystem.html")
+</div>
+<div id="snsbody1">
+    <div id="snshead">$cpagetitle</div>
+    <div class="itemmenu">
+        <ul>
+            <li><a href="news$exname">资讯</a></li>
+            <li><a href="group$exname">社群</a></li>
+            <li><a href="topic$exname">话题</a></li>
+            <li><a href="blog$exname">博客</a></li>
+            <li><a href="twitter$exname">微博</a></li>
+            <li><a href="photo$exname">相册</a></li>
+            <li><a href="shop$exname">品牌</a></li>
+            <li><a href="active$exname">活动</a></li>
+            <li><a href="ask$exname">问答</a></li>
+            <li class="current"><a href="gift$exname">礼物</a></li>
+            <li><a href="poke$exname">招呼</a></li>
+            <li><a href="vote$exname">投票</a></li>
+            <li><a href="fav$exname">收藏</a></li>
+        </ul>
+    </div>
+    
+    <div class="itemmenu1">
+        <ul>
+            <li><a href="gift$exname">礼物管理</a></li>
+            <li><a href="gift_add$exname">添加礼物</a></li>
+            <li><a href="giftclass$exname">分类管理</a></li>
+            <li class="current"><a href="giftclass_add$exname">$cpagetitle</a></li>
+            <li><a href="javascript:;" onclick="deletestart('gift');">初始化礼物</a></li>
+   </ul>
+    </div>
+
+<div class="system">
+          <form id="form1" action="" method="post">
+            <div class="pitem">
+                <em>分类名称</em>
+                <input id="ClassName" name="ClassName" type="text" value="#if($ClassName)$ClassName#end" class="f-text" />
+            </div>
+            
+            <div class="pitem">
+                <em>&nbsp;</em>
+                <input name="Text1" id="asname" type="submit" class="btn_blue2"  value="保存" />
+            </div>
+            
+          </form>
+
+    </div>
+    
+</div>
+#parse("_foot.html")
+<script type="text/javascript">
+    function showtc(cid)
+    {
+        jQuery("#cc_"+cid).toggle();
+    }
+</script>

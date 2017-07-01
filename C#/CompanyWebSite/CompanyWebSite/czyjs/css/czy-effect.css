@@ -1,0 +1,29 @@
+﻿/*Text样式
+.czy-effect-txtBoxForm{}
+.czy-effect-txtBoxForm .czy-effect-txtBox{ border:solid 1px #999999;  height:45px;width:234px; background-image:url(../images/czy-text.gif) 1 1; }
+.czy-effect-txtBoxForm .czy-effect-txtBorderTopLeft{height:1px;width:1px; float:left;  background-image:url(../images/czy-text.gif) 0 0;  background-repeat:no-repeat; margin-right:-3px;}
+.czy-effect-txtBoxForm .czy-effect-txtBorderTopRight{height:1px;width:1px;float:right;  background-image:url(../images/czy-text.gif) 234 0;  background-repeat:no-repeat;margin-left:-3px;}
+.czy-effect-txtBoxForm .czy-effect-txtBorderTopCenter{ height:1px;background-image:url(../images/czy-text.gif) 1 0; background-repeat:repeat-x;}
+.czy-effect-txtBoxForm .czy-effect-txtBorderLeft{ width:1px; height:100%; float:left; background-image:url(../images/czy-text.gif) 0 1;  background-repeat:no-repeat;margin-right:-3px;}
+.czy-effect-txtBoxForm .czy-effect-txtBorderRight{width:1px;height:100%;float:right; background-image:url(../images/czy-text.gif) 0 1;  background-repeat:no-repeat;margin-left:-3px;}
+.czy-effect-txtBoxForm .czy-effect-txtBorderBottomLeft{height:1px;width:1px;float:left; background-image:url(../images/czy-text.gif) 0 45;  background-repeat:no-repeat;margin-right:-3px;}
+.czy-effect-txtBoxForm .czy-effect-txtBorderBottomRight{height:1px;width:1px;float:right; background-image:url(../images/czy-text.gif) 234 45;  background-repeat:no-repeat;margin-left:-3px;}
+.czy-effect-txtBoxForm .czy-effect-txtBorderBottomCenter{height:1px; background-image:url(../images/czy-text.gif) 1 45;  background-repeat:no-repeat;}
+
+
+.czy-effect-txtBoxForm .czy-effect-txtBoxOn{ background-image:url(../images/czy-text-on.gif);}
+.czy-effect-txtBoxForm .czy-effect-txtBorderTopLeftOn{ float:left; background-image:url(../images/czy-text-on.gif) 0 0;  background-repeat:no-repeat; margin-right:-3px;}
+.czy-effect-txtBoxForm .czy-effect-txtBorderTopRightOn{float:right; background-image:url(../images/czy-text-on.gif) 0 100;  background-repeat:no-repeat;margin-left:-3px;}
+.czy-effect-txtBoxForm .czy-effect-txtBorderTopCenterOn{background-image:url(../images/czy-text.gif-on) 0 0; background-repeat:repeat-x;}
+.czy-effect-txtBoxForm .czy-effect-txtBorderLeftOn{float:left; background-image:url(../images/czy-text-on.gif) 0 0;  background-repeat:no-repeat;margin-right:-3px;}
+.czy-effect-txtBoxForm .czy-effect-txtBorderRightOn{float:right; background-image:url(../images/czy-text-on.gif) 0 0;  background-repeat:no-repeat;margin-left:-3px;}
+.czy-effect-txtBoxForm .czy-effect-txtBorderBottomLeftOn{float:left; background-image:url(../images/czy-text-on.gif) 0 0;  background-repeat:no-repeat;margin-right:-3px;}
+.czy-effect-txtBoxForm .czy-effect-txtBorderBottomRightOn{float:right; background-image:url(../images/czy-text-on.gif) 0 0;  background-repeat:no-repeat;margin-left:-3px;}
+.czy-effect-txtBoxForm .czy-effect-txtBorderBottomCenterOn{ background-image:url(../images/czy-text-on.gif) 0 0;  background-repeat:no-repeat;}
+
+*/
+
+.czy-textbox{background-attachment:fixed;background-image:url(../images/controls/czy-text-bg.gif) ; border:solid 1px #9fbbe2;  background-repeat:repeat-x;}
+.czy-textbox-on{background-image:url(); border:solid 1px #034556;}
+
+

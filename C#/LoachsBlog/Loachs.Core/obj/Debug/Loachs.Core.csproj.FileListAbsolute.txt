@@ -1,0 +1,20 @@
+E:\Programming\ASP.NET\Project\Loachs\Code\Loachs.Core\bin\Debug\Loachs.Core.dll
+E:\Programming\ASP.NET\Project\Loachs\Code\Loachs.Core\bin\Debug\Loachs.Core.pdb
+E:\Programming\ASP.NET\Project\Loachs\Code\Loachs.Core\obj\Debug\ResolveAssemblyReference.cache
+E:\Programming\ASP.NET\Project\Loachs\Code\Loachs.Core\obj\Debug\Loachs.Core.dll
+E:\Programming\ASP.NET\Project\Loachs\Code\Loachs.Core\obj\Debug\Loachs.Core.pdb
+C:\Documents and Settings\Administrator\桌面\Code\Loachs.Core\bin\Debug\Loachs.Core.dll
+C:\Documents and Settings\Administrator\桌面\Code\Loachs.Core\bin\Debug\Loachs.Core.pdb
+C:\Documents and Settings\Administrator\桌面\Code\Loachs.Core\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\桌面\Code\Loachs.Core\obj\Debug\Loachs.Core.dll
+C:\Documents and Settings\Administrator\桌面\Code\Loachs.Core\obj\Debug\Loachs.Core.pdb
+E:\测试源码\Loachs_1.2_src\Loachs.Core\bin\Debug\Loachs.Core.dll
+E:\测试源码\Loachs_1.2_src\Loachs.Core\bin\Debug\Loachs.Core.pdb
+E:\测试源码\Loachs_1.2_src\Loachs.Core\obj\Debug\ResolveAssemblyReference.cache
+E:\测试源码\Loachs_1.2_src\Loachs.Core\obj\Debug\Loachs.Core.dll
+E:\测试源码\Loachs_1.2_src\Loachs.Core\obj\Debug\Loachs.Core.pdb
+F:\Library\LoachsBlog12\Loachs.Core\bin\Debug\Loachs.Core.dll
+F:\Library\LoachsBlog12\Loachs.Core\bin\Debug\Loachs.Core.pdb
+F:\Library\LoachsBlog12\Loachs.Core\obj\Debug\Loachs.Core.dll
+F:\Library\LoachsBlog12\Loachs.Core\obj\Debug\Loachs.Core.pdb
+F:\Library\LoachsBlog12\Loachs.Core\obj\Debug\Loachs.Core.csprojResolveAssemblyReference.cache

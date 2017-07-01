@@ -1,0 +1,11 @@
+﻿*{ margin:0px; padding:0px;}
+body { font-size:12px; background-image:url(../images/index_11.jpg); font-family:微软雅黑;}
+
+.a-content{ }
+.header{ margin-bottom:10px;overflow:hidden;}
+.header .menu{ list-style-type:none; margin:0px;}
+.header .menu li{ float:left; width:100px; text-align:center; font-weight:bold; }
+.contenter{ margin-bottom:10px; overflow:hidden;}
+.contenter .left{   width:180px;  float:left; margin-right:10px; }
+.contenter .right{  float:right; }
+.footer{margin-bottom:10px;overflow:hidden;height:50px;}

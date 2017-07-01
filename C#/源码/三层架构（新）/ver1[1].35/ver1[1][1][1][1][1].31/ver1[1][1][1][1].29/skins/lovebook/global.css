@@ -1,0 +1,26 @@
+ body{
+	font-size:12px;
+	margin:0px;
+	padding:0px;
+	text-align:center;
+	background:#ffffff;overflow-x: hidden;
+	color:#666;
+	overflow-x: hidden;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+body{cursor: url(http://www.dra-gon.cn/images/1.cur);}
+body a {cursor: url(http://www.dra-gon.cn/images/2.cur)}
+ p{margin:3px;}
+ img {max-width: 100%;height: auto;}
+ select{font-family: Verdana, Arial}
+ th{background:#D5CBBE;border-bottom:1px solid #795B50}
+html{
+    overflow-x: hidden;
+	scrollbar-face-color:#fff;
+    scrollbar-arrow-color:#000;
+    scrollbar-track-color:#fff;
+    scrollbar-3dlight-color:#000;
+    scrollbar-highlight-color:#fff;
+    scrollbar-shadow-color:#000;
+    scrollbar-darkshadow-color:#fff;
+    }

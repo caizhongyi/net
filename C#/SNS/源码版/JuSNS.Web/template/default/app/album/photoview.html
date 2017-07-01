@@ -1,0 +1,129 @@
+﻿#parse("_head.html")
+<div id="snsmenu">
+#parse("_menu.html")
+</div>
+<script type="text/javascript" src="$webpath/library/xmleditor/xheditor-zh-cn.min.js"></script>
+<div id="snsbody">
+    <div id="snshead1">
+        <span class="images l"><a href="$spaceurl"><img src="$headpic" /></a></span>
+        <span class="l"><h3>$truename的相册：<span class="normal">$albumname</span></h3> » <a href="$spaceurl">$truename的空间</a> &nbsp;  » <a href="$webpath/app/album/AlbumView$exname?aid=$aid">返回相册</a></span>
+        <span class="r"><a href="javascript:history.back();">返回上一页</a></span>
+    </div>
+
+    <div class="itemmenu">
+        <ul>
+            <li id="preview"><a href="$webpath/app/album/photo$exname">最新图片</a></li>
+            <li><a href="$webpath/app/album/default$exname">所有相册</a></li>
+            #if($uid>0)
+            <li><a href="$webpath/app/album/default$exname?q=my">我的相册</a></li>
+            <li><a href="$webpath/app/album/default$exname?q=friend">朋友的相册</a></li> 
+            #end
+            <li class="current"><a>浏览图片</a></li> 
+            <li class="new"><a href="$webpath/app/album/photoadd$exname?aid=$aid" class="newitem" title="在此相册中上传照片">上传图片</a></li> 
+            <li class="search">搜索：<input id="kwd" name="kwd" value="#if($kwd)$kwd#else搜索相册#end" type="text" class="f-text w100" onclick="this.value=''" /> <input id="Button1" type="button" value="搜索" class="btn_gray2" onclick="search('album','$q')" /></li>
+        </ul>
+        
+    </div>
+
+    <div id="snsbody-all">
+        <div class="photoview">
+            <div class="center"><span class="l">#if($totlepic)<b>$totlepic</b> 张照片中的#else头像相册中的#end第 <b>$numberpic</b> 张<span class="pike">|</span><a href="$webpath/app/album/AlbumView$exname?aid=$aid">返回相册</a><span class="pike">|</span><a href="$orgPhotoPath" target="_blank">查看原始图像</a><span class="pike">|</span><a href="#snsmiddle">共$comments个评论，$views次浏览</a> $showrec</span>  <span class="r"><input id="Button2" type="button" value="上一幅" class="btn_gray3" onclick="javascript:window.location.href='$webpath/app/album/PhotoView$exname?pid=$prepicid#preview'" /> <input id="Button3" type="button" value="下一幅" class="btn_gray3" onclick="javascript:window.location.href='$webpath/app/album/PhotoView$exname?pid=$nextpicid#preview'" /></span></div>
+            <div class="clearpix"></div>
+            <div class="content center">
+            <a href="$webpath/app/album/PhotoView$exname?pid=$prepicid#preview">
+            <img src="$templatepath/images/pre.gif" align="absmiddle" /></a> 
+                <span class="imgloading"><a href="$webpath/app/album/PhotoView$exname?pid=$nextpicid#preview" title="点击查看下一张"><img src="$pic"  align="absmiddle" /></a></span> 
+            <a href="$webpath/app/album/PhotoView$exname?pid=$nextpicid#preview"><img src="$templatepath/images/next.gif" align="absmiddle" /></a></div>
+            <div class="center">
+                <span class="l nocenter"><a href="javascript:;" onclick="sharetofriend('photo',$pid,$uid,'照片：')" class="a-share">分享</a></span>
+                <strong>$desc</strong>
+                <span class="r"><a href="$reporturl" target="_blank" class="a-report">&nbsp;</a></span>
+            </div>
+        </div>
+        <div class="line"></div>
+          <div id="snsmiddle">
+                <h3>评论 <a href="#commentcontent" class="normal">我要评论</a></h3>
+                #if($recordcount>0)
+                        <ul>
+                        #foreach($comm in $commlist)
+                            <li id="param_$comm.id">
+                                <div class="aa images center">
+                                    <a href="$comm.spaceurl"><img src="$comm.headpic"></a>
+                                </div>
+                                <div class="bb">
+                                    <div class="hdtitlecomment">
+                                        <div class="ll"><a href="$comm.spaceurl">$comm.truename</a> <span class="time">$comm.time</span></div>
+                                        <div class="rr">$comm.showop<a href="${reporturl}#param_$comm.id" target="_blank" class="a-report"></a></div>
+                                    </div>
+                                    <div class="ctx">$comm.content</div>
+                                </div>
+                            </li>
+                        #end
+                          <li class="pages">$pagelist</li>
+                      </ul>
+                #else
+                    <div>还没有评论</div>
+                #end      
+                #if($uid>0)    
+                <div class="pitem">
+                <h4>发表评论</h4>
+                <form action="" method="post">
+                    <textarea id="commentcontent" name="commentcontent" cols="20" rows="2"   class="xheditor-mini {skin:'$editskin'}" style="width:100%;height:140px"></textarea>
+                    <input id="userid" name="userid" value="$userid" type="hidden" />
+                    <br />
+                    <input id="Submit1" type="submit" value="提交评论" class="btn_blue4" onclick="return checkdata();" />
+                </form>
+                    
+                </div>
+                #end                
+                
+                
+          </div>
+          <div id="snsmiddleright">
+                 <ul>
+                    $showop
+                 </ul>
+          </div>
+    </div>
+    
+</div>
+<script type="text/javascript">
+function checkdata()
+{
+    if(jQuery("#commentcontent").val()=="")
+    {
+             showErrorResult("填写回复内容");return false;
+    }
+    else
+    {
+        return true;
+    }
+}
+function showexif(cont)
+{
+    var W = WinTip("EXIF信息", cont);
+    W.Create();        
+}
+ function deletes(infoid,uid,type)
+ {
+    if (!confirm("确定要删除吗？\n删除后不可恢复！")) return;
+    jQuery.get(ajaxUrl, { action:"DeleteALLAjax", infoid:infoid, uid:uid,type:type, param:Math.random() }, 
+      function(msg)
+      {
+         if(msg.indexOf("succs")>-1)
+         {
+             showRightResult("删除成功");
+             setTimeout(function() 
+             {
+                window.location.href="$webpath/app/album/PhotoView$exname?pid=$nextpicid";
+              }, 500);             
+         }
+         else
+         {
+             showErrorResult("删除失败");
+         }
+      }
+    );                 
+ }
+</script>
+#parse("_foot.html")

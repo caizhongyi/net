@@ -1,0 +1,59 @@
+﻿#parse("_head.html")
+<link href="$templatepath/css/app/shop.css" rel="stylesheet" type="text/css" />
+<div id="snssysmenu">
+#parse("_menusystem.html")
+</div>
+<div id="snsbody1">
+    <div id="snshead">$cpagetitle</div>
+    <div class="itemmenu">
+        <ul>
+            <li><a href="comment$exname">资讯</a></li>
+            <li class="current"><a href="comment_blog$exname">博客</a></li>
+            <li><a href="comment_twitter$exname">微博</a></li>
+            <li><a href="comment_photo$exname">相片</a></li>
+            <li><a href="comment_goods$exname">商品</a></li>
+            <li><a href="comment_shop$exname">店铺</a></li>
+            <li><a href="comment_multe$exname">团购</a></li>
+            <li><a href="comment_active$exname">活动</a></li>
+             <li class="search"> &nbsp; 搜索：<input id="kwd" name="kwd" value="#if($kwd)$kwd#else标题/姓名#end" type="text" class="f-text w100" onclick="this.value=''" /> <input id="Button1" type="button" value="搜索" class="btn_gray2" onclick="search('comment_blogm','$q')" /></li>
+        </ul>
+    </div>
+    
+    <div class="system">
+          #if($recordcount>0)
+                <table  id="mtable">
+                <tr>
+                    <th>发布者</th>
+                    <th>内容</th>
+                    <th>发布时间</th>
+                    <th style="text-align:center;">操作</th>
+                </tr>
+                #foreach($info in $infolist)
+                <tr id="param_$info.id">
+                    <td><a href="$info.spaceurl" target="_blank">$info.truename</a></td>
+                    <td><a href="$info.blogurl" target="_blank" title="被评论信息">【阅】</a><a  onclick="showtc($info.id)" title="点击查看详情" style="cursor:pointer;">$info.title</a></td>
+                    <td>$info.posttime</td>
+                    <td>
+                    <input  type="button" value="删除" onclick="deleteAll($info.id,$uid,'blogcomment');" class="btn_blue2" /> $info.state</td>
+                </tr>
+                <tr style="display:none;" id="cc_$info.id">
+                    <td colspan="5" style="padding:5px;background-color:#F4FCFF;">
+                        $info.content
+                    </td>
+                </tr>                
+                #end
+             </table>
+              <div class="pages">$pagelist</div>
+        #else
+            <div>还没有记录</div>
+        #end       
+    </div>
+    
+</div>
+#parse("_foot.html")
+<script type="text/javascript">
+    function showtc(cid)
+    {
+        jQuery("#cc_"+cid).toggle();
+    }
+</script>

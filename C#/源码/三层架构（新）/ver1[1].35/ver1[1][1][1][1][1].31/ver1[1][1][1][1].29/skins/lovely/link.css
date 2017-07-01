@@ -1,0 +1,53 @@
+﻿/*-----------超链接样式---------------
+ 说明: 伪类:link :visited :hover分别代表超链接的通常、被访问后、和鼠标接触链接是的样式
+ a标签代表通用超链接样式
+ .menuA代表Blog导航条菜单的样式
+ .titleA代表日志标题的样式
+ .sideA代表侧栏的超链接样式
+ .CategoryA代表树形分类的链接样式
+ .more代表更多链接的样式
+------------------------------------*/
+ a:link,a:visited{color:#333333;  text-decoration:none;}
+ a:hover{color:#000000; text-decoration:underline;}
+ .menuA:link,.menuA:visited{
+	display:block;
+	color: #008EFA;
+	text-transform: uppercase;
+	 padding:0 5px;
+}  
+
+ .menuA:hover{color:#005CA2;  text-decoration:none;} 
+ .titleA:link,.titleA:visited{text-transform: uppercase; color:#555F77;}
+ .titleA:hover{color:#485166;text-decoration:none;}
+ .sideA:link,.sideA:visited{
+	display:block;
+	line-height:150%;
+	border-bottom:1px dashed #e9e9e9;
+	background:url(list.gif) no-repeat 3px 5px;
+	padding-left:15px;
+	overflow:hidden;
+	height:20px;
+	text-decoration:none;
+	color:#555F77;
+ }
+
+
+ .sideA:hover{background:#f9f9f9 url(list.gif) no-repeat 5px 5px; text-decoration:none;}
+ .CategoryA:link,.CategoryA:visited{	
+	}
+ .CategoryA:hover{}
+ 
+ .more:link,.more:visited{
+	background:url(list.gif) no-repeat 0 5px;
+	padding-left:15px;
+	color:#0099FF;
+}
+ .more:hover{background:url(list.gif) no-repeat 5px 5px; color:#0066CC;}  
+ .blogsetA:link,.blogsetA:visited{}
+ .mp3A:link,.mp3A:visited{}
+ .collA:link,.collA:visited{}
+ .aboutA:link,.aboutA:visited{}
+ .normalA:link,.normalA:visited{}
+ .listA:link,.listA:visited{}
+ .commentA:link,.commentA:visited{}
+ /*---超链接样式定义结束---*/

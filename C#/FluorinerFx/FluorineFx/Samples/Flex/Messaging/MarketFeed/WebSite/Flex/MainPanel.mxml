@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Canvas xmlns:mx="http://www.adobe.com/2006/mxml" xmlns="*"
+	width="100%" height="100%"
+	creationComplete="initApp()">
+
+	<mx:Script>
+		<![CDATA[
+			import mx.messaging.events.MessageFaultEvent;
+			import AlertItem;
+	
+			import mx.messaging.ChannelSet;
+			import mx.messaging.events.MessageEvent;
+			import mx.collections.*;
+			import portfolio.Stock;
+			import mx.messaging.Consumer;
+			import mx.controls.Alert;
+	
+			private var consumers:Object;		
+					
+			[Bindable]
+			public var userId:String;
+					
+			[Bindable]
+			private var items:ArrayCollection;
+			[Bindable]
+			private var alerts:ArrayCollection;
+	
+			private var stockMap:Object;
+	
+			private function initApp():void
+			{
+				consumers = new Object();
+				stockMap = new Object();
+				items = new ArrayCollection();
+				
+				alerts = new ArrayCollection();
+				
+				alertSymbol.text = "IBM";
+				trigger.text = "Last > 100";
+			}
+			
+			private function deleteSymbol():void
+			{
+				var symbol:String = dg.selectedItem.symbol;
+				var consumer:Consumer = consumers[symbol];
+				consumer.unsubscribe();
+				consumers[symbol] = null;
+				items.removeItemAt(dg.selectedIndex);
+			}
+			
+			public function set watchList(list:Array):void
+			{
+				for (var i:int=0; i<list.length; i++)
+				{
+					addSymbol(list[i]);	
+				}
+				dg.selectedIndex = 0;
+			}
+			
+			private function addSymbol(symbol:String):void
+			{
+				symbol = symbol.toUpperCase();
+				var stock:Stock = new Stock();
+				stock.symbol = symbol;
+				stockMap[symbol] = stock;
+				items.addItem(stock);
+				
+				var consumer:Consumer = new Consumer();
+				consumer.destination = "marketdata";
+				consumer.subtopic = symbol;
+				consumer.addEventListener(MessageEvent.MESSAGE, messageHandler);
+				consumer.subscribe();
+				consumers[symbol] = consumer;
+			}
+			
+			private function addAlert(symbol:String, trigger:String):void
+			{
+				symbol = symbol.toUpperCase();
+				for(var i:int = 0; i < alerts.length; i++)
+				{
+					var alertTmp:AlertItem = alerts[i];
+					if( alertTmp.symbol == symbol )
+					{
+						alertTmp.consumer.unsubscribe();
+						alertTmp.consumer.removeEventListener(MessageEvent.MESSAGE, alertHandler);
+						alertTmp.consumer.removeEventListener(MessageFaultEvent.FAULT, alertFaultHandler);
+						alerts.removeItemAt(i);
+						break;
+					}
+				}
+				var alert:AlertItem = new AlertItem();
+				alert.symbol = symbol;
+				alert.trigger = trigger;
+				var consumer:Consumer = new Consumer();
+				consumer.destination = "marketdata";
+				consumer.selector = "Symbol = '" + symbol + "' AND " + trigger;
+				consumer.addEventListener(MessageEvent.MESSAGE, alertHandler);
+				consumer.addEventListener(MessageFaultEvent.FAULT, alertFaultHandler);
+				consumer.subscribe();
+				alert.consumer = consumer;
+				alerts.addItem(alert);
+			}		
+			
+			private function deleteAlert():void
+			{
+				var consumer:Consumer = dgalerts.selectedItem.consumer;
+				consumer.unsubscribe();
+				consumer.removeEventListener(MessageEvent.MESSAGE, alertHandler);
+				consumer.removeEventListener(MessageFaultEvent.FAULT, alertFaultHandler);
+				alerts.removeItemAt(dgalerts.selectedIndex);
+			}
+					
+			private function messageHandler(event:MessageEvent):void 
+			{
+				var changedStock:Stock = event.message.body as Stock;
+				var stock:Stock = stockMap[changedStock.symbol];
+				
+				BackgroundColorRenderer.symbol = changedStock.symbol;
+				
+				if (stock)
+				{
+					stock.open = changedStock.open;
+					stock.change = changedStock.change;
+					stock.last = changedStock.last;
+					stock.high = changedStock.high;
+					stock.low = changedStock.low;
+					stock.date = changedStock.date;
+					stock.name = changedStock.name;
+				}
+	        }
+	        
+			private function alertHandler(event:MessageEvent):void 
+			{
+				var changedStock:Stock = event.message.body as Stock;
+				for(var i:int = 0; i < alerts.length; i++)
+				{
+					var alert:AlertItem = alerts[i];
+					if( alert.symbol == changedStock.symbol )
+					{
+						alert.alertTime = new Date();
+					}
+					else
+						alert.alertTime = null;
+				}
+			}
+	        
+			private function alertFaultHandler(fault:MessageFaultEvent):void 
+			{
+				Alert.show(fault.faultString, "Alert");
+			}
+			
+			private function formatNumber(item:Object, column:DataGridColumn):String
+			{
+				return nf.format(item[column.dataField]);
+			}
+
+		]]>
+	</mx:Script>
+	
+	<mx:NumberFormatter id="nf" precision="2"/>
+	<mx:DateFormatter id="df" formatString="EEEE, MMMM D YYYY"/>
+
+	<mx:ApplicationControlBar width="100%">
+		<mx:Spacer width="80%"/>
+		<mx:Label text="{df.format(new Date())} | Welcome, {userId}"/>
+		<mx:Spacer width="10%"/>
+	</mx:ApplicationControlBar>
+
+	<mx:HDividedBox width="100%" height="100%" top="40" bottom="10" left="10" right="10">
+		
+		<mx:VDividedBox width="100%" height="100%">
+			<mx:Panel title="Watch List" width="100%" height="100%">
+				<mx:DataGrid id="dg" dataProvider="{items}" width="100%" height="100%">
+					<mx:columns>
+						<mx:DataGridColumn headerText="Symbol" dataField="symbol" width="80"/>
+						<mx:DataGridColumn headerText="Name" dataField="name" width="150"/>
+						<mx:DataGridColumn headerText="Open" dataField="open" labelFunction="formatNumber" textAlign="right" width="60"/>
+						<mx:DataGridColumn headerText="Last" dataField="last" itemRenderer="BackgroundColorRenderer" labelFunction="formatNumber" textAlign="right" width="60"/>
+						<mx:DataGridColumn headerText="Change" dataField="change" itemRenderer="ColorRenderer" labelFunction="formatNumber" textAlign="right" width="60"/>
+						<mx:DataGridColumn headerText="High" dataField="high" labelFunction="formatNumber" textAlign="right" width="60"/>
+						<mx:DataGridColumn headerText="Low" dataField="low" labelFunction="formatNumber" textAlign="right" width="60"/>
+					</mx:columns>
+				</mx:DataGrid>
+				<mx:ControlBar>
+					<mx:TextInput id="symbol" enter="addSymbol(symbol.text);symbol.text='';" width="50"/>
+					<mx:Button label="Add Symbol" click="addSymbol(symbol.text);symbol.text='';"/>
+					<mx:Spacer width="100%"/>
+					<mx:Button label="Delete Symbol" click="deleteSymbol()" enabled="{dg.selectedItem}"/>
+				</mx:ControlBar>
+			</mx:Panel>
+		</mx:VDividedBox>
+		
+		<mx:VDividedBox width="100%" height="100%">
+			<mx:Panel title="Alerts" width="100%" height="100%">
+				<mx:DataGrid id="dgalerts" dataProvider="{alerts}" width="100%" height="100%">
+					<mx:columns>
+						<mx:DataGridColumn headerText="Symbol" itemRenderer="AlertRenderer" dataField="symbol" width="80"/>
+						<mx:DataGridColumn headerText="Trigger" dataField="trigger" width="80"/>
+					</mx:columns>
+				</mx:DataGrid>
+				<mx:ControlBar>
+					<mx:TextInput id="alertSymbol" width="50"/>
+					<mx:TextInput id="trigger" width="150"/>
+					<mx:Button label="Add Alert" click="addAlert(alertSymbol.text, trigger.text);alertSymbol.text='';trigger.text='';"/>
+					<mx:Spacer width="100%"/>
+					<mx:Button label="Delete Alert" click="deleteAlert()" enabled="{dgalerts.selectedItem}"/>
+				</mx:ControlBar>
+			</mx:Panel>
+		</mx:VDividedBox>
+		
+	</mx:HDividedBox>
+
+</mx:Canvas>

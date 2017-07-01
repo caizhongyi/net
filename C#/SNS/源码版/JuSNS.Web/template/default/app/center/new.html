@@ -1,0 +1,147 @@
+﻿#parse("_head.html")
+<div id="snsmenu">
+#parse("_menu.html")
+</div>
+<div id="snsbody">
+    <div id="snshead">应用程序</div>
+
+
+    <div class="itemmenu">
+        <ul>
+            <li><a href="$webpath/app/center/default$exname">应用列表</a></li>
+            <li><a href="$webpath/app/center/default$exname?q=hot">热门应用</a></li>
+            <li><a href="$webpath/app/center/default$exname?q=my">我安装的应用</a></li>
+            <li><a href="$webpath/app/center/default$exname?q=mys">我提交的应用</a></li>
+            <li class="current"><a href="$webpath/app/center/dev$exname">开发者</a></li>
+            <li><a href="$webpath/app/center/help$exname">开发者帮助中心</a></li>
+        </ul>
+    </div>
+    
+    <div class="itemmenu1">
+        <ul>
+            <li class="current"><a href="$webpath/app/center/new$exname">创建应用程序</a></li>
+            <li><a href="$webpath/app/center/dev$exname">开发者</a></li>
+        </ul>
+    </div>
+    <div class="app">
+        #if($isdev)
+            <div style="font-size:14px;font-weight:bold;border-bottom:1px solid #eeeeee;padding:3px;width:98%;clear:both;margin-bottom:10px;">创建应用程序</div>
+            <form id="form1" action="" method="post" enctype="multipart/form-data">
+                <div class="pitem">
+                    <em>应用程序名称</em>
+                    <input id="appname" name="appname" class="f-text" type="text" value="#if($appname)$appname#end" style="width:250px;" />
+                </div>
+                <div class="pitem">
+                    <em>唯一密钥</em>
+                    <input id="appkey" name="appkey" value="$appkey" readonly="readonly" class="f-text" type="text"  style="width:250px;"/> 请谨慎保管，数据传递需要此密钥
+                </div>
+                <div class="pitem">
+                    <em>程序分类</em>
+                    <select id="classid" name="classid">
+                        $classlist
+                    </select>
+                    
+                </div>
+                <div class="pitem">
+                    <em>应用程序图标</em>
+                    <input id="ico" name="ico" type="file" class="f-file"  />
+                    <input id="hideico" name="hideico" type="hidden" value="#if($ico)$ico#end"/>
+                </div>
+                <div class="pitem">
+                    <em>应用程序图片</em>
+                    <input id="pic" name="pic" type="file" class="f-file"  />
+                    <input id="hidepic" name="hidepic" type="hidden" value="#if($pic)$pic#end" />
+                </div>
+                <div class="pitem">
+                    <em>程序开发进程</em>
+                    <select id="IsLock" name="IsLock">
+                       <option value="2" #if($IsLock==2)selected#end>准备开发...</option>
+                       <option value="3" #if($IsLock==3)selected#end>开发中...</option>
+                       <option value="1" #if($IsLock==1)selected#end>开发完成...</option>
+                    </select>
+                    
+                </div>
+                <div class="pitem">
+                    <em>程序介绍</em>
+                    <textarea id="content" name="content" class="f-text" type="text"  style="width:500px;height:80px;">#if($content)$content#end</textarea> 支持HTML语法输入
+                </div>
+                
+                <div class="pitem">
+                    <em>程序连接地址</em>
+                    <input id="url" name="url" class="f-text" type="text" value="#if($url)$url#end" style="width:250px;" /> 添加完整的域名和首页文件名，如：http://dev.jusns.com/app.aspx
+                </div>
+                <div class="pitem">
+                    <em>程序页面高度</em>
+                    <input id="height" name="height" class="f-text" type="text" value="#if($height)$height#end" style="width:250px;" />px
+                </div>
+                <div class="pitem">
+                    <em>程序页面宽度</em>
+                    <input id="width" name="width" class="f-text" type="text" value="#if($width)$width#end" style="width:250px;" />px，页面宽度不能大于800px,否则将显示不完整
+                </div>
+                
+                <div class="pitem">
+                    <em>用户安装安装协议</em>
+                    <textarea id="SetupContent" name="SetupContent" class="f-text" type="text"  style="width:500px;height:80px;">#if($SetupContent)$SetupContent#end</textarea> 支持HTML语法输入
+                </div>
+
+               
+                <div class="pitem">
+                    <em>&nbsp;</em>
+                    <input id="Text1" name="email" class="btn_blue6" type="submit" onclick="return checkdata();" value="提交应用程序" />
+                </div>
+            </form>
+        #end
+    </div>
+    
+</div>
+#parse("_foot.html")
+<script type="text/javascript">
+    function checkdata()
+    {
+        var error="";
+        var appname=jQuery("#appname").val();
+        if(appname=="")
+        {
+            showErrorResult("填写应用程序名！");
+            error="1";
+            return false;
+        }
+        
+        var content=jQuery("#content").val();
+        if(content=="")
+        {
+            showErrorResult("填写程序介绍！");
+            error="1";
+            return false;
+        }
+        var url=jQuery("#url").val();
+        if(url=="")
+        {
+            showErrorResult("填写应用程序链接地址！");
+            error="1";
+            return false;
+        }
+        var height=jQuery("#height").val();
+        if(height=="")
+        {
+            showErrorResult("填写应用程序页面高度！");
+            error="1";
+            return false;
+        }
+        var width=jQuery("#width").val();
+        if(width=="")
+        {
+            showErrorResult("填写应用程序页面宽度！");
+            error="1";
+            return false;
+        }
+        if(error=="1")
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
+</script>

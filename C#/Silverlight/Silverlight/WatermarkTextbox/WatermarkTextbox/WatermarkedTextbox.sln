@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logger", "Behaviors\Logger.csproj", "{C6DAA9E7-5A52-4216-B02E-09F4C7D47640}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarkupExtensionsTest", "MarkupExtensionsTest\MarkupExtensionsTest.csproj", "{69AF2267-6909-4192-80CE-A538ECADE0EC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C6DAA9E7-5A52-4216-B02E-09F4C7D47640}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6DAA9E7-5A52-4216-B02E-09F4C7D47640}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6DAA9E7-5A52-4216-B02E-09F4C7D47640}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6DAA9E7-5A52-4216-B02E-09F4C7D47640}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69AF2267-6909-4192-80CE-A538ECADE0EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69AF2267-6909-4192-80CE-A538ECADE0EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69AF2267-6909-4192-80CE-A538ECADE0EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69AF2267-6909-4192-80CE-A538ECADE0EC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

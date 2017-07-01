@@ -1,0 +1,55 @@
+﻿#parse("_head.html")
+<div id="snsmenu">
+#parse("_menu.html")
+</div>
+<div id="snsbody">
+    <div id="snshead"><span class="l">举报不良信息</span></div>
+
+    <div >
+    <div class="itemmenu">
+        <ul>
+            <li class="current"><a href="javascript:;">举报不良信息</a></li> 
+        </ul>
+        
+    </div>
+    </div>
+    
+    <div id="snsbody-all">
+        <form id="form1" name="form1" action="" method="post">
+            <div class="pitem">
+                <em>举报理由</em>
+                <textarea id="content" name="content"  style="height:100px;width:60%;" class="f-text"></textarea>
+                <input id="urls" name="urls" type="hidden" value="$urls" />
+            </div>
+            <div class="pitem">
+                <em>&nbsp;</em>
+                <input id="Submit1" type="submit" value="举报" class="btn_blue2" onclick="return checkdata();" />
+            </div>
+        
+        </form>
+    </div>
+</div>
+
+#parse("_foot.html")
+<script type="text/javascript">
+    function checkdata()
+    {
+        if (confirm("确定举报信息的真实性吗？\n恶意的举报可能导致您帐户被冻结。")) 
+        {
+            var content =jQuery("#content").val();
+            if(content=="")
+            {
+                 showErrorResult("填写举报内容");
+                 return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+        else
+        {
+            return false;
+        }
+    }
+</script>

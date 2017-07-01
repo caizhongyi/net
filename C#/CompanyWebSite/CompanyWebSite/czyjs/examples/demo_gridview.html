@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>无标题页</title>
+     <script type="text/javascript" src="../czy-js-all.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="../czy-css-all.css" type="text/css"/>
+    <script type="text/javascript">
+    var gv;
+    window.onload = function () {
+        gv = new czyjs.UI.Controls.GridView(
+       {
+           id: "grid1",
+           width:500,
+           //height:200,
+           randerTo: "grid",
+           className: "czy-grid",
+           upDataEvent:update,
+           deleteEvent:del,
+           data: {
+               head: [{ text: 'bb'}, { text: 'bb' }, { text: 'bb'}],
+               body: [["d1", "d2", "d3"], ["d11", "d21", "d31"]]
+           }
+            					     //  格式为:[['data','data1'],['data','data1'],['data','data1']]
+
+       }
+       );
+   }
+   function update(index, dataRow)
+   { alert(dataRow[0]); }
+   function del(index, dataRow)
+   { alert(index); }
+    </script>
+</head>
+<body>
+<div id="grid" ></div>
+<input value="getIndex" onclick="alert(gv.selectedIndex)"/>
+<input value="load" onclick="gv.data.body=[['d1', 'd2', 'd3']]; gv.DataLoad()"/>
+
+</body>
+</html>

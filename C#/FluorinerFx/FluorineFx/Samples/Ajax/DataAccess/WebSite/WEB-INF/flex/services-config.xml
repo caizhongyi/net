@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<services-config>
+    <services>
+      <service id="remoting-service" class="flex.messaging.services.RemotingService" messageTypes="flex.messaging.messages.RemotingMessage">
+        <destination id="fluorine">
+          <channels>
+            <channel ref="my-amf"/>
+          </channels>
+          <properties>
+            <source>*</source>
+          </properties>
+        </destination>
+        <destination id="secure">
+          <channels>
+            <channel ref="my-amf"/>
+          </channels>
+          <properties>
+            <source>ServiceLibrary.SecureService</source>
+          </properties>
+          <security>
+            <security-constraint ref="privileged-users"/>
+          </security>
+        </destination>
+      </service>
+    </services>
+
+  <security>
+    <security-constraint id="privileged-users">
+      <auth-method>Custom</auth-method>
+      <roles>
+        <role>admin</role>
+        <role>privilegeduser</role>
+      </roles>
+    </security-constraint>
+
+    <login-command class="ServiceLibrary.MyLoginCommand" server="asp.net"/>
+  </security>
+
+  <channels>
+        <channel-definition id="my-amf" class="mx.messaging.channels.AMFChannel">
+            <endpoint uri="http://{server.name}:{server.port}/{context.root}/Gateway.aspx" class="flex.messaging.endpoints.AMFEndpoint"/>
+          <properties>
+				<!-- <legacy-collection>true</legacy-collection> -->
+            </properties>
+        </channel-definition>
+    </channels>
+</services-config>

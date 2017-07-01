@@ -1,0 +1,336 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Hitone.Web.SqlServerUploader</name>
+    </assembly>
+    <members>
+        <member name="T:Hitone.Web.SqlServerUploader.SqlServerBlobStream">
+            <summary>
+            Stream that writes directly into an SQL Server "Image"-column 
+            </summary>
+        </member>
+        <member name="M:Hitone.Web.SqlServerUploader.SqlServerBlobStream.#ctor(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Int32)">
+            <summary>
+            Main constructor; creates a SqlServerBlobStream against given database using given settings
+            </summary>
+            <param name="ConnectionString">Connections string agains the database to use</param>
+            <param name="CreatorProcedure"><c>Optional</c> Procedure to use when creating the file-containing row in the database</param>
+            <param name="TableName">Name of table to which we write the streamed data</param>
+            <param name="DataColumnName">Name of table column to store data into (usually of type <c>Text</c> or <c>Image</c>)</param>
+            <param name="PartialFlagColumnName"><c>Optional</c> Name of table column to store a "partial"-flag in; while uploading this will be set to 1 (or set by CreatorProcedure), when done it will be set to 0</param>
+            <param name="FileNameColumnName"><c>Optional</c> Name of table column where the name of the uploaded file will be stored</param>
+            <param name="FileName"><c>Optional</c> Name of the uploaded file</param>
+            <param name="MIMETypeColumnName"><c>Optional</c> Name of table column where the MIME-type of the uploaded file will be stored</param>
+            <param name="MIMEType"><c>Optional</c> MIME-type of the uploaded file</param>
+            <param name="identity"><c>Optional</c>the identity of the row to open, -1 means create a new row.</param>
+        </member>
+        <member name="M:Hitone.Web.SqlServerUploader.SqlServerBlobStream.#ctor(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Main constructor; creates an SqlServerBlobStream against a new row in the given database using given settings
+            </summary>
+            <param name="ConnectionString">Connections string agains the database to use</param>
+            <param name="CreatorProcedure"><c>Optional</c> Procedure to use when creating the file-containing row in the database</param>
+            <param name="TableName">Name of table to which we write the streamed data</param>
+            <param name="DataColumnName">Name of table column to store data into (usually of type <c>Text</c> or <c>Image</c>)</param>
+            <param name="PartialFlagColumnName"><c>Optional</c> Name of table column to store a "partial"-flag in; while uploading this will be set to 1 (or set by CreatorProcedure), when done it will be set to 0</param>
+            <param name="FileNameColumnName"><c>Optional</c> Name of table column where the name of the uploaded file will be stored</param>
+            <param name="FileName"><c>Optional</c> Name of the uploaded file</param>
+            <param name="MIMETypeColumnName"><c>Optional</c> Name of table column where the MIME-type of the uploaded file will be stored</param>
+            <param name="MIMEType"><c>Optional</c> MIME-type of the uploaded file</param>
+        </member>
+        <member name="M:Hitone.Web.SqlServerUploader.SqlServerBlobStream.OpenBlob(System.String,System.String,System.String,System.Int32,System.String,System.String)">
+            <summary>
+            Opens an exising blob for read/write access
+            </summary>
+            <param name="tableName">Name of table from which to retreive data</param>
+            <param name="dataColumnName">Name of column from which to retreive data</param>
+            <param name="identity">Identity of row to open</param>
+            <param name="fileNameColumnName">If specified the filename will be retrieved from the database</param>
+            <param name="MIMETypeColumnName">If specified the MIMEType will be retrieved from the database</param>
+        </member>
+        <member name="M:Hitone.Web.SqlServerUploader.SqlServerBlobStream.CreateBlob(System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Creates a new row in the database for read/write access
+            </summary>
+            <param name="tableName">Name of table in which to insert data</param>
+            <param name="dataColumnName">Name of column in which to insert data</param>
+            <param name="partialFlagColumnName"><c>Optional</c> If specified, this column will be set to 1 during upload and then to 0 when the upload is complete</param>
+            <param name="fileNameColumnName"><c>Optional</c> If specified, this column will be set to file specified file name</param>
+            <param name="fileName"><c>Optional</c> name of file</param>
+            <param name="MIMETypeColumnName"><c>Optional</c> If specified, this column will be set to the MIME type of the created file</param>
+            <param name="MIMEType"><c>Optional</c> MIME type of file</param>
+        </member>
+        <member name="M:Hitone.Web.SqlServerUploader.SqlServerBlobStream.#ctor(System.String,System.String,System.String,System.Int32,System.String,System.String,System.IO.FileAccess)">
+            <summary>
+            Simple constructor mainly for reading, using generated SQL queries
+            </summary>
+            <param name="connectionString"></param>
+            <param name="tableName"></param>
+            <param name="dataColumnName"></param>
+            <param name="identity"></param>
+            <param name="fileNameColumnName"></param>
+            <param name="MIMETypeColumnName"></param>
+            <param name="access"></param>
+        </member>
+        <member name="M:Hitone.Web.SqlServerUploader.SqlServerBlobStream.#ctor(System.String,System.Int32,System.String,System.String,System.IO.FileAccess)">
+            <summary>
+            Simple constructor mainly for reading, using stored procedures in the database
+            </summary>
+            <param name="connectionString"></param>
+            <param name="identity"></param>
+            <param name="openProcedure"></param>
+            <param name="readProcedure"></param>
+            <param name="access"></param>
+        </member>
+        <member name="M:Hitone.Web.SqlServerUploader.SqlServerBlobStream.Initialize(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Int32)">
+            <summary>
+            Initializor; creates a SqlServerBlobStream agains given database with given settings
+            </summary>
+            <param name="ConnectionString">Connection string agains the database to use</param>
+            <param name="ConnectionName">Name of ConnectionString from web.config to use to cennct to database</param>
+            <param name="CreatorProcedure"><c>Optional</c> Procedure to use when creating the file-containing row in the database</param>
+            <param name="TableName">Name of table to which we write the streamed data</param>
+            <param name="DataColumnName">Name of table column to store data into (usually of type <c>Text</c> or <c>Image</c>)</param>
+            <param name="PartialFlagColumnName"><c>Optional</c> Name of table column to store a "partial"-flag in; while uploading this will be set to 1 (or set by CreatorProcedure), when done it will be set to 0</param>
+            <param name="FileNameColumnName"><c>Optional</c> Name of table column where the name of the uploaded file will be stored</param>
+            <param name="FileName"><c>Optional</c> Name of the uploaded file</param>
+            <param name="MIMETypeColumnName"><c>Optional</c> Name of table column where the MIME-type of the uploaded file will be stored</param>
+            <param name="MIMEType"><c>Optional</c> MIME-type of the uploaded file</param>
+            <param name="identity"><c>Optional</c> the identity of the row to create the stream against, -1 means create a new row.</param>
+        </member>
+        <member name="M:Hitone.Web.SqlServerUploader.SqlServerBlobStream.Flush">
+            <summary>Flush is not implemented since all data is sent through immediatly</summary>
+        </member>
+        <member name="M:Hitone.Web.SqlServerUploader.SqlServerBlobStream.Seek(System.Int64,System.IO.SeekOrigin)">
+            <summary>
+            Moves filepointer to given location in file
+            </summary>
+            <param name="offset">New position of file pointer relative to the origin</param>
+            <param name="origin">Origin to seek from</param>
+            <returns></returns>
+        </member>
+        <member name="M:Hitone.Web.SqlServerUploader.SqlServerBlobStream.Close">
+            <summary>
+            Closes the current stream and releases any resources
+            </summary>
+        </member>
+        <member name="M:Hitone.Web.SqlServerUploader.SqlServerBlobStream.ReOpen">
+            <summary>
+            Reopens the stream if it has been closed
+            </summary>
+        </member>
+        <member name="M:Hitone.Web.SqlServerUploader.SqlServerBlobStream.Dispose">
+            <summary>
+            Frees all resources used by stream
+            </summary>
+        </member>
+        <member name="M:Hitone.Web.SqlServerUploader.SqlServerBlobStream.Delete">
+            <summary>
+            Deletes the table row containing the current stream from the database
+            </summary>
+        </member>
+        <member name="P:Hitone.Web.SqlServerUploader.SqlServerBlobStream.Identity">
+            <summary>
+            Gets the identity column value for the created row in the database
+            </summary>
+        </member>
+        <member name="P:Hitone.Web.SqlServerUploader.SqlServerBlobStream.Position">
+            <summary>Current filepointer position in file</summary>
+        </member>
+        <member name="T:Hitone.Web.SqlServerUploader.SqlServerUploadStorageProvider">
+            <summary>
+            Storage provider for NeatUpload that allows streaming uploaded files directly into a database
+            </summary>
+        </member>
+        <member name="M:Hitone.Web.SqlServerUploader.SqlServerUploadStorageProvider.safeName(System.String)">
+            <summary>
+            Simple safeguard agains SQL insertion. This is mostly a sanity check though since who in their right mind would start an SQL insertion attack from the web.config?
+            </summary>
+            <param name="name">Name of SQL table/colun that is to be checked</param>
+            <returns>The input string with "dangerous" characters escaped (at this point only ']')</returns>
+        </member>
+        <member name="M:Hitone.Web.SqlServerUploader.SqlServerUploadStorageProvider.Initialize(System.String,System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            Initializes the internal structures from values specified in the .config files
+            </summary>
+            <param name="providerName">Unique name used to refer to this instance of SqlServerStorageProvider</param>
+            <param name="attrs">Parameters stored in the .config files</param>
+        </member>
+        <member name="P:Hitone.Web.SqlServerUploader.SqlServerUploadStorageProvider.Name">
+            <summary> Unique friendly name for this provider </summary>
+        </member>
+        <member name="P:Hitone.Web.SqlServerUploader.SqlServerUploadStorageProvider.ConnectionString">
+            <summary> Connection string to use when connecting to the database </summary>
+        </member>
+        <member name="P:Hitone.Web.SqlServerUploader.SqlServerUploadStorageProvider.ConnectionName">
+            <summary> Name of connection string to use when connecting to the database (from then &lt;connectionStrings&gt; section in web.config)</summary>
+        </member>
+        <member name="P:Hitone.Web.SqlServerUploader.SqlServerUploadStorageProvider.CreateProcedure">
+            <summary> Name of procedure to call to create a new file in the database. To create new blobs either this or TableName/DataColumnName must be available </summary>
+            <remarks> The procedure must take these parameters: (@Pointer varbinary output, @Identity numeric output, (optional) @FileName varchar, (optional) @MIMEType varchar)</remarks>
+        </member>
+        <member name="P:Hitone.Web.SqlServerUploader.SqlServerUploadStorageProvider.OpenProcedure">
+            <summary> Name of procedure to call to open an existing blob in the database. To read/append data either this or TableName/DataColumnName must be available </summary>
+            <remarks> The procedure must take these parameters: (@Pointer varbinary output, @Identity numeric, (optional) @Size int output, (optional) @FileName varchar output, (optional) @MIMEType varchar output)</remarks>
+        </member>
+        <member name="P:Hitone.Web.SqlServerUploader.SqlServerUploadStorageProvider.WriteProcedure">
+            <summary> Name of procedure to call to append data in the database. Either this or TableName/DataColumnName must be available </summary>
+            <remarks> The procedure must take these parameters: (@Pointer varbinary output, @Offset int, @Delete int, @Bytes varbinary, (optional) @Identity int)</remarks>
+        </member>
+        <member name="P:Hitone.Web.SqlServerUploader.SqlServerUploadStorageProvider.ReadProcedure">
+            <summary> Name of procedure to call to read data from the database. Either this or TableName/DataColumnName must be available </summary>
+            <remarks> The procedure must take these parameters: (@Pointer varbinary output, @Offset int, @Size varbinary, (optional) @Identity int)</remarks>
+        </member>
+        <member name="P:Hitone.Web.SqlServerUploader.SqlServerUploadStorageProvider.CleanupProcedure">
+            <summary> Name of procedure to call when the file upload is completed but before the .net web page loads. 
+            This procedure can be used to clear the "partial upload" flag if one was used.</summary>
+            <remarks> The procedure must not take any parameters</remarks>
+        </member>
+        <member name="P:Hitone.Web.SqlServerUploader.SqlServerUploadStorageProvider.RenameProcedure">
+            <summary> Name of procedure to call to change the name of the file in the database. Either this or TableName/FileNameColumnName must be available </summary>
+            <remarks> The procedure must take these parameters: (@Identity int, @FileName varchar)</remarks>
+        </member>
+        <member name="P:Hitone.Web.SqlServerUploader.SqlServerUploadStorageProvider.StoreHashProcedure">
+            <summary> Name of procedure to call when the file upload is completed and verified to stay in the database (i.e. MoveTo has been called).
+            This procedure can be used to store the Hash of the file if one was calculated</summary>
+            <remarks> The procedure must take these parameters: (@Identity numeric, (optional) @Hash varchar)</remarks>
+        </member>
+        <member name="P:Hitone.Web.SqlServerUploader.SqlServerUploadStorageProvider.DeleteProcedure">
+            <summary> Name of procedure to call to delete a file from the database. Either this or TableName must be available to allow deletion of files </summary>
+            <remarks> The procedure must take these parameters: (@Identity int)</remarks>
+        </member>
+        <member name="P:Hitone.Web.SqlServerUploader.SqlServerUploadStorageProvider.TableName">
+            <summary> Table to store incoming file into. This or CreatorProcedure must be specified </summary>
+        </member>
+        <member name="P:Hitone.Web.SqlServerUploader.SqlServerUploadStorageProvider.DataColumnName">
+            <summary> Name of table column to store data into. Should be of type 'Image'. This or CreatorProcedure must be specified </summary>
+        </member>
+        <member name="P:Hitone.Web.SqlServerUploader.SqlServerUploadStorageProvider.PartialFlagColumnName">
+            <summary> <c>Optional</c> Name of table column to store a "partial"-flag in; while uploading this will be set to 1, when done it will be set to 0 </summary>
+        </member>
+        <member name="P:Hitone.Web.SqlServerUploader.SqlServerUploadStorageProvider.FileNameColumnName">
+            <summary> <c>Optional</c> Name of table column where the name of the uploaded file will be stored </summary>
+        </member>
+        <member name="P:Hitone.Web.SqlServerUploader.SqlServerUploadStorageProvider.MIMETypeColumnName">
+            <summary> <c>Optional</c> Name of table column where the MIME-type of the uploaded file will be stored </summary>
+        </member>
+        <member name="P:Hitone.Web.SqlServerUploader.SqlServerUploadStorageProvider.HashAlgorithm">
+            <summary> <c>Optional</c> Name of hash algorithm to use if we should hash while upload </summary>
+        </member>
+        <member name="P:Hitone.Web.SqlServerUploader.SqlServerUploadStorageProvider.HashColumnName">
+            <summary> <c>Optional</c> Name of table column where the hash of the uploaded file will be stored </summary>
+        </member>
+        <member name="P:Hitone.Web.SqlServerUploader.SqlServerUploadStorageProvider.Description">
+            <summary>Description of this storage provider</summary>
+        </member>
+        <member name="T:Hitone.Web.SqlServerUploader.SqlServerUploadedFile">
+            <summary>
+            Memory structure for one sql streamed file during upload
+            </summary>
+        </member>
+        <member name="M:Hitone.Web.SqlServerUploader.SqlServerUploadedFile.GetHexValue(System.Int32)">
+            <summary>
+            Converts an integer value into its hexadecimal counterpart
+            </summary>
+            <param name="i">Integer value to convert. Is assumed to be less than 16. If i>=16 the behaviour is undefined</param>
+            <returns>The hex counterpart of the input value</returns>
+        </member>
+        <member name="M:Hitone.Web.SqlServerUploader.SqlServerUploadedFile.ToHex(System.Byte[])">
+            <summary>
+            Converts a byte array to a hexadecimal string
+            </summary>
+            <param name="bytes">The byte array to convert</param>
+            <returns>A string containing the input arra in hexadecimal format</returns>
+            <remarks>Mimics the System.BitConverter.ToString behaviour but without the dashes</remarks>
+        </member>
+        <member name="M:Hitone.Web.SqlServerUploader.SqlServerUploadedFile.Rename(System.String)">
+            <summary>
+            Renames the current file to the given name. Requires that either renameProcedure or TebleName/FileNameColumnName is specified
+            </summary>
+            <param name="newName">Filename to change to</param>
+        </member>
+        <member name="M:Hitone.Web.SqlServerUploader.SqlServerUploadedFile.MoveTo(System.String,Brettle.Web.NeatUpload.MoveToOptions)">
+            <summary>
+            If called, this stream is considered "verified" and is allowed to stay in the datadase. If this is never called, the row is deleted
+            </summary>
+            <param name="path"><c>Optional</c> If specified, and the target data table has a FileNameField specified, the filename is changed. If <c>null</c> the filename remains the same</param>
+            <param name="opts">Ignored</param>
+            <remarks>This slightly aquard behaviour is due to the NeatUpload framework, where "MoveTo" is the only suitable method exposed by InputFile</remarks>
+        </member>
+        <member name="M:Hitone.Web.SqlServerUploader.SqlServerUploadedFile.Verify">
+            <summary>
+            If called this file is considered verified and is allowed to stay in the database.
+            </summary>
+        </member>
+        <member name="M:Hitone.Web.SqlServerUploader.SqlServerUploadedFile.OpenRead">
+            <summary>
+            Opens the newly created file for reading
+            </summary>
+            <returns>Stream with file data</returns>
+        </member>
+        <member name="P:Hitone.Web.SqlServerUploader.SqlServerUploadedFile.Identity">
+            <summary> Returns generated identity value if data was written to a table with an IDENTITY-column </summary>
+        </member>
+        <member name="P:Hitone.Web.SqlServerUploader.SqlServerUploadedFile.ContentLength">
+            <summary>
+            Gets the size of the uploaded file in bytes
+            </summary>
+        </member>
+        <member name="P:Hitone.Web.SqlServerUploader.SqlServerUploadedFile.IsUploaded">
+            <summary>
+            Returns wether a file was uploaded into this object
+            </summary>
+        </member>
+        <member name="P:Hitone.Web.SqlServerUploader.SqlServerUploadedFile.Hash">
+            <summary>
+            The cryptographic hash of the uploaded file.</summary>
+            <remarks><see cref="P:Hitone.Web.SqlServerUploader.SqlServerUploadedFile.HashSize"/> provides the length of the hash in bits.</remarks>
+        </member>
+        <member name="P:Hitone.Web.SqlServerUploader.SqlServerUploadedFile.HashSize">
+            <summary>
+            The length of the of the cryptographic hash in bits.</summary>
+            <remarks><see cref="P:Hitone.Web.SqlServerUploader.SqlServerUploadedFile.Hash"/> provides the hash itself.</remarks>
+        </member>
+        <member name="P:Hitone.Web.SqlServerUploader.SqlServerUploadedFile.HashName">
+            <summary>
+            Name of hash algorithm used
+            </summary>
+        </member>
+        <member name="T:Hitone.Web.SqlServerUploader.SqlServerInputFile">
+            <summary>
+            <see cref="!:InputFile"/> that provides access to the identity of the newly created row when used with
+            the SqlServerUploadStorageProvider 
+            </summary>
+            <remarks>
+            You can use the <see cref="P:Hitone.Web.SqlServerUploader.SqlServerInputFile.Identity"/> property to access the identity of the sql table row</remarks>
+        </member>
+        <member name="M:Hitone.Web.SqlServerUploader.SqlServerInputFile.Verify">
+            <summary>
+            Verfies the file as a valid file that should be kept. If neither this nor MoveTo are called, the uploaded data is deleted from the database
+            </summary>
+        </member>
+        <member name="P:Hitone.Web.SqlServerUploader.SqlServerInputFile.Identity">
+            <summary>
+            The identity of the newly created row in the database, if the table has an identity column
+            </summary>
+        </member>
+        <member name="P:Hitone.Web.SqlServerUploader.SqlServerInputFile.Hash">
+            <summary>
+            The cryptographic hash of the uploaded file.</summary>
+            <remarks>
+            <see cref="P:Hitone.Web.SqlServerUploader.SqlServerInputFile.HashSize"/> provides the length of the
+            of the hash in bits.</remarks>
+        </member>
+        <member name="P:Hitone.Web.SqlServerUploader.SqlServerInputFile.HashSize">
+            <summary>
+            The length of the of the cryptographic hash in bits.</summary>
+            <remarks>
+            <see cref="P:Hitone.Web.SqlServerUploader.SqlServerInputFile.Hash"/> provides the hash itself.</remarks>
+        </member>
+        <member name="P:Hitone.Web.SqlServerUploader.SqlServerInputFile.HashName">
+            <summary>
+            Name of hash algorithm used
+            </summary>
+        </member>
+    </members>
+</doc>

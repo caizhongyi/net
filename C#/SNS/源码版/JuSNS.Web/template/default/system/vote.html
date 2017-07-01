@@ -1,0 +1,67 @@
+﻿#parse("_head.html")
+<link href="$templatepath/css/app/shop.css" rel="stylesheet" type="text/css" />
+<div id="snssysmenu">
+#parse("_menusystem.html")
+</div>
+<div id="snsbody1">
+    <div id="snshead">投票管理</div>
+    <div class="itemmenu">
+        <ul>
+            <li><a href="news$exname">资讯</a></li>
+            <li><a href="group$exname">社群</a></li>
+            <li><a href="topic$exname">话题</a></li>
+            <li><a href="blog$exname">博客</a></li>
+            <li><a href="twitter$exname">微博</a></li>
+            <li><a href="photo$exname">相册</a></li>
+            <li><a href="shop$exname">品牌</a></li>
+            <li><a href="active$exname">活动</a></li>
+            <li><a href="ask$exname">问答</a></li>
+            <li><a href="gift$exname">礼物</a></li>
+            <li><a href="poke$exname">招呼</a></li>
+            <li class="current"><a href="vote$exname">投票</a></li>
+            <li><a href="fav$exname">收藏</a></li>
+            <li class="search"> &nbsp; 搜索：<input id="kwd" name="kwd" value="#if($kwd)$kwd#else投票标题/姓名#end" type="text" class="f-text w100" onclick="this.value=''" /> <input id="Button1" type="button" value="搜索" class="btn_gray2" onclick="search('votem','$q')" /></li>
+        </ul>
+    </div>
+    
+    <div class="itemmenu1">
+        <ul>
+            <li class="current"><a href="vote$exname">投票管理</a></li>
+            <li><a href="javascript:;" onclick="deletestart('vote');">初始化投票</a></li>
+   </ul>
+    </div>
+    
+    <div class="system">
+          #if($recordcount>0)
+                <table  id="mtable">
+                <tr>
+                    <th>发起者</th>
+                    <th>投票名称</th>
+                    <th>创建时间</th>
+                    <th style="text-align:center;">操作</th>
+                </tr>
+                #foreach($info in $infolist)
+                <tr id="param_$info.id">
+                    <td><a href="$info.spaceurl" target="_blank">$info.truename</a></td>
+                    <td>$info.showrec <a  href="$info.voteurl" title="查看原文" target="_blank">【阅】</a>$info.title</td>
+                    <td>$info.posttime</td>
+                    <td>
+                    <input  type="button" value="删除" onclick="deleteAll($info.id,$uid,'vote');" class="btn_blue2" /></td>
+                </tr>
+               
+                #end
+             </table>
+              <div class="pages">$pagelist</div>
+        #else
+            <div>还没有记录</div>
+        #end       
+    </div>
+    
+</div>
+#parse("_foot.html")
+<script type="text/javascript">
+    function showtc(cid)
+    {
+        jQuery("#cc_"+cid).toggle();
+    }
+</script>

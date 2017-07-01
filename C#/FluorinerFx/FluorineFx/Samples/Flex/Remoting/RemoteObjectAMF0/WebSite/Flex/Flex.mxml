@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" xmlns="*" xmlns:renaun="com.renaun.rpc.*" layout="vertical"
+	creationComplete="test()"  >
+
+    <renaun:RemoteObjectAMF0 
+    	destination="fluorine"
+        id="roBookService"
+        source="ServiceLibrary.BookService"
+        showBusyCursor="true"
+        makeObjectsBindable="false"
+        result="resultHandler( event )"
+        fault="faultHandler( event )">
+    </renaun:RemoteObjectAMF0>
+<!--
+    <mx:RemoteObject 
+    	destination="fluorine"
+        id="roBookService"
+        source="ServiceLibrary.BookService"
+        showBusyCursor="true"
+        makeObjectsBindable="false"
+        result="resultHandler( event )"
+        fault="faultHandler( event )">
+    </mx:RemoteObject>
+-->
+
+<!--
+    <renaun:RemoteObjectAMF0 
+    	destination="fluorine"
+        id="roBookService"
+        source="ServiceLibrary.BookService"
+        showBusyCursor="true"
+        makeObjectsBindable="false">
+        <renaun:methods>
+	        <renaun:method name="GetBooks" result="resultHandler( event )" fault="faultHandler( event )"/>
+	    </renaun:methods>   
+    </renaun:RemoteObjectAMF0>
+-->
+<!--
+    <mx:RemoteObject 
+    	destination="fluorine"
+        id="roBookService"
+        source="ServiceLibrary.BookService"
+        showBusyCursor="true"
+        makeObjectsBindable="false"
+        result="event.token.resultHandler( event )"
+        fault="event.token.faultHandler( event )">
+        <mx:method name="GetBooks" result="resultHandler( event )" fault="faultHandler( event )"/>
+    </mx:RemoteObject>
+-->
+
+  <mx:Script>
+    <![CDATA[
+    	import mx.collections.ArrayCollection;
+	    import mx.rpc.events.ResultEvent;
+	    import mx.utils.ObjectUtil;
+	    import mx.controls.Alert;
+	    import mx.rpc.events.FaultEvent;
+	
+	    private function test():void
+	    {
+	    	roBookService.GetBooks();
+	    }
+
+        [Bindable]
+        [ArrayElementType("BookVO")]
+        private var books:ArrayCollection;
+
+        private function resultHandler( event:ResultEvent ):void
+        {
+            books = new ArrayCollection( event.result as Array );
+        }
+
+        public function faultHandler( event:FaultEvent ):void
+        {
+            // Handle faults here
+            Alert.show( "Fault: " + event.fault + " Msg: " + event.message );
+        }    
+        
+        private function viewDetails():void
+        {
+            lblBook.text = BookVO( dgBooks.selectedItem ).name;
+        }
+      
+    ]]>
+</mx:Script>
+
+	<mx:Label id="lblBook" text="" />
+    <mx:DataGrid id="dgBooks" dataProvider="{ books }" width="800" change="viewDetails()" />
+
+</mx:Application>

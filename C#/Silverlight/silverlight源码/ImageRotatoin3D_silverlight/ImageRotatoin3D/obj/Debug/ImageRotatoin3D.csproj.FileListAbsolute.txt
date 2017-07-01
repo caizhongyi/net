@@ -1,0 +1,39 @@
+D:\Workspace\Silverlight\ImageRotatoin3D\ImageRotatoin3D\obj\Debug\ResolveAssemblyReference.cache
+D:\Workspace\Silverlight\ImageRotatoin3D\ImageRotatoin3D\obj\Debug\App.g.cs
+D:\Workspace\Silverlight\ImageRotatoin3D\ImageRotatoin3D\obj\Debug\ImageRotation3D.g.cs
+D:\Workspace\Silverlight\ImageRotatoin3D\ImageRotatoin3D\obj\Debug\Page.g.cs
+D:\Workspace\Silverlight\ImageRotatoin3D\ImageRotatoin3D\obj\Debug\ImageRotatoin3D.g.resources
+D:\Workspace\Silverlight\ImageRotatoin3D\ImageRotatoin3D\Bin\Debug\ImageRotatoin3D.dll
+D:\Workspace\Silverlight\ImageRotatoin3D\ImageRotatoin3D\Bin\Debug\ImageRotatoin3D.pdb
+D:\Workspace\Silverlight\ImageRotatoin3D\ImageRotatoin3D\Bin\Debug\AppManifest.xaml
+D:\Workspace\Silverlight\ImageRotatoin3D\ImageRotatoin3D\Bin\Debug\ImageRotatoin3D.xap
+D:\Workspace\Silverlight\ImageRotatoin3D\ImageRotatoin3D\Bin\Debug\TestPage.html
+D:\Workspace\Silverlight\ImageRotatoin3D\ImageRotatoin3D\obj\Debug\ImageRotatoin3D.dll
+D:\Workspace\Silverlight\ImageRotatoin3D\ImageRotatoin3D\obj\Debug\ImageRotatoin3D.pdb
+D:\Workspace\Silverlight\ImageRotatoin3D\ImageRotatoin3D\obj\Debug\XapCacheFile.xml
+C:\Documents and Settings\jf\桌面\ImageRotatoin3D_silverlight\ImageRotatoin3D\Bin\Debug\AppManifest.xaml
+C:\Documents and Settings\jf\桌面\ImageRotatoin3D_silverlight\ImageRotatoin3D\Bin\Debug\ImageRotatoin3D.dll
+C:\Documents and Settings\jf\桌面\ImageRotatoin3D_silverlight\ImageRotatoin3D\Bin\Debug\ImageRotatoin3D.pdb
+C:\Documents and Settings\jf\桌面\ImageRotatoin3D_silverlight\ImageRotatoin3D\Bin\Debug\ImageRotatoin3D.xap
+C:\Documents and Settings\jf\桌面\ImageRotatoin3D_silverlight\ImageRotatoin3D\Bin\Debug\TestPage.html
+C:\Documents and Settings\jf\桌面\ImageRotatoin3D_silverlight\ImageRotatoin3D\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\jf\桌面\ImageRotatoin3D_silverlight\ImageRotatoin3D\obj\Debug\App.g.cs
+C:\Documents and Settings\jf\桌面\ImageRotatoin3D_silverlight\ImageRotatoin3D\obj\Debug\ImageRotation3D.g.cs
+C:\Documents and Settings\jf\桌面\ImageRotatoin3D_silverlight\ImageRotatoin3D\obj\Debug\Page.g.cs
+C:\Documents and Settings\jf\桌面\ImageRotatoin3D_silverlight\ImageRotatoin3D\obj\Debug\ImageRotatoin3D.g.resources
+C:\Documents and Settings\jf\桌面\ImageRotatoin3D_silverlight\ImageRotatoin3D\obj\Debug\ImageRotatoin3D.dll
+C:\Documents and Settings\jf\桌面\ImageRotatoin3D_silverlight\ImageRotatoin3D\obj\Debug\ImageRotatoin3D.pdb
+C:\Documents and Settings\jf\桌面\ImageRotatoin3D_silverlight\ImageRotatoin3D\obj\Debug\XapCacheFile.xml
+F:\源码\silverlight\ImageRotatoin3D_silverlight\ImageRotatoin3D\Bin\Debug\AppManifest.xaml
+F:\源码\silverlight\ImageRotatoin3D_silverlight\ImageRotatoin3D\Bin\Debug\ImageRotatoin3D.dll
+F:\源码\silverlight\ImageRotatoin3D_silverlight\ImageRotatoin3D\Bin\Debug\ImageRotatoin3D.pdb
+F:\源码\silverlight\ImageRotatoin3D_silverlight\ImageRotatoin3D\Bin\Debug\ImageRotatoin3D.xap
+F:\源码\silverlight\ImageRotatoin3D_silverlight\ImageRotatoin3D\Bin\Debug\TestPage.html
+F:\源码\silverlight\ImageRotatoin3D_silverlight\ImageRotatoin3D\obj\Debug\ResolveAssemblyReference.cache
+F:\源码\silverlight\ImageRotatoin3D_silverlight\ImageRotatoin3D\obj\Debug\App.g.cs
+F:\源码\silverlight\ImageRotatoin3D_silverlight\ImageRotatoin3D\obj\Debug\ImageRotation3D.g.cs
+F:\源码\silverlight\ImageRotatoin3D_silverlight\ImageRotatoin3D\obj\Debug\Page.g.cs
+F:\源码\silverlight\ImageRotatoin3D_silverlight\ImageRotatoin3D\obj\Debug\ImageRotatoin3D.g.resources
+F:\源码\silverlight\ImageRotatoin3D_silverlight\ImageRotatoin3D\obj\Debug\ImageRotatoin3D.dll
+F:\源码\silverlight\ImageRotatoin3D_silverlight\ImageRotatoin3D\obj\Debug\ImageRotatoin3D.pdb
+F:\源码\silverlight\ImageRotatoin3D_silverlight\ImageRotatoin3D\obj\Debug\XapCacheFile.xml

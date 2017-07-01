@@ -1,0 +1,11 @@
+#!/bin/sh
+#
+if modprobe jpt; then :; else
+	exit $?
+fi
+
+echo " "
+echo "Jpt serial driver Ver 1.0 loaded"
+
+# for 2.6.10 or above, following line is needed
+/jptser/jptmknod

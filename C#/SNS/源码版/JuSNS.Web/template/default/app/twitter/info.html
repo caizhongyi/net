@@ -1,0 +1,86 @@
+﻿#parse("_head.html")
+<div id="snsmenu">
+#parse("_menu.html")
+<script type="text/javascript" src="$webpath/library/xmleditor/xheditor-zh-cn.min.js"></script>
+</div>
+<div id="snsbody">
+    <div id="snshead1">
+        <span class="images l"><a href="$spaceurl" title="$truename的空间"><img src="$headpic" /></a></span>
+        <span class="l"><div class="strong f14">$truename的微博</div>» <a href="$spaceurl">$truename的空间</a> &nbsp;  » <a href="$webpath/app/twitter/?q=$userid">$truename所有微博</a></span>
+        <span class="r"><a href="javascript:history.back();">返回上一页</a></span>
+    </div>
+    
+    <div class="itemmenu">
+        <ul>
+            <li><a href="$webpath/app/twitter/default$exname">他们正在...</a></li>
+            #if($uid>0)
+            <li><a href="$webpath/app/twitter/default$exname?q=my">我的微博</a></li>
+            <li><a href="$webpath/app/twitter/default$exname?q=friend">朋友的微博</a></li> 
+            #end
+            <li class="current"><a href="javascript:;">浏览微博...</a></li>
+        </ul>
+    </div>
+    <div id="snsbody-all">
+    <div class="xcontent pitem" style="line-height:32px;">
+        $content
+    </div>
+    
+
+    <div class="line"></div>
+    <div id="snsmiddle" style="width:100%;">
+        <h3>评论 <a href="#commentcontent" class="normal">我要评论</a></h3>
+        #if($recordcount>0)
+                <ul>
+                #foreach($comm in $commlist)
+                    <li id="param_$comm.id">
+                        <div class="aa images center">
+                            <a href="$comm.spaceurl"><img src="$comm.headpic"></a>
+                        </div>
+                        <div class="bb">
+                            <div class="hdtitlecomment">
+                                <div class="ll"><a href="$comm.spaceurl">$comm.truename</a> <span class="time">$comm.time</span></div>
+                                <div class="rr">$comm.showop<a href="${reporturl}#param_$comm.id" target="_blank" class="a-report"></a></div>
+                            </div>
+                            <div class="ctx">$comm.content</div>
+                        </div>
+                    </li>
+                #end
+                  <li class="pages">$pagelist</li>
+              </ul>
+        #else
+            <div>还没有评论</div>
+        #end      
+        #if($uid>0)    
+        <div class="pitem">
+        <h4>发表评论</h4>
+        <form action="" method="post">
+            <textarea id="commentcontent" name="commentcontent" cols="20" rows="2"  class="xheditor-mini {skin:'$editskin'}" style="width:100%;height:200px"></textarea> 
+            <input id="txtislock" name="txtislock" value="$islock" type="hidden" />
+            <input id="nid" name="nid" value="$id" type="hidden" />
+            <br />
+           
+            <input id="Submit1" type="submit" value="提交评论" class="btn_blue4" onclick="return checkdata();" />
+            <input id="userid" name="userid" value="$userid" type="hidden" />
+        </form>
+            
+        </div>
+        #end
+    </div>
+    
+    </div>
+</div>
+<script type="text/javascript">
+    function checkdata()
+    {
+        var c= jQuery("#commentcontent").val();
+        if(c=="")
+        {
+            alert("填写评论内容");return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
+</script>
+#parse("_foot.html")

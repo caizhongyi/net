@@ -1,0 +1,5 @@
+本源码为创意互动依据国外教程制作而来，晚点的时候会把该教程翻译回来，本SilverLight相册中人物相片创意互动保留最终俏像版权，请不要将该相片用于任何用途。要在本地使用该源码，请使用IIS浏览。Configuration.xml为配置相册属性的文件，Data.xml为相册路径存储文件。
+
+创意互动网站：http://www.cyhd.net
+电子邮箱：creativegroup@yeah.net
+QQ：275579661

@@ -1,0 +1,26 @@
+<div id="modlayer" style="display: none;position:position">
+	<input type="hidden" name="optgroup" />
+	<input type="hidden" name="operation" />
+	<a class="collapse" href="javascript:;" onclick="$('modlayer').className='collapsed'"><img src="{IMGDIR}/collapsed_yes.gif" alt="{lang zoom_out}" title="{lang zoom_out}" /></a>
+	<label><input class="checkbox" type="checkbox" name="chkall" onclick="if(!($('modcount').innerHTML = modclickcount = checkall(this.form, 'moderate'))) {$('modlayer').style.display = 'none';}" /> {lang checkall}</label>
+	<span>{lang admin_select}</span><strong onmouseover="$('moremodoption').style.display='block'" onclick="$('modlayer').className=''" id="modcount"></strong><span>{lang piece}: </span>
+	<strong><a href="javascript:;" onclick="tmodthreads(3, 'delete');return false;">{lang delete}</a></strong>
+	<span class="pipe">|</span>
+	<strong><a href="javascript:;" onclick="tmodthreads(2, 'move');return false;">{lang thread_moved}</a></strong>
+	<span class="pipe">|</span>
+	<strong><a href="javascript:;" onclick="tmodthreads(2, 'type');return false;">{lang types}</a></strong>
+	
+	<div id="moremodoption">
+		<hr class="solidline" />
+		<a href="javascript:;" onclick="tmodthreads(1, 'stick');return false;">{lang thread_stick}</a>
+		<a href="javascript:;" onclick="tmodthreads(1, 'highlight');return false;">{lang thread_highlight}</a>
+		<a href="javascript:;" onclick="tmodthreads(1, 'digest');return false;">{lang thread_digest}</a>
+		<!--{if $forum['modrecommend']['open'] && $forum['modrecommend']['sort'] != 1}-->
+			<a href="javascript:;" onclick="tmodthreads(1, 'recommend');return false;">{lang recommend}</a>
+		<!--{/if}-->
+		<span class="pipe">|</span>
+		<a href="javascript:;" onclick="tmodthreads(3, 'bump');return false;">{lang admin_bump_down}</a>
+		&nbsp;
+		<a href="javascript:;" onclick="tmodthreads(4);return false;">{lang admin_openclose}</a>
+	</div>
+</div>

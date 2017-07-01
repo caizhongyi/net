@@ -1,0 +1,5 @@
+bin\Debug\CpuLoad.dll
+bin\Debug\CpuLoad.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\CpuLoad.dll
+obj\Debug\CpuLoad.pdb

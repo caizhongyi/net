@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="0e57a9b3-14c3-4556-bc4d-0cc3d947dfc3" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.ObservableCollection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:53051/ValidationService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ValidationService.disco" MetadataType="Disco" ID="aa730dba-2d6b-4e1a-bfcd-d17acbf50f50" SourceId="1" SourceUrl="http://localhost:53051/ValidationService.svc?disco" />
+    <MetadataFile FileName="ValidationService.xsd" MetadataType="Schema" ID="4bd197f0-e2c4-422a-8e1e-509032738386" SourceId="1" SourceUrl="http://localhost:53051/ValidationService.svc?xsd=xsd1" />
+    <MetadataFile FileName="ValidationService1.xsd" MetadataType="Schema" ID="148c1d11-c14c-4e2b-b462-8e0c79294703" SourceId="1" SourceUrl="http://localhost:53051/ValidationService.svc?xsd=xsd0" />
+    <MetadataFile FileName="ValidationService.wsdl" MetadataType="Wsdl" ID="95b263c3-a570-46c4-9df0-148e3b8945ce" SourceId="1" SourceUrl="http://localhost:53051/ValidationService.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="ValidationService1.wsdl" MetadataType="Wsdl" ID="f85a434d-a629-45ca-b8dc-18ab4ce803e5" SourceId="1" SourceUrl="http://localhost:53051/ValidationService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

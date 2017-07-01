@@ -1,0 +1,43 @@
+﻿#parse("_head.html")
+<div id="snsmenu">
+#parse("_menu.html")
+</div>
+<div id="snsbody">
+
+    <div id="snshead">$cpagetitle</div>
+    <div class="itemmenu">
+        <ul>
+            <li#if($css_null) $css_null #end><a href="$webpath/home/online$exname">所有在线用户</a></li>
+            #if($uid>0)
+            <li#if($css_friend) $css_friend #end><a href="$webpath/home/online$exname?q=friend">我的好友在线</a></li>
+            #end
+        </ul>
+  </div>    
+
+    
+    #if($recordcount>0)        
+        <div class="list">
+            <ul>
+                #foreach($info in $infolist)
+                    <li id="param${info.id}">
+                    <div class="l images center"><a href="$info.spaceurl"><img src="$info.headpic" /><br />${info.truename}</a></div>
+                    <div class="r">
+                        <div><a href="javascript:poke($info.userid,$uid)" class="sicon-poke">招呼</a> </div>
+                        <div><a href="javascript:mail($info.userid,$uid)" title="给ta发消息" class="sicon-mail">消息</a></div>
+                     </div>
+                     </li>
+                #end
+            </ul>
+        </div>           
+        
+        
+    <div class="pages">$pagelist</div>
+    #else
+        <div>没用在线用户</div>
+    #end        
+<div class="clearpix">
+
+</div>
+</div>
+
+#parse("_foot.html")

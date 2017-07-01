@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="Cnzk.Library.Silverlight.Behaviors">
+</Property><Property Name="解决方案文件" Value="F:\Silverlight\Cnzk.Library.Silverlight.Behaviors\Cnzk.Library.Silverlight.Behaviors\Cnzk.Library.Silverlight.Behaviors.sln">
+</Property><Property Name="Date" Value="2010年11月4日">
+</Property><Property Name="Time" Value="19:30">
+</Property></Properties><Event ErrorLevel="0" Project="Cnzk.Library.Silverlight.Behaviors.Web" Source="Cnzk.Library.Silverlight.Behaviors.Web\Cnzk.Library.Silverlight.Behaviors.Web.csproj" Description="项目已成功转换">
+</Event><Event ErrorLevel="3" Project="Cnzk.Library.Silverlight.Behaviors.Web" Source="Cnzk.Library.Silverlight.Behaviors.Web\Cnzk.Library.Silverlight.Behaviors.Web.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="Cnzk.Library.Silverlight.Behaviors" Source="Cnzk.Library.Silverlight.Behaviors\Cnzk.Library.Silverlight.Behaviors.csproj" Description="项目已成功转换">
+</Event><Event ErrorLevel="3" Project="Cnzk.Library.Silverlight.Behaviors" Source="Cnzk.Library.Silverlight.Behaviors\Cnzk.Library.Silverlight.Behaviors.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="Cnzk.Library.Silverlight.Behaviors.Samples" Source="Cnzk.Library.Silverlight.Behaviors.Samples\Cnzk.Library.Silverlight.Behaviors.Samples.csproj" Description="项目已成功转换">
+</Event><Event ErrorLevel="3" Project="Cnzk.Library.Silverlight.Behaviors.Samples" Source="Cnzk.Library.Silverlight.Behaviors.Samples\Cnzk.Library.Silverlight.Behaviors.Samples.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="Cnzk.Library.Silverlight.Behaviors.sln" Description="成功转换解决方案">
+</Event><Event ErrorLevel="3" Project="" Source="Cnzk.Library.Silverlight.Behaviors.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="Cnzk.Library.Silverlight.Behaviors.Web" Source="Cnzk.Library.Silverlight.Behaviors.Web\Cnzk.Library.Silverlight.Behaviors.Web.csproj" Description="扫描完成: 项目文件不需要升级。">
+</Event><Event ErrorLevel="0" Project="Cnzk.Library.Silverlight.Behaviors" Source="Cnzk.Library.Silverlight.Behaviors\Cnzk.Library.Silverlight.Behaviors.csproj" Description="扫描完成: 项目文件不需要升级。">
+</Event><Event ErrorLevel="0" Project="Cnzk.Library.Silverlight.Behaviors.Samples" Source="Cnzk.Library.Silverlight.Behaviors.Samples\Cnzk.Library.Silverlight.Behaviors.Samples.csproj" Description="扫描完成: 项目文件不需要升级。">
+</Event></UpgradeLog>

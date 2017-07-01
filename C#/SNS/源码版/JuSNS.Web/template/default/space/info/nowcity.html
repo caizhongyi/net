@@ -1,0 +1,94 @@
+﻿#parse("_head.html")
+<script type="text/javascript" src="$webpath/library/js/area.js"></script>
+<div id="snsmenu">
+#parse("_menu.html")
+</div>
+<div id="snsbody">
+    <div id="snshead">修改居住地</div>
+
+    <div class="itemmenu">
+        <ul>
+            <li><a href="profile$exname">基本资料</a></li>
+            <li class="current"><a href="nowcity$exname">居住地</a></li>
+            <li><a href="head$exname">修改头像</a></li>
+            <li><a href="links$exname">联系方式</a></li>
+            <li><a href="edu$exname">教育情况</a></li>
+            <li><a href="work$exname">工作情况</a></li>
+            <li><a href="like$exname">个人爱好</a></li>
+            <li><a href="privacy$exname">隐私设置</a></li>
+        </ul>
+  </div>
+
+    <div class="pitem">${username} &nbsp; ${email} &nbsp; ${mobile}${bindmobile} 
+        <span id="hideMobile" style="display:none;">
+            <input value="" class="f-text" type="text" id="mMobile" name="mMobile" /> <input type="button" name="MobileModify" id="MobileModify" onclick="MobileModifys();" class="f-button" value="填写手机"/>
+        </span>
+     (<a href="pwd$exname">修改登录密码</a>)</div>
+    <form action="" method="post">
+        <div class="pitem"><em>居住地：</em>
+        <select name="homeprovince" id="homeprovince" onchange="ChangeProv(this);">
+        <script type="text/javascript">
+                var returnvalue = "";
+                for (i=0; i<Area.length; i++) 
+                {
+                    if(Area[i][0] == "0")
+                    {
+                        if(Area[i][1]==$areaid)
+                        {
+                            returnvalue += "<option value='" + Area[i][1] + "' selected>" + Area[i][2] + "</option>";
+                        }
+                        else
+                        {
+                            returnvalue += "<option value='" + Area[i][1] + "'>" + Area[i][2] + "</option>";
+                        }
+                    }
+                }
+                document.write(returnvalue);
+        </script>  
+        </select>
+        <select name="SlctCity" id="SlctCity">
+        </select>
+        </div>
+        <div class="pitem1"> <em>&nbsp;</em>
+            <input type="submit" name="button1" id="Submit1" class="btn_blue5" value="修改居住地"/>
+            <input type="reset" name="button1" id="Submit2" class="btn_gray2"  value="重填"/>
+        </div>
+    </form>
+    </div>
+    <script type="text/javascript">
+        function MobileModifys()
+        {
+            var mobile=jQuery("#mMobile").val();
+            var uid=$uid;
+            modifymobile(uid,mobile);
+        }
+        function bindmobile(mb,flag)
+        {
+            bindmobiles("${mobilesendcontent}",flag);
+        }       
+        ChangeProv(document.getElementById("homeprovince"));
+        function ChangeProv(obj) 
+        {
+            var objcity = document.getElementById('SlctCity');
+            objcity.style.display = '';
+            objcity.options.length = 0;
+            var m=0;  
+            var sitem=$sitem;
+            for (i=0; i<Area.length; i++) 
+            {
+                if(Area[i][0] == obj.value&&Area[i][0] !="0")
+                {
+                    var opt = document.createElement('option');
+                    opt.value = Area[i][1];
+                    opt.innerHTML = Area[i][2];
+                    objcity.appendChild(opt);
+                   if(Area[i][1]==sitem)
+                    {
+                        document.getElementById("SlctCity").options[m].selected=true;
+                    }
+                    m++;
+                }
+            }        
+        }
+    </script>
+#parse("_foot.html")

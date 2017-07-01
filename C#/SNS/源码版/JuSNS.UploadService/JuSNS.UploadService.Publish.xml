@@ -1,0 +1,8 @@
+<publishData>
+  <publishTarget publishUrl="F:\JuNET\web\uploadService\">
+    <file relUrl="bin/JuSNS.UploadService.pdb" publishTime="2009/2/14 21:28:33" />
+    <file relUrl="bin/JuSNS.UploadService.dll" publishTime="2009/2/14 21:28:33" />
+    <file relUrl="UploadService.asmx" publishTime="2009/1/13 0:36:05" />
+    <file relUrl="Web.config" publishTime="2009/1/13 0:36:05" />
+  </publishTarget>
+</publishData>

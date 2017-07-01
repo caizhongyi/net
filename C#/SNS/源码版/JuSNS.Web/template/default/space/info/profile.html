@@ -1,0 +1,210 @@
+﻿#parse("_head.html")
+<script type="text/javascript" src="$webpath/library/js/area.js"></script>
+<div id="snsmenu">
+#parse("_menu.html")
+</div>
+<div id="snsbody">
+<script type="text/javascript" src="$webpath/library/js/date/WdatePicker.js"></script>
+    <div id="snshead">基本资料</div>
+
+    #if($startlogin)
+        <div class="itemmenu">
+            <ul>
+                <li class="current"><a>第一步(完善基本资料) </a></li>
+                <li><a>第二步(上传头像)</a></li>
+                <li><a>第三步（增加好友）</a></li>
+            </ul>
+        </div>
+    #else
+    <div class="itemmenu">
+        <ul>
+            <li class="current"><a href="profile$exname">基本资料</a></li>
+            <li><a href="nowcity$exname">居住地</a></li>
+            <li><a href="head$exname">修改头像</a></li>
+            <li><a href="links$exname">联系方式</a></li>
+            <li><a href="edu$exname">教育情况</a></li>
+            <li><a href="work$exname">工作情况</a></li>
+            <li><a href="like$exname">个人爱好</a></li>
+            <li><a href="privacy$exname">隐私设置</a></li>
+        </ul>
+  </div>
+    #end
+ 
+    <div class="pitem">${username} &nbsp; ${email} &nbsp; ${mobile}${bindmobile} 
+        <span id="hideMobile" style="display:none;">
+            <input value="" class="f-text" type="text" id="mMobile" name="mMobile" /> <input type="button" name="MobileModify" id="MobileModify" onclick="MobileModifys();" class="f-button" value="填写手机"/>
+        </span>
+     (<a href="pwd$exname">修改登录密码</a>)</div>
+    <form action="$webpath/space/info/profile${exname}" method="post">
+        <div class="pitem"><em>真实姓名：</em>
+        <input type="text" name="truename" id="truename" maxlength="20" value="$truename" onblur="checktruename();" class="f-text" />
+            <span class="errors" id="spantruename" style="display:none;"></span>
+        </div>
+        <div class="pitem"><em>性别：</em>$sex &nbsp; <a href="$webpath/home/friend/search${exname}?Sex=$sexs">查找异性朋友</a></div>
+        <div class="pitem">
+        <em>婚恋状态：</em>
+        <select name="marriage" id="marriage">
+         ${marriage}
+        </select>
+        </div>
+        <div class="pitem"><em>生日：</em><input type="text" name="birthday" id="birthday" maxlength="10" value="$birthday"  onFocus="WdatePicker({isShowWeek:true})" class="f-text"  readonly="readonly" />&nbsp;<span class="warn">必须填写，在【显示样式】中可设置隐藏。</span> <a href="$webpath/home/friend/search${exname}?r=birday&bdate=$birthday">查找同年同月同日生的朋友</a>
+                    <span class="errors" id="spanbirthday" style="display:none;"></span> 
+        </div>
+        <div class="pitem"><em>显示样式：</em>
+        <select name="birthprivacy" id="birthprivacy">
+        $birthprivacy
+        </select>
+        </div>
+        <div class="pitem"><em>星座：</em>
+        <select name="constellation" id="constellation">
+        $constellation
+        </select> &nbsp; <a href="$webpath/home/friend/search${exname}?r=constellation">找同星座有缘人</a>
+        </div>
+        <div class="pitem"><em>家乡：</em>
+        <select name="homeprovince" id="homeprovince" onchange="ChangeProv(this);">
+             <script type="text/javascript">
+                        var returnvalue = "";
+                        for (i=0; i<Area.length; i++) 
+                        {
+                            if(Area[i][0] == "0")
+                            {
+                                if(Area[i][1]==$areaid)
+                                {
+                                    returnvalue += "<option value='" + Area[i][1] + "' selected>" + Area[i][2] + "</option>";
+                                }
+                                else
+                                {
+                                    returnvalue += "<option value='" + Area[i][1] + "'>" + Area[i][2] + "</option>";
+                                }
+                            }
+                        }
+                        document.write(returnvalue);
+                </script>  
+        </select>
+        <select name="SlctCity" id="SlctCity">
+      
+        </select>   &nbsp; <a href="$webpath/home/friend/search${exname}?r=city">找同乡</a>   
+        </div>
+        <div class="pitem"><em>行业：</em>
+        <select name="vocation" id="vocation" >
+        $vocation
+        </select> &nbsp; <a href="$webpath/home/friend/search${exname}?r=vocation">找同行伙伴</a>
+        </div>
+        <div class="pitem1"> <em>&nbsp;</em>
+        <input type="submit" name="button1" id="Submit1" class="btn_blue4" onclick="return checkdata();"  value="保存资料"/>
+        <input type="reset" name="button1" id="Submit2" class="btn_gray2"  value="重填"/>
+        <input type="hidden" name="hideflag" id="hideflag" value="$flag"/>
+        </div>
+    </form>
+    </div>
+    <script type="text/javascript">
+        function MobileModifys()
+        {
+            var mobile=jQuery("#mMobile").val();
+            var uid=$uid;
+            modifymobile(uid,mobile);
+        }
+
+        function bindmobile(mb,flag)
+        {
+            bindmobiles("${mobilesendcontent}",flag);
+        }
+        function checkdata()
+        {
+            if(checktruename()&&checkdate())
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        function checktruename()
+        {
+            try
+            {
+                 var err="";
+                 var birthday=document.getElementById("birthday").value;
+                 if(birthday=="")
+                 {
+                    err+="填写出生日期";
+                 }
+                 if(!isdate(birthday))
+                 {
+                    err+="出生日期不正确。正确格式为：1985-1-18";
+                 }
+                 if(err!="")
+                 {
+                    document.getElementById("spanbirthday").style.display="";
+                    document.getElementById("spanbirthday").innerHTML=err;
+                     return false;
+                 }
+                 else
+                 {
+                    document.getElementById("spanbirthday").style.display="none";
+                    return true;
+                 }      
+            }   
+             catch(e)
+             {
+                return true;
+             }            
+        }
+        
+
+        
+        function checkdate()
+        {
+            try
+            {
+                 var err="";
+                 var bdate=document.getElementById("truename").value;
+                 if(truename=="")
+                 {
+                    err+="填写真实姓名\n";
+                 }
+                 if(err!="")
+                 {
+                    document.getElementById("spantruename").style.display="";
+                    document.getElementById("spantruename").innerHTML=err;
+                     return false;
+                 }
+                 else
+                 {
+                    document.getElementById("spantruename").style.display="none";
+                    return true;
+                 }      
+            }   
+             catch(e)
+             {
+                return true;
+             }            
+        }
+        ChangeProv(document.getElementById("homeprovince"));
+        function ChangeProv(obj) 
+        {
+            var objcity = document.getElementById('SlctCity');
+            objcity.style.display = '';
+            objcity.options.length = 0;
+            var m=0;  
+            var sitem=$sitem;
+            for (i=0; i<Area.length; i++) 
+            {
+                if(Area[i][0] == obj.value&&Area[i][0] !="0")
+                {
+                    var opt = document.createElement('option');
+                    opt.value = Area[i][1];
+                    opt.innerHTML = Area[i][2];
+                    objcity.appendChild(opt);
+                   if(Area[i][1]==sitem)
+                    {
+                        document.getElementById("SlctCity").options[m].selected=true;
+                    }
+                    m++;
+                }
+            }        
+        }
+    
+    </script>
+#parse("_foot.html")

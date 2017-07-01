@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="随机变化桌面背景图片">
+</Property><Property Name="解决方案文件" Value="F:\源码\随机变化桌面背景图片\随机变化桌面背景图片.sln">
+</Property><Property Name="用户选项文件" Value="F:\源码\随机变化桌面背景图片\随机变化桌面背景图片.suo">
+</Property><Property Name="Date" Value="2009年3月15日">
+</Property><Property Name="Time" Value="21:42">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="随机变化桌面背景图片.sln" Description="文件已成功备份为 F:\源码\随机变化桌面背景图片\Backup\随机变化桌面背景图片.sln">
+</Event><Event ErrorLevel="0" Project="" Source="随机变化桌面背景图片.suo" Description="文件已成功备份为 F:\源码\随机变化桌面背景图片\Backup\随机变化桌面背景图片.suo">
+</Event><Event ErrorLevel="0" Project="随机变化桌面背景图片" Source="随机变化桌面背景图片.csproj" Description="项目文件已成功备份为 F:\源码\随机变化桌面背景图片\Backup\随机变化桌面背景图片.csproj">
+</Event><Event ErrorLevel="0" Project="随机变化桌面背景图片" Source="ActiveDesktop.cs" Description="文件已成功备份为 F:\源码\随机变化桌面背景图片\Backup\ActiveDesktop.cs">
+</Event><Event ErrorLevel="0" Project="随机变化桌面背景图片" Source="AssemblyInfo.cs" Description="文件已成功备份为 F:\源码\随机变化桌面背景图片\Backup\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="随机变化桌面背景图片" Source="MainForm.cs" Description="文件已成功备份为 F:\源码\随机变化桌面背景图片\Backup\MainForm.cs">
+</Event><Event ErrorLevel="0" Project="随机变化桌面背景图片" Source="MainForm.Designer.cs" Description="文件已成功备份为 F:\源码\随机变化桌面背景图片\Backup\MainForm.Designer.cs">
+</Event><Event ErrorLevel="0" Project="随机变化桌面背景图片" Source="MainForm.resx" Description="文件已成功备份为 F:\源码\随机变化桌面背景图片\Backup\MainForm.resx">
+</Event><Event ErrorLevel="0" Project="随机变化桌面背景图片" Source="随机变化桌面背景图片.csproj" Description="项目已成功转换">
+</Event><Event ErrorLevel="3" Project="随机变化桌面背景图片" Source="随机变化桌面背景图片.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="随机变化桌面背景图片.sln" Description="成功转换解决方案">
+</Event><Event ErrorLevel="3" Project="" Source="随机变化桌面背景图片.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="随机变化桌面背景图片" Source="随机变化桌面背景图片.csproj" Description="扫描完成: 项目文件不需要升级。">
+</Event></UpgradeLog>

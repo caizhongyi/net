@@ -1,0 +1,107 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{066BD575-FCE8-4955-A78F-F322AFDAC0BB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DAL</RootNamespace>
+    <AssemblyName>DAL</AssemblyName>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DALFactory.cs" />
+    <Compile Include="Dao\AdvInfo\IAdvInfo.cs" />
+    <Compile Include="Dao\AdvInfo\IAdvIssueInfo.cs" />
+    <Compile Include="Dao\AdvInfo\IAdvPriceInfo.cs" />
+    <Compile Include="Dao\AdvInfo\IAdvTypeInfo.cs" />
+    <Compile Include="Dao\City\IAreaInfo.cs" />
+    <Compile Include="Dao\City\ICityInfo.cs" />
+    <Compile Include="Dao\City\ICountryInfo.cs" />
+    <Compile Include="Dao\City\IProvinceInfo.cs" />
+    <Compile Include="Dao\Customer\IHyRecord.cs" />
+    <Compile Include="Dao\Customer\ITFindPassWord.cs" />
+    <Compile Include="Dao\Customer\IUserIdeaInfo.cs" />
+    <Compile Include="Dao\Customer\IUserIdeaTypeInfo.cs" />
+    <Compile Include="Dao\Customer\IUserInfoManage.cs" />
+    <Compile Include="Dao\Customer\IUserLogin.cs" />
+    <Compile Include="Dao\Customer\IUserRegist.cs" />
+    <Compile Include="Dao\Customer\IUserPublishMsg.cs" />
+    <Compile Include="Dao\Group\IGroup_CustomerInfo.cs" />
+    <Compile Include="Dao\Group\IGroupInfo.cs" />
+    <Compile Include="Dao\AdvInfo\IIssueAreaInfo.cs" />
+    <Compile Include="Dao\Integral\IIntegral.cs" />
+    <Compile Include="Dao\IProfession.cs" />
+    <Compile Include="Dao\Present\IPresent.cs" />
+    <Compile Include="Dao\Reserved\IReserveInfo.cs" />
+    <Compile Include="impl\AdvInfo\AdvInfoDao.cs" />
+    <Compile Include="impl\AdvInfo\AdvIssueInfoDao.cs" />
+    <Compile Include="impl\AdvInfo\AdvPriceInfoDao.cs" />
+    <Compile Include="impl\AdvInfo\AdvTypeInfoDao.cs" />
+    <Compile Include="impl\AdvInfo\IssueAreaDao.cs" />
+    <Compile Include="impl\City\AreaInfoDao.cs" />
+    <Compile Include="impl\City\CityInfoDao.cs" />
+    <Compile Include="impl\City\CountryInfoDao.cs" />
+    <Compile Include="impl\City\ProvinceInfoDao.cs" />
+    <Compile Include="impl\Customer\HyRecordDao.cs" />
+    <Compile Include="impl\Customer\TFindPassWord.cs" />
+    <Compile Include="impl\Customer\UserIdeaInfoDao.cs" />
+    <Compile Include="impl\Customer\UserIdeaTypeInfoDao.cs" />
+    <Compile Include="impl\Customer\UserInfoManageDao.cs" />
+    <Compile Include="impl\Customer\UserLoginDao.cs" />
+    <Compile Include="impl\Customer\UserPublishMsg.cs" />
+    <Compile Include="impl\Customer\UserRegistDao.cs" />
+    <Compile Include="impl\Group\GroupInfoDao.cs" />
+    <Compile Include="impl\Group\Group_CustomerInfoDao.cs" />
+    <Compile Include="impl\Integral\IntegralDao.cs" />
+    <Compile Include="Dao\Present\IPersonalScoreInfo.cs" />
+    <Compile Include="impl\Present\PersonalScoreInfo.cs" />
+    <Compile Include="impl\Present\PresentDao.cs" />
+    <Compile Include="impl\Profession.cs" />
+    <Compile Include="impl\Reserved\ReserveInfoDao.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sql\Util.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{DFB2069F-7AF3-41FF-A127-18F797F7F629}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

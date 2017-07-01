@@ -1,0 +1,81 @@
+﻿#parse("_head.html")
+<div id="snsmenu">
+#parse("_menu.html")
+</div>
+<div id="snsbody">
+
+   <div id="snsbody-all">
+          <div class="grouplist">
+                <div class="images l">
+                    <img src="$portrait" onerror="this.src='$templatepath/images/nopic.gif'" />
+                </div>
+                <div class="bulletin">
+                    <h3>$GroupName</h3>
+                    <div class="info">$Bulletin</div>
+                </div>
+          </div>
+      <div class="itemmenu">
+        <ul>
+            <li><a href="$webpath/app/group/group$exname?gid=$gid">$groupname首页</a></li>
+            <li><a href="$webpath/app/group/list$exname?gid=$gid">话题区($topiccount)</a></li>
+            <!--<li><a href="ative$exname?gid=$gid">活动($ativecount)</a></li>-->
+            <li><a href="$webpath/app/group/album$exname?gid=$gid">相册($albumcount)</a></li>
+            <li><a href="$webpath/app/group/files$exname?gid=$gid">文件共享($filescount)</a></li>
+            <li class="current"><a href="$webpath/app/group/member$exname?gid=$gid">所有成员($membercount)</a></li>
+            <li><a href="$webpath/app/group/list$exname?gid=$gid&q=best">精华区</a></li>
+            <li class="new"><a href="$webpath/app/group/post$exname?gid=$gid" class="newitem">发表话题</a></li> 
+        </ul>
+        
+    </div>
+    #if($publics)
+      <div class="itemmenu1">
+        <ul>    
+            <li#if($css_null) $css_null#end><a href="$webpath/app/group/member$exname?gid=$gid">群会员</a></li>
+            <li#if($css_1) $css_1#end><a href="$webpath/app/group/member$exname?gid=$gid&q=1">待审核会员</a></li>
+        </ul>
+        </div>
+    #end
+    
+    <div class="list">
+    <ul>
+        #foreach($info in $infolist)
+            <li id="param${info.id}">
+            <div class="l images center"><a href="$info.spaceurl"><img src="$info.userhead" /><br />${info.truename}</a></div>
+            <div class="r">
+                <div><a href="$webpath/app/poke/default$exname?uid=$info.userid" class="sicon-poke">招呼</a>  <a href="javascript:mail($info.userid,$uid)" title="给ta发消息" class="sicon-mail">消息</a></div>
+                #if($q==1)
+                      #if($isadmin)
+                         <div class="pitem"><a href="javascript:checkgroup($gid,$info.userid,$uid,0)">通过</a> | <a  href="javascript:checkgroup($gid,$info.userid,$uid,1)">拒绝</a></div>
+                     #else
+                        <div class="friendtwitter" title="$info.twittermore">$info.twitter</div>
+                   
+                     #end
+                #else
+                <div class="friendtwitter" title="$info.twittermore">$info.twitter</div>
+                     #if($isadmin)
+                        <div class="pitem">
+                        #if($uid!=$info.userid)
+                        <a href="javascript:deleteAll($gid,$info.userid,'groupmember')" title="删除" class="showok1"></a>
+                        #end
+                        #if($uid!=$info.userid&&$issuperadmin)
+                            #if($info.grade=="1")
+                                <a href="javascript:setgroupadmin($gid,$info.userid,$uid,0)">取消管理员</a>
+                            #else
+                                <a href="javascript:setgroupadmin($gid,$info.userid,$uid,1)">设为管理员</a>
+                            #end
+                        #end
+                        </div>
+                     #end
+                #end
+             </div>
+             </li>
+        #end
+    </ul>
+    </div>           
+
+
+    <div class="pages">$pagelist</div>
+</div>
+</div>
+
+#parse("_foot.html")

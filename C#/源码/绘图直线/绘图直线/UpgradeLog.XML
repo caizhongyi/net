@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="绘图直线">
+</Property><Property Name="解决方案文件" Value="F:\源码\绘图直线\绘图直线\绘图直线.sln">
+</Property><Property Name="用户选项文件" Value="F:\源码\绘图直线\绘图直线\绘图直线.suo">
+</Property><Property Name="Date" Value="2009年3月15日">
+</Property><Property Name="Time" Value="22:05">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="绘图直线.sln" Description="文件已成功备份为 F:\源码\绘图直线\绘图直线\Backup\绘图直线.sln">
+</Event><Event ErrorLevel="0" Project="" Source="绘图直线.suo" Description="文件已成功备份为 F:\源码\绘图直线\绘图直线\Backup\绘图直线.suo">
+</Event><Event ErrorLevel="0" Project="绘图直线" Source="绘图直线\绘图直线.vbproj" Description="项目文件已成功备份为 F:\源码\绘图直线\绘图直线\Backup\绘图直线\绘图直线.vbproj">
+</Event><Event ErrorLevel="0" Project="绘图直线" Source="绘图直线\Form1.vb" Description="文件已成功备份为 F:\源码\绘图直线\绘图直线\Backup\绘图直线\Form1.vb">
+</Event><Event ErrorLevel="0" Project="绘图直线" Source="绘图直线\Form1.Designer.vb" Description="文件已成功备份为 F:\源码\绘图直线\绘图直线\Backup\绘图直线\Form1.Designer.vb">
+</Event><Event ErrorLevel="0" Project="绘图直线" Source="绘图直线\My Project\AssemblyInfo.vb" Description="文件已成功备份为 F:\源码\绘图直线\绘图直线\Backup\绘图直线\My Project\AssemblyInfo.vb">
+</Event><Event ErrorLevel="0" Project="绘图直线" Source="绘图直线\My Project\Application.Designer.vb" Description="文件已成功备份为 F:\源码\绘图直线\绘图直线\Backup\绘图直线\My Project\Application.Designer.vb">
+</Event><Event ErrorLevel="0" Project="绘图直线" Source="绘图直线\My Project\Resources.Designer.vb" Description="文件已成功备份为 F:\源码\绘图直线\绘图直线\Backup\绘图直线\My Project\Resources.Designer.vb">
+</Event><Event ErrorLevel="0" Project="绘图直线" Source="绘图直线\My Project\Settings.Designer.vb" Description="文件已成功备份为 F:\源码\绘图直线\绘图直线\Backup\绘图直线\My Project\Settings.Designer.vb">
+</Event><Event ErrorLevel="0" Project="绘图直线" Source="绘图直线\My Project\Application.myapp" Description="文件已成功备份为 F:\源码\绘图直线\绘图直线\Backup\绘图直线\My Project\Application.myapp">
+</Event><Event ErrorLevel="0" Project="绘图直线" Source="绘图直线\My Project\Settings.settings" Description="文件已成功备份为 F:\源码\绘图直线\绘图直线\Backup\绘图直线\My Project\Settings.settings">
+</Event><Event ErrorLevel="0" Project="绘图直线" Source="绘图直线\Form1.resx" Description="文件已成功备份为 F:\源码\绘图直线\绘图直线\Backup\绘图直线\Form1.resx">
+</Event><Event ErrorLevel="0" Project="绘图直线" Source="绘图直线\My Project\Resources.resx" Description="文件已成功备份为 F:\源码\绘图直线\绘图直线\Backup\绘图直线\My Project\Resources.resx">
+</Event><Event ErrorLevel="0" Project="绘图直线" Source="绘图直线\绘图直线.vbproj" Description="项目已成功转换">
+</Event><Event ErrorLevel="3" Project="绘图直线" Source="绘图直线\绘图直线.vbproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="绘图直线.sln" Description="成功转换解决方案">
+</Event><Event ErrorLevel="3" Project="" Source="绘图直线.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="绘图直线" Source="绘图直线\绘图直线.vbproj" Description="扫描完成: 项目文件不需要升级。">
+</Event></UpgradeLog>

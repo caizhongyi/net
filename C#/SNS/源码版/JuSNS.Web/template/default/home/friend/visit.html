@@ -1,0 +1,58 @@
+﻿#parse("_head.html")
+<div id="snsmenu">
+#parse("_menu.html")
+</div>
+<div id="snsbody">
+
+    <div id="snshead">来访者</div>
+    <div class="itemmenu">
+        <ul>
+            <li><a href="../friend/default$exname">我的好友</a></li>
+            <li><a href="dyn$exname">好友动态设置</a></li>
+            <li class="current"><a href="visit$exname">来访者</a></li>
+            <li><a href="city$exname?q=city">同城</a></li>
+            <li><a href="pfriend$exname">可能认识的人</a></li>
+            <li><a href="search$exname">搜索朋友</a></li>
+            <li><a href="att$exname">关注我的人</a></li>
+            <li><a href="invite$exname">邀请朋友加入</a></li>
+        </ul>
+  </div>    
+
+        <div class="itemmenu1">
+        <ul>
+            <li#if($css_null) $css_null #end><a href="visit$exname">来访者</a></li>
+            <li#if($css_my) $css_my #end><a href="visit$exname?q=my">我去看过的</a></li>
+        </ul>
+        </div>
+    #if($recordcount>0)
+    <div class="list">
+        <ul>
+            #foreach($visit in $visitlist)
+                <li id="param${visit.id}">
+                <div class="l images center"><a href="$visit.spaceurl"><img src="$visit.userhead" /><br />$visit.truename</a></div>
+                <div class="r">
+                    <div><a href="javascript:poke($visit.friendid,$uid)" class="sicon-poke">招呼</a> <a href="javascript:mail($visit.friendid,$uid)" title="给ta发消息" class="sicon-mail">消息</a></div>
+                    <div><a href="javascript:DeleteVisit($visit.id,$uid)" class="sicon-delete">删除</a>
+                    #if($visit.isfriend==false)
+                    <a href="javascript:addfriend($visit.uid,'$visit.truename',$uid)" class="sicon-friend">加好友</a>
+                    #end
+
+                    </div>
+                    <div title="$visit.twittermore" class="friendtwitter">$visit.twitter</div>
+                 </div>
+                 </li>
+            #end
+        </ul>
+    </div>
+    
+    
+    
+  <div class="pages">$pagelist</div>
+    #else
+        <div>还没有来访者</div>
+    #end        
+<div>
+
+</div>
+</div>
+#parse("_foot.html")

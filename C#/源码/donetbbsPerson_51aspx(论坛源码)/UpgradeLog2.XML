@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="DoNetBbs">
+</Property><Property Name="解决方案文件" Value="D:\donetbbsPerson_51aspx\DoNetBbs.sln">
+</Property><Property Name="Date" Value="2008年11月4日">
+</Property><Property Name="Time" Value="17:23:27">
+</Property><Property Name="日志号" Value="2">
+</Property></Properties><Event ErrorLevel="0" Project="DosOrg" Source="DosOrg\DosOrg.csproj" Description="项目文件已成功备份为 D:\donetbbsPerson_51aspx\Backup\DosOrg.csproj">
+</Event><Event ErrorLevel="0" Project="DosOrg" Source="DosOrg\Systems\SystemsInfo.cs" Description="文件已成功备份为 D:\donetbbsPerson_51aspx\Backup\Systems\SystemsInfo.cs">
+</Event><Event ErrorLevel="0" Project="DosOrg" Source="DosOrg\Systems\SystemsInfoHelper.cs" Description="文件已成功备份为 D:\donetbbsPerson_51aspx\Backup\Systems\SystemsInfoHelper.cs">
+</Event><Event ErrorLevel="0" Project="DosOrg" Source="DosOrg\User\User.cs" Description="文件已成功备份为 D:\donetbbsPerson_51aspx\Backup\User\User.cs">
+</Event><Event ErrorLevel="0" Project="DosOrg" Source="DosOrg\User\Role.cs" Description="文件已成功备份为 D:\donetbbsPerson_51aspx\Backup\User\Role.cs">
+</Event><Event ErrorLevel="0" Project="DosOrg" Source="DosOrg\WebSiteMaster.cs" Description="文件已成功备份为 D:\donetbbsPerson_51aspx\Backup\WebSiteMaster.cs">
+</Event><Event ErrorLevel="0" Project="DosOrg" Source="DosOrg\DosOrg.csproj" Description="项目已成功转换">
+</Event><Event ErrorLevel="3" Project="DosOrg" Source="DosOrg\DosOrg.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="DosOrg" Source="DosOrg\DosOrg.csproj" Description="扫描完成: 项目文件不需要升级。">
+</Event></UpgradeLog>

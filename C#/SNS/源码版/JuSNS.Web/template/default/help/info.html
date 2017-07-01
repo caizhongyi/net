@@ -1,0 +1,25 @@
+﻿#parse("_head.html")
+<script type="text/javascript" src="$webpath/library/js/date/WdatePicker.js"></script>
+<div id="snsmenu">
+#parse("_menu.html")
+</div>
+<div id="snsbody">
+    <div id="snshead"><span class="l">$cpagetitle</span></div>
+   <div id="snsbody-all">
+   <div class="itemmenu">
+        <ul>
+            <li><a href="$webpath/help/default$exname">帮助索引</a></li>
+            <li class="current"><a href="$webpath/help/new$exname">帮助信息</a></li>
+            <li class="search"> &nbsp;  &nbsp; 搜索：<input id="kwd" name="kwd" value="#if($kwd)$kwd#else搜索帮助#end" type="text" class="f-text w100" onclick="this.value=''" /> <input id="Button1" type="button" value="搜索" class="btn_gray2" onclick="search('help','')" /></li>
+        </ul>
+    </div>
+      <div class="pitem1 strong reshow" style="margin:20px 0 0 0;font-size:14px;float:left;width:100%;">
+        $title <span style="color:#8A8989;font-size:11.5px;">#if($helpid)(帮助编号:$helpid)#end</span>
+      </div>
+      <div  style="margin:20px 0 0 0;font-size:12px;float:left;width:98%;line-height:25px;display:block;">
+        $content
+      </div>
+</div>
+</div>
+
+#parse("_foot.html")

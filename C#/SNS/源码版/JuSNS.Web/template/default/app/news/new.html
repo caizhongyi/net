@@ -1,0 +1,130 @@
+﻿#parse("_head.html")
+<div id="snsmenu">
+#parse("_menu.html")
+<script type="text/javascript" src="$webpath/library/xmleditor/xheditor-zh-cn.min.js"></script>
+<script type="text/javascript" src="$webpath/library/js/color.js"></script>
+</div>
+<iframe width="260" height="165" id="colorPalette" src="$webpath/library/js/color.htm"
+            style="visibility: hidden; position: absolute; border: 1px gray solid; left: 297px;
+            top: -20px;" frameborder="0" scrolling="no"></iframe>
+<div id="snsbody">
+    <div id="snshead">添加$contentname ($mytruename)</div>
+
+    <div class="itemmenu">
+        <ul>
+            <li><a href="$webpath/app/news/default$exname">最新$contentname</a></li>
+            <li><a href="$webpath/app/news/default$exname?q=ram">随便看看</a></li>
+            <li><a href="$webpath/app/news/default$exname?q=click">排行榜</a></li>
+            <li><a href="$webpath/app/news/index$exname?q=friend">朋友的$contentname</a></li>
+            <li><a href="$webpath/app/news/index$exname?q=my">我的$contentname</a></li>
+            <li class="current"><a href="">正在发布$contentname...</a></li>
+            <li class="new"><a href="new$exname" class="newitem">添加$contentname</a></li> 
+        </ul>
+    </div>
+    <form action="" method="post" enctype="multipart/form-data">
+    <div class="pitem">
+        $contentname标题：<input id="txttitle"  name="txttitle" class="f-text" value="#if($title)$title#end" style="width:500px;" type="text" /><span class="reshow">#if($check)$check#end</span>
+    </div>
+     #if($isadmin)
+    <div class="pitem">
+        标题颜色：<input id="color"  name="color" onclick="GetColor(this,'color');"   class="f-text" value="#if($color)$color#end" style="width:60px;#if($color)background-color:$color#end" maxlength="7" type="text" /> &nbsp; 
+        粗体 <input id="bold"  name="bold" value="1" #if($bold==1)checked#end type="checkbox" /> &nbsp; 
+        斜体 <input id="italic"  name="italic" value="1" #if($italic==1)checked#end type="checkbox" />
+    </div>
+    #end
+
+    <div class="pitem">
+   
+        <textarea runat="server" rows="10" name="txtcontent" id="txtcontent" class="xheditor-simple {upBtnText:'上传',upMultiple:5,upLinkUrl:'$editfile',upImgUrl:'$edit_pic',skin:'$editskin'}" style="width:100%;height:500px">#if($content)$content#end</textarea>
+    </div>
+        
+    <div class="pitem">
+        <em>选择$contentname分类</em>
+        <select name="classid" id="classid">
+        <option value="">----$contentname分类----</option>
+        $classlist
+        </select>
+    </div>
+    <div class="pitem">
+        <em>图片</em>
+       <input id="filePic" name="filePic" type="file" class="f-file" name="localpic" />
+        <input id="HiddenfilePic" name="HiddenfilePic" type="hidden" value="#if($filePic)$filePic#end" />
+        <input id="HiddenfileFile" name="HiddenfileFile" type="hidden" value="#if($fileFile)$fileFile#end" />
+    </div>
+    
+    <div class="pitem">
+        <em>附件</em>
+       <input id="fileFile" name="fileFile" type="file" class="f-file" onchange="checkFilesdata(this);" name="localpic" />
+       <span style="display:none;" id="ppoint">
+           下载附件需要 <input id="txtPoint" name="txtPoint" value="#if($point)$point#end" class="f-text" type="text" style="width:50px;" /> 积分和 <input id="txtGPoint" class="f-text" name="txtGPoint"  class="f-text" value="#if($gpoints)$gpoints#end" type="text" style="width:50px;" /> $gpoint
+       </span>
+    </div>
+    
+    <div class="pitem">
+        <em>关键字</em>
+        <input id="txtkeyword"  name="txtkeyword" class="f-text" value="#if($keyword)$keyword#end" style="width:294px;" type="text" /> <span class="warn">多个关键字用半角","分开</span>
+    </div>
+    <div class="pitem">
+        <em>来源</em>
+        <input id="txtsource"  name="txtsource" class="f-text" value="#if($source)$source#end" style="width:294px;" type="text" />
+    </div>
+    #if($isadmin)
+    <div class="pitem">
+        <em>系统公告</em>
+        <input id="issys"  name="issys" value="1" #if($issys)checked#end type="checkbox" />
+    </div>
+    #end
+    <div class="pitem1">
+      <em>&nbsp;</em><input id="Button1" type="submit" value="保存$contentname" class="btn_blue4" onclick="return checkdata();" /> <input id="Button4" type="reset" value="重新填写" class="btn_gray4" />
+    </div>
+    </form>
+</div>
+
+
+<script type="text/javascript">
+    jQuery(document).ready(function()
+    {
+        if(jQuery("#HiddenfileFile").val()!="")
+        {
+            jQuery("#ppoint").show();
+        }
+   }); 
+    function checkFilesdata(obj)
+    {
+        if(obj.value!="")
+        {
+            jQuery("#ppoint").show();
+        }
+        else
+        {
+            jQuery("#ppoint").hide();
+        }
+    }
+    function checkdata()
+    {
+        var t=jQuery("#txttitle").val();
+        if(t=="")
+        {
+             showErrorResult("请填写$contentname标题");
+            document.getElementById("txttitle").focus();
+            return false;
+        }
+         var Content =jQuery("#txtcontent").val();
+         if(Content=="") 
+         { 
+             showErrorResult("请填写$contentname内容");
+             return false; 
+         } 
+        
+        var sc=jQuery("#classid").val();
+        if(sc=="")
+        {
+             showErrorResult("请选择分类");
+            document.getElementById("classid").focus();
+            return false;
+        }
+        return true;
+    }
+
+</script>
+#parse("_foot.html")

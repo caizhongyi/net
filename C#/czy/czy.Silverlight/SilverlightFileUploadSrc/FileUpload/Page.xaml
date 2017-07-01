@@ -1,0 +1,8 @@
+﻿<UserControl x:Class="FileUpload.Page"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:c="clr-namespace:DC.FileUpload"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" >
+    <Grid x:Name="LayoutRoot" Background="White">
+        <c:FileUploadControl x:Name="uploadControl"  Width="500" Height="500"  />
+    </Grid>
+</UserControl>

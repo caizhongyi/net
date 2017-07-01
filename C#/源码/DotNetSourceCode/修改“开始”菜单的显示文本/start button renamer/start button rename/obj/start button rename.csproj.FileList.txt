@@ -1,0 +1,16 @@
+bin\Debug\start.exe
+bin\Debug\start.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\start.Properties.Resources.resources
+obj\Debug\start button rename.csproj.GenerateResource.Cache
+obj\Debug\start.exe
+obj\Debug\start.pdb
+obj\Debug\start_button_rename.Form1.resources
+bin\Release\start.exe
+bin\Release\start.pdb
+obj\Release\ResolveAssemblyReference.cache
+obj\Release\start_button_rename.Form1.resources
+obj\Release\start.Properties.Resources.resources
+obj\Release\start button rename.csproj.GenerateResource.Cache
+obj\Release\start.exe
+obj\Release\start.pdb

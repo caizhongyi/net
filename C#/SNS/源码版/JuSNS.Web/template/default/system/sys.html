@@ -1,0 +1,52 @@
+﻿#parse("_head.html")
+<link href="$templatepath/css/app/gift.css" rel="stylesheet" type="text/css" />
+<div id="snssysmenu">
+#parse("_menusystem.html")
+</div>
+<div id="snsbody1">
+    <div id="snshead">系统设置</div>
+    <div class="itemmenu">
+        <ul>
+            <li class="current"><a href="sys$exname">系统设置</a></li>
+            <li><a href="area$exname">地区</a></li> 
+            <li><a href="charge$exname">充值管理</a></li> 
+            <li><a href="template$exname">模板</a></li> 
+            <li><a href="indexconfig$exname">首页配置</a></li> 
+            <li><a href="uploads$exname">上传图片配置管理</a></li> 
+            <li><a href="start$exname">初始化</a></li> 
+            <li><a href="help$exname">帮助管理</a></li> 
+    </ul>
+    </div>
+    
+
+    <div class="system pitem1">
+        <p class="reshow">站点基本配置</p>
+        <p><input type="button" class="btn_blue10" onclick="setconfig('~/config/base/jusite.config')" value="在线配置jusite.config" />&nbsp; 站点配置(目录：~/config/base）</p>
+        <p><input type="button" class="btn_blue10" onclick="setconfig('~/config/base/base.config')" value="在线配置base.config" />&nbsp; 基本配置(目录：~/config/base）</p>
+        <p><input type="button" class="btn_blue10" onclick="setconfig('~/config/base/page.config')" value="在线配置page.config" />&nbsp; 首页配置(目录：~/config/base）</p>
+        <p class="reshow">站点APP配置</p>
+        <p><input type="button" class="btn_blue10" onclick="setconfig('~/config/base/album.config')" value="在线配置album.config" />&nbsp; 相册配置(目录：~/config/base）</p>
+        <p><input type="button" class="btn_blue10" onclick="setconfig('~/config/base/ask.config')" value="在线配置ask.config" />&nbsp; 问答配置(目录：~/config/ask）</p>
+        <p><input type="button" class="btn_blue10" onclick="setconfig('~/config/base/ative.config')" value="在线配置ative.config" />&nbsp; 活动配置(目录：~/config/base）</p>
+        <p><input type="button" class="btn_blue10" onclick="setconfig('~/config/base/dyn.config')" value="在线配置dyn.config" />&nbsp; 动态配置(目录：~/config/base）</p>
+        <p><input type="button" class="btn_blue10" onclick="setconfig('~/config/base/gift.config')" value="在线配置gift.config" />&nbsp; 礼物配置(目录：~/config/base）</p>
+        <p><input type="button" class="btn_blue10" onclick="setconfig('~/config/base/group.config')" value="在线配置group.config" />&nbsp; 社群配置(目录：~/config/base）</p>
+        <p><input type="button" class="btn_blue10" onclick="setconfig('~/config/base/Poke.config')" value="在线配置Poke.config" />&nbsp; 招呼配置(目录：~/config/base）</p>
+        <p><input type="button" class="btn_blue10" onclick="setconfig('~/config/base/share.config')" value="在线配置share.config" />&nbsp; 分享配置(目录：~/config/base）</p>
+        <p><input type="button" class="btn_blue10" onclick="setconfig('~/config/base/shop.config')" value="在线配置shop.config" />&nbsp; 商品配置(目录：~/config/base）</p>
+        <p><input type="button" class="btn_blue10" onclick="setconfig('~/config/base/vip.config')" value="在线配置vip.config" />&nbsp; VIP配置(目录：~/config/base）</p>
+        <p><input type="button" class="btn_blue10" onclick="setconfig('~/config/base/vote.config')" value="在线配置vote.config" />&nbsp; 投票配置(目录：~/config/base）</p>
+        <p class="reshow">站点上传图片配置</p>
+        <p><input type="button" class="btn_blue10" onclick="setconfig('~/config/photo/photo.config')" value="在线配置photo.config" />&nbsp; 图片上传配置(目录：~/config/photo）</p>
+        <p class="reshow">站点电子邮件配置</p>
+        <p><input type="button" class="btn_blue10" onclick="setconfig('~/config/email/email.config')" value="在线配置email.config" />&nbsp; 电子邮件配置(目录：~/config/email）</p>
+    </div>
+    
+</div>
+#parse("_foot.html")
+<script type="text/javascript">
+    function setconfig(path)
+    {
+        window.location.href="sysconfig"+ExName+"?path="+path;
+    }
+</script>

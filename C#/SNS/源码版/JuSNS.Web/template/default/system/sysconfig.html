@@ -1,0 +1,43 @@
+﻿#parse("_head.html")
+<link href="$templatepath/css/app/gift.css" rel="stylesheet" type="text/css" />
+<div id="snssysmenu">
+#parse("_menusystem.html")
+</div>
+<div id="snsbody1">
+    <div id="snshead">系统设置</div>
+    <div class="itemmenu">
+        <ul>
+            <li$current1><a href="sys$exname">系统设置</a></li>
+            <li><a href="area$exname">地区</a></li> 
+            <li><a href="charge$exname">充值管理</a></li> 
+            <li><a href="template$exname">模板</a></li> 
+            <li$current2><a href="indexconfig$exname">首页配置</a></li> 
+            <li$current3><a href="uploads$exname">上传图片配置管理</a></li> 
+            <li><a href="start$exname">初始化</a></li> 
+            <li><a href="help$exname">帮助管理</a></li> 
+    </ul>
+    </div>
+    
+
+    <div class="system pitem1">
+        #if($isindexconfig)
+            <div class="pitem strong"> <a href="flash$exname">首页幻灯片配置</a></div>
+        #end
+        <form id="form1" method="post" action="">
+           <p> <textarea class="f-text"  style="height:380px;width:99%;font-size:11.5px;" name="configcontent" id="configcontent">$configcontent</textarea></p>
+           #if(!$errors)
+           <p><input id="Submit1" class="btn_blue6" type="submit" value="保存配置文件" /></p>
+           #end
+           <p class="reshow">注意：请谨慎修改，修改失误，将导致网站出现错误。在修改前，请备份$path配置文件。 </p>
+        </form>
+        
+    </div>
+    
+</div>
+#parse("_foot.html")
+<script type="text/javascript">
+    function setconfig(path)
+    {
+        window.location.href="sysconfig"+ExName+"?path="+path;
+    }
+</script>

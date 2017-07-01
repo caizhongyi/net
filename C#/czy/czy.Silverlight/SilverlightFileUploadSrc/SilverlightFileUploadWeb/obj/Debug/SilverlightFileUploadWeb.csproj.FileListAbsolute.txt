@@ -1,0 +1,30 @@
+C:\Local Dev\temp\SilverlightFileUploadWeb\bin\SilverlightFileUploadWeb.dll
+C:\Local Dev\temp\SilverlightFileUploadWeb\bin\SilverlightFileUploadWeb.pdb
+C:\Local Dev\temp\SilverlightFileUploadWeb\bin\DC.SilverlightFileUpload.dll
+C:\Local Dev\temp\SilverlightFileUploadWeb\bin\System.Web.Silverlight.dll
+C:\Local Dev\temp\SilverlightFileUploadWeb\bin\DC.SilverlightFileUpload.pdb
+C:\Local Dev\temp\SilverlightFileUploadWeb\bin\de\System.Web.Silverlight.resources.dll
+C:\Local Dev\temp\SilverlightFileUploadWeb\bin\es\System.Web.Silverlight.resources.dll
+C:\Local Dev\temp\SilverlightFileUploadWeb\bin\fr\System.Web.Silverlight.resources.dll
+C:\Local Dev\temp\SilverlightFileUploadWeb\bin\it\System.Web.Silverlight.resources.dll
+C:\Local Dev\temp\SilverlightFileUploadWeb\bin\ja\System.Web.Silverlight.resources.dll
+C:\Local Dev\temp\SilverlightFileUploadWeb\bin\ko\System.Web.Silverlight.resources.dll
+C:\Local Dev\temp\SilverlightFileUploadWeb\bin\zh-Hans\System.Web.Silverlight.resources.dll
+C:\Local Dev\temp\SilverlightFileUploadWeb\bin\zh-Hant\System.Web.Silverlight.resources.dll
+C:\Local Dev\temp\SilverlightFileUploadWeb\obj\Debug\ResolveAssemblyReference.cache
+C:\Local Dev\temp\SilverlightFileUploadWeb\obj\Debug\SilverlightFileUploadWeb.dll
+C:\Local Dev\temp\SilverlightFileUploadWeb\obj\Debug\SilverlightFileUploadWeb.pdb
+E:\caizhongyi\MyWork\SilverlightFileUploadSrc\SilverlightFileUploadWeb\bin\SilverlightFileUploadWeb.dll
+E:\caizhongyi\MyWork\SilverlightFileUploadSrc\SilverlightFileUploadWeb\bin\SilverlightFileUploadWeb.pdb
+E:\caizhongyi\MyWork\SilverlightFileUploadSrc\SilverlightFileUploadWeb\bin\DC.SilverlightFileUpload.dll
+E:\caizhongyi\MyWork\SilverlightFileUploadSrc\SilverlightFileUploadWeb\bin\DC.SilverlightFileUpload.pdb
+E:\caizhongyi\MyWork\SilverlightFileUploadSrc\SilverlightFileUploadWeb\obj\Debug\ResolveAssemblyReference.cache
+E:\caizhongyi\MyWork\SilverlightFileUploadSrc\SilverlightFileUploadWeb\obj\Debug\SilverlightFileUploadWeb.dll
+E:\caizhongyi\MyWork\SilverlightFileUploadSrc\SilverlightFileUploadWeb\obj\Debug\SilverlightFileUploadWeb.pdb
+E:\caizhongyi\MyWork\Library\C#\czy.Silverlight\SilverlightFileUploadSrc\SilverlightFileUploadWeb\bin\SilverlightFileUploadWeb.dll
+E:\caizhongyi\MyWork\Library\C#\czy.Silverlight\SilverlightFileUploadSrc\SilverlightFileUploadWeb\bin\SilverlightFileUploadWeb.pdb
+E:\caizhongyi\MyWork\Library\C#\czy.Silverlight\SilverlightFileUploadSrc\SilverlightFileUploadWeb\bin\DC.SilverlightFileUpload.dll
+E:\caizhongyi\MyWork\Library\C#\czy.Silverlight\SilverlightFileUploadSrc\SilverlightFileUploadWeb\bin\DC.SilverlightFileUpload.pdb
+E:\caizhongyi\MyWork\Library\C#\czy.Silverlight\SilverlightFileUploadSrc\SilverlightFileUploadWeb\obj\Debug\ResolveAssemblyReference.cache
+E:\caizhongyi\MyWork\Library\C#\czy.Silverlight\SilverlightFileUploadSrc\SilverlightFileUploadWeb\obj\Debug\SilverlightFileUploadWeb.dll
+E:\caizhongyi\MyWork\Library\C#\czy.Silverlight\SilverlightFileUploadSrc\SilverlightFileUploadWeb\obj\Debug\SilverlightFileUploadWeb.pdb

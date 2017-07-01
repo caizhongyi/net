@@ -1,0 +1,458 @@
+﻿#parse("_head.html")
+<script type="text/javascript" src="$webpath/library/js/flashView.js"></script> 
+<script type="text/javascript" src="$webpath/library/js/swf.js"></script> 
+<script type="text/javascript">
+var fpvwin;
+function openWin(sURL, nWidth, nHeight) {
+	nWidth = nWidth == null ? 300 : nWidth;
+	nHeight = nHeight == null ? 300 : nHeight;
+	var fpvwin = window.open(sURL);
+}
+function closeWin() {window.close();}
+function gotoLocation(sURL) {window.location = sURL;}
+window.onload = loadFlashView;
+function ji(obj){return document.getElementById(obj)}
+</script> 
+
+<div id="content" class="clearfix">
+	<div class="modbox clearfix">
+		<div class="mod1">
+		<div id="swfDIV"></div>
+		</div>
+		<div class="mod2">
+			<div class="login">
+				<div class="top_title">#if($isonline=="1")<a href="$webpath/home/online$exname" title="点击查看">当前$useronline个用户，$guestonline个游客在线</a>#else欢迎来到$sitename！#end</div>
+				<div class="login_box">
+				#if($islogin)
+				<form action="$webpath/login${exname}?urls=$webpath/default$exname" method="post">
+				    <p class="clearfix"><em>用户名：</em><input class="text" name="username" id="username" type="text" /></p>
+				    <p class="clearfix"><em>密码：</em><input class="text"  type="password" name="password" id="password" /></p>
+		            #if($iscode==1)
+                    <p class="clearfix"><em>填写答案：</em><img src="$webpath/library/page/verifycode${exname}" style="width:75px;height:25px" id="vimgs" align="absmiddle" /> <input type="text" name="vcode" id="vcode"  maxlength="5" value="" class="f-text" style="width:40px;" />  &nbsp; <a href="javascript:void(0)" onclick="document.getElementById('vimgs').src='$webpath/library/page/verifycode${exname}?v='+Math.random()+''">换一张</a>
+                    </p>
+                    #end
+				    <p class="tj clearfix"><input class="button" name="" value="" type="submit" /><input class="button1" name="" value="" onclick="javascript:window.location.href='$webpath/register$exname'" type="button" /> <input type="checkbox" name="autologin" id="autologin" value="1" />自动登录</p>
+				</form>
+				#else
+				    <div class="aa imageb"><a href="${myspace}"><img src="${portrait2}" style="width:100px;height:100px;" /></a></div>
+				    <div class="bb">
+				    <p class="clearfix"><span class="red bold">$mytruename<img src="$templatepath/images/level_${memberleves}.gif" title="$memberleves级($mlnumber天)" /> #if($isvip)<a href="$webpath/home/vip$exname"><img src="$templatepath/images/isvip.gif" title="VIP会员" /></a>#end</span></p>
+                    <p class="clearfix">» <a href="$webpath/home/default$exname">个人中心</a> &nbsp; » <a href="$webpath/home/friend/default$exname">我的好友</a></p>
+                    <p class="clearfix">» <a href="$webpath/space/info/profile$exname">修改资料</a> &nbsp; 
+                    #if($isadmin)
+                    » <a href="$webpath/$systempath/default$exname" class="reshow">系统管理</a>
+                    #else
+                    » <a href="$webpath/app/album/new$exname">上传图片</a>
+                    #end
+
+                    </p>
+                    <p class="clearfix">» <a href="$webpath/app/blog/new$exname">写新日志</a> &nbsp;   » <a href="$webpath/login$exname?r=out">退出系统</a></p>
+				    </div>
+				    <p class="clearfix clearpix"></p>
+				    <div class="newnote">
+                            #if($friendinfo>0)<li class="reshow strong"><a href="$webpath/home/info/friend$exname">好友($friendinfo)</a></li>#else<li><a href="$webpath/home/info/friend$exname">好友($friendinfo)</a></li>#end
+                            #if($groupinfo>0)<li class="reshow strong"><a href="$webpath/home/info/group$exname">群组($groupinfo)</a></li>#else<li><a href="$webpath/home/info/group$exname">群组($groupinfo)</a></li>#end
+                            #if($noteinfo>0)<li class="reshow strong"><a href="$webpath/home/info/note$exname">通知($noteinfo)</a></li>#else<li><a href="$webpath/home/info/note$exname">通知($noteinfo)</a></li>#end
+                            #if($boxinfo>0)<li class="reshow strong"><a href="$webpath/home/box/default$exname">短信($boxinfo)</a></li>#else<li><a href="$webpath/home/box/default$exname">短信($boxinfo)</a></li>#end
+                            #if($celinfo>0)<li class="reshow strong"><a href="$webpath/app/calend/my$exname">提醒($celinfo)</a></li>#else<li><a href="$webpath/app/calend/my$exname">提醒($celinfo)</a></li>#end
+				    </div>
+				#end
+				</div>
+				<div id="dnynews">
+				<div class="announce"></div>
+				     <ul class="annbodylis">
+				        $announce
+				     </ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modbox clearfix">
+		<div class="left_mod">
+			<div class="mod3">
+				<ul class="tab1">
+					<li id="a1" class="current"  onclick="tab('a','ax',9,1)"><span>资讯中心</span></li>
+					<li id="a2"  onclick="tab('a','ax',9,2)"><span>社群</span></li>
+					<li id="a3"  onclick="tab('a','ax',9,3)"><span>活动</span></li>
+					<li id="a4"  onclick="tab('a','ax',9,4)"><span>商品</span></li>
+					<li id="a5"  onclick="tab('a','ax',9,5)"><span>店铺</span></li>
+					<li id="a6"  onclick="tab('a','ax',9,6)"><span>相片</span></li>
+					<li id="a7"  onclick="tab('a','ax',9,7)"><span>知识人</span></li>
+					<li id="a8"  onclick="tab('a','ax',9,8)"><span>投票</span></li>
+				</ul>
+				<h3>最新资讯</h3>
+				<div id="ax1" class="contbox clearfix" style="display:block;">
+					<div class="cont1 clearfix">
+						<ul class="piclist">
+						<script type="text/javascript" src="$webpath/ads$exname?ptype=index1&num=3"></script>
+						</ul>
+						<ul class="t_list" style="clear:both;">
+					      #foreach($newnews in $newnewslist)
+						        <li><a href="$webpath/app/news/default$exname?q=$newnews.classid">[$newnews.channelname]</a><a href="$newnews.newsurl">$newnews.title</a></li>
+                         #end
+						</ul>
+					</div>
+					<div class="cont2 clearfix">
+						<ul class="t_list">
+					      #foreach($recnews in $recnewslist)
+					         #if($recnews.cnumber==0)
+						        <h4><a href="$recnews.newsurl">$recnews.title</a><p>$recnews.content <a href="$recnews.newsurl">全文>></a></p></h4>
+                            #else
+						        <li><a href="$recnews.newsurl">$recnews.title</a></li>
+                            #end
+                         #end
+						</ul>
+					</div>
+				</div>
+				<div id="ax2" class="contbox clearfix" style="display:none;">
+				    <div class="recs">
+				        <ul>
+					          #foreach($recgroup in $recgrouplist)
+					            <li>
+					                <div class="aa"><a href="$recgroup.groupurl"><img src="$recgroup.headpic" onerror="this.src='$templatepath/images/nopic.gif'" /></a></div>
+					                <div class="bb"><a href="$recgroup.groupurl"" class="red strong">$recgroup.groupname</a><br />成员($recgroup.members) 话题($recgroup.topiccount)  回复($recgroup.replaycount)</div>
+					            </li>
+                             #end
+				        </ul>
+				    </div>
+				</div>
+				<div id="ax3" class="contbox clearfix" style="display:none;">
+				    <div class="recnormal">
+					            <li>
+					                <div class="a">
+					                    <div class="a1">活动名称</div> 
+					                    <div class="a2 center">发起者</div>
+					                    <div class="a4 center">参与人数</div>
+					                    <div class="a3 center">开始时间 ~ 结束时间</div>
+					                </div>
+					            </li>				        
+					         
+					          #foreach($recactive in $recactivelist)
+					            <li>
+					                <div class="aa">
+					                    <div class="a1">&bull; <a href="$recactive.activeurl">$recactive.activename</a></div> 
+					                    <div class="a2 center"><a href="$recactive.spaceurl" target="_blank">$recactive.truename</a></div>
+					                    <div class="a4 center">$recactive.members</div>
+					                    <div class="a3 center">$recactive.starttime ~ $recactive.endtime</div>
+					                </div>
+					            </li>
+                             #end
+				      
+				    </div>
+                  </div>  			
+				
+				<div id="ax4" class="contbox clearfix" style="display:none;">
+				    <div class="recs">
+				        <ul>
+					          #foreach($recgoods in $recgoodslist)
+					            <li>
+					                <div class="aa"><a href="$recgoods.goodsurl"><img src="$recgoods.photo" onerror="this.src='$templatepath/images/nopic.jpg'" /></a></div>
+					                <div class="bb"><a href="$recgoods.goodsurl"" class="red strong">$recgoods.goodsname</a><br />发布者：<a href="$recgoods.spaceurl" target="_blank">$recgoods.truename</a><br /> 会员价：￥$recgoods.mprice</div>
+					            </li>
+                             #end
+				        </ul>
+				    </div>
+				
+				</div>
+				<div id="ax5" class="contbox clearfix" style="display:none;">
+				    <div class="recs">
+				        <ul>
+					          #foreach($recshop in $recshoplist)
+					            <li>
+					               <div class="aa"> <a href="$recshop.shopurl"><img src="$recshop.photo" onerror="this.src='$templatepath/images/nopic.jpg'" /></a></div>
+					                <div class="bb"><a href="$recshop.shopurl"" class="red strong">$recshop.shopname</a><br />创建者：<a href="$recshop.spaceurl" target="_blank">$recshop.truename</a></div>
+					            </li>
+                             #end
+				        </ul>
+				    </div>
+				
+				</div>
+				<div id="ax6" class="contbox clearfix" style="display:none;">
+					    <div class="recphoto">
+				        <ul>
+					          #foreach($recphoto in $recphotolist)
+					            <li>
+					                <a href="$recphoto.photourl"><img src="$recphoto.photo" onerror="this.src='$templatepath/images/nopic.jpg'" /></a>
+					                <p>上传者：<a href="$recphoto.spaceurl" target="_blank">$recphoto.truename</a></p>
+					            </li>
+                             #end
+				        </ul>
+				    </div>
+
+				</div>
+				<div id="ax7" class="contbox clearfix" style="display:none;">
+			        	<div class="recnormal">
+					            <li>
+					                <div class="a">
+					                    <div class="a1" style="width:346px;">问题标题</div> 
+					                    <div class="a2">发起者</div>
+					                    <div class="a4 center">状态</div>
+					                    <div class="a4 center">悬赏积分</div>
+					                </div>
+					            </li>				        
+					         
+					          #foreach($recask in $recasklist)
+					            <li>
+					                <div class="aa">
+					                    <div class="a1" style="width:350px;">&bull; <a href="$recask.askurl">$recask.title</a></div> 
+					                    <div class="a2"><a href="$recask.spaceurl" target="_blank">$recask.truename</a></div>
+					                    <div class="a4 center">$recask.isjinji</div>
+					                    <div class="a4 center">$recask.jifen</div>
+					                </div>
+					            </li>
+                             #end
+				      
+				    </div>
+				</div>
+				<div id="ax8" class="contbox clearfix" style="display:none;">
+				    <div class="recnormal">
+					            <li>
+					                <div class="a">
+					                    <div class="a1">投票标题</div> 
+					                    <div class="a2">发起者</div>
+					                    <div class="a2 center">发起时间</div>
+					                    <div class="a4 center">投票方式</div>
+					                </div>
+					            </li>				        
+					          
+					          #foreach($recvote in $recvotelist)
+					            <li>
+					                <div class="aa">
+					                    <div class="a1">&bull; <a href="$recvote.voteurl">$recvote.title</a></div> 
+					                    <div class="a2"><a href="$recvote.spaceurl" target="_blank">$recvote.truename</a></div>
+					                    <div class="a2 center">$recvote.time</div>
+					                    <div class="a4 center">$recvote.mode</div>
+					                </div>
+					            </li>
+                             #end
+				       
+				    </div>
+				</div>
+			</div>
+			<div class="mod3">
+				<ul class="tab1">
+					<li id="b1" onclick="tab('b','bx',8,1)" class="current"><span>热门</span></li>
+					<li id="b2" onclick="tab('b','bx',8,2)" ><span>美女</span></li>
+					<li id="b3" onclick="tab('b','bx',8,3)"  ><span>帅哥</span></li>
+					<li id="b4" onclick="tab('b','bx',8,4)" ><span>人气</span></li>
+					<li id="b5" onclick="tab('b','bx',8,5)"  ><span>活跃度</span></li>
+					<li id="b6" onclick="tab('b','bx',8,6)" ><span>积分</span></li>
+					<li id="b7" onclick="tab('b','bx',8,7)" ><span>关注度</span></li>
+				</ul>
+				<h3 class="user">热门会员</h3>
+				<div id="bx1" class="contbox clearfix" style="display:block;">
+					<ul class="cont4">
+					  #foreach($topuserhot in $topuserhotlist)
+                        <li><a href="$topuserhot.spaceurl" title="点击查看$topuserhot.truename的空间"><img src="$topuserhot.headpic" /><br />$topuserhot.truename</a><br /><a class="gz" href="javascript:;" onclick="postatt($topuserhot.userid,$uid,'user');">关注</a></li>
+                     #end
+					</ul>
+				</div>
+				<div id="bx2" class="contbox clearfix" style="display:none;">
+				    <ul class="cont4">
+				    #foreach($topusernv in $topusernvlist)
+                        <li><a href="$topusernv.spaceurl" title="点击查看$topusernv.truename的空间"><img src="$topusernv.headpic" /><br />$topusernv.truename</a><br /><a class="gz" href="javascript:;" onclick="postatt($topusernv.userid,$uid,'user');">关注她</a></li>
+                     #end
+                     </ul>
+				</div>
+				<div id="bx3" class="contbox clearfix" style="display:none;">
+				    <ul class="cont4">
+				    #foreach($topusernan in $topusernanlist)
+                        <li><a href="$topusernan.spaceurl" title="点击查看$topusernan.truename的空间"><img src="$topusernan.headpic" /><br />$topusernan.truename</a><br /><a class="gz" href="javascript:;" onclick="postatt($topusernan.userid,$uid,'user');">关注他</a></li>
+                     #end
+                     </ul>
+				</div>
+				<div id="bx4" class="contbox clearfix" style="display:none;">
+					<ul class="cont4">
+					  #foreach($topuserrenqi in $topuserrenqilist)
+                        <li><a href="$topuserrenqi.spaceurl" title="点击查看$topuserrenqi.truename的空间"><img src="$topuserrenqi.headpic" /><br />$topuserrenqi.truename</a><br /><a class="gz" href="javascript:;" onclick="postatt($topuserrenqi.userid,$uid,'user');">关注</a></li>
+                     #end
+					</ul>
+				</div>
+				<div id="bx5" class="contbox clearfix" style="display:none;">
+					<ul class="cont4">
+			          #foreach($topuserhuoyue in $topuserhuoyuelist)
+                        <li><a href="$topuserhuoyue.spaceurl" title="点击查看$topuserhuoyue.truename的空间"><img src="$topuserhuoyue.headpic" /><br />$topuserhuoyue.truename</a><br /><a class="gz" href="javascript:;" onclick="postatt($topuserhuoyue.userid,$uid,'user');">关注</a></li>
+                     #end
+                    </ul>
+				</div>
+				<div id="bx6" class="contbox clearfix" style="display:none;">
+					<ul class="cont4">
+			          #foreach($topuserjifen in $topuserjifenlist)
+                        <li><a href="$topuserjifen.spaceurl" title="点击查看$topuserjifen.truename的空间"><img src="$topuserjifen.headpic" /><br />$topuserjifen.truename</a><br /><a class="gz" href="javascript:;" onclick="postatt($topuserjifen.userid,$uid,'user');">关注</a></li>
+                     #end
+                    </ul>
+				</div>
+				<div id="bx7" class="contbox clearfix" style="display:none;">
+					<ul class="cont4">
+			          #foreach($topuseratt in $topuserattlist)
+                        <li><a href="$topuseratt.spaceurl" title="点击查看$topuseratt.truename的空间"><img src="$topuseratt.headpic" /><br />$topuseratt.truename</a><br /><a class="gz" href="javascript:;" onclick="postatt($topuseratt.userid,$uid,'user');">关注</a></li>
+                     #end
+                    </ul>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<!--相册-->
+			<div class="mod3">
+				<ul class="tab1">
+					<li id="c1" onclick="tab('c','cx',3,1)" class="current"><span>热点</span></li>
+					<li id="c2" onclick="tab('c','cx',3,2)" ><span>推荐</span></li>
+				</ul>
+				<h3 class="photo">热门相册</h3>
+				<div id="cx1" class="contbox clearfix" style="display:block;">
+					<ul class="cont6 clearfix">
+			          #foreach($album in $albumlist)
+                        <li><div style="height:22px;overflow:hidden;"><a href="$album.albumurl" title="$album.title">$album.title</a></div><a href="$album.albumurl" title="$album.title"><img src="$album.imgurl" /></a></li>
+                     #end
+					</ul>
+				</div>
+				<div id="cx2" class="contbox" style="display:none;">
+					<ul class="cont6 clearfix">
+			          #foreach($album1 in $album1list)
+                        <li><div style="height:22px;overflow:hidden;"><a href="$album1.albumurl" title="$album1.title">$album1.title</a></div><a href="$album1.albumurl" title="$album1.title"><img src="$album1.imgurl" /></a></li>
+                     #end
+                     </ul>
+				</div>
+			</div>
+			<!--相册结束-->
+			<!--广告位-->
+			<div class="ad2">
+				<ul><script type="text/javascript" src="$webpath/ads$exname?ptype=index2&num=1"></script></ul>
+			</div>
+			
+			<!--文章版块开始-->
+			<div class="mod4 clearfix">
+				<div class="cont7 mr5">
+					<h3 class="clearfix"><span><a href="javascript:;">热门话题</a></span><a class="more" href="$webpath/app/group/default$exname"></a></h3>
+					<ul>
+					      #foreach($topichot in $topichotlist)
+					         #if($topichot.m==0)
+						        <li class="one clearfix"><a href="$topichot.spaceurl" title="查看$topichot.truename的空间"><img src="$topichot.headpic" /></a><p><a href="$topichot.topicurl">$topichot.title</a><br />$topichot.content <a href="$topichot.topicurl" class="more">[详细]</a></p></li>
+                            #else
+						        <li>&bull; <a href="$topichot.topicurl">$topichot.title</a></li>
+                            #end
+                         #end
+					</ul>
+				</div>
+				<div class="cont7">
+				<h3 class="clearfix"><span><a href="javascript:;">推荐话题</a></span><a class="more" href="$webpath/app/group/default$exname"></a></h3>
+					<ul>
+					      #foreach($topicrec in $topicreclist)
+					         #if($topicrec.m==0)
+						        <li class="one clearfix"><a href="$topicrec.spaceurl" title="查看$topicrec.truename的空间"><img src="$topicrec.headpic" /></a><p><a href="$topicrec.topicurl">$topicrec.title</a><br />$topicrec.content <a href="$topicrec.topicurl" class="more">[详细]</a></p></li>
+                            #else
+						        <li>&bull; <a href="$topicrec.topicurl">$topicrec.title</a></li>
+                            #end
+                         #end
+					</ul>
+				</div>
+			</div>
+			
+			<div class="mod4_1 clearfix">
+			    <div class="cont7_1">
+					<h3 class="clearfix"><span><a href="javascript:;">社区分类</a></span><a class="more" href="$webpath/app/group/default$exname"></a></h3>
+					    <ul>$groupclasslist</ul>
+				</div>
+			</div>
+		</div>
+		<!--右边开始-->
+		<div class="right_mod">
+			<div class="mod5">
+				<h3>热门博客</h3>
+				<div class="cont8">
+					<ul class="userpic clearfix">
+					  #foreach($bloguser in $bloguserlist)
+                        <li><a href="$webpath/app/blog/default$exname?q=$bloguser.userid" title="点击查看$bloguser.truename的博客列表"><img src="$bloguser.headpic" /></a></li>
+                     #end
+					</ul>
+					<h4><span>精彩博文</span></h4>
+					<ul class="blog_list">
+					  #foreach($bloghot in $bloghotlist)
+                        <li>&bull; <a href="$bloghot.blogurl" title="$bloghot.titleall">$bloghot.title</a></li>
+                     #end
+					</ul>
+				</div>
+			</div>
+			<div class="mod7 mt5">
+				<h3>微博动态</h3>
+				<div id="cnt12h">
+				    <ul class="cont12" id="cnt12">
+					      #foreach($twitter in $twitterlist)
+                            <li><span><a href="$webpath/app/twitter/default$exname?q=$twitter.userid" title="查看 $twitter.truename 的所有微博"><img src="$twitter.headpic" align="middle" /></a></span> <a href="$twitter.spaceurl">$twitter.truename</a>： <a href="$twitter.twitterurl"> $twitter.content</a></li>
+                         #end
+				    </ul>
+				</div>
+			</div>
+			
+			<div class="mod6 mt5">
+				<h3></h3>
+				<ul class="tab mr5">
+					<li id="d1" onclick="tab('d','dx',4,1)" class="current"><span>博文排行</span></li>
+					<li id="d2" onclick="tab('d','dx',4,2)" ><span>新闻排行</span></li>
+					<li id="d3" onclick="tab('d','dx',4,3)" ><span>社群排行</span></li>
+				</ul>
+				<ol class="cont9" id="dx1" style="display:block;">
+					  #foreach($topblog in $topbloglist)
+                        <li><a href="$topblog.blogurl">$topblog.title</a></li>
+                     #end
+				</ol>
+				<ol class="cont9" id="dx2" style="display:none;">
+					  #foreach($topnews in $topnewslist)
+                        <li><a href="$topnews.newsurl">$topnews.title</a></li>
+                     #end
+				</ol>
+				<ol class="cont9" id="dx3" style="display:none;">
+					  #foreach($topgroup in $topgrouplist)
+                        <li><a href="$topgroup.groupurl">$topgroup.groupname</a> <span>($topgroup.members人)</span></li>
+                     #end
+
+				</ol>
+			</div>
+			<div class="mod6 mt5 clearfix">
+				<h3 class="group"></h3>
+				<ul class="tab mr5  clearfix">
+<!--					<li id="g1" onclick="tab('g','gx',4,1)" class="current"><span>推荐社群</span></li>
+-->					<li id="g1" onclick="tab('g','gx',3,1)" class="current"><span>最新社群</span></li>
+					<li id="g2" onclick="tab('g','gx',3,2)" ><span>名人机构</span></li>
+				</ul>
+				
+				<ol class="cont10" id="gx1" style="display:;">
+					  #foreach($groupcount2 in $groupcountlist2)
+					    <li class="clearfix">
+					    <a href="$groupcount2.groupurl"><img src="$groupcount2.headpic" onerror="this.src='$templatepath/images/nopic.gif'" /></a>
+					    <p><a href="$groupcount2.groupurl" class="red">$groupcount2.groupname</a><br />成员($groupcount2.members) 话题($groupcount2.topiccount)  回复($groupcount2.replaycount)</p>
+					    </li>
+                     #end
+				</ol>
+				<ol class="cont10" id="gx2" style="display:none;">
+					  #foreach($groupcount3 in $groupcountlist3)
+					    <li class="clearfix">
+					    <a href="$groupcount3.groupurl"><img src="$groupcount3.headpic" onerror="this.src='$templatepath/images/nopic.gif'" /></a>
+					    <p><a href="$groupcount3.groupurl" class="red">$groupcount3.groupname</a><br />成员($groupcount3.members) 话题($groupcount3.topiccount)  回复($groupcount3.replaycount)</p>
+					    </li>
+                     #end
+				</ol>
+				
+			</div>
+			
+			
+			
+		</div>
+	</div>
+</div>
+#if($linksopen)
+<div id="links0">
+    <ul>
+      #foreach($links0 in $links0list)
+        <li><a href="$links0.url" target="_blank">$links0.linkname</a></li>
+    </ul>
+      #end
+</div>
+<div id="links1">
+    <ul>
+      #foreach($links1 in $links1list)
+        <li><a href="$links1.url" target="_blank" title="$links1.linkname"><img src="$links1.pic" /></a></li>
+    </ul>
+      #end
+</div>
+#end
+#parse("_foot.html")

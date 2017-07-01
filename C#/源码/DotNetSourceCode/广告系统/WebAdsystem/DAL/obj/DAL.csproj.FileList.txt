@@ -1,0 +1,5 @@
+bin\Debug\DAL.dll
+bin\Debug\DAL.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\DAL.dll
+obj\Debug\DAL.pdb

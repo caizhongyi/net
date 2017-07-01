@@ -1,0 +1,46 @@
+<!--
+
+   (c) Copyright Microsoft Corporation.
+   This source is subject to the Microsoft Limited Permissive License.
+   See http://www.microsoft.com/resources/sharedsource/licensingbasics/limitedpermissivelicense.mspx
+   All other rights reserved.
+  
+   This file is part of the 3D Tools for Windows Presentation Foundation
+   project.  For more information, see:
+   
+   http://CodePlex.com/Wiki/View.aspx?ProjectName=3DTools
+  
+-->
+
+<Grid xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Width="600" Height="300"
+      xmlns:local="clr-namespace:PhotoBrowser" 
+      x:Class="PhotoBrowser.PictureComment" Background="#FFFFFFFF">
+  <Grid.ColumnDefinitions>
+    <ColumnDefinition Width="0.5*" />
+    <ColumnDefinition Width="0.5*" />
+  </Grid.ColumnDefinitions>
+
+  <local:PictureVisual x:Name="pictureVisual" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="Auto" Height="Auto" Grid.Column="0"/>
+  <Border Grid.Column="1" BorderBrush="#FFA52A2A" BorderThickness="4,4,4,4" >
+    <Grid Background="#FFFFFFFF">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="0.75*" />
+        <RowDefinition Height="0.25*" />
+      </Grid.RowDefinitions>
+      <local:CommentList x:Name="commentList" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Width="Auto" Height="Auto" Grid.Row="0" />
+
+      <Border Grid.Row="1" BorderBrush="Blue" BorderThickness="0,1,0,0" >
+        <Grid >
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
+          </Grid.ColumnDefinitions>
+
+          <TextBox TextWrapping="Wrap" Name="textBox1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Column="0" AcceptsReturn="True" VerticalScrollBarVisibility="Auto" />
+          <Button Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Bottom" x:Name="submitCommentButton" IsEnabled="False">Submit</Button>
+        </Grid>
+      </Border>
+    </Grid>
+  </Border>
+</Grid>

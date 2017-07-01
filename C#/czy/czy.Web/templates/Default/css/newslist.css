@@ -1,0 +1,28 @@
+﻿/* ============文章列表============== */
+
+ul.newslist{
+margin:0px;
+padding:7px 0px 0px;
+}
+
+li.newslist {
+margin:0;
+padding-left:16px;
+list-style-type: none;
+font-weight:100;
+color:#fff;
+height:23px;
+background: transparent url(../images/li1.jpg) 0px 4px no-repeat;
+}
+
+a.newslist:link,a.newslist:visited,a.newslist:active{
+text-decoration: none;
+font:12px/22px simsun;
+color:#383838;
+}
+
+a.newslist:hover{
+color:#ff0000;
+text-decoration: underline;
+font:12px/22px simsun;
+}

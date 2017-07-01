@@ -1,0 +1,14 @@
+﻿#parse("_head.html")
+<div id="snsmenu">
+#parse("_menu.html")
+</div>
+<div id="snsbody">
+    <div id="snshead"><span class="l">发生错误</span></div>
+    <div id="snsbody-all" class="noopen" style="width:94%;float:left;">
+        $errormessage 
+        <div class="r" style="font-size:12px;"><a href="$returnurls">$msgdesc</a></div>
+    </div>
+    <script type="text/javascript">setTimeout("window.location.href ='$returnurls';", 6000);</script>
+</div>
+
+#parse("_foot.html")

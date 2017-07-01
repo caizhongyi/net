@@ -1,0 +1,8 @@
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\FileAge.Form1.resources
+obj\Debug\FileAge.Properties.Resources.resources
+obj\Debug\FileAge.csproj.GenerateResource.Cache
+bin\Debug\FileAge.exe
+bin\Debug\FileAge.pdb
+obj\Debug\FileAge.exe
+obj\Debug\FileAge.pdb

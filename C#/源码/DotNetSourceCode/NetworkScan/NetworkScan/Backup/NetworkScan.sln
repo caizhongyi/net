@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetworkScan", "NetworkScan.csproj", "{42637B53-E561-42D9-AFFF-52A874628819}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{42637B53-E561-42D9-AFFF-52A874628819}.Debug.ActiveCfg = Debug|.NET
+		{42637B53-E561-42D9-AFFF-52A874628819}.Debug.Build.0 = Debug|.NET
+		{42637B53-E561-42D9-AFFF-52A874628819}.Release.ActiveCfg = Release|.NET
+		{42637B53-E561-42D9-AFFF-52A874628819}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

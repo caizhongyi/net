@@ -1,0 +1,81 @@
+﻿#parse("_head.html")
+<div id="snsmenu">
+#parse("_menu.html")
+</div>
+<div id="snsbody">
+<script type="text/javascript" src="$webpath/library/js/date/WdatePicker.js"></script>
+    <div id="snshead">教育信息</div>
+    <div class="itemmenu">
+        <ul>
+            <li><a href="profile$exname">基本资料</a></li>
+            <li><a href="nowcity$exname">居住地</a></li>
+            <li><a href="head$exname">修改头像</a></li>
+            <li><a href="links$exname">联系方式</a></li>
+            <li class="current"><a href="edu$exname">教育情况</a></li>
+            <li><a href="work$exname">工作情况</a></li>
+            <li><a href="like$exname">个人爱好</a></li>
+            <li><a href="privacy$exname">隐私设置</a></li>
+        </ul>
+  </div>
+
+    <div class="pitem">${username} &nbsp; ${email} &nbsp; ${mobile}${bindmobile} 
+        <span id="hideMobile" style="display:none;">
+            <input value="" class="f-text" type="text" id="mMobile" name="mMobile" /> <input type="button" name="MobileModify" id="MobileModify" onclick="MobileModifys();" class="f-button" value="填写手机"/>
+        </span>
+     (<a href="pwd$exname">修改登录密码</a>)</div>
+    <form action="edu${exname}" method="post">
+        <div class="pitem">
+        学校名称：<input type="text" name="txtschoolname" id="txtschoolname" maxlength="50" value="$schoolname" class="f-text" />
+        毕业时间：<input type="text" name="txtleaveyear" id="txtleaveyear" maxlength="7" onFocus="WdatePicker({isShowWeek:true})" value="$leaveyear" class="f-text" style="width:100px;" />
+        类型：
+        <select name="sltlevels" id="sltlevels">
+            ${eduinfo}
+        </select>
+        <input type="checkbox" value="1" name="chknolevel" id="chknolevel" ${checked} /> 在读
+        <input type="hidden" name="eid" id="eid"  value="${eid}" />
+        <input type="submit" name="button1" id="SubmitSend" class="btn_blue6" onclick="return checkdata();"  value="保存教育信息"/> 
+        <span class="errors" id="spanerr" style="display:none;"></span> <a href="edu${exname}">增加新的教育信息</a>
+        </div>
+        <div class="pitem">
+            #if($recordcount>0)
+                #foreach($edu in $edulist)
+                <div id="param${edu.id}">
+                <a href="edu${exname}?eid=$edu.id">$edu.schoolname</a> <span>$edu.leaveyear</span> $edu.levels 
+                <a href="edu${exname}?eid=$edu.id">编辑</a> | 
+                <a href="javascript:void(0);" onclick="DeleteEduAjax($edu.id,$uid)">删除</a>
+                </div>
+                #end
+                <div class="pages">$pagelist</div>
+            #else
+                <div>还没填写教育信息</div>
+            #end        
+        </div>
+    </form>
+    <script type="text/javascript">
+        function checkdata()
+        {
+            if(jQuery("#txtschoolname").val()=="")
+            {
+                jQuery("#spanerr").show();
+                jQuery("#spanerr").html("请填写学校名称！");
+                return false;
+            }
+            else
+            {
+                jQuery("#spanerr").hide();
+                return true;
+            }
+        }
+        function MobileModifys()
+        {
+            var mobile=jQuery("#mMobile").val();
+            var uid=$uid;
+            modifymobile(uid,mobile);
+        }
+        function bindmobile(mb,flag)
+        {
+            bindmobiles("${mobilesendcontent}",flag);
+        }
+    </script>
+    </div>
+#parse("_foot.html")

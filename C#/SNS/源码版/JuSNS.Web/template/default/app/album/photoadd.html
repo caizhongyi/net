@@ -1,0 +1,96 @@
+﻿#parse("_head.html")
+<div id="snsmenu">
+#parse("_menu.html")
+</div>
+<div id="snsbody">
+    <div id="snshead">#if($gid>0)社群【<span class="reshow"><a href="$webpath/app/group/group$exname?gid=$gid" target="_blank">$groupname</a></span>】：#end 在【$albumname】中上传图片</div>
+
+    <div class="itemmenu">
+        <ul>
+            <li><a href="$webpath/app/album/photo$exname">最新图片</a></li>
+            <li><a href="$webpath/app/album/default$exname">所有相册</a></li>
+            <li><a href="$webpath/app/album/default$exname?q=my">我的相册</a></li>
+            <li><a href="$webpath/app/album/default$exname?q=friend">朋友的相册</a></li> 
+            <li class="current"><a href="$webpath/app/album/new$exname">上传照片中....</a></li> 
+            <li class="search">搜索：<input id="kwd" name="kwd" value="#if($kwd)$kwd#else搜索相册#end" type="text" class="f-text w100" onclick="this.value=''" /> <input id="Button1" type="button" value="搜索" class="btn_gray2" onclick="search('album','')" /></li>
+        </ul>
+    </div>
+   <form action="" method="post" id="puform" enctype="multipart/form-data">
+      <div id="photo-upload" >
+            <h4>选择相册上传</h4>
+            <div class="pitem">
+                <em>选择相册</em>
+                <select id="albumid" name="albumid">
+                    $albumlist
+                </select>
+                &nbsp; <a href="javascript:;" onclick="gotoalbum();">查看此相册内的图片</a>
+            </div>
+              <div class="pitem"><em>选择图片</em>
+                <input type="file" class="f-text" name="picture" id="picture1" style="width:300px;" />&nbsp;<a href="javascript:;" onclick="javascript:addInput()">+</a>
+              </div>
+            <div class="pitem"><em>&nbsp;</em>
+                <input type="file" class="f-text" name="picture" style="width:300px;" />&nbsp;<a href="javascript:;" onclick="javascript:addInput()">+</a>&nbsp;<a href="javascript:void(0);" onclick="javascript:lessInput()">-</a>
+            </div>
+            <div class="pitem"><em>&nbsp;</em>
+                <input type="file" class="f-text" name="picture" style="width:300px;" />&nbsp;<a href="javascript:;"  onclick="javascript:addInput()">+</a>&nbsp;<a href="javascript:void(0);" onclick="javascript:lessInput()">-</a>
+            </div>
+
+            <div class="pitem1">
+                <em>&nbsp;</em>
+                <input id="Button3" type="submit" value="上传图片" class="btn_blue4" onclick="return checkdata();" />
+                <input id="Button2" type="button" value="返回" class="btn_gray4" onclick="javascript:history.back();" />
+                
+            </div>
+        </div>
+    </form>
+</div>
+<script type="text/javascript">
+    function gotoalbum()
+    {
+        window.open("$webpath/app/album/albumview$exname?aid="+jQuery("#albumid").val(),"opalbum");
+    }
+    function checkdata()
+    {
+        var albumid=jQuery("#albumid").val();
+        var picture1=jQuery("#picture1").val();
+        if(picture1=="")
+        {
+            showErrorResult("至少选择一张图片");
+            return false;
+        }
+        if(albumid=="")
+        {
+            showErrorResult("请选择相册");
+            document.getElementById("albumid").focus();
+            return false;
+        }
+        else
+        {
+            loading();
+            return true;
+        }
+    }
+    
+    function lessInput()
+    {
+       var event=getEvent();
+       var obj=event.srcElement||event.target;
+       var o=obj.parentNode;
+       o.parentNode.removeChild(o);
+    }
+    
+    function addInput()
+    {
+       var event=getEvent();
+       var obj=event.srcElement||event.target;
+       var o=obj.parentNode;
+       o=o.nextSibling;
+       var innerhtml="<div class=\"pitem\"><em>&nbsp;</em><input type=\"file\" class=\"f-text\" style=\"width:300px;\" name=\"picture\" />&nbsp;<a href=\"javascript:;\" onclick=\"javascript:addInput()\">+</a>&nbsp;<a href=\"javascript:;\" onclick=\"javascript:lessInput()\">-</a></div>";
+       var div=document.createElement("div");
+       div.innerHTML=innerhtml;
+       //var form=document.getElementById("puform");
+       jQuery(div).insertBefore(o); 
+       //form.insertBefore(div,o);
+    }
+</script>
+#parse("_foot.html")

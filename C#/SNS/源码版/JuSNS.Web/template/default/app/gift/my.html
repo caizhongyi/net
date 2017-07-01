@@ -1,0 +1,43 @@
+﻿#parse("_head.html")
+<link href="$templatepath/css/app/gift.css" rel="stylesheet" type="text/css" />
+<div id="snsmenu">
+#parse("_menu.html")
+</div>
+<div id="snsbody">
+    <div id="snshead">我收到的礼物</div>
+
+
+    <div class="itemmenu">
+        <ul>
+            <li><a href="$webpath/app/gift/default$exname">赠送礼物</a></li>
+            <li class="current"><a href="$webpath/app/gift/my$exname">我收到的礼物</a></li>
+            <li><a href="$webpath/app/gift/send$exname">我送出去的礼物</a></li> 
+        </ul>
+    </div>
+    <div class="gift1">
+             #if($recordcount>0)
+                <ul>
+                #foreach($info in $infolist)
+                <li id="param_$info.id">
+                    <div class="userpic">
+                        <a href="$info.giftpic" target="_blank" title="$info.giftcontent"><img src="$info.giftpic" /></a>
+                    </div>
+                    <div class="giftcontent">
+                       <a href="$info.spaceurl">$info.truename</a> 赠送<br />
+                       #if($info.content)
+                         <div title="$info.contentall">附言：$info.content</div>
+                       #end
+                         <div class="time">$info.time</div>
+                         <div><a href="$webpath/app/gift/default$exname?uid=$info.userid"">回赠礼物</a></div>
+                    </div>
+                </li>
+                #end
+              </ul>
+              <div class="pages">$pagelist</div>
+        #else
+            <div>还没有记录</div>
+        #end       
+    </div>
+    
+</div>
+#parse("_foot.html")

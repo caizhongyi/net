@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Collection MaxLevel="8" TileSize="256" Format="png" NextItemId="4" xmlns="http://schemas.microsoft.com/deepzoom/2008">
+  <Items>
+    <I Id="0" N="0" IsPath="1" Source="dzc_output_images/tree_blossoms.xml">
+      <Size Width="515" Height="774" />
+      <Viewport Width="2.32711864" X="0" Y="0" />
+    </I>
+    <I Id="1" N="1" IsPath="1" Source="dzc_output_images/guy_by_the_beach.xml">
+      <Size Width="569" Height="835" />
+      <Viewport Width="2.2722652" X="-1.2722652" Y="0" />
+    </I>
+    <I Id="2" N="2" IsPath="1" Source="dzc_output_images/licorice.xml">
+      <Size Width="531" Height="795" />
+      <Viewport Width="2.318235" X="0" Y="-1.66186452" />
+    </I>
+    <I Id="3" N="3" IsPath="1" Source="dzc_output_images/flower.xml">
+      <Size Width="541" Height="831" />
+      <Viewport Width="2.37842" X="-1.37842011" Y="-1.70500922" />
+    </I>
+  </Items>
+</Collection>

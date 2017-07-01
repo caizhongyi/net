@@ -1,0 +1,42 @@
+﻿<UserControl x:Class="Five.View.Components.BlackPieceComponent"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+	<UserControl.Resources>
+		<Storyboard x:Name="Highlight">
+			<ColorAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Shape" Storyboard.TargetProperty="(Shape.Stroke).(SolidColorBrush.Color)">
+				<SplineColorKeyFrame KeyTime="00:00:01" Value="#FFFF0000" KeySpline="0.704999983310699,0,1,1"/>
+				<SplineColorKeyFrame KeyTime="00:00:02" Value="#FF000000" KeySpline="0,0,1,1"/>
+			</ColorAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Shape" Storyboard.TargetProperty="(Shape.StrokeThickness)">
+				<SplineDoubleKeyFrame KeyTime="00:00:01" Value="1" KeySpline="0.704999983310699,0,1,1"/>
+				<SplineDoubleKeyFrame KeyTime="00:00:02" Value="1" KeySpline="0,0,1,1"/>
+			</DoubleAnimationUsingKeyFrames>
+			<ColorAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Shape" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[2].(GradientStop.Color)">
+				<SplineColorKeyFrame KeyTime="00:00:01" Value="#FF600101" KeySpline="0.704999983310699,0,1,1"/>
+				<SplineColorKeyFrame KeyTime="00:00:02" Value="#FF1C1C1C" KeySpline="0,0,1,1"/>
+			</ColorAnimationUsingKeyFrames>
+			<ColorAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Shape" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Color)">
+				<SplineColorKeyFrame KeyTime="00:00:01" Value="#FFFF0000" KeySpline="0.704999983310699,0,1,1"/>
+				<SplineColorKeyFrame KeyTime="00:00:02" Value="#FF616161" KeySpline="0,0,1,1"/>
+			</ColorAnimationUsingKeyFrames>
+		</Storyboard>
+	</UserControl.Resources>
+    <Ellipse x:Name="Shape" Width="26" Height="26" Canvas.Left="0" Canvas.Top="1.90735e-005" Stretch="Fill" StrokeLineJoin="Round" Stroke="#FF000000">
+        <Ellipse.Fill>
+            <RadialGradientBrush RadiusX="1.37032" RadiusY="1.37032" Center="0.266669,0.233331" GradientOrigin="0.266669,0.233331">
+                <RadialGradientBrush.GradientStops>
+                    <GradientStop Color="#FFFFFFFF" Offset="0"/>
+                    <GradientStop Color="#FF616161" Offset="0.0720339"/>
+                    <GradientStop Color="#FF1C1C1C" Offset="0.334746"/>
+                    <GradientStop Color="#FF000000" Offset="1"/>
+                </RadialGradientBrush.GradientStops>
+                <RadialGradientBrush.RelativeTransform>
+                    <TransformGroup>
+                        <RotateTransform CenterX="0.266669" CenterY="0.233331" Angle="41.0549"/>
+                    </TransformGroup>
+                </RadialGradientBrush.RelativeTransform>
+            </RadialGradientBrush>
+        </Ellipse.Fill>
+    </Ellipse>
+    
+</UserControl>

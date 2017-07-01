@@ -1,0 +1,9 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="DeepEarth.Provider.VirtualEarth.Services.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="DeepEarth_Provider_VirtualEarth_Services_TokenWebReference_CommonService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://common.virtualearth.net/find-30/common.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

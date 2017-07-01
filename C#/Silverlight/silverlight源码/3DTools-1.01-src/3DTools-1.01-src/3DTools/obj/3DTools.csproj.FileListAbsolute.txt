@@ -1,0 +1,11 @@
+C:\Documents and Settings\Administrator\桌面\3DTools-1.01-src\3DTools-1.01-src\3DTools\bin\Release\3DTools.dll
+C:\Documents and Settings\Administrator\桌面\3DTools-1.01-src\3DTools-1.01-src\3DTools\bin\Release\3DTools.pdb
+C:\Documents and Settings\Administrator\桌面\3DTools-1.01-src\3DTools-1.01-src\3DTools\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\桌面\3DTools-1.01-src\3DTools-1.01-src\3DTools\obj\Release\Trackport3D.baml
+C:\Documents and Settings\Administrator\桌面\3DTools-1.01-src\3DTools-1.01-src\3DTools\obj\Release\Trackport3D.g.cs
+C:\Documents and Settings\Administrator\桌面\3DTools-1.01-src\3DTools-1.01-src\3DTools\obj\Release\3DTools_MarkupCompile.cache
+C:\Documents and Settings\Administrator\桌面\3DTools-1.01-src\3DTools-1.01-src\3DTools\obj\Release\3DTools.g.resources
+C:\Documents and Settings\Administrator\桌面\3DTools-1.01-src\3DTools-1.01-src\3DTools\obj\Release\_3DTools.Properties.Resources.resources
+C:\Documents and Settings\Administrator\桌面\3DTools-1.01-src\3DTools-1.01-src\3DTools\obj\Release\3DTools.csproj.GenerateResource.Cache
+C:\Documents and Settings\Administrator\桌面\3DTools-1.01-src\3DTools-1.01-src\3DTools\obj\Release\3DTools.dll
+C:\Documents and Settings\Administrator\桌面\3DTools-1.01-src\3DTools-1.01-src\3DTools\obj\Release\3DTools.pdb

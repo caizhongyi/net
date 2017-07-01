@@ -1,0 +1,118 @@
+﻿@charset "utf-8";
+/* CSS Document */
+/*页面基本属性配置
+-------------------------------------------------*/
+html{ color:#000; background:#FFF;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{ margin:0; padding:0;}
+td *{ vertical-align:middle;}
+body{ width:950px; text-align:center; margin:0px auto; padding:0px ; font:12px/24px "Arial","宋体"; color:#000; position:relative;}
+table{ text-align:center; margin:0px auto; border-collapse:collapse;}
+input,button,textarea,select{ font-family:inherit; font-size:inherit; font-weight:inherit; font:100% Arial,sans-serif;}
+input{ padding-left:3px;}
+blockquote, q { quotes: "" "";}
+img { border: none; vertical-align:top;}
+a img {border: none;outline: none;}
+a:link, a:visited{ color:#333333; text-decoration:none;}
+a:hover{ color:#666; text-decoration:none;}
+a:active, a:focus { outline:none; }
+#header .logo a{blr:expression(this.onFocus=this.blur()); }
+.clear{ clear:both; height:1px; overflow:hidden;}
+.left{ float:left;}
+.right{ float:right;}
+.borderred{ border:1px solid red;}
+ul , ol{margin:0;padding:0;list-style:none;text-align:left;}
+/*ul li{white-space:nowrap;text-overflow:ellipsis;overflow:hidden;}*/
+
+/*页面基本属性配置结束
+-------------------------------------------------*/
+/*页面头部与尾部属性配置以及main公共部分
+-------------------------------------------------*/
+#header{ width:100%; height:390px;  position:relative; z-index:0;} 
+#header .headtop{ width:100%; height:102px; background:url(../images/top_bg.jpg) no-repeat;}
+#header .headtop .logo{ width:245px; height:78px; text-indent:-9999px; margin:15px 0px 0px 10px; display:block; background:url(../images/logo_bg.jpg) no-repeat;}
+#header .headtop .sitemap{ width:85px; height:20px; display:block; text-align:right; font-size:14px; color:#fffd00; font-weight: bold; margin:15px 12px 0px 0px !important; margin:15px 6px 0px 0px; background:url(../images/sitemap_bg.gif) no-repeat left center; line-height:20px;}
+#header .menu{width:100%; height:38px; background:url(../images/menu_bg.jpg) no-repeat;}
+#header .menu ul{ width:100%; height:38px; }
+#header .menu ul li{ float:left; width:95px; height:38px; line-height:38px; text-align:center; margin-left:12px; display:inline;}
+#header .menu ul li a{ width:95px; height:38px; line-height:38px; display:block; font-size:14px; font-weight:bold; color:#fff;}
+#header .menu ul li .tmbg{font-size:14px; font-weight:bold; color:#0069af; background:#fff url(../images/menulist-bg.jpg) no-repeat left top;}
+#header .menu ul li a:hover{width:95px; height:38px; line-height:38px; display:block; font-size:14px; font-weight:bold; color:#0069af; background:#fff url(../images/menulist-bg.jpg) no-repeat left top;}
+#header .menu #xuntong{ width:116px; height:101px; background:url(../images/outlist_bg.gif) no-repeat center bottom; position:absolute; z-index:9999; top:135px; left:322px;}
+#header .menu #othermenu{ width:116px; height:101px; background:url(../images/outlist_bg.gif) no-repeat center bottom; position:absolute; z-index:9998; top:135px; left:429px;}
+#header .menu #xuntong dd , #header .menu #othermenu dd{ width:116px; height:32px; background:url(../images/whitebar_bg.gif) repeat-y 11px top; margin:0 auto; text-align:center;}
+#header .menu #xuntong dd a:link , #header .menu #xuntong dd a:visited ,#header .menu #othermenu dd a:link , #header .menu #othermenu dd a:visited{width:116px; height:32px; display:block; color:#000;}
+#header .menu #xuntong dd a:hover , #header .menu #othermenu dd a:hover{ color:#fff; background:url(../images/onbur_bg.gif) no-repeat 2px top; width:116px; height:32px; display:block;}
+#header .flascroll{ width:100%; height:243px; margin-top:5px;}
+#header #flascroll{width:950px;height:243px;position:relative;overflow:hidden;font-family:Verdana, Arial, Helvetica, sans-serif;background:#fff;}/*整个框架大小，可随意更改，可按需要是否加边框*/
+#header #loading{position:absolute;z-index:9999;width:450px;height:186px;background:#fff url(../images/15250-loading.gif) center -50px no-repeat;color:#666;font-size:12px;text-align:center;padding-top:60px;}
+#header #ts_bg{position:absolute;bottom:0;z-index:1;width:950px;height:36px;background:#000;filter:alpha(opacity=40);opacity:0.4;}
+#header #pics{ width:950px; height:243px;}
+#header #pics li{position:absolute;top:0px;left:0px;}
+#header #pics li img{filter:alpha(opacity=0);opacity:0;width:950px;height:243px;}/*图片大小与框架保持一致*/
+#header #ts li{position:absolute;z-index:2;left:0;bottom:-32px;height:32px;line-height:32px;font-size:14px;font-weight:bold;padding-left:16px;}
+#header #ts li a{color:#fff; text-decoration:none;}/*标题链接样式*/
+#header #btn,#btn_bg{position:absolute;z-index:3;bottom:10px;right:20px;color:#000;font-size:12px;}
+#header #btn li,#btn_bg li{float:left;width:15px;height:15px;line-height:15px;overflow:hidden;text-align:center;margin-right:2px; text-align:center; }
+#header #btn_bg li{background:url(../images/icon4.gif) no-repeat; /*filter:alpha(opacity=50);opacity:0.5;*/ color:#000;}
+#header #btn li.current {background:url(../images/icon3.gif) no-repeat; color:#fff;}
+#main{ width:100%; }
+#main .mainleft{ width:230px; margin-top:5px;}
+#main .mainleft .navlogo{ width:230px; height:255px;}
+#main .mainleft .navlogo .navlogotop{ width:100%; height:38px; background:url(../images/navlogotop_bg.jpg) no-repeat; text-align:left; font-size:14px; line-height:38px;}
+#main .mainleft .navlogo .navlogotop strong{padding-left:20px;}
+#main .mainleft .navlogo .navlogocont{ width:228px; height:212px; border-left:1px solid #dbdedf; border-right:1px solid #dbdedf;}
+#main .mainleft .navlogo .navlogocont img{margin-top:10px;}
+#main .mainleft .navlogo .navlogobot{ width:100%; height:5px; background:url(../images/navlogobot_bg.jpg) no-repeat; overflow:hidden;}
+#main .mainleft .myhoner{ width:100%; margin:15px auto;}
+#footer{ width:100%; height:89px; margin-top:5px;}
+#footer .foleft{ width:5px; height:89px; background:url(../images/foleft_bg.jpg) no-repeat;}
+#footer .fomid{ width:940px; height:89px; background:#298bc7 url(../images/icon1.jpg) no-repeat 85px top; color:#fff;}
+#footer .fomid p{ padding-top:20px;}
+#footer .fomid p span{ background:url(../images/icon2.jpg) no-repeat; padding-left:22px;}
+#footer .fomid p span a:link , #footer .fomid p span a:visited{ color:#fffd00;}
+#footer .foright{ width:5px; height:89px; background:url(../images/foright_bg.jpg) no-repeat;}
+/*首面部分
+-------------------------------------------------*/
+#main .mainmid{ width:474px; margin:5px 0px 0px 8px; display:inline;}
+#main .mainmid .mainmidtt{ width:100%; height:38px; line-height:38px; background:url(../images/mainmidtt_bg.jpg) no-repeat; text-align:left; font-size:14px;}
+#main .mainmid .mainmidtt strong{ padding-left:20px;}
+#main .mainmid .mainmidintro{width:472; height:356px; background:#f6f7f8 url(../images/mainintro_bg.jpg) no-repeat 5px 45px; border-left:1px solid #dbdedf; border-right:1px solid #dbdedf;}
+#main .mainmid .mainmidintro p{ width:96%; text-align:left; margin:0 auto; letter-spacing:1px; text-indent:24px; color:#666;}
+#main .mainmid .mainmidintro p span{width:160px; height:135px; float:left; display:block;}
+#main .mainmid .mainmidintro .morelink{ padding:10px 20px;}
+#main .mainmid .mainmidintro .morelink a:link , #main .mainmid .mainmidintro .morelink a:visited{ color:#3366cc;}
+#main .mainmid .mainmidbot{ width:100%; height:5px; overflow:hidden; background:url(../images/mainmidbot_bg.jpg) no-repeat;}
+#main .mainright{ width:230px; margin-top:5px;}
+#main .mainright .newslist{ width:230px; height:255px;margin-left:8px; display:inline;}
+#main .mainright .newslist .neswlisttop{ width:100%; height:38px; background:url(../images/navlogotop_bg.jpg) no-repeat; text-align:left; font-size:14px; line-height:38px;}
+#main .mainright .newslist .neswlisttop strong{padding-left:20px;}
+#main .mainright .newslist .neswlistmid{ width:228px; height:344px; padding-top:12px; border-left:1px solid #dbdedf; border-right:1px solid #dbdedf;}
+#main .mainright .newslist .neswlistmid li{ width:185px; height:24px; padding-left:25px; line-height:24px;white-space:nowrap;text-overflow:ellipsis;overflow:hidden; background: url(../images/icon5.gif) no-repeat 15px center;}
+#main .mainright .newslist .neswlistmid .morebtn{ width:100%; height:32px; padding:15px 0px; border-bottom:1px dotted #000;}
+#main .mainright .newslist .neswlistbot{ width:100%; height:5px; background:url(../images/navlogobot_bg.jpg) no-repeat; overflow:hidden;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

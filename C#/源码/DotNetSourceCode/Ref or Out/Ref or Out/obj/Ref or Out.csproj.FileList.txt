@@ -1,0 +1,5 @@
+bin\Debug\Ref or Out.exe
+bin\Debug\Ref or Out.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\Ref or Out.exe
+obj\Debug\Ref or Out.pdb

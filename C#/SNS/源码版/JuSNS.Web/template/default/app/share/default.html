@@ -1,0 +1,112 @@
+﻿#parse("_head.html")
+<link href="$templatepath/css/app/share.css" rel="stylesheet" type="text/css" />
+<div id="snsmenu">
+#parse("_menu.html")
+</div>
+<div id="snsbody">
+    <div id="snshead"><span class="l">$cpagetitle</span><span class="r"><input id="kwd" name="kwd" value="#if($kwd)$kwd#else搜索分享#end" type="text" class="f-text w100" onclick="this.value=''" /> <input id="Button1" type="button" value="搜索" class="btn_gray2" onclick="search('share','$q')" /></span></div>
+
+    <div >
+    <div class="itemmenu">
+        <ul>
+            <li#if($css_null)$css_null#end><a href="$webpath/app/share/default$exname">所有分享</a></li>
+            #if($uid>0)
+            <li#if($css_friend)$css_friend#end><a href="$webpath/app/share/default$exname?q=friend">好友的分享</a></li>
+            <li#if($css_my)$css_my#end><a href="$webpath/app/share/default$exname?q=my">我的分享</a></li>
+            #end
+            <li#if($css_rec)$css_rec#end><a href="$webpath/app/share/default$exname?q=rec">推荐的分享</a></li>
+        </ul>
+    </div>
+    </div>
+        <div id="sharemiddle">
+            #if($uid>0)
+            <div class="pitem">
+            <form id="form1" name="form1" action="" method="post">
+                地址：<input id="txtwebURL" name="txtwebURL" onclick="showcontent(this)" value="输入网页、视频、音乐、Flash的地址" type="text" class="f-text" style="width:300px;" />  <input id="Submit1" type="submit" onclick="return checkdata();" value="分享" class="btn_blue2" />
+                <div id="sharecontentall" style="display:none;">
+                <p>标题：<input id="txttitle" name="txttitle"  type="text" class="f-text" style="width:300px;" /></p>
+                <p>内容：<textarea id="txtcontent" name="txtcontent"  class="f-text"  rows="3" style="width:300px;height:50px"></textarea> <span class="reshow">最多500个字符。</span></p>
+               </div>
+                </form>
+            </div>
+            #end
+         #if($recordcount>0)
+            <div class="toshare">
+                <ul>
+                #foreach($info in $infolist)
+                <li id="param_$info.id">
+                    <div class="userpic images">
+                        <a href="$info.spaceurl" target="_blank" title="查看$info.truename的空间"><img src="$info.headpic" /><br />$info.truename</a>
+                    </div>
+                    <div class="content">
+                        <div class="titlebg">
+                            <div class="sleft"><a href="$info.spaceurl" target="_blank" title="查看$info.truename的空间">$info.truename</a> 分享了一个$info.sharetitle $info.showop</div>
+                            <div class="sright time">$info.time</div>
+                         </div>
+                        <div class="other"><a href="$webpath/app/share/url$exname?infoid=$info.infoid&id=$info.id">$info.title</a>#if($info.webURL)(<a href="$webpath/url$exname?urls=$info.webURL">$info.webURL</a>)#end</div>
+                        <div class="other">$info.content</div>
+                        #if($info.pic)<div class="otherimage"><a href="$webpath/app/share/url$exname?infoid=$info.infoid&id=$info.id" title="点击查看"><img src="$info.pic" /></a></div>#end
+                        #if($info.vodie)<div class="other">$info.vodie</div>#end
+                    </div>
+                </li>
+                #end
+              </ul>
+              </div>
+              <div class="pages">$pagelist</div>
+        #else
+            <div>还没有记录</div>
+        #end        
+    </div>
+        <div id="shareright">
+       <div class="title">分享分类</div>
+       <div class="classlist">
+        <ul>
+            $classlist
+        </ul>
+       </div>
+       <div class="clearpix">&nbsp;</div>
+       <div class="title">如何分享网页？</div>
+        <p style="margin-left:5px;">直接填写网址。</p>
+       <div class="title">如何分享视频？</div>
+        <p style="margin-left:5px;">填写视频所在网页的网址。(不需要填写视频的真实地址)<br />
+            我们支持的视频网站有：<br />
+            土豆、优酷、酷6<!--、Mofile、偶偶视频、UUME、我秀、爆米花、第九频道、百度贴吧视频、新浪视频、搜狐视频-->。
+            </p>
+       <div class="title">如何分享音乐？</div>
+        <p style="margin-left:5px;">填写音乐文件的网帖子址。(后缀需要是 mp3 或者 wma)。</p>
+       <div class="title">如何分享 Flash？</div>
+        <p style="margin-left:5px;">填写 Flash 文件的网址。(后缀需要是 swf)</p>
+        
+
+    </div>
+    
+</div>
+
+#parse("_foot.html")
+<script type="text/javascript">
+    function showcontent(obj)
+    {
+        var webURL=jQuery("#txtwebURL").val();
+        if(webURL=="输入网页、视频、音乐、Flash的地址")
+        {
+            obj.value="";
+        }
+        jQuery("#sharecontentall").show();
+    }
+    function checkdata()
+    {
+        var webURL=jQuery("#txtwebURL").val();
+        if(webURL==""||webURL.length<5||webURL=="输入网页、视频、音乐、Flash的地址")
+        {
+            showErrorResult("请填写网页地址");
+            return false;
+        }
+        var txttitle=jQuery("#txttitle").val();
+        if(txttitle=="")
+        {
+            showErrorResult("请填写分享标题");
+            return false;
+        }
+        return true;
+    }
+</script>

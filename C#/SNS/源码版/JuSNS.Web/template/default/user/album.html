@@ -1,0 +1,142 @@
+﻿#parse("_headspace.html")
+<div id="userspacebgcontral">
+    <div id="space_head">
+        <div class="headfist">
+            $username的个人主页
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="$spaceurl">首页</a></li>
+                <li><a href="$webpath/user/twitter$exname?uid=$userid">微博</a></li>
+                <li><a href="$webpath/user/blog$exname?uid=$userid">博文</a></li>
+                <li class="current"><a href="$webpath/user/album$exname?uid=$userid">相片</a></li>
+                <li><a href="$webpath/user/ative$exname?uid=$userid">活动</a></li>
+                <li><a href="$webpath/user/shops$exname?uid=$userid">商品</a></li>
+                <li><a href="$webpath/user/ask$exname?uid=$userid">问答</a></li>
+                <li><a href="$webpath/user/vote$exname?uid=$userid">投票</a></li>
+                <li><a href="$webpath/homes$exname?uid=$userid">社区动态</a></li>
+                <li><a href="$webpath/home/friend/default$exname?uid=$userid">好友</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="space_bodyleft">
+        <div class="headpic">
+            <a><img src="$headpic" /></a>
+        </div>
+        <div class="profile">
+                #if($profile)<div class="vip">$profile</div>#end 
+                #if($uid>0)
+                <a href="$webpath/app/poke?uid=$userid"  class="sicon-poke">打招呼</a> &nbsp; <a href="$webpath/home/box/mail$exname?fid=$userid&uid=$uid" class="sicon-mails">发消息</a><br />
+                   <a href="$webpath/app/gift?uid=$userid" class="sicon-gift">送礼物</a> &nbsp; <a href="$spaceurl#gbookcontent" class="sicon-mail">留 &nbsp;&nbsp; 言</a><br />
+                    #if($friend)#if($uid!=$userid)<a href="javascript:;" onclick="ATTUser($userid,$uid)" class="sicon-att">关注他</a> &nbsp; <a href="javascript:;" onclick="addfriend($userid,'$username',$uid)" class="sicon-friend">加好友</a><br />
+                   #end#else<a href="javascript:;" onclick="colosedyn($userid,$uid)" class="toblack">屏蔽他的动态</a>#end
+               #end
+        </div>
+        #if($sex)<div class="uitem"> <em>性别：</em>$sex</div>#end
+        #if($constellation)<div class="uitem"> <em>星座：</em>$constellation</div>#end
+        #if($birthday)<div class="uitem"> <em>生日：</em>$birthday</div>#end
+        #if($add)<div class="uitem"> <em>居住地：</em>$add</div>#end
+        #if($home!=""&&$home)<div class="uitem"> <em>家乡：</em>$home</div>#end
+        #if($inter!=0&&$inter)<div class="uitem"> <em>积分：</em>$inter</div>#end
+        #if($interyb!=0&&$interyb)<div class="uitem"> <em>$gpoint：</em>$interyb</div>#end
+        #if($money!="0.00"&&$money)<div class="uitem"> <em>帐户：</em>$money</div>#end
+        <p style="height:15px;">&nbsp;</p>
+         #if($edurecordcount>0)
+        <div class="userflagtitle" style="width:95%;"><span>教育经历</span></div>
+        <div class="twitterlist">
+        <ul>
+            #foreach($edu in $edulist)
+                <li> &bull; <a href="$webpath/home/friend/search$exname?schoolname=$edu.schoolname&levels=$edu.levelsflag">[$edu.levels] $edu.schoolname</a> <span class="time">$edu.leaveyear</span></li>
+            #end
+        </ul>
+        </div>
+        #end
+         #if($careerrecordcount>0)
+        <div class="userflagtitle" style="width:95%;"><span>工作经历</span></div>
+        <div class="twitterlist">
+        <ul>
+            #foreach($career in $careerlist)
+                <li> &bull; <a href="$webpath/home/friend/search$exname?companyname=$career.company">$career.company</a> <span class="time">$career.leavetime</span></li>
+            #end
+        </ul>
+        </div>
+        #end
+
+        #if($twitrecordcount>0)
+        <div class="userflagtitle" style="width:95%;"><span>微博</span><em><a href="$webpath/app/twitter/?q=$userid">更多...</a></em></div>
+        <div class="twitterlist">
+        <ul>
+            #foreach($twit in $twitlist)
+                <li> &bull; <a href="$twit.twitterurl">$twit.content</a> <span class="time">$twit.time</span></li>
+            #end
+        </ul>
+        </div>
+        #end
+        #if($giftrecordcount>0)
+        <div class="userflagtitle" style="width:95%;"><span>收到的礼物</span><em><a href="$webpath/app/gift?uid=$userid">我也要送礼物</a></em></div>
+         <div class="giftlist">
+        <ul>
+            #foreach($gift in $giftlist)
+                <li> 
+                <div class="aa">
+                <a href="$webpath/app/gift"><img src="$gift.giftpic" /></a></div>
+                <div class="bb">
+                     <a href="$webpath/app/gift">$gift.giftname</a><br />
+                     <a href="$gift.spaceurl">$gift.truename</a> 送<br />
+                     <span class="time">$gift.time</span>
+                </div>
+               
+                 </li>
+            #end
+        </ul>
+        </div>
+        #end
+
+    </div>
+    <div id="space_bodyall">       
+                #if($recordcount>0)
+            <div class="albumspace">
+                <ul>
+                #foreach($info in $infolist)
+                <li id="param_$info.albumid">
+                
+                    <div class="photo-album">
+                            <table class="photo-album-table">
+                              <tr><td class="cover-image">
+                                    <p class="image"><a href="$webpath/app/album/albumview$exname?aid=$info.albumid"><img src="$info.pic" /></a></p>
+                               </td><td>
+                               <table class="info">
+                                   <tr>
+                                       <td >
+                                           <div class="strong"><a href="$webpath/app/album/albumview$exname?aid=$info.albumid">$info.title</a></span> <span class="count normal">($info.piccount张图片)</span>$info.showop$info.showrec</div>
+                                           <div class="desc">$info.desc</div>
+                                             <div ><a href="$info.spaceurl">$info.truename</a><span class="pipe">|</span><a href="$webpath/app/album/?q=$info.userid">$info.truename的所有相册</a><span class="pipe">|</span><span class="time">创建于 $info.time#if($info.edittime)<span class="pipe">|</span>更新于$info.edittime#end</span></div>
+                                       </td>
+                                   </tr>
+                                   #if($info.self>0)
+                                   <tr>
+                                           <td>
+                                               <a href="$webpath/app/album/PhotoAdd$exname?aid=$info.albumid">上传图片</a><span class="pipe">|</span><a href="$webpath/app/album/PhotoEdit$exname?aid=$info.albumid">编辑图片</a><span class="pipe">|</span><a href="$webpath/app/album/AlbumEdit$exname?aid=$info.albumid">编辑相册</a><span class="pipe">|</span><a href="$webpath/app/album/AlbumView$exname?aid=$info.albumid">浏览相册</a> 
+                                          </td>
+                                   </tr>
+                                   #end
+                               </table>
+                               $info.picofalbum
+                            </td>
+                            </tr>
+                            </table>
+                </div>                
+
+                 
+                </li>
+                #end
+              </ul>
+              </div>
+              <div class="pages">$pagelist</div>
+        #else
+            <div>还没有相册</div>
+        #end            
+    </div>
+</div>
+#parse("_foot.html")

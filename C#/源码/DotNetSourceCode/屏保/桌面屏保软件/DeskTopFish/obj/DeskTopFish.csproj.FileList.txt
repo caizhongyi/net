@@ -1,0 +1,7 @@
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\DeskTopFish.MainForm.resources
+obj\Debug\DeskTopFish.csproj.GenerateResource.Cache
+bin\Debug\DeskTopFish.exe
+bin\Debug\DeskTopFish.pdb
+obj\Debug\DeskTopFish.exe
+obj\Debug\DeskTopFish.pdb

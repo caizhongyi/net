@@ -1,0 +1,6 @@
+﻿<%@ Page Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="AdminChangePwd.aspx.cs" Inherits="AdminChangePwd" Title="Untitled Page" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+<asp:Panel id="Panel2" runat="server" Width="624px" Height="69px"><asp:Label id="Label6" runat="server" Text="新密码："></asp:Label> &nbsp; <asp:TextBox id="adminpwd" runat="server" TextMode="Password"></asp:TextBox> <asp:RequiredFieldValidator id="RequiredFieldValidator1" runat="server" ErrorMessage="*" ControlToValidate="adminpwd"></asp:RequiredFieldValidator> <BR /><BR /><asp:Label id="Label5" runat="server" Text="确定密码："></asp:Label> <asp:TextBox id="adminMpwd" runat="server" TextMode="Password"></asp:TextBox> &nbsp; <asp:RequiredFieldValidator id="RequiredFieldValidator2" runat="server" ErrorMessage="*" ControlToValidate="adminMpwd"></asp:RequiredFieldValidator> <asp:CompareValidator id="CompareValidator1" runat="server" ErrorMessage="密码不一致" ControlToValidate="adminMpwd" ControlToCompare="adminpwd"></asp:CompareValidator> <BR /><BR /><asp:Button id="Button2" runat="server" Text="修改"></asp:Button>&nbsp; &nbsp;<asp:Button id="Button1" runat="server" Text="取消"></asp:Button> </asp:Panel>
+</asp:Content>
+
+

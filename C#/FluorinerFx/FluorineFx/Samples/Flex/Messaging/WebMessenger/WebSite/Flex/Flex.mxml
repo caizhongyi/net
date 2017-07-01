@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:local="*">
+	<mx:Script>
+		<![CDATA[
+		
+		import mx.data.events.DataServiceFaultEvent;
+		import mx.rpc.AsyncToken;
+		import mx.messaging.messages.*;
+		import mx.messaging.events.*;
+		import mx.rpc.events.ResultEvent;
+		import mx.controls.Alert;
+
+		
+		[Bindable]
+		private var statusList:Array = ["Available", "Busy", "On the phone", "Away", "Will be right back"];
+		
+		private function logon():void
+		{
+			userSession.userId = userId.text;
+			userSession.password = password.text;
+			userSession.status = status.text;
+			var token:AsyncToken = dsSessions.createItem(userSession);
+			token.operation = "CREATE";
+		}
+
+		public function sendMessage():void
+		{
+			if (dg.selectedItem) // check if the user has selected a recipient for the message
+			{
+				var message:AsyncMessage = new AsyncMessage();
+				message.body = {userId: userId.text, recipientId: dg.selectedItem.userId, text: msg.text};
+				producer.subtopic = dg.selectedItem.userId;
+				producer.send(message);
+				msg.text="";
+				ta.text += message.body.userId + ">" + message.body.recipientId + ": " + message.body.text + "\n";				
+			}
+			else
+			{
+				Alert.show("Select a recipient in your list of online friends.");
+			}
+		}
+		
+		private function messageHandler(event:MessageEvent):void
+		{
+			var item:Object = event.message.body;
+			ta.text += item.userId + ">" + item.recipientId + ": " + item.text + "\n";		
+		}
+
+		private function faultHandler(event:DataServiceFaultEvent):void
+		{
+			Alert.show((event.message as ErrorMessage).faultString, "Error");
+			if (event.token.operation == "CREATE")
+			{
+				dsSessions.release();
+			}
+		}
+
+		private function sessionsResult(event:ResultEvent):void
+		{
+			if (event.token.operation == "CREATE") 
+			{
+				consumer.subtopic = userSession.userId;
+				consumer.subscribe();
+				dsBuddies.fill(buddies, userId.text);
+				dsSessions.fill(buddySessions, userId.text);
+			}
+		}
+		
+		]]>
+	</mx:Script>
+	
+	<mx:ArrayCollection id="buddies"/>
+	<mx:ArrayCollection id="buddySessions"/>
+
+	<local:UserSession id="userSession"/>
+	
+	<mx:DataService id="dsSessions" destination="chat-sessions"
+		result="sessionsResult(event)" 
+		fault="faultHandler(event)"/>
+		
+	<mx:DataService id="dsBuddies" destination="chat-buddies"/>
+	
+	<mx:Consumer id="consumer" destination="chat" message="messageHandler(event)"/> 
+	<mx:Producer id="producer" destination="chat"/>
+	
+	<mx:HBox width="100%" height="100%">
+	
+		<mx:Panel title="Presence" width="300" height="100%">
+			<mx:Form>
+				<mx:FormItem label="User Id">
+					<mx:TextInput id="userId" width="140"/>	
+				</mx:FormItem>
+				<mx:FormItem label="Password">
+					<mx:TextInput id="password" width="140"/>	
+				</mx:FormItem>
+				<mx:FormItem>
+					<mx:Button label="Logon" click="logon()"/>
+				</mx:FormItem>
+			</mx:Form>
+
+			<mx:Label text="Online Friends:"/>
+			<mx:DataGrid id="dg" dataProvider="{buddySessions}" width="100%" height="100%">
+				<mx:columns>
+					<mx:DataGridColumn dataField="userId" headerText="Id"/>
+					<mx:DataGridColumn dataField="status" headerText="Status"/>
+				</mx:columns>
+			</mx:DataGrid>
+
+			<mx:Label text="All My Friends:"/>
+			<mx:List id="buddyList" dataProvider="{buddies}" labelField="buddyId" width="100%" height="100%"/>
+
+			<mx:ControlBar>
+				<mx:Label text="My Status"/>
+				<mx:ComboBox id="status" dataProvider="{statusList}" change="userSession.status = status.text" width="140"/>	
+			</mx:ControlBar>
+
+		</mx:Panel>
+		
+		<mx:Panel title="Chat" width="100%" height="100%">
+			<mx:TextArea id="ta" width="100%" height="100%"/>
+			<mx:ControlBar>
+				<mx:TextInput id="msg" width="100%" enter="sendMessage()"/>	
+				<mx:Button label="Send" click="sendMessage()" enabled="{dg.selectedItem}"/>
+			</mx:ControlBar>	
+		</mx:Panel>
+		
+	</mx:HBox>	
+</mx:Application>

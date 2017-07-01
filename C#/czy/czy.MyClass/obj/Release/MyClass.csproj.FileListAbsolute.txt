@@ -1,0 +1,4 @@
+E:\caizhongyi\C#\C#\MyClass\MyClass\obj\Release\ResolveAssemblyReference.cache
+E:\caizhongyi\C#\C#\MyClass\MyClass\obj\Release\Interop.ADODB.dll
+E:\caizhongyi\C#\C#\MyClass\MyClass\obj\Release\Interop.CDO.dll
+E:\caizhongyi\C#\C#\MyClass\MyClass\obj\Release\MyClass.csproj.ResolveComReference.cache

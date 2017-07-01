@@ -1,0 +1,54 @@
+C:\Documents and Settings\webabcd\桌面\YYTetris\YYTetris\Bin\Debug\AppManifest.xaml
+C:\Documents and Settings\webabcd\桌面\YYTetris\YYTetris\Bin\Debug\YYTetris.dll
+C:\Documents and Settings\webabcd\桌面\YYTetris\YYTetris\Bin\Debug\YYTetris.pdb
+C:\Documents and Settings\webabcd\桌面\YYTetris\YYTetris\Bin\Debug\YYTetris.xap
+C:\Documents and Settings\webabcd\桌面\YYTetris\YYTetris\Bin\Debug\TestPage.html
+C:\Documents and Settings\webabcd\桌面\YYTetris\YYTetris\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\webabcd\桌面\YYTetris\YYTetris\obj\Debug\App.g.cs
+C:\Documents and Settings\webabcd\桌面\YYTetris\YYTetris\obj\Debug\Piece\Block.g.cs
+C:\Documents and Settings\webabcd\桌面\YYTetris\YYTetris\obj\Debug\Page.g.cs
+C:\Documents and Settings\webabcd\桌面\YYTetris\YYTetris\obj\Debug\YYTetris.g.resources
+C:\Documents and Settings\webabcd\桌面\YYTetris\YYTetris\obj\Debug\YYTetris.dll
+C:\Documents and Settings\webabcd\桌面\YYTetris\YYTetris\obj\Debug\YYTetris.pdb
+C:\Documents and Settings\webabcd\桌面\YYTetris\YYTetris\obj\Debug\XapCacheFile.xml
+C:\Documents and Settings\webabcd\桌面\YYTetris\YYTetris\YYTetris\Bin\Debug\AppManifest.xaml
+C:\Documents and Settings\webabcd\桌面\YYTetris\YYTetris\YYTetris\Bin\Debug\YYTetris.dll
+C:\Documents and Settings\webabcd\桌面\YYTetris\YYTetris\YYTetris\Bin\Debug\YYTetris.pdb
+C:\Documents and Settings\webabcd\桌面\YYTetris\YYTetris\YYTetris\Bin\Debug\YYTetris.xap
+C:\Documents and Settings\webabcd\桌面\YYTetris\YYTetris\YYTetris\Bin\Debug\TestPage.html
+C:\Documents and Settings\webabcd\桌面\YYTetris\YYTetris\YYTetris\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\webabcd\桌面\YYTetris\YYTetris\YYTetris\obj\Debug\App.g.cs
+C:\Documents and Settings\webabcd\桌面\YYTetris\YYTetris\YYTetris\obj\Debug\Piece\Block.g.cs
+C:\Documents and Settings\webabcd\桌面\YYTetris\YYTetris\YYTetris\obj\Debug\Page.g.cs
+C:\Documents and Settings\webabcd\桌面\YYTetris\YYTetris\YYTetris\obj\Debug\YYTetris.g.resources
+C:\Documents and Settings\webabcd\桌面\YYTetris\YYTetris\YYTetris\obj\Debug\YYTetris.dll
+C:\Documents and Settings\webabcd\桌面\YYTetris\YYTetris\YYTetris\obj\Debug\YYTetris.pdb
+C:\Documents and Settings\webabcd\桌面\YYTetris\YYTetris\YYTetris\obj\Debug\XapCacheFile.xml
+C:\Documents and Settings\webabcd\桌面\YYTetris\YYTetris\obj\Debug\Part\GameOver.g.cs
+C:\Documents and Settings\webabcd\桌面\YYTetris\YYTetris\obj\Debug\Part\Option.g.cs
+C:\Users\Administrator\Desktop\YYTetris\YYTetris\Bin\Debug\AppManifest.xaml
+C:\Users\Administrator\Desktop\YYTetris\YYTetris\Bin\Debug\YYTetris.dll
+C:\Users\Administrator\Desktop\YYTetris\YYTetris\Bin\Debug\YYTetris.pdb
+C:\Users\Administrator\Desktop\YYTetris\YYTetris\Bin\Debug\YYTetris.xap
+C:\Users\Administrator\Desktop\YYTetris\YYTetris\Bin\Debug\TestPage.html
+C:\Users\Administrator\Desktop\YYTetris\YYTetris\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\YYTetris\YYTetris\obj\Debug\App.g.cs
+C:\Users\Administrator\Desktop\YYTetris\YYTetris\obj\Debug\Piece\Block.g.cs
+C:\Users\Administrator\Desktop\YYTetris\YYTetris\obj\Debug\Page.g.cs
+C:\Users\Administrator\Desktop\YYTetris\YYTetris\obj\Debug\YYTetris.g.resources
+C:\Users\Administrator\Desktop\YYTetris\YYTetris\obj\Debug\YYTetris.dll
+C:\Users\Administrator\Desktop\YYTetris\YYTetris\obj\Debug\YYTetris.pdb
+C:\Users\Administrator\Desktop\YYTetris\YYTetris\obj\Debug\XapCacheFile.xml
+E:\downcode\SilverlightPiano\YYTetris\YYTetris\Bin\Debug\AppManifest.xaml
+E:\downcode\SilverlightPiano\YYTetris\YYTetris\Bin\Debug\YYTetris.dll
+E:\downcode\SilverlightPiano\YYTetris\YYTetris\Bin\Debug\YYTetris.pdb
+E:\downcode\SilverlightPiano\YYTetris\YYTetris\Bin\Debug\YYTetris.xap
+E:\downcode\SilverlightPiano\YYTetris\YYTetris\Bin\Debug\TestPage.html
+E:\downcode\SilverlightPiano\YYTetris\YYTetris\obj\Debug\ResolveAssemblyReference.cache
+E:\downcode\SilverlightPiano\YYTetris\YYTetris\obj\Debug\App.g.cs
+E:\downcode\SilverlightPiano\YYTetris\YYTetris\obj\Debug\Piece\Block.g.cs
+E:\downcode\SilverlightPiano\YYTetris\YYTetris\obj\Debug\Page.g.cs
+E:\downcode\SilverlightPiano\YYTetris\YYTetris\obj\Debug\YYTetris.g.resources
+E:\downcode\SilverlightPiano\YYTetris\YYTetris\obj\Debug\YYTetris.dll
+E:\downcode\SilverlightPiano\YYTetris\YYTetris\obj\Debug\YYTetris.pdb
+E:\downcode\SilverlightPiano\YYTetris\YYTetris\obj\Debug\XapCacheFile.xml

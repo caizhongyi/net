@@ -1,0 +1,1622 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JuSNS.Common</name>
+    </assembly>
+    <members>
+        <member name="F:JuSNS.Common.UploadPic.availExtension">
+            <summary>
+            类型
+            </summary>
+        </member>
+        <member name="F:JuSNS.Common.UploadPic.size">
+            <summary>
+            大小
+            </summary>
+        </member>
+        <member name="F:JuSNS.Common.UploadPic.hfc">
+            <summary>
+            上传的文件
+            </summary>
+        </member>
+        <member name="M:JuSNS.Common.UploadPic.Start">
+            <summary>
+            开始上传
+            </summary>
+        </member>
+        <member name="M:JuSNS.Common.UploadPic.makeRectImage(System.Byte[],System.Byte[]@,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            生成剪切图
+            </summary>
+            <param name="data">输入图数据</param>
+            <param name="bit">生成的文件</param>
+            <param name="x">坐标X</param>
+            <param name="y">坐标Y</param>
+            <param name="w">宽</param>
+            <param name="h">高</param>
+        </member>
+        <member name="M:JuSNS.Common.UploadPic.AllowExt(System.String)">
+            <summary>
+            允许的文件类型
+            </summary>
+            <param name="ext">文件类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Common.UploadPic.GetExt(System.String)">
+            <summary>
+            取得文件扩展名
+            </summary>
+            <param name="filename">文件名</param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Common.UploadPic.GetMainName(System.String)">
+            <summary>
+            取得主文件名
+            </summary>
+            <param name="filename"></param>
+            <returns></returns>
+        </member>
+        <member name="P:JuSNS.Common.UploadPic.RootDir">
+            <summary>
+            根目录
+            </summary>
+        </member>
+        <member name="P:JuSNS.Common.UploadPic.OutFileName">
+            <summary>
+            输出的文件名
+            </summary>
+        </member>
+        <member name="P:JuSNS.Common.UploadPic.SuccessNum">
+            <summary>
+            上传成功数量
+            </summary>
+        </member>
+        <member name="P:JuSNS.Common.UploadPic.server">
+            <summary>
+            要上传到的服务器
+            </summary>
+        </member>
+        <member name="P:JuSNS.Common.UploadPic.Width">
+            <summary>
+            输出图片的宽度
+            </summary>
+        </member>
+        <member name="P:JuSNS.Common.UploadPic.Height">
+            <summary>
+            输出图片的高度
+            </summary>
+        </member>
+        <member name="P:JuSNS.Common.UploadPic.LastHeight">
+            <summary>
+            输入最后一个图片的高
+            </summary>
+        </member>
+        <member name="P:JuSNS.Common.UploadPic.LastWidth">
+            <summary>
+            输出最后一个图片的宽
+            </summary>
+        </member>
+        <member name="P:JuSNS.Common.UploadPic.FileName">
+            <summary>
+            输出的文件名
+            </summary>
+        </member>
+        <member name="P:JuSNS.Common.UploadPic.ContentLength">
+            <summary>
+            图片内存大小
+            </summary>
+        </member>
+        <member name="P:JuSNS.Common.UploadPic.LastContentLength">
+            <summary>
+            最后一个图片内存大小
+            </summary>
+        </member>
+        <member name="P:JuSNS.Common.UploadPic.errmsg">
+            <summary>
+            最后一个错误信息
+            </summary>
+        </member>
+        <member name="M:JuSNS.Common.UploadHead.Start">
+            <summary>
+            
+            </summary>
+            <returns>0成功，1图片太小，2图片太大，3图片格式不正确，</returns>
+        </member>
+        <member name="M:JuSNS.Common.Share.lib.GetShareType(JuSNS.Model.EnumShareType)">
+            <summary>
+            获得列表/此处修改了，需要修改JuSNS.Model 下的EnumeRates.cs的EnumShareType函数
+            </summary>
+        </member>
+        <member name="P:JuSNS.Common.Share.lib.ExName">
+            <summary>
+            根目录
+            </summary>
+        </member>
+        <member name="T:JuSNS.Common.EMail">
+            <summary>
+            电子邮件
+            </summary>
+        </member>
+        <member name="M:JuSNS.Common.EMail.Send">
+            <summary>
+            发送
+            </summary>
+        </member>
+        <member name="M:JuSNS.Common.EMail.GroupSend(System.String[])">
+            <summary>
+            群发邮件
+            </summary>
+        </member>
+        <member name="M:JuSNS.Common.EMail.CreateInstance">
+            <summary>
+            创建一个邮件实体
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:JuSNS.Common.EMail.Subject">
+            <summary>
+            邮件标题
+            </summary>
+        </member>
+        <member name="P:JuSNS.Common.EMail.Body">
+            <summary>
+            邮件内容
+            </summary>
+        </member>
+        <member name="P:JuSNS.Common.EMail.To">
+            <summary>
+            收件地址
+            </summary>
+        </member>
+        <member name="P:JuSNS.Common.EMail.From">
+            <summary>
+            发件人,默认为系统邮箱
+            </summary>
+        </member>
+        <member name="T:JuSNS.Common.SmtpMail">
+            <summary>
+            SMTP邮件
+            </summary>
+        </member>
+        <member name="M:JuSNS.Common.SmtpMail.Send">
+            <summary>
+            发送邮件
+            </summary>
+        </member>
+        <member name="M:JuSNS.Common.SmtpMail.GroupSend(System.String[])">
+            <summary>
+            群发
+            </summary>
+            <param name="groupTo"></param>
+        </member>
+        <member name="M:JuSNS.Common.SmtpMail.PreSend">
+            <summary>
+            准备MailMessage类
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Common.SmtpMail.SendOut(System.Net.Mail.MailMessage)">
+            <summary>
+            发送
+            </summary>
+            <param name="mailMessage"></param>
+        </member>
+        <member name="T:JuSNS.Common.WebService.UploadService">
+            <remarks/>
+        </member>
+        <member name="M:JuSNS.Common.WebService.UploadService.#ctor">
+            <remarks/>
+        </member>
+        <member name="M:JuSNS.Common.WebService.UploadService.SaveFile(System.Byte[],System.String)">
+            <remarks/>
+        </member>
+        <member name="M:JuSNS.Common.WebService.UploadService.SaveFileAsync(System.Byte[],System.String)">
+            <remarks/>
+        </member>
+        <member name="M:JuSNS.Common.WebService.UploadService.SaveFileAsync(System.Byte[],System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:JuSNS.Common.WebService.UploadService.DeleteFile(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:JuSNS.Common.WebService.UploadService.DeleteFileAsync(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:JuSNS.Common.WebService.UploadService.DeleteFileAsync(System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:JuSNS.Common.WebService.UploadService.CancelAsync(System.Object)">
+            <remarks/>
+        </member>
+        <member name="E:JuSNS.Common.WebService.UploadService.SaveFileCompleted">
+            <remarks/>
+        </member>
+        <member name="E:JuSNS.Common.WebService.UploadService.DeleteFileCompleted">
+            <remarks/>
+        </member>
+        <member name="T:JuSNS.Common.WebService.MySoapHeader">
+            <remarks/>
+        </member>
+        <member name="P:JuSNS.Common.WebService.MySoapHeader.Password">
+            <remarks/>
+        </member>
+        <member name="P:JuSNS.Common.WebService.MySoapHeader.AnyAttr">
+            <remarks/>
+        </member>
+        <member name="T:JuSNS.Common.WebService.SaveFileCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:JuSNS.Common.WebService.DeleteFileCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:JuSNS.Common.ReDrawImg">
+            <summary>
+            水印图片处理类
+            </summary>
+        </member>
+        <member name="M:JuSNS.Common.ReDrawImg.DealImage(System.String,System.String,System.String,System.String)">
+            <summary>
+            生成水印图片
+            </summary>
+            <param name="imagePath">被处理的图片物理路径</param>
+            <param name="imageWaterPath">水印图片物理路径</param>
+            <param name="fontString">水印文字</param>
+            <param name="targetImagePath">要生成的图片物理路径，扩展名为jpg</param>
+        </member>
+        <member name="M:JuSNS.Common.ReDrawImg.DealImage(System.Drawing.Image,System.String,System.String,JuSNS.Common.DealType)">
+            <summary>
+            生成水印图片 返回 image类型
+            </summary>
+            <param name="imagePath"></param>
+            <param name="imageWaterPath"></param>
+            <param name="fontString"></param>
+        </member>
+        <member name="M:JuSNS.Common.ReDrawImg.WriteFont">
+            <summary>
+            写字方法
+            </summary>
+        </member>
+        <member name="M:JuSNS.Common.ReDrawImg.WriteFontAndImg">
+            <summary>
+            写字和画图
+            </summary>
+        </member>
+        <member name="M:JuSNS.Common.ReDrawImg.WriteImgTitle">
+            <summary>
+            标题图片
+            </summary>
+        </member>
+        <member name="M:JuSNS.Common.ReDrawImg.WriteImgCopyright">
+            <summary>
+            版权图片
+            </summary>
+        </member>
+        <member name="M:JuSNS.Common.Rand.Number(System.Int32)">
+            <summary>
+            生成随机数字
+            </summary>
+            <param name="length">生成长度</param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Common.Rand.Number(System.Int32,System.Boolean)">
+            <summary>
+            生成随机数字
+            </summary>
+            <param name="Length">生成长度</param>
+            <param name="Sleep">是否要在生成前将当前线程阻止以避免重复</param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Common.Rand.Str(System.Int32)">
+            <summary>
+            生成随机字母与数字
+            </summary>
+            <param name="IntStr">生成长度</param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Common.Rand.Str(System.Int32,System.Boolean)">
+            <summary>
+            生成随机字母与数字
+            </summary>
+            <param name="Length">生成长度</param>
+            <param name="Sleep">是否要在生成前将当前线程阻止以避免重复</param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Common.Rand.Str_char(System.Int32)">
+            <summary>
+            生成随机纯字母随机数
+            </summary>
+            <param name="IntStr">生成长度</param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Common.Rand.Str_char(System.Int32,System.Boolean)">
+            <summary>
+            生成随机纯字母随机数
+            </summary>
+            <param name="Length">生成长度</param>
+            <param name="Sleep">是否要在生成前将当前线程阻止以避免重复</param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Common.Rand.Str_Color(System.Boolean)">
+            <summary>
+            得到随机颜色代码
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Common.Rand.Bytes(System.Int32)">
+            <summary>
+            生成随机数字
+            </summary>
+            <param name="length">生成长度</param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Common.Rand.Bytes(System.Int32,System.Boolean)">
+            <summary>
+            生成随机数字
+            </summary>
+            <param name="Length">生成长度</param>
+            <param name="Sleep">是否要在生成前将当前线程阻止以避免重复</param>
+            <returns></returns>
+        </member>
+        <member name="T:JuSNS.Common.EnumDescriptionAttribute">
+            <summary>
+            EnumDescriptionAttribute
+            An Chinese version introduction to the usage of this class: 
+            http://www.cnblogs.com/teddyma/archive/2007/05/26/759842.html
+            </summary>
+        </member>
+        <member name="M:JuSNS.Common.EnumDescriptionAttribute.GetDescription(System.Object)">
+            <summary>
+            Get desc of specific enum value
+            </summary>
+            <param name="enumValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Common.EnumDescriptionAttribute.GetDescription(System.Type,System.Int32)">
+            <summary>
+            Get desc of specific enum value of specific enum type
+            </summary>
+            <param name="enumType"></param>
+            <param name="enumIntValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Common.EnumDescriptionAttribute.GetDescriptions(System.Type)">
+            <summary>
+            Get descs of specific enum type
+            </summary>
+            <param name="enumType"></param>
+            <returns></returns>
+        </member>
+        <member name="P:JuSNS.Common.EnumDescriptionAttribute.DefaultDescription">
+            <summary>
+            The default desc
+            </summary>
+        </member>
+        <member name="M:JuSNS.Common.Upload.UploadStart">
+            <summary>
+            上传文件
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:JuSNS.Common.Upload.PostedFile">
+            <summary>
+            上传组件
+            </summary>
+        </member>
+        <member name="P:JuSNS.Common.Upload.SavePath">
+            <summary>
+            保存路径
+            </summary>
+        </member>
+        <member name="P:JuSNS.Common.Upload.FileLength">
+            <summary>
+            文件大小
+            </summary>
+        </member>
+        <member name="P:JuSNS.Common.Upload.Extension">
+            <summary>
+            文件护展名
+            </summary>
+        </member>
+        <member name="P:JuSNS.Common.Upload.FileName">
+            <summary>
+            文件名
+            </summary>
+        </member>
+        <member name="M:JuSNS.Common.HttpModule.Init(System.Web.HttpApplication)">
+            <summary>
+            实现接口的 Init 方法
+            </summary>
+            <param name="app"></param>
+        </member>
+        <member name="M:JuSNS.Common.HttpModule.Dispose">
+            <summary>
+            实现接口的 Dispose 方法
+            </summary>
+        </member>
+        <member name="M:JuSNS.Common.HttpModule.ModuleRewriter_BeginRequest(System.Object,System.EventArgs)">
+            <summary>
+            BeginRequest响应事件
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:JuSNS.Common.HttpModule.Rewrite(System.String,System.Web.HttpApplication)">
+            <summary>
+            URL重写
+            </summary>
+            <param name="requestedPath"></param>
+            <param name="app"></param>
+        </member>
+        <member name="T:JuSNS.Common.SiteUrls">
+            <summary>
+            站点伪Url信息类
+            </summary>
+        </member>
+        <member name="M:JuSNS.Common.Public.LostDot(System.String)">
+            <summary>
+            去掉结尾,
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Common.Public.JSplit(System.Int32)">
+            <summary>
+            得到积分
+            </summary>
+            <param name="num"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Common.Public.GetPrivacy(System.Object)">
+            <summary>
+            得到可见度
+            </summary>
+            <param name="k"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Common.Public.GetPublics(System.Object)">
+            <summary>
+            得到可见度
+            </summary>
+            <param name="k"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Common.Public.GetTempleContent(System.String)">
+            <summary>
+            读取模板
+            </summary>
+            <param name="path">模板路径</param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Common.Public.ValidateIP(System.String)">
+            <summary>
+            检查当前IP是否是受限IP
+            </summary>
+            <param name="LimitedIP">受限的IP，格式如:192.168.1.110|212.235.*.*|232.*.*.*</param>
+            <returns>返回true表示IP未受到限制</returns>
+        </member>
+        <member name="M:JuSNS.Common.Public.DelFile(System.String)">
+            <summary>
+            删除文件
+            </summary>
+            <param name="path">文件路径</param>
+        </member>
+        <member name="M:JuSNS.Common.Public.DelDir(System.String)">
+            <summary>
+            删除文件夹
+            </summary>
+            <param name="path">文件夹路径</param>
+        </member>
+        <member name="M:JuSNS.Common.Public.GetClientIP">
+            <summary>
+            取得用户客户端IP(穿过代理服务器取远程用户真实IP地址)
+            </summary>
+        </member>
+        <member name="M:JuSNS.Common.Public.GetReferrerUrl">
+            <summary>
+            取得前一个（上次提交或链接进来的）网页的URL
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Common.Public.SaveXmlConfig(System.String,System.String,System.String)">
+            <summary>
+            保存配置
+            </summary>
+            <param name="strTarget">接点名</param>
+            <param name="strValue">新值</param>
+            <param name="strSource">路径</param>
+        </member>
+        <member name="M:JuSNS.Common.Public.getTimeSpan(System.DateTime)">
+            <summary>
+            取得与当前时间的间隔(MM-dd hh:mm 刚刚更新)
+            </summary>
+        </member>
+        <member name="M:JuSNS.Common.Public.getTimeLEXYearSpan(System.DateTime)">
+            <summary>
+            取得与当前时间的间隔(yyyy年MM月dd日 刚刚更新)
+            </summary>
+        </member>
+        <member name="M:JuSNS.Common.Public.getTimeEXYearSpan(System.DateTime)">
+            <summary>
+            取得与当前时间的间隔(yy-MM-dd 刚刚更新)
+            </summary>
+        </member>
+        <member name="M:JuSNS.Common.Public.getTimeEXSpan(System.DateTime)">
+            <summary>
+            取得与当前时间的间隔(MM-dd 刚刚更新)
+            </summary>
+        </member>
+        <member name="M:JuSNS.Common.Public.getTimeEXPINSpan(System.DateTime)">
+            <summary>
+            取得与当前时间的间隔(MM月dd日 刚刚更新)
+            </summary>
+        </member>
+        <member name="M:JuSNS.Common.Public.getTimeEXTSpan(System.DateTime)">
+            <summary>
+            取得与当前时间的间隔(MM月dd日 刚刚)
+            </summary>
+        </member>
+        <member name="M:JuSNS.Common.Public.getDaySpan(System.DateTime)">
+            <summary>
+            获取时间相隔天数
+            </summary>
+            <param name="time1">时间1</param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Common.Public.GetTextFileContent(System.String)">
+            <summary>
+            读取并返回一个文本文件的内容
+            </summary>
+            <param name="filePath">文件的物理路径</param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Common.Public.ReplaceSpace(System.String)">
+            <summary>
+            替换文本中的空格和换行
+            </summary>
+        </member>
+        <member name="M:JuSNS.Common.Public.CheckKey(System.String,System.Boolean)">
+            <summary>
+            过滤关键字，查看是否是禁用姓名
+            </summary>
+            <param name="key">关键字</param>
+            <param name="flag">true：关键字 false：姓名</param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Common.Public.GetFileEXT(System.String)">
+            <summary>
+            取得文件扩展名
+            </summary>
+            <param name="filename">文件名</param>
+            <returns>扩展名</returns>
+        </member>
+        <member name="M:JuSNS.Common.Public.GetXMLValue(System.String)">
+            <summary>
+            读取基本配置 jusite.config
+            </summary>
+            <param name="target"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Common.Public.GetXMLBaseValue(System.String)">
+            <summary>
+            读取基本配置 base.config
+            </summary>
+            <param name="target"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Common.Public.GetXMLPageValue(System.String)">
+            <summary>
+            读取基本配置 page.config
+            </summary>
+            <param name="target"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Common.Public.GetXMLGroupValue(System.String)">
+            <summary>
+            读取基本配置 group.config
+            </summary>
+            <param name="target"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Common.Public.GetXMLAlbumValue(System.String)">
+            <summary>
+            读取基本配置 album.config
+            </summary>
+            <param name="target"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Common.Public.GetXMLAskValue(System.String)">
+            <summary>
+            读取基本配置 ask.config
+            </summary>
+            <param name="target"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Common.Public.GetXMLAtiveValue(System.String)">
+            <summary>
+            读取基本配置 ative.config
+            </summary>
+            <param name="target"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Common.Public.GetXMLShopValue(System.String)">
+            <summary>
+            读取基本配置 shop.config
+            </summary>
+            <param name="target"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Common.Public.GetXMLVoteValue(System.String)">
+            <summary>
+            读取基本配置 vote.config
+            </summary>
+            <param name="target"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Common.Public.GetXMLShareValue(System.String)">
+            <summary>
+            读取基本配置 share.config
+            </summary>
+            <param name="target"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Common.Public.GetXMLGiftValue(System.String)">
+            <summary>
+            读取基本配置 gift.config
+            </summary>
+            <param name="target"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Common.Public.GetXMLPokeValue(System.String)">
+            <summary>
+            读取基本配置 poke.config
+            </summary>
+            <param name="target"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Common.Public.GetXMLValue(System.String,System.String)">
+            <summary>
+            读取配置文件
+            </summary>
+            <param name="Target">节点</param>
+            <param name="Path">配置文件的路径</param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Common.Public.GetXMLUserValue(System.Object,System.String)">
+            <summary>
+            得到用户的配置信息
+            </summary>
+            <param name="UserID">用户ID</param>
+            <param name="Target">节点</param>
+            <returns>返回获得的结果</returns>
+        </member>
+        <member name="M:JuSNS.Common.Public.GetUserID">
+            <summary>
+            取得用户ID,未验证是否合法
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Common.Public.setXmlInnerText(System.String,System.String,System.String)">
+            <summary>
+            设置节点值
+            </summary>
+            <param name="filepath"></param>
+            <param name="xpath"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:JuSNS.Common.Public.CreatUserConfig(System.String)">
+            <summary>
+            创建xml文件
+            </summary>
+            <param name="path"></param>
+        </member>
+        <member name="M:JuSNS.Common.Public.GetNewFileName">
+            <summary>
+            新文件名
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Common.Public.UpdateIcon(System.Web.HttpPostedFile,System.String,System.String@)">
+            <summary>
+            上传文件
+            </summary>
+            <param name="pf">文件</param>
+            <param name="avalExt">允许的扩展名</param>
+            <param name="filename">文件名</param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Common.Public.GetSmallHeadPic(System.Object,System.Int32)">
+            <summary>
+            转换头像路径为缩略路径
+            </summary>
+            <param name="orgPicPath">原始路径</param>
+            <param name="size">缩小级别</param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Common.Public.GetOrgHeadPic(System.String)">
+            <summary>
+            取得原始头像路径
+            </summary>
+            <param name="filename">文件名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Common.Public.GetOrgPic(System.String)">
+            <summary>
+            取得原始照片路径
+            </summary>
+            <param name="filename">文件名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Common.Public.GetSmallPic(System.String,System.Int32)">
+            <summary>
+            转换照片路径为缩略图路径
+            </summary>
+            <param name="orgPicPath">原始路径</param>
+            <param name="name">缩小级别</param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Common.Public.GetGroupHead(System.Object,System.Int32)">
+            <summary>
+            取得群组头像
+            </summary>
+            <param name="filename">文件名</param>
+            <param name="n">大小级别</param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Common.Public.GetFile(System.Web.HttpPostedFile,System.String,System.String)">
+            <summary>
+            得到本地文件，并上传
+            </summary>
+            <param name="hpf"></param>
+            <param name="allowExt"></param>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Common.Public.GetFile(System.Web.HttpPostedFile,System.String,System.String,System.String)">
+            <summary>
+            得到本地文件，并上传
+            </summary>
+            <param name="upload"></param>
+            <param name="allowExt"></param>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Common.Public.GetSize(System.String,System.Int32)">
+            <summary>
+            获取图片的高或宽
+            </summary>
+            <param name="path">路径</param>
+            <param name="Flag">0宽，1高度</param>
+            <returns>返回尺寸</returns>
+        </member>
+        <member name="M:JuSNS.Common.Public.GetAction(System.Int32,System.String,System.String,System.String,System.String)">
+            <summary>
+            打招呼表情
+            </summary>
+        </member>
+        <member name="M:JuSNS.Common.Public.GetGroupPortrait(System.Object)">
+            <summary>
+            得到转化后的社群标志图片
+            </summary>
+            <param name="filename"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Common.Public.GetMemberlevels(System.Int32)">
+            <summary>
+            得到会员等级
+            </summary>
+            <param name="number">分数</param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Common.Public.GetLevel(System.Object)">
+            <summary>
+            得到教育信息
+            </summary>
+            <param name="n"></param>
+            <returns></returns>
+        </member>
+        <member name="P:JuSNS.Common.Public.rootDir">
+            <summary>
+            根目录
+            </summary>
+        </member>
+        <member name="P:JuSNS.Common.Public.ExName">
+            <summary>
+            根目录
+            </summary>
+        </member>
+        <member name="T:System.CommonUtils">
+            <summary>
+            The CommonUtils class.
+            </summary>
+        </member>
+        <member name="M:System.CommonUtils.DefaultValue``1">
+            <summary>
+            Gets the default value of a specified Type.
+            </summary>
+            <returns>The default value.</returns>
+        </member>
+        <member name="M:System.CommonUtils.DefaultValue(System.Type)">
+            <summary>
+            Gets the default value of a specified Type.
+            </summary>
+            <param name="type">The type.</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.CommonUtils.GetType(System.String)">
+            <summary>
+            Gets a type in all loaded assemblies of current app domain.
+            </summary>
+            <param name="fullName">The full name.</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.CommonUtils.GetOriginalTypeOfNullableType(System.Type)">
+            <summary>
+            GetOriginalTypeOfNullableType
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.CommonUtils.IsArrayEquals(System.Collections.IEnumerable,System.Collections.IEnumerable)">
+            <summary>
+            Check equal of two arrays
+            </summary>
+            <param name="leftArr">left array</param>
+            <param name="rightArr">right array</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.CommonUtils.IsArrayEquals(System.Collections.IEnumerator,System.Collections.IEnumerator)">
+            <summary>
+            Check equal of two arrays
+            </summary>
+            <param name="enLeft">left array</param>
+            <param name="enRight">right array</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.CommonUtils.ToObjectList``1(System.Collections.IEnumerator)">
+            <summary>
+            Convert enumerator to List
+            </summary>
+            <param name="en">the enumerator</param>
+            <returns></returns>
+        </member>
+        <member name="T:JuSNS.Common.Check">
+            <summary>
+            Design By Contract Checks.
+            
+            Each method generates an exception or
+            a trace assertion statement if the contract is broken.
+            </summary>
+            <remarks>
+            This example shows how to call the Require method.
+            Assume DBC_CHECK_PRECONDITION is defined.
+            <code>
+            public void Test(int x)
+            {
+            	try
+            	{
+            		Check.Require(x > 1, "x must be > 1");
+            	}
+            	catch (System.Exception ex)
+            	{
+            		Console.WriteLine(ex.ToString());
+            	}
+            }
+            </code>
+            </remarks>
+            
+        </member>
+        <member name="F:JuSNS.Common.Check.NotNull">
+            <summary>
+            NotNullCheckStrategy singleton
+            </summary>
+        </member>
+        <member name="F:JuSNS.Common.Check.NotNullOrEmpty">
+            <summary>
+            NotNullOrEmptyStrategy singleton
+            </summary>
+        </member>
+        <member name="M:JuSNS.Common.Check.IsAssignableTo``1">
+            <summary>
+            Create IsAssignableToStrategy inatance
+            </summary>
+            <typeparam name="TargetType">The type</typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Common.Check.GreaterThan``1(``0)">
+            <summary>
+            &gt;
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="compareValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Common.Check.LessThan``1(``0)">
+            <summary>
+            &lt;
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="compareValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Common.Check.GreaterThanOrEqual``1(``0)">
+            <summary>
+            &gt;=
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="compareValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Common.Check.LessThanOrEqual``1(``0)">
+            <summary>
+            &lt;=
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="compareValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Common.Check.Require(System.Boolean,System.String)">
+            <summary>
+            Precondition check.
+            </summary>
+        </member>
+        <member name="M:JuSNS.Common.Check.Require(System.Boolean,System.String,System.Exception)">
+            <summary>
+            Precondition check.
+            </summary>
+        </member>
+        <member name="M:JuSNS.Common.Check.Require(System.Boolean)">
+            <summary>
+            Precondition check.
+            </summary>
+        </member>
+        <member name="M:JuSNS.Common.Check.Require(System.Object,System.String,JuSNS.Common.Check.ICheckStrategy[])">
+            <summary>
+            Precondition check.
+            </summary>
+        </member>
+        <member name="M:JuSNS.Common.Check.Ensure(System.Boolean,System.String)">
+            <summary>
+            Postcondition check.
+            </summary>
+        </member>
+        <member name="M:JuSNS.Common.Check.Ensure(System.Boolean,System.String,System.Exception)">
+            <summary>
+            Postcondition check.
+            </summary>
+        </member>
+        <member name="M:JuSNS.Common.Check.Ensure(System.Boolean)">
+            <summary>
+            Postcondition check.
+            </summary>
+        </member>
+        <member name="M:JuSNS.Common.Check.Ensure(System.Object,System.String,JuSNS.Common.Check.ICheckStrategy[])">
+            <summary>
+            Postcondition check.
+            </summary>
+        </member>
+        <member name="M:JuSNS.Common.Check.Invariant(System.Boolean,System.String)">
+            <summary>
+            Invariant check.
+            </summary>
+        </member>
+        <member name="M:JuSNS.Common.Check.Invariant(System.Boolean,System.String,System.Exception)">
+            <summary>
+            Invariant check.
+            </summary>
+        </member>
+        <member name="M:JuSNS.Common.Check.Invariant(System.Boolean)">
+            <summary>
+            Invariant check.
+            </summary>
+        </member>
+        <member name="M:JuSNS.Common.Check.Invariant(System.Object,System.String,JuSNS.Common.Check.ICheckStrategy[])">
+            <summary>
+            Invariant check.
+            </summary>
+        </member>
+        <member name="M:JuSNS.Common.Check.Assert(System.Boolean,System.String)">
+            <summary>
+            Assertion check.
+            </summary>
+        </member>
+        <member name="M:JuSNS.Common.Check.Assert(System.Boolean,System.String,System.Exception)">
+            <summary>
+            Assertion check.
+            </summary>
+        </member>
+        <member name="M:JuSNS.Common.Check.Assert(System.Boolean)">
+            <summary>
+            Assertion check.
+            </summary>
+        </member>
+        <member name="M:JuSNS.Common.Check.Assert(System.Object,System.String,JuSNS.Common.Check.ICheckStrategy[])">
+            <summary>
+            Assertion check.
+            </summary>
+        </member>
+        <member name="P:JuSNS.Common.Check.UseExceptions">
+            <summary>
+            Is exception handling being used?
+            </summary>
+        </member>
+        <member name="T:JuSNS.Common.Check.ICheckStrategy">
+            <summary>
+            ICheckStrategy
+            </summary>
+        </member>
+        <member name="M:JuSNS.Common.Check.ICheckStrategy.Pass(System.Object)">
+            <summary>
+            Chech the obj with the strategy
+            </summary>
+            <param name="obj">the obj</param>
+            <returns>true for pass, or return false</returns>
+        </member>
+        <member name="M:JuSNS.Common.Check.ICheckStrategy.GetFailingMessage(System.String)">
+            <summary>
+            Get the message when check failed
+            </summary>
+            <param name="objName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:JuSNS.Common.DesignByContractException">
+            <summary>
+            Exception raised when a contract is broken.
+            Catch this exception type if you wish to differentiate between 
+            any DesignByContract exception and other runtime exceptions.
+             
+            </summary>
+        </member>
+        <member name="M:JuSNS.Common.DesignByContractException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:JuSNS.Common.DesignByContractException"/> class.
+            </summary>
+        </member>
+        <member name="M:JuSNS.Common.DesignByContractException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:JuSNS.Common.DesignByContractException"/> class.
+            </summary>
+            <param name="message">The message.</param>
+        </member>
+        <member name="M:JuSNS.Common.DesignByContractException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:JuSNS.Common.DesignByContractException"/> class.
+            </summary>
+            <param name="message">The message.</param>
+            <param name="inner">The inner.</param>
+        </member>
+        <member name="T:JuSNS.Common.PreconditionException">
+            <summary>
+            Exception raised when a precondition fails.
+            </summary>
+        </member>
+        <member name="M:JuSNS.Common.PreconditionException.#ctor">
+            <summary>
+            Precondition Exception.
+            </summary>
+        </member>
+        <member name="M:JuSNS.Common.PreconditionException.#ctor(System.String)">
+            <summary>
+            Precondition Exception.
+            </summary>
+        </member>
+        <member name="M:JuSNS.Common.PreconditionException.#ctor(System.String,System.Exception)">
+            <summary>
+            Precondition Exception.
+            </summary>
+        </member>
+        <member name="T:JuSNS.Common.PostconditionException">
+            <summary>
+            Exception raised when a postcondition fails.
+            </summary>
+        </member>
+        <member name="M:JuSNS.Common.PostconditionException.#ctor">
+            <summary>
+            Postcondition Exception.
+            </summary>
+        </member>
+        <member name="M:JuSNS.Common.PostconditionException.#ctor(System.String)">
+            <summary>
+            Postcondition Exception.
+            </summary>
+        </member>
+        <member name="M:JuSNS.Common.PostconditionException.#ctor(System.String,System.Exception)">
+            <summary>
+            Postcondition Exception.
+            </summary>
+        </member>
+        <member name="T:JuSNS.Common.InvariantException">
+            <summary>
+            Exception raised when an invariant fails.
+            </summary>
+        </member>
+        <member name="M:JuSNS.Common.InvariantException.#ctor">
+            <summary>
+            Invariant Exception.
+            </summary>
+        </member>
+        <member name="M:JuSNS.Common.InvariantException.#ctor(System.String)">
+            <summary>
+            Invariant Exception.
+            </summary>
+        </member>
+        <member name="M:JuSNS.Common.InvariantException.#ctor(System.String,System.Exception)">
+            <summary>
+            Invariant Exception.
+            </summary>
+        </member>
+        <member name="T:JuSNS.Common.AssertionException">
+            <summary>
+            Exception raised when an assertion fails.
+            </summary>
+        </member>
+        <member name="M:JuSNS.Common.AssertionException.#ctor">
+            <summary>
+            Assertion Exception.
+            </summary>
+        </member>
+        <member name="M:JuSNS.Common.AssertionException.#ctor(System.String)">
+            <summary>
+            Assertion Exception.
+            </summary>
+        </member>
+        <member name="M:JuSNS.Common.AssertionException.#ctor(System.String,System.Exception)">
+            <summary>
+            Assertion Exception.
+            </summary>
+        </member>
+        <member name="T:JuSNS.Common.DES">
+            <summary> 
+            DES 加解密
+            </summary> 
+        </member>
+        <member name="M:JuSNS.Common.DES.Encrypt(System.String,System.Byte[],System.Byte[])">
+            <summary>
+            DES加密
+            </summary>
+            <param name="input">待加密的字符串</param>
+            <param name="key">加密密钥</param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Common.DES.Decrypt(System.String,System.Byte[],System.Byte[])">
+            <summary>
+            DES解密
+            </summary>
+            <param name="input">待解密的字符串</param>
+            <param name="key">解密密钥,要求为8位,和加密密钥相同</param>
+            <returns>解密成功返回解密后的字符串,失败返源串</returns>
+        </member>
+        <member name="T:JuSNS.Common.RSA">
+            <summary>
+            RSA加解密算法
+            </summary>
+        </member>
+        <member name="M:JuSNS.Common.RSA.Encrypt(System.String,System.String)">
+            <summary>
+            RSA加密函数
+            </summary>
+            <param name="xmlPublicKey">说明KEY必须是XML的行式,返回的是字符串</param>
+            <param name="EncryptString"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Common.RSA.Decrypt(System.String,System.String)">
+            <summary>
+            RSA解密函数
+            </summary>
+            <param name="xmlPrivateKey"></param>
+            <param name="DecryptString"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Common.RSA.RSAKey(System.String@,System.String@)">
+            <summary>
+            产生RSA的密钥
+            </summary>
+            <param name="xmlKeys">私钥</param>
+            <param name="xmlPublicKey">公钥</param>
+        </member>
+        <member name="T:JuSNS.Common.ServerInfo">
+            <summary>
+            WEB信息
+            </summary>
+        </member>
+        <member name="M:JuSNS.Common.ServerInfo.GetRootURI">
+            <summary>
+            取得网站的根目录的URL
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Common.ServerInfo.GetRootURI(System.Web.HttpRequest)">
+            <summary>
+            取得网站的根目录的URL
+            </summary>
+            <param name="Req"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Common.ServerInfo.GetRootPath">
+            <summary>
+            取得网站根目录的物理路径
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:JuSNS.Common.DataCache">
+            <summary>
+            缓存相关的操作类
+            </summary>
+        </member>
+        <member name="M:JuSNS.Common.DataCache.GetCache(System.String)">
+            <summary>
+            获取当前应用程序指定CacheKey的Cache值
+            </summary>
+            <param name="CacheKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Common.DataCache.SetCache(System.String,System.Object)">
+            <summary>
+            设置当前应用程序指定CacheKey的Cache值
+            </summary>
+            <param name="CacheKey"></param>
+            <param name="objObject"></param>
+        </member>
+        <member name="T:JuSNS.Common.Thumbnail">
+            <summary>
+            生成缩略图类
+            </summary>
+        </member>
+        <member name="M:JuSNS.Common.Thumbnail.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:JuSNS.Common.Thumbnail.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="orgpath">图片原始路径</param>
+        </member>
+        <member name="M:JuSNS.Common.Thumbnail.#ctor(System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="orgpath">原始路径</param>
+            <param name="newpath">新路径</param>
+            <param name="orgwidth">原始宽度</param>
+            <param name="newwidth">新宽度</param>
+            <param name="orgheight">原始高度</param>
+            <param name="newheight">新高度</param>
+            <param name="priority">宽度优先或高度优先</param>
+        </member>
+        <member name="M:JuSNS.Common.Thumbnail.Make">
+            <summary>
+            产生缩略图片
+            </summary>
+        </member>
+        <member name="M:JuSNS.Common.Thumbnail.CreateThumbnail(System.String,System.Double,System.Double)">
+            <summary>
+            建立缩略图
+            </summary>
+            <param name="sFileDstPath">目标路径</param>
+            <param name="LimitW">限制宽</param>
+            <param name="LimitH">限制高</param>
+        </member>
+        <member name="M:JuSNS.Common.Thumbnail.CreateThumbnail(System.Byte[],System.Byte[]@,System.Double,System.Double)">
+            <summary>
+            生成缩略图纯数据
+            </summary>
+            <param name="data1">数据1</param>
+            <param name="data2">数据2</param>
+            <param name="LimitW">限宽</param>
+            <param name="LimitH">限高</param>
+        </member>
+        <member name="M:JuSNS.Common.Thumbnail.MakeAllThumbnail(System.String,System.String)">
+            <summary>
+            生成所有缩略图
+            </summary>
+            <param name="path">原始图片路径</param>
+        </member>
+        <member name="M:JuSNS.Common.Thumbnail.MakeAllThumbnail(System.String,System.String,System.Int32)">
+            <summary>
+            生成所有缩略图
+            </summary>
+            <param name="path">原始图片路径</param>
+            <param name="filename">文件名</param>
+            <param name="_type">0为头像， 1为照片， 2群组头像照片</param>
+        </member>
+        <member name="M:JuSNS.Common.Thumbnail.setWH">
+            <summary>
+            根据图片路径获取图片大小并设置
+            </summary>
+        </member>
+        <member name="P:JuSNS.Common.Thumbnail.OrgPath">
+            <summary>
+            原始路径
+            </summary>
+        </member>
+        <member name="P:JuSNS.Common.Thumbnail.NewPath">
+            <summary>
+            新路径
+            </summary>
+        </member>
+        <member name="P:JuSNS.Common.Thumbnail.Width">
+            <summary>
+            要生成的缩略路宽度
+            </summary>
+        </member>
+        <member name="P:JuSNS.Common.Thumbnail.Height">
+            <summary>
+            要生成的缩略图的高度
+            </summary>
+        </member>
+        <member name="P:JuSNS.Common.Thumbnail.OrgWidth">
+            <summary>
+            原始宽度
+            </summary>
+        </member>
+        <member name="P:JuSNS.Common.Thumbnail.OrgHeight">
+            <summary>
+            原始高度
+            </summary>
+        </member>
+        <member name="P:JuSNS.Common.Thumbnail.Priority">
+            <summary>
+            宽度优先或者高路优先,1为宽度优先,0为高度优先
+            </summary>
+        </member>
+        <member name="M:JuSNS.Common.Input.HtmlEncode(System.String)">
+            <summary>
+            将字符转化为HTML编码
+            </summary>
+            <param name="Input">输入字符串</param>
+            <returns>返回编译后的字符串</returns>
+        </member>
+        <member name="M:JuSNS.Common.Input.HtmlDecode(System.String)">
+            <summary>
+            将字符HTML解码
+            </summary>
+            <param name="Input">输入字符串</param>
+            <returns>返回解码后的字符串</returns>
+        </member>
+        <member name="M:JuSNS.Common.Input.URLEncode(System.String)">
+            <summary>
+            URL地址编码
+            </summary>
+            <param name="Input">输入字符串</param>
+            <returns>返编码后的字符串</returns>
+        </member>
+        <member name="M:JuSNS.Common.Input.URLDecode(System.String)">
+            <summary>
+            URL地址解码
+            </summary>
+            <param name="Input">输入字符串</param>
+            <returns>返回解码后的字符串</returns>
+        </member>
+        <member name="M:JuSNS.Common.Input.IsInteger(System.Object)">
+            <summary>
+            检测是否整数型数据
+            </summary>
+            <param name="Input">输入字串符（object）</param>
+            <returns>返回true或false</returns>
+        </member>
+        <member name="M:JuSNS.Common.Input.IsInteger(System.Object,System.Boolean)">
+            <summary>
+            是否全是正整数
+            </summary>
+            <param name="Input">输入字符串（object类）</param>
+            <param name="Plus">true表示是否正整数</param>
+            <returns>返回true或false</returns>
+        </member>
+        <member name="M:JuSNS.Common.Input.IsDate(System.String)">
+            <summary>
+            判断输入是否为日期类型
+            </summary>
+            <param name="s">待检查数据</param>
+            <returns>返回true或false</returns>
+        </member>
+        <member name="M:JuSNS.Common.Input.isEmail(System.String)">
+            <summary>
+            判断是否是电子邮件
+            </summary>
+            <param name="strIn">输入字符串</param>
+            <returns>返回true或false</returns>
+        </member>
+        <member name="M:JuSNS.Common.Input.isMobile(System.String)">
+            <summary>
+            判断是否是国内手机号码,前面不加0
+            </summary>
+            <param name="strIn">输入字符串</param>
+            <returns>返回true或false</returns>
+        </member>
+        <member name="M:JuSNS.Common.Input.LostHTML(System.String)">
+            <summary>
+            过滤字符串中的html代码
+            </summary>
+            <param name="Str">传入字符串</param>
+            <returns>过滤后的字符串</returns>
+        </member>
+        <member name="M:JuSNS.Common.Input.GetSubString(System.String,System.Int32)">
+            <summary>
+            截取字符串函数
+            </summary>
+        </member>
+        <member name="M:JuSNS.Common.Input.GetSubString(System.String,System.Int32,System.Int32@)">
+            <summary>
+            截取字符串函数
+            </summary>
+            <param name="Str">所要截取的字符串</param>
+            <param name="Num">截取字符串的长度</param>
+            <param name="Len">返回实际长度</param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Common.Input.GetSubString(System.String,System.Int32,System.String)">
+            <summary>
+            截取字符串函数
+            </summary>
+            <param name="Str">所要截取的字符串</param>
+            <param name="Num">截取字符串的长度</param>
+            <param name="Num">截取字符串后省略部分的字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Common.Input.Htmls(System.String)">
+            <summary>
+            过滤特殊字符
+            </summary>
+        </member>
+        <member name="M:JuSNS.Common.Input.ToTxt(System.String)">
+            <summary>
+            字符串字符处理
+            </summary>
+        </member>
+        <member name="M:JuSNS.Common.Input.ToshowTxt(System.String)">
+            <summary>
+            字符串字符处理
+            </summary>
+        </member>
+        <member name="M:JuSNS.Common.Input.ForTXT(System.String)">
+            <summary>
+            把字符转化为文本格式
+            </summary>
+            <param name="Input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Common.Input.ToHtml(System.String)">
+            <summary>
+            字符串字符处理
+            </summary>
+        </member>
+        <member name="M:JuSNS.Common.Input.MD5(System.String,System.Boolean)">
+            <summary>
+            MD5加密字符串处理
+            </summary>
+            <param name="Half">加密是16位还是32位；如果为true为16位</param>
+        </member>
+        <member name="M:JuSNS.Common.Input.FilterHTML(System.Object)">
+            <summary>
+            过滤HTML语法
+            </summary>
+        </member>
+        <member name="M:JuSNS.Common.Input.loseScript(System.String)">
+            <summary>
+            去除script
+            </summary>
+        </member>
+        <member name="M:JuSNS.Common.Input.loseIframe(System.String)">
+            <summary>
+            去除iframe
+            </summary>
+            <param name="html"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Common.Input.loseExceptImg(System.String)">
+            <summary>
+            去除除IMG以外的HTML
+            </summary>
+            <param name="html"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Common.Input.splitImgAndText(System.String,System.String@,System.String@)">
+            <summary>
+            把图文分解成图，文
+            </summary>
+            <param name="html">输入HTML</param>
+            <param name="img">图</param>
+            <param name="text">文</param>
+        </member>
+        <member name="M:JuSNS.Common.Input.FixCommaStr(System.String)">
+            <summary>
+            去除多于的逗号
+            </summary>
+        </member>
+        <member name="M:JuSNS.Common.Input.Filter(System.String)">
+            <summary>
+            过滤字符
+            </summary>
+        </member>
+        <member name="M:JuSNS.Common.Input.ReplaceSmaile(System.Object)">
+            <summary>
+            替换表情
+            </summary>
+            <param name="content"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Common.Input.UploadFile(System.Web.HttpPostedFile,System.Boolean,System.String,System.String@)">
+            <summary>
+            上传文件(小图片，可以出入路径和生成缩略图)
+            </summary>
+            <param name="pf">HttpPostedFile</param>
+            <param name="makeSmall">是否生成缩略图</param>
+            <param name="path">路径</param>
+            <param name="filename">输出文件名</param>
+            <returns>错误信息</returns>
+        </member>
+        <member name="M:JuSNS.Common.Input.UploadFile(System.Web.HttpPostedFile,System.String,System.String@)">
+            <summary>
+            上传文件 
+            </summary>
+            <param name="pf">HttpPostedFile</param>
+            <param name="filename">输出文件名</param>
+            <returns>错误信息</returns>
+        </member>
+        <member name="M:JuSNS.Common.Input.GetNewFileName">
+            <summary>
+            新文件名
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Common.Input.GetFileExt(System.String)">
+            <summary>
+            取得文件扩展名
+            </summary>
+            <param name="filename">文件名</param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Common.Input.GetFileMainName(System.String)">
+            <summary>
+            取得主文件名
+            </summary>
+            <param name="filename"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Common.Input.AllowFileExt(System.String)">
+            <summary>
+            允许的文件类型
+            </summary>
+            <param name="ext">文件类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Common.Input.CreateThumbnail(System.Byte[],System.Byte[]@,System.Double,System.Double)">
+            <summary>
+            生成缩略图纯数据
+            </summary>
+            <param name="data1">数据1</param>
+            <param name="data2">数据2</param>
+            <param name="LimitW">限宽</param>
+            <param name="LimitH">限高</param>
+        </member>
+        <member name="M:JuSNS.Common.Input.CreateThumbnailByPulling(System.Byte[],System.Byte[]@,System.Double,System.Double)">
+            <summary>
+            可拉伸的图片
+            </summary>
+            <param name="data1"></param>
+            <param name="data2"></param>
+            <param name="LimitW"></param>
+            <param name="LimitH"></param>
+        </member>
+        <member name="M:JuSNS.Common.Input.ByteToImage(System.Byte[])">
+            <summary>
+            byte数组转换为image
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Common.Input.ImageToByte(System.Drawing.Image)">
+            <summary>
+            将 image 转成 byte 数组
+            </summary>
+            <param name="img"></param>
+            <returns></returns>
+        </member>
+        <member name="P:JuSNS.Common.Input.rootDir">
+            <summary>
+            根目录
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<SkinSet>
+ <SkinName>龙王府</SkinName>
+ <SkinDesigner>一生何求？</SkinDesigner>
+ <pubDate>2007-07-04</pubDate>
+ <DesignerURL>http://www.wangchuang.cn</DesignerURL>
+ <DesignerMail>chuang188@Gmailcom</DesignerMail>
+ <Flash>
+  <UseFlash>-1</UseFlash>
+  <FlashPath>Long.swf</FlashPath>
+  <FlashWidth>280</FlashWidth>
+  <FlashHeight>179</FlashHeight>
+  <FlashAlign>left</FlashAlign>
+  <FlashTop>0</FlashTop>
+  <FlashTransparent>-1</FlashTransparent>
+ </Flash>
+</SkinSet>

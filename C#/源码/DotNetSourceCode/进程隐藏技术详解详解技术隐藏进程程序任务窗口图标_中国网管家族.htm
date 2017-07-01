@@ -1,0 +1,442 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<!-- saved from url=(0049)http://www.wgjz.com/hack/safe/20070514/74477.html -->
+<HTML xmlns="http://www.w3.org/1999/xhtml"><HEAD><TITLE>进程隐藏技术详解详解技术隐藏进程程序任务窗口图标_中国网管家族</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=gb2312">
+<META content="" name=keywords>
+<META 
+content="问：如何让程序在后台运行??help!!!有什么方法或软件可以让程序在后台运行,而不会弹出窗口???(我用的是windows系统)&#13;&#10;答：问题猜解：是否在你开了很多程序，或者网页后发现有很多窗口显示，觉得很恼火呢？如果你想不会弹出窗口，那就最小化，自然不见弹出窗口了。" 
+name=description><LINK href="进程隐藏技术详解详解技术隐藏进程程序任务窗口图标_中国网管家族.files/style.css" 
+type=text/css rel=stylesheet>
+<SCRIPT language=javascript src="进程隐藏技术详解详解技术隐藏进程程序任务窗口图标_中国网管家族.files/ajax.js" 
+charset=gb2312></SCRIPT>
+
+<SCRIPT src="进程隐藏技术详解详解技术隐藏进程程序任务窗口图标_中国网管家族.files/wgjz.js" 
+type=text/javascript></SCRIPT>
+
+<META content="MSHTML 6.00.2900.5694" name=GENERATOR></HEAD>
+<BODY>
+<DIV class=container>
+<DIV class="clearfix header">
+<DIV class=topnav><A href="http://www.wgjz.com/">网站首页</A> | <A 
+href="http://bbs.wgjz.com/" target=_blank>网管论坛</A> | <A 
+href="http://my.wgjz.com/" target=_blank>网管空间</A> | <A 
+href="http://www.wgjz.com/soft/" target=_blank>网管下载</A> | <A 
+href="http://www.wgjz.com/Original/" target=_blank>原创投稿</A> </DIV>
+<DIV class=brand>
+<H1 class=site-name>wgjz.com - 中国网管家族</H1><A class=site-logo title=中国网管家族 
+href="http://www.wgjz.com/" rel=home><IMG height=60 alt="wgjz logo" 
+src="进程隐藏技术详解详解技术隐藏进程程序任务窗口图标_中国网管家族.files/wgjz.gif" width=165></A> </DIV>
+<DIV class=ad-banner>
+<SCRIPT language=javascript 
+src="进程隐藏技术详解详解技术隐藏进程程序任务窗口图标_中国网管家族.files/ad001.js"></SCRIPT>
+</DIV>
+<DIV class=ad-text>
+<SCRIPT src="进程隐藏技术详解详解技术隐藏进程程序任务窗口图标_中国网管家族.files/ad002.js" 
+type=text/javascript></SCRIPT>
+</DIV></DIV>
+<DIV class=nav>
+<DIV class=navinner>
+<UL class=navlist>
+  <LI><A id=nav_1 onmouseover="showMenu('nav_1','subnav1')" 
+  href="http://www.wgjz.com/news/" target=_blank>新闻</A> 
+  <DIV class="subnav disable" id=subnav1>
+  <P class=pointer>.</P>
+  <P><SPAN><A href="http://www.wgjz.com/news/itnews/" target=_blank>业界动态</A> | 
+  <A href="http://www.wgjz.com/news/internet/" target=_blank>互联网</A> | <A 
+  href="http://www.wgjz.com/news/renwu/" target=_blank>科技人物</A> | <A 
+  href="http://www.wgjz.com/news/wy/" target=_blank>网游资讯</A> 
+  </SPAN></P></DIV></LI>
+  <LI><A id=nav_2 onmouseover="showMenu('nav_2','subnav2')" 
+  href="http://www.wgjz.com/windows/" target=_blank>Windows</A> 
+  <DIV class="subnav disable" id=subnav2>
+  <P class=pointer>.</P>
+  <P><SPAN><A href="http://www.wgjz.com/windows/server/" target=_blank>服务器技术</A> 
+  | <A href="http://www.wgjz.com/windows/networkskill/" target=_blank>网络技巧</A> | 
+  <A href="http://www.wgjz.com/windows/systemsecurity/" target=_blank>系统安全</A> | 
+  <A href="http://www.wgjz.com/windows/systemtrouble/" target=_blank>系统故障</A> | 
+  <A href="http://www.wgjz.com/windows/systemskill/" target=_blank>系统技巧</A> | <A 
+  href="http://www.wgjz.com/windows/systemoptimize/" target=_blank>系统优化</A> | <A 
+  href="http://www.wgjz.com/windows/young/" target=_blank>新手入门</A> | <A 
+  href="http://www.wgjz.com/windows/vista/" target=_blank>Windows Vista</A> 
+  </SPAN></P></DIV></LI>
+  <LI><A id=nav_3 onmouseover="showMenu('nav_3','subnav3')" 
+  href="http://www.wgjz.com/linux/" target=_blank>Linux</A> 
+  <DIV class="subnav disable" id=subnav3>
+  <P class=pointer>.</P>
+  <P><SPAN><A href="http://www.wgjz.com/linux/young/" target=_blank>新手入门</A> | 
+  <A href="http://www.wgjz.com/linux/systemmanage/" target=_blank>系统管理</A> | <A 
+  href="http://www.wgjz.com/linux/networkmanage/" target=_blank>网络管理</A> | <A 
+  href="http://www.wgjz.com/linux/database/" target=_blank>Linux数据库</A> | <A 
+  href="http://www.wgjz.com/linux/program/" target=_blank>Linux编程</A> | <A 
+  href="http://www.wgjz.com/linux/other/" target=_blank>其它unix</A> 
+  </SPAN></P></DIV></LI>
+  <LI><A id=nav_4 onmouseover="showMenu('nav_4','subnav4')" 
+  href="http://www.wgjz.com/cisco/" target=_blank>Cisco</A> 
+  <DIV class="subnav disable" id=subnav4>
+  <P class=pointer>.</P>
+  <P><SPAN><A href="http://www.wgjz.com/cisco/solution/" target=_blank>解决方案</A> 
+  | <A href="http://www.wgjz.com/cisco/integrated/" target=_blank>综合技术</A> | <A 
+  href="http://www.wgjz.com/cisco/router/" target=_blank>路由技术</A> | <A 
+  href="http://www.wgjz.com/cisco/switch/" target=_blank>交换技术</A> | <A 
+  href="http://www.wgjz.com/cisco/security/" target=_blank>安全技术</A> 
+  </SPAN></P></DIV></LI>
+  <LI><A id=nav_5 onmouseover="showMenu('nav_5','subnav5')" 
+  href="http://www.wgjz.com/edu/" target=_blank>学院</A> 
+  <DIV class="subnav disable" id=subnav5>
+  <P class=pointer>.</P>
+  <P><SPAN><A href="http://www.wgjz.com/edu/wysj/" target=_blank>网页设计</A> | <A 
+  href="http://www.wgjz.com/edu/pmsj/" target=_blank>平面设计</A> | <A 
+  href="http://www.wgjz.com/edu/dmt/" target=_blank>多媒体</A> | <A 
+  href="http://www.wgjz.com/edu/tools/" target=_blank>办公软件</A> | <A 
+  href="http://www.wgjz.com/edu/txrj/" target=_blank>通讯软件</A> | <A 
+  href="http://www.wgjz.com/edu/jyjx/" target=_blank>教育教学</A> | <A 
+  href="http://www.wgjz.com/edu/wscl/" target=_blank>网上冲浪</A> | <A 
+  href="http://www.wgjz.com/edu/xmsoft/" target=_blank>数码软件</A> | <A 
+  href="http://www.wgjz.com/edu/softyy/" target=_blank>软件应用</A> 
+  </SPAN></P></DIV></LI>
+  <LI><A id=nav_6 onmouseover="showMenu('nav_6','subnav6')" 
+  href="http://www.wgjz.com/network/" target=_blank>网络</A> 
+  <DIV class="subnav disable" id=subnav6>
+  <P class=pointer>.</P>
+  <P><SPAN><A href="http://www.wgjz.com/network/manage/" target=_blank>网络管理</A> 
+  | <A href="http://www.wgjz.com/network/protocol/" target=_blank>网络协议</A> | <A 
+  href="http://www.wgjz.com/network/wireless/" target=_blank>无线技术</A> | <A 
+  href="http://www.wgjz.com/network/wljr/" target=_blank>网络接入</A> | <A 
+  href="http://www.wgjz.com/network/zhbx/" target=_blank>综合布线</A> | <A 
+  href="http://www.wgjz.com/network/help/" target=_blank>解决方案</A> | <A 
+  href="http://www.wgjz.com/network/netsoft/" target=_blank>网络软件</A> 
+  </SPAN></P></DIV></LI>
+  <LI><A id=nav_7 onmouseover="showMenu('nav_7','subnav7')" 
+  href="http://www.wgjz.com/database/" target=_blank>数据库</A> 
+  <DIV class="subnav disable" id=subnav7>
+  <P class=pointer>.</P>
+  <P><SPAN><A href="http://www.wgjz.com/database/oracle/" 
+  target=_blank>Oracle</A> | <A href="http://www.wgjz.com/database/mysql/" 
+  target=_blank>Mysql</A> | <A href="http://www.wgjz.com/database/mssql/" 
+  target=_blank>MSsql</A> | <A href="http://www.wgjz.com/database/other/" 
+  target=_blank>其它数据库</A> </SPAN></P></DIV></LI>
+  <LI><A id=nav_8 onmouseover="showMenu('nav_8','subnav8')" 
+  href="http://www.wgjz.com/bc/" target=_blank>编程</A> 
+  <DIV class="subnav disable" id=subnav8>
+  <P class=pointer>.</P>
+  <P><SPAN><A href="http://www.wgjz.com/bc/php/" target=_blank>PHP</A> | <A 
+  href="http://www.wgjz.com/bc/dotnet/" target=_blank>Dotnet</A> | <A 
+  href="http://www.wgjz.com/bc/java" target=_blank>Java</A> 
+  </SPAN></P></DIV></LI>
+  <LI><A id=nav_9 onmouseover="showMenu('nav_9','subnav9')" 
+  href="http://www.wgjz.com/hack/" target=_blank>黑客</A> 
+  <DIV class="subnav disable" id=subnav9>
+  <P class=pointer>.</P>
+  <P><SPAN><A href="http://www.wgjz.com/hack/technology/" target=_blank>黑客技术</A> 
+  | <A href="http://www.wgjz.com/hack/hole/" target=_blank>安全漏洞</A> | <A 
+  href="http://www.wgjz.com/hack/soft/" target=_blank>软件评测</A> | <A 
+  href="http://www.wgjz.com/hack/protect/" target=_blank>安全防护</A> | <A 
+  href="http://www.wgjz.com/hack/safe/" target=_blank>安全文摘</A> | <A 
+  href="http://www.wgjz.com/hack/virus/" target=_blank>病毒资讯</A> | <A 
+  href="http://www.wgjz.com/hack/story/" target=_blank>黑客故事</A> 
+  </SPAN></P></DIV></LI>
+  <LI><A id=nav_10 onmouseover="showMenu('nav_10','subnav10')" 
+  href="http://www.wgjz.com/exam/" target=_blank>认证</A> 
+  <DIV class="subnav disable" id=subnav10>
+  <P class=pointer>.</P>
+  <P><SPAN><A href="http://www.wgjz.com/exam/cisco/" target=_blank>Cisco认证</A> | 
+  <A href="http://www.wgjz.com/exam/microsoft/" target=_blank>Windows认证</A> | <A 
+  href="http://www.wgjz.com/exam/linux/" target=_blank>Linux认证</A> | <A 
+  href="http://www.wgjz.com/exam/java/" target=_blank>Java认证</A> | <A 
+  href="http://www.wgjz.com/exam/oracle/" target=_blank>Oracle认证</A> | <A 
+  href="http://www.wgjz.com/exam/djks/" target=_blank>等级考试</A> | <A 
+  href="http://www.wgjz.com/exam/sjsp/" target=_blank>软件水平</A> | <A 
+  href="http://www.wgjz.com/exam/wlgcs/" target=_blank>网络工程师</A> | <A 
+  href="http://www.wgjz.com/exam/system/" target=_blank>系统工程师</A> | <A 
+  href="http://www.wgjz.com/exam/cxy/" target=_blank>程度员</A> | <A 
+  href="http://www.wgjz.com/exam/itexam/" target=_blank>其它IT认证</A> 
+  </SPAN></P></DIV></LI>
+  <LI><A id=nav_10 onmouseover="showMenu('nav_11','subnav11')" 
+  href="http://www.wgjz.com/server/" target=_blank>服务器</A> 
+  <DIV class="subnav disable" id=subnav11>
+  <P class=pointer>.</P>
+  <P><SPAN><A href="http://www.wgjz.com/server/market/" target=_blank>行情</A> | 
+  <A href="http://www.wgjz.com/server/news/" target=_blank>新闻</A> | <A 
+  href="http://www.wgjz.com/server/buy/" target=_blank>产品导购</A> | <A 
+  href="http://www.wgjz.com/server/evaluate/" target=_blank>评测</A> | <A 
+  href="http://www.wgjz.com/server/app/" target=_blank>服务器应用</A> | <A 
+  href="http://www.wgjz.com/server/solution/" target=_blank>服务器解决方案</A> 
+  </SPAN></P></DIV></LI>
+  <LI><A id=nav_10 onmouseover="showMenu('nav_12','subnav12')" 
+  href="http://www.wgjz.com/netpro/" target=_blank>设备</A> 
+  <DIV class="subnav disable" id=subnav12>
+  <P class=pointer>.</P>
+  <P><SPAN><A href="http://www.wgjz.com/netpro/switch/" target=_blank>交换机</A> | 
+  <A href="http://www.wgjz.com/netpro/router/" target=_blank>路由器</A> | <A 
+  href="http://www.wgjz.com/netpro/wireless/" target=_blank>无线设备</A> | <A 
+  href="http://www.wgjz.com/netpro/firewall/" target=_blank>防火墙设备</A> 
+  </SPAN></P></DIV></LI>
+  <LI><A id=nav_10 onmouseover="showMenu('nav_13','subnav13')" 
+  href="http://www.wgjz.com/stor/" target=_blank>存储</A> 
+  <DIV class="subnav disable" id=subnav13>
+  <P class=pointer>.</P>
+  <P><SPAN><A href="http://www.wgjz.com/stor/news/" target=_blank>新闻与趋势</A> | <A 
+  href="http://www.wgjz.com/stor/buy/" target=_blank>新品导购</A> | <A 
+  href="http://www.wgjz.com/stor/evaluate/" target=_blank>评测</A> | <A 
+  href="http://www.wgjz.com/stor/solution/" target=_blank>存储解决方案</A> | <A 
+  href="http://www.wgjz.com/stor/storart/" target=_blank>存储技术</A> 
+  </SPAN></P></DIV></LI>
+  <LI><A id=nav_10 onmouseover="showMenu('nav_14','subnav14')" 
+  href="http://www.wgjz.com/wb/" target=_blank>网吧</A> 
+  <DIV class="subnav disable" id=subnav14>
+  <P class=pointer>.</P>
+  <P><SPAN><A href="http://www.wgjz.com/wb/news/" target=_blank>新闻政策</A> | <A 
+  href="http://www.wgjz.com/wb/jygl/" target=_blank>经营管理</A> | <A 
+  href="http://www.wgjz.com/wb/wgxs/" target=_blank>网管心声</A> | <A 
+  href="http://www.wgjz.com/wb/wbrd/" target=_blank>网吧热点</A> | <A 
+  href="http://www.wgjz.com/wb/zwjs/" target=_blank>组网架设</A> | <A 
+  href="http://www.wgjz.com/wb/wbxt/" target=_blank>网吧系统</A> | <A 
+  href="http://www.wgjz.com/wb/RouterOS/" target=_blank>RouterOS</A> 
+  </SPAN></P></DIV></LI></UL></DIV></DIV>
+<DIV align=center>
+<SCRIPT language=javascript 
+src="进程隐藏技术详解详解技术隐藏进程程序任务窗口图标_中国网管家族.files/ad003.js"></SCRIPT>
+</DIV>
+<DIV class=note><SPAN><A href="http://www.wgjz.com/member/article_add.php"><IMG 
+src="进程隐藏技术详解详解技术隐藏进程程序任务窗口图标_中国网管家族.files/td_icon.gif" align=absBottom> 
+投递文章</A>&nbsp; <A href="http://www.wgjz.com/hack/safe/20070514/74477.html#"><IMG 
+src="进程隐藏技术详解详解技术隐藏进程程序任务窗口图标_中国网管家族.files/tg_icon.gif" align=absBottom> 
+投稿指南</A> <A href="http://www.wgjz.com/plus/rssmap.html" target=_blank><IMG 
+src="进程隐藏技术详解详解技术隐藏进程程序任务窗口图标_中国网管家族.files/rss.gif" align=absBottom> 
+RSS订阅</A></SPAN> <B>网管家族通告:</B>
+<SCRIPT language=javascript 
+src="进程隐藏技术详解详解技术隐藏进程程序任务窗口图标_中国网管家族.files/Hot_Announce.js"></SCRIPT>
+ </DIV>
+<DIV align=center>
+<SCRIPT language=javascript src=""></SCRIPT>
+
+<SCRIPT language=javascript 
+src="进程隐藏技术详解详解技术隐藏进程程序任务窗口图标_中国网管家族.files/ad005.js"></SCRIPT>
+</DIV>
+<FORM name=formsearch action=/plus/search.php>
+<DIV class=weizhi><SPAN><B>搜索:</B> <INPUT type=hidden value=0 name=kwtype> 
+<INPUT class=searchtxt id=keyword name=keyword> <SELECT id=searchtype 
+name=select> <OPTION value=titlekeyword>智能搜索</OPTION> <OPTION value=title 
+  selected>搜索标题</OPTION></SELECT> <INPUT type=image 
+src="进程隐藏技术详解详解技术隐藏进程程序任务窗口图标_中国网管家族.files/topsearch_submit.gif"> 
+</SPAN><B>您的位置</B>：<A href="http://www.wgjz.com/">网站首页</A>&gt;<A 
+href="http://www.wgjz.com/hack/">黑客攻防</A>&gt;<A 
+href="http://www.wgjz.com/hack/safe/">安全文摘</A>&gt;阅读资讯文章</DIV></FORM><!-- Digg 参数 -->
+<SCRIPT language=javascript 
+src="进程隐藏技术详解详解技术隐藏进程程序任务窗口图标_中国网管家族.files/dedeajax2.js"></SCRIPT>
+
+<SCRIPT language=javascript>
+function Digg(divId,aid){
+   var taget_obj = document.getElementById(divId+''+aid);
+   var myajax = new DedeAjax(taget_obj,false,false,"","","");
+   myajax.SendGet2("/digg.php?action=digg&aid="+aid);
+   DedeXHTTP = null;
+}
+</SCRIPT>
+
+<DIV class="clearfix wrap layout-cols2">
+<DIV class=col1>
+<DIV id=news>
+<H1>进程隐藏技术详解详解技术隐藏进程程序任务窗口图标</H1>
+<DIV class=times>2005-09-02 08:00:00 &nbsp; 来源:网络 &nbsp; 作者:本站整理 &nbsp; 点击:
+<SCRIPT language=javascript 
+src="进程隐藏技术详解详解技术隐藏进程程序任务窗口图标_中国网管家族.files/count.htm"></SCRIPT>
+ &nbsp; 【<A href="javascript:doZoom(16)">大</A> <A 
+href="javascript:doZoom(14)">中</A> <A href="javascript:doZoom(12)">小</A>】 <A 
+class=fsource 
+href="http://www.wgjz.com/hack/safe/20070514/74477.html#plshow">评论：<FONT 
+id=feedcounttop color=red>0</FONT> 条</A></DIV>
+<DIV class=content id=textbody>
+<DIV id=zhan></DIV>
+<DIV id=ad>
+<SCRIPT language=javascript 
+src="进程隐藏技术详解详解技术隐藏进程程序任务窗口图标_中国网管家族.files/ad011.js"></SCRIPT>
+</DIV>问：如何让程序在后台运行??help!!!有什么方法或软件可以让程序在后台运行,而不会弹出窗口???(我用的是windows系统) 
+<BR>答：问题猜解：是否在你开了很多程序，或者网页后发现有很多窗口显示，觉得很恼火呢？如果你想不会弹出窗口，那就最小化，自然不见弹出窗口了。它也是在后台运行了，而且没有弹出窗口，但我想你问的问题可能不是证明简单，我们可以延伸下： 
+<BR>问题延伸：是否在你开了很多程序，或者网页后发现有很多窗口显示，在任务栏有很多窗口图标，这些是很烦恼的事情，你一定也想去掉这些窗口。 
+<BR>1，在软件开发过程中相关的窗口属性原本就有相应设置。比如豪杰，比如qq它们都可以在软件自身功能项中实现“窗口总在最前运行”，去掉即可。又比如Serv-U由两大部分组成，引擎和用户界面。Serv-U引擎（ServUDaemon.exe）其实是一个常驻后台的程序，也是Serv-U整个软件的心脏部分，它负责处理来自各种FTP客户端软件的FTP命令，也是负责执行各种文件传送的软件。在运行Serv-U引擎也就是ServUDaemon.exe文件后，我们看不到任何的用户界面，它只是在后台运行，通常我们无法影响它，但在ServUAdmin.exe中我们可以停止和开始它。另外木马程序的Server端为了隐藏自己，必须在设计中做到不让自己显示到任务栏或者系统进程控制器中，同时还不会影响其他程序的正常运行，当使用者电脑处于断线状态下，Server段不会发送任何信息到预设的端口上，而会自动检测网络状态直到网络连接好，Server会通过email或者其他形式将Server端系统资料通知Client端，同时接收Client发送出来的请求。 
+<BR>2，对qq用户来说。要隐藏起来了？怕领导或长辈老师看见，呵呵。想挂QQ，但别人发现了就关，有什么办法能把QQ任务栏的图标隐藏起来吗？答案是有，很简单，启动QQ，用鼠标单击QQ窗口左下角的主菜单，在弹出的快捷菜单中选“系统参数”，弹出“QQ参数设置”对话框，在“参数设置”标签中，取消“在任务栏显示图标”、“自动弹出信息”选择，选择“使用热键”复选项，您还可以选择“自定义热键”定义自己的热键，在“声音设置”标签中，选择“声音开关”中的“关闭声音”。另外把QQ用鼠标点住拉到屏幕顶部,它会自动隐藏的!用时`把鼠标放在那个位置就会出来。 
+<BR>3，对其他用户，在上班或者上课怕他人看见，可以使用软件实现彻底隐藏。 
+<BR>“任务栏”是Windows桌面底部一条灰色的区域，其左边是“开始”按钮，右边有一个小窗口显示时间、输入法等图标，也称为系统托盘。根据操作系统与软件安装与配置的不同，在“任务栏”上具有不同的图标，而且根据个人的需要和喜好我们也可以自定义“任务栏”内容。Windows任务栏有自动隐藏功能：在任务栏空白处单击鼠标右键，选择“属性”，然后选中“自动隐藏任务栏”前的复选框再单击“确定”退出即可。但这个功能总让人感觉不太完美，原因是任务栏隐藏的不太好，总会在屏幕最底下留着一条线（露出一个“尾巴”），这给有些工作带来麻烦，比如你要用PrintScreen键截图的话，还要去掉那条线。网上找的一款名为TaskbarHide的免费软件，其主程序只有200多KB，最新版本为1.2b，http://home4.inet.tele.dk/mbresson/tbhide/tbhid12b.zip。 
+<BR>　　下载后得到一个只有三个文件的压缩包，直接解压缩后双击执行文件，你会发现任务栏最右侧的系统托盘处出现了T型图标，同时你会看到任务栏已经自动隐藏了，而且隐藏得非常彻底，不留一丝的痕迹。当我们把鼠标移到屏幕底部时，任务栏会自动弹出，比原来灵敏多了！ 
+<BR>如果你想停止自动隐藏的话，只要用鼠标单击T型图标即可，比原来方便得多。如果你想退出TaskbarHide，直接用鼠标右键点击T型图标，从弹出的菜单中选择“Close”命令。怎么样，有了TaskbarHide，可以让Windows自带的任务栏隐藏功能下岗了吧！ 
+<BR>4，对编程爱好者来说，让程序通过按一组合键就隐藏到后台运行，再按一次又到前台。 
+<BR>可以通过hide和show来实现。首先，我们看一个术语，系统托盘是任务栏上一个很小的区域，隐藏在那儿的程序只显示小图标，比如说你的Outlook在收取新邮件的时候。任务栏是一个贯穿屏幕的工具条(ToolBar)。程序的图标就放在那儿，要隐藏任务栏图标，你可以用Application-&gt;Handle调用API函数 
+<BR>ShowWindow。 <BR>ShowWindow(Application-&gt;Handle,SW_HIDE); 
+<BR>你想重新显示图标，简单地改变SW_HIDE而代之以SW_SHOW. 
+<BR>ShowWindow(Application-&gt;Handle,SW_SHOW); 
+<BR>注意：你可以通过设置主窗体的Visible属性的值为false来隐藏它。 
+<BR>注意：用ShowWindow隐藏任务栏图标并不长久，某几个动作将使得任务栏图标重新出现。你可以移去程序的任务栏图标并让它不再出现，就是使应用程序的窗口成为工具窗口(ToolWindows)。工具窗口是不会有任务栏图标的,但是这样做有一个缺点就是程序不会在ALT+TAB中出现。把应用程序窗口编程工具窗口用的是API函数GetWindowLong和SetWindowLong 
+<BR>WINAPIWinMain(HINSTANCE,HINSTANCE,LPSTR,int) <BR>{ 
+<BR>&nbsp;DWORDdwExStyle=GetWindowLong(Application-&gt;Handle,GWL_EXSTYLE); 
+<BR>&nbsp;dwExStyle|=WS_EX_TOOLWINDOW; 
+<BR>&nbsp;SetWindowLong(Application-&gt;Handle,GWL_EXSTYLE,dwExStyle); 
+<BR>&nbsp;try <BR>&nbsp;{ <BR>&nbsp;Application-&gt;Initialize(); 
+<BR>&nbsp;Application-&gt;CreateForm(__classid(TForm1),&amp;Form1); 
+<BR>&nbsp;Application-&gt;Run(); <BR>&nbsp;} 
+<BR>&nbsp;catch(Exception&amp;exception) <BR>&nbsp;{ 
+<BR>&nbsp;Application-&gt;ShowException(&amp;exception); <BR>&nbsp;} 
+<BR>&nbsp;return0; <BR>} <BR>5，对黑客爱好者来说，木马程序的隐藏技术当然很受欢迎。 
+<BR>木马程序的服务器端，为了避免被发现，多数都要进行隐藏处理，下面让我们来看看木马是如何实现隐藏的。说到隐藏，首先得先了解三个相关的概念：进程，线程和服务。我简单的解释一下。 
+<BR>　　进程：一个正常的Windows应用程序，在运行之后，都会在系统之中产生一个进程，同时，每个进程，分别对应了一个不同的PID（ProgressID,进程标识符）这个进程会被系统分配一个虚拟的内存空间地址段，一切相关的程序操作，都会在这个虚拟的空间中进行。 
+<BR>&nbsp;线程：一个进程，可以存在一个或多个线程，线程之间同步执行多种操作，一般地，线程之间是相互独立的，当一个线程发生错误的时候，并不一定会导致整个进程的崩溃。 
+<BR>　　服务：一个进程当以服务的方式工作的时候，它将会在后台工作，不会出现在任务列表中，但是，在WindowsNT/2000下，你仍然可以通过服务管理器检查任何的服务程序是否被启动运行。 
+<BR>　　想要隐藏木马的服务器端，可以伪隐藏，也可以是真隐藏。伪隐藏，就是指程序的进程仍然存在，只不过是让他消失在进程列表里。真隐藏则是让程序彻底的消失，不以一个进程或者服务的方式工作。 
+<BR>&nbsp;伪隐藏的方法，是比较容易实现的，只要把木马服务器端的程序注册为一个服务就可以了，这样，程序就会从任务列表中消失了，因为系统不认为他是一个进程，当按下Ctrl+Alt+Delete的时候，也就看不到这个程序。但是，这种方法只适用于Windows9x的系统，对于WindowsNT,Windows2000等，通过服务管理器，一样会发现你在系统中注册过的服务。难道伪隐藏的方法就真的不能用在WindowsNT/2000下了吗？当然还有办法，那就是API的拦截技术，通过建立一个后台的系统钩子，拦截PSAPI的EnumProcessModules等相关的函数来实现对进程和服务的遍历调用的控制，当检测到进程ID（PID）为木马程序的服务器端进程的时候直接跳过，这样就实现了进程的隐藏，金山词霸等软件，就是使用了类似的方法，拦截了TextOutA,TextOutW函数，来截获屏幕输出，实现即时翻译的。同样，这种方法也可以用在进程隐藏上。 
+<BR>&nbsp;当进程为真隐藏的时候，那么这个木马的服务器部分程序运行之后，就不应该具备一般进程，也不应该具备服务的，也就是说，完全的溶进了系统的内核。也许你会觉得奇怪，刚刚不是说一个应用程序运行之后，一定会产生一个进程吗？的确，所以我们可以不把他做成一个应用程序，而把他做为一个线程，一个其他应用程序的线程，把自身注入其他应用程序的地址空间。而这个应用程序对于系统来说，是一个绝对安全的程序，这样，就达到了彻底隐藏的效果，这样的结果，导致了查杀黑客程序难度的增加。 
+<BR>&nbsp;出于安全考虑，我只给出一种通过注册服务程序，实现进程伪隐藏的方法，对于更复杂，高级的隐藏方法，比如远程线程插入其他进程的方法，请参阅ShotGun的文章。《NT系统下木马进程的隐藏与检测》（出自http://www.patching.net） 
+<BR>WINAPIWinMain(HINSTANCE,HINSTANCE,LPSTR,int) <BR>{ <BR>　　　　try <BR>　　　　{ 
+<BR>　　　　DWORDdwVersion=GetVersion();　//取得Windows的版本号 
+<BR>　　　　　　　　if(dwVersion&gt;=0x80000000)　　//Windows9x隐藏任务列表 <BR>　　　　　　　　{ 
+<BR>　　　　　　　　int(CALLBACK*rsp)(DWORD,DWORD); 
+<BR>　　　　　　　　HINSTANCEdll=LoadLibrary("KERNEL32.DLL");//装入KERNEL32.DLL 
+<BR>　　　　　　　　　rsp=(int(CALLBACK 
+<BR>*)(DWORD,DWORD))GetProcAddress(dll,"RegisterServiceProcess"); 
+<BR>//找到RegisterServiceProcess的入口 <BR>　　　　　　　　　rsp(NULL,1);　//注册服务 
+<BR>　　　　　　　　　FreeLibrary(dll);　//释放DLL模块 <BR>　　　　　　　　} <BR>　　　　} 
+<BR>　　　　catch(Exception&amp;exception)　//处理异常事件 <BR>　　　　{ <BR>//处理异常事件 
+<BR>　　　　} <BR>　　　　return0; <BR>} <BR><BR><BR>
+<SCRIPT language=javascript 
+src="进程隐藏技术详解详解技术隐藏进程程序任务窗口图标_中国网管家族.files/ad012.js"></SCRIPT>
+</DIV>
+<DIV class=pagebreak></DIV>
+<DIV class=ding_box>
+<DIV class="ding ding_bg" id=digg74477><B>1</B> <A 
+href="javascript:Digg('digg',74477);">顶一下</A> </DIV>
+<DIV class="ding back_bg"><B>&nbsp;</B> <A href="http://www.wgjz.com/">返回首页</A> 
+</DIV></DIV>
+<DIV class=text_tag>
+<H5>Tags：<B></B> &nbsp;</H5><SPAN>责任编辑：<A 
+href="http://www.wgjz.com/member/index.php?uid=病毒">病毒</A> </SPAN>
+<LI style="DISPLAY: none"></LI></DIV>
+<DIV class=xg>
+<LI>上一篇：没有了 </LI>
+<LI>下一篇：没有了 </LI>
+<LI><A 
+href="http://www.wgjz.com/hack/safe/20080516/198770.html">16岁初中生连黑北京数所高</A></LI>
+<LI><A 
+href="http://www.wgjz.com/hack/safe/20080516/198769.html">关注：微软近期发布12个补</A></LI>
+<LI><A 
+href="http://www.wgjz.com/hack/safe/20080516/198768.html">WinPowershell遭遇病毒微</A></LI>
+<LI><A 
+href="http://www.wgjz.com/hack/safe/20080516/198766.html">国内首例网银被盗案二审终</A></LI>
+<LI><A 
+href="http://www.wgjz.com/hack/safe/20080516/198767.html">恶意软件与病毒一步之遥</A></LI>
+<LI><A 
+href="http://www.wgjz.com/hack/safe/20080516/198764.html">互联网协会再次宣战中国十</A></LI>
+<LI><A 
+href="http://www.wgjz.com/hack/safe/20080516/198765.html">提高警惕：遭遇淘宝QQ号批</A></LI>
+<LI><A href="http://www.wgjz.com/hack/safe/20080516/198763.html">流氓软件教父改过自新?</A> 
+</LI></DIV>
+<FORM name=feedback action=http://www.wgjz.com/plus/feedback.php?action=send 
+method=post><INPUT type=hidden value=74477 name=arcID> 
+<DIV id=plshow><SPAN class=float_right>请文明参与讨论，禁止漫骂攻击。</SPAN> 用户名：<INPUT 
+id=username maxLength=40 size=8 name=username> （<A 
+href="http://www.wgjz.com/member/index_do.php?fmdo=user&amp;dopost=regnew" 
+target=_blank><U>新注册</U></A>）密码：<INPUT id=pwd type=password maxLength=40 size=8 
+name=pwd> <!--验证码：<input name="cknum" type="text" id="cknum" size="4" class="input" onclick="document.getElementById('img1').style.display=''" /><img width="45" height="18" src="/include/vdimgck.php" id="img1" align="absmiddle" onClick="document.getElementById('img1').src='/include/vdimgck.php?rnd=' + Math.random()" style='cursor:hand;display:none;' title='换一张'">-->匿名：<INPUT 
+class=rev_chack id=notuser type=checkbox CHECKED value=1 name=notuser> <INPUT class=btn onclick='javascript:if(document.feedback.msg.value!="") document.feedback.submit(); else alert("评论内容不能为空！");' type=button value=马上发表 name=sb> 
+
+<DIV class=bor><TEXTAREA class=rev_textarea id=msg name=msg rows=6 cols=94></TEXTAREA> 
+</DIV></DIV></FORM>
+<DIV class=pl>
+<DIV class=pl_title><SPAN>评论总数：<B><FONT id=fedcount name="fedcount"></FONT>0 
+</B>条 <A href="http://www.wgjz.com/plus/feedback.php?arcID=74477" 
+target=_blank>[ 查看全部 ] </A></SPAN>网友评论</DIV>
+<SCRIPT src="进程隐藏技术详解详解技术隐藏进程程序任务窗口图标_中国网管家族.files/feedback_js.htm"></SCRIPT>
+<SPAN id=fedbk name="fedbk"></SPAN></DIV></DIV></DIV>
+<DIV class=col2>
+<DIV class=right_bot>
+<SCRIPT language=javascript 
+src="进程隐藏技术详解详解技术隐藏进程程序任务窗口图标_中国网管家族.files/ad009.js"></SCRIPT>
+</DIV>
+<DIV class="right_box right_bot">
+<DIV class=right_title>推荐文章</DIV>
+<UL>
+  <LI>· <A href="http://www.wgjz.com/hack/safe/20080112/187378.html" 
+  target=_blank>卡巴斯基诉瑞星不正当竞争案　一审</A>
+  <LI>· <A href="http://www.wgjz.com/hack/safe/20071115/187167.html" 
+  target=_blank>病毒纷纷失踪 网络安全面临严重威</A>
+  <LI>· <A href="http://www.wgjz.com/hack/safe/20071115/187166.html" 
+  target=_blank>无需工具 手工清除流氓软件</A>
+  <LI>· <A href="http://www.wgjz.com/hack/safe/20071115/187163.html" 
+  target=_blank>谨防通过微软漏洞传播的怕米木马病</A>
+  <LI>· <A href="http://www.wgjz.com/hack/safe/20071108/187077.html" 
+  target=_blank>http://www.wgjz.com/hack/safe/20071108/187077.html</A>
+  <LI>· <A href="http://www.wgjz.com/hack/safe/20070925/186601.html" 
+  target=_blank>MSN用户聊天接受熟人网上“礼物”</A>
+  <LI>· <A href="http://www.wgjz.com/hack/safe/20070925/186600.html" 
+  target=_blank>小心注册表后门远离Vista盗版黑屏</A>
+  <LI>· <A href="http://www.wgjz.com/hack/safe/20070925/186596.html" 
+  target=_blank>微软公开其黑客博客展示黑客所作的</A>
+  <LI>· <A href="http://www.wgjz.com/hack/safe/20070901/142417.html" 
+  target=_blank>垃圾“毒”邮件肆虐 专家支招解决</A>
+  <LI>· <A href="http://www.wgjz.com/hack/safe/20070831/140548.html" 
+  target=_blank>快速高效的网站文件管理新招</A>
+  <LI>· <A href="http://www.wgjz.com/hack/safe/20070831/140547.html" 
+  target=_blank>快速更改IE7的文件菜单位置</A>
+  <LI>· <A href="http://www.wgjz.com/hack/safe/20070831/140546.html" 
+  target=_blank>Outlook无法收取Live邮件问题已初</A> </LI></UL></DIV>
+<DIV class=right_bot>
+<SCRIPT language=javascript 
+src="进程隐藏技术详解详解技术隐藏进程程序任务窗口图标_中国网管家族.files/ad010.js"></SCRIPT>
+</DIV>
+<DIV class="right_box right_bot">
+<DIV class=right_title>热门文章</DIV>
+<UL>
+  <LI>· <A href="http://www.wgjz.com/hack/safe/20070831/137609.html" 
+  target=_blank>管理单元初始化失败 解决方法收集</A>
+  <LI>· <A href="http://www.wgjz.com/hack/safe/20070831/140484.html" 
+  target=_blank>突破局域网中对用户上网的限制</A>
+  <LI>· <A href="http://www.wgjz.com/hack/safe/20071115/187176.html" 
+  target=_blank>聊QQ遭遇美人计　因好色导致网游装</A>
+  <LI>· <A href="http://www.wgjz.com/hack/safe/20070831/137821.html" 
+  target=_blank>如何解决无法启动任务管理器的问</A>
+  <LI>· <A href="http://www.wgjz.com/hack/safe/20080112/187378.html" 
+  target=_blank>卡巴斯基诉瑞星不正当竞争案　一审</A>
+  <LI>· <A href="http://www.wgjz.com/hack/safe/20070831/138591.html" 
+  target=_blank>万能HTML解密</A>
+  <LI>· <A href="http://www.wgjz.com/hack/safe/20071115/187166.html" 
+  target=_blank>无需工具 手工清除流氓软件</A>
+  <LI>· <A href="http://www.wgjz.com/hack/safe/20071108/187038.html" 
+  target=_blank>键盘记录器Rootkit通过键盘截获游</A>
+  <LI>· <A href="http://www.wgjz.com/hack/safe/20070831/138884.html" 
+  target=_blank>windows服务器启用TCP-IP筛选提高</A>
+  <LI>· <A href="http://www.wgjz.com/hack/safe/20071115/187167.html" 
+  target=_blank>病毒纷纷失踪 网络安全面临严重威</A>
+  <LI>· <A href="http://www.wgjz.com/hack/safe/20070831/139076.html" 
+  target=_blank>傻瓜式常用代理设置方法</A>
+  <LI>· <A href="http://www.wgjz.com/hack/safe/20080112/187377.html" 
+  target=_blank>“李鬼卡巴”偷天换日　假冒卡巴斯</A>
+  <LI>· <A href="http://www.wgjz.com/hack/safe/20071204/187225.html" 
+  target=_blank>恶意软件蠢蠢欲动　圣诞假期当心网</A>
+  <LI>· <A href="http://www.wgjz.com/hack/safe/20071115/187178.html" 
+  target=_blank>卡巴斯基2007年十一月第二周中国地</A>
+  <LI>· <A href="http://www.wgjz.com/hack/safe/20070831/138799.html" 
+  target=_blank>传奇SF程序Bug</A>
+  <LI>· <A href="http://www.wgjz.com/hack/safe/20070831/137887.html" 
+  target=_blank>asp+access平台下最好的4款blog程</A>
+  <LI>· <A href="http://www.wgjz.com/hack/safe/20070831/140032.html" 
+  target=_blank>两种方法打造绿色版IE7.0Beta3</A>
+  <LI>· <A href="http://www.wgjz.com/hack/safe/20070831/140376.html" 
+  target=_blank>教你在RedHatLinux9下架设FTP服务</A>
+  <LI>· <A href="http://www.wgjz.com/hack/safe/20070831/139072.html" 
+  target=_blank>在局域网、教育网使用flatsurfer</A>
+  <LI>· <A href="http://www.wgjz.com/hack/safe/20070831/140483.html" 
+  target=_blank>DOS下网络命令及其说明锦集</A> </LI></UL></DIV></DIV></DIV><!--底部:开始-->
+<DIV class=sitemap><A href="http://www.wgjz.com/html/aboutus.html" 
+target=_blank>关于我们</A> - <A href="http://www.wgjz.com/html/contact.html" 
+target=_blank>联系我们</A> - <A href="http://www.wgjz.com/html/advertisement.html" 
+target=_blank>广告服务</A> - <A href="http://www.wgjz.com/html/law.html" 
+target=_blank>法律声明</A> - <A href="http://www.wgjz.com/plus/rssmap.html" 
+target=_blank>RSS订阅</A> - <A href="http://www.wgjz.com/plus/sitemap.html" 
+target=_blank>网站地图</A> - <A 
+href="http://www.wgjz.com/hack/safe/20070514/74477.html#top">返回顶部</A> </DIV>
+<DIV class=footer>
+<DIV class=copyright>
+<P>&copy; CopyRight 2004 - 2008 www.wgjz.com Inc All Rights Reserved
+<SCRIPT language=javascript 
+src="C:\Documents and Settings\Administrator\桌面\进程隐藏技术详解详解技术隐藏进程程序任务窗口图标_中国网管家族.files\wgjz(1).js"></SCRIPT>
+ </P></DIV></DIV>
+<SCRIPT language=javaScript src="" type=text/javascript></SCRIPT>
+<!--底部:结束--></DIV></BODY></HTML>

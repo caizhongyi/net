@@ -1,0 +1,332 @@
+﻿#parse("_head.html")
+   <script type="text/javascript" src="$webpath/library/js/area.js"></script>
+#if($colse)
+   <div class="error">$colse</div>
+#else
+    #if($paramerror)
+        <div  id="toperrors" class="errors">$paramerror</div>
+    #else
+                <div class="register">
+                    <form action="$webpath/register${exname}" method="post">
+                       #if($isinvite)
+                        <div>
+                            <div class="l images"><a href="$spaceurl" title="$username"><img src="$userhead" /></a></div>
+                            <div class="l">
+                            <h3>注册您的$sitename帐户，并加为$username的好友</h3>
+                            $invitecontent</div>
+                        </div>
+                        <div class="clearpix"></div>
+                        #else
+                            <h3>用户注册</h3>
+                        #end 
+                        <div class="pitem" style="margin-top:25px;">
+                        <em>用户名${mobile}：</em>
+                        <input type="text" name="username" id="username" maxlength="20" onblur="javascript:checkusername();" value="" onkeyup="value=value.replace(/[^\w\.\_/]/ig,'')"  class="f-text" style="width:150px;" />
+                            <span class="errors" id="spanusername" style="display:none;"></span><span class="rights" id="spanusername1" style="display:none;"></span>
+                        </div>
+                        <div class="pitem"><em>电子邮件</em>
+                        <input type="text" name="email" id="email" maxlength="100" value="#if($reciveemail)$reciveemail#end" onblur="javascript:checkemail()"  onkeyup="value=value.replace(/[^\w\.\_\-\@/]/ig,'')" class="f-text" style="width:150px;" #if($reciveemail)readonly="readonly"#end  />
+                            <span class="errors" id="spanemail" style="display:none;"></span><span class="rights" id="spanemail1" style="display:none;"></span>
+                        </div>
+                        <div class="pitem"><em>密码：</em>
+                        <input type="password" name="password" id="password" maxlength="18" value="" onblur="javascript:checkpassword()" class="f-text" style="width:150px;" />
+                            <span class="errors" id="spanpassword" style="display:none;"></span><span class="rights" id="spanpassword1" style="display:none;"></span>
+                        </div>
+                        <div class="pitem"><em>确认密码：</em>
+                        <input type="password" name="confimpassword" id="confimpassword" onblur="javascript:checkconfimpassword()" maxlength="18" value="" class="f-text" style="width:150px;" />
+                            <span class="errors" id="spanconfimpassword" style="display:none;"></span><span class="rights" id="spanconfimpassword1" style="display:none;"></span>
+                        </div>
+                        <div style="border-bottom:1px solid #eeeeee;padding:5px;margin-bottom:10px;"></div>
+                        #if($isrealname)
+                        <div class="pitem"><em>真实姓名：</em>
+                        <input type="text" name="truename" id="truename" maxlength="12" value="" onblur="javascript:checktruename()" class="f-text" />
+                            <span class="errors" id="spantruename" style="display:none;"></span><span class="rights" id="spantruename1" style="display:none;"></span>
+                        </div>
+                        #end
+                        
+                        <div class="pitem"><em>生日：</em>
+                        <select name="birthdayYear" id="birthdayYear">
+                            <option value=""></option>
+                            ${birthdayYear}
+                        </select> 年
+                        <select name="birthdayMonth" id="birthdayMonth">
+                            <option value=""></option>
+                         ${birthdayMonth}
+                        </select> 月
+                        <select name="birthdayDay" id="birthdayDay">
+                            <option value=""></option>
+                         ${birthdayDay}
+                        </select> 日
+                        <span class="warn" id="span2" style="display:">生日可以设置是否显示。</span>
+                         <span class="errors" id="spanbirthday" style="display:none;"></span><span class="rights" id="spanbirthday1" style="display:none;"></span>
+                        </div>
+                        
+                        <div class="pitem"><em>现居住地：</em>
+                        <select name="SlctProvince" id="SlctProvince" onchange="ChangeProv(this);">
+                            <option value="0" selected="selected"></option>
+                            <script type="text/javascript">
+                            var returnvalue = "";
+                            for (i=0; i<Area.length; i++) 
+                            {
+                                if(Area[i][0] == "0")
+                                {
+                                    returnvalue += "<option value='" + Area[i][1] + "'>" + Area[i][2] + "</option>";
+                                }
+                            }
+                            document.write(returnvalue);
+                            </script>  
+                        </select>
+                        <select name="SlctCity" id="SlctCity" style="display: none;">
+                        </select>
+                         <span class="errors" id="spancity" style="display:none;"></span><span class="rights" id="spancity1" style="display:none;"></span>
+                        </div>
+                        <div class="pitem"><em>性别：</em>
+                        <input type="radio" name="sex" value="1" checked="checked" />女 &nbsp; <input type="radio" name="sex" value="0" />男  &nbsp; <span class="warn" id="span1" style="display:">注册成功后，不能修改，谨慎填写。</span>
+                        </div>
+                        #if($isvcode)
+                        <div class="pitem"><em>请填写答案：</em><img src="$webpath/library/page/verifycode${exname}" style="width:75px;height:25px" id="vimgs" align="absmiddle" /><input type="text" name="vcode" id="vcode"  onblur="javascript:checkvcode()"  maxlength="5" value="" class="f-text" style="width:40px;" /> 
+                            <span class="rights" id="spanvcode1" style="display:none;"></span>&nbsp; <a href="javascript:void(0)" onclick="document.getElementById('vimgs').src='$webpath/library/page/verifycode${exname}?v='+Math.random()+''">看不清，换一张</a> <span class="errors" id="spanvcode" style="display:none;"></span>
+                        </div>
+                        #end
+                        <div class="pitem"><em>&nbsp;</em><a href="$webpath/help/info$exname?q=regcontent" target="_blank">点击查看《服务条款》</a></div>
+                        <div class="pitem1"><em>&nbsp;</em>
+                        <input type="submit" name="button1" id="SubmitSend" class="btn_blue6" onclick="return checkdata();"  value="同意条款并注册"/> 
+                        <input type="reset" name="button1" class="btn_gray4"  value="重新填写"/>
+                         <input id="inviteid" name="inviteid" type="hidden" value="$inviteid" />
+                         <input id="replayEmail" name="replayEmail" type="hidden" value="$replayEmail" />
+                        </div>
+                    </form>
+                </div>
+
+<script type="text/javascript">
+function ChangeProv(obj) 
+{
+    var objcity = document.getElementById('SlctCity');
+    objcity.style.display = '';
+    objcity.options.length = 0;
+    for (i=0; i<Area.length; i++) 
+    {
+        if(Area[i][0] == obj.value)
+        {
+            var opt = document.createElement('option');
+            opt.value = Area[i][1];
+            opt.innerHTML = Area[i][2];
+            objcity.appendChild(opt);
+        }
+    }
+}
+
+function changevcode()
+{
+document.getElementById("vimgs").src="$webpath/library/page/verifycode${exname}?v="+Math.random()+""
+}
+function checkusername()
+{
+    var err="";
+    jQuery("#spanusername1").hide();
+    var username=jQuery("#username").val();
+    if(username=="")
+    {
+        err+="填写用户名\n";
+    }
+    else
+    {
+         if (!/^[a-zA-Z0-9_\.]{3,18}$/.test(username)) 
+         {
+            err+="用户名由3-18个英文、数字、下划线及点组成。不能包含特殊字符和中文。";
+         }
+    }  
+    if(err!="")
+    {
+        jQuery("#spanusername").show();
+        jQuery("#spanusername").html(err);
+        return false;
+    }
+    else
+    {
+        jQuery("#spanusername").hide();
+        return CheckUserExsitAjax(username,0);
+        //return true;
+    }      
+}
+function checkemail()
+{
+    var err="";
+    var email=jQuery("#email").val();
+    if(email=="")
+    {
+        err+="填写电子邮件";
+    }
+    else
+    {
+         if(isEmail(email))
+         {
+            err+="电子邮件格式不正确";
+         }
+    }          
+    if(err!="")
+    {
+        jQuery("#spanemail1").hide();
+        jQuery("#spanemail").show();
+        jQuery("#spanemail").html(err);
+         return false;
+    }
+    else
+    {
+        jQuery("#spanemail").hide();
+         return CheckUserExsitAjax(email,1);
+    }                     
+}
+function checkpassword()
+{
+    var err="";
+    var password=jQuery("#password").val();
+    if(password.length<3||password.length>18)
+    {
+        err+="密码长度必须大于3个字符小于18个字符";
+    }
+    if(err!="")
+    {
+        jQuery("#spanpassword").show();
+        jQuery("#spanpassword1").hide();
+        jQuery("#spanpassword").html(err);
+         return false;
+    }
+    else
+    {
+        jQuery("#spanpassword1").show();
+        jQuery("#spanpassword").hide();
+        return true;
+    }                     
+}
+function checkconfimpassword(obj)
+{
+    var err="";
+    var confimpassword=jQuery("#confimpassword").val();
+    if(confimpassword!=jQuery("#password").val())
+    {
+        err+="两次密码不一致";
+    }
+    if(err!="")
+    {
+        jQuery("#spanconfimpassword").show();
+        jQuery("#spanconfimpassword1").hide();
+        jQuery("#spanconfimpassword").html(err);
+         return false;
+    }
+    else
+    {
+        jQuery("#spanconfimpassword1").show();
+        jQuery("#spanconfimpassword").hide();
+        return true;
+    }                     
+}
+
+function checktruename()
+{
+try
+{
+     var err="";
+     var truename=jQuery("#truename").val();
+     if(truename==""||truename.length<2)
+     {
+        err+="填写真实姓名，真实姓名必须2个字符以上\n";
+     }
+    var patrns= /^(\w|[\u4E00-\u9FA5])*$/;
+    if (/[^\u4E00-\u9FA5a-zA-Z]/.test(truename)) 
+    {
+        err+="姓名只能是中文或英文\n";
+    }
+ if(err!="")
+ {
+    jQuery("#spantruename").show();
+    jQuery("#spantruename1").hide();
+    jQuery("#spantruename").html(err);
+     return false;
+ }
+ else
+ {
+    jQuery("#spantruename1").show();
+    jQuery("#spantruename").hide();
+    return true;
+ }      
+}   
+catch(e)
+{
+    return true;
+}            
+}
+function checkvcode()
+{
+try
+{
+ var err="";
+ var vcode=jQuery("#vcode").val();
+ if(vcode=="")
+ {
+    err+="填写验证码\n";
+ }
+ if(err!="")
+ {
+    jQuery("#spanvcode").show();
+    jQuery("#spanvcode1").hide();
+    jQuery("#spanvcode").html(err);
+     return false;
+ }
+ else
+ {
+    jQuery("#spanvcode1").show();
+    jQuery("#spanvcode").hide();
+    return true;
+ }      
+}   
+catch(e)
+{
+return true;
+}                    
+}
+function birthday()
+{
+var err="";
+if(jQuery("#birthdayYear").val()==""||jQuery("#birthdayMonth").val()==""||jQuery("#birthdayDay").val()=="")
+{   
+err+="请填写生日，填写后可以可设置是否显示。";
+}
+if(err!="")
+{
+jQuery("#spanbirthday").show();
+jQuery("#spanbirthday1").hide();
+jQuery("#spanbirthday").html(err);
+ return false;
+}
+else
+{
+jQuery("#spanbirthday1").show();
+jQuery("#spanbirthday").hide();
+return true;
+}      
+}
+
+function checkdata()
+{
+    if (checkusername() == false) { jQuery("#username").focus(); return false; }
+    if (checkemail() == false) { jQuery("#email").focus(); return false; }
+    if (!checkpassword()) { jQuery("#password").focus(); return false; }
+    if (!checkconfimpassword()) { jQuery("#confimpassword").focus(); return false; }
+    if (!checktruename()) { jQuery("#truename").focus(); return false; }
+    if (!birthday()) { jQuery("#birthdayYear").focus(); return false; }
+    if (!checkvcode()) {return false; }
+   if (document.getElementById("SlctProvince").options[document.getElementById("SlctProvince").selectedIndex].text == "") {
+            jQuery("#spancity").show();
+            jQuery("#spancity").html("请选择省份");
+            jQuery("#SlctProvince").focus();
+            return false;
+        }
+        return true;
+}
+
+
+</script>
+        #end
+#end
+#parse("_foot.html")

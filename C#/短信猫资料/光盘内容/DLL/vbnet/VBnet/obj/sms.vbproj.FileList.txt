@@ -1,0 +1,9 @@
+bin\SMS.exe
+bin\SMS.pdb
+bin\SMS.xml
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\SMS.mainsms.resources
+obj\Debug\sms.vbproj.GenerateResource.Cache
+obj\Debug\SMS.exe
+obj\Debug\SMS.xml
+obj\Debug\SMS.pdb

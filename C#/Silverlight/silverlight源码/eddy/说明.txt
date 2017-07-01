@@ -1,0 +1,11 @@
+《三维旋转图像展示动画效果》
+
+　　来源于：slcenter.cn  （Silverlight开源中心）
+
+　　Silverlight开源中心版权的有，注明转载标明源，否则必纠！
+
+　　详细说明页：http://slcenter.cn/show_31.aspx
+
+　　问题说明：
+
+　　请使用Blend或Visual Studio 打开后使用服务器方式浏览，否则可会出现ajax无权读取数据而报脚本错误和服务器数据处理等功能而出现问题。

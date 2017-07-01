@@ -1,0 +1,73 @@
+﻿#parse("_head.html")
+<div id="snssysmenu">
+#parse("_menusystem.html")
+</div>
+<div id="snsbody1">
+    <div id="snshead">内容管理</div>
+    <div class="itemmenu">
+        <ul>
+            <li class="current"><a href="news$exname">资讯</a></li>
+            <li><a href="group$exname">社群</a></li>
+            <li><a href="topic$exname">话题</a></li>
+            <li><a href="blog$exname">博客</a></li>
+            <li><a href="twitter$exname">微博</a></li>
+            <li><a href="photo$exname">相册</a></li>
+            <li><a href="shop$exname">品牌</a></li>
+            <li><a href="active$exname">活动</a></li>
+            <li><a href="ask$exname">问答</a></li>
+            <li><a href="gift$exname">礼物</a></li>
+            <li><a href="poke$exname">招呼</a></li>
+            <li><a href="vote$exname">投票</a></li>
+            <li><a href="fav$exname">收藏</a></li>
+            <li class="search"> &nbsp; 搜索：<input id="kwd" name="kwd" value="#if($kwd)$kwd#else搜索#end" type="text" class="f-text w100" onclick="this.value=''" /> <input id="Button1" type="button" value="搜索" class="btn_gray2" onclick="search('newsm','$q')" /></li>
+        </ul>
+    </div>
+    
+    <div class="itemmenu1">
+        <ul>
+            <li><a href="$webpath/app/news/new$exname">添加资讯</a></li>
+            <li><a href="$webpath/app/news/index$exname?q=my">我录入的资讯</a></li>
+            <li><a href="newsclass$exname">资讯分类管理</a></li>
+            <li><a href="javascript:;" onclick="deletestart('news');">初始化资讯</a></li>
+        </ul>
+    </div>
+
+    <div class="system">
+          #if($recordcount>0)
+                <table  id="mtable">
+                <tr>
+                    <th>发布者</th>
+                    <th>标题</th>
+                    <th>发布时间</th>
+                    <th>状态</th>
+                    <th style="text-align:center;">操作</th>
+                </tr>
+                #foreach($info in $infolist)
+                <tr id="param_$info.id">
+                    <td><a href="$info.spaceurl" target="_blank">$info.truename</a></td>
+                    <td><a href="javascript:;" onclick="showds($info.id)">[V]</a> $info.showrec <a href="$info.newsurl" target="_blank">$info.title</a></td>
+                    <td>$info.posttime</td>
+                    <td>$info.islock</td>
+                    <td>
+                    <input  type="button" value="删除" onclick="deletenews($info.id,$uid);" class="btn_blue2" />
+                    $info.state</td>
+                </tr>
+                <tr style="display:none;" id="cc_$info.id">
+                    <td colspan="5" style="background-color:#efefef;">$info.content</td>
+                </tr>
+                #end
+             </table>
+              <div class="pages">$pagelist</div>
+        #else
+            <div>还没有记录</div>
+        #end       
+    </div>
+    
+</div>
+#parse("_foot.html")
+<script type="text/javascript">
+    function showds(v)
+    {
+        jQuery("#cc_"+v).toggle();
+    }
+</script>

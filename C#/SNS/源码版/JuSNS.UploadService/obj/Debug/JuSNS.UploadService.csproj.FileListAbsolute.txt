@@ -1,0 +1,15 @@
+F:\JuNET\JuSNS.UploadService\bin\JuSNS.UploadService.dll
+F:\JuNET\JuSNS.UploadService\bin\JuSNS.UploadService.pdb
+F:\JuNET\JuSNS.UploadService\obj\Debug\ResolveAssemblyReference.cache
+F:\JuNET\JuSNS.UploadService\obj\Debug\JuSNS.UploadService.dll
+F:\JuNET\JuSNS.UploadService\obj\Debug\JuSNS.UploadService.pdb
+F:\工作\JuNET\JuSNS.UploadService\bin\JuSNS.UploadService.dll
+F:\工作\JuNET\JuSNS.UploadService\bin\JuSNS.UploadService.pdb
+F:\工作\JuNET\JuSNS.UploadService\obj\Debug\ResolveAssemblyReference.cache
+F:\工作\JuNET\JuSNS.UploadService\obj\Debug\JuSNS.UploadService.dll
+F:\工作\JuNET\JuSNS.UploadService\obj\Debug\JuSNS.UploadService.pdb
+F:\工作\JuSNSV2.0\JuSNS.UploadService\bin\JuSNS.UploadService.dll
+F:\工作\JuSNSV2.0\JuSNS.UploadService\bin\JuSNS.UploadService.pdb
+F:\工作\JuSNSV2.0\JuSNS.UploadService\obj\Debug\ResolveAssemblyReference.cache
+F:\工作\JuSNSV2.0\JuSNS.UploadService\obj\Debug\JuSNS.UploadService.dll
+F:\工作\JuSNSV2.0\JuSNS.UploadService\obj\Debug\JuSNS.UploadService.pdb

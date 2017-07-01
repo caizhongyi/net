@@ -1,0 +1,113 @@
+<html dir="LTR">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" />
+    <meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5" />
+    <title>SqlServerBlobStream Constructor (String, String, String, String, String, String, String, String, String, String, String, String, String, String, String, String)</title>
+    <xml>
+    </xml>
+    <link rel="stylesheet" type="text/css" href="MSDN.css" />
+  </head>
+  <body id="bodyID" class="dtBODY">
+    <div id="nsbanner">
+      <div id="bannerrow1">
+        <table class="bannerparthead" cellspacing="0">
+          <tr id="hdr">
+            <td class="runninghead">NeatUpload Documentation</td>
+            <td class="product">
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div id="TitleRow">
+        <h1 class="dtH1">SqlServerBlobStream Constructor (String, String, String, String, String, String, String, String, String, String, String, String, String, String, String, String)</h1>
+      </div>
+    </div>
+    <div id="nstext">
+      <p> Main constructor; creates an SqlServerBlobStream against a new row in the given database using given settings </p>
+      <div class="syntax">public SqlServerBlobStream(<br />   <a href="http://msdn.microsoft.com/library/default.asp?url=/library/en-us/cpref/html/frlrfSystemStringClassTopic.asp">string</a> <i>ConnectionString</i>,<br />   <a href="http://msdn.microsoft.com/library/default.asp?url=/library/en-us/cpref/html/frlrfSystemStringClassTopic.asp">string</a> <i>TableName</i>,<br />   <a href="http://msdn.microsoft.com/library/default.asp?url=/library/en-us/cpref/html/frlrfSystemStringClassTopic.asp">string</a> <i>DataColumnName</i>,<br />   <a href="http://msdn.microsoft.com/library/default.asp?url=/library/en-us/cpref/html/frlrfSystemStringClassTopic.asp">string</a> <i>PartialFlagColumnName</i>,<br />   <a href="http://msdn.microsoft.com/library/default.asp?url=/library/en-us/cpref/html/frlrfSystemStringClassTopic.asp">string</a> <i>FileNameColumnName</i>,<br />   <a href="http://msdn.microsoft.com/library/default.asp?url=/library/en-us/cpref/html/frlrfSystemStringClassTopic.asp">string</a> <i>FileName</i>,<br />   <a href="http://msdn.microsoft.com/library/default.asp?url=/library/en-us/cpref/html/frlrfSystemStringClassTopic.asp">string</a> <i>MIMETypeColumnName</i>,<br />   <a href="http://msdn.microsoft.com/library/default.asp?url=/library/en-us/cpref/html/frlrfSystemStringClassTopic.asp">string</a> <i>MIMEType</i>,<br />   <a href="http://msdn.microsoft.com/library/default.asp?url=/library/en-us/cpref/html/frlrfSystemStringClassTopic.asp">string</a> <i>createProcedure</i>,<br />   <a href="http://msdn.microsoft.com/library/default.asp?url=/library/en-us/cpref/html/frlrfSystemStringClassTopic.asp">string</a> <i>openProcedure</i>,<br />   <a href="http://msdn.microsoft.com/library/default.asp?url=/library/en-us/cpref/html/frlrfSystemStringClassTopic.asp">string</a> <i>writeProcedure</i>,<br />   <a href="http://msdn.microsoft.com/library/default.asp?url=/library/en-us/cpref/html/frlrfSystemStringClassTopic.asp">string</a> <i>readProcedure</i>,<br />   <a href="http://msdn.microsoft.com/library/default.asp?url=/library/en-us/cpref/html/frlrfSystemStringClassTopic.asp">string</a> <i>cleanupProcedure</i>,<br />   <a href="http://msdn.microsoft.com/library/default.asp?url=/library/en-us/cpref/html/frlrfSystemStringClassTopic.asp">string</a> <i>renameProcedure</i>,<br />   <a href="http://msdn.microsoft.com/library/default.asp?url=/library/en-us/cpref/html/frlrfSystemStringClassTopic.asp">string</a> <i>storeHashProcedure</i>,<br />   <a href="http://msdn.microsoft.com/library/default.asp?url=/library/en-us/cpref/html/frlrfSystemStringClassTopic.asp">string</a> <i>deleteProcedure</i><br />);</div>
+      <h4 class="dtH4">Parameters</h4>
+      <dl>
+        <dt>
+          <i>ConnectionString</i>
+        </dt>
+        <dd>Connections string agains the database to use</dd>
+        <dt>
+          <i>TableName</i>
+        </dt>
+        <dd>Name of table to which we write the streamed data</dd>
+        <dt>
+          <i>DataColumnName</i>
+        </dt>
+        <dd>Name of table column to store data into (usually of type <code>Text</code> or <code>Image</code>)</dd>
+        <dt>
+          <i>PartialFlagColumnName</i>
+        </dt>
+        <dd>
+                <code>Optional</code> Name of table column to store a "partial"-flag in; while uploading this will be set to 1 (or set by CreatorProcedure), when done it will be set to 0</dd>
+        <dt>
+          <i>FileNameColumnName</i>
+        </dt>
+        <dd>
+                <code>Optional</code> Name of table column where the name of the uploaded file will be stored</dd>
+        <dt>
+          <i>FileName</i>
+        </dt>
+        <dd>
+                <code>Optional</code> Name of the uploaded file</dd>
+        <dt>
+          <i>MIMETypeColumnName</i>
+        </dt>
+        <dd>
+                <code>Optional</code> Name of table column where the MIME-type of the uploaded file will be stored</dd>
+        <dt>
+          <i>MIMEType</i>
+        </dt>
+        <dd>
+                <code>Optional</code> MIME-type of the uploaded file</dd>
+        <dt>
+          <i>createProcedure</i>
+        </dt>
+        <dd>
+        </dd>
+        <dt>
+          <i>openProcedure</i>
+        </dt>
+        <dd>
+        </dd>
+        <dt>
+          <i>writeProcedure</i>
+        </dt>
+        <dd>
+        </dd>
+        <dt>
+          <i>readProcedure</i>
+        </dt>
+        <dd>
+        </dd>
+        <dt>
+          <i>cleanupProcedure</i>
+        </dt>
+        <dd>
+        </dd>
+        <dt>
+          <i>renameProcedure</i>
+        </dt>
+        <dd>
+        </dd>
+        <dt>
+          <i>storeHashProcedure</i>
+        </dt>
+        <dd>
+        </dd>
+        <dt>
+          <i>deleteProcedure</i>
+        </dt>
+        <dd>
+        </dd>
+      </dl>
+      <h4 class="dtH4">See Also</h4>
+      <p>
+        <a href="Hitone.Web.SqlServerUploader.SqlServerBlobStream.html">SqlServerBlobStream Class</a> | <a href="Hitone.Web.SqlServerUploader.html">Hitone.Web.SqlServerUploader Namespace</a> | <a href="Hitone.Web.SqlServerUploader.SqlServerBlobStreamConstructor.html">SqlServerBlobStream Constructor Overload List</a></p>
+    </div>
+  </body>
+</html>

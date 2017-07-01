@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script type="text/javascript" src="../czy-js-all.js"></script>
+    <link rel="stylesheet" href="../czy-css-all.css" type="text/css"/>
+    <script type="text/javascript">
+
+        window.onload = function () {
+
+            new czyjs.File.YahooUpLoad(
+            {
+                maxLimit: 10,
+                contenterId: "albumId",
+                formats: [{ name: "Image", filter: "*.jpg;*.png;*.gif" }, { name: "video", filter: "*.avi;*.mov;*.mpg"}],            //上图片过滤:示例[{name:"Image",filter:"*.jpg;*.png;*.gif" },{name:"video",filter:"*.avi;*.mov;*.mpg" }]
+               // listenters: param.listenters,
+                url: "up.aspx"
+            }
+            )
+
+        }
+        /*
+        function WebUpload() {
+            try {
+                 var d = document.createElement("<object id='WWPictureUpload' height=0 width=0 classid='clsid:1D63232D-4F15-4A42-890D-EE617AA1537D' codebase='http://download.taobaocdn.com/software/WWPictureUpload.cab#version=1,0,0,1'></object>");
+                 document.body.appendChild(d);
+
+                var cpAdder;
+                if (typeof (o) == "undefined") {
+                    cpAdder = new ActiveXObject("WWPictureUpload.WWPicUploadCtrl");
+                } else {
+                    cpAdder = o;
+                }
+                var id = "caizhongyi";
+                var Name = "ddd";
+                var value = "<option selected value=" + id + ">" + encodeHtml(Name) + "</option>";
+                document.getElementById("albumId").innerHTML = value;
+
+                var strAlbumId = document.getElementById("albumId").value;
+                var v = cpAdder.WebUpload(strAlbumId);
+                if (v) {
+                    var url = "http://photo.jianghu.taobao.com/owner/picture_list.htm?album_id=" + strAlbumId + "&tracelog=Photo009";
+                    window.location.href = url;
+                } else {
+                   // document.getElementById("show_install_ax").style.display = "none";
+                   // document.getElementById("upload_picture").style.display = "";
+                }
+            } catch (e) {
+                //document.getElementById("show_install_ax").style.display = "";
+                //document.getElementById("upload_picture").style.display = "none";
+            }
+        }
+         */
+    </script>
+</head>
+<body>
+<a href="#" onclick=" WebUpload()">上传</a>
+<div id="albumId"></div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+﻿#parse("_head.html")
+<script type="text/javascript" src="$webpath/library/js/jquery-ui.min.js"></script>
+<div id="snsmenu">
+#parse("_menu.html")
+</div>
+<div id="snsbody">
+    <div id="snshead">更改菜单</div>
+ 
+        <form action="default$exname" method="post">
+        <div class="setmenu" id="sortable">
+            <ul class="default-app">
+                $SetMenulist
+            </ul>
+            <div>
+            <input id="Submit1" type="submit" value="保存设置" class="btn_blue4" />
+                <input id="Button1" type="button" value="恢复到默认值" onclick="SetMenuDefault($uid)" class="btn_gray6"  />
+            </div>
+        </div>
+        </form>
+    
+</div>
+<script type="text/javascript">
+function SetMenuDefault(uid)
+{
+    jQuery.get(ajaxUrl, { action:"SetMenuDefaultAjax", uid:uid, param:Math.random() }, 
+      function(msg)
+      {
+         if(msg.indexOf("succs")>-1)
+         {
+             showRightResult("恢复默认值成功");
+             setTimeout(function() 
+             {
+                window.location.href=location.href;
+              }, 2000);
+         }
+         else
+         {
+             showErrorResult("恢复默认值失败");
+         }
+      }
+    );         
+}
+ function DeleteMenu(m)
+ {
+    if (!confirm("确定要删除吗？")) return;
+    jQuery("[param=p_"+m+"]").remove();
+ }
+ 
+jQuery(function() {
+    jQuery("#sortable").sortable(
+    {
+        items: 'li[param!=1]', //拖拽对象
+        cursor: 'move', //鼠标样式
+        opacity: 0.8, //拖拽时透明
+        update: function(e, ui) {
+            var ids = [];
+            jQuery("#sortable li").each(
+                function() {
+                    var attr = this.getAttribute("param");
+                    if (!isNaN(attr)) {
+                        ids[ids.length] = parseInt(attr);
+                    }
+                }
+            );
+        }
+    });
+});	
+
+</script>
+    
+#parse("_foot.html")

@@ -1,0 +1,26 @@
+
+
+/*公共部分
+-------------------------------------------------*/
+.czy-grid{ overflow:hidden; }
+.czy-grid .data-content{ margin-left:10px;}
+.czy-grid .data-content .czy-grid-head{ overflow:hidden;  background-color:#999999; color:White; font-weight:bold;}
+.czy-grid .data-content .czy-grid-head li{ }
+.czy-grid .data-content .czy-grid-body{color:Black;overflow:hidden; background-color:#ffffff; }
+.czy-grid .data-content .czy-grid-body li{}
+.czy-grid .data-content .czy-grid-row {color:Black;overflow:hidden;}
+.czy-grid .data-content .czy-grid-row li{}
+.czy-grid .data-content .czy-grid-row-on {}
+.czy-grid .data-content .czy-grid-row-on li{}
+
+/* 边框样式 */
+.czy-grid .t-border{ background-color:White}
+.czy-grid .t-border .t-topLeft{ background:url(../images/gridview/default/gv_tleft.png) no-repeat;}/*filter:alpha(opacity=20); opacity=0.5;*/
+.czy-grid .t-border .t-topRight{background:url(../images/gridview/default/gv_tright.png) no-repeat;}
+.czy-grid .t-border .t-topCenter{background:url(../images/gridview/default/gv_tcenter.png) repeat-x;}
+.czy-grid .t-border .t-middleLeft{background:url(../images/gridview/default/gv_sleft.png) repeat-y; }
+.czy-grid .t-border .t-middleRight{background:url(../images/gridview/default/gv_sright.png) repeat-y; }
+.czy-grid .t-border .t-middleCenter{background:url(../images/gridview/default/gv_scenter.png);   }
+.czy-grid .t-border .t-bottomLeft{ background:url(../images/gridview/default/gv_bleft.png) no-repeat;}
+.czy-grid .t-border .t-bottomRight{ background:url(../images/gridview/default/gv_bright.png) no-repeat; }
+.czy-grid .t-border .t-bottomCenter{background:url(../images/gridview/default/gv_bcenter.png) repeat-x;}

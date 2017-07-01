@@ -1,0 +1,178 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+<%@ Register Assembly="System.Web.Extensions, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"
+    Namespace="System.Web.UI" TagPrefix="asp" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>无标题页</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="UTF-8" />
+<style type="text/css">
+<!--
+
+a:link {
+	text-decoration: none;
+	color: #009999;
+}
+a:visited {
+	text-decoration: none;
+	color: #996600;
+}
+a:hover {
+	text-decoration: none;
+	color: #006699;
+}
+a:active {
+	text-decoration: none;
+	color: #00CCCC;
+}
+-->
+</style>
+    
+    
+    <link rel="stylesheet" rev="stylesheet" href="js/resources/css/ext-all.css" type="text/css" media="all" />
+    <link href="App_Themes/pager.css" rel="stylesheet" type="text/css" />
+    <link href="App_Themes/allStyle.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript" src="js/adapter/ext/ext-base.js"></script> 
+    <script type="text/javascript" src="js/ext-all.js"></script>
+    <script type ="text/javascript" src="js/ext-lang-zh_CN.js"></script>
+    
+    <script type="text/javascript" src="Javascript/Loading.js"></script>
+    <script type="text/javascript" src="Javascript/Navigation.js"></script>
+
+    
+</head>
+<body class="pagebody">
+  <form id="Form1" runat ="server">
+
+     <div class="pageCenter" style="width:1000px; height:853px">
+   
+       <table  style=" width:100%;" >
+           <tr style="height:310px">
+       
+           </tr>   
+             <tr >
+             <td rowspan="3" style="width: 490px; vertical-align:text-top; text-align :left ; height: 401px;">
+             
+        <div class="pageleft">
+        <ul id="UlMainNav" class="mainNav">
+            <li class="mainNav_List" onclick="MainNavClick1(this);"  style="background-image:url(Images/bar1.gif);background-repeat: no-repeat"><a href="#">帐号管理</a>
+                <ul class="subNav" style="display: none;" >
+                    <li class="subNav_List"  style="background-image:url(Images/subbar.gif);background-repeat: no-repeat" ><a href="WbUserManger.aspx">客户帐号管理</a></li>
+                    <li class="subNav_List"  style="background-image:url(Images/subbar.gif);background-repeat: no-repeat"><a href="WbUserManger.aspx">系统帐号管理</a></li>
+                    <li class="subNav_List"  style="background-image:url(Images/subbar.gif);background-repeat: no-repeat"><a href="WbUserManger.aspx">网吧帐号管理</a></li>
+                     <li class="subNav_List" style="background-image:url(Images/subbar.gif);background-repeat: no-repeat"><a href="AddUser.aspx">增加用户</a></li>
+                    </ul>
+               
+                </li>
+                
+                 <li class="mainNav_List"  style=" background-image:url(Images/line.gif); background-repeat:no-repeat;">
+                 <ul class="subNav" style="display: none">
+                 <li class="subNav_List" ></li></ul>
+                 </li>
+               
+
+            <li class="mainNav_List" onclick="MainNavClick1(this);" style="background-image:url(Images/bar.gif);background-repeat: no-repeat"><a href="#">广告管理</a>
+                <ul class="subNav" style="display: none">
+                    <li class="subNav_List" style="background-image:url(Images/subbar.gif);background-repeat: no-repeat"><a href="WbAdAddManger.aspx">广告上传</a></li>
+                      <li class="subNav_List" style="background-image:url(Images/subbar.gif);background-repeat: no-repeat"><a href="adminAdManger.aspx">广告发布</a></li>
+                    <li class="subNav_List" style="background-image:url(Images/subbar.gif);background-repeat: no-repeat"><a href="WbAdManger.aspx">广告信息管理</a></li>
+                    <li class="subNav_List" style="background-image:url(Images/subbar.gif);background-repeat: no-repeat"><a href="WbAdType.aspx">广告类型</a></li>
+                      
+                    </ul>
+                      
+            </li>
+           
+             <li class="mainNav_List"  style=" background-image:url(Images/line.gif); background-repeat:no-repeat" >
+                 <ul class="subNav" style="display: none">
+                 <li class="subNav_List" ></li></ul>
+                 </li>
+              
+               <li class="mainNav_List" onclick="MainNavClick1(this);" style="background-image:url(Images/bar.gif);background-repeat: no-repeat"><a href="#">网吧管理</a>
+                <ul class="subNav" style="display: none">
+                    <li class="subNav_List" style="background-image:url(Images/subbar.gif);background-repeat: no-repeat"><a href="WbAddManger.aspx">网吧信息管理</a></li>
+                    <li class="subNav_List" style="background-image:url(Images/subbar.gif);background-repeat: no-repeat"><a href="WbManger.aspx">网吧信息查看</a></li>
+               </ul>
+                
+            </li>
+            
+                <li class="mainNav_List"  style=" background-image:url(Images/line.gif); background-repeat:no-repeat">
+                 <ul class="subNav" style="display: none">
+               <li class="subNav_List" ></li></ul>
+                 </li>
+              
+               <li class="mainNav_List" onclick="MainNavClick1(this);" style="background-image:url(Images/bar.gif);background-repeat: no-repeat"><a href="#">网吧操作</a>
+                <ul class="subNav" style="display: none">
+                    <li class="subNav_List" style="background-image:url(Images/subbar.gif);background-repeat: no-repeat"><a href="AdView.aspx">广告查询</a></li>
+                    <li class="subNav_List" style="background-image:url(Images/subbar.gif);background-repeat: no-repeat"><a href="AdView.aspx">广告下载</a></li>
+                                 <li class="subNav_List" style="background-image:url(Images/subbar.gif);background-repeat: no-repeat"><a href="PwdChange.aspx">密码修改</a></li>
+               </ul>
+               
+                     <li class="mainNav_List"  style=" background-image:url(Images/line.gif); background-repeat:no-repeat">
+                 <ul class="subNav" style="display: none">
+               <li class="subNav_List" ></li></ul>
+                 </li>
+               
+                    <li class="mainNav_List" onclick="MainNavClick1(this);" style="background-image:url(Images/bar.gif);background-repeat: no-repeat"><a href="#">个人信息管理</a>
+                <ul class="subNav" style="display: none">
+                    <li class="subNav_List" style="background-image:url(Images/subbar.gif);background-repeat: no-repeat"><a href="AdView.aspx">个人信息修改</a></li>
+                    <li class="subNav_List" style="background-image:url(Images/subbar.gif);background-repeat: no-repeat"><a href="AdView.aspx">个人信息查看</a></li>
+                                 <li class="subNav_List" style="background-image:url(Images/subbar.gif);background-repeat: no-repeat"><a href="PwdChange.aspx">密码修改</a></li>
+               </ul>
+                
+            </li>
+            
+             <li class="mainNav_List"  style=" background-image:url(Images/line.gif); background-repeat:no-repeat">
+                 <ul class="subNav" style="display: none">
+                   <li class="subNav_List"></li></ul>
+                 </li>
+                 
+               <li class="mainNav_List" onclick="MainNavClick1(this);" style="background-image:url(Images/bar.gif);background-repeat: no-repeat"><a href="#">客户操作</a>
+                <ul class="subNav" style="display: none">
+                    <li class="subNav_List" style="background-image:url(Images/subbar.gif);background-repeat: no-repeat"><a href="AdView.aspx">广告上传</a></li>
+                    <li class="subNav_List" style="background-image:url(Images/subbar.gif);background-repeat: no-repeat"><a href="AdView.aspx">广告查询</a></li>
+               </ul>  
+                 
+                   <li class="mainNav_List"  style=" background-image:url(Images/line.gif); background-repeat:no-repeat">
+                 <ul class="subNav" style="display: none">
+                   <li class="subNav_List"></li></ul>
+                 </li>
+             
+            <li class="mainNav_List" onclick="MainNavClick(this)" >
+                <asp:HyperLink ID="HlLoginOut" runat="server" NavigateUrl="~/index.aspx" style="background-image:url(Images/subbar.gif);background-repeat: no-repeat" Width="178px">用户注销</asp:HyperLink>
+            </li>
+           
+              <li class="mainNav_List"   style=" background-image:url(Images/line.gif); background-repeat:no-repeat">
+                 <ul class="subNav" style="display: none">
+                 <li class="subNav_List" ></li></ul>
+                 </li>
+           
+        </ul>
+      </div>
+                 </td>
+                 <td colspan="2" rowspan="3" style="width: 80%; vertical-align:text-top; text-align:left; height: 401px;" >
+                     &nbsp;<div class="pageRight" style="height: 597px; width:200px" >
+                         &nbsp;&nbsp;<asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                             <ContentTemplate>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server" >
+                    
+                    </asp:ContentPlaceHolder>
+                             </ContentTemplate>
+                         </asp:UpdatePanel>
+                     </div>
+                 </td>
+             </tr>
+       
+         </table>
+              <div class="pagefoot" style=" width:100%; height: 100px">
+        <div></div>
+        </div>
+          
+
+</div> 
+  </form>
+</body>
+</html>

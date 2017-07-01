@@ -1,0 +1,17 @@
+C:\Documents and Settings\Administrator\桌面\3DTools-1.01-src\3DTools-1.01-src\Samples\ModelViewer\bin\Release\Sample Models\Tiger.xaml
+C:\Documents and Settings\Administrator\桌面\3DTools-1.01-src\3DTools-1.01-src\Samples\ModelViewer\bin\Release\Sample Models\Tiger.bmp
+C:\Documents and Settings\Administrator\桌面\3DTools-1.01-src\3DTools-1.01-src\Samples\ModelViewer\bin\Release\ModelViewer.exe
+C:\Documents and Settings\Administrator\桌面\3DTools-1.01-src\3DTools-1.01-src\Samples\ModelViewer\bin\Release\ModelViewer.pdb
+C:\Documents and Settings\Administrator\桌面\3DTools-1.01-src\3DTools-1.01-src\Samples\ModelViewer\bin\Release\3DTools.dll
+C:\Documents and Settings\Administrator\桌面\3DTools-1.01-src\3DTools-1.01-src\Samples\ModelViewer\bin\Release\3DTools.pdb
+C:\Documents and Settings\Administrator\桌面\3DTools-1.01-src\3DTools-1.01-src\Samples\ModelViewer\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\桌面\3DTools-1.01-src\3DTools-1.01-src\Samples\ModelViewer\obj\Release\MainWindow.baml
+C:\Documents and Settings\Administrator\桌面\3DTools-1.01-src\3DTools-1.01-src\Samples\ModelViewer\obj\Release\MainWindow.g.cs
+C:\Documents and Settings\Administrator\桌面\3DTools-1.01-src\3DTools-1.01-src\Samples\ModelViewer\obj\Release\MyApp.g.cs
+C:\Documents and Settings\Administrator\桌面\3DTools-1.01-src\3DTools-1.01-src\Samples\ModelViewer\obj\Release\ModelViewer_Content.g.cs
+C:\Documents and Settings\Administrator\桌面\3DTools-1.01-src\3DTools-1.01-src\Samples\ModelViewer\obj\Release\ModelViewer_MarkupCompile.cache
+C:\Documents and Settings\Administrator\桌面\3DTools-1.01-src\3DTools-1.01-src\Samples\ModelViewer\obj\Release\ModelViewer.g.resources
+C:\Documents and Settings\Administrator\桌面\3DTools-1.01-src\3DTools-1.01-src\Samples\ModelViewer\obj\Release\ModelViewer.Properties.Resources.resources
+C:\Documents and Settings\Administrator\桌面\3DTools-1.01-src\3DTools-1.01-src\Samples\ModelViewer\obj\Release\ModelViewer.csproj.GenerateResource.Cache
+C:\Documents and Settings\Administrator\桌面\3DTools-1.01-src\3DTools-1.01-src\Samples\ModelViewer\obj\Release\ModelViewer.exe
+C:\Documents and Settings\Administrator\桌面\3DTools-1.01-src\3DTools-1.01-src\Samples\ModelViewer\obj\Release\ModelViewer.pdb

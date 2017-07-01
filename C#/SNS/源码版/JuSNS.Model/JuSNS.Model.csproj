@@ -1,0 +1,141 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C8EEDA36-9208-49A7-8892-4A635E601D1D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>JuSNS.Model</RootNamespace>
+    <AssemblyName>JuSNS.Model</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\JuSNS.Model.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdsInfo.cs" />
+    <Compile Include="AlbumInfo.cs" />
+    <Compile Include="AppDeveloperInfo.cs" />
+    <Compile Include="AppInfo.cs" />
+    <Compile Include="AskClassInfo.cs" />
+    <Compile Include="AskInfo.cs" />
+    <Compile Include="AtiveClassInfo.cs" />
+    <Compile Include="AtiveCommentInfo.cs" />
+    <Compile Include="AtiveInfo.cs" />
+    <Compile Include="AtiveMemberInfo.cs" />
+    <Compile Include="ATTInfo.cs" />
+    <Compile Include="BlogClassInfo.cs" />
+    <Compile Include="BlogCommentInfo.cs" />
+    <Compile Include="BlogFootInfo.cs" />
+    <Compile Include="BlogInfo.cs" />
+    <Compile Include="CalendInfo.cs" />
+    <Compile Include="CareerInfo.cs" />
+    <Compile Include="ChargeOrderInfo.cs" />
+    <Compile Include="ConstellationInfo.cs" />
+    <Compile Include="DictAcademyInfo.cs" />
+    <Compile Include="DictAreaInfo.cs" />
+    <Compile Include="DictSchoolInfo.cs" />
+    <Compile Include="DictVocationInfo.cs" />
+    <Compile Include="DynInfo.cs" />
+    <Compile Include="EducationInfo.cs" />
+    <Compile Include="EmailNoticeInfo.cs" />
+    <Compile Include="Enum\EnumClass.cs" />
+    <Compile Include="Enum\EnumeRates.cs" />
+    <Compile Include="FavoriteClassInfo.cs" />
+    <Compile Include="FavoriteInfo.cs" />
+    <Compile Include="FilesInfo.cs" />
+    <Compile Include="FlashInfo.cs" />
+    <Compile Include="FriendInfo.cs" />
+    <Compile Include="GBookInfo.cs" />
+    <Compile Include="GiftClassInfo.cs" />
+    <Compile Include="GiftInfo.cs" />
+    <Compile Include="GiftUserInfo.cs" />
+    <Compile Include="GoodsCommentInfo.cs" />
+    <Compile Include="GroupClassInfo.cs" />
+    <Compile Include="GroupInfo.cs" />
+    <Compile Include="GroupInviteInfo.cs" />
+    <Compile Include="GroupMemberInfo.cs" />
+    <Compile Include="GroupTopicInfo.cs" />
+    <Compile Include="HelpInfo.cs" />
+    <Compile Include="JoinVipInfo.cs" />
+    <Compile Include="LinksInfo.cs" />
+    <Compile Include="MagicInfo.cs" />
+    <Compile Include="MailInfo.cs" />
+    <Compile Include="NewsChannelInfo.cs" />
+    <Compile Include="NewsCommentInfo.cs" />
+    <Compile Include="NewsInfo.cs" />
+    <Compile Include="NoticeInfo.cs" />
+    <Compile Include="OnlineUserInfo.cs" />
+    <Compile Include="PhotoCommentInfo.cs" />
+    <Compile Include="PhotoInfo.cs" />
+    <Compile Include="PokeInfo.cs" />
+    <Compile Include="PrivacyInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportInfo.cs" />
+    <Compile Include="ShareInfo.cs" />
+    <Compile Include="ShopClassInfo.cs" />
+    <Compile Include="ShopGoodsInfo.cs" />
+    <Compile Include="ShopInfo.cs" />
+    <Compile Include="ShopMulteBuyInfo.cs" />
+    <Compile Include="ShopNewsInfo.cs" />
+    <Compile Include="ShopOrderInfo.cs" />
+    <Compile Include="ShopPhotoInfo.cs" />
+    <Compile Include="ShopUserCommentInfo.cs" />
+    <Compile Include="SpaceTemplateInfo.cs" />
+    <Compile Include="SqlConditionInfo.cs" />
+    <Compile Include="TwitterCommentInfo.cs" />
+    <Compile Include="TwitterInfo.cs" />
+    <Compile Include="UserBaseInfo.cs" />
+    <Compile Include="UserInfo.cs" />
+    <Compile Include="UserSettingInfo.cs" />
+    <Compile Include="VocationInfo.cs" />
+    <Compile Include="VoteInfo.cs" />
+    <Compile Include="VoteOptionInfo.cs" />
+    <Compile Include="VoteToInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ApiInterface\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

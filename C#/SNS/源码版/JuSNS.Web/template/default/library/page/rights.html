@@ -1,0 +1,17 @@
+﻿#parse("_head.html")
+<div id="snsmenu">
+#parse("_menu.html")
+</div>
+<div id="snsbody">
+    <!--<div id="snshead"><span class="l">操作成功</span></div>-->
+    <div id="snsbody-all" style="width:94%;float:left;">
+        <div style="color:Green;margin:20px;font-size:18px;font-family:微软雅黑;">
+        $errormessage </div>
+    <div class="r"><a href="$returnurls">$msgdesc</a></div>
+    </div>
+    #if($isredirect=="true")
+    <script type="text/javascript">setTimeout("window.location.href ='$returnurls';", 6000);</script>
+    #end
+</div>
+
+#parse("_foot.html")

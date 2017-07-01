@@ -1,0 +1,41 @@
+﻿<style type="text/css">
+<!--
+#stylePanel img {
+	padding: 5px;
+	margin: 8px;
+	border: 2px solid #FFFFFF;
+}
+-->
+</style>
+<table border="0" align="center" cellpadding="0" cellspacing="0" id="stylePanel">
+	<tr>
+		<td align="center" valign="middle"><a href="JavaScript:ChangeStyle('Black')"><img src="Images/Black.gif" alt="Black" width="90" height="60" border="0" /></a></td>
+		<td align="center" valign="middle"><a href="JavaScript:ChangeStyle('Default2006')"><img src="Images/Default2006.gif" alt="Default2006" width="90" height="60" border="0" /></a></td>
+		<td align="center" valign="middle"><a href="JavaScript:ChangeStyle('Default')"><img src="Images/Default.gif" alt="Default" width="90" height="60" border="0" /></a></td>
+		<td align="center" valign="middle"><a href="JavaScript:ChangeStyle('Inox')"><img src="Images/Inox.gif" alt="Inox" width="90" height="60" border="0" /></a></td>
+	</tr>
+	<tr>
+		<td align="center" valign="middle"><a href="JavaScript:ChangeStyle('Mac')"><img src="Images/Mac.gif" alt="Mac" width="90" height="60" border="0" /></a></td>
+		<td align="center" valign="middle"><a href="JavaScript:ChangeStyle('Office2007')"><img src="Images/Office2007.gif" alt="Office2007" width="90" height="60" border="0" /></a></td>
+		<td align="center" valign="middle"><a href="JavaScript:ChangeStyle('Outlook')"><img src="Images/Outlook.gif" alt="Outlook" width="90" height="60" border="0" /></a></td>
+		<td align="center" valign="middle"><a href="JavaScript:ChangeStyle('Telerik')"><img src="Images/Telerik.gif" alt="Telerik" width="90" height="60" border="0" /></a></td>
+	</tr>
+	<tr>
+		<td align="center" valign="middle"><a href="JavaScript:ChangeStyle('Vista')"><img src="Images/Vista.gif" alt="Vista" width="90" height="60" border="0" /></a></td>
+		<td align="center" valign="middle"><a href="JavaScript:ChangeStyle('Web20')"><img src="Images/Web20.gif" alt="Web20" width="90" height="60" border="0" /></a></td>
+		<td align="center" valign="middle"><a href="JavaScript:ChangeStyle('WebBlue')"><img src="Images/WebBlue.gif" alt="WebBlue" width="90" height="60" border="0" /></a></td>
+		<td align="center" valign="middle">&nbsp;</td>
+	</tr>
+	
+	
+</table>
+<script type="text/javascript">
+$("#stylePanel").find("img").hover(
+	function(){
+		$(this).css("border","solid 2px #CCCCCC");
+	},
+	function(){
+		$(this).css("border","solid 2px #FFFFFF");
+	}
+);
+</script>

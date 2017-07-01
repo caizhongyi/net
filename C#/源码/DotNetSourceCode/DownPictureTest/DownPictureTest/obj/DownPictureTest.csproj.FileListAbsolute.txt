@@ -1,0 +1,8 @@
+C:\Documents and Settings\Administrator\桌面\DownPictureTest\DownPictureTest\bin\Debug\DownPictureTest.exe
+C:\Documents and Settings\Administrator\桌面\DownPictureTest\DownPictureTest\bin\Debug\DownPictureTest.pdb
+C:\Documents and Settings\Administrator\桌面\DownPictureTest\DownPictureTest\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\桌面\DownPictureTest\DownPictureTest\obj\Debug\DownPictureTest.Form1.resources
+C:\Documents and Settings\Administrator\桌面\DownPictureTest\DownPictureTest\obj\Debug\DownPictureTest.Properties.Resources.resources
+C:\Documents and Settings\Administrator\桌面\DownPictureTest\DownPictureTest\obj\Debug\DownPictureTest.csproj.GenerateResource.Cache
+C:\Documents and Settings\Administrator\桌面\DownPictureTest\DownPictureTest\obj\Debug\DownPictureTest.exe
+C:\Documents and Settings\Administrator\桌面\DownPictureTest\DownPictureTest\obj\Debug\DownPictureTest.pdb

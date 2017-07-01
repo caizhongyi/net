@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NewDataSet>
+  <SelAdvInfoByWbId>
+    <Adv_Id>0</Adv_Id>
+    <Adv_Name>美女      </Adv_Name>
+    <Adv_Url>~/11e2adc3860.jpg</Adv_Url>
+    <Wb_Id>10102120</Wb_Id>
+    <Adv_Endday>2008-12-03T00:00:00+08:00</Adv_Endday>
+    <Adv_Type_Id>2</Adv_Type_Id>
+  </SelAdvInfoByWbId>
+  <SelAdvInfoByWbId>
+    <Adv_Id>1</Adv_Id>
+    <Adv_Name>daben     </Adv_Name>
+    <Adv_Url>~/200710280109007813.jpg</Adv_Url>
+    <Wb_Id>10102120</Wb_Id>
+    <Adv_Content>11111111</Adv_Content>
+    <Adv_Endday>2008-12-30T00:00:00+08:00</Adv_Endday>
+    <Adv_Type_Id>2</Adv_Type_Id>
+  </SelAdvInfoByWbId>
+  <SelAdvInfoByWbId>
+    <Adv_Id>2</Adv_Id>
+    <Adv_Name>美容广告  </Adv_Name>
+    <Adv_Url>~/20081211152042.jpg</Adv_Url>
+    <Wb_Id>10102120</Wb_Id>
+    <Adv_Content />
+    <Adv_Endday>2008-09-09T00:00:00+08:00</Adv_Endday>
+    <Adv_Type_Id>5</Adv_Type_Id>
+  </SelAdvInfoByWbId>
+  <SelAdvInfoByWbId>
+    <Adv_Id>3</Adv_Id>
+    <Adv_Name>moshou    </Adv_Name>
+    <Adv_Url>~/moshou.jpg</Adv_Url>
+    <Wb_Id>10102120</Wb_Id>
+    <Adv_Content>moshou</Adv_Content>
+    <Adv_Endday>2008-12-29T00:00:00+08:00</Adv_Endday>
+    <Adv_Type_Id>6</Adv_Type_Id>
+  </SelAdvInfoByWbId>
+  <SelAdvInfoByWbId>
+    <Adv_Id>4</Adv_Id>
+    <Adv_Name>tianci    </Adv_Name>
+    <Adv_Url>~/tianci.jpg</Adv_Url>
+    <Wb_Id>10102120</Wb_Id>
+    <Adv_Content>tianci</Adv_Content>
+    <Adv_Endday>2008-12-30T00:00:00+08:00</Adv_Endday>
+    <Adv_Type_Id>6</Adv_Type_Id>
+  </SelAdvInfoByWbId>
+  <SelAdvInfoByWbId>
+    <Adv_Id>5</Adv_Id>
+    <Adv_Name>gugong    </Adv_Name>
+    <Adv_Url>~/gugong.jpg</Adv_Url>
+    <Wb_Id>10102120</Wb_Id>
+    <Adv_Content>gugong</Adv_Content>
+    <Adv_Endday>2008-12-29T00:00:00+08:00</Adv_Endday>
+    <Adv_Type_Id>6</Adv_Type_Id>
+  </SelAdvInfoByWbId>
+  <SelAdvInfoByWbId>
+    <Adv_Id>6</Adv_Id>
+    <Adv_Name>sejie     </Adv_Name>
+    <Adv_Url>~/sejie.jpg</Adv_Url>
+    <Wb_Id>10102120</Wb_Id>
+    <Adv_Content>sejie</Adv_Content>
+    <Adv_Endday>2008-12-30T00:00:00+08:00</Adv_Endday>
+    <Adv_Type_Id>6</Adv_Type_Id>
+  </SelAdvInfoByWbId>
+  <SelAdvInfoByWbId>
+    <Adv_Id>7</Adv_Id>
+    <Adv_Name>kaidilake </Adv_Name>
+    <Adv_Url>~/kaidilake.jpg</Adv_Url>
+    <Wb_Id>10102120</Wb_Id>
+    <Adv_Content>kaidilake</Adv_Content>
+    <Adv_Endday>2008-12-28T00:00:00+08:00</Adv_Endday>
+    <Adv_Type_Id>6</Adv_Type_Id>
+  </SelAdvInfoByWbId>
+  <SelAdvInfoByWbId>
+    <Adv_Id>8</Adv_Id>
+    <Adv_Name>baoshijie </Adv_Name>
+    <Adv_Url>~/baoshijie.jpg</Adv_Url>
+    <Wb_Id>10102120</Wb_Id>
+    <Adv_Content>baoshijie</Adv_Content>
+    <Adv_Endday>2008-12-30T00:00:00+08:00</Adv_Endday>
+    <Adv_Type_Id>7</Adv_Type_Id>
+  </SelAdvInfoByWbId>
+  <SelAdvInfoByWbId>
+    <Adv_Id>9</Adv_Id>
+    <Adv_Name>yeyan     </Adv_Name>
+    <Adv_Url>~/yeyan.jpg</Adv_Url>
+    <Wb_Id>10102120</Wb_Id>
+    <Adv_Content>yeyan</Adv_Content>
+    <Adv_Endday>2008-12-29T00:00:00+08:00</Adv_Endday>
+    <Adv_Type_Id>7</Adv_Type_Id>
+  </SelAdvInfoByWbId>
+  <SelAdvInfoByWbId>
+    <Adv_Id>10</Adv_Id>
+    <Adv_Name>siku      </Adv_Name>
+    <Adv_Url>~/siku.jpg</Adv_Url>
+    <Wb_Id>10102120</Wb_Id>
+    <Adv_Content>siku</Adv_Content>
+    <Adv_Endday>2008-12-30T00:00:00+08:00</Adv_Endday>
+    <Adv_Type_Id>7</Adv_Type_Id>
+  </SelAdvInfoByWbId>
+  <SelAdvInfoByWbId>
+    <Adv_Id>11</Adv_Id>
+    <Adv_Name>yueyanglou</Adv_Name>
+    <Adv_Url>~/yueyanglou.jpg</Adv_Url>
+    <Wb_Id>10102120</Wb_Id>
+    <Adv_Content>yueyanglou</Adv_Content>
+    <Adv_Endday>2008-12-30T09:00:00+08:00</Adv_Endday>
+    <Adv_Type_Id>7</Adv_Type_Id>
+  </SelAdvInfoByWbId>
+  <SelAdvInfoByWbId>
+    <Adv_Id>12</Adv_Id>
+    <Adv_Name>sanguo    </Adv_Name>
+    <Adv_Url>~/sanguo.jpg</Adv_Url>
+    <Wb_Id>10102120</Wb_Id>
+    <Adv_Content>sanguo</Adv_Content>
+    <Adv_Endday>2008-12-28T00:00:00+08:00</Adv_Endday>
+    <Adv_Type_Id>7</Adv_Type_Id>
+  </SelAdvInfoByWbId>
+  <SelAdvInfoByWbId>
+    <Adv_Id>13</Adv_Id>
+    <Adv_Name>xianjian  </Adv_Name>
+    <Adv_Url>~/xianjian.jpg</Adv_Url>
+    <Wb_Id>10102120</Wb_Id>
+    <Adv_Content>xianjian</Adv_Content>
+    <Adv_Endday>2008-12-29T00:00:00+08:00</Adv_Endday>
+    <Adv_Type_Id>8</Adv_Type_Id>
+  </SelAdvInfoByWbId>
+  <SelAdvInfoByWbId>
+    <Adv_Id>14</Adv_Id>
+    <Adv_Name>gezhouba  </Adv_Name>
+    <Adv_Url>~/gezhouba.jpg</Adv_Url>
+    <Wb_Id>10102120</Wb_Id>
+    <Adv_Content>gezhouba</Adv_Content>
+    <Adv_Endday>2008-12-28T08:00:00+08:00</Adv_Endday>
+    <Adv_Type_Id>8</Adv_Type_Id>
+  </SelAdvInfoByWbId>
+  <SelAdvInfoByWbId>
+    <Adv_Id>15</Adv_Id>
+    <Adv_Name>tulou     </Adv_Name>
+    <Adv_Url>~/tulou.jpg</Adv_Url>
+    <Wb_Id>10102120</Wb_Id>
+    <Adv_Content>tulou</Adv_Content>
+    <Adv_Endday>2008-12-29T00:00:00+08:00</Adv_Endday>
+    <Adv_Type_Id>8</Adv_Type_Id>
+  </SelAdvInfoByWbId>
+  <SelAdvInfoByWbId>
+    <Adv_Id>16</Adv_Id>
+    <Adv_Name>bunengsuo </Adv_Name>
+    <Adv_Url>~/bunengsuo.jpg</Adv_Url>
+    <Wb_Id>10102120</Wb_Id>
+    <Adv_Content>bunengsuo</Adv_Content>
+    <Adv_Endday>2008-12-28T00:00:00+08:00</Adv_Endday>
+    <Adv_Type_Id>8</Adv_Type_Id>
+  </SelAdvInfoByWbId>
+  <SelAdvInfoByWbId>
+    <Adv_Id>17</Adv_Id>
+    <Adv_Name>hangma    </Adv_Name>
+    <Adv_Url>~/hangma.jpg</Adv_Url>
+    <Wb_Id>10102120</Wb_Id>
+    <Adv_Content>hangma</Adv_Content>
+    <Adv_Endday>2008-12-29T00:00:00+08:00</Adv_Endday>
+    <Adv_Type_Id>8</Adv_Type_Id>
+  </SelAdvInfoByWbId>
+  <SelAdvInfoByWbId>
+    <Adv_Id>18</Adv_Id>
+    <Adv_Name>kelaisile </Adv_Name>
+    <Adv_Url>~/kelaisile.jpg</Adv_Url>
+    <Wb_Id>10102120</Wb_Id>
+    <Adv_Content>kelaisile</Adv_Content>
+    <Adv_Endday>2008-12-29T00:00:00+08:00</Adv_Endday>
+    <Adv_Type_Id>9</Adv_Type_Id>
+  </SelAdvInfoByWbId>
+  <SelAdvInfoByWbId>
+    <Adv_Id>19</Adv_Id>
+    <Adv_Name>shenghua  </Adv_Name>
+    <Adv_Url>~/shenghua.jpg</Adv_Url>
+    <Wb_Id>10102120</Wb_Id>
+    <Adv_Content>shenghua</Adv_Content>
+    <Adv_Endday>2008-12-29T00:00:00+08:00</Adv_Endday>
+    <Adv_Type_Id>9</Adv_Type_Id>
+  </SelAdvInfoByWbId>
+  <SelAdvInfoByWbId>
+    <Adv_Id>20</Adv_Id>
+    <Adv_Name>nanputuosh</Adv_Name>
+    <Adv_Url>~/nanputuoshi.jpg</Adv_Url>
+    <Wb_Id>10102120</Wb_Id>
+    <Adv_Content>nanputuoshi</Adv_Content>
+    <Adv_Endday>2008-12-29T00:00:00+08:00</Adv_Endday>
+    <Adv_Type_Id>9</Adv_Type_Id>
+  </SelAdvInfoByWbId>
+  <SelAdvInfoByWbId>
+    <Adv_Id>21</Adv_Id>
+    <Adv_Name>budalagong</Adv_Name>
+    <Adv_Url>~/budalagong.jpg</Adv_Url>
+    <Wb_Id>10102120</Wb_Id>
+    <Adv_Content>budalagong</Adv_Content>
+    <Adv_Endday>2008-12-28T00:00:00+08:00</Adv_Endday>
+    <Adv_Type_Id>9</Adv_Type_Id>
+  </SelAdvInfoByWbId>
+  <SelAdvInfoByWbId>
+    <Adv_Id>22</Adv_Id>
+    <Adv_Name>menghuan  </Adv_Name>
+    <Adv_Url>~/menghuan.jpg</Adv_Url>
+    <Wb_Id>10102120</Wb_Id>
+    <Adv_Content>menghuan</Adv_Content>
+    <Adv_Endday>2008-12-29T00:00:00+08:00</Adv_Endday>
+    <Adv_Type_Id>9</Adv_Type_Id>
+  </SelAdvInfoByWbId>
+  <SelAdvInfoByWbId>
+    <Adv_Id>23</Adv_Id>
+    <Adv_Name>wanwan    </Adv_Name>
+    <Adv_Url>wanwan.jpg</Adv_Url>
+    <Wb_Id>10102120</Wb_Id>
+    <Adv_Content>wanwan</Adv_Content>
+    <Adv_Endday>2008-12-29T00:00:00+08:00</Adv_Endday>
+    <Adv_Type_Id>10</Adv_Type_Id>
+  </SelAdvInfoByWbId>
+  <SelAdvInfoByWbId>
+    <Adv_Id>24</Adv_Id>
+    <Adv_Name>xisuangban</Adv_Name>
+    <Adv_Url>~/xisuangbanna.jpg</Adv_Url>
+    <Wb_Id>10102120</Wb_Id>
+    <Adv_Content>xisuangbanna</Adv_Content>
+    <Adv_Endday>2008-12-29T00:00:00+08:00</Adv_Endday>
+    <Adv_Type_Id>10</Adv_Type_Id>
+  </SelAdvInfoByWbId>
+  <SelAdvInfoByWbId>
+    <Adv_Id>25</Adv_Id>
+    <Adv_Name>jiuzaigou </Adv_Name>
+    <Adv_Url>~/jiuzaigou.jpg</Adv_Url>
+    <Wb_Id>10102120</Wb_Id>
+    <Adv_Content>jiuzaigou</Adv_Content>
+    <Adv_Endday>2008-12-29T00:00:00+08:00</Adv_Endday>
+    <Adv_Type_Id>10</Adv_Type_Id>
+  </SelAdvInfoByWbId>
+  <SelAdvInfoByWbId>
+    <Adv_Id>26</Adv_Id>
+    <Adv_Name>shimianmai</Adv_Name>
+    <Adv_Url>~/shimianmai.jpg</Adv_Url>
+    <Wb_Id>10102120</Wb_Id>
+    <Adv_Content>shimianmaifu</Adv_Content>
+    <Adv_Endday>2008-12-29T00:00:00+08:00</Adv_Endday>
+    <Adv_Type_Id>10</Adv_Type_Id>
+  </SelAdvInfoByWbId>
+  <SelAdvInfoByWbId>
+    <Adv_Id>27</Adv_Id>
+    <Adv_Name>baoma     </Adv_Name>
+    <Adv_Url>~/baoma.jpg</Adv_Url>
+    <Wb_Id>10102120</Wb_Id>
+    <Adv_Content>baoma</Adv_Content>
+    <Adv_Endday>2008-12-29T00:00:00+08:00</Adv_Endday>
+    <Adv_Type_Id>10</Adv_Type_Id>
+  </SelAdvInfoByWbId>
+  <Time>
+    <CreateTime>2008-7-9 00:00:00</CreateTime>
+  </Time>
+</NewDataSet>

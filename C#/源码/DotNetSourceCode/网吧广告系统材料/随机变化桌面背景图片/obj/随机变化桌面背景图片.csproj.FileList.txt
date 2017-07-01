@@ -1,0 +1,7 @@
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\随机变化桌面背景图片.MainForm.resources
+obj\Debug\随机变化桌面背景图片.csproj.GenerateResource.Cache
+bin\Debug\随机变化桌面背景图片.exe
+bin\Debug\随机变化桌面背景图片.pdb
+obj\Debug\随机变化桌面背景图片.exe
+obj\Debug\随机变化桌面背景图片.pdb

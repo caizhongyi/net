@@ -1,0 +1,89 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A4265BEE-223F-430D-911C-7D17D67C50D8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BBL</RootNamespace>
+    <AssemblyName>BBL</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BBLFactory.cs" />
+    <Compile Include="Inface\IUserInfo.cs" />
+    <Compile Include="Opeation\AdvInfo.cs" />
+    <Compile Include="Opeation\AdvIssueInfo.cs" />
+    <Compile Include="Opeation\AdvTypeInfo.cs" />
+    <Compile Include="Opeation\AdvUnitPriceInfo.cs" />
+    <Compile Include="Opeation\AreaInfo.cs" />
+    <Compile Include="Inface\IAdvInfo.cs" />
+    <Compile Include="Inface\IAdvIssueInfo.cs" />
+    <Compile Include="Inface\IAdvTypeInfo.cs" />
+    <Compile Include="Inface\IAdvUnitPriceInfo.cs" />
+    <Compile Include="Inface\IAreaInfo.cs" />
+    <Compile Include="Inface\IProvinceInfo.cs" />
+    <Compile Include="Inface\IUserTypeInfo.cs" />
+    <Compile Include="Inface\IWbInfo.cs" />
+    <Compile Include="Inface\IWbRankInfo.cs" />
+    <Compile Include="Opeation\ProvinceInfo.cs" />
+    <Compile Include="Opeation\UserInfoService.cs" />
+    <Compile Include="Opeation\UserTypeInfo.cs" />
+    <Compile Include="Opeation\WbInfo.cs" />
+    <Compile Include="Opeation\WbRankInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DAL\DAL\DAL.csproj">
+      <Project>{FDA9BC28-9602-4CC9-AF0F-073B009EDFC9}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MySocket\MySocket.csproj">
+      <Project>{C9B24FF1-D7CA-42CF-AC24-94B44AF53A9B}</Project>
+      <Name>MySocket</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\网吧Socket客户端\WbClient.csproj">
+      <Project>{991CF5C2-087E-4655-B10B-ABEB2285830F}</Project>
+      <Name>WbClient</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

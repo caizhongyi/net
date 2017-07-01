@@ -1,0 +1,127 @@
+﻿#parse("_head.html")
+<link href="$templatepath/css/app/vote.css" rel="stylesheet" type="text/css" />
+<script src="$webpath/library/js/date/WdatePicker.js" type="text/javascript"></script>
+<div id="snsmenu">
+#parse("_menu.html")
+</div>
+<div id="snsbody">
+    <div id="snshead">$cpagetitle</div>
+
+    <div class="itemmenu">
+        <ul>
+            <li><a href="$webpath/app/vote/default$exname">最新投票</a></li>
+            <li><a href="$webpath/app/vote/default$exname?q=friend">好友的投票</a></li>
+            <li><a href="$webpath/app/vote/default$exname?q=my">我的投票</a></li>
+            <li><a href="$webpath/app/vote/default$exname?q=join">我参与的投票</a></li>
+            <li><a href="$webpath/app/vote/default$exname?q=hot">热门投票</a></li>
+            <li class="current"><a href="javascript:;">发起投票</a></li>
+        </ul>
+    </div>
+    <form action="" method="post" name="form1" id="form1">
+    
+        <div class="pitem">
+            <em><span class="reshow">*</span>投票主题</em><input id="Title" name="Title" type="text" value="" class="f-text p50 bigsize" /> <a href="javascript:;" onclick="jQuery('#sdesc').show();">显示描述</a>
+        </div>
+        <div class="pitem" id="sdesc" style="display:none;">
+            <em>描述</em><textarea id="content" name="content" type="text" value="" class="f-text" style="height:80px;width:400px;" ></textarea>
+        </div>
+        <div class="pitem">
+            <ul id="UlOption" style="margin:0;padding:0;">
+                <li>
+                    <div class="pitem">
+                        <em class="f-label"><span class="reshow">*</span>投票项1</em>
+                        <input name="Option_1"  id="Option_1" class="f-text p50" type="text" />
+                        </div>
+                </li>
+                <li>
+                    <div class="pitem">
+                        <em class="f-label"><span class="reshow">*</span>投票项2</em>
+                        <input name="Option_2"  id="Option_2" class="f-text p50" type="text" />
+                        </div>
+                </li>
+                <li>
+                    <div class="pitem">
+                        <em class="f-label">投票项3</em>
+                        <input name="Option_3" class="f-text p50" type="text" />
+                        </div>
+                </li>
+                <li>
+                    <div class="pitem">
+                        <em class="f-label">投票项4</em>
+                        <input name="Option_4" class="f-text p50" type="text" />
+                        </div>
+                </li>
+                <li>
+                    <div class="pitem">
+                        <em class="f-label">投票项5</em>
+                        <input name="Option_5" class="f-text p50" type="text" /> <span id="spanOption1"><a href="javascript:add(document.getElementById('spanOption1'));">增加选项</a></span>
+                        </div>
+                        
+                </li>
+            </ul>
+        </div>
+        <div class="pitem">
+            <em>投票方式</em>
+            <select id="Mode" name="Mode">
+                <option value="1">单选</option>
+                <option value="0">多选</option>
+            </select>
+        </div>
+        <div class="pitem">
+           <em class="f-label">投票期限</em>
+            <input type="checkbox" id="isEnd" name="isEnd" value="1" onclick="jQuery('#spanTime').show();" /> 截止日期 &nbsp; <span id="spanTime" style="display: none;"><input type="text" id="EndTime" name="EndTime" readonly="readonly"  onfocus="WdatePicker({dateFmt:'yyyy-MM-dd'})"  class="f-text p40"  /></span>
+        </div>
+        
+        <div class="pitem">
+       <em class="f-label">仅好友可投票</em>
+        <input type="checkbox" id="IsFriend"  name="IsFriend" value="1" runat="server" />是 </div>
+        <input type="hidden" id="OpNum" name="OpNum" value="5" />
+        <div class="pitem1">
+            <em>&nbsp;</em>
+            <input id="Button1" value="发布投票" onclick="return checkdata();" class="btn_blue4" type="submit" />
+        </div>
+    </form>
+
+</div>
+
+#parse("_foot.html")
+<script language="javascript" type="text/javascript">
+function checkdata()
+{
+    var Title=jQuery("#Title").val();
+    var Option_1=jQuery("#Option_1").val();
+    var Option_2=jQuery("#Option_2").val();
+    if(Title==""||Option_1==""||Option_2=="")
+    {
+             showErrorResult("带*的必须填写");return false;
+    }
+    return true;
+    
+}
+function add(spanobj)
+{
+    var f = document.form1;
+    var j=0;
+    var obj= document.getElementById("UlOption");
+    for(var i=0;i<f.length;i++)
+    {
+        if(f.elements[i].name.indexOf("Option")>-1)
+        {
+            j++;
+        }
+    }
+    spanobj.style.display="none";
+    if(j<20)
+    {
+        for(var i=1;i<6;i++)
+        {
+            var s = obj.innerHTML;
+            if(i==5 && (j+i)<20)
+                obj.innerHTML = s+ "<li><em class=\"f-label\">投票项"+(j+i)+"</em><input name=\"Option_"+(j+i)+"\" type=\"text\" class=\"f-text p50\" /><span id=\"spanOption"+(i+j)+"\"> <a href=\"javascript:add(document.getElementById('spanOption"+(i+j)+"'));\">增加选项</a></span></li>";
+            else 
+                obj.innerHTML = s+ "<li><em class=\"f-label\">投票项"+(j+i)+"</em><input name=\"Option_"+(j+i)+"\" type=\"text\" class=\"f-text p50\" /></li>";
+             document.form1.OpNum.value=(j+i);
+       }
+    }
+}
+</script>

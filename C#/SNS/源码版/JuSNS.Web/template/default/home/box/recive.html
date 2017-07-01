@@ -1,0 +1,47 @@
+﻿#parse("_head.html")
+<div id="snsmenu">
+#parse("_menu.html")
+</div>
+<div id="snsbody">
+    <div id="snshead"><span class="l">收件箱</span></div>
+
+    <div class="itemmenu">
+        <ul>
+            <li><a href="$webpath/home/box/default$exname">收件箱</a></li>
+            <li class="current"><a href="$webpath/home/box/recive$exname">发件箱</a></li>
+            <li><a href="$webpath/home/box/mail$exname">发邮件</a></li>
+        </ul>
+    </div>
+    
+         #if($recordcount>0)
+            <div class="boxlist">
+                <ul>
+                #foreach($info in $infolist)
+                <li id="param_$info.id">
+                    <div class="aa images center">
+                        <a href="$info.spaceurl" target="_blank" title="查看$info.truename的空间"><img src="$info.headpic" /><br />$info.truename</a>
+                    </div>
+                    <div class="bb">
+                        <p class="strong"><a href="javascript:;" onclick="readmail($info.id)">$info.title</a></p>
+                        <p>$info.content</p>
+                        <p><span  class="time">$info.time</span> &nbsp;<a href="$webpath/home/box/mail$exname?fid=$info.reviceid&uid=$uid&mid=$info.id">再发一封</a> $info.showop</p>
+                        <p class="showcont" id="showcont_$info.id" style="display:none;">
+                            $info.contentall
+                        </p>
+                    </div>
+                </li>
+                #end
+              </ul>
+              </div>
+              <div class="pages">$pagelist</div>
+        #else
+            <div>还没有记录</div>
+        #end        
+</div>
+#parse("_foot.html")
+<script type="text/javascript">
+    function readmail(mid)
+    {
+        jQuery("#showcont_"+mid).toggle();
+    }
+</script>

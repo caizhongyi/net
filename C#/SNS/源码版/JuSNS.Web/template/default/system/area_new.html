@@ -1,0 +1,62 @@
+﻿#parse("_head.html")
+<link href="$templatepath/css/app/gift.css" rel="stylesheet" type="text/css" />
+<div id="snssysmenu">
+#parse("_menusystem.html")
+</div>
+<div id="snsbody1">
+    <div id="snshead">系统设置</div>
+    <div class="itemmenu">
+        <ul>
+            <li><a href="sys$exname">系统设置</a></li>
+            <li class="current"><a href="area$exname">地区</a></li> 
+            <li><a href="charge$exname">充值管理</a></li> 
+            <li><a href="template$exname">模板</a></li> 
+            <li><a href="indexconfig$exname">首页配置</a></li> 
+            <li><a href="uploads$exname">上传图片配置管理</a></li> 
+            <li><a href="start$exname">初始化</a></li> 
+            <li><a href="help$exname">帮助管理</a></li> 
+    </ul>
+    </div>
+    
+     <div class="itemmenu1">
+        <ul>
+            <li><a href="area$exname">地区列表</a></li>
+            <li class="current"><a href="javascript:;">$cpagetitle</a></li>
+            <li><a href="createArea$exname">地区生成JS</a></li>
+            <li><a href="javascript:;" onclick="deletestart('area');">初始化地区</a></li>
+        </ul>
+    </div>
+
+    
+
+    <div class="system">
+          <form id="form1" action="" method="post">
+            <div class="pitem">
+                <em>所属地区</em>
+                <select id="parentid" name="parentid">
+                    <option value="0">一级地区</option>
+                    $classlist
+                </select> <span class="reshow">目前只支持2级地区</span>
+            </div>
+            <div class="pitem">
+                <em>地区名称</em>
+                <input id="aname" name="aname" type="text" value="#if($name)$name#end" class="f-text" />
+            </div>
+            
+            <div class="pitem">
+                <em>&nbsp;</em>
+                <input name="Text1" id="asname" type="submit" class="btn_blue2"  value="保存" />
+            </div>
+            
+          </form>
+
+    </div>
+    
+</div>
+#parse("_foot.html")
+<script type="text/javascript">
+    function setconfig(path)
+    {
+        window.location.href="sysconfig"+ExName+"?path="+path;
+    }
+</script>

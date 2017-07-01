@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="sms">
+</Property><Property Name="解决方案文件" Value="C:\Documents and Settings\xunsai\桌面\修改好的dll\smsvbnet\sms.sln">
+</Property><Property Name="用户选项文件" Value="C:\Documents and Settings\xunsai\桌面\修改好的dll\smsvbnet\sms.suo">
+</Property><Property Name="Date" Value="2007年5月7日">
+</Property><Property Name="Time" Value="1:25">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="sms.sln" Description="文件已成功备份为 C:\Documents and Settings\xunsai\桌面\修改好的dll\smsvbnet\Backup\sms.sln">
+</Event><Event ErrorLevel="0" Project="" Source="sms.suo" Description="文件已成功备份为 C:\Documents and Settings\xunsai\桌面\修改好的dll\smsvbnet\Backup\sms.suo">
+</Event><Event ErrorLevel="0" Project="sms" Source="sms.vbproj" Description="项目文件已成功备份为 C:\Documents and Settings\xunsai\桌面\修改好的dll\smsvbnet\Backup\sms.vbproj">
+</Event><Event ErrorLevel="0" Project="sms" Source="sms.vbproj.user" Description="项目用户文件成功备份为 C:\Documents and Settings\xunsai\桌面\修改好的dll\smsvbnet\Backup\sms.vbproj.user">
+</Event><Event ErrorLevel="0" Project="sms" Source="AssemblyInfo.vb" Description="文件已成功备份为 C:\Documents and Settings\xunsai\桌面\修改好的dll\smsvbnet\Backup\AssemblyInfo.vb">
+</Event><Event ErrorLevel="0" Project="sms" Source="loadsms.vb" Description="文件已成功备份为 C:\Documents and Settings\xunsai\桌面\修改好的dll\smsvbnet\Backup\loadsms.vb">
+</Event><Event ErrorLevel="0" Project="sms" Source="sms.vb" Description="文件已成功备份为 C:\Documents and Settings\xunsai\桌面\修改好的dll\smsvbnet\Backup\sms.vb">
+</Event><Event ErrorLevel="0" Project="sms" Source="_UpgradeReport.htm" Description="文件已成功备份为 C:\Documents and Settings\xunsai\桌面\修改好的dll\smsvbnet\Backup\_UpgradeReport.htm">
+</Event><Event ErrorLevel="0" Project="sms" Source="sms.ico" Description="文件已成功备份为 C:\Documents and Settings\xunsai\桌面\修改好的dll\smsvbnet\Backup\sms.ico">
+</Event><Event ErrorLevel="0" Project="sms" Source="sms.resX" Description="文件已成功备份为 C:\Documents and Settings\xunsai\桌面\修改好的dll\smsvbnet\Backup\sms.resX">
+</Event><Event ErrorLevel="0" Project="sms" Source="sms.vbproj" Description="项目已成功转换">
+</Event><Event ErrorLevel="3" Project="sms" Source="sms.vbproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="sms.sln" Description="成功转换解决方案">
+</Event><Event ErrorLevel="3" Project="" Source="sms.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="sms" Source="sms.vbproj" Description="扫描完成: 项目文件不需要升级。">
+</Event></UpgradeLog>

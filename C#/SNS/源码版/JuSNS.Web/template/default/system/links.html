@@ -1,0 +1,58 @@
+﻿#parse("_head.html")
+<div id="snssysmenu">
+#parse("_menusystem.html")
+</div>
+<div id="snsbody1">
+    <div id="snshead">友情链接</div>
+    <div class="itemmenu">
+        <ul>
+            <li class="current"><a href="links$exname">友情链接</a></li>
+            <li><a href="links$exname#linkname">添加链接</a></li>
+    </ul>
+    </div>
+    
+
+    <div class="system">
+          #if($recordcount>0)
+               <table  id="mtable">
+                <tr>
+                    <th>名称</th>
+                    <th>地址</th>
+                    <th>类型</th>
+                    <th>状态</th>
+                    <th style="text-align:center;">操作</th>
+                </tr>
+                #foreach($info in $infolist)
+                <tr id="param_$info.id">
+                    <td>$info.linkname</a></td>
+                    <td><a href="info.url" target="_blank">$info.url</a></td>
+                    <td>$info.type</td>
+                    <td>#if($info.islock)<span class="reshow">锁定</span>#else正常#end</td>
+                    <td>
+                    <input  type="button" value="修改" onclick="window.location.href='links$exname?lid=$info.id#linkname'" class="btn_blue2" />
+                    <input  type="button" value="删除" onclick="deleteAll($info.id,$uid,'links');" class="btn_blue2" />
+                    </td>
+                </tr>
+                #end
+             </table>
+              <div class="pages">$pagelist</div>
+        #else
+            <div>还没有记录</div>
+        #end        
+            <form id="form1s" action="" method="post" enctype="multipart/form-data">
+                  名称：<input value="#if($linkname)$linkname#end" name="linkname" id="linkname" type="text" class="f-text" style="width:100px;" />
+                  链接地址：<input value="#if($url)$url#end" name="url" id="url" type="text" class="f-text" style="width:100px;" />包括HTTP://
+                  &nbsp; &nbsp; 图片链接：<input id="linktype" name="linktype" onclick="jQuery('#picarea').show();" value="1" #if($linktype==1)checked#end type="checkbox" />
+                  <span style="display:none;" id="picarea"><input id="File1" name="files" type="file" /><input value="#if($pic)$pic#end" name="hidepic" id="hidepic" type="hidden" class="f-text" /></span>
+                 <input value="保存" type="submit" class="btn_blue2" />
+              </form>
+    </div>
+    
+</div>
+#parse("_foot.html")
+<script type="text/javascript">
+    if(document.getElementById("linktype").checked)
+    {
+        jQuery('#picarea').show();
+    }
+</script>

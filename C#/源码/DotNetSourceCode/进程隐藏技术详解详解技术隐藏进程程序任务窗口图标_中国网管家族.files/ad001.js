@@ -1,0 +1,1 @@
+document.writeln("<A href=\"http:\/\/bbs.wgjz.com\/\"  target=\"_blank\"><IMG height=60 alt=ad hspace=0 src=\"http:\/\/www.wgjz.com\/images\/ad\/2669610.gif\" width=468 border=0><\/A>");

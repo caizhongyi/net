@@ -1,0 +1,308 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeepEarth", "DeepEarth\DeepEarth.csproj", "{CCDEF3E2-738E-479F-8B97-FDF3DAB326A3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Prototype", "Prototype", "{107637F5-072C-4F43-893E-73861448C89A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeepEarthPrototype", "Prototype\DeepEarthPrototype\DeepEarthPrototype.csproj", "{93D637C5-1985-42F7-8653-0CD810F1F05E}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "DeepEarthPrototypeWeb", "Prototype\DeepEarthPrototypeWeb", "{1A854EDD-9369-4F91-B39F-D8D254438B75}"
+	ProjectSection(WebsiteProperties) = preProject
+		SccProjectName = ""
+		SccAuxPath = ""
+		SccLocalPath = ""
+		SccProvider = ""
+		TargetFramework = "3.5"
+		ProjectReferences = "{4691291E-F4AE-4A2D-A175-7AE5ADD1A51A}|DeepEarth.VirtualEarth.Services.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/DeepEarthPrototypeWeb"
+		Debug.AspNetCompiler.PhysicalPath = "Prototype\DeepEarthPrototypeWeb\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\DeepEarthPrototypeWeb\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/DeepEarthPrototypeWeb"
+		Release.AspNetCompiler.PhysicalPath = "Prototype\DeepEarthPrototypeWeb\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\DeepEarthPrototypeWeb\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "52638"
+		VWDDynamicPort = "false"
+		DefaultWebSiteLanguage = "Visual C#"
+		ProjOutputReferences = "{93D637C5-1985-42F7-8653-0CD810F1F05E}|ClientBin|false;"
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Examples", "Examples", "{1A7F3D72-D18E-4DBB-B1D5-654F37F5BDDF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "VirtualEarth", "VirtualEarth", "{64D8972C-1E6B-4AFE-B10B-33DD5172BF60}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VEDeepEarthExample", "Examples\VirtualEarth\VEDeepEarthExample\VEDeepEarthExample.csproj", "{D10433EF-0146-4189-BEA9-844016C21D99}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "VEDeepEarthExampleWeb", "Examples\VirtualEarth\VEDeepEarthExampleWeb", "{A121256C-D290-4E49-BC9E-29F6FF88B5AF}"
+	ProjectSection(WebsiteProperties) = preProject
+		SccProjectName = ""
+		SccAuxPath = ""
+		SccLocalPath = ""
+		SccProvider = ""
+		TargetFramework = "3.5"
+		ProjectReferences = "{4691291E-F4AE-4A2D-A175-7AE5ADD1A51A}|DeepEarth.VirtualEarth.Services.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/VEDeepEarthExampleWeb"
+		Debug.AspNetCompiler.PhysicalPath = "Examples\VirtualEarth\VEDeepEarthExampleWeb\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\VEDeepEarthExampleWeb\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/VEDeepEarthExampleWeb"
+		Release.AspNetCompiler.PhysicalPath = "Examples\VirtualEarth\VEDeepEarthExampleWeb\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\VEDeepEarthExampleWeb\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "52640"
+		VWDDynamicPort = "false"
+		ProjOutputReferences = "{D10433EF-0146-4189-BEA9-844016C21D99}|ClientBin|false;"
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OpenStreetMap", "OpenStreetMap", "{BF253E60-5458-437D-9607-0D2B554C8D13}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OSMDeepEarthExample", "Examples\OpenStreetMap\OSMDeepEarthExample\OSMDeepEarthExample.csproj", "{D38FBC88-CFBD-4897-BC99-ABEE22E6CBC2}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "OSMDeepEarthExampleWeb", "Examples\OpenStreetMap\OSMDeepEarthExampleWeb", "{9027C3C9-B089-4816-8B1F-B7378240CA51}"
+	ProjectSection(WebsiteProperties) = preProject
+		SccProjectName = ""
+		SccAuxPath = ""
+		SccLocalPath = ""
+		SccProvider = ""
+		TargetFramework = "3.5"
+		Debug.AspNetCompiler.VirtualPath = "/OSMDeepEarthExampleWeb"
+		Debug.AspNetCompiler.PhysicalPath = "Examples\OpenStreetMap\OSMDeepEarthExampleWeb\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\OSMDeepEarthExampleWeb\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/OSMDeepEarthExampleWeb"
+		Release.AspNetCompiler.PhysicalPath = "Examples\OpenStreetMap\OSMDeepEarthExampleWeb\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\OSMDeepEarthExampleWeb\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "52642"
+		DefaultWebSiteLanguage = "Visual C#"
+		ProjOutputReferences = "{D38FBC88-CFBD-4897-BC99-ABEE22E6CBC2}|ClientBin|false;"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocalMapsExample", "Examples\LocalMaps\LocalMapsExample\LocalMapsExample.csproj", "{93790720-3C21-45FA-9A8C-B5D3D5AB9A9C}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "LocalMapsExampleWeb", "Examples\LocalMaps\LocalMapsExampleWeb", "{38AE3897-05F4-4312-867D-9F290C55FA55}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFramework = "3.5"
+		Debug.AspNetCompiler.VirtualPath = "/LocalMapsExampleWeb"
+		Debug.AspNetCompiler.PhysicalPath = "Examples\LocalMaps\LocalMapsExampleWeb\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\LocalMapsExampleWeb\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/LocalMapsExampleWeb"
+		Release.AspNetCompiler.PhysicalPath = "Examples\LocalMaps\LocalMapsExampleWeb\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\LocalMapsExampleWeb\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "57798"
+		ProjOutputReferences = "{93790720-3C21-45FA-9A8C-B5D3D5AB9A9C}|ClientBin|false;"
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LocalMaps", "LocalMaps", "{8B0C785B-CAEA-4AED-BA4D-521AADE95B7C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeepEarth.Provider", "DeepEarth.Provider\DeepEarth.Provider.csproj", "{5367C2CD-1991-4225-9A69-E60FD4EF78BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeepEarth.Provider.VirtualEarth", "DeepEarth.Provider.VirtualEarth\DeepEarth.Provider.VirtualEarth.csproj", "{3031F27F-3521-4240-98FE-D1A6BCDA752D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeepEarth.Provider.VirtualEarth.Services", "DeepEarth.Provider.VirtualEarth.Services\DeepEarth.Provider.VirtualEarth.Services.csproj", "{4691291E-F4AE-4A2D-A175-7AE5ADD1A51A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|.NET = Debug|.NET
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Release|.NET = Release|.NET
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CCDEF3E2-738E-479F-8B97-FDF3DAB326A3}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{CCDEF3E2-738E-479F-8B97-FDF3DAB326A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCDEF3E2-738E-479F-8B97-FDF3DAB326A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCDEF3E2-738E-479F-8B97-FDF3DAB326A3}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{CCDEF3E2-738E-479F-8B97-FDF3DAB326A3}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{CCDEF3E2-738E-479F-8B97-FDF3DAB326A3}.Release|.NET.ActiveCfg = Release|Any CPU
+		{CCDEF3E2-738E-479F-8B97-FDF3DAB326A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCDEF3E2-738E-479F-8B97-FDF3DAB326A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CCDEF3E2-738E-479F-8B97-FDF3DAB326A3}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{CCDEF3E2-738E-479F-8B97-FDF3DAB326A3}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{93D637C5-1985-42F7-8653-0CD810F1F05E}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{93D637C5-1985-42F7-8653-0CD810F1F05E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93D637C5-1985-42F7-8653-0CD810F1F05E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93D637C5-1985-42F7-8653-0CD810F1F05E}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{93D637C5-1985-42F7-8653-0CD810F1F05E}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{93D637C5-1985-42F7-8653-0CD810F1F05E}.Release|.NET.ActiveCfg = Release|Any CPU
+		{93D637C5-1985-42F7-8653-0CD810F1F05E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93D637C5-1985-42F7-8653-0CD810F1F05E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93D637C5-1985-42F7-8653-0CD810F1F05E}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{93D637C5-1985-42F7-8653-0CD810F1F05E}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{1A854EDD-9369-4F91-B39F-D8D254438B75}.Debug|.NET.ActiveCfg = Debug|.NET
+		{1A854EDD-9369-4F91-B39F-D8D254438B75}.Debug|.NET.Build.0 = Debug|.NET
+		{1A854EDD-9369-4F91-B39F-D8D254438B75}.Debug|Any CPU.ActiveCfg = Debug|.NET
+		{1A854EDD-9369-4F91-B39F-D8D254438B75}.Debug|Mixed Platforms.ActiveCfg = Debug|.NET
+		{1A854EDD-9369-4F91-B39F-D8D254438B75}.Debug|Mixed Platforms.Build.0 = Debug|.NET
+		{1A854EDD-9369-4F91-B39F-D8D254438B75}.Release|.NET.ActiveCfg = Debug|.NET
+		{1A854EDD-9369-4F91-B39F-D8D254438B75}.Release|.NET.Build.0 = Debug|.NET
+		{1A854EDD-9369-4F91-B39F-D8D254438B75}.Release|Any CPU.ActiveCfg = Debug|.NET
+		{1A854EDD-9369-4F91-B39F-D8D254438B75}.Release|Mixed Platforms.ActiveCfg = Debug|.NET
+		{1A854EDD-9369-4F91-B39F-D8D254438B75}.Release|Mixed Platforms.Build.0 = Debug|.NET
+		{D10433EF-0146-4189-BEA9-844016C21D99}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{D10433EF-0146-4189-BEA9-844016C21D99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D10433EF-0146-4189-BEA9-844016C21D99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D10433EF-0146-4189-BEA9-844016C21D99}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{D10433EF-0146-4189-BEA9-844016C21D99}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{D10433EF-0146-4189-BEA9-844016C21D99}.Release|.NET.ActiveCfg = Release|Any CPU
+		{D10433EF-0146-4189-BEA9-844016C21D99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D10433EF-0146-4189-BEA9-844016C21D99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D10433EF-0146-4189-BEA9-844016C21D99}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{D10433EF-0146-4189-BEA9-844016C21D99}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{A121256C-D290-4E49-BC9E-29F6FF88B5AF}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{A121256C-D290-4E49-BC9E-29F6FF88B5AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A121256C-D290-4E49-BC9E-29F6FF88B5AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A121256C-D290-4E49-BC9E-29F6FF88B5AF}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{A121256C-D290-4E49-BC9E-29F6FF88B5AF}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{A121256C-D290-4E49-BC9E-29F6FF88B5AF}.Release|.NET.ActiveCfg = Debug|Any CPU
+		{A121256C-D290-4E49-BC9E-29F6FF88B5AF}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{A121256C-D290-4E49-BC9E-29F6FF88B5AF}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{A121256C-D290-4E49-BC9E-29F6FF88B5AF}.Release|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{A121256C-D290-4E49-BC9E-29F6FF88B5AF}.Release|Mixed Platforms.Build.0 = Debug|Any CPU
+		{D38FBC88-CFBD-4897-BC99-ABEE22E6CBC2}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{D38FBC88-CFBD-4897-BC99-ABEE22E6CBC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D38FBC88-CFBD-4897-BC99-ABEE22E6CBC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D38FBC88-CFBD-4897-BC99-ABEE22E6CBC2}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{D38FBC88-CFBD-4897-BC99-ABEE22E6CBC2}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{D38FBC88-CFBD-4897-BC99-ABEE22E6CBC2}.Release|.NET.ActiveCfg = Release|Any CPU
+		{D38FBC88-CFBD-4897-BC99-ABEE22E6CBC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D38FBC88-CFBD-4897-BC99-ABEE22E6CBC2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D38FBC88-CFBD-4897-BC99-ABEE22E6CBC2}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{D38FBC88-CFBD-4897-BC99-ABEE22E6CBC2}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{9027C3C9-B089-4816-8B1F-B7378240CA51}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{9027C3C9-B089-4816-8B1F-B7378240CA51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9027C3C9-B089-4816-8B1F-B7378240CA51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9027C3C9-B089-4816-8B1F-B7378240CA51}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{9027C3C9-B089-4816-8B1F-B7378240CA51}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{9027C3C9-B089-4816-8B1F-B7378240CA51}.Release|.NET.ActiveCfg = Debug|Any CPU
+		{9027C3C9-B089-4816-8B1F-B7378240CA51}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{9027C3C9-B089-4816-8B1F-B7378240CA51}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{9027C3C9-B089-4816-8B1F-B7378240CA51}.Release|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{9027C3C9-B089-4816-8B1F-B7378240CA51}.Release|Mixed Platforms.Build.0 = Debug|Any CPU
+		{93790720-3C21-45FA-9A8C-B5D3D5AB9A9C}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{93790720-3C21-45FA-9A8C-B5D3D5AB9A9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93790720-3C21-45FA-9A8C-B5D3D5AB9A9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93790720-3C21-45FA-9A8C-B5D3D5AB9A9C}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{93790720-3C21-45FA-9A8C-B5D3D5AB9A9C}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{93790720-3C21-45FA-9A8C-B5D3D5AB9A9C}.Release|.NET.ActiveCfg = Release|Any CPU
+		{93790720-3C21-45FA-9A8C-B5D3D5AB9A9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93790720-3C21-45FA-9A8C-B5D3D5AB9A9C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93790720-3C21-45FA-9A8C-B5D3D5AB9A9C}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{93790720-3C21-45FA-9A8C-B5D3D5AB9A9C}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{38AE3897-05F4-4312-867D-9F290C55FA55}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{38AE3897-05F4-4312-867D-9F290C55FA55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38AE3897-05F4-4312-867D-9F290C55FA55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38AE3897-05F4-4312-867D-9F290C55FA55}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{38AE3897-05F4-4312-867D-9F290C55FA55}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{38AE3897-05F4-4312-867D-9F290C55FA55}.Release|.NET.ActiveCfg = Debug|Any CPU
+		{38AE3897-05F4-4312-867D-9F290C55FA55}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{38AE3897-05F4-4312-867D-9F290C55FA55}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{38AE3897-05F4-4312-867D-9F290C55FA55}.Release|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{38AE3897-05F4-4312-867D-9F290C55FA55}.Release|Mixed Platforms.Build.0 = Debug|Any CPU
+		{5367C2CD-1991-4225-9A69-E60FD4EF78BF}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{5367C2CD-1991-4225-9A69-E60FD4EF78BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5367C2CD-1991-4225-9A69-E60FD4EF78BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5367C2CD-1991-4225-9A69-E60FD4EF78BF}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{5367C2CD-1991-4225-9A69-E60FD4EF78BF}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{5367C2CD-1991-4225-9A69-E60FD4EF78BF}.Release|.NET.ActiveCfg = Release|Any CPU
+		{5367C2CD-1991-4225-9A69-E60FD4EF78BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5367C2CD-1991-4225-9A69-E60FD4EF78BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5367C2CD-1991-4225-9A69-E60FD4EF78BF}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{5367C2CD-1991-4225-9A69-E60FD4EF78BF}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{3031F27F-3521-4240-98FE-D1A6BCDA752D}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{3031F27F-3521-4240-98FE-D1A6BCDA752D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3031F27F-3521-4240-98FE-D1A6BCDA752D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3031F27F-3521-4240-98FE-D1A6BCDA752D}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{3031F27F-3521-4240-98FE-D1A6BCDA752D}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{3031F27F-3521-4240-98FE-D1A6BCDA752D}.Release|.NET.ActiveCfg = Release|Any CPU
+		{3031F27F-3521-4240-98FE-D1A6BCDA752D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3031F27F-3521-4240-98FE-D1A6BCDA752D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3031F27F-3521-4240-98FE-D1A6BCDA752D}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{3031F27F-3521-4240-98FE-D1A6BCDA752D}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{4691291E-F4AE-4A2D-A175-7AE5ADD1A51A}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{4691291E-F4AE-4A2D-A175-7AE5ADD1A51A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4691291E-F4AE-4A2D-A175-7AE5ADD1A51A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4691291E-F4AE-4A2D-A175-7AE5ADD1A51A}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{4691291E-F4AE-4A2D-A175-7AE5ADD1A51A}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{4691291E-F4AE-4A2D-A175-7AE5ADD1A51A}.Release|.NET.ActiveCfg = Release|Any CPU
+		{4691291E-F4AE-4A2D-A175-7AE5ADD1A51A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4691291E-F4AE-4A2D-A175-7AE5ADD1A51A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4691291E-F4AE-4A2D-A175-7AE5ADD1A51A}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{4691291E-F4AE-4A2D-A175-7AE5ADD1A51A}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{93D637C5-1985-42F7-8653-0CD810F1F05E} = {107637F5-072C-4F43-893E-73861448C89A}
+		{1A854EDD-9369-4F91-B39F-D8D254438B75} = {107637F5-072C-4F43-893E-73861448C89A}
+		{64D8972C-1E6B-4AFE-B10B-33DD5172BF60} = {1A7F3D72-D18E-4DBB-B1D5-654F37F5BDDF}
+		{BF253E60-5458-437D-9607-0D2B554C8D13} = {1A7F3D72-D18E-4DBB-B1D5-654F37F5BDDF}
+		{8B0C785B-CAEA-4AED-BA4D-521AADE95B7C} = {1A7F3D72-D18E-4DBB-B1D5-654F37F5BDDF}
+		{D10433EF-0146-4189-BEA9-844016C21D99} = {64D8972C-1E6B-4AFE-B10B-33DD5172BF60}
+		{A121256C-D290-4E49-BC9E-29F6FF88B5AF} = {64D8972C-1E6B-4AFE-B10B-33DD5172BF60}
+		{D38FBC88-CFBD-4897-BC99-ABEE22E6CBC2} = {BF253E60-5458-437D-9607-0D2B554C8D13}
+		{9027C3C9-B089-4816-8B1F-B7378240CA51} = {BF253E60-5458-437D-9607-0D2B554C8D13}
+		{38AE3897-05F4-4312-867D-9F290C55FA55} = {8B0C785B-CAEA-4AED-BA4D-521AADE95B7C}
+		{93790720-3C21-45FA-9A8C-B5D3D5AB9A9C} = {8B0C785B-CAEA-4AED-BA4D-521AADE95B7C}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs06.codeplex.com/
+		SccWebProject0 = true
+		SccProjectUniqueName0 = Prototype\\DeepEarthPrototypeWeb
+		SccProjectTopLevelParentUniqueName0 = DeepEarth.sln
+		SccProjectName0 = Prototype/DeepEarthPrototypeWeb
+		SccAuxPath0 = https://tfs06.codeplex.com
+		SccLocalPath0 = Prototype\\DeepEarthPrototypeWeb
+		SccProvider0 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectEnlistmentChoice0 = 2
+		SccWebProject1 = true
+		SccProjectUniqueName1 = Examples\\VirtualEarth\\VEDeepEarthExampleWeb
+		SccProjectTopLevelParentUniqueName1 = DeepEarth.sln
+		SccProjectName1 = Examples/VirtualEarth/VEDeepEarthExampleWeb
+		SccAuxPath1 = https://tfs06.codeplex.com
+		SccLocalPath1 = Examples\\VirtualEarth\\VEDeepEarthExampleWeb
+		SccProvider1 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectEnlistmentChoice1 = 2
+		SccWebProject2 = true
+		SccProjectUniqueName2 = Examples\\OpenStreetMap\\OSMDeepEarthExampleWeb
+		SccProjectTopLevelParentUniqueName2 = DeepEarth.sln
+		SccProjectName2 = Examples/OpenStreetMap/OSMDeepEarthExampleWeb
+		SccAuxPath2 = https://tfs06.codeplex.com
+		SccLocalPath2 = Examples\\OpenStreetMap\\OSMDeepEarthExampleWeb
+		SccProvider2 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectEnlistmentChoice2 = 2
+	EndGlobalSection
+EndGlobal

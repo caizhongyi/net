@@ -1,0 +1,53 @@
+<html dir="LTR">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" />
+    <meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5" />
+    <title>MultiRequestUploadModule Class</title>
+    <xml>
+    </xml>
+    <link rel="stylesheet" type="text/css" href="MSDN.css" />
+  </head>
+  <body id="bodyID" class="dtBODY">
+    <div id="nsbanner">
+      <div id="bannerrow1">
+        <table class="bannerparthead" cellspacing="0">
+          <tr id="hdr">
+            <td class="runninghead">NeatUpload Documentation</td>
+            <td class="product">
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div id="TitleRow">
+        <h1 class="dtH1">MultiRequestUploadModule Class</h1>
+      </div>
+    </div>
+    <div id="nstext">
+      <p> Provides an API (via its static members) that upload controls can use to do multi-request uploads if the currently installed upload module implements <a href="Brettle.Web.NeatUpload.IMultiRequestUploadModule.html">IMultiRequestUploadModule</a>. The members of this class mostly delegate to the corresponding members of the <b>IMultiRequestUploadModule</b> that is installed in the &lt;httpModules&gt; section of the Web.config. </p>
+      <p>For a list of all members of this type, see <a href="Brettle.Web.NeatUpload.MultiRequestUploadModuleMembers.html">MultiRequestUploadModule Members</a>.</p>
+      <p>
+        <a href="http://msdn.microsoft.com/library/default.asp?url=/library/en-us/cpref/html/frlrfSystemObjectClassTopic.asp">System.Object</a>
+        <br />   <a href="Brettle.Web.NeatUpload.UploadModule.html">Brettle.Web.NeatUpload.UploadModule</a><br />      <b>Brettle.Web.NeatUpload.MultiRequestUploadModule</b></p>
+      <div class="syntax">
+        <div>public class MultiRequestUploadModule<b> : <a href=".html">UploadModule</a></b></div>
+      </div>
+      <H4 class="dtH4">Thread Safety</H4>
+      <P>Public static (<b>Shared</b> in Visual Basic) members of this type are 
+				safe for multithreaded operations. Instance members are <b>not</b> guaranteed to be 
+				thread-safe.</P>
+      <h4 class="dtH4">Remarks</h4>
+      <p>The module treats the following sequence of requests as a single upload: <ol><li>An initial POST request sent to the <a href="Brettle.Web.NeatUpload.MultiRequestUploadModule.UploadPath.html">UploadPath</a> containing: <ul type="disc"><li>a post-back ID in the query parameter named by <a href="Brettle.Web.NeatUpload.UploadModule.PostBackIDQueryParam.html">PostBackIDQueryParam</a></li><li>a control UniqueID in the query parameter named by <a href="Brettle.Web.NeatUpload.MultiRequestUploadModule.ControlIDQueryParam.html">ControlIDQueryParam</a></li><li>"protected" cookies needed for authentication or session identification in the query parameter named by <a href="Brettle.Web.NeatUpload.MultiRequestUploadModule.ArmoredCookiesQueryParam.html">ArmoredCookiesQueryParam</a></li><li>a space-delimited list of file sizes in the form field named by <b>FileSizesFieldName</b></li><li>(optionally) a form field with a name starting with <a href="Brettle.Web.NeatUpload.UploadModule.ConfigFieldNamePrefix.html">ConfigFieldNamePrefix</a> followed by the same control UniqueID as above, containing "protected" module-specific configuration information.</li></ul></li><li>A sequence of upload request (one for each file size in the file sizes field of the initial request) to the <b>UploadPath</b> containing: <ul type="disc"><li>a post-back ID in the query parameter named by <b>PostBackIDQueryParam</b></li><li>a control UniqueID in the query parameter named by <b>ControlIDQueryParam</b></li><li>"protected" cookies needed for authentication or session identification in the query parameter named by <b>ArmoredCookiesQueryParam</b></li></ul></li><li>A final form submission upload request to any path for which <a href="Brettle.Web.NeatUpload.UploadModule.IsEnabled.html">IsEnabled</a> returns true. This request must contain the postback ID in one of the following locations: <ul type="disc"><li>in the query parameter named by <b>PostBackIDQueryParam</b></li><li>in the form field named by <a href="Brettle.Web.NeatUpload.UploadModule.PostBackIDFieldName.html">PostBackIDFieldName</a></li><li>in a file field name prefixed by <a href="Brettle.Web.NeatUpload.UploadModule.FileFieldNamePrefix.html">FileFieldNamePrefix</a></li></ul> While this request is being handled, the module will make all the files associated with the post-back ID available via <a href="Brettle.Web.NeatUpload.UploadModule.Files.html">Files</a>. </li></ol></p>
+      <h4 class="dtH4">Requirements</h4>
+      <p>
+        <b>Namespace: </b>
+        <a href="Brettle.Web.NeatUpload.html">Brettle.Web.NeatUpload</a>
+      </p>
+      <p>
+        <b>Assembly: </b>Brettle.Web.NeatUpload (in Brettle.Web.NeatUpload.dll)
+					</p>
+      <h4 class="dtH4">See Also</h4>
+      <p>
+        <a href="Brettle.Web.NeatUpload.MultiRequestUploadModuleMembers.html">MultiRequestUploadModule Members</a> | <a href="Brettle.Web.NeatUpload.html">Brettle.Web.NeatUpload Namespace</a></p>
+    </div>
+  </body>
+</html>

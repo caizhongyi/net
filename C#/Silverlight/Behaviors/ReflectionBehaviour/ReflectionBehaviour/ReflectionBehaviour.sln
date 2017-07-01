@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReflectionBehaviourTest", "ReflectionBehaviourTest\ReflectionBehaviourTest.csproj", "{9F7F57EE-E9A7-436D-9610-461B9FC3A849}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReflectionBehaviour", "ReflectionBehaviour\ReflectionBehaviour.csproj", "{403A0874-C150-4048-A7C7-CDAB9FBF984A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9F7F57EE-E9A7-436D-9610-461B9FC3A849}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F7F57EE-E9A7-436D-9610-461B9FC3A849}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F7F57EE-E9A7-436D-9610-461B9FC3A849}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F7F57EE-E9A7-436D-9610-461B9FC3A849}.Release|Any CPU.Build.0 = Release|Any CPU
+		{403A0874-C150-4048-A7C7-CDAB9FBF984A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{403A0874-C150-4048-A7C7-CDAB9FBF984A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{403A0874-C150-4048-A7C7-CDAB9FBF984A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{403A0874-C150-4048-A7C7-CDAB9FBF984A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

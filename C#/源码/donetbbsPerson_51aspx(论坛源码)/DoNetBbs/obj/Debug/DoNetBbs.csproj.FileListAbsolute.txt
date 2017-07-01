@@ -1,0 +1,12 @@
+D:\donetbbs5.22_51aspx\DoNetBbs\bin\Debug\DoNetBbs.dll
+D:\donetbbs5.22_51aspx\DoNetBbs\bin\Debug\DoNetBbs.pdb
+D:\donetbbs5.22_51aspx\DoNetBbs\obj\Debug\ResolveAssemblyReference.cache
+D:\donetbbs5.22_51aspx\DoNetBbs\obj\Debug\DoNetBbs.dll
+D:\donetbbs5.22_51aspx\DoNetBbs\obj\Debug\DoNetBbs.pdb
+D:\donetbbsPerson_51aspx\DoNetBbs\bin\Debug\DoNetBbs.dll
+D:\donetbbsPerson_51aspx\DoNetBbs\bin\Debug\DoNetBbs.pdb
+D:\donetbbsPerson_51aspx\DoNetBbs\obj\Debug\ResolveAssemblyReference.cache
+D:\donetbbsPerson_51aspx\bin\BQSBbs.dll
+D:\donetbbsPerson_51aspx\bin\BQSBbs.pdb
+D:\donetbbsPerson_51aspx\DoNetBbs\obj\Debug\BQSBbs.dll
+D:\donetbbsPerson_51aspx\DoNetBbs\obj\Debug\BQSBbs.pdb

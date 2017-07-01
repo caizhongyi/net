@@ -1,0 +1,24 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html DIR="LTR">
+<head>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+</head>
+<body>
+<h2>Reflection optimizer</h2>
+
+<p>Demonstrates how to configure reflection optimizer for AMF deserialization.</p>
+
+<p>Reflection optimizer is turned on by setting the <b>optimizer</b> tag in the web.config file.<br>
+<br>
+&lt;!--  Reflection optimizer provider="codedom|il" debug="true|false" --&gt;<br>
+&lt;optimizer provider="codedom" debug="true"/&gt;<br>
+<br>
+Supported options are the CodeDOM-based optimizations (this is the only option for .NET 1.1) and Lightweight Code Generation (LCG) based optimizations (available only for .NET 2.0).<br>
+Debugging is available only for CodeDOM-based optimizations.
+</p>
+
+<p><b>Note1:</b> Reflection optimizer cannot be used with nullable types (and null/undefined values sent for .NET primitive types are not supported).</p>
+<p><b>Note2:</b> Special considerations are required when working with AMF0.</p>
+<p><b>Note3:</b> This is an advanced setting, if the application behaves incorrectly turn off the reflection optimizer.</p>
+</body>
+</html>

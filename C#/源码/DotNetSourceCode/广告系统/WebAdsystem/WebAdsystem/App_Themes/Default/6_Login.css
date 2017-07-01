@@ -1,0 +1,30 @@
+﻿div.loginBody
+{
+    margin: 10px;
+    background: #ffffff;
+    border-top: solid 1px #666666;
+    border-left: solid 1px #cccccc;
+    border-right: solid 1px #cccccc;
+    border-bottom: solid 1px #ffffff;
+    min-height: 550px;
+    _height: 550px;
+    position: relative;
+}
+div.login
+{
+    margin: 10px 10px 10px 10px;
+}
+table.content td
+{
+    vertical-align: top;
+    text-align: left;
+}
+table.login
+{
+    width: 200px;
+}
+table.login td
+{
+    padding: 10px;
+    border: solid 1px #cccccc;
+}

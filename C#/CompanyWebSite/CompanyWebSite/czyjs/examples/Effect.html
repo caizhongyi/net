@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>无标题页</title>
+    <script type="text/javascript" src="../czy-js-all.js"></script>
+    <link rel="stylesheet" href="../czy-css-all.css" type="text/css"/>
+    <script type="text/javascript">
+    window.onload=function ()
+    {
+        new czyjs.Effect.Text({ id: "txt" });
+
+        new czyjs.Effect.OnClick({
+            id: "Text1",
+            prototype: "backgroundColor",
+            initStyle:"#ffffff",
+            changeStyle:"#000000",
+            tag: "bk"
+        });
+
+        new czyjs.Effect.OnMouseMove({
+            id: "list",
+            prototype: "backgroundColor",
+            initStyle: "#ffffff",
+            changeStyle: "#000000",
+            tag: "bk",
+            self: false
+        });
+    }
+    </script>
+</head>
+<body>
+<input id='txt' type='text'  style="height:50px; width:200px;"/>
+<input id='Text1' type='button'  style="height:50px; width:200px;" tag='bk'/>
+<ul id="list">
+<li style="height:40px; width:100px;" tag='bk'>bbbb</li>
+<li style="height:40px; width:100px;" >bbbb</li>
+<li style="height:40px; width:100px;" >bbbb</li>
+<li style="height:40px; width:100px;" >bbbb</li>
+</ul>
+</body>
+</html>

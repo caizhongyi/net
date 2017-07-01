@@ -1,0 +1,20 @@
+﻿
+
+/*公共部分
+-------------------------------------------------*/
+.czy-login-form{  overflow:hidden; text-align:center;  font-size:19px; font-family:微软雅黑 ;  }
+.czy-login-form .czy-login-inner{overflow:hidden; margin-top:1%;  text-align:left; margin-left:auto; margin-right:auto; padding:30px;}
+/*用户DIV*/
+ #czy-login-user{overflow:hidden;margin-bottom:10px; font-weight:bold; }
+ #czy-login-pwd{overflow:hidden;margin-bottom:10px;font-weight:bold;}
+.czy-login-form .czy-login-inner .czy-login-textBox{ background-image:url(../images/controls/czy-text-bg.gif) ; border:solid 1px #9fbbe2;  background-repeat:repeat-x; }/*文本焦点*/
+.czy-login-form .czy-login-inner .czy-login-textBoxOn{background-image:url(); border:solid 1px #034556;}/*获得焦点*/
+.czy-login-form .czy-login-inner .czy-login-label{ float:left; display:block; width:100px}/*用户名密码label*/
+.czy-login-form .czy-login-inner .czy-login-txts{display:block;}
+/*验证*/
+.czy-login-form #czy-login-validate{margin-bottom:10px;}
+/*input*/
+.czy-login-form input,.czy-login-form input{font-size:19px; font-family:微软雅黑 ;line-height:40px; height:40px;width:200px; background-image:url(../images/txt-bg.gif); background-repeat:repeat-x; border:solid 1px #999999;}
+.czy-login-form #czy-validate-text{width:80px;}
+/*Button*/
+.czy-login-form #czy-login input{height:40px;width:150px; background-image:url(../images/controls/czy-text-bg.gif);  cursor:pointer; margin-right:10px;}

@@ -1,0 +1,33 @@
+﻿#parse("_headno.html")
+    <div class="itemmenu1">
+        <ul>
+            <li><a href="../friend/friend$exname?uid=$userid">所有分组</a></li>
+            #foreach($frdc in $frdclist)
+                <li id="param$frdc.id" $frdc.css><a href="../friend/friend$exname?classid=$frdc.id&uid=$userid" class="$frdc.css">$frdc.cname</a></li>
+            #end
+            <li><input value="" type="text" id="friendsname" style="width:80px;" class="f-text" /> <input value="搜索" onclick="searchfrd();" type="button" id="Text1" class="btn_blue2" /></li>
+        </ul>
+    </div>
+    
+<div class="friendlist">
+    <ul>
+        #foreach($frd in $frdlist)
+            <li id="param${frd.id}">
+                <div class="l images center"><a href="javascript:;" onclick="insertFriends('$frd.truename',$frd.friendid)" title="点击选择好友"><img src="$frd.userhead" /><br />${frd.truename}</a></div>
+             </li>
+        #end
+    </ul>
+</div>           
+
+
+<div class="pages">$pagelist</div>
+<script type="text/javascript">
+    function searchfrd()
+    {
+        window.location.href="friend"+ExName+"?uid=$userid&kwd="+escape(document.getElementById("friendsname").value);
+    }
+    function insertFriends(truename,friendid)
+    {
+        parent.inserttoFriend(truename,friendid);
+    }
+</script>

@@ -1,0 +1,148 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+<title>${cpagetitle} - ${pagetitle}</title>
+<meta name="keywords" content="${cpagetitle},$keywords" />
+<meta name="description" content="$description" />
+<meta name="author" content="JuSNS Inc. & JuSNS UI Team" />
+<link href="$templatepath/css/home.css" rel="stylesheet" type="text/css" />
+<link href="$templatepath/css/css.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="$webpath/library/js/jquery.min.js"></script>
+<script type="text/javascript" src="$webpath/library/js/public.js"></script>
+<script type="text/javascript" src="$webpath/library/js/common.js"></script>
+<script type="text/javascript" src="$webpath/library/js/centerwindow.js"></script>
+<script type="text/javascript">
+function topsearch()
+{
+    var t=document.getElementById("stypes").value;
+    var v=document.getElementById("allkwd").value;
+    if(v==""&&v.length<2)
+    {
+        showErrorResult("关键字必须大于2个字符。");return;
+    }
+    search(t,"",v);
+}
+function joinvalue(chr)
+{
+    document.getElementById("stypes").value=chr;
+}
+</script>
+</head>
+<body>
+<div id="loadingid" style="display:none;"></div>
+#if($errors)<div  id="toperrors" class="errors">错误：$errors</div>#end
+#if($rights)<div  id="toprights" class="rights">$rights</div>#end
+<div style="text-align:center;">
+    <div  style="display:none;" id="top_rightmsg"></div>
+    <div  style="display:none;" id="top_errormsg"></div>
+</div>
+
+<div id="header">
+    #if($isshortmenu==true)
+          #if($uid>0)
+	        <div class="top_bar" id="top_barscroll">
+	            <div class="left_bar">
+	            <ul class="topusermenu">
+	               <li><a href="$webpath/default$exname">网站首页</a> </li>
+	               <li><a href="$webpath/home/default$exname" class="red">个人中心</a> </li>
+	               <li><a href="${myspace}">我的空间</a></li>
+	               <li>
+	                    <span><a href="$webpath/home/friend/default$exname">好友</a></span>
+                                <ul class="friendlisttop">
+                                    <li class="fge">&nbsp;</li>
+                                    <li><a href="$webpath/home/friend/default$exname">我的好友</a></li>
+                                    <li><a href="$webpath/home/friend/dyn$exname">好友动态设置</a></li>
+                                    <li><a href="$webpath/home/friend/visit$exname">来访者</a></li>
+                                    <li><a href="$webpath/home/friend/city$exname?q=city">同城好友</a></li>
+                                    <li><a href="$webpath/home/friend/pfriend$exname">可能认识的人</a></li>
+                                    <li><a href="$webpath/home/friend/att$exname">关注我的人</a></li>
+                                    <li><a href="$webpath/home/friend/att$exname?r=1">我关注的人</a></li>
+                                    <li><a href="$webpath/home/friend/invite$exname">邀请朋友加入</a></li>
+                                    <li><a href="$webpath/home/friend/search$exname">搜索朋友</a></li>
+                                </ul>
+                      </li>
+	                 <li><a href="$webpath/homes$exname">随便看看</a></li>
+	                  <li> <a href="$webpath/app/gbook/default$exname">留言本</a></li>
+	                  <li> <a href="$webpath/home/box/default$exname">收件箱</a> </li>
+	                  #if($isonline=="1")
+	                  <li><a href="$webpath/home/online$exname">在线用户</a></li>
+	                  #end
+	                  <li><a href="$webpath/app/center/default$exname">应用程序</a></li>
+	                  </ul>
+	            </div>
+	            <div class="right_bar">
+	                <a href="$myspace" class="imagec" title="我的主页"><img src="$portrait0" align="absmiddle" alt="我的主页" />$mytruename</a> 
+	                | <a href="$webpath/space/info/profile$exname">设置</a>
+	                 | <a href="$webpath/home/charge/default$exname">充值</a> 
+	                 | <a href="$webpath/space/info/space$exname">装扮空间</a>
+	                  | <a href="$webpath/help/default$exname">帮助</a> 
+	                  |  <a href="javascript:;" onclick="login('$loginurl',$iscode);" title="换个用户登录">重登录</a>
+	                   | <a href="$webpath/login$exname?r=out">退出</a> 
+	            </div>
+	        </div>
+	    #else
+	        <div class="top_bar" id="top_barscroll">
+		        <div class="left_bar"><li><a href="$webpath/default$exname">首页</a></li><li><a href="$webpath/homes$exname">随便看看</a></li>#if($isonline=="1")<li><a href="$webpath/home/online$exname">在线用户</a></li>#end<li><a href="$webpath/app/center/default$exname">应用程序</a></li><li><a href="$webpath/help/default$exname">帮助</a></li></div>
+		        <div class="right_bar"><a href="$webpath/register$exname">注册</a> | <a href="javascript:;" onclick="login('$loginurl',$iscode);">登录</a> | <a href="$webpath/repwd$exname">忘记密码？</a></div>
+	        </div>
+	    #end
+	#end
+	<div class="logo_box clearfix">
+		<div class="logo"><a href="/default$exname" title="首页"><img src="$templatepath/img/logo.gif" /></a></div>
+		<div class="topads">
+		    <div class="aa">
+		      
+		    </div>
+		    <div class="bb">
+		        <ul class="stopnav">
+		        <li id="searchtype" class="stitle">
+                       <span><a href="javascript:;" id="stys">用户</a> &nbsp;</span>
+                        <ul class="subnav">
+                            <li><a href="javascript:;" onclick="joinvalue('user');jQuery('#stys').html('用户');">用户</a></li>
+                            <li><a href="javascript:;" onclick="joinvalue('news');jQuery('#stys').html('资讯');">资讯</a></li>
+                            <li><a href="javascript:;" onclick="joinvalue('blog');jQuery('#stys').html('日志');">日志</a></li>
+                            <li><a href="javascript:;" onclick="joinvalue('album');jQuery('#stys').html('相册');">相册</a></li>
+                            <li><a href="javascript:;" onclick="joinvalue('group');jQuery('#stys').html('群组');">群组</a></li>
+                            <li><a href="javascript:;" onclick="joinvalue('goods');jQuery('#stys').html('商品');">商品</a></li>
+                            <li><a href="javascript:;" onclick="joinvalue('multe');jQuery('#stys').html('团购');">团购</a></li>
+                            <li><a href="javascript:;" onclick="joinvalue('ask');jQuery('#stys').html('问答');">问答</a></li>
+                            <li><a href="javascript:;" onclick="joinvalue('ative');jQuery('#stys').html('活动');">活动</a></li>
+                            <li><a href="javascript:;" onclick="joinvalue('share');jQuery('#stys').html('分享');">分享</a></li>
+                            <li><a href="javascript:;" onclick="joinvalue('vote');jQuery('#stys').html('投票');">投票</a></li>
+                        </ul>
+		        </li>
+		        <li class="stext">
+                    <input id="stypes" name="searchtype" type="hidden" value="user" />
+		        <input class="text" name="allkwd" id="allkwd" value="" type="text" onkeydown="javascript:if(event.keyCode==13){topsearch();}" /><input  name="" value="" class="btn" onclick="topsearch()" type="button" />
+                </li>
+                </ul>
+            </div>
+		</div>
+	</div>
+	 <ul class="topnav clearfix">     
+     	<li><a href="$webpath/default$exname">首页</a></li>   
+        <li><a href="$webpath/app/news/default$exname">资讯</a></li>
+        <li><a href="$webpath/app/group/default$exname">社群</a></li>
+        <li><a href="$webpath/app/blog/default$exname">博客</a></li>
+        <li><a href="$webpath/app/twitter/default$exname">微博</a></li>
+        <li><a href="$webpath/app/share/default$exname">分享</a></li>
+        <li><a href="$webpath/app/gift/default$exname">礼物</a></li>
+        <li><a href="$webpath/app/ative/default$exname">活动</a></li>
+        <li><a href="$webpath/app/album/default$exname">相册</a></li>
+        <li><a href="$webpath/app/shop/default$exname">商品</a></li>
+        <li><a href="$webpath/app/ask/default$exname">问答</a></li>
+        <li><a href="$webpath/app/vote/default$exname">投票</a></li>
+        <li><a href="$webpath/homes$exname">社区动态</a></li>
+        #if($isshortmenu==true)
+            <li class="userinfo" id="timePlace">loading...</li>
+        #else
+            #if($uid>0)
+                <li class="userinfo"><a href="$myspace" class="imagec" title="我的主页"><img src="$portrait0" align="absmiddle" alt="我的主页" /> 我的主页</a> <a href="javascript:;" onclick="login('$loginurl',$iscode);" title="换个用户登录">重登录</a> <a href="$webpath/login$exname?r=out">退出</a></li>
+            #else
+                <li class="userinfo"><a href="$webpath/register$exname">注册</a>&nbsp; <a href="javascript:;" onclick="login('$loginurl',$iscode);">登录</a></li>
+            #end
+        #end
+        </ul>
+</div>
+
+<div id="allbodycontent">

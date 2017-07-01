@@ -1,0 +1,55 @@
+短信猫动态链接库二次开发接口
+
+适用范围：本短信二次开发接口适用于WAVECOM、西门子、诺基亚、摩托罗拉等支持标准AT指令的GSM短信终端。
+
+使用方式：将sms.dll文件（点此下载）拷贝到系统安装目录中的system32文件夹中，然后再根据以下接口函数说明和提供的例程源码进行开发。
+
+短信猫二次开发接口函数及规范
+
+1、Sms_Connection(Com_Port As Integer,Com_BaudRate As Integer, Mobile_Type As String) As Integer
+
+Sms_Connection函数说明如下：
+功能描述：用于初始化终端与串口的连接
+Com_Port：串口号（0为红外接口，1,2,3,...为串口）
+Com_BaudRate：波特率
+Mobile_Type：返回终端型号
+Sms_Connection：返回值(0：连接终端失败；1：连接终端成功)
+
+2、Sms_Send(Sms_TelNum As String, Sms_Text As String) As Integer
+
+Sms_Send函数说明如下：
+功能描述：发送短信
+Sms_TelNum：发送给的终端号码
+Sms_Text：发送的短信内容
+Sms_Send：返回值(0：发送短信失败；1：发送短信成功)
+
+3、Sms_Receive(Sms_Type As String, Sms_Text As String) As Integer
+
+Sms_Receive函数说明如下：
+功能描述：接收指定类型的短信
+Sms_Type：短信类型(0：未读短信；1：已读短信；2：待发短信；3：已发短信；4：全部短信)
+Sms_Text：返回指定类型的短信内容字符串(短信内容字符串说明：短信与短信之前用"|"符号作为分隔符,每条短信中间的各字段用"#"符号作为分隔符)
+
+4、Sms_Delete(ByVal Sms_Index As String) As Integer
+
+Sms_Delete函数说明如下：
+功能描述：删除指定的短信
+Sms_Index：短信的索引号
+
+5、Sms_AutoFlag()As Integer
+
+Sms_AutoFlag函数说明如下：
+功能描述：检测连接的终端是否支持自动收发短信功能
+Sms_AutoFlag：返回值(0：不支持；1：支持)
+
+6、Sms_NewFlag() As Integer
+
+Sms_NewFlag函数说明如下：
+功能描述：查询是否收到新的短信息
+Sms_AutoFlag：返回值(0：未收到；1：收到)
+
+7、Sms_Disconnection() As Integer
+
+Sms_Disconnection函数说明如下：
+功能描述：断开终端与串口的连接
+

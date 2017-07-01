@@ -1,0 +1,8 @@
+bin\Debug\send.exe
+bin\Debug\send.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\send.Form1.resources
+obj\Debug\send.Properties.Resources.resources
+obj\Debug\send.csproj.GenerateResource.Cache
+obj\Debug\send.exe
+obj\Debug\send.pdb

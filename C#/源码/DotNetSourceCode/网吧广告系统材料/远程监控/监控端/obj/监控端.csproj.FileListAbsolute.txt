@@ -1,0 +1,11 @@
+C:\Users\Administrator\Desktop\远程监控\监控端\obj\Debug\监控端.exe
+C:\Users\Administrator\Desktop\远程监控\监控端\obj\Debug\监控端.pdb
+C:\Users\Administrator\Desktop\远程监控\监控端\bin\Debug\监控端.exe
+C:\Users\Administrator\Desktop\远程监控\监控端\bin\Debug\监控端.pdb
+C:\Users\Administrator\Desktop\远程监控\监控端\bin\Debug\SmartKernel.Net.Monitor.dll
+C:\Users\Administrator\Desktop\远程监控\监控端\bin\Debug\SmartKernel.Net.Monitor.pdb
+C:\Users\Administrator\Desktop\远程监控\监控端\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\远程监控\监控端\obj\Debug\SmartKernel.Net.MonitorClient.resources
+C:\Users\Administrator\Desktop\远程监控\监控端\obj\Debug\SmartKernel.Net.MonitorUserControl.resources
+C:\Users\Administrator\Desktop\远程监控\监控端\obj\Debug\SmartKernel.Net.Properties.Resources.resources
+C:\Users\Administrator\Desktop\远程监控\监控端\obj\Debug\监控端.csproj.GenerateResource.Cache

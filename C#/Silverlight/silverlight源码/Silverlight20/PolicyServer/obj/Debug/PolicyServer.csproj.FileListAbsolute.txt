@@ -1,0 +1,18 @@
+C:\Silverlight20\PolicyServer\bin\Debug\clientaccesspolicy.xml
+C:\Silverlight20\PolicyServer\bin\Debug\PolicyServer.exe
+C:\Silverlight20\PolicyServer\bin\Debug\PolicyServer.pdb
+C:\Silverlight20\PolicyServer\obj\Debug\ResolveAssemblyReference.cache
+C:\Silverlight20\PolicyServer\obj\Debug\PolicyServer.Main.resources
+C:\Silverlight20\PolicyServer\obj\Debug\PolicyServer.Properties.Resources.resources
+C:\Silverlight20\PolicyServer\obj\Debug\PolicyServer.csproj.GenerateResource.Cache
+C:\Silverlight20\PolicyServer\obj\Debug\PolicyServer.exe
+C:\Silverlight20\PolicyServer\obj\Debug\PolicyServer.pdb
+C:\Documents and Settings\webabcd\桌面\Silverlight20\PolicyServer\bin\Debug\clientaccesspolicy.xml
+C:\Documents and Settings\webabcd\桌面\Silverlight20\PolicyServer\bin\Debug\PolicyServer.exe
+C:\Documents and Settings\webabcd\桌面\Silverlight20\PolicyServer\bin\Debug\PolicyServer.pdb
+C:\Documents and Settings\webabcd\桌面\Silverlight20\PolicyServer\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\webabcd\桌面\Silverlight20\PolicyServer\obj\Debug\PolicyServer.Main.resources
+C:\Documents and Settings\webabcd\桌面\Silverlight20\PolicyServer\obj\Debug\PolicyServer.Properties.Resources.resources
+C:\Documents and Settings\webabcd\桌面\Silverlight20\PolicyServer\obj\Debug\PolicyServer.csproj.GenerateResource.Cache
+C:\Documents and Settings\webabcd\桌面\Silverlight20\PolicyServer\obj\Debug\PolicyServer.exe
+C:\Documents and Settings\webabcd\桌面\Silverlight20\PolicyServer\obj\Debug\PolicyServer.pdb

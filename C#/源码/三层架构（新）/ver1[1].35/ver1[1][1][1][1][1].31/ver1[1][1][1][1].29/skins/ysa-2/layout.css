@@ -1,0 +1,95 @@
+﻿/*---主体样式---*/
+  #container{width:100%;margin:0 auto;text-align:center;background:#ffffff url(topbg2.jpg)  top repeat-x }
+  #FlashHead{position: absolute;width:223;right:0px;margin:104px 0px 0px -20px;}
+  /*---顶部样式---*/
+  #container #header{width:100%;margin:1px auto;text-align:left;background: url(topbg1.jpg) left top no-repeat }
+  #container #header #blogname{background:url('Topbg.png') ;padding:45px 0px 0px 400px;height:105px;font-size:24px;color:#454545;text-align:left;font-weight:bold; }
+  #container #header #blogname #blogTitle{padding:10px 0px 0px 0px;font-size:12px;height:10px;color:#454545}
+  #container #header #menu{margin-top:0px !important;margin-top:105px;height:25px;border-top:1px solid #82155B;border-bottom:1px solid #82155B;background:#82155B}
+  #container #header #menu #Left{}
+  #container #header #menu #Right{}  
+  #container #header #menu ul{float:left;margin:0px 0px 0px 0px;padding:2px}
+  #container #header #menu ul li{list-style:none;float:left;margin:0px 0px 0px 0px;}
+   .menuL{}
+   .menuR{width:3px;height:25px;background:#82155B}  
+   .menuDiv{width:3px;height:25px;background:#82155B}/*---菜单分割线---*/
+  /*---内容样式---*/
+  #container #Tbody{width:820px;margin:auto;text-align:left;padding:5px 0;background:#fff}
+  /*---工具条--*/
+  #sidebar{float:right;width:182px;margin:0px 5px 0px -190px!important;padding-left:5px;margin:0px 0px 0px -180px;text-align:center;color:#DF31A3;background-color: #F6F5F0;}
+  #innersidebar{}
+  #sidebar-topimg{  position:absolute; left:26px;height:66px;overflow:hidden; background:url(side-top.jpg) no-repeat;}
+  #sidebar-bottomimg{height:0px;overflow:hidden;}
+  /*---工具箱样式--*/
+  .sidepanel{margin:0 auto!important;margin:0px;background-color: #F6F5F0;}
+  .Ptitle{height:20px;line-height:170%;text-align:left;padding-left:5px;background:#eee0bc url(sidebar.gif);font-weight:bold;font-size:12px;color:#FFFFFF;margin:0px}   
+  .Pcontent{text-align:left; padding-left:6px !important;padding-left:10px;padding-top:4px;padding-bottom:2px;line-height:170%} 
+  .Pfoot{margin:0px 0px 3px 0px !important;margin:-2px 0px 3px 0px;height:6px!important;height:6px;}
+  /*---主内容--*/ 
+  #mainContent{float:left;width:620px;text-align:center}
+  #innermainContent{overflow:visible; background:#F6F5F0}
+  #mainContent-topimg{height:6px;background:url(topimg.gif) no-repeat;overflow:hidden;background-color: #2D2F2D;}
+  #mainContent-bottomimg{height:6px;background:url(bottomimg.gif) no-repeat;overflow:hidden;background-color: #2D2F2D;}
+  .content-width{margin:auto;width:604px; padding-top:10px;}/*--主内容元素的全局宽度--*/
+  /*---主内容页数--*/
+  .pageContent{color: #999999;font-size:12px;margin:0 auto;padding:3px;text-align:left;height:18px; border-bottom:1px solid #DFDFDF; border-right:1px solid #EFEFEF;background:#FFF} 
+  .NavTitle{float:left;font-weight:bold;}
+  .page{padding-right:5px;height:18px;}
+  .page ul{list-style:none;margin:0px;padding:0px} 
+  .page ul li{float:left;padding:0px 3px 0px 3px;} 
+  .page ul li.PageL {width:9px;height:16px;}
+  .page ul li.PageR {width:9px;height:16px;}
+  .PageLbutton{background:url('../../images/BttnLeft.gif') 0px 0px;width:9px;height:16px;display:block;}
+  .PageRbutton{background:url('../../images/BttnRight.gif') 0px 0px;width:9px;height:16px;display:block;}
+  /*---内容框--*/
+  .Content{margin:0 auto;}    
+  /*---日志标题框--*/
+  .Content-top{background:#F6F5F0;padding:5px 2px 5px 3px;text-align:left;border-left:0px solid #EDF8DD;border-top:0px solid #EDF8DD;border-bottom:1px dotted #DBDBD0;}
+  .Content-top .ContentLeft{width:0px;float:left;}
+  .Content-top .ContentRight{width:0px;float:right;}
+  .Content-top .ContentTitle{font-size:15px;color:#AD5757;padding-bottom:0px;margin:0px; padding-left:17px; display:inline; background:url(TitleLinkImg.gif) 4px 5px no-repeat;}
+  .Content-top .ContentAuthor{color:#AD5757;font-size:11px;padding-top:1px;padding-left:4px;font-weight:100;font-family:Verdana;margin:0px;display:inline;} 
+  /*---日志内容框--*/
+  .Content-body{margin:8px auto;overflow:hidden;text-align:left;width:98%;line-height:140%}
+  /*---日志内容底部--*/
+  .Content-bottom{padding:3px 3px 1px 10px;text-align:right;height:20px;color:#DF31A3; border-right:1px solid #DFDFDF; border-bottom:1px solid #DFDFDF; border-left:1px solid #EFEFEF;background:#FFFFFF}
+  .Content-bottom .ContentBLeft{width:0px;float:left;}
+  .Content-bottom .ContentBRight{width:0px;float:right;}  
+
+  /*---日志其他信息--*/
+  .Content-Info {margin:0px 4px 6px 4px;padding:0px}
+  .Content-Info .InfoAuthor{text-align:left}
+  .Content-Info .InfoOther{float:right;text-align:right;}
+  /*--评论框--*/
+  .comment{text-align:left;margin:0px 12px 15px 12px;}
+  .commentinfo{font-size:11px;color:#DF31A3;}
+  .commenttop{padding:4px;margin:1px; border-bottom:1px dotted #CCC;background:#EDECE6}
+  .commentcontent{padding:10px;line-height:140%;overflow:hidden;width:96%;background:#FFF}
+  /*---UBB框--*/
+  .UBBPanel{}
+  .UBBTitle{height:30px;font-weight:bold;background:url(ubbicon.gif) 20px 18px no-repeat;color:#B2151B;}
+  .UBBTitle img {display:none}
+  .UBBContent{padding:8px;line-height:160%;background:#edece6;margin-left:10px}
+  .UBBContent TEXTAREA {width:80%;font-size:12px}
+  /*---信息框--*/
+  #MsgContent{width:450px;padding:1px;background:#f6f5f0;margin:auto;}
+  #MsgContent #MsgHead{BACKGROUND:#DF31A3;padding:4px;text-align:center;font-weight:bold;}
+  #MsgContent #MsgBody{padding:4px;line-height:180%;}
+
+  .LDialog{border:1px solid #795B50;margin:3px auto;padding:1px;}
+  .LDialog .LHead{background:#BBA097;padding:1px;color:#fff;text-align:center;font-weight:bold;}
+  .LDialog .LBody{padding:4px;line-height:200%;}
+
+/*信息框图标以及文字*/
+   .MessageText{height:50px;margin-right:38px;}
+   .MessageIcon{background:url(Message.gif) no-repeat;width:48px;height:48px;float:left;}
+   .ErrorIcon{background:url(Error.gif) no-repeat;width:48px;height:48px;float:left;}
+   .WarningIcon{background:url(Warning.gif) no-repeat;width:48px;height:48px;float:left;}   
+   .QuestionIcon{background:url(vQuestion.gif) no-repeat;width:48px;height:48px;float:left;}
+  /*---底部样式---*/
+  #container #foot{width:820px;margin:0px 0 0 0;padding:5px 0px 10px 0px;color:#f5f6f0;background:#82155B url(bottombg.gif) top no-repeat}
+  #container #foot p{margin:2px;font-size:10px;}
+  /*---文件上传框样式---*/
+  .attachmentBody{
+    margin:0px;font-size:12px;background:#f6f5f0
+  }

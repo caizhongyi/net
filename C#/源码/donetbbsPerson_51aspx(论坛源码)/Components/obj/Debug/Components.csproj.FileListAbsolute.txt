@@ -1,0 +1,8 @@
+D:\donetbbsPerson_51aspx\Components\bin\Components.dll
+D:\donetbbsPerson_51aspx\Components\bin\Components.pdb
+D:\donetbbsPerson_51aspx\Components\bin\DosOrg.dll
+D:\donetbbsPerson_51aspx\Components\bin\DataProviders.dll
+D:\donetbbsPerson_51aspx\Components\bin\DoNetBbs.pdb
+D:\donetbbsPerson_51aspx\Components\obj\Debug\ResolveAssemblyReference.cache
+D:\donetbbsPerson_51aspx\Components\obj\Debug\Components.dll
+D:\donetbbsPerson_51aspx\Components\obj\Debug\Components.pdb

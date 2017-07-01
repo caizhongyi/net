@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:WindowedApplication xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute"
+	applicationComplete="onApplicationComplete()"
+	height="500" width="800"  frameRate="30"
+	horizontalScrollPolicy="off" verticalScrollPolicy="off" xmlns:local="*" showStatusBar="false" title="FluorineFx Northwind Sample">
+	<mx:Script>
+		<![CDATA[
+			import mx.collections.ArrayCollection;
+			import mx.utils.ObjectUtil;
+			import mx.controls.Alert;
+			import mx.rpc.events.FaultEvent;
+			import mx.rpc.events.ResultEvent;
+		
+        	[Bindable]
+        	private var employees:ArrayCollection = new ArrayCollection();
+		
+			private function onApplicationComplete() : void
+			{
+				ro.GetEmployees();
+			}
+			
+		    private function employeesHandler(event:ResultEvent):void 
+		    {
+		    	employees = new ArrayCollection(event.result as Array);
+	     	}
+	      
+		    private function employeesFaultHandler(event:FaultEvent):void
+		    {
+	        	Alert.show( event.fault.faultString, "Failed to request info");
+		    }
+					
+		]]>
+	</mx:Script>
+	
+	<mx:RemoteObject id="ro" destination="northwind">
+	    <mx:method name="GetEmployees" fault="employeesFaultHandler(event)" result="employeesHandler(event)" />
+	</mx:RemoteObject>
+
+    <mx:HBox width="100%" height="100%">
+
+        <mx:Panel id="mainPanel" title="Employee List" width="50%" height="100%" backgroundAlpha=".4"
+            paddingLeft="4" paddingRight="4" paddingTop="4" paddingBottom="4" cornerRadius="6">
+            <!-- Displays the list of employees -->
+            <mx:DataGrid id="dg" dataProvider="{employees}" width="100%" height="100%">
+                <mx:columns>
+                    <mx:Array>
+                        <mx:DataGridColumn dataField="firstName" headerText="First Name"/>
+                        <mx:DataGridColumn dataField="lastName" headerText="Last Name"/>
+                    </mx:Array>
+                </mx:columns>
+            </mx:DataGrid>
+        </mx:Panel>
+
+        <mx:VBox width="50%" height="100%"
+            backgroundColor="#FFFFFF"
+            backgroundAlpha=".4"
+            borderStyle="solid"
+            cornerRadius="6"
+            paddingLeft="4"
+            paddingRight="4"
+            paddingTop="4"
+            paddingBottom="4"
+            dropShadowEnabled="true"
+            >
+
+            <!-- A custom component that shows details of the restaurant selected in the DataGrid -->
+            <local:EmployeeDetails id="employeeDetails" employee="{dg.selectedItem as Employee}"/>
+        </mx:VBox>
+
+    </mx:HBox>
+	
+</mx:WindowedApplication>

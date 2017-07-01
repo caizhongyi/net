@@ -1,0 +1,66 @@
+﻿#parse("_head.html")
+<link href="$templatepath/css/app/gift.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="$webpath/library/js/date/WdatePicker.js"></script>
+<div id="snssysmenu">
+#parse("_menusystem.html")
+</div>
+<div id="snsbody1">
+    <div id="snshead">$cpagetitle</div>
+    <div class="itemmenu">
+        <ul>
+            <li><a href="ads$exname">广告管理</a></li>
+            <li class="current"><a href="ads_add$exname">$cpagetitle</a></li>
+        </ul>
+    </div>
+        
+    <div class="system">
+            <form action="" id="form1" method="post" enctype="multipart/form-data">
+                <p class="pitem">
+                    <em>广告名称</em>
+                    <input  type="text" class="f-text" name="Title" id="Title" value="#if($Title)$Title#end" />
+                </p>
+                
+                <p class="pitem">
+                    <em>广告位</em>
+                    <input  type="text" class="f-text" name="positionType" id="positionType" value="#if($positionType)$positionType#end" />
+                </p>
+                
+                <p class="pitem">
+                    <em>广告图片</em>
+                    <input id="Pic" type="file" name="Pic" class="f-file" />
+                    <input id="opic" name="opic" value="$Pic" type="hidden" />
+                </p>
+                
+                <p class="pitem">
+                    <em>广告链接地址</em>
+                    <input  type="text" class="f-text" name="URL" id="URL" value="#if($URL)$URL#end" />
+                </p>
+                <p class="pitem">
+                    <em>到期时间</em>
+                    <input  type="text" class="f-text" name="EndTime" id="EndTime" value="#if($EndTime)$EndTime#end"  onFocus="WdatePicker({isShowWeek:true})" />
+                </p>
+                
+                <p class="pitem">
+                    <em>说明</em>
+                    <textarea  type="" style="width:50%;height:50px;" name="Content" id="Content">#if($Content)$Content#end</textarea>
+                </p>
+                
+                <p class="pitem">
+                    <em>锁定</em>
+                    <input  type="checkbox"  name="IsLock" id="IsLock" value="1" #if($IsLock)checked#end />
+                </p>
+                <p class="pitem">
+                    <em>&nbsp;</em>
+                    <input id="Submit1" type="submit" value="$cpagetitle" class="btn_blue6" />
+                </p>
+            </form>
+    </div>
+    
+</div>
+#parse("_foot.html")
+<script type="text/javascript">
+    function showtc(cid)
+    {
+        jQuery("#cc_"+cid).toggle();
+    }
+</script>

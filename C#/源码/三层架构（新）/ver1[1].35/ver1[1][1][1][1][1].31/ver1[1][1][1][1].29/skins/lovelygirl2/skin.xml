@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<SkinSet>
+ <SkinName>lovely girl</SkinName>
+ <SkinDesigner>cckj</SkinDesigner>
+ <pubDate>20005-9-25</pubDate>
+ <DesignerURL>http://www.very286.com/</DesignerURL>
+ <DesignerMail>wanwanye@gmail.com</DesignerMail>
+ <Flash>
+  <UseFlash>0</UseFlash>
+  <FlashPath>head.swf</FlashPath>
+  <FlashWidth>748</FlashWidth>
+  <FlashHeight>80</FlashHeight>
+  <FlashAlign>center</FlashAlign>
+  <FlashTop>0</FlashTop>
+  <FlashTransparent>-1</FlashTransparent>
+ </Flash>
+</SkinSet>

@@ -1,0 +1,57 @@
+﻿#parse("_head.html")
+<div id="snsmenu">
+#parse("_menu.html")
+</div>
+<div id="snsbody">
+    <div id="snshead"><span class="l">$cpagetitle</span><span class="r"><input id="kwd" name="kwd" value="#if($kwd)$kwd#else搜索话题#end" type="text" class="f-text w100" onclick="this.value=''" /> <input id="Button1" type="button" value="搜索" class="btn_gray2" onclick="search('grouptopic','$gid')" /></span></div>
+
+    <div id="snsbody-all">
+          <div class="grouplist">
+                <div class="images l">
+                    <img src="$portrait" onerror="this.src='$templatepath/images/nopic.gif'" />
+                </div>
+                <div class="bulletin">
+                    <div class="info">$Bulletin</div>
+                </div>
+          </div>
+      <div class="itemmenu">
+        <ul>
+            <li><a href="group$exname?gid=$gid">$groupname首页</a></li>
+            <li><a href="list$exname?gid=$gid">话题区($topiccount)</a></li>
+            <li><a href="album$exname?gid=$gid">相册($albumcount)</a></li>
+            <li class="current"><a href="files$exname?gid=$gid">文件共享($filescount)</a></li>
+            <li><a href="member$exname?gid=$gid">所有成员($membercount)</a></li>
+            <li><a href="list$exname?gid=$gid&q=best">精华区</a></li>
+            <li class="new"><a href="filesadd$exname?gid=$gid" class="newitem">上传附件</a></li> 
+        </ul>
+        
+    </div>
+    
+    <div class="grouptopic">
+        
+        <div class="titlefiles">
+            <div class="tle">文件名称</div>
+            <div class="size">大小(KB)</div>
+            <div class="uploader">上传者</div>
+            <div class="posttime">上传时间</div>
+            <div class="down">下载</div>
+            <div class="op"></div>
+        </div>
+        #foreach($info in $infolist)
+        <div class="contentfiles" id="param_$info.id">
+            <div class="tle">$info.filetype<a href="$webpath/app/download$exname?id=$info.id&gid=$gid&uid=$uid&do=group" target="_blank" title="下载">$info.title</a></div>
+            <div class="size">$info.size</div>
+            <div class="uploader"><a href="$info.spaceurl" target="_blank" title="查看$info.truename的空间"><img src="$info.headpic" align="absmiddle" /></a> <a href="$info.spaceurl" target="_blank" title="查看$info.truename的空间">$info.truename</a></div>
+            <div class="posttime time">$info.time</div>
+            <div class="down"><a href="$webpath/app/download$exname?id=$info.id&gid=$gid&uid=$uid&do=group" target="_blank" title="下载">下载</a></div>
+            <div class="op">$info.showop</div>
+        </div>
+        #end
+        <div class="pages">#if($pagelist)$pagelist#end</div>
+    </div>
+    <div class="l">空间总大小：${filesize}M，已使用：${unfilesize}M( $perentsize% ) </div><div class="l" style="width:400px;"><span class="groupfilesize"><div class="groupunfilesize" style="width:$perentsize%;"></div></span></div>
+ 
+    </div>
+</div>
+
+#parse("_foot.html")

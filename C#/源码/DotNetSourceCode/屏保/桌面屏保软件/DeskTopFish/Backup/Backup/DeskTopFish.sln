@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeskTopFish", "DeskTopFish.csproj", "{CCF82422-BCCD-4552-94DF-CFEA2B5CB122}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomForm", "E:\s\¿Ø¼þÔ´Âë\bin\CustomForm\CustomForm.csproj", "{3925581E-78C9-473A-B64A-DFE3B2873CA4}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{CCF82422-BCCD-4552-94DF-CFEA2B5CB122}.Debug.ActiveCfg = Debug|.NET
+		{CCF82422-BCCD-4552-94DF-CFEA2B5CB122}.Debug.Build.0 = Debug|.NET
+		{CCF82422-BCCD-4552-94DF-CFEA2B5CB122}.Release.ActiveCfg = Release|.NET
+		{CCF82422-BCCD-4552-94DF-CFEA2B5CB122}.Release.Build.0 = Release|.NET
+		{3925581E-78C9-473A-B64A-DFE3B2873CA4}.Debug.ActiveCfg = Debug|.NET
+		{3925581E-78C9-473A-B64A-DFE3B2873CA4}.Debug.Build.0 = Debug|.NET
+		{3925581E-78C9-473A-B64A-DFE3B2873CA4}.Release.ActiveCfg = Release|.NET
+		{3925581E-78C9-473A-B64A-DFE3B2873CA4}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

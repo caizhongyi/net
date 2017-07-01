@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>tabsView</title>
+   <script type="text/javascript" src="../czy-js-all.js"></script>
+   <link rel="stylesheet" href="../czy-css-all.css" type="text/css"/>
+    <script type="text/javascript">
+   
+    window.onload=function ()
+    {
+   //  DD_belatedPNG.fix('div,td,.png,background');
+         new  czyjs.UI.Controls.TabView(
+         {
+             width      :700,
+             height     :500,
+             randerTo   :"ttest",
+             borderPix  :{width:10,height:10},
+             data       :[{title:"title",content:"data"},{title:"title",content:"data2"},{title:"title",content:"data3"}],
+             animat     :true,
+             direction  :"H",
+             titlePostion:"top",
+             className  :"czy-tab-view",
+             id         :"dddt"
+         }
+         );
+        // alert(document.getElementById("t").innerHTML);
+    }
+    </script>
+    <style type="text/css">
+#m1,#m2
+{
+padding-bottom: 32767px !important;
+margin-bottom: -32767px !important; 
+}
+@media all and  min-width: 0px  {
+#m1,#m2
+{
+padding-bottom: 0 !important;
+margin-bottom: 0 !important; 
+}
+#m1:before, #m2:before
+{
+content: '[DO NOT LEAVE IT IS NOT REAL]';
+display: block;
+background: inherit;
+padding-top: 32767px !important;
+margin-bottom: -32767px !important;
+height: 0;
+}
+}
+    </style>
+</head>
+<body>
+<div id="ttest"></div>
+
+<!--<input type="button" value="GetIndex"  onclick="alert(tab.selectedIndex)"/>-->
+<div id="wrap">
+<div id="m1" style=" background-color:Red; float:left;"> 这是第一列 </div>
+<div id="m2" style=" background-color:Gray; height:400px; float:right;"> 这是第二列 </div>
+<div class="clear"></div>
+</div>
+
+
+
+</body>
+</html>

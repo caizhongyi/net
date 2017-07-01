@@ -1,0 +1,31 @@
+Anthem.NET中的FileUpload控件Ajax方式的文件上传
+
+使用Anthem.NET 1.5中的FileUpload控件实现Ajax方式的文件上传
+
+该源码永久下载地址：http://www.51aspx.com/CV/anthemnetfileupload
+作者主页http://www.cnblogs.com/dflying
+
+
+                ╭═══════════════╮
+                ║        Asp.net源码网         ║
+  ╭══════┤     http://www.51aspx.com    ├══════╮
+  ║            ║ 论坛:http://bbs.51aspx.com   ║            ║
+  ║            ╰═══════════════╯            ║
+　║                                                          ║
+　║51aspx声明：                                              ║
+  ║   1) 本站不保证所提供软件或程序的完整性和安全性。        ║
+  ║   2) 转载本站提供的资源请勿删除本说明文件。              ║
+  ║   5) 本站提供的程序均为网上搜集，如果该代码涉及或侵害到您║
+  ║      的版权请立即写信通知我们。                          ║
+  ║   6) 本站提供代码只可供研究使用，请在下载24小时内删除,   ║
+  ║      切勿用于商业用途，由此引起一切后果与本站无关。      ║
+  ║                                                          ║
+　║                                                          ║
+  ║           本站专注于Asp.net源码下载                      ║
+  ║           联系方式 : support@51aspx.com                  ║
+  ║    ╭───────────────────────╮    ║
+  ╰══┤  Asp.net源码网 http://www.51aspx.com         ├══╯
+        ╰───────────────────────╯
+友情提示:
+    如果遇到压缩文件加密，默认密码为51aspx.com
+    Asp.net源码网再次声明：该代码仅供学习研究使用，在没有源作者允许的情况下不得将该代码用于任何的商业用途

@@ -1,0 +1,8 @@
+bin\Debug\ProcessInfo.exe
+bin\Debug\ProcessInfo.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\ProcessInfo.frmProcessInfo.resources
+obj\Debug\ProcessInfo.Properties.Resources.resources
+obj\Debug\ProcessInfo.csproj.GenerateResource.Cache
+obj\Debug\ProcessInfo.exe
+obj\Debug\ProcessInfo.pdb

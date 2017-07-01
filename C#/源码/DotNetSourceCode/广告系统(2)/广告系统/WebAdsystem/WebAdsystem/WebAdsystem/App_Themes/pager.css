@@ -1,0 +1,34 @@
+.pageCenter {
+	width:1000;
+	text-align: center;
+	background-position: center;	
+}
+
+.pageleft {
+	text-align: left;
+	vertical-align: top;
+	float: none;
+
+	margin-left: 10px;
+}
+.pagebody {
+	background-image: url(../Images/main_01.gif);
+	background-repeat: no-repeat;
+	
+	background-position:center top;
+    text-align:center; 
+}
+
+
+.pagehead {
+	
+	width: 100%;
+	height: 100%;
+}
+
+.pagefoot {
+	background-image: url(../Images/foot.gif);
+	height: 100%;
+	width: 100%;
+	background-repeat: no-repeat;
+}

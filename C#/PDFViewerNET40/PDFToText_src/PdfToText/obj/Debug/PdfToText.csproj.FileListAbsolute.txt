@@ -1,0 +1,6 @@
+F:\lib\c#\PDFViewerNET40\PDFToText_src\PdfToText\obj\Debug\PdfToText.csprojResolveAssemblyReference.cache
+F:\lib\c#\PDFViewerNET40\PDFToText_src\PdfToText\bin\Debug\PdfToText.exe
+F:\lib\c#\PDFViewerNET40\PDFToText_src\PdfToText\bin\Debug\PdfToText.pdb
+F:\lib\c#\PDFViewerNET40\PDFToText_src\PdfToText\bin\Debug\SharpZipLib.dll
+F:\lib\c#\PDFViewerNET40\PDFToText_src\PdfToText\obj\Debug\PdfToText.exe
+F:\lib\c#\PDFViewerNET40\PDFToText_src\PdfToText\obj\Debug\PdfToText.pdb

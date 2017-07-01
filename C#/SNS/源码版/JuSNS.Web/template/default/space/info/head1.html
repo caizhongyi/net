@@ -1,0 +1,84 @@
+﻿#parse("_head.html")
+<script language="javascript" type="text/javascript" src="$webpath/library/js/image.drag.js"></script>
+<script  type="text/javascript" src="$webpath/library/js/image.cut.js"></script>
+<div id="snsmenu">
+#parse("_menu.html")
+</div>
+<div id="snsbody">
+    <div id="snshead">剪切头像</div>
+ #if($startlogin)
+        <div class="itemmenu">
+            <ul>
+                <li><a>第一步(完善基本资料) </a></li>
+                <li class="current"><a>第二步(上传头像)</a></li>
+                <li><a>第三步（增加好友）</a></li>
+            </ul>
+        </div>
+    #else
+    <div class="itemmenu">
+        <ul>
+            <li><a href="profile$exname">基本资料</a></li>
+            <li><a href="nowcity$exname">居住地</a></li>
+            <li class="current"><a href="head$exname">修改头像</a></li>
+            <li><a href="links$exname">联系方式</a></li>
+            <li><a href="edu$exname">教育情况</a></li>
+            <li><a href="work$exname">工作情况</a></li>
+            <li><a href="like$exname">个人爱好</a></li>
+            <li><a href="privacy$exname">隐私设置</a></li>
+        </ul>
+  </div>
+    #end
+
+<div class="hupload">
+<div class="l">
+
+    <h3>当前头像</h3>
+            <div style="margin:5px;" class="image">
+            <b>小图片</b><div><img src="$portrait0" alt="小头像" /></div>
+            <b>标准头像：</b><div><img src="$portrait1" alt="标题头像" /></div>
+            <b>空间显示头像：</b>
+            <div><img src="$portrait2" alt="空间显示头像" /></div></div>
+</div>
+<div class="l1">
+    <h3>裁切图片</h3>
+    <form method="post" action="">
+         <div id="cut_div">
+         <table id="cut_table" cellspacing="0" cellpadding="0" border="0" unselectable="on">
+         <tr>
+           <td class="cut_bg" style="height: 73px;" colspan="3"></td>
+         </tr>
+         <tr>
+           <td class="cut_bg" style="background: #eeeeee; width: 82px;"></td>
+           <td style="border: 1px solid #ffffff; width: 120px; height: 120px;"></td>
+           <td class="cut_bg" style="width: 82px;"></td>
+         </tr>
+         <tr>
+           <td class="cut_bg" style="height: 73px;" colspan="3"></td>
+         </tr>
+         </table>
+         <img id="cut_img"  src="$orghead" /></div>
+        <table cellspacing="0" cellpadding="0">
+          <tr>
+            <td><img class="cut_handzoom"  src="$webpath/template/images/j_h.gif" alt="图片缩小" onmouseover="this.src='$webpath/template/images/j_c.gif'" onmouseout="this.src='$webpath/template/images/j_h.gif'" onclick="imageresize(false)" /></td>
+            <td><img id="img_track" src="$webpath/template/images/track.gif" /></td>
+            <td><img  class="cut_handzoom" src="$webpath/template/images/jh.gif" alt="图片放大"  onmouseover="this.src='$webpath/template/images/jc.gif'" onmouseout="this.src='$webpath/template/images/jh.gif'" onclick="imageresize(true)" /></td>
+          </tr>
+          <tr>
+            <td colspan="3"></td>
+          </tr>
+        </table>
+            <img id="img_grip" src="$webpath/template/images/grip.gif" /> 
+            <div class="warn">图片区可拖动图片</div>
+            <div id="pos">
+                <input name="img_pos" id="img_pos" value="400,334" />
+                <input name="cut_pos" id="cut_pos" value="" /><input name="hideflag" id="hideflag" value="$flag" />
+            </div>
+            <input type="submit" name="submit" runat="server" class="btn_blue6" id="submit" value=" 裁剪并保存头像 " /> <input type="button" class="btn_gray2" class="button" name="cancel" id="cancel" value=" 取消 " onclick="javascript:history.back(1);"  />
+    </form>
+</div>
+</div>
+<script type="text/javascript">
+    jQuery("#pos").hide();
+</script>
+</div>
+#parse("_foot.html")

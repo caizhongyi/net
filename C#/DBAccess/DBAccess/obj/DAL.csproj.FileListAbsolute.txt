@@ -1,0 +1,25 @@
+C:\Users\Administrator\Desktop\广告系统\WebAdsystem\DAL\DAL\bin\Debug\DAL.dll
+C:\Users\Administrator\Desktop\广告系统\WebAdsystem\DAL\DAL\bin\Debug\DAL.pdb
+C:\Users\Administrator\Desktop\广告系统\WebAdsystem\DAL\DAL\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\广告系统\WebAdsystem\DAL\DAL\obj\Debug\DAL.dll
+C:\Users\Administrator\Desktop\广告系统\WebAdsystem\DAL\DAL\obj\Debug\DAL.pdb
+E:\广告系统(12.22)\WebAdsystem(12.22)\DAL\DAL\bin\Debug\DAL.dll
+E:\广告系统(12.22)\WebAdsystem(12.22)\DAL\DAL\bin\Debug\DAL.pdb
+E:\广告系统(12.22)\WebAdsystem(12.22)\DAL\DAL\obj\Debug\ResolveAssemblyReference.cache
+E:\广告系统(12.22)\WebAdsystem(12.22)\DAL\DAL\obj\Debug\DAL.dll
+E:\广告系统(12.22)\WebAdsystem(12.22)\DAL\DAL\obj\Debug\DAL.pdb
+C:\Documents and Settings\Administrator\桌面\广告系统(12.23)\WebAdsystem(12.22)\DAL\DAL\bin\Debug\DAL.dll
+C:\Documents and Settings\Administrator\桌面\广告系统(12.23)\WebAdsystem(12.22)\DAL\DAL\bin\Debug\DAL.pdb
+C:\Documents and Settings\Administrator\桌面\广告系统(12.23)\WebAdsystem(12.22)\DAL\DAL\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\桌面\广告系统(12.23)\WebAdsystem(12.22)\DAL\DAL\obj\Debug\DAL.dll
+C:\Documents and Settings\Administrator\桌面\广告系统(12.23)\WebAdsystem(12.22)\DAL\DAL\obj\Debug\DAL.pdb
+F:\广告系统(12.23)\WebAdsystem(12.31)\DAL\DAL\obj\Debug\ResolveAssemblyReference.cache
+F:\广告系统(12.23)\WebAdsystem(12.31)\DAL\DAL\obj\Debug\DAL.dll
+F:\广告系统(12.23)\WebAdsystem(12.31)\DAL\DAL\bin\Debug\DAL.dll
+F:\广告系统(12.23)\WebAdsystem(12.31)\DAL\DAL\bin\Debug\DAL.pdb
+F:\广告系统(12.23)\WebAdsystem(12.31)\DAL\DAL\obj\Debug\DAL.pdb
+F:\广告系统(1.6)\WebAdsystem(1.4)\DAL\DAL\obj\Debug\ResolveAssemblyReference.cache
+F:\广告系统(1.6)\WebAdsystem(1.4)\DAL\DAL\obj\Debug\DAL.dll
+F:\广告系统(1.6)\WebAdsystem(1.4)\DAL\DAL\obj\Debug\DAL.pdb
+F:\广告系统(1.6)\WebAdsystem(1.4)\DAL\DAL\bin\Debug\DAL.dll
+F:\广告系统(1.6)\WebAdsystem(1.4)\DAL\DAL\bin\Debug\DAL.pdb

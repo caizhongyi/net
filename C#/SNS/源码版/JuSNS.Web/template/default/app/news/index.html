@@ -1,0 +1,83 @@
+﻿#parse("_head.html")
+<div id="snsmenu">
+#parse("_menu.html")
+</div>
+<div id="snsbody">
+    <div id="snshead">$cpagetitle</div>
+
+
+    <div class="itemmenu">
+        <ul>
+            <li><a href="$webpath/app/news/default$exname">最新$contentname</a></li>
+            <li><a href="$webpath/app/news/default$exname?q=ram">随便看看</a></li>
+            <li><a href="$webpath/app/news/default$exname?q=click">排行榜</a></li>
+            <li#if($css_friend)$css_friend#end><a href="$webpath/app/news/index$exname?q=friend">朋友的$contentname</a></li>
+            <li#if($css_my)$css_my#end#if($css_islock)$css_islock#end><a href="index$exname?q=my">我的$contentname</a></li>
+            #if($info)
+            <li#if($css_info)$css_info#end><a href="$webpath/app/news/index$exname?q=info">$gusername的$contentname</a></li>
+            #end
+            <li class="new"><a href="$webpath/app/news/new$exname" class="newitem">添加$contentname</a></li> 
+            <li class="search">搜索：<input id="kwd" name="kwd" value="#if($kwd)$kwd#else搜索$contentname#end" type="text" class="f-text w100" onclick="this.value=''" /> <input id="Button1" type="button" value="搜索" class="btn_gray2" onclick="search('news1','$q')" /></li>
+        </ul>
+        
+    </div>
+    <div class="itemmenu1">
+        <ul>
+            <li>属性:</li>
+            <li#if($css_click)$css_click#end><a href="$webpath/app/news/default$exname?q=click">点击排行</a></li>
+            <li#if($css_rec)$css_rec#end><a href="$webpath/app/news/default$exname?q=rec">推荐排行</a></li>
+            <li#if($css_comments)$css_comments#end><a href="$webpath/app/news/default$exname?q=comments">评论排行</a></li>
+            <li#if($css_att)$css_att#end><a href="$webpath/app/news/default$exname?q=att">关注排行</a></li>
+            <li#if($css_share)$css_share#end><a href="$webpath/app/news/default$exname?q=share">分享排行</a></li>
+            <li> &nbsp; 查看:</li>
+            <li><a href="$webpath/app/news/index$exname?q=$q&list=list&kwd=$kwd" class="$alist" title="列表方式显示"></a> <a href="$webpath/app/news/index$exname?q=$q&list=fg&kwd=$kwd" class="$afg" title="简介方式显示"></a></li>
+        </ul>
+    </div>
+
+    <div id="snsbody-sec">
+            #if($recordcount>0)
+                <div class="news">
+                    <ul>
+                    #foreach($info in $infolist)
+                    <li id="param_$info.id">
+                         #if($info.contentshow==1)
+                            <div class="hdtitle">
+                                 #if($info.userid>0)
+                                 <div class="aa imagec"><a href="$info.spaceurl" target="_blank" title="点击查看$info.truename的个人空间"><img src="$info.headpic" align="absmiddle"></a></div>
+                                #end
+                                <div class="title"><a href="$info.url">$info.title</a> $info.lock <div class="clearpix"><span class="time">$info.time | <a href="$webpath/app/news/default$exname?q=$info.classid">$info.channelname</a> | $info.click次阅读  |  $info.share次分享  |  $info.comment个评论 #if($info.edit)$info.edit#end $info.showop$info.showrec</span></div></div>
+                                <div class="share"><a href="javascript:;" onclick="sharetofriend('news',$info.id,$uid,'$contentname：$info.titlefilter')" class="a-share">分享</a></div>
+                            </div>
+                            <div class="content">
+                                $info.content
+                               
+                            </div>
+                         #else
+                            <div class="nohdtitle">
+                                 #if($info.userid>0)
+                                <span class="imagecs"><a href="$info.spaceurl" target="_blank" title="点击查看发布者个人空间"><img src="$info.headpic" align="absmiddle" /></a></span>
+                                #else
+                                    » 
+                                #end
+                                 <a href="$info.url">$info.title</a> <span class="time">$info.time | $info.click次阅读 | $info.comment个评论</span> 
+                                <span class="share">#if($info.edit)$info.edit#end $info.showop$info.showrec <a href="javascript:;" onclick="sharetofriend('news',$info.id,$uid,'$contentname：$info.title')" class="a-share">分享</a></span>
+                            </div>
+                         #end
+                    </li>
+                    #end
+                  </ul>
+                  </div>
+                  <div class="pages">$pagelist</div>
+            #else
+                <div>还没有$contentname</div>
+            #end        
+    </div>
+    
+    <div id="snsbody-right">
+        <div class="hdtitle1">按分类查看全部$contentname</div>
+        <div class="hdcontent1">
+            <ul>$classlist</ul>
+        </div>
+    </div>
+</div>
+#parse("_foot.html")

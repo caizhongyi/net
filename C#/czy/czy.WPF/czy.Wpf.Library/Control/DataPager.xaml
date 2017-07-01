@@ -1,0 +1,42 @@
+﻿<UserControl x:Class="czy.Wpf.Library.Control.DataPager"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             xmlns:control ="clr-namespace:czy.Wpf.Library.Control"
+             d:DesignHeight="95" d:DesignWidth="423">
+    <UserControl.Resources>
+        <Style TargetType="TextBlock" x:Key="Go">
+            <Setter Property="Cursor" Value="Hand">
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+    <!--xmlns:wfi ="clr-namespace:System.Windows.Forms.Integration;assembly=WindowsFormsIntegration"-->
+    <Grid Background="AliceBlue">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="130" />
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="20" />
+        </Grid.ColumnDefinitions>
+        <TextBlock x:Name="txbInfo" HorizontalAlignment="Left" Height="15" Margin="10,0,0,0"></TextBlock>
+        <Image x:Name="iFirst" ToolTip="首页" IsEnabled="False"  Height="12" HorizontalAlignment="Left" Source="images/first1.gif" PreviewMouseLeftButtonDown="iFirst_PreviewMouseLeftButtonDown" Grid.Column="2"/>
+        <Image x:Name="iPrev" ToolTip="上一页" IsEnabled="False" Height="12" HorizontalAlignment="Left" Source="images/previous1.gif" PreviewMouseLeftButtonDown="iPrev_PreviewMouseLeftButtonDown" Grid.Column="3"/>
+        <StackPanel Grid.Column="4" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Width="130">
+            <TextBlock Text="| " VerticalAlignment="Center"/>
+            <!--<wfi:WindowsFormsHost Width="50">-->
+            <!--<froms:NumericUpDown x:Name="nudPageIndex" KeyUp="nudPageIndex_KeyUp"/>-->
+            <Border Name="NumberDU"></Border>
+                <!--</wfi:WindowsFormsHost>-->
+            <TextBlock x:Name="txbTotalPageCount" VerticalAlignment="Center"/>
+            <TextBlock x:Name="txbGO" VerticalAlignment="Center" FontWeight="Bold" Text=" GO" PreviewMouseLeftButtonDown="txbGO_PreviewMouseLeftButtonDown" Style="{StaticResource Go}"/>
+            <TextBlock Text=" |" VerticalAlignment="Center"/>
+        </StackPanel>
+        <Image x:Name="iNext" ToolTip="下一页" IsEnabled="False" Height="12" HorizontalAlignment="Left" Source="images/next1.gif" PreviewMouseLeftButtonDown="iNext_PreviewMouseLeftButtonDown" Grid.Column="5"/>
+        <Image x:Name="iLast" ToolTip="末页" IsEnabled="False" Height="12" HorizontalAlignment="Left" Source="images/last1.gif" PreviewMouseLeftButtonDown="iLast_PreviewMouseLeftButtonDown" Grid.Column="6"/>
+    </Grid>
+</UserControl>

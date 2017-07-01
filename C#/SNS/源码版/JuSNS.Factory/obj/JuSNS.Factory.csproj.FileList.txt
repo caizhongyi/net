@@ -1,0 +1,9 @@
+bin\Debug\JuSNS.Factory.dll
+bin\Debug\JuSNS.Factory.pdb
+bin\Debug\JuSNS.Config.dll
+bin\Debug\JuSNS.Model.dll
+bin\Debug\JuSNS.Model.pdb
+bin\Debug\JuSNS.Config.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\JuSNS.Factory.dll
+obj\Debug\JuSNS.Factory.pdb

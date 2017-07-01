@@ -1,0 +1,48 @@
+﻿#parse("_head.html")
+<div id="snsmenu">
+#parse("_menu.html")
+</div>
+<div id="snsbody">
+    <div id="snshead">邀请记录</div>
+        <div class="itemmenu">
+            <ul>
+                <li><a href="../friend/default$exname">我的好友</a></li>
+            <li><a href="dyn$exname">好友动态设置</a></li>
+                <li><a href="visit$exname">来访者</a></li>
+                <li><a href="city$exname?r=city">同城</a></li>
+                <li><a href="pfriend$exname">可能认识的人</a></li>
+                <!--<li><a href="city$exname?r=ram">找有缘人</a></li>-->
+                <li><a href="search$exname">搜索朋友</a></li>
+                <li><a href="att$exname">关注我的人</a></li>
+                <li class="current"><a href="invite$exname">邀请朋友加入</a></li>
+            </ul>
+      </div>
+         <div class="itemmenu1"><ul> <li><a href="invite$exname">邀请好友</a></li> <li#if($css_1) $css_1 #end><a href="record$exname?q=1">成功邀请记录</a></li> <li#if($css_0) $css_0 #end><a href="record$exname?q=0">待确认邀请记录</a></li></div>
+        #if($recordcount>0)
+          <table width="100%" border="0" cellspacing="1" cellpadding="3">
+               <tr style="background-color:#efefef;padding:3px 5px;">
+              <td>电子邮件</td>
+              <td>邀请时间</td>
+              <td>是否确认</td>
+              <td>确认时间</td>
+              <td>注册用户</td>
+            </tr>
+
+            #foreach($rec in $reclist)
+            <tr>
+              <td>$rec.email</td>
+              <td>$rec.posttime</td>
+              <td>$rec.succ</td>
+              <td>$rec.replaytime</td>
+              <td>$rec.username</td>
+            </tr>
+            #end
+          </table>
+            <div class="pages">$pagelist</div>
+        #else
+            <div>还没有邀请记录</div>
+        #end        
+
+</div>
+    
+#parse("_foot.html")

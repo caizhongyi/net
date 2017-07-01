@@ -1,0 +1,14 @@
+C:\Documents and Settings\Administrator\桌面\3DTools-1.01-src\3DTools-1.01-src\Samples\Channel9Demo\bin\Release\Channel9Demo.exe
+C:\Documents and Settings\Administrator\桌面\3DTools-1.01-src\3DTools-1.01-src\Samples\Channel9Demo\bin\Release\Channel9Demo.pdb
+C:\Documents and Settings\Administrator\桌面\3DTools-1.01-src\3DTools-1.01-src\Samples\Channel9Demo\bin\Release\3DTools.dll
+C:\Documents and Settings\Administrator\桌面\3DTools-1.01-src\3DTools-1.01-src\Samples\Channel9Demo\bin\Release\3DTools.pdb
+C:\Documents and Settings\Administrator\桌面\3DTools-1.01-src\3DTools-1.01-src\Samples\Channel9Demo\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\桌面\3DTools-1.01-src\3DTools-1.01-src\Samples\Channel9Demo\obj\Release\DemoWindow.baml
+C:\Documents and Settings\Administrator\桌面\3DTools-1.01-src\3DTools-1.01-src\Samples\Channel9Demo\obj\Release\DemoWindow.g.cs
+C:\Documents and Settings\Administrator\桌面\3DTools-1.01-src\3DTools-1.01-src\Samples\Channel9Demo\obj\Release\App.g.cs
+C:\Documents and Settings\Administrator\桌面\3DTools-1.01-src\3DTools-1.01-src\Samples\Channel9Demo\obj\Release\Channel9Demo_MarkupCompile.cache
+C:\Documents and Settings\Administrator\桌面\3DTools-1.01-src\3DTools-1.01-src\Samples\Channel9Demo\obj\Release\Channel9Demo.g.resources
+C:\Documents and Settings\Administrator\桌面\3DTools-1.01-src\3DTools-1.01-src\Samples\Channel9Demo\obj\Release\Channel9Demo.Properties.Resources.resources
+C:\Documents and Settings\Administrator\桌面\3DTools-1.01-src\3DTools-1.01-src\Samples\Channel9Demo\obj\Release\Channel9Demo.csproj.GenerateResource.Cache
+C:\Documents and Settings\Administrator\桌面\3DTools-1.01-src\3DTools-1.01-src\Samples\Channel9Demo\obj\Release\Channel9Demo.exe
+C:\Documents and Settings\Administrator\桌面\3DTools-1.01-src\3DTools-1.01-src\Samples\Channel9Demo\obj\Release\Channel9Demo.pdb

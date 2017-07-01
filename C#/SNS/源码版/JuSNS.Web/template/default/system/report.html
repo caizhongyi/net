@@ -1,0 +1,53 @@
+﻿#parse("_head.html")
+<div id="snssysmenu">
+#parse("_menusystem.html")
+</div>
+<div id="snsbody1">
+    <div id="snshead">不良信息举报管理</div>
+    <div class="itemmenu">
+        <ul>
+            <li class="current"><a href="report$exname">不良信息举报管理</a></li>
+        </ul>
+    </div>
+    
+    <div class="system">
+          #if($recordcount>0)
+                <table  id="mtable">
+                <tr>
+                    <th>举报者</th>
+                    <th>内容简介</th>
+                    <th>时间</th>
+                    <th style="text-align:center;">操作</th>
+                </tr>
+                #foreach($info in $infolist)
+                <tr id="param_$info.id">
+                    <td><a href="$info.spaceurl" target="_blank">$info.truename</a></td>
+                    <td><a  onclick="showtc($info.id)" style="cursor:pointer;">$info.title</a></td>
+                    <td>$info.posttime</td>
+                    <td>
+                    <input  type="button" value="删除" onclick="deleteAll($info.id,$uid,'report');" class="btn_blue2" />
+                    <input  type="button" value="回复" onclick="window.location.href='$webpath/home/box/mail$exname?fid=$info.userid&uid=$uid&title=关于举报的回复&content=$info.contents'" class="btn_blue2" />
+                    </td>
+                </tr>
+                <tr style="display:none;" id="cc_$info.id">
+                    <td colspan="5" style="padding:5px;background-color:#F4FCFF;">
+                        $info.content
+                        <div>被举报地址：<a href="$info.urls" target="_blank">$info.urls</a></div>
+                    </td>
+                </tr>
+                #end
+             </table>
+              <div class="pages">$pagelist</div>
+        #else
+            <div>还没有记录</div>
+        #end       
+    </div>
+    
+</div>
+#parse("_foot.html")
+<script type="text/javascript">
+    function showtc(cid)
+    {
+        jQuery("#cc_"+cid).toggle();
+    }
+</script>

@@ -1,0 +1,25 @@
+﻿#parse("_headno.html")
+<style type="text/css">body{width:auto;}</style>
+<link href="$templatepath/css/app/shop.css" rel="stylesheet" type="text/css" />
+
+         #if($recordcount>0)
+            <div class="shopjoin">
+                <ul>
+                #foreach($info in $infolist)
+                <li id="param_$info.id">
+                      <div class="userpic images" style="float:left;width:60px;text-align:center;">
+                            <a href="$info.spaceurl" target="_blank" title="查看$info.truename的空间"><img src="$info.headpic" /><br />$info.truename</a>
+                        </div>
+                        <div style="float:left;">
+                       <span class="time">$info.time</span> &nbsp;
+                       <br />$info.tel
+                        </div>
+                </li>
+                #end
+              </ul>
+              </div>
+              <div class="pages">$pagelist</div>
+        #else
+            <div>还没有参与者</div>
+        #end        
+ 

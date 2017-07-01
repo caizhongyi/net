@@ -1,0 +1,56 @@
+C:\Documents and Settings\webabcd\桌面\YYTetris\YYTetris.Web\bin\YYTetris.Web.dll
+C:\Documents and Settings\webabcd\桌面\YYTetris\YYTetris.Web\bin\YYTetris.Web.pdb
+C:\Documents and Settings\webabcd\桌面\YYTetris\YYTetris.Web\bin\System.Web.Silverlight.dll
+C:\Documents and Settings\webabcd\桌面\YYTetris\YYTetris.Web\bin\de\System.Web.Silverlight.resources.dll
+C:\Documents and Settings\webabcd\桌面\YYTetris\YYTetris.Web\bin\es\System.Web.Silverlight.resources.dll
+C:\Documents and Settings\webabcd\桌面\YYTetris\YYTetris.Web\bin\fr\System.Web.Silverlight.resources.dll
+C:\Documents and Settings\webabcd\桌面\YYTetris\YYTetris.Web\bin\it\System.Web.Silverlight.resources.dll
+C:\Documents and Settings\webabcd\桌面\YYTetris\YYTetris.Web\bin\ja\System.Web.Silverlight.resources.dll
+C:\Documents and Settings\webabcd\桌面\YYTetris\YYTetris.Web\bin\ko\System.Web.Silverlight.resources.dll
+C:\Documents and Settings\webabcd\桌面\YYTetris\YYTetris.Web\bin\zh-Hans\System.Web.Silverlight.resources.dll
+C:\Documents and Settings\webabcd\桌面\YYTetris\YYTetris.Web\bin\zh-Hant\System.Web.Silverlight.resources.dll
+C:\Documents and Settings\webabcd\桌面\YYTetris\YYTetris.Web\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\webabcd\桌面\YYTetris\YYTetris.Web\obj\Debug\YYTetris.Web.dll
+C:\Documents and Settings\webabcd\桌面\YYTetris\YYTetris.Web\obj\Debug\YYTetris.Web.pdb
+C:\Documents and Settings\webabcd\桌面\YYTetris\YYTetris\YYTetris.Web\bin\YYTetris.Web.dll
+C:\Documents and Settings\webabcd\桌面\YYTetris\YYTetris\YYTetris.Web\bin\YYTetris.Web.pdb
+C:\Documents and Settings\webabcd\桌面\YYTetris\YYTetris\YYTetris.Web\bin\System.Web.Silverlight.dll
+C:\Documents and Settings\webabcd\桌面\YYTetris\YYTetris\YYTetris.Web\bin\de\System.Web.Silverlight.resources.dll
+C:\Documents and Settings\webabcd\桌面\YYTetris\YYTetris\YYTetris.Web\bin\es\System.Web.Silverlight.resources.dll
+C:\Documents and Settings\webabcd\桌面\YYTetris\YYTetris\YYTetris.Web\bin\fr\System.Web.Silverlight.resources.dll
+C:\Documents and Settings\webabcd\桌面\YYTetris\YYTetris\YYTetris.Web\bin\it\System.Web.Silverlight.resources.dll
+C:\Documents and Settings\webabcd\桌面\YYTetris\YYTetris\YYTetris.Web\bin\ja\System.Web.Silverlight.resources.dll
+C:\Documents and Settings\webabcd\桌面\YYTetris\YYTetris\YYTetris.Web\bin\ko\System.Web.Silverlight.resources.dll
+C:\Documents and Settings\webabcd\桌面\YYTetris\YYTetris\YYTetris.Web\bin\zh-Hans\System.Web.Silverlight.resources.dll
+C:\Documents and Settings\webabcd\桌面\YYTetris\YYTetris\YYTetris.Web\bin\zh-Hant\System.Web.Silverlight.resources.dll
+C:\Documents and Settings\webabcd\桌面\YYTetris\YYTetris\YYTetris.Web\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\webabcd\桌面\YYTetris\YYTetris\YYTetris.Web\obj\Debug\YYTetris.Web.dll
+C:\Documents and Settings\webabcd\桌面\YYTetris\YYTetris\YYTetris.Web\obj\Debug\YYTetris.Web.pdb
+C:\Users\Administrator\Desktop\YYTetris\YYTetris.Web\bin\YYTetris.Web.dll
+C:\Users\Administrator\Desktop\YYTetris\YYTetris.Web\bin\YYTetris.Web.pdb
+C:\Users\Administrator\Desktop\YYTetris\YYTetris.Web\bin\System.Web.Silverlight.dll
+C:\Users\Administrator\Desktop\YYTetris\YYTetris.Web\bin\de\System.Web.Silverlight.resources.dll
+C:\Users\Administrator\Desktop\YYTetris\YYTetris.Web\bin\es\System.Web.Silverlight.resources.dll
+C:\Users\Administrator\Desktop\YYTetris\YYTetris.Web\bin\fr\System.Web.Silverlight.resources.dll
+C:\Users\Administrator\Desktop\YYTetris\YYTetris.Web\bin\it\System.Web.Silverlight.resources.dll
+C:\Users\Administrator\Desktop\YYTetris\YYTetris.Web\bin\ja\System.Web.Silverlight.resources.dll
+C:\Users\Administrator\Desktop\YYTetris\YYTetris.Web\bin\ko\System.Web.Silverlight.resources.dll
+C:\Users\Administrator\Desktop\YYTetris\YYTetris.Web\bin\zh-Hans\System.Web.Silverlight.resources.dll
+C:\Users\Administrator\Desktop\YYTetris\YYTetris.Web\bin\zh-Hant\System.Web.Silverlight.resources.dll
+C:\Users\Administrator\Desktop\YYTetris\YYTetris.Web\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\YYTetris\YYTetris.Web\obj\Debug\YYTetris.Web.dll
+C:\Users\Administrator\Desktop\YYTetris\YYTetris.Web\obj\Debug\YYTetris.Web.pdb
+C:\Documents and Settings\Administrator\桌面\YYTetris\YYTetris.Web\bin\YYTetris.Web.dll
+C:\Documents and Settings\Administrator\桌面\YYTetris\YYTetris.Web\bin\YYTetris.Web.pdb
+C:\Documents and Settings\Administrator\桌面\YYTetris\YYTetris.Web\bin\System.Web.Silverlight.dll
+C:\Documents and Settings\Administrator\桌面\YYTetris\YYTetris.Web\bin\zh-Hans\System.Web.Silverlight.resources.dll
+C:\Documents and Settings\Administrator\桌面\YYTetris\YYTetris.Web\bin\zh-Hant\System.Web.Silverlight.resources.dll
+C:\Documents and Settings\Administrator\桌面\YYTetris\YYTetris.Web\bin\de\System.Web.Silverlight.resources.dll
+C:\Documents and Settings\Administrator\桌面\YYTetris\YYTetris.Web\bin\es\System.Web.Silverlight.resources.dll
+C:\Documents and Settings\Administrator\桌面\YYTetris\YYTetris.Web\bin\fr\System.Web.Silverlight.resources.dll
+C:\Documents and Settings\Administrator\桌面\YYTetris\YYTetris.Web\bin\it\System.Web.Silverlight.resources.dll
+C:\Documents and Settings\Administrator\桌面\YYTetris\YYTetris.Web\bin\ja\System.Web.Silverlight.resources.dll
+C:\Documents and Settings\Administrator\桌面\YYTetris\YYTetris.Web\bin\ko\System.Web.Silverlight.resources.dll
+C:\Documents and Settings\Administrator\桌面\YYTetris\YYTetris.Web\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\桌面\YYTetris\YYTetris.Web\obj\Debug\YYTetris.Web.dll
+C:\Documents and Settings\Administrator\桌面\YYTetris\YYTetris.Web\obj\Debug\YYTetris.Web.pdb

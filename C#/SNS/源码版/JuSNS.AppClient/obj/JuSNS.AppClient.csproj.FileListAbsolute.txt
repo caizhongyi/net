@@ -1,0 +1,12 @@
+F:\JuNET\AppClient\obj\Debug\ResolveAssemblyReference.cache
+F:\JuNET\AppClient\bin\Debug\JuSNS.AppClient.dll.config
+F:\JuNET\AppClient\bin\Debug\JuSNS.AppClient.dll
+F:\JuNET\AppClient\bin\Debug\JuSNS.AppClient.pdb
+F:\JuNET\AppClient\obj\Debug\JuSNS.AppClient.dll
+F:\JuNET\AppClient\obj\Debug\JuSNS.AppClient.pdb
+F:\JuNET\JuSNS.AppClient\bin\Debug\JuSNS.AppClient.dll.config
+F:\JuNET\JuSNS.AppClient\bin\Debug\JuSNS.AppClient.dll
+F:\JuNET\JuSNS.AppClient\bin\Debug\JuSNS.AppClient.pdb
+F:\JuNET\JuSNS.AppClient\obj\Debug\ResolveAssemblyReference.cache
+F:\JuNET\JuSNS.AppClient\obj\Debug\JuSNS.AppClient.dll
+F:\JuNET\JuSNS.AppClient\obj\Debug\JuSNS.AppClient.pdb

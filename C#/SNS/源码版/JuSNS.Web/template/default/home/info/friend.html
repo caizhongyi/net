@@ -1,0 +1,35 @@
+﻿#parse("_head.html")
+<div id="snsmenu">
+#parse("_menu.html")
+</div>
+<div id="snsbody">
+    <div id="snshead"><span class="l">好友请求</span></div>
+   <div id="snsbody-all">
+      <div class="itemmenu">
+        <ul>
+            <li class="current"><a href="friend$exname">好友请求</a></li>
+            <li><a href="group$exname">群组请求</a></li>
+            <li><a href="note$exname">通知信息</a></li>
+        </ul>
+    </div>
+            <div class="requestlist">
+                <ul>
+                #foreach($info in $infolist)
+                <li id="param_$info.id">
+                    <div class="aa images center">
+                        <a href="$info.spaceurl" target="_blank" title="查看$info.truename的空间"><img src="$info.headpic" /><br />$info.truename</a>
+                    </div>
+                    <div class="bb">
+                        <p class="strong"><a href="$info.spaceurl" target="_blank" title="查看$info.truename的空间">$info.truename</a> 于 <span  class="time">$info.time</span> 加你为好友</p>
+                        <p>$info.content</p>
+                        <p><a href="javascript:;" onclick="checkfriend($info.id,$info.userid,$uid,'$info.truename',0)">同意</a> | <a href="javascript:;" onclick="checkfriend($info.id,$info.userid,$uid,'$info.truename',1)">拒绝</a></p>
+                    </div>
+                </li>
+                #end
+              </ul>
+              </div>
+       
+</div>
+</div>
+
+#parse("_foot.html")

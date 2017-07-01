@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<DoNetBbs>
+  <UserOnLineStatic>
+    <UserOnLine>联机(O)</UserOnLine>
+     <UserOffLine>脱机(F)</UserOffLine>
+    <UserBusyLine>忙碌(B)</UserBusyLine>
+    <UserRightBack>马上回来(E)</UserRightBack>
+    <UserLeave>离开(A)</UserLeave>
+    <UserTelephone>接听电话(P)</UserTelephone>
+    <UserOutMeal>外出就餐(L)</UserOutMeal>
+  </UserOnLineStatic>
+
+  <PageStyle>
+    <DeFaultStyle>DeFaultStyle.css</DeFaultStyle>
+    <BlueStyle>BlueStyle.css</BlueStyle>
+  </PageStyle>
+  <SiteUrls>
+    <WebSiteHome>/Forums/DeFault.aspx</WebSiteHome>
+    <ForumsHome>/Forums/DeFault.aspx</ForumsHome>
+    <UserLogin>/UserInfo/Login.aspx</UserLogin>
+    <EditUserInfo>/UserInfo/EditUserInfo.aspx</EditUserInfo>
+    <UserInfo>/UserInfo/UserInfo.aspx?UserID={0}</UserInfo>
+    <ShowTopicInfo>/Forums/ShowTopicInfo.aspx?TopicID={0}&amp;page={1}</ShowTopicInfo>
+    <WebSiteUploadFile>/UserUploadFile.aspx</WebSiteUploadFile>
+  </SiteUrls>
+  <SiteSetting>
+    <UserNickName>游客</UserNickName>
+  </SiteSetting>
+
+  <SiteUserInfo>
+    <UserLoginSucceed>登录成功</UserLoginSucceed>
+    <UserNameEmpty>请输入用户名</UserNameEmpty>
+    <UserPassWordEmpty>请输入用户密码</UserPassWordEmpty>
+    <UserNameErr>您所输入的用户不存在，请重新登录</UserNameErr>
+    <UserPassWordErr>您所输入的用户密码错误</UserPassWordErr>
+    <UserFalseErr>该用户已经被管理员禁闭，请赶快与管理员联系！</UserFalseErr>
+    <UserNotLogin>请登录后再来吧</UserNotLogin>
+    <UserResetLogin>请重新进入</UserResetLogin>
+  </SiteUserInfo>
+  <WebSiteTitle>
+    <WebSiteName>东网论坛</WebSiteName>
+    <WebSiteErr>系统错误</WebSiteErr>
+    <DeFault>首页</DeFault>
+    <WebSiteDeFault>东网论坛--{0}</WebSiteDeFault>
+    <FroumsDeFault>论坛--{0}</FroumsDeFault>
+    <FroumsDeFaultView>浏览论坛--{0}</FroumsDeFaultView>
+    <FroumsTopicView>浏览帖子--{0}</FroumsTopicView>
+    <FroumsPost>发表主题</FroumsPost>
+    <FroumsRePost>回复帖子--{0}</FroumsRePost>
+    <FroumsPostEdit>修改主题--{0}</FroumsPostEdit>
+      <FroumsRePostEdit>修改帖子--{0}</FroumsRePostEdit>
+    <UserInfoView>浏览用户资料--{0}</UserInfoView>
+    <UserInfoEdit>编辑用户资料--{0}</UserInfoEdit>
+    <UserInfoForgottenPassword>忘记密码</UserInfoForgottenPassword>
+    <Search>搜索资料</Search>
+  </WebSiteTitle>
+  <UserRole>
+    <Everyone>所有人</Everyone>
+    <Banned>禁闭用户</Banned>
+    <Registered>注册用户</Registered>
+    <System>系统管理员</System>
+    <Topic>帖子管理员</Topic>
+    <Board>版块管理员</Board>
+    <Membership>用户管理员</Membership>
+    <Messages>短信管理员</Messages>
+    <Blogs>博客管理员</Blogs>
+    <Photos>相册管理员</Photos>
+    <Music>音乐管理员</Music>
+    <Movie>电影管理员</Movie>
+    <Rss>Rss管理员</Rss>
+    <News>新闻管理员</News>
+    <Games>游戏管理员</Games>
+    <Enterprise>企业用户</Enterprise>
+    <Other>其他管理员</Other>
+
+  </UserRole>
+</DoNetBbs>

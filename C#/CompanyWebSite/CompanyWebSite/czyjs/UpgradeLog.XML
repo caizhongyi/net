@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="czyjs_1.0">
+</Property><Property Name="解决方案文件" Value="F:\Library\JS\czyjs_1.0\czyjs_1.0.sln">
+</Property><Property Name="用户选项文件" Value="F:\Library\JS\czyjs_1.0\czyjs_1.0.suo">
+</Property><Property Name="Date" Value="2010年8月20日">
+</Property><Property Name="Time" Value="22:16">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="czyjs_1.0.sln" Description="文件已成功备份为 F:\Library\JS\czyjs_1.0\Backup\czyjs_1.0.sln">
+</Event><Event ErrorLevel="0" Project="" Source="czyjs_1.0.suo" Description="文件已成功备份为 F:\Library\JS\czyjs_1.0\Backup\czyjs_1.0.suo">
+</Event><Event ErrorLevel="1" Project="czyjs_1" Source="..\czyjs_1.0" Description="警告: 正将项目文件备份到与原始解决方案相对路径不同的相对路径中。文件夹层次结构上的差异可能会导致在打开或生成备份的解决方案和项目时出现问题。">
+</Event><Event ErrorLevel="0" Project="" Source="czyjs_1.0.sln" Description="成功转换解决方案">
+</Event><Event ErrorLevel="3" Project="" Source="czyjs_1.0.sln" Description="Converted">
+</Event></UpgradeLog>

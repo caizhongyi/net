@@ -1,0 +1,10 @@
+D:\_SVNROOT\Cnzk.Library.Silverlight.Behaviors\Cnzk.Library.Silverlight.Behaviors.Web\bin\Cnzk.Library.Silverlight.Behaviors.Web.dll
+D:\_SVNROOT\Cnzk.Library.Silverlight.Behaviors\Cnzk.Library.Silverlight.Behaviors.Web\bin\Cnzk.Library.Silverlight.Behaviors.Web.pdb
+D:\_SVNROOT\Cnzk.Library.Silverlight.Behaviors\Cnzk.Library.Silverlight.Behaviors.Web\obj\Debug\ResolveAssemblyReference.cache
+D:\_SVNROOT\Cnzk.Library.Silverlight.Behaviors\Cnzk.Library.Silverlight.Behaviors.Web\obj\Debug\Cnzk.Library.Silverlight.Behaviors.Web.dll
+D:\_SVNROOT\Cnzk.Library.Silverlight.Behaviors\Cnzk.Library.Silverlight.Behaviors.Web\obj\Debug\Cnzk.Library.Silverlight.Behaviors.Web.pdb
+F:\Silverlight\Cnzk.Library.Silverlight.Behaviors\Cnzk.Library.Silverlight.Behaviors\Cnzk.Library.Silverlight.Behaviors.Web\bin\Cnzk.Library.Silverlight.Behaviors.Web.dll
+F:\Silverlight\Cnzk.Library.Silverlight.Behaviors\Cnzk.Library.Silverlight.Behaviors\Cnzk.Library.Silverlight.Behaviors.Web\bin\Cnzk.Library.Silverlight.Behaviors.Web.pdb
+F:\Silverlight\Cnzk.Library.Silverlight.Behaviors\Cnzk.Library.Silverlight.Behaviors\Cnzk.Library.Silverlight.Behaviors.Web\obj\Debug\ResolveAssemblyReference.cache
+F:\Silverlight\Cnzk.Library.Silverlight.Behaviors\Cnzk.Library.Silverlight.Behaviors\Cnzk.Library.Silverlight.Behaviors.Web\obj\Debug\Cnzk.Library.Silverlight.Behaviors.Web.dll
+F:\Silverlight\Cnzk.Library.Silverlight.Behaviors\Cnzk.Library.Silverlight.Behaviors\Cnzk.Library.Silverlight.Behaviors.Web\obj\Debug\Cnzk.Library.Silverlight.Behaviors.Web.pdb

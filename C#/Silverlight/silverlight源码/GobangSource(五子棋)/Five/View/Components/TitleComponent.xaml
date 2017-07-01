@@ -1,0 +1,8 @@
+﻿<UserControl x:Class="Five.View.Components.TitleComponent"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    Width="89" Height="236">
+    <Grid x:Name="LayoutRoot">
+        <Image Source="TitleComponent_files/Title.png" Canvas.Left="0" Canvas.Top="0" Margin="0,0,0,0" />
+    </Grid>
+</UserControl>

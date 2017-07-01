@@ -1,0 +1,186 @@
+﻿#parse("_head.html")
+<link href="$templatepath/css/app/vote.css" rel="stylesheet" type="text/css" />
+<div id="snsmenu">
+#parse("_menu.html")
+</div>
+<div id="snsbody">
+    <div id="snshead1">
+        <span class="images l"><a href="$spaceurl"><img src="$headpic" /></a></span>
+        <span class="l"><h3>$truename的投票</h3> » <a href="$spaceurl">$truename的空间</a> &nbsp;  » <a href="$webpath/app/vote?q=$userid">$truename的所有投票</a></span>
+        <span class="r"><a href="javascript:history.back();">返回上一页</a></span>
+    </div>
+
+    <div class="itemmenu">
+        <ul>
+            <li><a href="$webpath/app/vote/default$exname">最新投票</a></li>
+            #if($uid>0)
+            <li><a href="$webpath/app/vote/default$exname?q=friend">好友的投票</a></li>
+            <li><a href="$webpath/app/vote/default$exname?q=my">我的投票</a></li>
+            <li><a href="$webpath/app/vote/default$exname?q=join">我参与的投票</a></li>
+            #end
+            <li><a href="$webpath/app/vote/default$exname?q=hot">热门投票</a></li>
+            <li class="current"><a href="javascript:;">投票详情</a></li>
+        </ul>
+    </div>
+    
+            <form action="" method="post">
+                <div class="pitem time l">发起于：$time  &nbsp;  &nbsp;  $jcnt 人参与了投票   #if($endtime)&nbsp; 结束：$endtime#end <a href="javascript:;" onclick="sharetofriend('vote',$vid,$uid,'投票：$cpagetitle ')" class="a-share">分享</a><a href="$reporturl" class="a-report"></a></div>
+                <h3 class="pitem center">$cpagetitle</h3>
+                 $option
+                #if($content)<div class="pitem">说明：$content</div>#end
+                
+                <div class="pitem center reshow">
+                #if($uid==0)
+                    请先登录
+                #else
+                    #if($timeout)
+                            投票已经过期
+                    #else
+                        #if($isvote)
+                            您已经投过票了
+                        #else
+                            #if($showcomment==true)
+                            <div class="pitem">
+                                <textarea name="Comm_$vid"  id="Comm_$vid" class="f-text" style="height:50px;width:300px;" onclick="this.value='';">发表你的意见...</textarea>
+                            </div>
+                            #end
+                            #if($friendview!=false)
+                            <input name="Button1" type="button" id="Button1" class="btn_blue4" value="开始投票" onclick="GoVote($userid,$vid,$uid,0);" />
+                            #else
+                               本投票只允许好友投票。
+                            #end
+                        #end
+                    #end
+                #end
+                </div>
+            </form>
+    
+    #if($myselect!="")
+        <p class="pitem">
+            <span class="strong">我的选择：</span>$myselect <span class="time">$time</span>
+        </p>
+        <p class="pitem">
+        #if($mycomment!="")
+        <span class="strong">我的评论：</span>
+        <span class="blue">$mycomment</span>
+        #end
+        &nbsp; <span><a href="javascript:;" onclick="jQuery('#commentnews').show();">修改评论</a></span>
+        <p id="commentnews" style="display:none;">
+            <textarea name="Comm1_$vid"  id="Comm1_$vid" class="f-text" style="height:50px;width:300px;">#if($mycomment)$mycomment#else发表你的意见...#end</textarea> <input name="Button1" type="button" id="Button2" class="btn_blue4" value="修改" onclick="GoVote($vid,$uid,1);" />
+        </p>
+        </p>
+    #end
+    <div class="viewcomment">
+        <div class="pitem strong">网友的选择</div>
+        #if($recordcount>0)
+                <ul>
+                #foreach($info in $infolist)
+                    <li id="param_$info.id">
+                    <div class="aa images center">
+                        <a href="$info.spaceurl" class="title" title="查看$info.truename的空间" target="_blank"><img src="$info.headpic" /><br />$info.truename</a>
+                    </div>
+                    <div class="bb">
+                        <p class="time"><a href="$info.spaceurl" class="title" title="查看$info.truename的空间" target="_blank">$info.truename</a> 于 $info.time $info.showop</p>
+                        <p>$info.anwser</p>
+                        #if($info.comment)
+                        <p class="blue">$info.comment </p>
+                        #end
+                    </div>
+                    </li>
+                #end
+                </ul>
+        #else
+            <div>还没有记录</div>
+        #end      
+
+    </div>
+</div>
+
+#parse("_foot.html")
+<script type="text/javascript">
+    function GoVote(userid,vid,uid,f)
+    {
+        if(f==0)
+        {
+            var comm="";
+            if(document.getElementById("Comm_"+vid)!=null)
+            {
+               comm = document.getElementById("Comm_"+vid).value;
+                if(comm=="发表你的意见..."){comm="";}
+            }
+            
+            var cs = document.getElementsByName("Option_"+vid);
+            var v = ""
+            for(var i=0;i<cs.length;i++)
+            {
+                if(cs[i].checked)
+                    v+=','+cs[i].value;
+            }
+            v = v.replace(/^,/g,"");
+            if(v=="")
+            {
+                alert('请选择投票项');
+                return;
+            }
+            
+            jQuery.get(ajaxUrl, { action:"ToVoteAjax", userid:userid,vid:vid,uid:uid,option:v,comm:comm, param:Math.random() }, 
+              function(msg)
+              {
+                 switch(msg)
+                 {
+                     case "1":
+                         showRightResult("投票成功！");
+                         setTimeout(function() 
+                         {
+                            window.location.href=window.location.href;
+                          }, 1000);
+                         break;
+                     case "-1":
+                         showErrorResult("投票已经过期");
+                         break;
+                     case "-2":
+                         showErrorResult("您已投过票了。");
+                         break;
+                     default:
+                         showErrorResult("操作失败");
+                         break;
+                 }
+              }
+            );          
+        }
+        else
+        {
+            var comm="";
+            if(document.getElementById("Comm1_"+vid)!=null)
+            {
+               comm = document.getElementById("Comm1_"+vid).value;
+                if(comm=="发表你的意见..."){comm="";}
+            }
+            var v = ""
+            jQuery.get(ajaxUrl, { action:"ToVoteAjax", vid:vid,uid:uid,option:v,comm:comm, param:Math.random() }, 
+              function(msg)
+              {
+                 switch(msg)
+                 {
+                     case "1":
+                         showRightResult("修改评论成功！");
+                         setTimeout(function() 
+                         {
+                            window.location.href=window.location.href;
+                          }, 1000);
+                         break;
+                     case "-1":
+                         showErrorResult("投票已经过期");
+                         break;
+                     case "-2":
+                         showErrorResult("您已投过票了。");
+                         break;
+                     default:
+                         showErrorResult("操作失败");
+                         break;
+                 }
+              }
+            );                  
+        }
+    }
+</script>

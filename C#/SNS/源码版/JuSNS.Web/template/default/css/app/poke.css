@@ -1,0 +1,116 @@
+﻿.poke
+{
+	margin:5px 0;
+	width:96%;
+	float:left;
+	line-height:22px;
+	clear:both;
+	display:block;
+	border:1px solid #efefef;
+	padding:8px;
+}
+.poke ul
+{
+	margin:0;
+	padding:0;
+	text-align:left;
+}
+.poke li
+{
+	float:left;
+	display:inline;
+	width:120px;
+	margin:5px 0;
+}
+
+
+.poke1
+{
+	margin:5px 0;
+	width:98%;
+	float:left;
+	line-height:22px;
+}
+.poke1 ul
+{
+	margin:0;
+	padding:0;
+	text-align:center;
+}
+.poke1 li
+{
+	float:left;
+	display:inline;
+	width:254px;
+	height:115px;
+	border-bottom:1px solid #eeeeee;
+	margin:10px 0;
+}
+.poke1 li .userpic
+{
+	float:left;width:100px;
+}
+.poke1 li .userpic img
+{
+	max-height:90px;
+	max-width:80px;
+	_height:90px;
+	_width:80px;
+	border:1px solid #eeeeee;
+	padding:2px;
+}
+
+.poke1 li .userpic a:hover img
+{
+	border:1px solid #ff0000;
+	padding:2px;
+}
+
+.poke1 li .pokecontent
+{
+	text-align:left;
+	float:left;
+	margin-left:3px;
+	width:143px;
+}
+
+.pitem .aa
+{
+	width:470px;
+	float:left;
+}
+.pitem .bb
+{
+	float:left;
+}
+
+.pitem .bb img
+{
+	max-height:90px;
+	max-width:80px;
+	_height:90px;
+	_width:80px;
+	border:1px solid #eeeeee;
+	padding:2px;
+}
+.pitem .bb a:hover img
+{
+	border:1px solid #ff0000;
+	padding:2px;
+}
+
+.pokemy
+{
+	margin:5px 0;
+	float:left;
+	width:100%;
+}
+.pokemy ul
+{
+	margin:0;padding:0;
+}
+.pokemy li{width:99%;float:left;margin:2px 0;padding:5px 0;border-bottom:1px solid #eeeeee;}
+.pokemy li .hsc1{width:30px; float:left;}
+.pokemy li .hsc2{width:500px; float:left;}
+.pokemy li .hsc3{width:120px; float:left;}
+.pokemy li .hsc4{width:80px; float:left;}

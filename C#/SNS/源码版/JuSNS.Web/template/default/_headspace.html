@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+<title>${cpagetitle} - ${pagetitle}</title>
+<meta name="keywords" content="${cpagetitle},$keywords" />
+<meta name="description" content="${cpagetitle}【$description】" />
+<link href="$templatepath/css/home.css" rel="stylesheet" type="text/css" />
+<link href="$templatepath/css/css.css" rel="stylesheet" type="text/css" />
+<link href="$templatepath/css/space/${userspace}.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="$webpath/library/js/jquery.min.js"></script>
+<script type="text/javascript" src="$webpath/library/js/public.js"></script>
+<script type="text/javascript" src="$webpath/library/js/common.js"></script>
+<script type="text/javascript" src="$webpath/library/js/centerwindow.js"></script>
+<script type="text/javascript">
+function topsearch()
+{
+    var t=document.getElementById("stypes").value;
+    var v=document.getElementById("allkwd").value;
+    if(v==""&&v.length<2)
+    {
+        showErrorResult("关键字必须大于2个字符。");return;
+    }
+    search(t,"",v);
+}
+function joinvalue(chr)
+{
+    document.getElementById("stypes").value=chr;
+}
+</script>
+</head>
+<body>
+<div id="loadingid" style="display:none;"></div>
+#if($errors)<div  id="toperrors" class="errors">错误：$errors</div>#end
+#if($rights)<div  id="toprights" class="rights">$rights</div>#end
+<div style="text-align:center;">
+    <div  style="display:none;" id="top_rightmsg"></div>
+    <div  style="display:none;" id="top_errormsg"></div>
+</div>
+
+<div id="header">
+    #if($isshortmenu==true)
+          #if($uid>0)
+	        <div class="top_bar" id="top_barscroll">
+	            <div class="left_bar">
+	            <ul class="topusermenu">
+	               <li><a href="$webpath/default$exname">首页</a> </li>
+	               <li><a href="$webpath/home/default$exname">我的社区</a> </li>
+	               <li><a href="${myspace}">我的空间</a></li>
+	               <li>
+	                    <span><a href="$webpath/home/friend/default$exname">好友</a></span>
+                                <ul class="friendlisttop">
+                                    <li class="fge">&nbsp;</li>
+                                    <li><a href="$webpath/home/friend/default$exname">我的好友</a></li>
+                                    <li><a href="$webpath/home/friend/dyn$exname">好友动态设置</a></li>
+                                    <li><a href="$webpath/home/friend/visit$exname">来访者</a></li>
+                                    <li><a href="$webpath/home/friend/city$exname?q=city">同城好友</a></li>
+                                    <li><a href="$webpath/home/friend/pfriend$exname">可能认识的人</a></li>
+                                    <li><a href="$webpath/home/friend/att$exname">关注我的人</a></li>
+                                    <li><a href="$webpath/home/friend/att$exname?r=1">我关注的人</a></li>
+                                    <li><a href="$webpath/home/friend/invite$exname">邀请朋友加入</a></li>
+                                    <li><a href="$webpath/home/friend/search$exname">搜索朋友</a></li>
+                                    <li><a href="$webpath/home/friend/city$exname?q=ram">寻找有缘人</a></li>
+                                </ul>
+                      </li>
+	                 <li><a href="$webpath/homes$exname">随便看看</a></li>
+	                  <li> <a href="$webpath/app/gbook/default$exname">留言本</a></li>
+	                  <li> <a href="$webpath/home/box/default$exname">收件箱</a> </li>
+	                  <li><a href="javascript:;">导航</a></li>
+	                  </ul>
+	            </div>
+	            <div class="right_bar">
+	                <a href="$myspace" class="imagec" title="我的主页"><img src="$portrait0" align="absmiddle" alt="我的主页" />$mytruename</a> 
+	                | <a href="$webpath/space/info/profile$exname">设置</a>
+	                 | <a href="$webpath/home/charge/default$exname">充值</a> 
+	               <!--  | <a href="$webpath/home/magic/default$exname">道具</a> -->
+	                 | <a href="$webpath/space/info/space$exname">装扮空间</a>
+	                  | <a href="$webpath/help/default$exname">帮助</a> 
+	                  |  <a href="javascript:;" onclick="login('$loginurl',$iscode);" title="换个用户登录">重登录</a>
+	                   | <a href="$webpath/login$exname?r=out">退出</a> 
+	            </div>
+	        </div>
+	    #else
+	        <div class="top_bar" id="top_barscroll">
+		        <div class="left_bar">
+		            <ul>
+		                <li><a href="$webpath/default$exname">首页</a></li>
+		                <li><a href="$webpath/homes$exname">随便看看</a></li>
+		                <li><a href="$webpath/app/center/default$exname">应用程序</a></li>
+		                <li><a href="$webpath/help/default$exname">帮助</a></li>
+		            </ul>
+		        </div>
+		        <div class="right_bar"><a href="$webpath/register$exname">注册</a> | <a href="javascript:;" onclick="login('$loginurl',$iscode);">登录</a></div>
+	        </div>
+	    #end
+	#end
+	
+</div>
+
+<div id="allbodycontent">

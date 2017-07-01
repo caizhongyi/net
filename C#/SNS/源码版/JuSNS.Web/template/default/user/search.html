@@ -1,0 +1,84 @@
+﻿#parse("_headspace.html")
+<div id="userspacebgcontral">
+    <div id="space_head">
+        <div class="headfist">
+            $username的个人主页
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="$spaceurl">首页</a></li>
+                <li><a href="$webpath/user/twitter$exname?uid=$userid">微博</a></li>
+                <li><a href="$webpath/user/blog$exname?uid=$userid">博文</a></li>
+                <li><a href="$webpath/user/album$exname?uid=$userid">相片</a></li>
+                <li><a href="$webpath/user/ative$exname?uid=$userid">活动</a></li>
+                <li><a href="$webpath/user/shops$exname?uid=$userid">商品</a></li>
+                <li><a href="$webpath/user/ask$exname?uid=$userid">问答</a></li>
+                <li><a href="$webpath/user/vote$exname?uid=$userid">投票</a></li>
+                <li><a href="$webpath/homes$exname?uid=$userid">社区动态</a></li>
+                <li><a href="$webpath/home/friend/default$exname?uid=$userid">好友</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="space_bodyleft">
+        <div class="headpic">
+            <a href="/app/album/albumview$exname?aid=0&uid=$userid" title="点击查看头像相册"><img src="$headpic" /></a>
+        </div>
+        <div class="profile">
+                #if($profile)<div class="vip">$profile</div>#end 
+                #if($uid>0)
+                <a href="$webpath/app/poke?uid=$userid"  class="sicon-poke">打招呼</a> &nbsp; <a href="$webpath/home/box/mail$exname?fid=$userid&uid=$uid" class="sicon-mails">发消息</a><br />
+                   <a href="$webpath/app/gift?uid=$userid" class="sicon-gift">送礼物</a> &nbsp; <a href="$spaceurl#gbookcontent" class="sicon-mail">留 &nbsp;&nbsp; 言</a><br />
+                    #if($friend)#if($uid!=$userid)<a href="javascript:;" onclick="ATTUser($userid,$uid)" class="sicon-att">关注他</a> &nbsp; <a href="javascript:;" onclick="addfriend($userid,'$username',$uid)" class="sicon-friend">加好友</a><br />
+                   #end#end
+               #end
+        </div>
+
+        
+
+    </div>
+    <div id="space_bodymiddle">
+        <div class="usernames">
+            $username&nbsp;#if($profile)$profile#end &nbsp; <span>来访者($visitnumber)</span>
+            <p>$twitter <a href="$twitterurl#commentcontent">评论</a> &nbsp; <a href="$webpath/app/twitter?q=$userid">更多微博...</a></p>
+        </div>
+        #if($popcontent)
+        <div class="nopop">
+           <span>仅自己可见</span>
+            $username 设置为私密空间！只能自己查看。
+            <p> <input value="发消息给他" class="btn_gray6" onclick="window.location.href='$webpath/home/box/mail$exname?fid=$userid&uid=$uid'" type="button" /></p>
+        </div>
+        #end
+        #if($popcontentfriend)
+        <div class="nopop">
+            <span>仅好友可见</span>
+            由于对方的隐私设置，无法查看更多内容。加对方为好友后，除了浏览日志、相册等内容之外，还可以在第一时间看到她上传的照片、发表的日志等。
+            <p><input value="加他为好友" class="btn_gray6" onclick="addfriend($userid,'$username',$uid)" type="button" /> 或   <input value="发消息给他" class="btn_gray6" onclick="window.location.href='$webpath/home/box/mail$exname?fid=$userid&uid=$uid'" type="button" /></p>
+        </div>
+        #end
+    </div>
+    <div id="space_bodyright">
+    <div class="userflagtitle" style="width:95%;"><span>最近访客</span></div>
+    <div class="visitlist">
+        <ul>
+            #foreach($visit in $visitlist)
+                <li>
+                    <span class="images center"><a href="$visit.spaceurl"><img src="$visit.userhead" /><br />$visit.truename</a></span>
+                 </li>
+            #end
+        </ul>
+    </div>
+    <div class="userflagtitle" style="width:95%;"><span>好友</span></div>
+    <div class="visitlist">
+        <ul>
+            #foreach($frd in $frdlist)
+                <li>
+                    <span class="images center"><a href="$frd.spaceurl"><img src="$frd.userhead" /><br />$frd.truename</a></span>
+                 </li>
+            #end
+        </ul>
+    </div>
+
+    </div>
+</div>
+#parse("_foot.html")

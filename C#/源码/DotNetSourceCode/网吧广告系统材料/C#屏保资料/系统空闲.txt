@@ -1,0 +1,35 @@
+using   System.Runtime.InteropServices; 
+
+[StructLayout(LayoutKind.Sequential)] 
+struct   LASTINPUTINFO 
+{ 
+        [MarshalAs(UnmanagedType.U4)] 
+        public   int   cbSize; 
+        [MarshalAs(UnmanagedType.U4)] 
+        public   uint   dwTime; 
+} 
+
+[DllImport( "user32.dll ")] 
+static   extern   bool   GetLastInputInfo(ref   LASTINPUTINFO   plii); 
+
+static   long   GetLastInputTime() 
+{ 
+        LASTINPUTINFO   vLastInputInfo   =   new   LASTINPUTINFO(); 
+        vLastInputInfo.cbSize   =   Marshal.SizeOf(vLastInputInfo); 
+        if   (!GetLastInputInfo(ref   vLastInputInfo))   return   0; 
+        return   Environment.TickCount   -   (long)vLastInputInfo.dwTime; 
+} 
+
+private   void   Form1_Load(object   sender,   EventArgs   e) 
+{ 
+        timer1.Enabled   =   true; 
+} 
+
+private   void   timer1_Tick(object   sender,   EventArgs   e) 
+{ 
+        Text   =   string.Format( "用户已经{0}秒没有路过了 ",   GetLastInputTime()); 
+}
+
+
+1.可以使用判断CPU的使用率 
+2.用TIMER控件判断

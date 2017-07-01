@@ -1,0 +1,13 @@
+﻿<UserControl x:Class="Silverlight20.Data.Conversion"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:custom="clr-namespace:Silverlight20.Data">
+    <UserControl.Resources>
+        <custom:ColorEnumToBrush x:Key="converter" />
+    </UserControl.Resources>
+    <StackPanel HorizontalAlignment="Left">
+
+        <Ellipse x:Name="ellipse" Width="100" Height="50" Fill="{Binding Color, Converter={StaticResource converter}}" MouseLeftButtonDown="ellipse_MouseLeftButtonDown" />
+
+    </StackPanel>
+</UserControl>

@@ -1,0 +1,54 @@
+﻿#parse("_head.html")
+<div id="snsmenu">
+#parse("_menu.html")
+</div>
+<div id="snsbody">
+    <div id="snshead">写日志 ($mytruename)</div>
+ 
+    <div class="itemmenu">
+        <ul>
+            <li><a href="photo$exname">最新图片</a></li>
+            <li><a href="$webpath/app/album/default$exname">所有相册</a></li>
+            <li><a href="$webpath/app/album/default$exname?q=my">我的相册</a></li>
+            <li><a href="$webpath/app/album/default$exname?q=friend">朋友的相册</a></li> 
+            <li class="current"><a href="$webpath/app/album/new$exname">保存相册</a></li> 
+            <li class="new"><a href="$webpath/app/album/new$exname" class="newitem">上传图片</a></li> 
+            <li class="search">搜索：<input id="kwd" name="kwd" value="#if($kwd)$kwd#else搜索相册#end" type="text" class="f-text w100" onclick="this.value=''" /> <input id="Button1" type="button" value="搜索" class="btn_gray2" onclick="search('album','')" /></li>
+        </ul>
+    </div>
+   <form action="" method="post" id="puform">
+            <span><b>相册：$albumname</b> <span class="reshow"> 共<b>$Num</b>张相片 </span></span> <span class="pike">|</span> <a href="$webpath/app/album/albumedit$exname?aid=$aid">编辑照片</a> »<a href="PhotoAdd$exname?aid=$aid">上传更多照片</a>   »<a href="AlbumView$exname?aid=$aid">返回相册</a>
+
+             #if($Num>0)
+                <div class="album-edit">
+                    <ul>
+                    #foreach($info in $infolist)
+                    <li id="param_$info.id">
+                        <div class="aa center">
+                            <img src="$info.pic" /><br />
+                            <label><input type="radio" name="coverid" value="$info.id" $info.coverChecked/>设为封面</label>
+                        </div>
+                        <div class="bb">
+                            &nbsp; 描述<br />
+                            <textarea name="desc" class="f-text">$info.desc</textarea> <a href="javascript:;" title="删除" class="showok1" onclick="deleteAll($info.id,$uid,'photo')"></a>
+                            <input name="pid" type="hidden" value="$info.id" />
+                        </div>
+                    </li>
+                    #end
+                  </ul>
+                </div>
+            #else
+                <div>还没有照片</div>
+            #end    
+            <div class="pitem1">
+                <em>&nbsp;</em>
+                <input id="Button3" type="submit" value="保存编辑" class="btn_blue4" />
+                <input id="Button2" type="button" value="返回" class="btn_gray4" onclick="javascript:history.back();" />
+            </div>
+        
+    </form>
+</div>
+<script type="text/javascript">
+
+</script>
+#parse("_foot.html")

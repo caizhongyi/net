@@ -1,0 +1,37 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d"
+	x:Class="DeepEarthPrototype.Controls.ToolBarItems"
+	d:DesignWidth="230" d:DesignHeight="46" >
+
+    <Grid x:Name="LayoutRoot">
+
+        <StackPanel MinWidth="64" MinHeight="48.111"  Orientation="Horizontal">
+
+            <Button x:Name="ToggleFullScreen" Margin="2,8,2,8" Style="{StaticResource StandardButton}" Click="ToggleFullScreen_Click" ToolTipService.ToolTip="Toggle Full Screen" >
+                      <Image x:Name="ToggleFullScreenImage" Source="../Resources/ToolBar/FullScreen.png"/>
+            </Button>
+
+            <Button x:Name="ToolBarMapNorth" Visibility="Visible" Style="{StaticResource StandardButton}" Click="ToolBarMapNorth_Click"  Margin="2,8,2,8" ToolTipService.ToolTip="Rotate Map to North">
+                <Image x:Name="ToolBarMapNorthImage" Source="../Resources/ToolBar/North.png"/>
+            </Button>
+
+            <Button x:Name="ToolBarResetMap" Margin="2,8,2,8" Style="{StaticResource StandardButton}" Click="ToolBarResetMap_Click" ToolTipService.ToolTip="Reset Map Position &amp; Zoom" >
+                <Image x:Name="ToolBarResetMapImage" Source="../Resources/ToolBar/FitToAize.png"/>
+            </Button>
+
+            <Button x:Name="ToggleMapMode" Margin="2,8,2,8" Style="{StaticResource StandardButton}" Click="ToggleMapMode_Click" ToolTipService.ToolTip="Toggle Select and Pan Map Modes" >
+                <Image x:Name="ToggleDragModeImage" Source="../Resources/ToolBar/Pan.png"/>
+            </Button>
+
+            <Button x:Name="ToggleDraw" Visibility="Collapsed" Margin="2,8,2,8" Style="{StaticResource StandardButton}" Click="ToggleDraw_Click" >
+                <Image x:Name="ToggleDrawImage"  Source="Resources/ToolBar/Draw.png"/>
+            </Button>
+
+        </StackPanel>
+
+    </Grid>
+</UserControl>

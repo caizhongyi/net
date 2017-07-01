@@ -1,0 +1,11 @@
+ApplicationControlBar {
+	corner-radius:0;
+}
+
+VSlider {
+	showTrackHighlight: true;
+}
+
+Panel {
+	roundedBottomCorners: true;
+}

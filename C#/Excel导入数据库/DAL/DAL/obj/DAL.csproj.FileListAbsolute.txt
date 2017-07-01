@@ -1,0 +1,15 @@
+J:\创业网\DAL\DAL\obj\Debug\ResolveAssemblyReference.cache
+J:\创业网\DAL\DAL\bin\Debug\DAL.dll
+J:\创业网\DAL\DAL\bin\Debug\DAL.pdb
+J:\创业网\DAL\DAL\obj\Debug\DAL.dll
+J:\创业网\DAL\DAL\obj\Debug\DAL.pdb
+C:\Documents and Settings\Administrator\桌面\创业网\DAL\DAL\bin\Debug\DAL.dll
+C:\Documents and Settings\Administrator\桌面\创业网\DAL\DAL\bin\Debug\DAL.pdb
+C:\Documents and Settings\Administrator\桌面\创业网\DAL\DAL\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\桌面\创业网\DAL\DAL\obj\Debug\DAL.dll
+C:\Documents and Settings\Administrator\桌面\创业网\DAL\DAL\obj\Debug\DAL.pdb
+C:\Documents and Settings\Administrator\桌面\Excel导入数据库\DAL\DAL\bin\Debug\DAL.dll
+C:\Documents and Settings\Administrator\桌面\Excel导入数据库\DAL\DAL\bin\Debug\DAL.pdb
+C:\Documents and Settings\Administrator\桌面\Excel导入数据库\DAL\DAL\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\桌面\Excel导入数据库\DAL\DAL\obj\Debug\DAL.dll
+C:\Documents and Settings\Administrator\桌面\Excel导入数据库\DAL\DAL\obj\Debug\DAL.pdb

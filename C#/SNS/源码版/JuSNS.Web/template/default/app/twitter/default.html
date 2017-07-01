@@ -1,0 +1,86 @@
+﻿#parse("_head.html")
+<div id="snsmenu">
+#parse("_menu.html")
+</div>
+<div id="snsbody">
+    <div id="snshead">$cpagetitle</div>
+    <div class="itemmenu">
+        <ul>
+            #if($twitteruser)
+                <li class="current"><a href="$webpath/app/twitter/default$exname?q=$q">$cpagetitle</a></li> 
+            #end
+            <li#if($css_null) $css_null #end><a href="$webpath/app/twitter/default$exname">他们正在...</a></li>
+            #if($uid>0)
+                <li#if($css_my) $css_my #end><a href="$webpath/app/twitter/default$exname?q=my">我的微博</a></li>
+                <li#if($css_friend) $css_friend #end><a href="$webpath/app/twitter/default$exname?q=friend">朋友的微博</a></li> 
+            #end
+        </ul>
+    </div>
+    <div class="pitem">
+        <form action="" method="post" enctype="multipart/form-data">
+            <div style="float:left;padding-top:10px;"><textarea id="twittercontent"  name="twittercontent" cols="50" rows="4" class="f-text" style="width:550px;height:76px;"></textarea></div> <div style="float:left;margin-left:10px;"><input type="submit" value="" class="witter_button"  onclick="return checkdata();" /></div>
+            <div class="clearpix"></div>
+            <a href="javascript:;"  title="插入表情" onclick="Interface('twittercontent','$skinstyle')"><img src="$templatepath/images/c.gif" /></a> 
+            <a href="javascript:;" title="插入照片" onclick="Uploadphoto();"><img src="$templatepath/images/z.gif" /></a>   
+            <a href="javascript:;" title="插入视频" onclick="Uploadmedia();"><img src="$templatepath/images/s.gif" /></a>   <span class="reshow">最多输入200个字符</span>
+            <div class="item" id="showphoto" style="display:none;">
+            <input id="twitterphoto" name="twitterphoto" type="file" class="f-file" />
+            </div>
+            <div class="item" id="showmedia" style="display:none;">
+                <input id="twittermedia" name="twittermedia" type="text"  class="f-text" style="width:250px;" /> <div class="nextreshow">支持 youku.com | tudou.com | ku6.com，直接贴入网页观看地址(如：http://v.youku.com/v_show/id_XMTE5Nzg1Njgw.html)，$sitename可以自动播放哦！ </div>
+            </div>
+        </form>
+    </div>
+    #if($recordcount>0)
+        <div class="twitters">
+            <ul>
+            #foreach($twit in $twitlist)
+            <li id="param_$twit.id">
+                <div class="aa images"><a href="$twit.spaceurl" title="查看$twit.truename的微博"><img src="$twit.headpic"><br />$twit.truename</a> </div>
+                <div class="bb">$twit.content<br />
+                <span class="time">$twit.time</span> $twit.showop $twit.showrec<br />
+                 <div><a href="$twit.twitterurl">评论($twit.comments)</a></div>
+                </div>
+                
+            </li>
+            #end
+          </ul>
+          </div>
+          <div class="pages">$pagelist</div>
+        #else
+            <div>还没有记录</div>
+        #end        
+
+    </div>
+</div>
+<script type="text/javascript">
+    function checkdata()
+    {
+        var uid=$uid;
+        if(uid==0)
+        {
+            showErrorResult("请登录后操作！");
+            return false;
+        }
+        if(jQuery("#twittercontent").val()==""||jQuery("#twittercontent").val().length<3)
+        {
+            showErrorResult("内容必须大于2个字符！");
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
+    function Uploadphoto()
+    {
+        jQuery("#showphoto").show();
+        jQuery("#showmedia").hide();
+    }
+    function Uploadmedia()
+    {
+        jQuery("#showmedia").show();
+        jQuery("#showphoto").hide();
+    }
+</script>
+#parse("_foot.html")

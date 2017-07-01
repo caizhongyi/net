@@ -1,0 +1,65 @@
+﻿#parse("_head.html")
+<div id="snsmenu">
+#parse("_menu.html")
+</div>
+<div id="snsbody">
+    <div id="snshead"><span class="l">$cpagetitle</span></div>
+       <div class="itemmenu">
+        <ul>
+            #if($sendid==-1)
+            <li><a href="$webpath/app/gbook/default$exname">我的留言本</a></li>
+            <li class="current"><a href="$webpath/app/gbook/default$exname?uid=-1">给管理员留言</a></li>
+            #else
+            <li class="current"><a href="$webpath/app/gbook/default$exname">$cpagetitle</a></li>
+            <li><a href="$webpath/app/gbook/default$exname?uid=-1">给管理员留言</a></li>
+            #end
+        </ul>
+    </div>
+
+         #if($recordcount>0)
+            <div class="booklist pitem">
+                <ul>
+                #foreach($info in $infolist)
+                <li id="param_$info.id">
+                    <div class="aa images center">
+                        <a href="$info.spaceurl" target="_blank" title="查看$info.truename的空间"><img src="$info.headpic" /><br />$info.truename1</a>
+                    </div>
+                    <div class="bb">
+                        <p><a href="$info.spaceurl" target="_blank" title="查看$info.truename的空间">$info.truename</a> 留言于 <span  class="time">$info.time</span>#if($info.sendid!=$uid)  #if($info.dialog)$info.dialog#end#end</p>
+                        <p>$info.content</p>
+                        <p><span  class="time">$info.time</span>#if($info.sendid!=$uid) &nbsp;<a href="$webpath/app/gbook/default$exname?uid=$info.sendid#content">回复$info.truename</a>#end $info.showop</p>
+                    </div>
+                </li>
+                #end
+              </ul>
+              </div>
+              <div class="pages">$pagelist</div>
+        #else
+            <div>还没有记录</div>
+        #end        
+        <div class="pitem">
+          <form action="" method="post" id="form1" name="form1">
+            <textarea id="content"  name="content" cols="50" rows="4" class="f-text" style="width:80%;height:76px;"></textarea>
+            <div class="clearpix"></div>
+            <a href="javascript:;"  title="插入表情" onclick="Interface('content','$skinstyle')"><img src="$templatepath/images/c.gif" /></a> 
+             <input type="submit" value="留言" class="btn_blue2"  onclick="return checkdata();" />
+             <input id="sendid" name="sendid" value="$sendid" type="hidden" />
+        </form>
+     </div>
+</div>
+#parse("_foot.html")
+<script type="text/javascript">
+    function checkdata()
+    {
+        var content=jQuery("#content").val();
+        if(content=="")
+        {
+            showErrorResult("回复内容必须填写！");
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
+</script>

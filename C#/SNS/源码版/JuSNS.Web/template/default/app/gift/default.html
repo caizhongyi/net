@@ -1,0 +1,152 @@
+﻿#parse("_head.html")
+<link href="$templatepath/css/app/gift.css" rel="stylesheet" type="text/css" />
+<div id="snsmenu">
+#parse("_menu.html")
+</div>
+<div id="snsbody">
+    <div id="snshead">赠送礼物</div>
+
+
+    <div class="itemmenu">
+        <ul>
+            <li class="current"><a href="$webpath/app/gift/default$exname">赠送礼物</a></li>
+            <li><a href="$webpath/app/gift/my$exname">我收到的礼物</a></li>
+            <li><a href="$webpath/app/gift/send$exname">我送出去的礼物</a></li> 
+        </ul>
+    </div>
+    
+        <div class="itemmenu1">
+        <ul>
+            <li><a href="$webpath/app/gift/default$exname">所有礼物</a></li>
+            #foreach($giftc in $giftclist)
+            <li id="param$giftc.id" $giftc.css><a href="$webpath/app/gift/default$exname?classid=$giftc.id" class="$giftc.css">$giftc.cname</a></li>
+            #end
+        </ul>
+    </div>
+
+    <div class="gift">
+             #if($recordcount>0)
+                <ul>
+                #foreach($info in $infolist)
+                <li id="param_$info.id">
+                    <div class="userpic">
+                        <a href="javascript:;" onclick="sendgift($info.id,$uid,'$info.content','$info.giftpic')"><img src="$info.giftpic" /></a>
+                    </div>
+                    <div class="giftcontent">
+                       $info.giftname $info.showop<br />
+                       #if($info.giftgpoint >0)$info.giftgpoint $gpoint<br />#end
+                       #if($info.giftpoint >0) $info.giftpoint 积分<br />#end
+                       #if($info.isvips)<span class="reshow">VIP会员专用</span><br />#end
+                       <a href="$info.giftpic" target="_blank" title="查看大图">查看大图</a><br />
+                       <a href="javascript:;" onclick="sendgift($info.id,$uid,'$info.content','$info.giftpic')">赠送给好友</a>
+                    </div>
+                </li>
+                #end
+              </ul>
+              <div class="pages">$pagelist</div>
+        #else
+            <div>还没有记录</div>
+        #end       
+    </div>
+    <div class="pitem">
+        <form id="form1" name="form1" action="default$exname" method="post">
+        <div class="aa">
+            <p>选择好友：<input id="friends" name="friends" readonly="readonly" onclick="showfriend(this,$uid)" type="text" class="f-text" style="width:300px;" value="#if($susername)$susername#end" /><input id="hidefrienduid" value="#if($suid>0)$suid#end" name="hidefrienduid" type="hidden" /><input id="giftid" name="giftid" type="hidden" /> <a href="javascript:;" onclick="clearfriend();">重新选择</a></p>
+            <p>赠送附言：<textarea id="txtcontent" name="txtcontent"  class="f-text"  rows="3" style="width:300px;height:50px"></textarea> <span class="reshow">最多500个字符。</span></p>
+            <p><em style="width:60px;">&nbsp; </em><input id="Submit1" type="submit" onclick="return checkdata();" value="赠送礼物" class="btn_blue4" /> <span class="reshow">每天最多赠送$maxgift个礼物</span></p>
+        </div>
+        <div class="bb" id="giftcont">
+            
+        </div>
+        </form>
+    </div>
+</div>
+#parse("_foot.html")
+<script type="text/javascript">
+    function checkdata()
+    {
+        var friends=jQuery("#friends").val();
+        var hidefrienduid=jQuery("#hidefrienduid").val();
+        var giftid=jQuery("#giftid").val();
+        if(friends==""||hidefrienduid=="")
+        {
+            document.getElementById("friends").focus();
+            showErrorResult("请至少选择一个好友");
+            return false;
+        }
+        if(giftid=="")
+        {
+            showErrorResult("请选择要赠送的礼物");
+            return false;
+        }
+        return true;
+    }
+    function clearfriend()
+    {   
+           document.getElementById("friends").value="";
+           document.getElementById("hidefrienduid").value="";
+   }
+    function sendgift(gid,uid,cont,pic)
+    {
+        document.getElementById("friends").focus();
+        document.getElementById("giftid").value=gid;
+        document.getElementById("txtcontent").value=cont;
+        document.getElementById("giftcont").innerHTML="<a href=\""+pic+"\" title=\"点击查看详情\" target=\"_blank\"><img src=\""+pic+"\" /></a>";
+    }
+    function showfriend(obj,uid)
+    {
+        var formcontent = "<iframe src=\"$webpath/home/friend/friend"+ExName+"?uid="+uid+"\" style=\"width:99%;height:300px;border:0;\" frameborder=\"NO\" border=\"0\" framespacing=\"0\"></iframe>";
+        var W = WinTip("<div>选择好友</div>", formcontent);
+        W.Width=750;
+        W.Create();        
+
+    }
+    function inserttoFriend(friendname,frienduid)
+    {
+        var friends=jQuery("#friends").val();
+        var hidefrienduid=jQuery("#hidefrienduid").val();
+        if(hidefrienduid!="")
+        {
+            var arr=new Array();
+            arr = hidefrienduid.split(",");
+            var isvalue=false;
+            //检查是否有好友了
+            for(var i=0;i<arr.length;i++)
+            {
+                if(arr[i]==frienduid)
+                {
+                    isvalue=true;
+                }
+            }
+            if(isvalue)
+            {
+                showErrorResult("已经选择了此好友了");
+                return;
+            }
+            var maxs=$maxsendfriend;
+            if(arr.length>(maxs-1))
+            {
+                showErrorResult("最多允许选择$maxsendfriend个好友。");
+                return;
+            }
+           document.getElementById("hidefrienduid").value=hidefrienduid+","+frienduid;
+        }
+        else
+        {
+           document.getElementById("hidefrienduid").value=frienduid;
+        }        
+        if(friends!="")
+        {
+           document.getElementById("friends").value=friends+","+friendname;
+        }
+        else
+        {
+           document.getElementById("friends").value=friendname;
+        }
+    }
+    var suid=$suid;
+    if(suid>0)
+    {
+        document.getElementById("friends").focus();
+    }
+</script>

@@ -1,0 +1,15 @@
+﻿/* ============内容翻页============== */
+
+div.page_content {
+font:14px/22px Verdana, Arial, Helvetica, sans-serif;
+color:#3e3e3e;
+margin:0px;
+padding-bottom:20px;
+}
+
+div.page_content p,div.page_content a,div.page_content td,div.page_content span,div.page_content li{
+font:14px/22px Verdana, Arial, Helvetica, sans-serif;
+color:#3e3e3e;
+}
+
+

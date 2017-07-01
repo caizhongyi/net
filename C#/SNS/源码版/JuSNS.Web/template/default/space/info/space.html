@@ -1,0 +1,68 @@
+﻿#parse("_head.html")
+<div id="snsmenu">
+#parse("_menu.html")
+</div>
+<div id="snsbody">
+    <div id="snshead">装扮空间</div>
+
+    <div class="itemmenu">
+        <ul>
+            <li><a href="profile$exname">基本资料</a></li>
+            <li><a href="nowcity$exname">居住地</a></li>
+            <li><a href="head$exname">修改头像</a></li>
+            <li><a href="links$exname">联系方式</a></li>
+            <li><a href="edu$exname">教育情况</a></li>
+            <li><a href="work$exname">工作情况</a></li>
+            <li><a href="like$exname">个人爱好</a></li>
+            <li><a href="privacy$exname">隐私设置</a></li>
+            <li class="current"><a href="space$exname">装扮空间</a></li>
+            
+        </ul>
+  </div>
+ 
+         #if($recordcount>0)
+            <div class="spacelist">
+                <ul>
+                    #foreach($info in $infolist)
+                        <li id="param_$info.id">
+                            <a href="$templatepath/images/space/$info.tename/template_b.jpg" title="点击查看大图" target="_blank"><img src="$templatepath/images/space/$info.tename/template.jpg" /></a>
+                            <p class="font14 strong"><a href="$templatepath/images/space/$info.tename/template_b.jpg" title="点击查看大图" target="_blank">$info.tname</a> $info.showop</p>
+                            <p>被使用$info.usenumber次</p>
+                            <p>$gpoint：$info.gpoints</p>
+                            <p>积分：$info.ipoint</p>
+                            <p><a href="javascript:;" onclick="usertemplate($info.id,'$info.tename',$uid)">使用此模板</a></p>
+                        </li>
+                    #end
+                </ul>
+            </div>
+            <div class="pages">$pagelist</div>
+        #else
+        <div>没有模板</div>
+        #end     
+    </div>
+#parse("_foot.html")
+<script type="text/javascript">
+    function usertemplate(tid,tename,uid)
+    {
+        jQuery.get(ajaxUrl, { action:"UserTemplateAjax", tid:tid,tename:tename,uid:uid, param:Math.random() }, 
+        function(msg)
+        {
+            switch(msg)
+            {
+                 case "1":
+                     showRightResult("更换模板成功！");
+                     break;
+                 case "-1":
+                     showErrorResult("错误的参数");
+                     break;
+                 case "-2":
+                     showErrorResult("积分或金币不足！不能更换此模板");
+                     break;
+                 default:
+                     showErrorResult("操作失败");
+                     break;
+            }
+        }
+       );          
+    }
+</script>

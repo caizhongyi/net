@@ -1,0 +1,60 @@
+﻿#parse("_headshop.html")
+<div id="shopbody">
+    <div class="menu">
+        <ul>
+            <li><a href="../shop/default$exname?sid=$sid">店铺首页</a></li>
+            <li><a href="news$exname?sid=$sid">店铺公告</a></li>
+            <li class="current"><a href="goods$exname?sid=$sid">商品展示</a></li>
+            <li><a href="mbuy$exname?sid=$sid">超级采购团</a></li>
+            <li><a href="shopinfo$exname?sid=$sid">联系我们</a></li>
+        </ul>
+    </div>
+    <div class="shopbodyleft">
+        <div class="per">
+            &nbsp; &nbsp; <img src="$templatepath/images/join_bg.gif" align="middle" />&nbsp; 加盟时间：$jointime
+        </div>
+        <div class="per">
+            <div class="title">商家基本信息</div>
+            <span>$shopname</span><br />
+            <div class="p"><label>地址：</label><em>$address</em></div>
+            <div class="p"><label>电话：</label><em>$tel</em></div>
+            <div class="p"><label>传真：</label><em>$fax</em></div>
+            <div class="p"><label>联系人：</label><em>$linkman</em></div>
+            <div class="p"><label>介绍：</label><em>$content</em></div>
+        </div>
+        <div class="per">
+            <div class="title">商家告示</div>
+           #if($recordcount>0)
+                <ul>
+                #foreach($info in $infolist)
+                <li id="param_$info.id">
+                   <a href="$info.shopnewsurl" target="_blank">$info.title</a>
+                </li>
+                #end
+              </ul>
+        #else
+            <div>还没有记录</div>
+        #end   
+        </div>
+    </div>
+    <div class="shopbodyright">
+        
+<div class="title">商品信息</div>  
+<div id="productlist">
+				<ul class="productlist" style="display: block;">
+				     #foreach($pro in $prolist)
+
+					<li>
+						<a href="$pro.goodsurl" target="_blank"><img alt="" src="$pro.photo"  onerror="this.src='$shoppicpath/default.jpg'" /></a>
+						<p><a href="$pro.goodsurl" target="_blank">$pro.goodsname</a></p>
+						<p class="price">会员价：￥$pro.mprice</p>
+					</li>
+					#end
+					</ul>
+              <div class="pages">$pagelist</div>
+</div>
+            
+    </div>
+</div>
+
+#parse("_foot.html")

@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Brettle.Web.NeatUpload.GreyBoxProgressBar</name>
+    </assembly>
+    <members>
+        <member name="T:Brettle.Web.NeatUpload.GreyBoxProgressBar">
+            <summary>
+            Displays progress and status of an upload using a GreyBox pop-up window.</summary>
+            <remarks>
+            For the progress bar to be displayed, the <see cref="T:Brettle.Web.NeatUpload.UploadHttpModule"/> must be in use.
+            For the progress display to be started, the form being submitted must include an <see cref="T:Brettle.Web.NeatUpload.InputFile"/>
+            control that is not empty.  If you use the <see cref="!:Triggers"/> property (or the <see cref="!:AddTrigger"/> method)
+            to specify which controls should cause files to be uploaded, then other controls will not start the progress
+            display (e.g. "Cancel" buttons).
+            </remarks>
+        </member>
+        <member name="P:Brettle.Web.NeatUpload.GreyBoxProgressBar.GreyBoxRoot">
+            <summary>
+            URL of the directory containing the GreyBox support files.</summary>
+            <remarks>
+            The URL should not include a the trailing "/".
+            You may use an absolute or relative URL that refers to a page in the same web application.  If the URL
+            starts with "~", the "~" will be replaced with the web application root as returned by
+            <see cref="P:System.Web.HttpRequest.ApplicationPath"/>.  By default, "~/greybox" will be used.</remarks>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NewDataSet>
+  <AdvInfo>
+    <Adv_Id>38</Adv_Id>
+    <Adv_Name>美女      </Adv_Name>
+    <Adv_Url>~/Adpictures/11e2adc3860.jpg</Adv_Url>
+    <Wb_Id>10102120</Wb_Id>
+    <Adv_Content />
+    <Adv_Endday>2008-12-11T15:20:42+08:00</Adv_Endday>
+    <Adv_Type_Id>2</Adv_Type_Id>
+    <CompanyURL>www.google.cn</CompanyURL>
+  </AdvInfo>
+  <AdvInfo>
+    <Adv_Id>45</Adv_Id>
+    <Adv_Name>daben     </Adv_Name>
+    <Adv_Url>~/Adpictures/200710280109007813.jpg</Adv_Url>
+    <Wb_Id>10102120</Wb_Id>
+    <Adv_Content>11111111</Adv_Content>
+    <Adv_Endday>2008-12-30T00:00:00+08:00</Adv_Endday>
+    <Adv_Type_Id>2</Adv_Type_Id>
+    <CompanyURL>www.csdn.net</CompanyURL>
+  </AdvInfo>
+  <AdvInfo>
+    <Adv_Id>26</Adv_Id>
+    <Adv_Name>美容广告  </Adv_Name>
+    <Adv_Url>~/Adpictures/20081211152042.jpg</Adv_Url>
+    <Wb_Id>10102120</Wb_Id>
+    <Adv_Content />
+    <Adv_Endday>2008-09-09T00:00:00+08:00</Adv_Endday>
+    <Adv_Type_Id>5</Adv_Type_Id>
+    <CompanyURL>www.baidu.com</CompanyURL>
+  </AdvInfo>
+  <AdvInfo>
+    <Adv_Id>71</Adv_Id>
+    <Adv_Name>moshou    </Adv_Name>
+    <Adv_Url>~/Adpictures/moshou.jpg</Adv_Url>
+    <Wb_Id>10102120</Wb_Id>
+    <Adv_Content>moshou</Adv_Content>
+    <Adv_Endday>2008-12-29T00:00:00+08:00</Adv_Endday>
+    <Adv_Type_Id>6</Adv_Type_Id>
+    <CompanyURL>www.wb66.cn</CompanyURL>
+  </AdvInfo>
+  <AdvInfo>
+    <Adv_Id>46</Adv_Id>
+    <Adv_Name>tianci    </Adv_Name>
+    <Adv_Url>~/Adpictures/tianci.jpg</Adv_Url>
+    <Wb_Id>10102120</Wb_Id>
+    <Adv_Content>tianci</Adv_Content>
+    <Adv_Endday>2008-12-30T00:00:00+08:00</Adv_Endday>
+    <Adv_Type_Id>6</Adv_Type_Id>
+    <CompanyURL>www.laigame.net</CompanyURL>
+  </AdvInfo>
+  <AdvInfo>
+    <Adv_Id>47</Adv_Id>
+    <Adv_Name>gugong    </Adv_Name>
+    <Adv_Url>~/Adpictures/gugong.jpg</Adv_Url>
+    <Wb_Id>10102120</Wb_Id>
+    <Adv_Content>gugong</Adv_Content>
+    <Adv_Endday>2008-12-29T00:00:00+08:00</Adv_Endday>
+    <Adv_Type_Id>6</Adv_Type_Id>
+    <CompanyURL>www.laigame.net</CompanyURL>
+  </AdvInfo>
+  <AdvInfo>
+    <Adv_Id>61</Adv_Id>
+    <Adv_Name>sejie     </Adv_Name>
+    <Adv_Url>~/Adpictures/sejie.jpg</Adv_Url>
+    <Wb_Id>10102120</Wb_Id>
+    <Adv_Content>sejie</Adv_Content>
+    <Adv_Endday>2008-12-30T00:00:00+08:00</Adv_Endday>
+    <Adv_Type_Id>6</Adv_Type_Id>
+    <CompanyURL>www.google.cn</CompanyURL>
+  </AdvInfo>
+  <AdvInfo>
+    <Adv_Id>66</Adv_Id>
+    <Adv_Name>kaidilake </Adv_Name>
+    <Adv_Url>~/Adpictures/kaidilake.jpg</Adv_Url>
+    <Wb_Id>10102120</Wb_Id>
+    <Adv_Content>kaidilake</Adv_Content>
+    <Adv_Endday>2008-12-28T00:00:00+08:00</Adv_Endday>
+    <Adv_Type_Id>6</Adv_Type_Id>
+    <CompanyURL>www.baidu.com</CompanyURL>
+  </AdvInfo>
+  <AdvInfo>
+    <Adv_Id>67</Adv_Id>
+    <Adv_Name>baoshijie </Adv_Name>
+    <Adv_Url>~/Adpictures/baoshijie.jpg</Adv_Url>
+    <Wb_Id>10102120</Wb_Id>
+    <Adv_Content>baoshijie</Adv_Content>
+    <Adv_Endday>2008-12-30T00:00:00+08:00</Adv_Endday>
+    <Adv_Type_Id>7</Adv_Type_Id>
+    <CompanyURL>www.wb66.cn</CompanyURL>
+  </AdvInfo>
+  <AdvInfo>
+    <Adv_Id>62</Adv_Id>
+    <Adv_Name>yeyan     </Adv_Name>
+    <Adv_Url>~/Adpictures/yeyan.jpg</Adv_Url>
+    <Wb_Id>10102120</Wb_Id>
+    <Adv_Content>yeyan</Adv_Content>
+    <Adv_Endday>2008-12-29T00:00:00+08:00</Adv_Endday>
+    <Adv_Type_Id>7</Adv_Type_Id>
+    <CompanyURL>www.google.cn</CompanyURL>
+  </AdvInfo>
+  <AdvInfo>
+    <Adv_Id>49</Adv_Id>
+    <Adv_Name>siku      </Adv_Name>
+    <Adv_Url>~/Adpictures/siku.jpg</Adv_Url>
+    <Wb_Id>10102120</Wb_Id>
+    <Adv_Content>siku</Adv_Content>
+    <Adv_Endday>2008-12-30T00:00:00+08:00</Adv_Endday>
+    <Adv_Type_Id>7</Adv_Type_Id>
+    <CompanyURL>www.laigame.net</CompanyURL>
+  </AdvInfo>
+  <AdvInfo>
+    <Adv_Id>50</Adv_Id>
+    <Adv_Name>yueyanglou</Adv_Name>
+    <Adv_Url>~/Adpictures/yueyanglou.jpg</Adv_Url>
+    <Wb_Id>10102120</Wb_Id>
+    <Adv_Content>yueyanglou</Adv_Content>
+    <Adv_Endday>2008-12-30T09:00:00+08:00</Adv_Endday>
+    <Adv_Type_Id>7</Adv_Type_Id>
+    <CompanyURL>www.laigame.net</CompanyURL>
+  </AdvInfo>
+  <AdvInfo>
+    <Adv_Id>51</Adv_Id>
+    <Adv_Name>gezhouba  </Adv_Name>
+    <Adv_Url>~/Adpictures/gezhouba.jpg</Adv_Url>
+    <Wb_Id>10102120</Wb_Id>
+    <Adv_Content>gezhouba</Adv_Content>
+    <Adv_Endday>2008-12-28T08:00:00+08:00</Adv_Endday>
+    <Adv_Type_Id>8</Adv_Type_Id>
+    <CompanyURL>www.csdn.net</CompanyURL>
+  </AdvInfo>
+  <AdvInfo>
+    <Adv_Id>52</Adv_Id>
+    <Adv_Name>tulou     </Adv_Name>
+    <Adv_Url>~/Adpictures/tulou.jpg</Adv_Url>
+    <Wb_Id>10102120</Wb_Id>
+    <Adv_Content>tulou</Adv_Content>
+    <Adv_Endday>2008-12-29T00:00:00+08:00</Adv_Endday>
+    <Adv_Type_Id>8</Adv_Type_Id>
+    <CompanyURL>www.csdn.net</CompanyURL>
+  </AdvInfo>
+  <AdvInfo>
+    <Adv_Id>63</Adv_Id>
+    <Adv_Name>bunengsuo </Adv_Name>
+    <Adv_Url>~/Adpictures/bunengsuo.jpg</Adv_Url>
+    <Wb_Id>10102120</Wb_Id>
+    <Adv_Content>bunengsuo</Adv_Content>
+    <Adv_Endday>2008-12-28T00:00:00+08:00</Adv_Endday>
+    <Adv_Type_Id>8</Adv_Type_Id>
+    <CompanyURL>www.wb66.cn</CompanyURL>
+  </AdvInfo>
+  <AdvInfo>
+    <Adv_Id>68</Adv_Id>
+    <Adv_Name>hangma    </Adv_Name>
+    <Adv_Url>~/Adpictures/hangma.jpg</Adv_Url>
+    <Wb_Id>10102120</Wb_Id>
+    <Adv_Content>hangma</Adv_Content>
+    <Adv_Endday>2008-12-29T00:00:00+08:00</Adv_Endday>
+    <Adv_Type_Id>8</Adv_Type_Id>
+    <CompanyURL>www.wb66.cn</CompanyURL>
+  </AdvInfo>
+  <AdvInfo>
+    <Adv_Id>73</Adv_Id>
+    <Adv_Name>xianjian  </Adv_Name>
+    <Adv_Url>~/Adpictures/xianjian.jpg</Adv_Url>
+    <Wb_Id>10102120</Wb_Id>
+    <Adv_Content>xianjian</Adv_Content>
+    <Adv_Endday>2008-12-29T00:00:00+08:00</Adv_Endday>
+    <Adv_Type_Id>8</Adv_Type_Id>
+    <CompanyURL>www.laigame.net</CompanyURL>
+  </AdvInfo>
+  <AdvInfo>
+    <Adv_Id>74</Adv_Id>
+    <Adv_Name>menghuan  </Adv_Name>
+    <Adv_Url>~/Adpictures/menghuan.jpg</Adv_Url>
+    <Wb_Id>10102120</Wb_Id>
+    <Adv_Content>menghuan</Adv_Content>
+    <Adv_Endday>2008-12-29T00:00:00+08:00</Adv_Endday>
+    <Adv_Type_Id>9</Adv_Type_Id>
+    <CompanyURL>www.laigame.net</CompanyURL>
+  </AdvInfo>
+  <AdvInfo>
+    <Adv_Id>69</Adv_Id>
+    <Adv_Name>kelaisile </Adv_Name>
+    <Adv_Url>~/Adpictures/kelaisile.jpg</Adv_Url>
+    <Wb_Id>10102120</Wb_Id>
+    <Adv_Content>kelaisile</Adv_Content>
+    <Adv_Endday>2008-12-29T00:00:00+08:00</Adv_Endday>
+    <Adv_Type_Id>9</Adv_Type_Id>
+    <CompanyURL>www.wb66.cn</CompanyURL>
+  </AdvInfo>
+  <AdvInfo>
+    <Adv_Id>64</Adv_Id>
+    <Adv_Name>shenghua  </Adv_Name>
+    <Adv_Url>~/Adpictures/shenghua.jpg</Adv_Url>
+    <Wb_Id>10102120</Wb_Id>
+    <Adv_Content>shenghua</Adv_Content>
+    <Adv_Endday>2008-12-29T00:00:00+08:00</Adv_Endday>
+    <Adv_Type_Id>9</Adv_Type_Id>
+    <CompanyURL>www.baidu.com</CompanyURL>
+  </AdvInfo>
+  <AdvInfo>
+    <Adv_Id>55</Adv_Id>
+    <Adv_Name>nanputuosh</Adv_Name>
+    <Adv_Url>~/Adpictures/nanputuoshi.jpg</Adv_Url>
+    <Wb_Id>10102120</Wb_Id>
+    <Adv_Content>nanputuoshi</Adv_Content>
+    <Adv_Endday>2008-12-29T00:00:00+08:00</Adv_Endday>
+    <Adv_Type_Id>9</Adv_Type_Id>
+    <CompanyURL>www.csdn.net</CompanyURL>
+  </AdvInfo>
+  <AdvInfo>
+    <Adv_Id>56</Adv_Id>
+    <Adv_Name>budalagong</Adv_Name>
+    <Adv_Url>~/Adpictures/budalagong.jpg</Adv_Url>
+    <Wb_Id>10102120</Wb_Id>
+    <Adv_Content>budalagong</Adv_Content>
+    <Adv_Endday>2008-12-28T00:00:00+08:00</Adv_Endday>
+    <Adv_Type_Id>9</Adv_Type_Id>
+    <CompanyURL>www.csdn.net</CompanyURL>
+  </AdvInfo>
+  <AdvInfo>
+    <Adv_Id>59</Adv_Id>
+    <Adv_Name>xisuangban</Adv_Name>
+    <Adv_Url>~/Adpictures/xisuangbanna.jpg</Adv_Url>
+    <Wb_Id>10102120</Wb_Id>
+    <Adv_Content>xisuangbanna</Adv_Content>
+    <Adv_Endday>2008-12-29T00:00:00+08:00</Adv_Endday>
+    <Adv_Type_Id>10</Adv_Type_Id>
+    <CompanyURL>www.google.cn</CompanyURL>
+  </AdvInfo>
+  <AdvInfo>
+    <Adv_Id>60</Adv_Id>
+    <Adv_Name>jiuzaigou </Adv_Name>
+    <Adv_Url>~/Adpictures/jiuzaigou.jpg</Adv_Url>
+    <Wb_Id>10102120</Wb_Id>
+    <Adv_Content>jiuzaigou</Adv_Content>
+    <Adv_Endday>2008-12-29T00:00:00+08:00</Adv_Endday>
+    <Adv_Type_Id>10</Adv_Type_Id>
+    <CompanyURL>www.google.cn</CompanyURL>
+  </AdvInfo>
+  <AdvInfo>
+    <Adv_Id>65</Adv_Id>
+    <Adv_Name>shimianmai</Adv_Name>
+    <Adv_Url>~/Adpictures/shimianmai.jpg</Adv_Url>
+    <Wb_Id>10102120</Wb_Id>
+    <Adv_Content>shimianmaifu</Adv_Content>
+    <Adv_Endday>2008-12-29T00:00:00+08:00</Adv_Endday>
+    <Adv_Type_Id>10</Adv_Type_Id>
+    <CompanyURL>www.baidu.com</CompanyURL>
+  </AdvInfo>
+  <AdvInfo>
+    <Adv_Id>70</Adv_Id>
+    <Adv_Name>baoma     </Adv_Name>
+    <Adv_Url>~/Adpictures/baoma.jpg</Adv_Url>
+    <Wb_Id>10102120</Wb_Id>
+    <Adv_Content>baoma</Adv_Content>
+    <Adv_Endday>2008-12-29T00:00:00+08:00</Adv_Endday>
+    <Adv_Type_Id>10</Adv_Type_Id>
+    <CompanyURL>www.wb66.cn</CompanyURL>
+  </AdvInfo>
+  <AdvInfo>
+    <Adv_Id>75</Adv_Id>
+    <Adv_Name>wanwan    </Adv_Name>
+    <Adv_Url>~/Adpictures/wanwan.jpg</Adv_Url>
+    <Wb_Id>10102120</Wb_Id>
+    <Adv_Content>wanwan</Adv_Content>
+    <Adv_Endday>2008-12-29T00:00:00+08:00</Adv_Endday>
+    <Adv_Type_Id>10</Adv_Type_Id>
+    <CompanyURL>www.laigame.net</CompanyURL>
+  </AdvInfo>
+  <Time>
+    <CreateTime>2008-12-5 0:00:00</CreateTime>
+  </Time>
+</NewDataSet>

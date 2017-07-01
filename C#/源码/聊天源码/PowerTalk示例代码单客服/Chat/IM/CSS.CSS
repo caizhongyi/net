@@ -1,0 +1,312 @@
+﻿body {
+	margin: 0px;
+	padding: 0px;
+}
+td, p {
+	font-family: Verdana, Arial, "宋体", Helvetica, sans-serif;
+	font-size: 12px;
+}
+from {
+	margin: 0px;
+	padding: 0px;
+}
+input, textarea, select {
+	font-family: Verdana, Arial, "宋体", Helvetica, sans-serif;
+	font-size: 12px;
+}
+a img {
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+}
+a:link, a:visited {
+	color: #003399;
+	text-decoration: none;
+}
+a:hover, a:active {
+	color: #003399;
+	text-decoration: underline;
+}
+/* 客户端及服务器端界面样式定义 */
+.ptadmin {
+	background-color: #E6F4FF;
+	margin: 0px;
+	padding: 0px;
+}
+.ptuser {
+	background-color: #E6F4FF;
+	margin: 0px;
+	padding: 0px;
+}
+.pt-headerbg {
+	background-image: url(images/PT_headbg.gif);
+	background-repeat: repeat-x;
+}
+.pt-libname {
+	background-image: url(images/PT_LibName.gif);
+	background-repeat: no-repeat;
+	background-position: right top;
+}
+.pt-libname h2 {
+	color: #C6E9FB;
+	font-family: "黑体";
+	font-size: 20px;
+	text-align: center;
+	padding: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 6px;
+	margin-left: 25px;
+	font-weight: normal;
+}
+.pt-leftborder {
+	background-image: url(images/PT_leftBorder.gif);
+	background-repeat: repeat-y;
+	background-position: left top;
+}
+.pt-rightborder {
+	background-image: url(images/PT_rightBorder.gif);
+	background-repeat: repeat-y;
+	background-position: right top;
+}
+.pt-fullbg {
+	background-color: #456aa2;
+}
+.pt-chatheader {
+	background-image: url(images/bg_ChatHead.gif);
+	background-repeat: repeat-x;
+}
+.pt-chatheader strong {
+	color: #990000;
+}
+.pt-chatbox {
+	background-color: #FFFFFF;
+	margin: 0px;
+	padding: 0px;
+	height: auto;
+	width: 100%;
+}
+.ptbox1 {
+	margin: 0px;
+	padding: 0px;
+	height: 213px;
+	width: 100%;
+	background-color: #FFFFFF;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+}
+.ptbox2 {
+	margin: 0px;
+	padding: 0px;
+	height: 100px;
+	width: 100%;
+	background-color: #FFFFFF;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+}
+.pt-chatbox2 {
+	background-color: #FFFFFF;
+	margin: 0px;
+	padding: 0px;
+	height: auto;
+	width: 100%;
+}
+.pt-chatbox2 textarea {
+	background-color: #FFFFFF;
+	width: 100%;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	margin: 0px;
+	padding: 0px;
+	height: auto;
+	overflow: auto;
+}
+.pt-rtbg {
+	background-image: url(images/bg_AppraiseHead.gif);
+	background-repeat: repeat-x;
+}
+.pt-iconbox {
+	background-image: url(images/IconBG.gif);
+	background-repeat: repeat-x;
+	background-position: left top;
+}
+.pt-appraise {
+	background-color: #f7ebc8;
+	height: 24px;
+}
+.pt-appraise img {
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	padding-top: 3px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+}
+.pt-appchoice {
+	background-color: #FFFFFF;
+	margin: 0px;
+	padding: 6px;
+}
+.pt-appchoice p {
+	margin: 0px;
+	padding-top: 6px;
+	padding-right: 0px;
+	padding-bottom: 4px;
+	padding-left: 5px;
+}
+.pt-appchoice label {
+	padding: 0px;
+	margin-top: 3px;
+	margin-right: 0px;
+	margin-bottom: 3px;
+	margin-left: 0px;
+	display: block;
+}
+.pt-appsend {
+	background-image: url(images/bg_AppraiseButton.gif);
+	background-repeat: repeat-x;
+	text-align: center;
+	background-color: #c8c8c8;
+}
+.pt-appsend input {
+	color: #000066;
+	background-image: url(images/ButtonBG_Poll.gif);
+	background-repeat: repeat-x;
+	background-position: left top;
+	margin: 0px;
+	height: 19px;
+	width: 40px;
+	border: 1px solid #006699;
+	padding-top: 2px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	background-color: #CCFFFF;
+}
+.pt-bombg {
+	background-image: url(images/PT_BottomBg.gif);
+	background-repeat: repeat-x;
+}
+.pt-bottom {
+	background-image: url(images/PT_BottomBg.gif);
+	background-repeat: repeat-x;
+}
+.pt-bottom p {
+	color: #b9cae4;
+	float: left;
+	margin: 0px;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 6px;
+}
+.pt-bottom label {
+	float: right;
+	margin: 0px;
+	padding: 0px;
+}
+.sendon {
+	color: #FFFFFF;
+	height: 26px;
+	width: 59px;
+	background-image: url(images/ButtonBG_Send1.gif);
+	background-repeat: no-repeat;
+	margin: 0px;
+	padding: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	background-color: #4B75AB;
+}
+.sendover {
+	color: #FFFFFF;
+	height: 26px;
+	width: 59px;
+	background-image: url(images/ButtonBG_Send2.gif);
+	background-repeat: no-repeat;
+	margin: 0px;
+	padding: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	background-color: #4B75AB;
+}
+.pt-controlbg {
+	background-color: #FFFFFF;
+}
+.pt-control {
+	background-color: #FFFFFF;
+	margin: 0px;
+	padding: 0px;
+	width: 183px;
+	overflow: auto;
+	height: 53%;
+	text-align: center;
+}
+.pt-control h3 {
+	color: #003366;
+	font-weight: normal;
+	font-size: 12px;
+	background-image: url(images/bg_Listitle.gif);
+	text-align: center;
+	background-repeat: no-repeat;
+	height: 18px;
+	width: 155px;
+	display: block;
+	cursor: hand;
+	margin-top: 4px;
+	margin-right: auto;
+	margin-bottom: 4px;
+	margin-left: auto;
+	padding-top: 4px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+}
+.pt-control p {
+	color: #003399;
+	text-align: left;
+	text-indent: 1.6em;
+	display: block;
+	height: auto;
+	width: 155px;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	padding-top: 5px;
+	padding-right: 0px;
+	padding-bottom: 5px;
+	padding-left: 0px;
+}
+.online {
+	background-image: url(images/icon_online.gif);
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+.leave {
+	background-image: url(images/icon_leave.gif);
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+.chatobject {
+	background-image: url(images/icon_now.gif);
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+

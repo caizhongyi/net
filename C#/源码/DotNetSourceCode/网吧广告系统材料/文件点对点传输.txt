@@ -1,0 +1,61 @@
+这里是传输文件的一方：   
+    
+  Cursor   =   Cursors.WaitCursor;   
+      
+  FileStream   fileStream   =   new   FileStream(FileName,FileMode.Open,FileAccess.Read);     
+  int   fbytes=1024;   //文件的大小   
+  BinaryReader   bReader   =   new   BinaryReader(fileStream);   
+  NetworkStream   StreamTCP=   new   NetworkStream(newSock,false);   
+  Byte[]   ReadBuffer   =   new   Byte[512];   
+  progressBar1.Visible=true;   
+  progressBar1.Maximum=fbytes/512;   
+  progressBar1.Step=1;   
+  int   dataTotal=0;   
+                                      int   iBytes;   
+  while(dataTotal!=fbytes)   
+  {   
+  iBytes   =   bReader.Read(ReadBuffer,0,ReadBuffer.Length);   
+  StreamTCP.Write(ReadBuffer,0,iBytes);   
+  StreamTCP.Flush();   
+  progressBar1.Value+=1;   
+  dataTotal+=iBytes;   
+  rtxMessages.AppendText(dataTotal.ToString()+":");   
+  }   
+  rtxMessages.AppendText("传输完毕");   
+  //   now   close   the   binary   reader   since   it   is   no   longer   needed   
+  bReader.Close();   
+  StreamTCP.Close();   
+  fileStream.Close();   
+  Cursor   =   Cursors.Default;   
+  progressBar1.Value=progressBar1.Maximum;   
+    
+    
+    
+    
+  这里是接受文件的一方：   
+  Cursor   =   Cursors.WaitCursor;     
+  int   fbytes=1024;   //文件的大小   
+  Byte[]   WriteBuffer   =   new   Byte[512];   
+  //   Creates   a   File   stream   to   store   the   response   data.   
+  FileStream   fileStream   =   new   FileStream(FileName,FileMode.Create);   
+  NetworkStream   StreamTCP=   new   NetworkStream(newSock,false);   
+  BinaryWriter   bWriter   =   new   BinaryWriter(fileStream);   
+  lbTransFile.Visible=true;   
+  progressBar1.Visible=true;   
+  progressBar1.Maximum=fbytes/512;   
+  progressBar1.Step=1;   
+  int   iBytes;   
+  int   tbytes=0;   
+  while(tbytes!=fbytes)   
+  {   
+  iBytes   =   StreamTCP.Read(WriteBuffer,0,WriteBuffer.Length);   
+  bWriter.Write(WriteBuffer,0,iBytes);   
+  tbytes+=iBytes;   
+  if(tbytes>fbytes)   
+  progressBar1.Value+=1;   
+  }   
+  Cursor   =   Cursors.Default;     
+  bWriter.Close();   
+  fileStream.Close();   
+  StreamTCP.Close();   
+  progressBar1.Value=progressBar1.Maximum;   

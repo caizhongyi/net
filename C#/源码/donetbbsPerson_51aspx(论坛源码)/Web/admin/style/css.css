@@ -1,0 +1,54 @@
+@charset "utf-8";
+BODY {
+	MARGIN: 0px; SCROLLBAR-FACE-COLOR: #799ae1; font-size:12px; BACKGROUND: #cad7f7; SCROLLBAR-HIGHLIGHT-COLOR: #799ae1; SCROLLBAR-SHADOW-COLOR: #799ae1; SCROLLBAR-3DLIGHT-COLOR: #799ae1; SCROLLBAR-ARROW-COLOR: #ffffff; SCROLLBAR-TRACK-COLOR: #aabfec; SCROLLBAR-DARKSHADOW-COLOR: #799ae1
+}
+TD {
+	FONT-SIZE: 12px
+}
+A {
+	COLOR: #000000; TEXT-DECORATION: none; 
+}
+A:hover {
+	COLOR: #336699; TEXT-DECORATION: underline
+}
+A.highlight {
+	COLOR: red; TEXT-DECORATION: none
+}
+A.highlight:hover {
+	COLOR: red
+}
+A.thisclass {
+	FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+A.thisclass:hover {
+	FONT-WEIGHT: bold
+}
+A.navlink {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+.Topbg{ border-bottom:#135093 1px solid; background-image:url(../images/top_bg.gif);}
+.Left{BORDER: #135093 1px solid;  background-color:#799ae1}
+.Content{ background-color:#eaecef; padding-left:4px;}
+.Leftmenu{ background-image:url(../images/title_bg_quit.gif); }
+.White{ background-color:#FFFFFF; margin-bottom:4px;}
+.Contents{ background-color:#f9f9f9; padding-left:4px; padding-right:4px;}
+.MinWindowTop{ background-image:url(../images/minbgtop.gif); height:30px; padding-top:6px; padding-left:4px;}
+.MinWindowBody{  background-image:url(../images/TableBg.gif);}
+.MinWindowBottom{background-image:url(../images/minbgbottom.gif);height:30px; padding-left:4px; text-align:center;}
+.Buttom{ background-image:url(../images/button.gif); width:71px; text-align:center; height:22px; padding-top:4px;}
+.list_img{float:left;text-align : center; padding-left:2px; padding-right:2px;}
+.mainbar1{border-left : 1px solid #1566C4; border-right : 1px solid #1566C4; width : 100%; min-width :760px; margin : 0 auto;border-top : 1px solid #1566C4;border-bottom : 1px solid #1566C4; line-height:25px;background-color : #DEEFFD;height:25px;}
+.main{width : 100%; min-width :760px; margin : 0 auto;background-color : #DEEFFD;height:25px;}
+.list{border-left : 1px solid #1566C4; border-right : 1px solid #1566C4;border-bottom : 1px solid #1566C4;width : 100%;min-width :760px;margin : 0 auto;background-color : #fff;height:26px;line-height:26px;text-align : left;overflow :hidden;}
+.mainbar2{border-left : 1px solid #1566C4;border-right : 1px solid #1566C4;width : 100%;min-width :760px; margin : 0 auto;border-bottom : 1px solid #1566C4; line-height:22px;background-color : #DEEFFD;}
+.list1{float:left;width:32px;border-right : 1px solid #1566C4; height:25px; }
+input {
+	BORDER-RIGHT: #1566C4 1px solid; BORDER-TOP: #1566C4 1px solid; BACKGROUND: #f9f9f9; BORDER-LEFT: #1566C4 1px solid; BORDER-BOTTOM: #1566C4 1px solid; HEIGHT: 14pt
+}
+form{margin:0px;}
+.list div{height:26px;}
+.Dos_menuskin {position:absolute; visibility:hidden;background-image : url("default/dvmenubg3.gif");border : 1px solid #666666; } 
+
+.minitable{ cursor:hand; margin-top:2; margin-left:-1px; height:25px; padding-top:7px; float:left;text-align : center;width:140px;border-left : 1px solid #9b9b9b;border-top : 1px solid #9b9b9b;border-right : 1px solid #9b9b9b;background-color : #f1f1f1; }
+.minitableno{cursor:hand;margin-top:6; margin-left:-1px; height:21px; padding-top:4px;float:left;text-align : center;width:140px; border-left : 1px solid #9b9b9b;border-top : 1px solid #9b9b9b;border-right : 1px solid #9b9b9b;background-color : #f6f6f6; }
+/*·ç¸ñ½áÊø*/

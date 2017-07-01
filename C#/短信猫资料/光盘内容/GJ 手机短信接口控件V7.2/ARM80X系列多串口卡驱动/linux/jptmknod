@@ -1,0 +1,17 @@
+#!/bin/sh
+
+COUNT=256
+MASTER_MAJOR=184
+TTYNAME=ttyn
+
+rm -f /dev/$TTYNAME*
+
+
+nr=0
+master=$MASTER_MAJOR
+while [ $nr -lt $COUNT ] 
+do
+	mknod /dev/$TTYNAME$nr c $master $nr
+	chmod a+wx /dev/$TTYNAME$nr
+	nr=`expr $nr + 1`
+done

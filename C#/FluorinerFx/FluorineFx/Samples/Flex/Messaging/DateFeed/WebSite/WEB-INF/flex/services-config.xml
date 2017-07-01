@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<services-config>
+    <services>
+        <service id="remoting-service" class="flex.messaging.services.RemotingService" messageTypes="flex.messaging.messages.RemotingMessage">
+            <destination id="fluorine">
+                <channels>
+                    <channel ref="my-amf"/>
+                </channels>
+                <properties>
+                    <source>ServiceLibrary.DateFeedService</source>
+                     <scope>application</scope>
+                </properties>
+            </destination>
+        </service>
+        <service id="message-service" class="flex.messaging.services.MessageService" messageTypes="flex.messaging.messages.AsyncMessage">
+			    <adapters>
+				    <adapter-definition id="messagingAdapter" class="FluorineFx.Messaging.Services.Messaging.MessagingAdapter" default="true"/>
+			    </adapters>
+          <destination id="datefeed">
+				    <adapter ref="messagingAdapter"/>
+            <channels>
+                <channel ref="my-rtmp"/>
+            </channels>
+            <properties>
+                <source>*</source>
+					      <network>
+						      <!-- The session-timeout element specifies the idle time in minutes before a subscriber is unsubscribed. When you set the value to 0 (zero), subscribers are not forced to unsubscribe automatically. The default value is 20. -->
+						      <session-timeout>20</session-timeout>
+					      </network>
+            </properties>
+          </destination>
+        </service>
+    </services>
+
+    <channels>
+        <channel-definition id="my-amf" class="mx.messaging.channels.AMFChannel">
+            <endpoint uri="http://{server.name}:{server.port}/{context.root}/Gateway.aspx" class="flex.messaging.endpoints.AMFEndpoint"/>
+        </channel-definition>
+        <channel-definition id="my-rtmp" class="mx.messaging.channels.RTMPChannel">
+            <endpoint uri="rtmp://{server.name}:1938" class="flex.messaging.endpoints.RTMPEndpoint"/>
+            <!--
+			      <properties>
+                <idle-timeout-minutes>20</idle-timeout-minutes>
+            </properties>
+            -->
+        </channel-definition>        
+    </channels>
+</services-config>

@@ -1,0 +1,2 @@
+F:\源码\FtpClient_cs\FtpClient_cs\FtpClient_cs\obj\Debug\FtpClient_cs.exe
+F:\源码\FtpClient_cs\FtpClient_cs\FtpClient_cs\obj\Debug\FtpClient_cs.pdb

@@ -1,0 +1,22 @@
+
+ body{
+	font-size:12px;
+   margin:0px;
+	padding:0px;
+	text-align:center;
+	background:#FFFFFF url(bg.jpg) repeat-x;
+	color:#333;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+ p{margin:3px;}
+ img {max-width: 100%;height: auto;}
+ select{
+ font-family: Verdana, Arial;
+ background: #fff;
+ color: #333;
+ }
+ th{background:#D5CBBE;border-bottom:1px solid #795B50}
+ textarea{
+ 	background: #fff;
+	color: #333;
+ }

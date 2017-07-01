@@ -1,0 +1,73 @@
+﻿#parse("_head.html")
+<div id="snsmenu">
+#parse("_menu.html")
+</div>
+<div id="snsbody">
+    <div id="snshead">$cpagetitle</div>
+    <div >
+    <div class="itemmenu">
+        <ul>
+            <li#if($css_null)$css_null#end><a href="$webpath/app/blog/default$exname">他们正在发博...</a></li>
+            #if($uid>0)
+            <li#if($css_my)$css_my#end><a href="$webpath/app/blog/default$exname?q=my">我的日志</a></li>
+            <li#if($css_draft)$css_draft#end><a href="$webpath/app/blog/default$exname?q=draft">我的草稿</a></li>
+            <li#if($css_friend)$css_friend#end><a href="$webpath/app/blog/default$exname?q=friend">朋友的日志</a></li> 
+            <li><a href="$webpath/app/blog/visit$exname">我去看过的</a></li> 
+            #end
+            <li class="new"><a href="new$exname" class="newitem">发表新日志</a></li> 
+            <li class="search">搜索：<input id="kwd" name="kwd" value="#if($kwd)$kwd#else搜索日志#end" type="text" class="f-text w100" onclick="this.value=''" /> <input id="Button1" type="button" value="搜索" class="btn_gray2" onclick="search('blog','$q')" /></li>
+        </ul>
+        
+    </div>
+    </div>
+    <div id="snsbody-sec">
+        #if($recordcount>0)
+            <div class="blog">
+                <ul>
+                #foreach($blog in $bloglist)
+                <li id="param_$blog.id">
+                    <div class="aa images">
+                    <a href="$blog.spaceurl"><img src="$blog.headpic"><br /> $blog.truename</a><br />
+                    <div><a href="javascript:;" class="a-att" onclick="postatt($blog.id,$uid,'blog')" title="我也关注一下"><span id="att_$blog.id">$blog.att</span></a></div>
+                    </div>
+                    <div class="bb">
+                        <div class="hdtitle">
+                            <div class="blogtitle"><a href="$blog.url">$blog.title</a></div><div class="blogshare"><a href="javascript:;" onclick="sharetofriend('blog',$blog.id,$uid,'日志：$blog.titleno')" class="a-share">分享</a></div>
+                            <div class="clearpix normal"><a href="$webpath/app/blog/default$exname?q=$blog.userid" title="查看$blog.truename的全部日志">$blog.truename</a> <span class="time">$blog.time</span></div>
+                        </div>
+                        <div class="hdcontent">$blog.content</div>
+                        <div class="clearpix nextreshow">分类：<a href="$webpath/app/blog/default$exname?classid=$blog.sysclassid" title="查看此分类所有日志">$blog.sysclass</a> | $blog.click次阅读 | $blog.comment个评论 | $blog.share次被分享 #if($blog.edit) | <a href="new$exname?bid=$blog.id">编辑</a> | #end$blog.showop$blog.showrec</div></div>
+                </li>
+                #end
+              </ul>
+              </div>
+              <div class="pages">$pagelist</div>
+        #else
+            <div>还没有日志</div>
+        #end        
+    </div>
+    <div id="snsbody-right">
+        <div class="hdtitle1">按分类查看</div>
+        <div class="hdcontent1">
+            <ul>$classlist</ul>
+        </div>
+        <div class="hdtitle1">我的分类</div>
+        <div class="hdcontent1">
+            <ul>$myclasslist</ul>
+        </div>
+        <div class="hdtitle1">排行榜</div>
+        <div class="hdcontent1">
+            <ul>
+                <li#if($css_rec) $css_rec #end><a href="$webpath/app/blog/default$exname?orderby=rec">推荐排行</a></li>
+                <li#if($css_click) $css_click #end><a href="$webpath/app/blog/default$exname?orderby=click">点击排行</a></li>
+                <li#if($css_comments) $css_comments #end><a href="$webpath/app/blog/default$exname?orderby=comments">评论排行</a></li>
+                <li#if($css_att) $css_att #end><a href="$webpath/app/blog/default$exname?orderby=att">关注排行</a></li>
+                <li#if($css_share) $css_share #end><a href="$webpath/app/blog/default$exname?orderby=share">分享排行</a></li>
+                <li#if($css_last) $css_last #end><a href="$webpath/app/blog/default$exname?orderby=last">最新更新</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    </div>
+
+#parse("_foot.html")

@@ -1,0 +1,201 @@
+# PCI Multiport Card Install Program
+
+CARDBASE=21
+DRIVER=/tmp/jpser
+TERMTYPE=vt100
+CONFIGURE=/etc/conf/cf.d/configure
+# relink
+relink() {
+	#link kernel and shutdown
+	/etc/conf/cf.d/link_unix
+}
+
+# mkjptt
+mkjptt() {
+	for i in 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
+	do
+		card=`expr $CARDBASE + $i`
+		for j in a b c d e f g h
+		do
+			echo "Z$card$j:23:off:/etc/getty tty$card$j m" >> $DRIVER/jptt
+		done
+	done
+	
+	for i in 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
+	do
+		card=`expr $CARDBASE + $i`
+		for j in A B C D E F G H
+		do
+			echo "Z$card$j:23:off:/etc/getty tty$card$j 6" >> $DRIVER/jptt
+		done
+	done
+
+	cp $DRIVER/jptt /etc/conf/init.d/jptt
+	rm -f $DRIVER/jptt
+}
+
+deljptt() {
+	rm -f /etc/conf/init.d/jptt
+}
+
+# mkttytype
+mkttytype() {
+	for i in 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
+	do
+		card=`expr $CARDBASE + $i`
+		for j in a b c d e f g h
+		do
+			echo "$TERMTYPE tty$card$j #JPTT" >> $DRIVER/types
+		done
+	done
+	
+	for i in 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
+	do
+		card=`expr $CARDBASE + $i`
+		for j in A B C D E F G H
+		do
+			echo "$TERMTYPE tty$card$j #JPTT" >> $DRIVER/types
+		done
+	done
+	
+	cp /etc/ttytype /etc/ttytype.bak
+
+	cat /etc/ttytype $DRIVER/types > $DRIVER/ttytmp
+	cp $DRIVER/ttytmp /etc/ttytype
+	rm -f $DRIVER/ttytmp
+	rm -f $DRIVER/types
+}
+
+delttytype() {
+	cp /etc/ttytype /etc/ttytype.bak
+
+	grep -v '#JPTT' /etc/ttytype > /etc/ttytype.tmp
+	cp /etc/ttytype.tmp /etc/ttytype
+	rm -f /etc/ttytype.tmp
+}
+
+# mktty
+
+mktty() {
+	deltty
+	jpttmajor=`$CONFIGURE -j jptt`
+
+	minor=0
+	for i in 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
+	do
+		card=`expr $CARDBASE + $i`
+		for j in a b c d e f g h
+		do
+			mknod /dev/tty$card$j c $jpttmajor $minor
+			minor=`expr $minor + 1`
+		done
+	done
+	
+	minor=128
+	for i in 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
+	do
+		card=`expr $CARDBASE + $i`
+		for j in A B C D E F G H 
+		do
+			mknod /dev/tty$card$j c $jpttmajor $minor
+			minor=`expr $minor + 1`
+		done
+	done
+}
+
+
+deltty() {
+	for i in 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
+	do
+		card=`expr $CARDBASE + $i`
+		rm -f /dev/tty$card?
+	done
+}
+
+# doconf
+doaddconf() {
+	jpttmajor=`$CONFIGURE -j NEXTMAJOR` 
+	$CONFIGURE -a jpttinit jpttopen jpttclose jpttread jpttwrite jpttioctl jpttpoll -m $jpttmajor -c -M 0 32 -U 16 -i
+}
+
+dodelconf() {
+	jpttmajor=`$CONFIGURE -j jptt` 
+	$CONFIGURE -d -m $jpttmajor -c 2>&1 >/dev/null
+}
+
+# Define return values
+: ${OK=0} ${FAIL=1}
+
+# Prompt with mesg, return non-zero on q
+prompt() {
+	while	echo "${mesg}or enter q to quit: \c" >&2
+	do	read cmd
+		case $cmd in
+		+x|-x)	set $cmd;;
+		[qQ])	return 1;;
+		*)	return 0;;
+		esac
+	done
+}
+
+mesg="
+PCI Multiport Card Driver Installtion for SCO UNIX 5.0.x
+============================================================    
+    1. Install PCI Multiport Card Driver
+    2. Remove PCI Multiport Card Driver
+============================================================
+Select an option "
+
+while :
+do
+  clear
+  prompt || {
+	exit $FAIL
+	}
+  if [ "$cmd" = 1 ]
+  then  
+	# This is UNIX part
+	doaddconf
+
+	mkjptt
+
+	# Check SCO UNIX Version #
+	rm -rf /etc/conf/pack.d/jptt
+	mkdir /etc/conf/pack.d/jptt
+
+	cp jptt.o /etc/conf/pack.d/jptt/Driver.o     
+	
+	mktty
+
+	mkttytype
+
+	relink
+	break
+  elif [ "$cmd" = 2 ]
+  then
+	# this is the uninstallation file 
+	echo
+	echo 'Remove PCI multiport card driver!'
+	echo
+	echo 'We will relink system kernel and restart the system'
+	echo
+     
+	# This is UNIX part
+	dodelconf
+
+	deljptt
+
+	deltty	
+		
+	delttytype
+	rm -rf /etc/conf/pack.d/jptt
+
+	relink
+	break
+  fi  
+#  shutdown -y -g0
+done
+exit $OK
+
+#
+# The End

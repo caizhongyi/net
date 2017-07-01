@@ -1,0 +1,10 @@
+﻿<UserControl x:Class="czy.Silverlight.Controls.ImageRotation3DControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+   >
+    <Grid x:Name="LayoutRoot" >
+    <Canvas x:Name="content">
+    <Canvas x:Name="ImageContent"></Canvas>
+    </Canvas>
+    </Grid>
+</UserControl>

@@ -1,0 +1,257 @@
+﻿#parse("_head.html")
+<script type="text/javascript" src="$webpath/library/js/date/WdatePicker.js"></script>
+<script type="text/javascript" src="$webpath/library/xmleditor/xheditor-zh-cn.min.js"></script>
+<script type="text/javascript" src="$webpath/library/js/area.js"></script>
+<link href="$templatepath/css/app/shop.css" rel="stylesheet" type="text/css" />
+<div id="snsmenu">
+#parse("_menu.html")
+</div>
+<div id="snsbody">
+    <div id="snshead"><span class="l">$cpagetitle</span><span class="r"><input id="kwd" name="kwd" value="#if($kwd)$kwd#else搜索#end" type="text" class="f-text w100" onclick="this.value=''" /> <input id="Button1" type="button" value="搜索" class="btn_gray2" onclick="search('shop','$q')" /></span></div>
+
+    <div class="itemmenu">
+        <ul>
+            <li><a href="$webpath/app/shop/default$exname">所有$shop</a></li>
+            <li><a href="$webpath/app/shop/default$exname?q=city">同城$shop</a></li>
+            <li><a href="$webpath/app/shop/default$exname?q=rec">推荐$shop</a></li>
+           <li><a href="$webpath/app/shop/default$exname?q=friend">好友的$shop</a></li>
+            <li><a href="$webpath/app/shop/default$exname?q=my">我的$shop</a></li>
+            <li class="lipoke"></li>
+             <li><a href="$webpath/app/shop/list$exname">所有店铺</a></li>
+            <li><a href="$webpath/app/shop/list$exname?q=rec">推荐商铺</a></li>
+            <li><a href="$webpath/app/shop/list$exname?q=city">同城店铺</a></li>
+            <li><a href="$webpath/app/shop/list$exname?q=friend">好友的店铺</a></li>
+            <li><a href="$webpath/app/shop/list$exname?q=my">我的店铺</a></li>
+            <li class="lipoke"></li>
+            <li><a href="$webpath/app/shop/multebuy$exname">超级团购</a></li>
+        </ul>
+    </div>
+    #if($uid>0)
+    <div class="itemmenu1">
+        <ul>
+            <li class="new"><a href="$webpath/app/shop/new$exname" class="newitem">发起$shop</a></li> 
+            <li class="new"><a href="$webpath/app/shop/new_m$exname" class="newitem">发起团购</a></li> 
+            <li class="current"><a href="$webpath/app/shop/new_shop$exname">店铺入驻</a></li> 
+        </ul>
+    </div>
+    #end
+
+    <div id="ativemiddleall">
+            
+ <form id="form1" method="post" action="" enctype="multipart/form-data">
+            <div class="pitem reshow">
+                #if($ischeck)您重新修改后，需要审核后才能生效，请谨慎使用！<br />#end
+                温馨提醒：您现在登录的ID是：$myusername。一旦提交申请，在审核通过后，系统将授予该ID店铺管理的权限！<br />如果您想用其他ID来管理将来的店铺，请重新注册或更换ID登录，再行提交以下申请。
+            </div>
+            <div class="pitem">
+                <em>公司全称<span class="reshow">*</span></em> 
+                <input id="CompanyName" name="CompanyName" class="f-text" value="#if($CompanyName)$CompanyName#end" type="text" style="width:60%;" />
+            </div>            
+            <div class="pitem">
+                <em>网上店铺名称<span class="reshow">*</span></em> 
+                <input id="ShopName" name="ShopName" class="f-text" value="#if($ShopName)$ShopName#end" type="text" style="width:60%;" />
+            </div>
+            <div class="pitem">
+                <em>入驻分类<span class="reshow">*</span></em>
+                <select id="sltclassid" name="sltclassid">
+                    <option value="0">选择分类</option>
+                    $classlist
+                </select>
+            </div>
+            <div class="pitem">
+                <em>法人代表<span class="reshow">*</span></em>
+                <input id="Faren" name="Faren"value="#if($Faren)$Faren#end" class="f-text" type="text" style="width:15%;"/> 
+                 手机
+                <input id="FarenMobile" name="FarenMobile" class="f-text" value="#if($FarenMobile)$FarenMobile#end"  type="text" style="width:15%;" />
+            </div>
+            <div class="pitem">
+                <em>联系人<span class="reshow">*</span></em>
+                <input id="linkMan" name="linkMan"value="#if($LinkMan)$LinkMan#end" class="f-text" type="text" style="width:15%;"/>
+                 手机
+                <input id="Mobile" name="Mobile" class="f-text" value="#if($Mobile)$Mobile#end"  type="text" style="width:15%;" />
+                电话
+                <input id="Tel" name="Tel" class="f-text" value="#if($Tel)$Tel#end"  type="text" style="width:15%;" />
+                传真
+                <input id="Fax" name="Fax" class="f-text" value="#if($Fax)$Fax#end"  type="text" style="width:15%;" /> 
+            </div>
+            <div class="pitem">
+                <em>办公地址<span class="reshow">*</span></em>
+                  <select id="sltareaid" name="sltareaid" onchange="ChangeProv(this);">
+                    <option value="0">选择省份</option>
+                    <script type="text/javascript">
+                            var returnvalue = "";
+                            for (i=0; i<Area.length; i++) 
+                            {
+                                if(Area[i][0] == "0")
+                                {
+                                    if(Area[i][1]==$areaid)
+                                    {
+                                        returnvalue += "<option value='" + Area[i][1] + "' selected>" + Area[i][2] + "</option>";
+                                    }
+                                    else
+                                    {
+                                        returnvalue += "<option value='" + Area[i][1] + "'>" + Area[i][2] + "</option>";
+                                    }
+                                }
+                            }
+                            document.write(returnvalue);
+                    </script>  
+                </select>
+                  <select id="sltareaid1" name="sltareaid1">
+                  <option value="0">选择城市</option>
+                </select>
+                街道<input id="AddRess" name="AddRess" class="f-text" value="#if($AddRess)$AddRess#end" type="text" style="width:32%;" />
+                邮编<input id="PostCode" name="PostCode" class="f-text" value="#if($PostCode)$PostCode#end" type="text" style="width:8%;" />  
+                
+            </div>
+            <div class="pitem">
+                <em>店铺实体名称</em> 
+                <input id="ShopRName" name="ShopRName" class="f-text" value="#if($ShopRName)$ShopRName#end" type="text" style="width:60%;" />
+            </div>
+            <div class="pitem">
+                <em>店铺实体地址</em> 
+                <input id="ShopAddress" name="ShopAddress" class="f-text" value="#if($ShopAddress)$ShopAddress#end" type="text" style="width:60%;" />
+            </div>
+            <div class="pitem">
+                <em>申请理由<span class="reshow">*</span></em> 
+                <input id="JoinCase" name="JoinCase" class="f-text" value="#if($JoinCase)$JoinCase#end" type="text" maxlength="100" style="width:60%;" />
+            </div>
+
+            <div class="pitem">
+                <em>店铺介绍<span class="reshow">*</span></em>
+                <textarea runat="server" name="txtcontent"  class="xheditor-simple {upBtnText:'上传',upMultiple:5,upLinkUrl:'$editfile',upImgUrl:'$edit_pic',skin:'$editskin'}" id="txtcontent" style="width:80%;height:300px">#if($content)$content#end</textarea>
+                
+            </div>
+        
+            <div class="pitem">
+                <em>宣传海报</em>
+                <!--<a href="javascript:;" title="宣传海报" onclick="Uploadphoto();"><img src="$templatepath/images/z.gif" /></a>-->
+                <span id="showphoto">
+                    <input id="hidephoto" name="hidephoto" value="$photo" type="hidden" />
+                    &nbsp; <input id="twitterphoto" name="twitterphoto" type="file" class="f-file" />
+                </span>
+            </div>
+            <div class="pitem">
+                <em>关键字</em>
+                <input id="keywords1" name="keywords1" value="#if($keywords1)$keywords1#end" class="f-text" type="text" maxlength="9" style="width:12%;" />，<input id="keywords2" name="keywords2" value="#if($keywords2)$keywords2#end" maxlength="9" class="f-text" type="text" style="width:12%;" />，<input id="keywords3" name="keywords3" maxlength="9" value="#if($keywords3)$keywords3#end" class="f-text" type="text" style="width:12%;" /> <span class="reshow">以方便搜索</span>
+            </div>            
+            <div class="pitem">
+                <em>服务人员</em>
+                <select id="HasSerive" name="HasSerive">
+                <option value="0" #if($HasSerive==0)selected#end>无服务人员</option>
+                <option value="1" #if($HasSerive==1)selected#end>有全职人员</option>
+                <option value="2" #if($HasSerive==2)selected#end>员工兼职顾着打理先，等有需要时再加人手</option>
+                </select>
+            </div>
+            <div class="pitem1">
+                <em>&nbsp;</em>
+                #if(!$errors)
+                <input id="Button2" type="submit" value="$cpagetitle" class="btn_blue6" onclick="return checkdata();" />
+                #end
+                <input id="Submit1" type="reset" value="重新填写" class="btn_gray4" />
+            </div>
+        </form>
+    
+    </div>
+    
+</div>
+
+#parse("_foot.html")
+<script type="text/javascript">
+    function checkdata()
+    {
+        var CompanyName=jQuery("#CompanyName").val();
+        var ShopName=jQuery("#ShopName").val();
+        var Faren=jQuery("#Faren").val();
+        var linkMan=jQuery("#linkMan").val();
+        var Mobile=jQuery("#Mobile").val();
+        var Tel=jQuery("#Tel").val();
+        var AddRess=jQuery("#AddRess").val();
+        var JoinCase=jQuery("#JoinCase").val();
+        var sltclassid=jQuery("#sltclassid").val();
+        
+        var sltareaid=jQuery("#sltareaid").val();
+        var err="";
+        if(CompanyName=="")
+        {
+            err+="公司名称<br />";
+        }        
+        if(ShopName=="")
+        {
+            err+="店铺网上名称<br />";
+        }        
+        if(sltclassid=="0")
+        {
+            err+="入驻分类<br />";
+        }        
+
+        if(Faren=="")
+        {
+            err+="法人<br />";
+        }        
+        if(linkMan=="")
+        {
+            err+="联系人<br />";
+        }        
+        if(Mobile==""&&Tel=="")
+        {
+            err+="手机或联系电话<br />";
+        }        
+        if(AddRess=="")
+        {
+            err+="店铺地址<br />";
+        }        
+        if(JoinCase=="")
+        {
+            err+="加入原因<br />";
+        }        
+        if(sltareaid=="0")
+        {
+            err+="所在地区<br />";
+        }        
+         var oEditor =FCKeditorAPI.GetInstance("txtcontent"); 
+         var Content=oEditor.GetXHTML(); 
+         if(Content=="") 
+         { 
+            err+="店铺介绍<br />";
+         } 
+        if(err!="")
+        {
+            showErrorResult("以下必须填写：<br />"+err)
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
+    function Uploadphoto()
+    {
+        jQuery("#showphoto").show();
+    }
+
+    function ChangeProv(obj) 
+    {
+        var objcity = document.getElementById('sltareaid1');
+        objcity.style.display = '';
+        objcity.options.length = 0;
+        var m=0;  
+        var sitem=$sitem;
+        for (i=0; i<Area.length; i++) 
+        {
+            if(Area[i][0] == obj.value&&Area[i][0] !="0")
+            {
+                var opt = document.createElement('option');
+                opt.value = Area[i][1];
+                opt.innerHTML = Area[i][2];
+                objcity.appendChild(opt);
+               if(Area[i][1]==sitem)
+                {
+                    document.getElementById("sltareaid1").options[m].selected=true;
+                }
+                m++;
+            }
+        }        
+    }
+    ChangeProv(document.getElementById("sltareaid"));
+</script>

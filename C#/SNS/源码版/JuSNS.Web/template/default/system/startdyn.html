@@ -1,0 +1,50 @@
+﻿#parse("_head.html")
+<div id="snsmenu">
+#parse("_menusystem.html")
+</div>
+<div id="snsbody">
+    <div id="snshead">初始化数据库</div>
+
+    <div class="itemmenu">
+        <ul>
+          <li><a href="sys$exname">系统设置</a></li>
+            <li><a href="area$exname">地区</a></li> 
+            <li><a href="charge$exname">充值管理</a></li> 
+            <li><a href="template$exname">模板</a></li> 
+            <li><a href="indexconfig$exname">首页配置</a></li> 
+            <li><a href="uploads$exname">上传图片配置管理</a></li> 
+            <li class="current"><a href="start$exname">初始化</a></li> 
+            <li><a href="help$exname">帮助管理</a></li> 
+
+        </ul>
+  </div>
+    <div class="itemmenu1">
+        <ul>
+          <li ><a href="start$exname">初始化数据库</a></li>
+            <li class="current"><a href="startdyn$exname">初始化动态</a></li> 
+            <li><a href="startnotice$exname">初始化通知信息</a></li> 
+        </ul>
+  </div>
+
+  <div class="system">
+        <form id="form1" action="" method="post">
+            <div class="pitem">
+                <em>&nbsp;</em><input id="Text2" name="tsc" value="初始化动态" type="submit" class="btn_blue6" onclick="return checkdata()" />
+                <span class="reshow">初始化动态,请谨慎操作，操作不可逆！</span>
+            </div>
+        </form>
+  </div>
+ 
+         
+    </div>
+#parse("_foot.html")
+<script type="text/javascript">
+    function checkdata()
+    {
+        if (!confirm("确定要数据库吗？\n此操作不可逆。"))
+        {
+            return false;
+        }
+        return true;
+    }
+</script>

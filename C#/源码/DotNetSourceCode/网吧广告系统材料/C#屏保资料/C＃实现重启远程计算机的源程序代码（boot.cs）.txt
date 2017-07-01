@@ -1,0 +1,136 @@
+   using   System   ;     
+      using   System.Drawing   ;     
+      using   System.Collections   ;     
+      using   System.ComponentModel   ;     
+      using   System.Windows.Forms   ;     
+      using   System.Data   ;     
+      using   System.Management   ;     
+      public   class   Form1   :   Form     
+      {     
+      private   TextBox   textBox1   ;     
+      private   TextBox   textBox2   ;     
+      private   TextBox   textBox3   ;     
+      private   Label   label1   ;     
+      private   Label   label2   ;     
+      private   Label   label3   ;     
+      private   Button   button1   ;     
+      private   System.ComponentModel.Container   components   =   null   ;     
+      public   Form1   (   )     
+      {     
+      //初始化窗体中的各个组件     
+      InitializeComponent   (   )   ;     
+      }     
+      //清除程序中使用过的资源     
+      protected   override   void   Dispose   (   bool   disposing   )     
+      {     
+      if   (   disposing   )     
+      {     
+      if   (   components   !=   null   )     
+      {     
+      components.Dispose   (   )   ;     
+      }     
+      }     
+      base.Dispose   (   disposing   )   ;     
+      }     
+      private   void   InitializeComponent   (   )     
+      {     
+      textBox1   =   new   TextBox   (   )   ;     
+      textBox2   =   new   TextBox   (   )   ;     
+      textBox3   =   new   TextBox   (   )   ;     
+      label1   =   new   Label   (   )   ;     
+      label2   =   new   Label   (   )   ;     
+      label3   =   new   Label   (   )   ;     
+      button1   =   new   Button   (   )   ;     
+          
+      SuspendLayout   (   )   ;     
+      textBox1.Location   =   new   System.Drawing.Point   (   140   ,   46   )   ;     
+      textBox1.Name   =   "textBox1"   ;     
+      textBox1.Size   =   new   System.Drawing.Size   (   172   ,   21   )   ;     
+      textBox1.TabIndex   =   0   ;     
+      textBox1.Text   =   ""   ;     
+          
+      textBox2.Location   =   new   System.Drawing.Point   (   138   ,   85   )   ;     
+      textBox2.Name   =   "textBox2"   ;     
+      textBox2.Size   =   new   System.Drawing.Size   (   174   ,   21   )   ;     
+      textBox2.TabIndex   =   1   ;     
+      textBox2.Text   =   ""   ;     
+          
+      textBox3.Location   =   new   System.Drawing.Point   (   139   ,   120   )   ;     
+      textBox3.Name   =   "textBox3"   ;     
+      textBox3.PasswordChar   =   ‘*‘   ;     
+      textBox3.Size   =   new   System.Drawing.Size   (   173   ,   21   )   ;     
+      textBox3.TabIndex   =   2   ;     
+      textBox3.Text   =   ""   ;     
+          
+      label1.Location   =   new   System.Drawing.Point   (   24   ,   50   )   ;     
+      label1.Name   =   "label1"   ;     
+      label1.Size   =   new   System.Drawing.Size   (   120   ,   16   )   ;     
+      label1.TabIndex   =   1   ;     
+      label1.Text   =   "机器名称或IP地址："   ;     
+          
+      label2.Location   =   new   System.Drawing.Point   (   37   ,   88   )   ;     
+      label2.Name   =   "label2"   ;     
+      label2.TabIndex   =   1   ;     
+      label2.Text   =   "管理者名称："   ;     
+      label2.TextAlign   =   System.Drawing.ContentAlignment.TopRight   ;     
+          
+      label3.Location   =   new   System.Drawing.Point   (   37   ,   125   )   ;     
+      label3.Name   =   "label3"   ;     
+      label3.Size   =   new   System.Drawing.Size   (   100   ,   16   )   ;     
+      label3.TabIndex   =   1   ;     
+      label3.Text   =   "管理者密码："   ;     
+      label3.TextAlign   =   System.Drawing.ContentAlignment.TopRight   ;     
+          
+      button1.Location   =   new   System.Drawing.Point   (   95   ,   168   )   ;     
+      button1.Name   =   "button1"   ;     
+      button1.Size   =   new   System.Drawing.Size   (   136   ,   32   )   ;     
+      button1.TabIndex   =   3   ;     
+      button1.Text   =   "重新启动远程计算机"   ;     
+      button1.Click   +=   new   System.EventHandler   (   button1_Click   )   ;     
+          
+      this.AutoScaleBaseSize   =   new   System.Drawing.Size   (   6   ,   14   )   ;     
+      this.ClientSize   =   new   System.Drawing.Size   (   336   ,   245   )   ;     
+      this.Controls.Add   (   button1   )   ;     
+      this.Controls.Add   (   textBox1   )   ;     
+      this.Controls.Add   (   textBox2   )   ;     
+      this.Controls.Add   (   textBox3   )   ;     
+      this.Controls.Add   (   label1   )   ;     
+      this.Controls.Add   (   label2   )   ;     
+      this.Controls.Add   (   label3   )   ;     
+          
+      this.Name   =   "Form1"   ;     
+      this.Text   =   "利用C＃重新启动远程计算机"   ;     
+      this.ResumeLayout(false)   ;     
+          
+      }     
+      static   void   Main   (   )     
+      {     
+      Application.Run   (   new   Form1   (   )   )   ;     
+      }     
+      private   void   button1_Click   (   object   sender   ,   System.EventArgs   e   )     
+      {     
+      //定义连接远程计算机的一些选项     
+      ConnectionOptions   options   =   new   ConnectionOptions   (   )   ;     
+      options.Username   =   textBox2.Text   ;     
+      options.Password   =   textBox3.Text   ;     
+      ManagementScope   scope   =   new   ManagementScope(   "\\\\"   +   textBox1.Text   +   "\\root\\cimv2",   options   )   ;     
+      try   {     
+      //用给定管理者用户名和口令连接远程的计算机     
+      scope.Connect   (   )   ;     
+      System.Management.ObjectQuery   oq   =   new   System.Management.ObjectQuery   (   "SELECT   *   FROM   Win32_OperatingSystem"   )   ;     
+      ManagementObjectSearcher   query1   =   new   ManagementObjectSearcher   (   scope   ,   oq   )   ;     
+      //得到WMI控制     
+      ManagementObjectCollection   queryCollection1   =   query1.Get   (   )   ;     
+      foreach   (   ManagementObject   mo   in   queryCollection1   )     
+      {     
+      string   [   ]   ss=   {   ""   }   ;     
+      //重启远程计算机     
+      mo.InvokeMethod   (   "Reboot"   ,   ss   )   ;     
+      }     
+      }     
+      //报错     
+      catch   (   Exception   ee   )   {     
+      MessageBox.Show   (   "连接"   +   textBox1.Text   +   "出错，出错信息为："   +   ee.Message   )   ;     
+      }     
+      }     
+      }   

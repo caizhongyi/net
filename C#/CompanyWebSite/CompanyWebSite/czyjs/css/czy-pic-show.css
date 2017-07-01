@@ -1,0 +1,10 @@
+﻿/*picContent*/
+.czy-pic {filter:progid:DXImageTransform.Microsoft.Wipe(GradientSize=1.0,wipeStyle=0, motion='forward');  position:relative; }
+.czy-pic img{}
+.czy-pic .pic-nav{ float:right;bottom:4px;right:12px;filter:alpha(opacity=80); text-align:right; position:absolute;  list-style-type:none; margin:0px;}
+.czy-pic .pic-nav li{cursor:pointer;  }
+.czy-pic .pic-nav a{ float:left;margin-right:10px;text-align:center;  padding-bottom:3px; padding-top:3px; padding-left:6px; padding-right:6px;  display:block; border:solid 1px #999999; color:black; font-weight:bolder;}
+.czy-pic .pic-nav a:hover{ background-color:#999999; }
+.czy-pic .pic-nav .pic-item{background-color: White;}
+.czy-pic .pic-nav .pic-item-on{background-color:#9db3e6; }
+			

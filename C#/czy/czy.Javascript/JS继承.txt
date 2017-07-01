@@ -1,0 +1,20 @@
+var a=function()
+{
+    b.apply(this,new Array());
+}
+
+var b=function()
+{
+    
+}
+
+var a=function(){
+ this.a=function(){alert("a");}
+ };
+			
+var b=function(){
+this.b=function(){alert("b");}
+};
+b.prototype=new a();
+var bb=new b();
+bb.b();

@@ -1,0 +1,50 @@
+﻿#menumain{
+   margin:0;
+   white-space:nowrap;
+   overflow:hidden;
+   height:50px;
+   background:url(../images/menubg.jpg) 0px 0px repeat-x;
+}
+
+#menumain .mainmenuiner {
+    height:50px;
+	padding:0;
+    line-height:50px;
+    overflow: hidden;
+    margin:0px 0px 0px 40px; 
+}
+
+#menumain .menuright {
+	float:right;
+	width:25px;
+    height:50px;
+	padding:0;
+    overflow: hidden;
+    margin:0px;
+	background:url(../images/menuright.jpg) 0px 0px no-repeat;
+}
+
+#menumain a.menumain:link,#menumain a.menumain:active,#menumain a.menumain:visited{
+   display:block;
+   float:left;
+   height:50px;
+   text-decoration: none;
+   text-align:center;
+   width:101px;
+   color:#fbfffc;
+   font:14px/49px 'SimSun',Arial,Sans-Serif;
+   background:url(../images/menu.jpg) 0px 0px no-repeat;
+   margin:0px 0px 0px -1px;
+}
+
+#menumain a.menumain:hover{
+   display:block;
+   float:left;
+   height:50px;
+   color:#fbfffc; 
+   text-decoration: none;
+   text-align:center;
+   width:101px;
+   font:14px/49px 'SimSun',Arial,Sans-Serif;
+   margin:0px 0px 0px -1px;
+} 

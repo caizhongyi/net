@@ -1,0 +1,8 @@
+F:\源码\多线程取图片YZWBSM\多线程取图片YZWBSM\YZWBSM\bin\Debug\YZWBSM.exe
+F:\源码\多线程取图片YZWBSM\多线程取图片YZWBSM\YZWBSM\bin\Debug\YZWBSM.pdb
+F:\源码\多线程取图片YZWBSM\多线程取图片YZWBSM\YZWBSM\obj\Debug\ResolveAssemblyReference.cache
+F:\源码\多线程取图片YZWBSM\多线程取图片YZWBSM\YZWBSM\obj\Debug\YZWBSM.Form1.resources
+F:\源码\多线程取图片YZWBSM\多线程取图片YZWBSM\YZWBSM\obj\Debug\YZWBSM.Properties.Resources.resources
+F:\源码\多线程取图片YZWBSM\多线程取图片YZWBSM\YZWBSM\obj\Debug\YZWBSM.csproj.GenerateResource.Cache
+F:\源码\多线程取图片YZWBSM\多线程取图片YZWBSM\YZWBSM\obj\Debug\YZWBSM.exe
+F:\源码\多线程取图片YZWBSM\多线程取图片YZWBSM\YZWBSM\obj\Debug\YZWBSM.pdb

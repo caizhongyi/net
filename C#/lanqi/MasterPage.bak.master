@@ -1,0 +1,191 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage"  %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat=server>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>东海九九旅游网</title>
+<link href="style/PageButton.css" rel="stylesheet" type="text/css" />
+
+<link href="css/template.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+/* common styling */
+/* set up the overall width of the menu div, the font and the margins */
+.menu {
+	width:979px;
+	margin:0;
+}
+/* remove the bullets and set the margin and padding to zero for the unordered list */
+.menu ul {
+	padding:0;
+	margin:0;
+	list-style-type: none;
+}
+/* float the list so that the items are in a line and their position relative so that the drop down list will appear in the right place underneath each list item */
+.menu ul li {
+	float:left;
+	position:relative;
+}
+/* style the links to be 104px wide by 30px high with a top and right border 1px solid white. Set the background color and the font size. */
+.menu ul li a, .menu ul li a:visited {
+	display:block;
+	text-align:center;
+	text-decoration:none;
+	width:121px;
+	color:#000;
+	border:1px solid #fff;
+	border-width:1px 1px 0 0;
+	line-height:30px;
+	font-size:13px;
+	font-weight: bold;
+	background-color: #E8E8E8;
+}
+/* make the dropdown ul invisible */
+.menu ul li img{width:121px; height:50px;}
+.menu ul li ul {
+	display: none;
+}
+/* specific to non IE browsers */
+/* set the background and foreground color of the main menu li on hover */
+.menu ul li:hover a {
+	color:#fff;
+	background:#b3ab79;
+}
+/* make the sub menu ul visible and position it beneath the main menu list item */
+.menu ul li:hover ul {
+	display:block;
+	position:absolute;
+	top:31px;
+	left:0;
+	width:105px;
+}
+/* style the background and foreground color of the submenu links */
+.menu ul li:hover ul li a {
+	display:block;
+	background:#faeec7;
+	color:#000;
+}
+/* style the background and forground colors of the links on hover */
+.menu ul li:hover ul li a:hover {
+	z-index:1;
+	background:#dfc184;
+	color:#000;
+}
+
+</style>
+<!--[if lte IE 6]>
+<style type="text/css">
+/* styling specific to Internet Explorer IE5.5 and IE6. Yet to see if IE7 handles li:hover */
+/* Get rid of any default table style */
+table {
+border-collapse:collapse;
+margin:0; 
+padding:0;
+}
+/* ignore the link used by 'other browsers' */
+.menu ul li a.hide, .menu ul li a:visited.hide {
+display:none;
+}
+/* set the background and foreground color of the main menu link on hover */
+.menu ul li a:hover {
+color:#fff; 
+background:#b3ab79;
+}
+/* make the sub menu ul visible and position it beneath the main menu list item */
+.menu ul li a:hover ul {
+display:block; 
+position:absolute; 
+top:32px; 
+left:0; 
+width:105px;
+}
+/* style the background and foreground color of the submenu links */
+.menu ul li a:hover ul li a {
+background:#faeec7; 
+color:#000;
+}
+/* style the background and forground colors of the links on hover */
+.menu ul li a:hover ul li a:hover {
+background:#dfc184; 
+color:#000;
+}
+</style>
+<![endif]-->
+</head>
+ 
+<script type="text/javascript" src="js/1.js"></script>
+<script>
+ function AddFavorite(sURL, sTitle) {   
+    try {   
+        window.external.addFavorite(sURL, sTitle);   
+    } catch (e) {   
+        try {   
+            window.sidebar.addPanel(sTitle, sURL, "");   
+        } catch (e) {   
+            alert("加入收藏失败，请使用Ctrl+D进行添加");   
+        }   
+    }   
+}  
+</script>
+
+
+<body  >
+
+<div id="box">
+  <div id="top">
+    <div class="bennr" style="position:relative;">
+      <div class="logo"><img src="images/dx_03.jpg" width="231" height="77" /></div>
+      <div style="position:absolute;left:400px; top:70px; font-size:20px; font-weight:bold; color:#CE0205; font-family:Adobe 黑体 Std R;">
+            东海美食网<br />
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;教您一技之长
+      </div>
+      <div class="anniu">
+        <p><a href="Login.aspx">注册</a></p>
+        <p><a href="Login.aspx">登录</a></p>
+        <p><a href="productmanager.aspx">个人中心</a></p>
+         <p><a href="#" onclick="AddFavorite('http://www.donghai99.com/','东海九九旅游网')">收藏我们</a></p>
+      </div>
+    </div>
+  </div>
+   <div class="menu" style="z-index:2">
+    <ul style="z-index:2">
+      <li style="z-index:2"><img alt="" src="images/nav_pic/1.jpg"/></li>
+      <li style="z-index:2"><img alt="" src="images/nav_pic/2.png"/></li>
+      <li style="z-index:2"><img alt="" src="images/nav_pic/3.jpg"/></li>
+      <li style="z-index:2"><img alt="" src="images/nav_pic/4.png"/></li>
+      <li style="z-index:2"><img alt="" src="images/nav_pic/5.jpg"/></li>
+      <li style="z-index:2"><img alt="" src="images/nav_pic/6.jpg"/></li>
+      <li style="z-index:2"><img alt="" src="images/nav_pic/7.jpg"/></li>
+      <li style="z-index:2"><img alt="" src="images/nav_pic/8.jpg"/></li>
+      <li style="z-index:2"><img alt="" src="images/nav_pic/9.jpg"/></li>
+      <li style="z-index:2"><img alt="" src="images/nav_pic/10.jpg"/></li>
+      <li style="z-index:2"><img alt="" src="images/nav_pic/11.png"/></li>
+      <li style="z-index:2"><img alt="" src="images/nav_pic/12.png"/></li>
+      <li style="z-index:2"><img alt="" src="images/nav_pic/13.jpg"/></li>
+      <li style="z-index:2"><img alt="" src="images/nav_pic/14.png"/></li>
+    </ul>
+    <!-- clear the floats if required -->
+    <div class="clr"> </div>
+    </div>
+    <form id="form1" runat="server">
+    <div>
+        <asp:contentplaceholder id="ContentPlaceHolder1" runat="server">
+        </asp:contentplaceholder>
+    </div>
+    </form>
+  
+<div style="display:none"><script src=" http://s11.cnzz.com/stat.php?id=2724088&web_id=2724088" language="JavaScript"></script></div>
+  
+ <center><div id="next_2"><p  style="font-size:12px;line-height:20px">免责声明：本站部分文章、图片来源于互联网，如果侵犯了您的权益，请及时与我们联系，我们会尽快为您处理。（联系邮箱 ：donghaifz@sina.com ，QQ :1104212890 ) 谢谢 ！！<br />
+
+中国福建省福州市东海旅游网  国家信息产业部备案号： 闽ICP备案号：10207499<br />
+All contents copyright@donghai99.com All rights reserved.<br />
+</p></div></center>
+
+</body>
+</html>

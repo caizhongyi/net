@@ -1,0 +1,122 @@
+﻿#parse("_head.html")
+<script type="text/javascript" src="$webpath/library/js/date/WdatePicker.js"></script>
+<script type="text/javascript" src="$webpath/library/xmleditor/xheditor-zh-cn.min.js"></script>
+<link href="$templatepath/css/app/shop.css" rel="stylesheet" type="text/css" />
+<div id="snsmenu">
+#parse("_menu.html")
+</div>
+<div id="snsbody">
+    <div id="snshead"><span class="l">$cpagetitle</span><span class="r"><input id="kwd" name="kwd" value="#if($kwd)$kwd#else搜索$shop#end" type="text" class="f-text w100" onclick="this.value=''" /> <input id="Button1" type="button" value="搜索" class="btn_gray2" onclick="search('goods','$q')" /></span></div>
+
+        <div class="itemmenu">
+        <ul>
+            <li><a href="$webpath/app/shop/default$exname">所有$shop</a></li>
+            <li><a href="$webpath/app/shop/default$exname?q=city">同城$shop</a></li>
+            <li><a href="$webpath/app/shop/default$exname?q=rec">推荐$shop</a></li>
+           <li><a href="$webpath/app/shop/default$exname?q=friend">好友的$shop</a></li>
+            <li><a href="$webpath/app/shop/default$exname?q=my">我的$shop</a></li>
+             <li><a href="$webpath/app/shop/list$exname">所有店铺</a></li>
+            <li><a href="$webpath/app/shop/list$exname?q=rec">推荐商铺</a></li>
+            <li><a href="$webpath/app/shop/list$exname?q=city">同城店铺</a></li>
+            <li><a href="$webpath/app/shop/list$exname?q=friend">好友的店铺</a></li>
+            <li><a href="$webpath/app/shop/list$exname?q=my">我的店铺</a></li>
+            <li><a href="$webpath/app/shop/multebuy$exname">超级团购</a></li>
+        </ul>
+    </div>
+    <div class="itemmenu1">
+        <ul>
+            <li class="current"><a href="javascript:;">$shop评分</a></li>
+        </ul>
+    </div>
+    <div id="shopmiddleall">
+                <div class="sumsore">$shop平均得分：<span>$sumsore</span> 分，<a href="$webpath/app/shop/comment$exname?gid=$gid#commentsform">我要评分</a> &nbsp;  &nbsp;  &nbsp; <a href="goods$exname?gid=$gid">返回$shop详细页面</a></div>
+                #if($recordcount>0)
+                    <div class="usercomment">
+                        <ul>
+                            #foreach($info in $infolist)
+                                <li id="param_$info.id">
+                                    <div class="aa images center">
+                                        <a href="$info.spaceurl"><img src="$info.headpic" /><br />$info.truename</a>
+                                    </div>
+                                    <div class="bb">
+                                        <div class="ucontent">
+                                            <div class="time clearpix"><a href="$info.spaceurl">$info.truename</a> 评论于 $info.time</div>
+                                            $info.content
+                                        </div>
+                                        <div class="sore"><span>$info.sore</span> 分</div>
+                                    </div>
+                                </li>
+                            #end
+                        </ul>
+                    </div>
+                  <div class="pages">$pagelist</div>
+                #else
+                    <div>还没有评分</div>
+                #end     
+                
+                
+        #if($uid>0)    
+        <div class="pitem" id="commentsform">
+        
+        <h4>发表评分</h4>
+        #if(!$iscomment)
+            <form action="" method="post" id="form1" name="form1">
+                评分：
+                <input name="radscore" type="radio" value="1" />1分&nbsp;
+                <input name="radscore" type="radio" value="2" />2分&nbsp;
+                <input name="radscore" type="radio" value="3" />3分&nbsp;
+                <input name="radscore" type="radio" value="4" />4分&nbsp;
+                <input name="radscore" type="radio" value="5" />5分&nbsp;
+                <input name="radscore" type="radio" value="6" />6分&nbsp;
+                <input name="radscore" type="radio" value="7" />7分&nbsp;
+                <input name="radscore" type="radio" value="8" />8分&nbsp;
+                <input name="radscore" type="radio" value="9" />9分&nbsp;
+                <input name="radscore" type="radio" value="10" />10分<br />
+                
+            <textarea id="commentcontent" name="commentcontent" cols="20" rows="2"  class="xheditor-mini {skin:'$editskin'}" style="width:100%;height:200px"></textarea>           
+                <br />
+                
+                <input id="Submit1" type="submit" value="提交评分" class="btn_blue4" onclick="return checkdata();" />
+            </form>
+        #else
+            <div class="reshow">您已经评分过了</div>
+        #end    
+        </div>
+        #end 
+    </div>
+    
+</div>
+<script type="text/javascript">
+function checkdata()
+{
+    var suc="";
+    for(var i=0;i<document.getElementById("form1").radscore.length;i++)
+    {   
+       if(document.getElementById("form1").radscore[i].checked)
+       {
+             suc="value";
+        }
+        
+    } 
+    if(suc!="")
+    {
+        var content=jQuery("#commentcontent").val();
+        if(content=="")
+        {
+            alert("填写评论内容");
+            return false
+        }
+        else
+        {
+            return true;
+        }
+   }
+    else
+    {
+        alert("请选择评分");
+        return false
+    }
+
+}
+</script>
+#parse("_foot.html")

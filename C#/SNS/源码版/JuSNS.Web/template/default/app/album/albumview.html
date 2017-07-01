@@ -1,0 +1,52 @@
+﻿#parse("_head.html")
+<div id="snsmenu">
+#parse("_menu.html")
+</div>
+<div id="snsbody">
+    <div id="snshead1">
+        <span class="images l"><a href="$spaceurl"><img src="$headpic"></a></span>
+        <span class="l"><h3>$truename的相册：<span class="normal">$albumname</span></h3> » <a href="$spaceurl">$truename的空间</a> &nbsp;  » <a href="$webpath/app/album?q=$userid">$truename的所有相册</a> #if($gid>0)   &nbsp;  »  返回社群【<span class="reshow"><a href="$webpath/app/group/group$exname?gid=$gid">$groupname</a></span>】#end</span>
+        <span class="r"><a href="javascript:history.back();">返回上一页</a></span>
+    </div>
+
+    <div class="itemmenu">
+        <ul>
+            <li><a href="$webpath/app/album/photo$exname">最新图片</a></li>
+            <li><a href="$webpath/app/album/default$exname">所有相册</a></li>
+            #if($uid>0)
+            <li><a href="$webpath/app/album/default$exname?q=my">我的相册</a></li>
+            <li><a href="$webpath/app/album/default$exname?q=friend">朋友的相册</a></li> 
+            #end
+            <li class="current"><a>浏览相册</a></li> 
+            #if($userid==$uid)
+            <li class="new"><a href="$webpath/app/album/photoadd$exname?aid=$aid#if($gid>0)&gid=$gid&groupname=$groupname#end" class="newitem" title="在此相册中上传照片">上传图片</a></li> 
+            #else
+            <li class="new"><a href="$webpath/app/album/new$exname#if($gid>0)?gid=$gid&groupname=$groupname#end" class="newitem">上传图片</a></li> 
+            #end
+            <li class="search">搜索：<input id="kwd" name="kwd" value="#if($kwd)$kwd#else搜索相册#end" type="text" class="f-text w100" onclick="this.value=''" /> <input id="Button1" type="button" value="搜索" class="btn_gray2" onclick="search('album','$q')" /></li>
+        </ul>
+        
+    </div>
+
+    <div id="snsbody-all">
+        <span style="float:right;"><a href="javascript:;" onclick="sharetofriend('album',$aid,$uid,'相册：$albumname')" class="a-share">分享</a></span>
+        #if($recordcount>0)
+            <div class="albumview">
+                <ul>
+                #foreach($info in $infolist)
+                <li id="param_$info.id">
+                    <div><a href="$webpath/app/album/PhotoView$exname?pid=$info.id" title="$info.descmore">#if($info.desc!="")$info.desc#else&nbsp;#end</a> $info.showop</div>
+                    <div class="img"><a href="$webpath/app/album/PhotoView$exname?pid=$info.id"><img src="$info.pic" /></a></div>
+                </li>
+                #end
+              </ul>
+              </div>
+              <div class="clearpix"></div>
+              <span class="pages">$pagelist </span>
+        #else
+            <div>还没有相片</div>
+        #end        
+    </div>
+    
+</div>
+#parse("_foot.html")

@@ -1,0 +1,5 @@
+C:\Users\Administrator\Desktop\广告系统\WebAdsystem\MySocket\bin\Debug\MySocket.dll
+C:\Users\Administrator\Desktop\广告系统\WebAdsystem\MySocket\bin\Debug\MySocket.pdb
+C:\Users\Administrator\Desktop\广告系统\WebAdsystem\MySocket\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\广告系统\WebAdsystem\MySocket\obj\Debug\MySocket.dll
+C:\Users\Administrator\Desktop\广告系统\WebAdsystem\MySocket\obj\Debug\MySocket.pdb

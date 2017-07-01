@@ -1,0 +1,90 @@
+﻿#parse("_head.html")
+<div id="snsmenu">
+#parse("_menu.html")
+</div>
+<div id="snsbody">
+    <div id="snshead">邀请朋友</div>
+    <div class="itemmenu">
+        <ul>
+            <li><a href="$webpath/home/friend/default$exname">我的好友</a></li>
+            <li><a href="dyn$exname">好友动态设置</a></li>
+            <li><a href="visit$exname">来访者</a></li>
+            <li><a href="city$exname?q=city">同城</a></li>
+            <li><a href="pfriend$exname">可能认识的人</a></li>
+            <!--<li><a href="city$exname?q=ram">找有缘人</a></li>-->
+            <li><a href="search$exname">搜索朋友</a></li>
+            <li><a href="att$exname">关注我的人</a></li>
+            <li class="current"><a href="invite$exname">邀请朋友加入</a></li>
+        </ul>
+  </div>
+
+         <div class="itemmenu1"><ul> <li class="current"><a href="invite$exname">邀请好友</a></li> <li><a href="record$exname?q=1">成功邀请记录</a></li> <li><a href="record$exname?q=0">待确认邀请记录</a></li></div>
+  #if($result)
+    <div>$result</div>
+  #else
+  <div>
+   
+        <h3>我的好友邀请链接</h3>
+        <div class="nextreshow">您可以通过QQ、MSN等IM工具，或者发送邮件，把下面的链接告诉你的好友，邀请他们加入进来。 </div>
+        <h3><a href="javascript:void(0);" title="点击复制" onclick="setCopy('$rooturl$webpath/invite$exname?uid=$uidvmd5|$uid&r=$vcode')">$rooturl$webpath/invite$exname?uid=$uidvmd5|$uid&r=$vcode</a></h3>
+    </div>
+  <form method="post" action="">
+  <div>
+        <h3>给好友发送 Email 邀请</h3>
+        <div class="nextreshow">
+        通过Email发送邮件的方式，邀请你的好友。
+        一行一个电子邮件。</div>
+        <div><span class="l">好友Email地址</span> <span class="r"><a href="javascript:void(0);" onclick="inputAddress();">从地址薄中导入</a></span></div>
+        <div><textarea name="email" id="email" rows="5" style="width:99%;"></textarea></div>
+        <div>
+            想对好友说的话<br/>
+            <input type="text" name="saymsg" id="saymsg" onkeyup="showMSG(this);" class="f-text" style="width:98%;" value="我发现一个不错的网站：$sitename，去注册一个看看啦。">
+        </div>
+        <div class="pitem margintop10"><input type="submit" name="emailinvite" value="开始邀请" class="btn_blue4" onclick="return checkdata();"></div>
+        <div>
+            <h3>邀请函预览</h3>
+            <div class="l imageb">
+                <a href="${myspace}"><img src="${portrait2}" /></a>
+            </div>
+            <div class="l" style="width:625px;">
+                <div class="strong">Hi，我是$myname，在$sitename上建立了个人主页，邀请你也加入并成为我的好友。</div>
+                <div>$invitecontent</div>
+                <div style="margin-top:10px;">邀请附言：</div>
+                <div id="showMSGID" class="reshow">我发现一个不错的网站：$sitename，去注册一个看看啦。</div>
+                <div class="strong">
+                请你点击以下链接，接受好友邀请： <br />$rooturl$webpath/invite$exname?uid=$uidvmd5|$uid&r=$vcode
+                </div>
+            </div>
+        </div>
+  </div>
+  </form>
+  #end
+</div>
+
+
+<script type="text/javascript">
+    function showMSG(obj)
+    {
+        jQuery("#showMSGID").html(obj.value);
+    }
+    function checkdata()
+    {
+        if(jQuery("#email").val()=="")
+        {
+            showErrorResult("请填写至少一个电子邮件");return false;
+        }
+        else
+        {
+            loading();
+            return true;
+        }
+    }
+    function inputAddress()
+    {
+        var formcontent = "<iframe src=\"email$exname\" style=\"width:100%;height:300px;border:0;\" frameborder=\"NO\" border=\"0\" framespacing=\"0\"></iframe>";
+        var W = WinTip("<div>导入电子邮件地址薄</div>", formcontent);
+        W.HasBottom=false;
+        W.Create();        
+    }
+</script>
+#parse("_foot.html")

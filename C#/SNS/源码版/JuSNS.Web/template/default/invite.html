@@ -1,0 +1,30 @@
+﻿#parse("_head.html")
+#if($colse)
+    <div class="error">$colse</div>
+#else
+    #if($errors)
+    <div  id="toperrors" class="errors">$errors</div>
+    #else
+ 
+        <div class="invite_regcontent">
+            <div class="aa imageb">
+                <a href="$spaceurl" target="_blank"><img src="$userhead" /></a>
+            </div>
+            <div class="bb">
+                <h3>Hi，我是$username <span>来自 $city </span></h3>
+                <div>
+                $sitename是一个不错的交友网站。如果你在$sitename成为我的好友，你可以查看我的最新照片、日记、了解我的最新动态...<br />
+                这个网站很多适用的功能：同城交友、在线互动、微博、博客、相册、群组讨论……；<br />
+                可以拥抱一下好友、向好友抛个媚眼、送礼物给好友；<br />
+                可以测测你跟朋友的姓名缘分；<br />
+                可以和我一起很多好玩的游戏。
+                </div>
+                <div><input value="注册，并加他为好友" type="button" class="btn_blue10" onclick="javascript:window.location.href='$rurls'" /> <input value="马上登陆" type="button" class="btn_gray4" onclick="javascript:window.location.href='$webpath/login$exname'" /> <input value="不想注册" type="button" class="btn_gray4" onclick="javascript:window.location.href='$webpath/'" /></div>
+            </div>
+        </div>
+    </div>
+  
+    #end
+#end
+<div class="clearpix"></div>
+#parse("_foot.html")

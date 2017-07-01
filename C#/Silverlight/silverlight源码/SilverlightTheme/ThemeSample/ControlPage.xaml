@@ -1,0 +1,61 @@
+﻿<UserControl xmlns:data="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Data"  x:Class="ThemeSample.ControlPage"
+    xmlns:basics="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls" 
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:theming="clr-namespace:Microsoft.Windows.Controls.Theming;assembly=Microsoft.Windows.Controls.Theming"
+    xmlns:controls="clr-namespace:Microsoft.Windows.Controls;assembly=Microsoft.Windows.Controls"
+    Width="600" Height="500" xmlns:ThemeSample="clr-namespace:ThemeSample">
+    <Grid x:Name="LayoutRoot" >
+        <controls:WrapPanel Visibility="Visible" Orientation="Vertical">
+            <TextBlock><Run Text="复选框"/></TextBlock><CheckBox Content="CheckBox" />
+            <TextBlock><Run Text="单选框"/></TextBlock><RadioButton Content="RadioButton"/>
+            <TextBlock><Run Text="滑块"/></TextBlock><Slider />
+            <TextBlock><Run Text="列表框"/></TextBlock>
+            <ListBox Width="140">
+                <ListBoxItem Content="北京,Beijing" />
+                <ListBoxItem Content="天津,Tianjin" />
+            </ListBox>
+            <TextBlock><Run Text="进度条"/></TextBlock>
+            <ProgressBar Height="15" Value="30" />
+            <TextBlock><Run Text="扩展/收缩"/></TextBlock>
+            <controls:Expander ExpandDirection="Down"/>
+            <Button Content="按钮" Height="25" Width="100"/>
+            <TextBlock Text="日期选择" />
+            <basics:DatePicker/>
+            <TextBlock Text="属性页" />
+            <basics:TabControl Width="200" Height="100">
+                <basics:TabItem Header="One" />
+                <basics:TabItem Header="Two" />
+            </basics:TabControl>
+            
+            <basics:Calendar/>
+            <TextBlock Text="文本框" />
+            <TextBox Width="180" Text="文本框" />
+            <TextBlock Width="180" Text="ScrollViewer" />
+            <ScrollViewer VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Visible"><Image Width="150" Source="image/haoran.jpg"/></ScrollViewer>
+            <TextBlock Text="下拉列表" />
+            <ComboBox Width="150">
+                <ComboBoxItem Content="下拉列表项1" />
+                <ComboBoxItem Content="下拉列表项2" />
+            </ComboBox>
+            
+            <data:DataGrid x:Name="MyGrid" AutoGenerateColumns="True" Width="400" Height="200" />
+        
+            
+            <!--ShinyDarkPurple-->
+            <!--<StackPanel Width="100"
+          theming:ImplicitStyleManager.ApplyMode="Auto"   
+          theming:ImplicitStyleManager.ResourceDictionaryUri="themes/ExpressionLight.xaml">
+                <Button Content="Button"/>
+                <CheckBox Content="CheckBox"/>
+                <RadioButton Content="RadioButton"/>
+                <Slider/>
+                <ListBox/>
+                <ProgressBar Height="15" Value="30"/>
+                <controls:Expander ExpandDirection="Down"/>
+            </StackPanel>-->
+            <!--ShinyDarkGreen-->
+
+        </controls:WrapPanel>
+    </Grid>
+</UserControl>

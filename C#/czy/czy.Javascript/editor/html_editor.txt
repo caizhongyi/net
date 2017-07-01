@@ -1,0 +1,80 @@
+ 
+
+一、载体
+1.document.designMode
+document对象有个designMode属性，默认值为’off’，如果把它设置成’on’，HTML文档区域就会进入设计模式，我们可以编辑任意元素
+
+例一：本页编辑
+Javascript Code: 
+
+document.designMode = 'on';开启本页面的编辑模式关闭
+
+内嵌Iframe：
+
+
+按上面的按钮，再点其他区域你会发现我们可以在光标处随意增删文字了（IE除外）。
+
+各浏览器的差异
+IE:出于安全考虑，不允许在主页面开启document的designMode 
+Chrome,Safari(webkit):内嵌frame同样进入编辑模式 
+FF,Opera:页面进入编辑模式，内嵌frame不开启编辑模式
+一般来说我们也不会在主页面开启编辑模式，鉴于以上原因，富文本编辑器绝大多数用内嵌的Iframe作为载体。
+
+例二：内嵌Iframe作为载体
+Javascript Code: 
+
+frames['editorArea2'].document.designMode = 'on';Demo: 
+
+
+开启内嵌iframe编辑模式关闭
+
+2.contentEditable
+W3C还提供了一个contentEditable属性，用于开启某一个标签的编辑模式，其值为true或false
+
+例三：局部范围编辑
+HTML Code: 
+
+<div contenteditable="true">可编辑区域</div>Demo: 
+
+可编辑区域(div标签)
+可编辑区域(a标签) 
+也可以用脚本动态加载
+
+Javascript Code: 
+
+document.body.contentEditable = 'true';设置body的contentEditable属性关闭
+
+此属性比document.designMode灵活，可以用于绝大多数标签，以下是支持这个属性的标签：
+
+defaults, A, ABBR, ACRONYM, ADDRESS, B, BDO, BIG, BLOCKQUOTE, BODY, BUTTON, CENTER, CITE, CODE, CUSTOM, DD, DEL, DFN, DIR, DIV, DL, DT, EM, FIELDSET, FONT, FORM, hn, I, INPUT type=button, INPUT type=password, INPUT type=radio, INPUT type=reset, INPUT type=submit, INPUT type=text, INS, ISINDEX, KBD, LABEL, LEGEND, LI, LISTING, MARQUEE, MENU, NOBR, OL, P, PLAINTEXT, PRE, Q, RT, RUBY, S, SAMP, SMALL, SPAN, STRIKE, STRONG, SUB, SUP, TEXTAREA, TT, U, UL, VAR, XMP
+
+IE5.5+及Firefox等浏览器都支持这个标签属性，且不像document.designMode，IE允许本页面的body开启contentEditable
+
+综上两种方法，还是建议采用动态生成的iframe作为编辑器的载体，这样可以保证主页面的完整性，局部区域的编辑可以用contentEditable属性控制
+二、编辑器内部操作
+1.execCommand
+表达式： 
+bSuccess = object.execCommand(sCommand [, bUserInterface] [, vValue])更多请参阅: MSDN execCommand Method
+
+更多命令符（Command Identifiers）请参阅: MSDN Command Identifiers
+
+例四：灰常灰常简单的编辑器
+HTML Code: 
+
+<iframe name="sampleEditor" frameborder="0" ><iframe>Javascript Code: 
+
+frames["sampleEditor"].document.execCommand('Bold',false,null);frames["sampleEditor"].document.execCommand('BackColor',false,'#ff000');Demo:
+
+
+开启内嵌iframe编辑模式粗体红色背景删除查看源码关闭编辑模式
+
+各浏览器差异
+Bold
+IE、Opera： 
+Hello <STRONG>world</STRONG>Safari、Chrome： 
+Hello <b>world</b>FF： 
+Hello <span style="font-weight:bold;">world</span>默认情况下Firefox采用的方式和其他浏览器区别比较大，我们可以使用document.execCommand("styleWithCSS",false,false)方法强制Firefox使用标签结构代替样式。遗憾的是我们还是无法单纯使用execCommand让各浏览器达到同样的代码。这就是为什么主流富文本编辑器不采用execCommand的原因
+
+2.range
+Range 对象可以获得当前选区，我们可以针对这一选区对象进行编辑操作，这一系列的工作都可以用自定义的方法完成。这样就可以统一execCommand无法做到效果。不过获取Range对象的方法也有3个版本……比如FCKeditor就专为IE,FF,Adobe Air各写了一套操作Range对象的方法 
+ 

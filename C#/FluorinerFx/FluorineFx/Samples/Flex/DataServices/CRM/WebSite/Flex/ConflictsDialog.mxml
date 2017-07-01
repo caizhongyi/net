@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:VBox xmlns:mx="http://www.adobe.com/2006/mxml" backgroundColor="#626262" 
+    paddingTop="4" paddingBottom="4" paddingLeft="4" paddingRight="4">
+    <mx:Style>
+       .conflictLabel
+       {
+           color: #dddddd;
+       } 
+    </mx:Style>
+    
+    <mx:Script>
+        <![CDATA[
+           import mx.data.Conflict;
+           import mx.data.Conflicts;
+           
+           [Bindable]
+           private var currentConflict:Conflict;
+           
+           private var currentConflictIndex:int;
+           
+           private var _conflicts:Conflicts;
+           
+           public function get conflicts():Conflicts
+           {
+               return _conflicts;
+           }
+           
+           public function set conflicts(value:Conflicts):void
+           {
+               _conflicts = value;
+               currentConflictIndex = -1;
+               nextConflict();
+           }
+           
+           private function acceptServer():void
+           {
+               currentConflict.acceptServer();
+               nextConflict();
+           }
+           
+           private function acceptClient():void
+           {
+               currentConflict.acceptClient();
+               nextConflict();
+           }
+           
+           private function nextConflict():void
+           {
+               currentConflictIndex++;
+               if (currentConflictIndex >= conflicts.length)
+               {
+                   parentDocument.currentState = "";
+                   _conflicts = null;
+                   currentConflict = null;
+               }
+               else
+               {
+                   var conflict:Conflict = conflicts.getItemAt(currentConflictIndex) as Conflict;
+                   if (conflict.resolved == true)
+                       nextConflict();
+                   else
+                       currentConflict = conflict;
+               }
+           }
+           
+           private function serverValue(name:String):String
+           {
+               return currentConflict.serverObject[name];   
+           }
+           
+           private function clientValue(name:String):String
+           {
+               return currentConflict.clientObject[name];
+           }
+           
+        ]]>
+    </mx:Script>
+    
+    <mx:Label text="Data Conflicts" styleName="conflictLabel" fontWeight="bold" fontSize="12"/>
+    <mx:HRule width="100%" themeColor="#aaaaaa" strokeWidth="2"/>
+    <mx:Text text="Someone else has just revised the data you are about to update. The differences are:" width="100%" styleName="conflictLabel"/>
+    <mx:Spacer height="100%"/>
+    <mx:Label text="Company: {currentConflict.clientObject.name}" width="100%" textAlign="center" styleName="conflictLabel" fontWeight="bold" fontSize="12"/>
+    <mx:Grid width="100%">
+        <mx:GridRow width="100%" height="100%">
+            <mx:GridItem width="100%" height="100%">
+            </mx:GridItem>
+            <mx:GridItem width="100%" height="100%">
+                <mx:Label text="Yours" fontWeight="bold" styleName="conflictLabel" />
+            </mx:GridItem>
+            <mx:GridItem width="100%" height="100%">
+                <mx:Label text="Server" fontWeight="bold" styleName="conflictLabel" />
+            </mx:GridItem>
+        </mx:GridRow>
+        <mx:Repeater id="conflictingPropertiesRepeater" dataProvider="{currentConflict.propertyNames}">            
+            <mx:GridRow width="100%" height="100%">
+                <mx:GridItem width="100%" height="100%">
+                    <mx:Label text="{conflictingPropertiesRepeater.currentItem}" styleName="conflictLabel" />
+                </mx:GridItem>
+                <mx:GridItem width="100%" height="100%">
+                    <mx:TextInput editable="false" text="{clientValue(conflictingPropertiesRepeater.currentItem as String)}" />
+                </mx:GridItem>
+                <mx:GridItem width="100%" height="100%">
+                    <mx:Label text="{serverValue(conflictingPropertiesRepeater.currentItem as String)}" styleName="conflictLabel" />
+                </mx:GridItem>
+            </mx:GridRow>
+        </mx:Repeater>
+        <mx:GridRow width="100%" height="100%">
+            <mx:GridItem width="100%" height="100%">
+            </mx:GridItem>
+            <mx:GridItem width="100%" height="100%">
+                <mx:Button label="Use Yours" click="acceptClient()"/>
+            </mx:GridItem>
+            <mx:GridItem width="100%" height="100%">
+                <mx:Button label="Use Server" click="acceptServer()"/>
+            </mx:GridItem>
+        </mx:GridRow>
+    </mx:Grid>
+    
+</mx:VBox>

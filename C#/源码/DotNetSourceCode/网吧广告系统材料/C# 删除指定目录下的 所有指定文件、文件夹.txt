@@ -1,0 +1,29 @@
+C# 删除指定目录下的 所有指定文件、文件夹
+	/// <summary>
+        /// 删除文件
+        /// </summary>
+        /// <param name="dir">目录路径</param>
+        /// <param name="delname">待删除文件或文件夹名称</param>
+        public void DeleteFolder(string dir,string delname)
+        {           
+            if (Directory.Exists(dir))
+            {
+                foreach (string d in Directory.GetFileSystemEntries(dir))
+                { 
+                    string tmpd = d.Substring(0, d.LastIndexOf("\\")) + "\\" + delname;
+                    if (Directory.Exists(d))
+                    {
+                        if (d == tmpd)
+                            Directory.Delete(d, true);
+                        else
+                            DeleteFolder(d, delname);//递归删除子文件夹   
+                    }
+                    else if(File.Exists(d))
+                    {
+                        if (d == tmpd)
+                            File.Delete(d);
+                    }
+                }
+            }            
+        }
+ 

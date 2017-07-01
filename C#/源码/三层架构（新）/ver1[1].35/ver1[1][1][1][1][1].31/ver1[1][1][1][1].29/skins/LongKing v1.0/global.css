@@ -1,0 +1,15 @@
+/*---Http://www.wangchuang.cn---*/
+ body{
+	font-size:12px;
+    margin:0px;
+	padding:0px;
+	text-align:center;
+	background:#162E3A url('main_bg.jpg') repeat-y center;
+	color:#92A9B6;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+ select{font-family:Tahoma, Verdana;font-size:12px;border: 1px solid #4B9BC6;color: #000000;background-color: #D0D8D4; border-bottom-color: #65A6CB;}
+ p{margin:3px;}
+ img {max-width: 100%;height: auto;}
+ select{font-family: Verdana, Arial}
+ th{background:#D5CBBE;border-bottom:1px solid #CCC}

@@ -1,0 +1,106 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B672DF14-A200-4693-BF62-7510E3EE16F8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>JuSNS.SQLServer</RootNamespace>
+    <AssemblyName>JuSNS.SQLServer</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App\App.cs" />
+    <Compile Include="App\Ative.cs" />
+    <Compile Include="App\Album.cs" />
+    <Compile Include="App\Ask.cs" />
+    <Compile Include="App\Blog.cs" />
+    <Compile Include="App\Group.cs" />
+    <Compile Include="App\News.cs" />
+    <Compile Include="App\Photo.cs" />
+    <Compile Include="App\Share.cs" />
+    <Compile Include="App\Shop.cs" />
+    <Compile Include="App\TWrite.cs" />
+    <Compile Include="App\Vote.cs" />
+    <Compile Include="App\Web.cs" />
+    <Compile Include="Other\Area.cs" />
+    <Compile Include="BbBase.cs" />
+    <Compile Include="Other\Constellation.cs" />
+    <Compile Include="Pagination.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="User\Box.cs" />
+    <Compile Include="User\User.cs" />
+    <Compile Include="Util.cs" />
+    <Compile Include="UtilPage.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\JuSNS.Common\JuSNS.Common.csproj">
+      <Project>{1A01015B-E77C-4FB0-9A5A-C7DA28C8EBBA}</Project>
+      <Name>JuSNS.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JuSNS.Config\JuSNS.Config.csproj">
+      <Project>{86665BB3-8B78-4E3A-ACB9-FBD94509DEE7}</Project>
+      <Name>JuSNS.Config</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JuSNS.Factory\JuSNS.Factory.csproj">
+      <Project>{3440E858-42CE-4637-B067-558C9997B563}</Project>
+      <Name>JuSNS.Factory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JuSNS.Home\JuSNS.Home.csproj">
+      <Project>{2672F03A-951B-4B92-A1D0-82DC763109F5}</Project>
+      <Name>JuSNS.Home</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JuSNS.Model\JuSNS.Model.csproj">
+      <Project>{C8EEDA36-9208-49A7-8892-4A635E601D1D}</Project>
+      <Name>JuSNS.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JuSNS.Profile\JuSNS.Profile.csproj">
+      <Project>{20C868E1-B988-40D3-82AB-64A1B4A542A5}</Project>
+      <Name>JuSNS.Profile</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

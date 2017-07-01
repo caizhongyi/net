@@ -1,0 +1,150 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6FAA7D2A-265C-4C81-B9A8-A5E567343959}</ProjectGuid>
+    <RootNamespace>PhotoBrowser</RootNamespace>
+    <AssemblyName>PhotoBrowser</AssemblyName>
+    <WarningLevel>4</WarningLevel>
+    <OutputType>winexe</OutputType>
+    <MinFrameworkVersionRequired>3.0</MinFrameworkVersionRequired>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>false</MapFileExtensions>
+    <ApplicationVersion>1.0.0.*</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <PublishUrl>Publish\</PublishUrl>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>.\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <OutputPath>.\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="3DTools, Version=1.0.2538.26322, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\3DTools.dll</HintPath>
+    </Reference>
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
+    <Reference Include="ReachFramework" />
+    <Reference Include="System.Printing" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.IdentityModel" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml" />
+    <Page Include="BlogVisual.xaml" />
+    <Page Include="PictureComment.xaml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
+    <Page Include="CommentVisual.xaml" />
+    <Page Include="CommentList.xaml" />
+    <Page Include="PictureVisual.xaml" />
+    <Page Include="MapVisual.xaml" />
+    <Page Include="Window1.xaml" />
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Window1.xaml.cs">
+      <DependentUpon>Window1.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CamToScaleConverter.cs" />
+    <Compile Include="Shapes\InteractiveCone.cs" />
+    <Compile Include="Shapes\InteractiveCylinder.cs" />
+    <Compile Include="Shapes\InteractiveSphere.cs" />
+    <Compile Include="Shapes\PartialSphere.cs" />
+    <Compile Include="TwoAxisValuator.cs" />
+    <Compile Include="Visual3DHelper.cs" />
+    <Compile Include="BlogVisual.xaml.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>BlogVisual.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FlickrApi\FlickrPhoto.cs" />
+    <Compile Include="FlickrApi\AuthorizedFlickrUser.cs" />
+    <Compile Include="FlickrApi\Flickr.cs" />
+    <Compile Include="FlickrApi\FlickrAuthorizationUrl.cs" />
+    <Compile Include="FlickrApi\FlickrMethod.cs" />
+    <Compile Include="FlickrApi\FlickrPhotos.cs" />
+    <Compile Include="FlickrApi\FlickrUrl.cs" />
+    <Compile Include="CarouselView\PhotoCarouselView.cs" />
+    <Compile Include="CarouselView\CarouselView.cs" />
+    <Compile Include="PictureComment.xaml.cs">
+      <DependentUpon>PictureComment.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PictureVisual.xaml.cs">
+      <DependentUpon>PictureVisual.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="CommentVisual.xaml.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>CommentVisual.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CommentList.xaml.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>CommentList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MapVisual.xaml.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>MapVisual.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Stack3D\PhotoStack3D.cs" />
+    <Compile Include="Stack3D\Stack3D.cs" />
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="earthmap.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="README.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildBinPath)\Microsoft.WinFX.targets" />
+</Project>

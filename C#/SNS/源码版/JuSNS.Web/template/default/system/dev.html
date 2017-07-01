@@ -1,0 +1,48 @@
+﻿#parse("_head.html")
+<div id="snssysmenu">
+#parse("_menusystem.html")
+</div>
+<div id="snsbody1">
+
+     <div id="snshead">应用程序</div>
+    <div class="itemmenu">
+        <ul>
+            <li><a href="app$exname">应用程序管理</a></li>
+            <li class="current"><a href="dev$exname">开发者管理</a></li>
+        </ul>
+    </div>
+    
+    <div class="system">
+          #if($recordcount>0)
+                <table  id="mtable">
+                <tr>
+                    <th>申请者</th>
+                    <th>姓名</th>
+                    <th>电话</th>
+                    <th>手机</th>
+                    <th>邮件</th>
+                    <th>申请时间</th>
+                    <th style="text-align:center;">操作</th>
+                </tr>
+                #foreach($info in $infolist)
+                <tr id="param_$info.userid">
+                    <td><a href="$info.spaceurl" target="_blank" title="userkey:$info.userkey">$info.truename</a></td>
+                    <td>$info.username</td>
+                    <td>$info.tel</td>
+                    <td>$info.mobile</td>
+                    <td>$info.email</td>
+                    <td>$info.jointime</td>
+                    <td>
+                    <input  type="button" value="删除" onclick="deleteAll($info.userid,$uid,'appdev');" class="btn_blue2" />
+                    $info.state</td>
+                </tr>
+                #end
+             </table>
+              <div class="pages">$pagelist</div>
+        #else
+            <div>还没有记录</div>
+        #end       
+    </div>
+    
+</div>
+#parse("_foot.html")

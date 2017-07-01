@@ -1,0 +1,14 @@
+bin\Dos.dll
+bin\Dos.pdb
+bin\WebSite.dll
+bin\DataProviders.dll
+bin\DoNetBbs.dll
+bin\DosOrg.dll
+bin\Components.dll
+bin\Control.dll
+bin\WebSite.pdb
+bin\DataProviders.pdb
+bin\Components.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\Dos.dll
+obj\Debug\Dos.pdb

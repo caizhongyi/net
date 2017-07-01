@@ -1,0 +1,69 @@
+<div id="sidebar">
+    
+    <div id="authors" class="widget">
+        <h3>Author</h3>
+        <ul>
+        #foreach($item in $authors)
+            <li><a href="${item.url}"  title="${item.description}">${item.name}</a><span>(${item.postcount})</span></li>
+        #end
+        </ul>
+    </div>
+    <div id="categories" class="widget">
+        <h3>Class</h3>
+        <ul>
+        #foreach($item in $categories)
+            <li><a href="${item.url}" title="${item.description}">${item.name}</a><span>(${item.count})</span></li>
+        #end
+        </ul>
+    </div>
+    <div id="recentposts" class="widget">
+        <h3>New Note</h3>
+        <ul>
+        #foreach($item in ${recentposts})
+            <li><a href="${item.url}" title="${item.title}">${item.title}</a></li>
+        #end
+        </ul>
+    </div>
+    <div id="recentcomments" class="widget">
+        <h3>New Comment</h3>
+        <ul>
+        #foreach($item in $recentcomments)
+            <li><a href="${item.url}" title="${item.name} at ${item.createdate}">${item.title}</a></li>
+        #end
+        </ul>
+    </div>
+    <div id="monthlist" class="widget">
+        <h3>Category</h3>
+        <ul>
+        #foreach($item in $archives)
+            <li><a href="${item.url}" title="">${item.date.tostring("MM-yyyy")}</a><span>(${item.count})</span></li>
+        #end
+        </ul>
+    </div>
+    <div id="recenttags" class="widget">
+        <h3>Tag</h3>
+        <ul>
+        #foreach($item in $recenttags)
+            <li><a href="${item.url}" title="${item.description}">${item.name}</a><span>(${item.count})</span></li>
+        #end
+        </ul>
+    </div>
+    <div id="generallinks" class="widget">
+        <h3>Links</h3>
+        <ul>
+        #foreach($item in $generallinks)
+            <li><a href="${item.url}" title="${item.description}" target="${item.target}">${item.name}</a></li>
+        #end
+        </ul>
+    </div>
+    <div  id="statistics" class="widget">
+        <h3>Stat</h3>
+        <ul>
+            <li>Article:<span>${postcount} </span></li>
+            <li>Comment:<span>${commentcount} </span></li>
+            <li>Author:<span>${authorcount} </span></li>
+            <li>Access:<span>${viewcount} </span></li>
+            <li>RRS:<span><a href="${feedurl}">Article</a> <a href="${feedcommenturl}">Comment</a> </span></li>
+        </ul>
+    </div>
+</div>

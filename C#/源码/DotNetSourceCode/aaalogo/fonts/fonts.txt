@@ -1,0 +1,3 @@
+Custom fonts directory, AAA LOGO
+-----------------------------------
+Please don't copy more than 100-200 font files here to not allow memory overflow

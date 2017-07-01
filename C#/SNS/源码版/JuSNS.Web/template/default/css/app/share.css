@@ -1,0 +1,68 @@
+﻿#sharemiddle
+{
+	width:538px;margin:10px 0;float:left;
+	border:1px solid #eeeeee;
+	padding:5px;
+}
+#sharemiddle .toshare
+{
+	padding:5px 0;
+}
+#sharemiddle .toshare ul
+{
+	margin:0;padding:0;
+}
+#sharemiddle .toshare li
+{
+	padding:8px 0;
+	display:block;
+	width:99%;
+	clear:both;
+	border-bottom:1px solid #eeeeee;
+	float:left;
+	margin:5px 0;
+}
+#sharemiddle .toshare li .content
+{
+	float:left;
+	width:466px;
+}
+#sharemiddle .toshare li .content .titlebg
+{
+	margin:3px 0 8px 0;
+	background-color:#F7F7F8;
+	border-top:1px solid #eeeeee;
+	height:20px;
+	padding:3px 5px;
+	font-weight:bold;
+}
+#sharemiddle .toshare li .content .other
+{
+	padding:1px 5px;
+}
+
+#sharemiddle .toshare li .content .otherimage
+{
+	padding:1px 5px;
+}
+#sharemiddle .toshare li .content .otherimage  img{padding:2px;border:1px solid #eeeeee;max-width:120px;max-height:120px;_width:120px;_height:120px;}
+#sharemiddle .toshare li .content .otherimage a:hover img{padding:2px;border:1px solid #1D6BB4;max-width:120px;max-height:120px;_width:120px;_height:120px;}
+
+#sharemiddle .toshare li .content .titlebg .sleft{float:left;}
+#sharemiddle .toshare li .content .titlebg .sright{float:right;}
+#sharemiddle .toshare li .content p{line-height:22px;margin:0;padding:0;}
+#sharemiddle .toshare li .content a.title{font-size:14px;font-weight:bold;font-family:微软雅黑;}
+#sharemiddle .toshare li .userpic{float:left;text-align:center;width:55px;overflow:hidden;}
+#shareright
+{
+	width:200px;margin:5px 0;float:right;line-height:23px;border:1px solid #eeeeee;background-color:#F8F9F9;margin-right:3px;padding:3px 5px;
+}
+#shareright .title{font-size:14px;font-weight:bold;margin-top:3px;color:#333333;width:99%;display:block;float:left;margin-left:5px;font-family:微软雅黑;clear:both;}
+#shareright .classlist ul {padding:0;margin:0;list-style:none; }
+#shareright .classlist li{width:50px;float:left;display:inline; text-align:center;height:22px;border-bottom:1px solid #eeeeee;padding:3px 0;margin:0 5px;}
+#shareright .classlist li.current,#shareright .classlist li.current a{
+	color:Red;
+	text-decoration:underline;
+	font-weight:bold;
+	font-size:14px;
+	}

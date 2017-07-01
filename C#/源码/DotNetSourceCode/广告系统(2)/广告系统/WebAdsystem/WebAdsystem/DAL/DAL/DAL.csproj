@@ -1,0 +1,90 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FDA9BC28-9602-4CC9-AF0F-073B009EDFC9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DAL</RootNamespace>
+    <AssemblyName>DAL</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Dao\IAdvInfoManage.cs" />
+    <Compile Include="Dao\IAdvIssueManage.cs" />
+    <Compile Include="Dao\IAdvTypeManage.cs" />
+    <Compile Include="Dao\IAdvUnitpriceManage.cs" />
+    <Compile Include="Dao\IAreaManage.cs" />
+    <Compile Include="Dao\IProvinceListManage.cs" />
+    <Compile Include="Dao\IUserInfoManage.cs" />
+    <Compile Include="Dao\IUserTypeManage.cs" />
+    <Compile Include="Dao\IWbInfoManage.cs" />
+    <Compile Include="Dao\IWbListManage.cs" />
+    <Compile Include="Dao\IWbRankManage.cs" />
+    <Compile Include="FactoryDao.cs" />
+    <Compile Include="impl\AdvInfoManageDao.cs" />
+    <Compile Include="impl\AdvIssueManageDao.cs" />
+    <Compile Include="impl\AdvTypeManageDao.cs" />
+    <Compile Include="impl\AdvUnitpriceManageDao.cs" />
+    <Compile Include="impl\AreaManageDao.cs" />
+    <Compile Include="impl\ProvinceListManageDao.cs" />
+    <Compile Include="impl\UserInfoManageDao.cs" />
+    <Compile Include="impl\UserTypeManageDao.cs" />
+    <Compile Include="impl\WbInfoManageDao.cs" />
+    <Compile Include="impl\WbListManageDao.cs" />
+    <Compile Include="impl\WbRankManageDao.cs" />
+    <Compile Include="Model\AdvInfo.cs" />
+    <Compile Include="Model\AdvIssue.cs" />
+    <Compile Include="Model\AdvType.cs" />
+    <Compile Include="Model\AdvUnitprice.cs" />
+    <Compile Include="Model\AreaList.cs" />
+    <Compile Include="Model\ProvinceList.cs" />
+    <Compile Include="Model\UserInfo.cs" />
+    <Compile Include="Model\UserType.cs" />
+    <Compile Include="Model\WbComputerList.cs" />
+    <Compile Include="Model\WbList.cs" />
+    <Compile Include="Model\WbRank.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Util.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

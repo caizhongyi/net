@@ -1,0 +1,18 @@
+﻿transforms
+
+
+exe
+C#
+.cs
+C:\Documents and Settings\Administrator\桌面\transformssample\xaml\obj\Debug\
+transforms
+none
+false
+DEBUG;TRACE
+C:\Documents and Settings\Administrator\桌面\transformssample\xaml\app.xaml
+1015593370
+
+31413945194
+81211706600
+SampleViewer.xaml;TransformExample.xaml;RotateTransformExample.xaml;ScaleTransformExample.xaml;AnimatedScaleTransformExample.xaml;SkewTransformExample.xaml;AnimatedSkewTransformExample.xaml;TranslateTransformExample.xaml;TransformCollectionExample.xaml;InteractiveMatrixTransformExample.xaml;
+

@@ -1,0 +1,7 @@
+F:\聊天源码\PowerTalkBox源代码\PowerTalkBox源代码\PowerTalkBox\bin\Debug\PowerTalkBox.dll
+F:\聊天源码\PowerTalkBox源代码\PowerTalkBox源代码\PowerTalkBox\bin\Debug\PowerTalkBox.pdb
+F:\聊天源码\PowerTalkBox源代码\PowerTalkBox源代码\PowerTalkBox\obj\Debug\ResolveAssemblyReference.cache
+F:\聊天源码\PowerTalkBox源代码\PowerTalkBox源代码\PowerTalkBox\obj\Debug\PowerTalkBox.Properties.Resources.resources
+F:\聊天源码\PowerTalkBox源代码\PowerTalkBox源代码\PowerTalkBox\obj\Debug\PowerTalkBox.csproj.GenerateResource.Cache
+F:\聊天源码\PowerTalkBox源代码\PowerTalkBox源代码\PowerTalkBox\obj\Debug\PowerTalkBox.dll
+F:\聊天源码\PowerTalkBox源代码\PowerTalkBox源代码\PowerTalkBox\obj\Debug\PowerTalkBox.pdb

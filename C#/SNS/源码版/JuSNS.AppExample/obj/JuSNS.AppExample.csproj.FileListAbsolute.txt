@@ -1,0 +1,8 @@
+F:\JuNET\JuSNS.AppExample\bin\JuSNS.AppExample.dll.config
+F:\JuNET\JuSNS.AppExample\bin\JuSNS.AppExample.dll
+F:\JuNET\JuSNS.AppExample\bin\JuSNS.AppExample.pdb
+F:\JuNET\JuSNS.AppExample\obj\Debug\ResolveAssemblyReference.cache
+F:\JuNET\JuSNS.AppExample\obj\Debug\JuSNS.AppExample.dll
+F:\JuNET\JuSNS.AppExample\obj\Debug\JuSNS.AppExample.pdb
+F:\JuNET\JuSNS.AppExample\bin\JuSNS.AppClient.dll
+F:\JuNET\JuSNS.AppExample\bin\JuSNS.AppClient.pdb

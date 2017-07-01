@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SilverlightApplication2", "SilverlightApplication2\SilverlightApplication2.csproj", "{7FE94BB8-0BFA-45FB-A696-90DFA52CB74A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SilverlightApplication2.Web", "SilverlightApplication2.Web\SilverlightApplication2.Web.csproj", "{BF36D751-5EF3-4C40-A91F-FB130188E1B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfService1", "WcfService1\WcfService1.csproj", "{94133AF4-970D-43D7-A2A5-430FADC12F76}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7FE94BB8-0BFA-45FB-A696-90DFA52CB74A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FE94BB8-0BFA-45FB-A696-90DFA52CB74A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FE94BB8-0BFA-45FB-A696-90DFA52CB74A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FE94BB8-0BFA-45FB-A696-90DFA52CB74A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF36D751-5EF3-4C40-A91F-FB130188E1B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF36D751-5EF3-4C40-A91F-FB130188E1B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF36D751-5EF3-4C40-A91F-FB130188E1B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF36D751-5EF3-4C40-A91F-FB130188E1B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94133AF4-970D-43D7-A2A5-430FADC12F76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94133AF4-970D-43D7-A2A5-430FADC12F76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94133AF4-970D-43D7-A2A5-430FADC12F76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94133AF4-970D-43D7-A2A5-430FADC12F76}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,583 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- note: this version of the color picker is optimized for IE 5.5+ only --><HTML 
+style="WIDTH: 238px; HEIGHT: 187px"><HEAD><TITLE>选择颜色</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=utf-8">
+<SCRIPT language=javascript>
+
+function _CloseOnEsc() {
+  if (event.keyCode == 27) { window.close(); return; }
+}
+
+function Init() {                                                       // run on page load
+  document.body.onkeypress = _CloseOnEsc;
+
+  color = window.dialogArguments;
+  color = ValidateColor(color) || '000000';
+  View(color);                                                          // set default color
+}
+
+function View(color) {                  // preview color
+  document.all.ColorPreview.style.backgroundColor = '#' + color;
+  document.all.ColorHex.value = '#' + color;
+}
+
+function Set(string) {                   // select color
+  color = ValidateColor(string);
+  if (color == null) { alert("Invalid color code: " + string); }        // invalid color
+  else {                                                                // valid color
+    View(color);                          // show selected color
+    window.returnValue = color;           // set return value
+    window.close();                       // close dialog
+  }
+}
+
+function ValidateColor(string) {                // return valid color code
+  string = string || '';
+  string = string + "";
+  string = string.toUpperCase();
+  chars = '0123456789ABCDEF';
+  out   = '';
+
+  for (i=0; i<string.length; i++) {             // remove invalid color chars
+    schar = string.charAt(i);
+    if (chars.indexOf(schar) != -1) { out += schar; }
+  }
+    
+  if (out.length != 6) { return null; }            // check length
+  return out;
+} 
+
+</SCRIPT>
+
+<META content="MSHTML 6.00.3790.2759" name=GENERATOR></HEAD>
+<BODY bgColor=#000000 leftMargin=0 topMargin=0 onload=Init()>
+<FORM onsubmit="Set(document.all.ColorHex.value); return false;" method=get>
+<TABLE cellSpacing=0 cellPadding=4 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD vAlign=center bgColor=buttonface>
+      <DIV 
+      style="PADDING-RIGHT: 1px; PADDING-LEFT: 1px; PADDING-BOTTOM: 1px; WIDTH: 50px; PADDING-TOP: 1px; HEIGHT: 21px; BACKGROUND-COLOR: #000000">
+      <DIV id=ColorPreview style="WIDTH: 100%; HEIGHT: 100%"></DIV></DIV></TD>
+    <TD vAlign=center bgColor=buttonface><INPUT style="FONT-SIZE: 12px" 
+      size=15 name=ColorHex></TD>
+    <TD width="100%" bgColor=buttonface></TD></TR></TBODY></TABLE>
+<TABLE style="CURSOR: hand" cellSpacing=1 cellPadding=0 bgColor=#000000 
+border=0>
+  <TBODY>
+  <TR>
+    <TD onmouseover="View('000000')" onclick="Set('000000')" width=10 
+    bgColor=#000000 height=10></TD>
+    <TD onmouseover="View('000000')" onclick="Set('000000')" width=10 
+    bgColor=#000000 height=10></TD>
+    <TD onmouseover="View('000000')" onclick="Set('000000')" width=10 
+    bgColor=#000000 height=10></TD>
+    <TD onmouseover="View('000000')" onclick="Set('000000')" width=10 
+    bgColor=#000000 height=10></TD>
+    <TD onmouseover="View('003300')" onclick="Set('003300')" width=10 
+    bgColor=#003300 height=10></TD>
+    <TD onmouseover="View('006600')" onclick="Set('006600')" width=10 
+    bgColor=#006600 height=10></TD>
+    <TD onmouseover="View('009900')" onclick="Set('009900')" width=10 
+    bgColor=#009900 height=10></TD>
+    <TD onmouseover="View('00CC00')" onclick="Set('00CC00')" width=10 
+    bgColor=#00cc00 height=10></TD>
+    <TD onmouseover="View('00FF00')" onclick="Set('00FF00')" width=10 
+    bgColor=#00ff00 height=10></TD>
+    <TD onmouseover="View('330000')" onclick="Set('330000')" width=10 
+    bgColor=#330000 height=10></TD>
+    <TD onmouseover="View('333300')" onclick="Set('333300')" width=10 
+    bgColor=#333300 height=10></TD>
+    <TD onmouseover="View('336600')" onclick="Set('336600')" width=10 
+    bgColor=#336600 height=10></TD>
+    <TD onmouseover="View('339900')" onclick="Set('339900')" width=10 
+    bgColor=#339900 height=10></TD>
+    <TD onmouseover="View('33CC00')" onclick="Set('33CC00')" width=10 
+    bgColor=#33cc00 height=10></TD>
+    <TD onmouseover="View('33FF00')" onclick="Set('33FF00')" width=10 
+    bgColor=#33ff00 height=10></TD>
+    <TD onmouseover="View('660000')" onclick="Set('660000')" width=10 
+    bgColor=#660000 height=10></TD>
+    <TD onmouseover="View('663300')" onclick="Set('663300')" width=10 
+    bgColor=#663300 height=10></TD>
+    <TD onmouseover="View('666600')" onclick="Set('666600')" width=10 
+    bgColor=#666600 height=10></TD>
+    <TD onmouseover="View('669900')" onclick="Set('669900')" width=10 
+    bgColor=#669900 height=10></TD>
+    <TD onmouseover="View('66CC00')" onclick="Set('66CC00')" width=10 
+    bgColor=#66cc00 height=10></TD>
+    <TD onmouseover="View('66FF00')" onclick="Set('66FF00')" width=10 
+    bgColor=#66ff00 height=10></TD></TR>
+  <TR>
+    <TD onmouseover="View('000000')" onclick="Set('000000')" width=10 
+    bgColor=#000000 height=10></TD>
+    <TD onmouseover="View('333333')" onclick="Set('333333')" width=10 
+    bgColor=#333333 height=10></TD>
+    <TD onmouseover="View('000000')" onclick="Set('000000')" width=10 
+    bgColor=#000000 height=10></TD>
+    <TD onmouseover="View('000033')" onclick="Set('000033')" width=10 
+    bgColor=#000033 height=10></TD>
+    <TD onmouseover="View('003333')" onclick="Set('003333')" width=10 
+    bgColor=#003333 height=10></TD>
+    <TD onmouseover="View('006633')" onclick="Set('006633')" width=10 
+    bgColor=#006633 height=10></TD>
+    <TD onmouseover="View('009933')" onclick="Set('009933')" width=10 
+    bgColor=#009933 height=10></TD>
+    <TD onmouseover="View('00CC33')" onclick="Set('00CC33')" width=10 
+    bgColor=#00cc33 height=10></TD>
+    <TD onmouseover="View('00FF33')" onclick="Set('00FF33')" width=10 
+    bgColor=#00ff33 height=10></TD>
+    <TD onmouseover="View('330033')" onclick="Set('330033')" width=10 
+    bgColor=#330033 height=10></TD>
+    <TD onmouseover="View('333333')" onclick="Set('333333')" width=10 
+    bgColor=#333333 height=10></TD>
+    <TD onmouseover="View('336633')" onclick="Set('336633')" width=10 
+    bgColor=#336633 height=10></TD>
+    <TD onmouseover="View('339933')" onclick="Set('339933')" width=10 
+    bgColor=#339933 height=10></TD>
+    <TD onmouseover="View('33CC33')" onclick="Set('33CC33')" width=10 
+    bgColor=#33cc33 height=10></TD>
+    <TD onmouseover="View('33FF33')" onclick="Set('33FF33')" width=10 
+    bgColor=#33ff33 height=10></TD>
+    <TD onmouseover="View('660033')" onclick="Set('660033')" width=10 
+    bgColor=#660033 height=10></TD>
+    <TD onmouseover="View('663333')" onclick="Set('663333')" width=10 
+    bgColor=#663333 height=10></TD>
+    <TD onmouseover="View('666633')" onclick="Set('666633')" width=10 
+    bgColor=#666633 height=10></TD>
+    <TD onmouseover="View('669933')" onclick="Set('669933')" width=10 
+    bgColor=#669933 height=10></TD>
+    <TD onmouseover="View('66CC33')" onclick="Set('66CC33')" width=10 
+    bgColor=#66cc33 height=10></TD>
+    <TD onmouseover="View('66FF33')" onclick="Set('66FF33')" width=10 
+    bgColor=#66ff33 height=10></TD></TR>
+  <TR>
+    <TD onmouseover="View('000000')" onclick="Set('000000')" width=10 
+    bgColor=#000000 height=10></TD>
+    <TD onmouseover="View('666666')" onclick="Set('666666')" width=10 
+    bgColor=#666666 height=10></TD>
+    <TD onmouseover="View('000000')" onclick="Set('000000')" width=10 
+    bgColor=#000000 height=10></TD>
+    <TD onmouseover="View('000066')" onclick="Set('000066')" width=10 
+    bgColor=#000066 height=10></TD>
+    <TD onmouseover="View('003366')" onclick="Set('003366')" width=10 
+    bgColor=#003366 height=10></TD>
+    <TD onmouseover="View('006666')" onclick="Set('006666')" width=10 
+    bgColor=#006666 height=10></TD>
+    <TD onmouseover="View('009966')" onclick="Set('009966')" width=10 
+    bgColor=#009966 height=10></TD>
+    <TD onmouseover="View('00CC66')" onclick="Set('00CC66')" width=10 
+    bgColor=#00cc66 height=10></TD>
+    <TD onmouseover="View('00FF66')" onclick="Set('00FF66')" width=10 
+    bgColor=#00ff66 height=10></TD>
+    <TD onmouseover="View('330066')" onclick="Set('330066')" width=10 
+    bgColor=#330066 height=10></TD>
+    <TD onmouseover="View('333366')" onclick="Set('333366')" width=10 
+    bgColor=#333366 height=10></TD>
+    <TD onmouseover="View('336666')" onclick="Set('336666')" width=10 
+    bgColor=#336666 height=10></TD>
+    <TD onmouseover="View('339966')" onclick="Set('339966')" width=10 
+    bgColor=#339966 height=10></TD>
+    <TD onmouseover="View('33CC66')" onclick="Set('33CC66')" width=10 
+    bgColor=#33cc66 height=10></TD>
+    <TD onmouseover="View('33FF66')" onclick="Set('33FF66')" width=10 
+    bgColor=#33ff66 height=10></TD>
+    <TD onmouseover="View('660066')" onclick="Set('660066')" width=10 
+    bgColor=#660066 height=10></TD>
+    <TD onmouseover="View('663366')" onclick="Set('663366')" width=10 
+    bgColor=#663366 height=10></TD>
+    <TD onmouseover="View('666666')" onclick="Set('666666')" width=10 
+    bgColor=#666666 height=10></TD>
+    <TD onmouseover="View('669966')" onclick="Set('669966')" width=10 
+    bgColor=#669966 height=10></TD>
+    <TD onmouseover="View('66CC66')" onclick="Set('66CC66')" width=10 
+    bgColor=#66cc66 height=10></TD>
+    <TD onmouseover="View('66FF66')" onclick="Set('66FF66')" width=10 
+    bgColor=#66ff66 height=10></TD></TR>
+  <TR>
+    <TD onmouseover="View('000000')" onclick="Set('000000')" width=10 
+    bgColor=#000000 height=10></TD>
+    <TD onmouseover="View('999999')" onclick="Set('999999')" width=10 
+    bgColor=#999999 height=10></TD>
+    <TD onmouseover="View('000000')" onclick="Set('000000')" width=10 
+    bgColor=#000000 height=10></TD>
+    <TD onmouseover="View('000099')" onclick="Set('000099')" width=10 
+    bgColor=#000099 height=10></TD>
+    <TD onmouseover="View('003399')" onclick="Set('003399')" width=10 
+    bgColor=#003399 height=10></TD>
+    <TD onmouseover="View('006699')" onclick="Set('006699')" width=10 
+    bgColor=#006699 height=10></TD>
+    <TD onmouseover="View('009999')" onclick="Set('009999')" width=10 
+    bgColor=#009999 height=10></TD>
+    <TD onmouseover="View('00CC99')" onclick="Set('00CC99')" width=10 
+    bgColor=#00cc99 height=10></TD>
+    <TD onmouseover="View('00FF99')" onclick="Set('00FF99')" width=10 
+    bgColor=#00ff99 height=10></TD>
+    <TD onmouseover="View('330099')" onclick="Set('330099')" width=10 
+    bgColor=#330099 height=10></TD>
+    <TD onmouseover="View('333399')" onclick="Set('333399')" width=10 
+    bgColor=#333399 height=10></TD>
+    <TD onmouseover="View('336699')" onclick="Set('336699')" width=10 
+    bgColor=#336699 height=10></TD>
+    <TD onmouseover="View('339999')" onclick="Set('339999')" width=10 
+    bgColor=#339999 height=10></TD>
+    <TD onmouseover="View('33CC99')" onclick="Set('33CC99')" width=10 
+    bgColor=#33cc99 height=10></TD>
+    <TD onmouseover="View('33FF99')" onclick="Set('33FF99')" width=10 
+    bgColor=#33ff99 height=10></TD>
+    <TD onmouseover="View('660099')" onclick="Set('660099')" width=10 
+    bgColor=#660099 height=10></TD>
+    <TD onmouseover="View('663399')" onclick="Set('663399')" width=10 
+    bgColor=#663399 height=10></TD>
+    <TD onmouseover="View('666699')" onclick="Set('666699')" width=10 
+    bgColor=#666699 height=10></TD>
+    <TD onmouseover="View('669999')" onclick="Set('669999')" width=10 
+    bgColor=#669999 height=10></TD>
+    <TD onmouseover="View('66CC99')" onclick="Set('66CC99')" width=10 
+    bgColor=#66cc99 height=10></TD>
+    <TD onmouseover="View('66FF99')" onclick="Set('66FF99')" width=10 
+    bgColor=#66ff99 height=10></TD></TR>
+  <TR>
+    <TD onmouseover="View('000000')" onclick="Set('000000')" width=10 
+    bgColor=#000000 height=10></TD>
+    <TD onmouseover="View('CCCCCC')" onclick="Set('CCCCCC')" width=10 
+    bgColor=#cccccc height=10></TD>
+    <TD onmouseover="View('000000')" onclick="Set('000000')" width=10 
+    bgColor=#000000 height=10></TD>
+    <TD onmouseover="View('0000CC')" onclick="Set('0000CC')" width=10 
+    bgColor=#0000cc height=10></TD>
+    <TD onmouseover="View('0033CC')" onclick="Set('0033CC')" width=10 
+    bgColor=#0033cc height=10></TD>
+    <TD onmouseover="View('0066CC')" onclick="Set('0066CC')" width=10 
+    bgColor=#0066cc height=10></TD>
+    <TD onmouseover="View('0099CC')" onclick="Set('0099CC')" width=10 
+    bgColor=#0099cc height=10></TD>
+    <TD onmouseover="View('00CCCC')" onclick="Set('00CCCC')" width=10 
+    bgColor=#00cccc height=10></TD>
+    <TD onmouseover="View('00FFCC')" onclick="Set('00FFCC')" width=10 
+    bgColor=#00ffcc height=10></TD>
+    <TD onmouseover="View('3300CC')" onclick="Set('3300CC')" width=10 
+    bgColor=#3300cc height=10></TD>
+    <TD onmouseover="View('3333CC')" onclick="Set('3333CC')" width=10 
+    bgColor=#3333cc height=10></TD>
+    <TD onmouseover="View('3366CC')" onclick="Set('3366CC')" width=10 
+    bgColor=#3366cc height=10></TD>
+    <TD onmouseover="View('3399CC')" onclick="Set('3399CC')" width=10 
+    bgColor=#3399cc height=10></TD>
+    <TD onmouseover="View('33CCCC')" onclick="Set('33CCCC')" width=10 
+    bgColor=#33cccc height=10></TD>
+    <TD onmouseover="View('33FFCC')" onclick="Set('33FFCC')" width=10 
+    bgColor=#33ffcc height=10></TD>
+    <TD onmouseover="View('6600CC')" onclick="Set('6600CC')" width=10 
+    bgColor=#6600cc height=10></TD>
+    <TD onmouseover="View('6633CC')" onclick="Set('6633CC')" width=10 
+    bgColor=#6633cc height=10></TD>
+    <TD onmouseover="View('6666CC')" onclick="Set('6666CC')" width=10 
+    bgColor=#6666cc height=10></TD>
+    <TD onmouseover="View('6699CC')" onclick="Set('6699CC')" width=10 
+    bgColor=#6699cc height=10></TD>
+    <TD onmouseover="View('66CCCC')" onclick="Set('66CCCC')" width=10 
+    bgColor=#66cccc height=10></TD>
+    <TD onmouseover="View('66FFCC')" onclick="Set('66FFCC')" width=10 
+    bgColor=#66ffcc height=10></TD></TR>
+  <TR>
+    <TD onmouseover="View('000000')" onclick="Set('000000')" width=10 
+    bgColor=#000000 height=10></TD>
+    <TD onmouseover="View('FFFFFF')" onclick="Set('FFFFFF')" width=10 
+    bgColor=#ffffff height=10></TD>
+    <TD onmouseover="View('000000')" onclick="Set('000000')" width=10 
+    bgColor=#000000 height=10></TD>
+    <TD onmouseover="View('0000FF')" onclick="Set('0000FF')" width=10 
+    bgColor=#0000ff height=10></TD>
+    <TD onmouseover="View('0033FF')" onclick="Set('0033FF')" width=10 
+    bgColor=#0033ff height=10></TD>
+    <TD onmouseover="View('0066FF')" onclick="Set('0066FF')" width=10 
+    bgColor=#0066ff height=10></TD>
+    <TD onmouseover="View('0099FF')" onclick="Set('0099FF')" width=10 
+    bgColor=#0099ff height=10></TD>
+    <TD onmouseover="View('00CCFF')" onclick="Set('00CCFF')" width=10 
+    bgColor=#00ccff height=10></TD>
+    <TD onmouseover="View('00FFFF')" onclick="Set('00FFFF')" width=10 
+    bgColor=#00ffff height=10></TD>
+    <TD onmouseover="View('3300FF')" onclick="Set('3300FF')" width=10 
+    bgColor=#3300ff height=10></TD>
+    <TD onmouseover="View('3333FF')" onclick="Set('3333FF')" width=10 
+    bgColor=#3333ff height=10></TD>
+    <TD onmouseover="View('3366FF')" onclick="Set('3366FF')" width=10 
+    bgColor=#3366ff height=10></TD>
+    <TD onmouseover="View('3399FF')" onclick="Set('3399FF')" width=10 
+    bgColor=#3399ff height=10></TD>
+    <TD onmouseover="View('33CCFF')" onclick="Set('33CCFF')" width=10 
+    bgColor=#33ccff height=10></TD>
+    <TD onmouseover="View('33FFFF')" onclick="Set('33FFFF')" width=10 
+    bgColor=#33ffff height=10></TD>
+    <TD onmouseover="View('6600FF')" onclick="Set('6600FF')" width=10 
+    bgColor=#6600ff height=10></TD>
+    <TD onmouseover="View('6633FF')" onclick="Set('6633FF')" width=10 
+    bgColor=#6633ff height=10></TD>
+    <TD onmouseover="View('6666FF')" onclick="Set('6666FF')" width=10 
+    bgColor=#6666ff height=10></TD>
+    <TD onmouseover="View('6699FF')" onclick="Set('6699FF')" width=10 
+    bgColor=#6699ff height=10></TD>
+    <TD onmouseover="View('66CCFF')" onclick="Set('66CCFF')" width=10 
+    bgColor=#66ccff height=10></TD>
+    <TD onmouseover="View('66FFFF')" onclick="Set('66FFFF')" width=10 
+    bgColor=#66ffff height=10></TD></TR>
+  <TR>
+    <TD onmouseover="View('000000')" onclick="Set('000000')" width=10 
+    bgColor=#000000 height=10></TD>
+    <TD onmouseover="View('FF0000')" onclick="Set('FF0000')" width=10 
+    bgColor=#ff0000 height=10></TD>
+    <TD onmouseover="View('000000')" onclick="Set('000000')" width=10 
+    bgColor=#000000 height=10></TD>
+    <TD onmouseover="View('990000')" onclick="Set('990000')" width=10 
+    bgColor=#990000 height=10></TD>
+    <TD onmouseover="View('993300')" onclick="Set('993300')" width=10 
+    bgColor=#993300 height=10></TD>
+    <TD onmouseover="View('996600')" onclick="Set('996600')" width=10 
+    bgColor=#996600 height=10></TD>
+    <TD onmouseover="View('999900')" onclick="Set('999900')" width=10 
+    bgColor=#999900 height=10></TD>
+    <TD onmouseover="View('99CC00')" onclick="Set('99CC00')" width=10 
+    bgColor=#99cc00 height=10></TD>
+    <TD onmouseover="View('99FF00')" onclick="Set('99FF00')" width=10 
+    bgColor=#99ff00 height=10></TD>
+    <TD onmouseover="View('CC0000')" onclick="Set('CC0000')" width=10 
+    bgColor=#cc0000 height=10></TD>
+    <TD onmouseover="View('CC3300')" onclick="Set('CC3300')" width=10 
+    bgColor=#cc3300 height=10></TD>
+    <TD onmouseover="View('CC6600')" onclick="Set('CC6600')" width=10 
+    bgColor=#cc6600 height=10></TD>
+    <TD onmouseover="View('CC9900')" onclick="Set('CC9900')" width=10 
+    bgColor=#cc9900 height=10></TD>
+    <TD onmouseover="View('CCCC00')" onclick="Set('CCCC00')" width=10 
+    bgColor=#cccc00 height=10></TD>
+    <TD onmouseover="View('CCFF00')" onclick="Set('CCFF00')" width=10 
+    bgColor=#ccff00 height=10></TD>
+    <TD onmouseover="View('FF0000')" onclick="Set('FF0000')" width=10 
+    bgColor=#ff0000 height=10></TD>
+    <TD onmouseover="View('FF3300')" onclick="Set('FF3300')" width=10 
+    bgColor=#ff3300 height=10></TD>
+    <TD onmouseover="View('FF6600')" onclick="Set('FF6600')" width=10 
+    bgColor=#ff6600 height=10></TD>
+    <TD onmouseover="View('FF9900')" onclick="Set('FF9900')" width=10 
+    bgColor=#ff9900 height=10></TD>
+    <TD onmouseover="View('FFCC00')" onclick="Set('FFCC00')" width=10 
+    bgColor=#ffcc00 height=10></TD>
+    <TD onmouseover="View('FFFF00')" onclick="Set('FFFF00')" width=10 
+    bgColor=#ffff00 height=10></TD></TR>
+  <TR>
+    <TD onmouseover="View('000000')" onclick="Set('000000')" width=10 
+    bgColor=#000000 height=10></TD>
+    <TD onmouseover="View('00FF00')" onclick="Set('00FF00')" width=10 
+    bgColor=#00ff00 height=10></TD>
+    <TD onmouseover="View('000000')" onclick="Set('000000')" width=10 
+    bgColor=#000000 height=10></TD>
+    <TD onmouseover="View('990033')" onclick="Set('990033')" width=10 
+    bgColor=#990033 height=10></TD>
+    <TD onmouseover="View('993333')" onclick="Set('993333')" width=10 
+    bgColor=#993333 height=10></TD>
+    <TD onmouseover="View('996633')" onclick="Set('996633')" width=10 
+    bgColor=#996633 height=10></TD>
+    <TD onmouseover="View('999933')" onclick="Set('999933')" width=10 
+    bgColor=#999933 height=10></TD>
+    <TD onmouseover="View('99CC33')" onclick="Set('99CC33')" width=10 
+    bgColor=#99cc33 height=10></TD>
+    <TD onmouseover="View('99FF33')" onclick="Set('99FF33')" width=10 
+    bgColor=#99ff33 height=10></TD>
+    <TD onmouseover="View('CC0033')" onclick="Set('CC0033')" width=10 
+    bgColor=#cc0033 height=10></TD>
+    <TD onmouseover="View('CC3333')" onclick="Set('CC3333')" width=10 
+    bgColor=#cc3333 height=10></TD>
+    <TD onmouseover="View('CC6633')" onclick="Set('CC6633')" width=10 
+    bgColor=#cc6633 height=10></TD>
+    <TD onmouseover="View('CC9933')" onclick="Set('CC9933')" width=10 
+    bgColor=#cc9933 height=10></TD>
+    <TD onmouseover="View('CCCC33')" onclick="Set('CCCC33')" width=10 
+    bgColor=#cccc33 height=10></TD>
+    <TD onmouseover="View('CCFF33')" onclick="Set('CCFF33')" width=10 
+    bgColor=#ccff33 height=10></TD>
+    <TD onmouseover="View('FF0033')" onclick="Set('FF0033')" width=10 
+    bgColor=#ff0033 height=10></TD>
+    <TD onmouseover="View('FF3333')" onclick="Set('FF3333')" width=10 
+    bgColor=#ff3333 height=10></TD>
+    <TD onmouseover="View('FF6633')" onclick="Set('FF6633')" width=10 
+    bgColor=#ff6633 height=10></TD>
+    <TD onmouseover="View('FF9933')" onclick="Set('FF9933')" width=10 
+    bgColor=#ff9933 height=10></TD>
+    <TD onmouseover="View('FFCC33')" onclick="Set('FFCC33')" width=10 
+    bgColor=#ffcc33 height=10></TD>
+    <TD onmouseover="View('FFFF33')" onclick="Set('FFFF33')" width=10 
+    bgColor=#ffff33 height=10></TD></TR>
+  <TR>
+    <TD onmouseover="View('000000')" onclick="Set('000000')" width=10 
+    bgColor=#000000 height=10></TD>
+    <TD onmouseover="View('0000FF')" onclick="Set('0000FF')" width=10 
+    bgColor=#0000ff height=10></TD>
+    <TD onmouseover="View('000000')" onclick="Set('000000')" width=10 
+    bgColor=#000000 height=10></TD>
+    <TD onmouseover="View('990066')" onclick="Set('990066')" width=10 
+    bgColor=#990066 height=10></TD>
+    <TD onmouseover="View('993366')" onclick="Set('993366')" width=10 
+    bgColor=#993366 height=10></TD>
+    <TD onmouseover="View('996666')" onclick="Set('996666')" width=10 
+    bgColor=#996666 height=10></TD>
+    <TD onmouseover="View('999966')" onclick="Set('999966')" width=10 
+    bgColor=#999966 height=10></TD>
+    <TD onmouseover="View('99CC66')" onclick="Set('99CC66')" width=10 
+    bgColor=#99cc66 height=10></TD>
+    <TD onmouseover="View('99FF66')" onclick="Set('99FF66')" width=10 
+    bgColor=#99ff66 height=10></TD>
+    <TD onmouseover="View('CC0066')" onclick="Set('CC0066')" width=10 
+    bgColor=#cc0066 height=10></TD>
+    <TD onmouseover="View('CC3366')" onclick="Set('CC3366')" width=10 
+    bgColor=#cc3366 height=10></TD>
+    <TD onmouseover="View('CC6666')" onclick="Set('CC6666')" width=10 
+    bgColor=#cc6666 height=10></TD>
+    <TD onmouseover="View('CC9966')" onclick="Set('CC9966')" width=10 
+    bgColor=#cc9966 height=10></TD>
+    <TD onmouseover="View('CCCC66')" onclick="Set('CCCC66')" width=10 
+    bgColor=#cccc66 height=10></TD>
+    <TD onmouseover="View('CCFF66')" onclick="Set('CCFF66')" width=10 
+    bgColor=#ccff66 height=10></TD>
+    <TD onmouseover="View('FF0066')" onclick="Set('FF0066')" width=10 
+    bgColor=#ff0066 height=10></TD>
+    <TD onmouseover="View('FF3366')" onclick="Set('FF3366')" width=10 
+    bgColor=#ff3366 height=10></TD>
+    <TD onmouseover="View('FF6666')" onclick="Set('FF6666')" width=10 
+    bgColor=#ff6666 height=10></TD>
+    <TD onmouseover="View('FF9966')" onclick="Set('FF9966')" width=10 
+    bgColor=#ff9966 height=10></TD>
+    <TD onmouseover="View('FFCC66')" onclick="Set('FFCC66')" width=10 
+    bgColor=#ffcc66 height=10></TD>
+    <TD onmouseover="View('FFFF66')" onclick="Set('FFFF66')" width=10 
+    bgColor=#ffff66 height=10></TD></TR>
+  <TR>
+    <TD onmouseover="View('000000')" onclick="Set('000000')" width=10 
+    bgColor=#000000 height=10></TD>
+    <TD onmouseover="View('FFFF00')" onclick="Set('FFFF00')" width=10 
+    bgColor=#ffff00 height=10></TD>
+    <TD onmouseover="View('000000')" onclick="Set('000000')" width=10 
+    bgColor=#000000 height=10></TD>
+    <TD onmouseover="View('990099')" onclick="Set('990099')" width=10 
+    bgColor=#990099 height=10></TD>
+    <TD onmouseover="View('993399')" onclick="Set('993399')" width=10 
+    bgColor=#993399 height=10></TD>
+    <TD onmouseover="View('996699')" onclick="Set('996699')" width=10 
+    bgColor=#996699 height=10></TD>
+    <TD onmouseover="View('999999')" onclick="Set('999999')" width=10 
+    bgColor=#999999 height=10></TD>
+    <TD onmouseover="View('99CC99')" onclick="Set('99CC99')" width=10 
+    bgColor=#99cc99 height=10></TD>
+    <TD onmouseover="View('99FF99')" onclick="Set('99FF99')" width=10 
+    bgColor=#99ff99 height=10></TD>
+    <TD onmouseover="View('CC0099')" onclick="Set('CC0099')" width=10 
+    bgColor=#cc0099 height=10></TD>
+    <TD onmouseover="View('CC3399')" onclick="Set('CC3399')" width=10 
+    bgColor=#cc3399 height=10></TD>
+    <TD onmouseover="View('CC6699')" onclick="Set('CC6699')" width=10 
+    bgColor=#cc6699 height=10></TD>
+    <TD onmouseover="View('CC9999')" onclick="Set('CC9999')" width=10 
+    bgColor=#cc9999 height=10></TD>
+    <TD onmouseover="View('CCCC99')" onclick="Set('CCCC99')" width=10 
+    bgColor=#cccc99 height=10></TD>
+    <TD onmouseover="View('CCFF99')" onclick="Set('CCFF99')" width=10 
+    bgColor=#ccff99 height=10></TD>
+    <TD onmouseover="View('FF0099')" onclick="Set('FF0099')" width=10 
+    bgColor=#ff0099 height=10></TD>
+    <TD onmouseover="View('FF3399')" onclick="Set('FF3399')" width=10 
+    bgColor=#ff3399 height=10></TD>
+    <TD onmouseover="View('FF6699')" onclick="Set('FF6699')" width=10 
+    bgColor=#ff6699 height=10></TD>
+    <TD onmouseover="View('FF9999')" onclick="Set('FF9999')" width=10 
+    bgColor=#ff9999 height=10></TD>
+    <TD onmouseover="View('FFCC99')" onclick="Set('FFCC99')" width=10 
+    bgColor=#ffcc99 height=10></TD>
+    <TD onmouseover="View('FFFF99')" onclick="Set('FFFF99')" width=10 
+    bgColor=#ffff99 height=10></TD></TR>
+  <TR>
+    <TD onmouseover="View('000000')" onclick="Set('000000')" width=10 
+    bgColor=#000000 height=10></TD>
+    <TD onmouseover="View('00FFFF')" onclick="Set('00FFFF')" width=10 
+    bgColor=#00ffff height=10></TD>
+    <TD onmouseover="View('000000')" onclick="Set('000000')" width=10 
+    bgColor=#000000 height=10></TD>
+    <TD onmouseover="View('9900CC')" onclick="Set('9900CC')" width=10 
+    bgColor=#9900cc height=10></TD>
+    <TD onmouseover="View('9933CC')" onclick="Set('9933CC')" width=10 
+    bgColor=#9933cc height=10></TD>
+    <TD onmouseover="View('9966CC')" onclick="Set('9966CC')" width=10 
+    bgColor=#9966cc height=10></TD>
+    <TD onmouseover="View('9999CC')" onclick="Set('9999CC')" width=10 
+    bgColor=#9999cc height=10></TD>
+    <TD onmouseover="View('99CCCC')" onclick="Set('99CCCC')" width=10 
+    bgColor=#99cccc height=10></TD>
+    <TD onmouseover="View('99FFCC')" onclick="Set('99FFCC')" width=10 
+    bgColor=#99ffcc height=10></TD>
+    <TD onmouseover="View('CC00CC')" onclick="Set('CC00CC')" width=10 
+    bgColor=#cc00cc height=10></TD>
+    <TD onmouseover="View('CC33CC')" onclick="Set('CC33CC')" width=10 
+    bgColor=#cc33cc height=10></TD>
+    <TD onmouseover="View('CC66CC')" onclick="Set('CC66CC')" width=10 
+    bgColor=#cc66cc height=10></TD>
+    <TD onmouseover="View('CC99CC')" onclick="Set('CC99CC')" width=10 
+    bgColor=#cc99cc height=10></TD>
+    <TD onmouseover="View('CCCCCC')" onclick="Set('CCCCCC')" width=10 
+    bgColor=#cccccc height=10></TD>
+    <TD onmouseover="View('CCFFCC')" onclick="Set('CCFFCC')" width=10 
+    bgColor=#ccffcc height=10></TD>
+    <TD onmouseover="View('FF00CC')" onclick="Set('FF00CC')" width=10 
+    bgColor=#ff00cc height=10></TD>
+    <TD onmouseover="View('FF33CC')" onclick="Set('FF33CC')" width=10 
+    bgColor=#ff33cc height=10></TD>
+    <TD onmouseover="View('FF66CC')" onclick="Set('FF66CC')" width=10 
+    bgColor=#ff66cc height=10></TD>
+    <TD onmouseover="View('FF99CC')" onclick="Set('FF99CC')" width=10 
+    bgColor=#ff99cc height=10></TD>
+    <TD onmouseover="View('FFCCCC')" onclick="Set('FFCCCC')" width=10 
+    bgColor=#ffcccc height=10></TD>
+    <TD onmouseover="View('FFFFCC')" onclick="Set('FFFFCC')" width=10 
+    bgColor=#ffffcc height=10></TD></TR>
+  <TR>
+    <TD onmouseover="View('000000')" onclick="Set('000000')" width=10 
+    bgColor=#000000 height=10></TD>
+    <TD onmouseover="View('FF00FF')" onclick="Set('FF00FF')" width=10 
+    bgColor=#ff00ff height=10></TD>
+    <TD onmouseover="View('000000')" onclick="Set('000000')" width=10 
+    bgColor=#000000 height=10></TD>
+    <TD onmouseover="View('9900FF')" onclick="Set('9900FF')" width=10 
+    bgColor=#9900ff height=10></TD>
+    <TD onmouseover="View('9933FF')" onclick="Set('9933FF')" width=10 
+    bgColor=#9933ff height=10></TD>
+    <TD onmouseover="View('9966FF')" onclick="Set('9966FF')" width=10 
+    bgColor=#9966ff height=10></TD>
+    <TD onmouseover="View('9999FF')" onclick="Set('9999FF')" width=10 
+    bgColor=#9999ff height=10></TD>
+    <TD onmouseover="View('99CCFF')" onclick="Set('99CCFF')" width=10 
+    bgColor=#99ccff height=10></TD>
+    <TD onmouseover="View('99FFFF')" onclick="Set('99FFFF')" width=10 
+    bgColor=#99ffff height=10></TD>
+    <TD onmouseover="View('CC00FF')" onclick="Set('CC00FF')" width=10 
+    bgColor=#cc00ff height=10></TD>
+    <TD onmouseover="View('CC33FF')" onclick="Set('CC33FF')" width=10 
+    bgColor=#cc33ff height=10></TD>
+    <TD onmouseover="View('CC66FF')" onclick="Set('CC66FF')" width=10 
+    bgColor=#cc66ff height=10></TD>
+    <TD onmouseover="View('CC99FF')" onclick="Set('CC99FF')" width=10 
+    bgColor=#cc99ff height=10></TD>
+    <TD onmouseover="View('CCCCFF')" onclick="Set('CCCCFF')" width=10 
+    bgColor=#ccccff height=10></TD>
+    <TD onmouseover="View('CCFFFF')" onclick="Set('CCFFFF')" width=10 
+    bgColor=#ccffff height=10></TD>
+    <TD onmouseover="View('FF00FF')" onclick="Set('FF00FF')" width=10 
+    bgColor=#ff00ff height=10></TD>
+    <TD onmouseover="View('FF33FF')" onclick="Set('FF33FF')" width=10 
+    bgColor=#ff33ff height=10></TD>
+    <TD onmouseover="View('FF66FF')" onclick="Set('FF66FF')" width=10 
+    bgColor=#ff66ff height=10></TD>
+    <TD onmouseover="View('FF99FF')" onclick="Set('FF99FF')" width=10 
+    bgColor=#ff99ff height=10></TD>
+    <TD onmouseover="View('FFCCFF')" onclick="Set('FFCCFF')" width=10 
+    bgColor=#ffccff height=10></TD>
+    <TD onmouseover="View('FFFFFF')" onclick="Set('FFFFFF')" width=10 
+    bgColor=#ffffff height=10></TD></TR></TBODY></TABLE></FORM></BODY></HTML>

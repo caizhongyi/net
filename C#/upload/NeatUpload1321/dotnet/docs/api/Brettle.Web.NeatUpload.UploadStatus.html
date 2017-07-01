@@ -1,0 +1,63 @@
+<html dir="LTR">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" />
+    <meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5" />
+    <title>UploadStatus Enumeration</title>
+    <xml>
+    </xml>
+    <link rel="stylesheet" type="text/css" href="MSDN.css" />
+  </head>
+  <body id="bodyID" class="dtBODY">
+    <div id="nsbanner">
+      <div id="bannerrow1">
+        <table class="bannerparthead" cellspacing="0">
+          <tr id="hdr">
+            <td class="runninghead">NeatUpload Documentation</td>
+            <td class="product">
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div id="TitleRow">
+        <h1 class="dtH1">UploadStatus Enumeration</h1>
+      </div>
+    </div>
+    <div id="nstext">
+      <p> The status of an upload. </p>
+      <div class="syntax">
+        <div>public enum UploadStatus</div>
+      </div>
+      <h4 class="dtH4">Members</h4>
+      <div class="tablediv">
+        <table class="dtTABLE" cellspacing="0">
+          <tr valign="top">
+            <th width="50%">Member Name</th>
+            <th width="50%">Description</th>
+          </tr>
+<tr valign="top"><td><b>Unknown</b></td><td> Either the upload is unknown (e.g. an invalid post-back ID) or hasn't started to be received yet. </td></tr>
+<tr valign="top"><td><b>NormalInProgress</b></td><td> The upload is still being received and the request had a Content-Length header. </td></tr>
+<tr valign="top"><td><b>ChunkedInProgress</b></td><td> The upload is still being received and the request did not have a Content-Length header and has a Transfer-Encoding of "chunked". </td></tr>
+<tr valign="top"><td><b>ProcessingInProgress</b></td><td> The entire upload has been received but the request is still being processed (e.g. the upload page code-behind is still executing). </td></tr>
+<tr valign="top"><td><b>ProcessingCompleted</b></td><td>
+                <a href="Brettle.Web.NeatUpload.UploadModule.SetProcessingState.html">SetProcessingState</a> was called for this upload and the request has completed. </td></tr>
+<tr valign="top"><td><b>Completed</b></td><td>
+                <a href="Brettle.Web.NeatUpload.UploadModule.SetProcessingState.html">SetProcessingState</a> was not called for this upload and the request has completed. </td></tr>
+<tr valign="top"><td><b>Rejected</b></td><td> An <a href="Brettle.Web.NeatUpload.UploadException.html">UploadException</a> (or subclass) was thrown while receiving or processing the upload. </td></tr>
+<tr valign="top"><td><b>Failed</b></td><td> An exception that is not an <a href="Brettle.Web.NeatUpload.UploadException.html">UploadException</a> was thrown while receiving or processing the upload. </td></tr>
+<tr valign="top"><td><b>Cancelled</b></td><td> The upload was cancelled by calling <a href="Brettle.Web.NeatUpload.UploadModule.CancelPostBack.html">CancelPostBack</a></td></tr></table>
+      </div>
+      <h4 class="dtH4">Requirements</h4>
+      <p>
+        <b>Namespace: </b>
+        <a href="Brettle.Web.NeatUpload.html">Brettle.Web.NeatUpload</a>
+      </p>
+      <p>
+        <b>Assembly: </b>Brettle.Web.NeatUpload (in Brettle.Web.NeatUpload.dll)
+					</p>
+      <h4 class="dtH4">See Also</h4>
+      <p>
+        <a href="Brettle.Web.NeatUpload.html">Brettle.Web.NeatUpload Namespace</a>
+      </p>
+    </div>
+  </body>
+</html>

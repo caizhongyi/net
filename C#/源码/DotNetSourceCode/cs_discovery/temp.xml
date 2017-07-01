@@ -1,0 +1,24 @@
+﻿<img src='pieimage.aspx?name=pie_customers' usemap='#dea88afea25748bda1ae28aa3e260d1a'
+	border='0' />
+<map name="dea88afea25748bda1ae28aa3e260d1a">
+	<area shape="poly" coords="200,150,399,145,400,150," href="pie_orders.aspx?customerid=ALFKI"
+		title="客户名称:三川实业有限公司&#xD;&#xA;订单金额:518.7&#xD;&#xA;点击察看该客户订单的详细情况" />
+	<area shape="poly" coords="200,150,397,125,399,135,399,145," href="pie_orders.aspx?customerid=ANATR"
+		title="客户名称:东南实业&#xD;&#xA;订单金额:2581.95&#xD;&#xA;点击察看该客户订单的详细情况" />
+	<area shape="poly" coords="200,150,372,73,376,79,380,85,384,92,387,98,390,105,393,111,395,118,397,125,"
+		href="pie_orders.aspx?customerid=ANTON" title="客户名称:坦森行贸易&#xD;&#xA;订单金额:7023.97&#xD;&#xA;点击察看该客户订单的详细情况" />
+	<area shape="poly" coords="200,150,269,9,285,14,300,20,314,27,328,34,340,43,352,52,362,62,372,73,"
+		href="pie_orders.aspx?customerid=AROUT" title="客户名称:国顶有限公司&#xD;&#xA;订单金额:12899.15&#xD;&#xA;点击察看该客户订单的详细情况" />
+	<area shape="poly" coords="200,150,36,64,46,54,57,44,69,36,82,28,96,21,110,16,125,11,140,6,155,3,171,1,188,0,204,0,220,0,237,2,253,5,269,9,"
+		href="pie_orders.aspx?customerid=BERGS" title="客户名称:通恒机械&#xD;&#xA;订单金额:24927.57&#xD;&#xA;点击察看该客户订单的详细情况" />
+	<area shape="poly" coords="200,150,18,86,26,75,36,64," href="pie_orders.aspx?customerid=BLAUS"
+		title="客户名称:森通&#xD;&#xA;订单金额:3239.8&#xD;&#xA;点击察看该客户订单的详细情况" />
+	<area shape="poly" coords="200,150,28,227,22,219,17,210,12,202,8,193,5,184,3,175,1,166,0,157,0,148,0,139,1,130,3,121,6,112,9,103,13,95,18,86,"
+		href="pie_orders.aspx?customerid=BLONP" title="客户名称:国皓&#xD;&#xA;订单金额:18534.08&#xD;&#xA;点击察看该客户订单的详细情况" />
+	<area shape="poly" coords="200,150,61,258,52,251,43,243,35,235,28,227," href="pie_orders.aspx?customerid=BOLID"
+		title="客户名称:迈多贸易&#xD;&#xA;订单金额:5047.35&#xD;&#xA;点击察看该客户订单的详细情况" />
+	<area shape="poly" coords="200,150,291,283,276,288,261,292,246,295,231,298,216,299,201,300,186,299,171,298,156,296,141,293,126,289,112,285,99,279,86,273,73,266,61,258,"
+		href="pie_orders.aspx?customerid=BONAP" title="客户名称:祥通&#xD;&#xA;订单金额:23388.24&#xD;&#xA;点击察看该客户订单的详细情况" />
+	<area shape="poly" coords="200,150,400,150,399,160,398,170,395,181,392,191,388,200,383,210,377,219,370,228,363,236,354,244,345,252,336,259,325,266,314,272,303,278,291,283,"
+		href="pie_orders.aspx?customerid=BOTTM" title="客户名称:广通&#xD;&#xA;订单金额:20801.6&#xD;&#xA;点击察看该客户订单的详细情况" />
+</map>

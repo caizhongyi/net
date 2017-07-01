@@ -1,0 +1,46 @@
+﻿/*
+text
+*/
+.czy-text{ border:solid 1px #9fbbe2; background-repeat:repeat-x; background-image:url(../images/controls/czy-text-bg.gif); }	
+
+/*
+button
+*/
+.czy-button{ border:solid 1px #9fbbe2; background-repeat:repeat-x; background-image:url(../images/controls/czy-text-bg.gif); }
+
+
+/*
+ * select
+ */	
+.czy-select-text{color:#999999; border:solid 1px #9fbbe2; background-repeat:repeat-x; background-image:url(../images/controls/czy-text-bg.gif); }
+.czy-select-mouseOn{ cursor:pointer; background-color:#9fbbe2; }
+.czy-select-mouseOut{cursor:pointer; background-color:#ffffff;}
+.czy-ul-list{border:solid 1px #d0d0d0;background-color:#fafafa;margin:0px;padding:0px;}
+.czy-select-list
+{
+
+/*scrollbar-highlight-color:#ffffff ;/*滚动条空白部分的颜色*/
+/*scrollbar-3d-light-color:#ffffff;/*立体滚动条亮边的颜色（设置滚动条的颜色）*/ 
+/*scrollbar-shadow-color:#ffffff;/*阴影的颜色*/ 
+/*scrollbar-dark-shadow-color:#ffffff;/*立体滚动条强阴影的颜色*/ 
+scrollbar-arrow-color:#9fbbe2;/*上下按钮上三角箭头的颜色 */ 
+/*scrollbar-base-color:#ffffff;/*滚动条的基本颜色 */ 
+/*scrollbar-face-color:#ffffff;/*立体滚动条凸出部分的颜色 */ 
+
+SCROLLBAR-FACE-COLOR: #ffffe0;/*立体滚动条凸出部分的颜色 */ 
+SCROLLBAR-HIGHLIGHT-COLOR: #ffffe0; /*滚动条空白部分的颜色*/
+OVERFLOW: scroll;
+SCROLLBAR-SHADOW-COLOR: #ccccff;/*阴影的颜色*/ 
+SCROLLBAR-3DLIGHT-COLOR: #ccccff; /*立体滚动条亮边的颜色（设置滚动条的颜色）*/ 
+SCROLLBAR-DARKSHADOW-COLOR: #ffffcc; /*立体滚动条强阴影的颜色*/ 
+border-width:0px;/*立体滚动条亮边的颜色（设置滚动条的颜色）*/ 
+overflow-x:hidden;/*X轴隐藏*/ 
+overflow-y:auto;/*Y轴设有滚动条*/ 
+border:solid 1px #d0d0d0;
+background-color:#fafafa;
+}
+
+.czy-grid {  line-height:30px; text-align:center; font-size:13px;}
+.czy-grid-header{background-color:#9fbbe2;}
+.czy-grid-header li{ float:left;}
+.czy-grid-header a{ text-decoration:none;}

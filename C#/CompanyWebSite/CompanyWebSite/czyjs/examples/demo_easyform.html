@@ -1,0 +1,100 @@
+﻿<html>
+	<head>
+<script type="text/javascript" src="../czy-js-all.js"></script>
+<link rel="stylesheet" href="../czy-css-all.css" type="text/css"/>
+<script type="text/javascript">
+var EasyForm;
+window.onload=function()
+{
+	 
+
+        //创建窗口对像
+   
+                EasyForm = new czyjs.UI.EasyWindowForm(
+		        {
+                    id:"easyform",
+		            width:400,
+		            height:400,
+		            formContent: "aa",//<img src='pic/pic0.jpg'  />
+		            speed: 50,
+		            formTopHTML: "Easy",
+		            isPicture: true,
+                    scroll:false,
+                    className: "czy-easyform",
+                    border:{ width: 10, height: 10 },
+                    operPic:{ width: 32, height: 32 },
+                    //type:'opacity',
+                    type: 'zoom'
+		        }
+		        );
+   
+}
+ DD_belatedPNG.fix('div,td,.png,background');
+function correctPNG()
+{
+    var arVersion = navigator.appVersion.split("MSIE")
+    var version = parseFloat(arVersion[1])
+    if ((version >= 5.5) && (document.body.filters)) 
+    {
+       for(var j=0; j<document.images.length; j++)
+       {
+          var img = document.images[j]
+          var imgName = img.src.toUpperCase()
+          if (imgName.substring(imgName.length-3, imgName.length) == "PNG")
+          {
+             var imgID = (img.id) ? "id='" + img.id + "' " : ""
+             var imgClass = (img.className) ? "class='" + img.className + "' " : ""
+             var imgTitle = (img.title) ? "title='" + img.title + "' " : "title='" + img.alt + "' "
+             var imgStyle = "display:inline-block;" + img.style.cssText 
+             if (img.align == "left") imgStyle = "float:left;" + imgStyle
+             if (img.align == "right") imgStyle = "float:right;" + imgStyle
+             if (img.parentElement.href) imgStyle = "cursor:hand;" + imgStyle
+             var strNewHTML = "<span " + imgID + imgClass + imgTitle
+             + " style=\"" + "width:" + img.width + "px; height:" + img.height + "px;" + imgStyle + ";"
+             + "filter:progid:DXImageTransform.Microsoft.AlphaImageLoader"
+             + "(src=\'" + img.src + "\', sizingMethod='scale');\"></span>" 
+             img.outerHTML = strNewHTML
+             j = j-1
+          }
+       }
+    }    
+}
+
+</script>
+
+	</head>
+	<body>
+<input type="button" onclick="EasyForm.Show();" value="Show" ></input>
+<input type="button" onclick="EasyForm.Close();" value="Close" ></input>
+<div style="width:auto; height:auto; background-color:Red;">bbb</div>
+
+<table width='500' height='500' border="1" cellpadding="1" cellspacing="1" >
+<tr>
+<td width='10' height='10' style=' background-image:url(../images/easyform/GlassBlack/GlassBlack-top-left.png);'>
+</td>
+<td>
+</td>
+<td width='10' height='10' style='background-color:Red'>
+</td>
+</tr>
+
+<tr>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+
+<tr>
+<td width='10' height='10' style='background-color:blue'>
+</td>
+<td>
+</td>
+<td width='10' height='10' style='background-color:green'>
+</td>
+</tr>
+</table>
+	</body>
+</html>

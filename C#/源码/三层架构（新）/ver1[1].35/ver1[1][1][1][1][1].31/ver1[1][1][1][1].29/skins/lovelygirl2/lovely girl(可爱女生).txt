@@ -1,0 +1,15 @@
+
+SkinName:       lovely girl(可爱女生)
+使用环境:       PJBlog2 2.3.0923 正式版
+兼容测试:       适用于IE6,firefox并已测试，其他浏览器未做测试，需自行调试
+Skin Designer:  cckj(虫虫)
+pubDate:        05-09-25
+Designer Site:  http://cckj.502wr.net
+Designer Mail:  wanwanye@gmail.com
+CopyRight:      skin创意来源于某论坛风格，之后由本人做成pjblog的skin并应用于2.2版本，此次特地修改成2.3适用版，本站保留对skin的修改权限,按照创作共同约定1.0原则,你可以“拷贝、分发、呈现和表演当前作品；制作派生作品”但必须遵守“署名、非商业用途、保持一致”。
+
+使用和修改本skin的同时请保留左上角的设计版权。谢谢
+
+说明：在原先2.2版本skin基础上稍做修改并调整了界面排列使之在firefox更适应。之前在论坛里看到早就有人将这个skin修改为2.3适用的了，但却堂而皇之的标上自己的版权。本人郑重声明：任何人可以修改并发表我的作品，但请保留我的版权，谢谢
+
+下载地址： http://cckj.502wr.net/cckj/article.asp?id=90

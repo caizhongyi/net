@@ -1,0 +1,55 @@
+﻿#parse("_head.html")
+<script type="text/javascript" src="$webpath/library/xmleditor/xheditor-zh-cn.min.js"></script>
+<div id="snsmenu">
+#parse("_menu.html")
+</div>
+<div id="snsbody">
+    <div id="snshead">添加/修改帮助</div>
+
+
+    <div class="itemmenu">
+        <ul>
+            <li ><a href="$webpath/help/default$exname">帮助索引</a></li>
+            <li class="current"><a href="$webpath/help/new$exname">添加帮助</a></li>
+        </ul>
+    </div>
+    
+     
+      <form action="" method="post">
+        <div class="pitem">
+            <em>帮助标题</em><input id="title"  name="title" type="text" value="#if($title)$title#end" class="f-text"  style="width:50%;" />
+        </div>
+        <div class="pitem">
+            <em>帮助编号</em><input id="helpid"  name="helpid" type="text" value="#if($helpid)$helpid#end" class="f-text"  style="width:50%;" />
+        </div>
+        <div class="pitem">
+            <textarea runat="server" name="txtcontent"  class="xheditor-simple {upBtnText:'上传',upMultiple:5,upLinkUrl:'$editfile',upImgUrl:'$edit_pic',skin:'$editskin'}" id="txtcontent" style="width:80%;height:300px">#if($content)$content#end</textarea>
+        </div>
+        <div class="pitem">
+            <em>&nbsp;</em><input id="Text1"  name="" value="保存帮助" onclick="return checkdata();" type="submit" class="btn_blue4"  />
+        </div>
+      </form>
+    
+</div>
+#parse("_foot.html")
+<script type="text/javascript">
+   
+       function checkdata()
+    {
+        var t=jQuery("#title").val();
+        if(t=="")
+        {
+             showErrorResult("请填写标题");
+            document.getElementById("title").focus();
+            return false;
+        }
+        var Content=jQuery("#txtcontent").val();
+         if(Content=="") 
+         { 
+             showErrorResult("请填写帮助内容");
+             return false; 
+         } 
+        return true;
+    }
+
+</script>

@@ -1,0 +1,605 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{61437893-E2A6-4B24-9D31-8721B38F871A}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Dos</RootNamespace>
+    <AssemblyName>Dos</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="data\data.mdb">
+    </Content>
+    <Content Include="DeFault.aspx" />
+    <Content Include="DoNetEditor\default\DoNetEditor.js" />
+    <Content Include="DoNetEditor\default\images\ed_align_center.gif" />
+    <Content Include="DoNetEditor\default\images\ed_align_left.gif" />
+    <Content Include="DoNetEditor\default\images\ed_align_right.gif" />
+    <Content Include="DoNetEditor\default\images\ed_color_bg.gif" />
+    <Content Include="DoNetEditor\default\images\ed_color_fg.gif" />
+    <Content Include="DoNetEditor\default\images\ed_file.gif" />
+    <Content Include="DoNetEditor\default\images\ed_format_bold.gif" />
+    <Content Include="DoNetEditor\default\images\ed_format_italic.gif" />
+    <Content Include="DoNetEditor\default\images\ed_format_strike.gif" />
+    <Content Include="DoNetEditor\default\images\ed_format_sub.gif" />
+    <Content Include="DoNetEditor\default\images\ed_format_sup.gif" />
+    <Content Include="DoNetEditor\default\images\ed_format_underline.gif" />
+    <Content Include="DoNetEditor\default\images\ed_hr.gif" />
+    <Content Include="DoNetEditor\default\images\ed_html.gif" />
+    <Content Include="DoNetEditor\default\images\ed_image.gif" />
+    <Content Include="DoNetEditor\default\images\ed_indent_less.gif" />
+    <Content Include="DoNetEditor\default\images\ed_indent_more.gif" />
+    <Content Include="DoNetEditor\default\images\ed_link.gif" />
+    <Content Include="DoNetEditor\default\images\ed_list_bullet.gif" />
+    <Content Include="DoNetEditor\default\images\ed_list_num.gif" />
+    <Content Include="DoNetEditor\default\images\insert_table.gif" />
+    <Content Include="DoNetEditor\default\images\lef002.jpg" />
+    <Content Include="DoNetEditor\default\images\lef004.jpg" />
+    <Content Include="DoNetEditor\default\insert_file.htm" />
+    <Content Include="DoNetEditor\default\insert_image.htm" />
+    <Content Include="DoNetEditor\default\insert_table.htm" />
+    <Content Include="DoNetEditor\default\select_color.htm" />
+    <Content Include="Images\donetbbs_ad\banner468x60.gif" />
+    <Content Include="Images\donetbbs_ad\donetbbs_banner_ad.html" />
+    <Content Include="Images\First.gif" />
+    <Content Include="Images\Forums\ao1.gif" />
+    <Content Include="Images\Forums\ao2.gif" />
+    <Content Include="Images\Forums\ao3.gif" />
+    <Content Include="Images\Forums\a_delete.gif" />
+    <Content Include="Images\Forums\Boardmanage.gif" />
+    <Content Include="Images\Forums\board\2004121510022746.gif" />
+    <Content Include="Images\Forums\board\20041215101420799.gif" />
+    <Content Include="Images\Forums\board\2004121574052342.gif" />
+    <Content Include="Images\Forums\board\200412157564971.gif" />
+    <Content Include="Images\Forums\board\2004121585657825.gif" />
+    <Content Include="Images\Forums\board\2005424183730820.gif" />
+    <Content Include="Images\Forums\board\dv_001.gif" />
+    <Content Include="Images\Forums\board\dv_002.gif" />
+    <Content Include="Images\Forums\board\dv_003.gif" />
+    <Content Include="Images\Forums\board\dv_004.gif" />
+    <Content Include="Images\Forums\board\dv_005.gif" />
+    <Content Include="Images\Forums\board\dv_008_pcfans.gif" />
+    <Content Include="Images\Forums\board\dv_009_design.gif" />
+    <Content Include="Images\Forums\board\dv_009_disign.gif" />
+    <Content Include="Images\Forums\board\dv_011_water.gif" />
+    <Content Include="Images\Forums\board\dv_012_photo.gif" />
+    <Content Include="Images\Forums\board\dv_014_star.gif" />
+    <Content Include="Images\Forums\board\dv_016_music.gif" />
+    <Content Include="Images\Forums\board\dv_018_trip.gif" />
+    <Content Include="Images\Forums\board\dv_019_fashion.gif" />
+    <Content Include="Images\Forums\board\dv_021_netad.gif" />
+    <Content Include="Images\Forums\board\icon_10.gif" />
+    <Content Include="Images\Forums\board\icon_11.gif" />
+    <Content Include="Images\Forums\board\icon_118.gif" />
+    <Content Include="Images\Forums\board\icon_119.gif" />
+    <Content Include="Images\Forums\board\icon_12.gif" />
+    <Content Include="Images\Forums\board\icon_13.gif" />
+    <Content Include="Images\Forums\board\icon_14.gif" />
+    <Content Include="Images\Forums\board\icon_15.gif" />
+    <Content Include="Images\Forums\board\icon_16.gif" />
+    <Content Include="Images\Forums\board\icon_17.gif" />
+    <Content Include="Images\Forums\board\icon_18.gif" />
+    <Content Include="Images\Forums\board\icon_181.gif" />
+    <Content Include="Images\Forums\board\icon_19.gif" />
+    <Content Include="Images\Forums\board\icon_2.gif" />
+    <Content Include="Images\Forums\board\icon_20.gif" />
+    <Content Include="Images\Forums\board\icon_23.gif" />
+    <Content Include="Images\Forums\board\icon_24.gif" />
+    <Content Include="Images\Forums\board\icon_4.gif" />
+    <Content Include="Images\Forums\board\icon_5.gif" />
+    <Content Include="Images\Forums\board\icon_6.gif" />
+    <Content Include="Images\Forums\board\icon_7.gif" />
+    <Content Include="Images\Forums\board\icon_8.gif" />
+    <Content Include="Images\Forums\board\icon_9.gif" />
+    <Content Include="Images\Forums\board\index.htm" />
+    <Content Include="Images\Forums\board\logo_2.gif" />
+    <Content Include="Images\Forums\commend.gif" />
+    <Content Include="Images\Forums\EDIT.gif" />
+    <Content Include="Images\Forums\emot\em1.gif" />
+    <Content Include="Images\Forums\emot\em10.gif" />
+    <Content Include="Images\Forums\emot\em100.gif" />
+    <Content Include="Images\Forums\emot\em101.gif" />
+    <Content Include="Images\Forums\emot\em102.gif" />
+    <Content Include="Images\Forums\emot\em103.gif" />
+    <Content Include="Images\Forums\emot\em104.gif" />
+    <Content Include="Images\Forums\emot\em105.gif" />
+    <Content Include="Images\Forums\emot\em106.gif" />
+    <Content Include="Images\Forums\emot\em107.gif" />
+    <Content Include="Images\Forums\emot\em108.gif" />
+    <Content Include="Images\Forums\emot\em109.gif" />
+    <Content Include="Images\Forums\emot\em11.gif" />
+    <Content Include="Images\Forums\emot\em110.gif" />
+    <Content Include="Images\Forums\emot\em111.gif" />
+    <Content Include="Images\Forums\emot\em112.gif" />
+    <Content Include="Images\Forums\emot\em113.gif" />
+    <Content Include="Images\Forums\emot\em114.gif" />
+    <Content Include="Images\Forums\emot\em115.gif" />
+    <Content Include="Images\Forums\emot\em116.gif" />
+    <Content Include="Images\Forums\emot\em117.gif" />
+    <Content Include="Images\Forums\emot\em118.gif" />
+    <Content Include="Images\Forums\emot\em119.gif" />
+    <Content Include="Images\Forums\emot\em12.gif" />
+    <Content Include="Images\Forums\emot\em120.gif" />
+    <Content Include="Images\Forums\emot\em121.gif" />
+    <Content Include="Images\Forums\emot\em122.gif" />
+    <Content Include="Images\Forums\emot\em123.gif" />
+    <Content Include="Images\Forums\emot\em124.gif" />
+    <Content Include="Images\Forums\emot\em13.gif" />
+    <Content Include="Images\Forums\emot\em14.gif" />
+    <Content Include="Images\Forums\emot\em15.gif" />
+    <Content Include="Images\Forums\emot\em16.gif" />
+    <Content Include="Images\Forums\emot\em17.gif" />
+    <Content Include="Images\Forums\emot\em18.gif" />
+    <Content Include="Images\Forums\emot\em19.gif" />
+    <Content Include="Images\Forums\emot\em2.gif" />
+    <Content Include="Images\Forums\emot\em20.gif" />
+    <Content Include="Images\Forums\emot\em21.gif" />
+    <Content Include="Images\Forums\emot\em22.gif" />
+    <Content Include="Images\Forums\emot\em23.gif" />
+    <Content Include="Images\Forums\emot\em24.gif" />
+    <Content Include="Images\Forums\emot\em25.gif" />
+    <Content Include="Images\Forums\emot\em26.gif" />
+    <Content Include="Images\Forums\emot\em27.gif" />
+    <Content Include="Images\Forums\emot\em28.gif" />
+    <Content Include="Images\Forums\emot\em29.gif" />
+    <Content Include="Images\Forums\emot\em3.gif" />
+    <Content Include="Images\Forums\emot\em30.gif" />
+    <Content Include="Images\Forums\emot\em31.gif" />
+    <Content Include="Images\Forums\emot\em32.gif" />
+    <Content Include="Images\Forums\emot\em33.gif" />
+    <Content Include="Images\Forums\emot\em34.gif" />
+    <Content Include="Images\Forums\emot\em35.gif" />
+    <Content Include="Images\Forums\emot\em36.gif" />
+    <Content Include="Images\Forums\emot\em37.gif" />
+    <Content Include="Images\Forums\emot\em38.gif" />
+    <Content Include="Images\Forums\emot\em39.gif" />
+    <Content Include="Images\Forums\emot\em4.gif" />
+    <Content Include="Images\Forums\emot\em40.gif" />
+    <Content Include="Images\Forums\emot\em41.gif" />
+    <Content Include="Images\Forums\emot\em42.gif" />
+    <Content Include="Images\Forums\emot\em43.gif" />
+    <Content Include="Images\Forums\emot\em44.gif" />
+    <Content Include="Images\Forums\emot\em45.gif" />
+    <Content Include="Images\Forums\emot\em46.gif" />
+    <Content Include="Images\Forums\emot\em47.gif" />
+    <Content Include="Images\Forums\emot\em48.gif" />
+    <Content Include="Images\Forums\emot\em49.gif" />
+    <Content Include="Images\Forums\emot\em5.gif" />
+    <Content Include="Images\Forums\emot\em50.gif" />
+    <Content Include="Images\Forums\emot\em51.gif" />
+    <Content Include="Images\Forums\emot\em52.gif" />
+    <Content Include="Images\Forums\emot\em53.gif" />
+    <Content Include="Images\Forums\emot\em54.gif" />
+    <Content Include="Images\Forums\emot\em55.gif" />
+    <Content Include="Images\Forums\emot\em56.gif" />
+    <Content Include="Images\Forums\emot\em57.gif" />
+    <Content Include="Images\Forums\emot\em58.gif" />
+    <Content Include="Images\Forums\emot\em59.gif" />
+    <Content Include="Images\Forums\emot\em6.gif" />
+    <Content Include="Images\Forums\emot\em60.gif" />
+    <Content Include="Images\Forums\emot\em61.gif" />
+    <Content Include="Images\Forums\emot\em62.gif" />
+    <Content Include="Images\Forums\emot\em63.gif" />
+    <Content Include="Images\Forums\emot\em64.gif" />
+    <Content Include="Images\Forums\emot\em65.gif" />
+    <Content Include="Images\Forums\emot\em66.gif" />
+    <Content Include="Images\Forums\emot\em67.gif" />
+    <Content Include="Images\Forums\emot\em68.gif" />
+    <Content Include="Images\Forums\emot\em69.gif" />
+    <Content Include="Images\Forums\emot\em7.gif" />
+    <Content Include="Images\Forums\emot\em70.gif" />
+    <Content Include="Images\Forums\emot\em71.gif" />
+    <Content Include="Images\Forums\emot\em72.gif" />
+    <Content Include="Images\Forums\emot\em73.gif" />
+    <Content Include="Images\Forums\emot\em74.gif" />
+    <Content Include="Images\Forums\emot\em75.gif" />
+    <Content Include="Images\Forums\emot\em76.gif" />
+    <Content Include="Images\Forums\emot\em77.gif" />
+    <Content Include="Images\Forums\emot\em78.gif" />
+    <Content Include="Images\Forums\emot\em79.gif" />
+    <Content Include="Images\Forums\emot\em8.gif" />
+    <Content Include="Images\Forums\emot\em80.gif" />
+    <Content Include="Images\Forums\emot\em81.gif" />
+    <Content Include="Images\Forums\emot\em82.gif" />
+    <Content Include="Images\Forums\emot\em83.gif" />
+    <Content Include="Images\Forums\emot\em84.gif" />
+    <Content Include="Images\Forums\emot\em85.gif" />
+    <Content Include="Images\Forums\emot\em86.gif" />
+    <Content Include="Images\Forums\emot\em87.gif" />
+    <Content Include="Images\Forums\emot\em88.gif" />
+    <Content Include="Images\Forums\emot\em89.gif" />
+    <Content Include="Images\Forums\emot\em9.gif" />
+    <Content Include="Images\Forums\emot\em90.gif" />
+    <Content Include="Images\Forums\emot\em91.gif" />
+    <Content Include="Images\Forums\emot\em92.gif" />
+    <Content Include="Images\Forums\emot\em93.gif" />
+    <Content Include="Images\Forums\emot\em94.gif" />
+    <Content Include="Images\Forums\emot\em95.gif" />
+    <Content Include="Images\Forums\emot\em96.gif" />
+    <Content Include="Images\Forums\emot\em97.gif" />
+    <Content Include="Images\Forums\emot\em98.gif" />
+    <Content Include="Images\Forums\emot\em99.gif" />
+    <Content Include="Images\Forums\FindIcon.gif" />
+    <Content Include="Images\Forums\folder.gif" />
+    <Content Include="Images\Forums\forum_isnews.gif" />
+    <Content Include="Images\Forums\forum_lock.gif" />
+    <Content Include="Images\Forums\forum_nonews.gif" />
+    <Content Include="Images\Forums\forum_post.gif" />
+    <Content Include="Images\Forums\forum_today.gif" />
+    <Content Include="Images\Forums\forum_topic.gif" />
+    <Content Include="Images\Forums\gb.gif" />
+    <Content Include="Images\Forums\hotfolder.gif" />
+    <Content Include="Images\Forums\isbest.gif" />
+    <Content Include="Images\Forums\istop.gif" />
+    <Content Include="Images\Forums\lockfolder.gif" />
+    <Content Include="Images\Forums\messages1.gif" />
+    <Content Include="Images\Forums\messages2.gif" />
+    <Content Include="Images\Forums\PhotosIcon.gif" />
+    <Content Include="Images\Forums\reply_a.gif" />
+    <Content Include="Images\Forums\sigline.gif" />
+    <Content Include="Images\Forums\topicface\Copy of face18.gif" />
+    <Content Include="Images\Forums\topicface\face1.gif" />
+    <Content Include="Images\Forums\topicface\face10.gif" />
+    <Content Include="Images\Forums\topicface\face11.gif" />
+    <Content Include="Images\Forums\topicface\face12.gif" />
+    <Content Include="Images\Forums\topicface\face13.gif" />
+    <Content Include="Images\Forums\topicface\face14.gif" />
+    <Content Include="Images\Forums\topicface\face15.gif" />
+    <Content Include="Images\Forums\topicface\face16.gif" />
+    <Content Include="Images\Forums\topicface\face17.gif" />
+    <Content Include="Images\Forums\topicface\face18.gif" />
+    <Content Include="Images\Forums\topicface\face2.gif" />
+    <Content Include="Images\Forums\topicface\face3.gif" />
+    <Content Include="Images\Forums\topicface\face4.gif" />
+    <Content Include="Images\Forums\topicface\face5.gif" />
+    <Content Include="Images\Forums\topicface\face6.gif" />
+    <Content Include="Images\Forums\topicface\face7.gif" />
+    <Content Include="Images\Forums\topicface\face8.gif" />
+    <Content Include="Images\Forums\topicface\face9.gif" />
+    <Content Include="Images\Forums\UserBlogsIcon.gif" />
+    <Content Include="Images\Forums\UserClass\admin.gif" />
+    <Content Include="Images\Forums\UserClass\level0.gif" />
+    <Content Include="Images\Forums\UserClass\level1.gif" />
+    <Content Include="Images\Forums\UserClass\level10.gif" />
+    <Content Include="Images\Forums\UserClass\level11.gif" />
+    <Content Include="Images\Forums\UserClass\level12.gif" />
+    <Content Include="Images\Forums\UserClass\level13.gif" />
+    <Content Include="Images\Forums\UserClass\level14.gif" />
+    <Content Include="Images\Forums\UserClass\level15.gif" />
+    <Content Include="Images\Forums\UserClass\level16.gif" />
+    <Content Include="Images\Forums\UserClass\level17.gif" />
+    <Content Include="Images\Forums\UserClass\level18.gif" />
+    <Content Include="Images\Forums\UserClass\level19.gif" />
+    <Content Include="Images\Forums\UserClass\level2.gif" />
+    <Content Include="Images\Forums\UserClass\level20.gif" />
+    <Content Include="Images\Forums\UserClass\level3.gif" />
+    <Content Include="Images\Forums\UserClass\level4.gif" />
+    <Content Include="Images\Forums\UserClass\level5.gif" />
+    <Content Include="Images\Forums\UserClass\level6.gif" />
+    <Content Include="Images\Forums\UserClass\level7.gif" />
+    <Content Include="Images\Forums\UserClass\level8.gif" />
+    <Content Include="Images\Forums\UserClass\level9.gif" />
+    <Content Include="Images\Forums\UserClass\Webmaster.gif" />
+    <Content Include="Images\Forums\UserProfileIcon.gif" />
+    <Content Include="Images\Forums\UserSpaceIcon.gif" />
+    <Content Include="Images\Forums\ztop.gif" />
+    <Content Include="Images\Forum_nav.gif" />
+    <Content Include="Images\forum_readme.gif" />
+    <Content Include="Images\Garden\act1.gif" />
+    <Content Include="Images\Garden\act2.gif" />
+    <Content Include="Images\Garden\act3.gif" />
+    <Content Include="Images\Garden\act4.gif" />
+    <Content Include="Images\Garden\ActType1.gif" />
+    <Content Include="Images\Garden\ActType2.gif" />
+    <Content Include="Images\Garden\ActType3.gif" />
+    <Content Include="Images\Garden\ActType4.gif" />
+    <Content Include="Images\Garden\ActType5.gif" />
+    <Content Include="Images\Garden\bg.gif" />
+    <Content Include="Images\Garden\button5.gif" />
+    <Content Include="Images\Garden\flower0.gif" />
+    <Content Include="Images\Garden\flower10.gif" />
+    <Content Include="Images\Garden\flower100.gif" />
+    <Content Include="Images\Garden\flower1100.gif" />
+    <Content Include="Images\Garden\flower145.gif" />
+    <Content Include="Images\Garden\flower150.gif" />
+    <Content Include="Images\Garden\flower175.gif" />
+    <Content Include="Images\Garden\flower2100.gif" />
+    <Content Include="Images\Garden\flower25.gif" />
+    <Content Include="Images\Garden\flower250.gif" />
+    <Content Include="Images\Garden\flower275.gif" />
+    <Content Include="Images\Garden\flower3.gif" />
+    <Content Include="Images\Garden\flower30.gif" />
+    <Content Include="Images\Garden\flower3100.gif" />
+    <Content Include="Images\Garden\flower350.gif" />
+    <Content Include="Images\Garden\flower375.gif" />
+    <Content Include="Images\Garden\flower40.gif" />
+    <Content Include="Images\Garden\flower4100.gif" />
+    <Content Include="Images\Garden\flower450.gif" />
+    <Content Include="Images\Garden\flower475.gif" />
+    <Content Include="Images\Garden\flower5100.gif" />
+    <Content Include="Images\Garden\flower550.gif" />
+    <Content Include="Images\Garden\flower575.gif" />
+    <Content Include="Images\group141.gif" />
+    <Content Include="Images\group142.gif" />
+    <Content Include="Images\group143.gif" />
+    <Content Include="Images\group144.gif" />
+    <Content Include="Images\group145.gif" />
+    <Content Include="Images\group146.gif" />
+    <Content Include="Images\group147.gif" />
+    <Content Include="Images\group148.gif" />
+    <Content Include="Images\group149.gif" />
+    <Content Include="Images\Last.gif" />
+    <Content Include="Images\lines\dash.gif" />
+    <Content Include="Images\lines\dashminus.gif" />
+    <Content Include="Images\lines\dashplus.gif" />
+    <Content Include="Images\lines\i.gif" />
+    <Content Include="Images\lines\l.gif" />
+    <Content Include="Images\lines\lminus.gif" />
+    <Content Include="Images\lines\lplus.gif" />
+    <Content Include="Images\lines\minus.gif" />
+    <Content Include="Images\lines\noexpand.gif" />
+    <Content Include="Images\lines\r.gif" />
+    <Content Include="Images\lines\rminus.gif" />
+    <Content Include="Images\lines\rplus.gif" />
+    <Content Include="Images\lines\t.gif" />
+    <Content Include="Images\lines\tminus.gif" />
+    <Content Include="Images\lines\tplus.gif" />
+    <Content Include="Images\link.gif" />
+    <Content Include="Images\load.gif" />
+    <Content Include="Images\Next.gif" />
+    <Content Include="Images\nofollow.gif" />
+    <Content Include="Images\plus.gif" />
+    <Content Include="Images\Previous.gif" />
+    <Content Include="Images\p_up.gif" />
+    <Content Include="Images\smallsuccess.gif" />
+    <Content Include="Images\status-err.gif" />
+    <Content Include="Images\team.gif" />
+    <Content Include="Images\TopicFloor.gif" />
+    <Content Include="Images\TopicIPIocn.gif" />
+    <Content Include="Images\userface\Image1.gif" />
+    <Content Include="Images\userface\Image10.gif" />
+    <Content Include="Images\userface\Image11.gif" />
+    <Content Include="Images\userface\Image12.gif" />
+    <Content Include="Images\userface\Image13.gif" />
+    <Content Include="Images\userface\Image14.gif" />
+    <Content Include="Images\userface\Image15.gif" />
+    <Content Include="Images\userface\Image16.gif" />
+    <Content Include="Images\userface\Image17.gif" />
+    <Content Include="Images\userface\Image18.gif" />
+    <Content Include="Images\userface\Image19.gif" />
+    <Content Include="Images\userface\Image2.gif" />
+    <Content Include="Images\userface\Image20.gif" />
+    <Content Include="Images\userface\Image21.gif" />
+    <Content Include="Images\userface\Image22.gif" />
+    <Content Include="Images\userface\Image23.gif" />
+    <Content Include="Images\userface\Image24.gif" />
+    <Content Include="Images\userface\Image25.gif" />
+    <Content Include="Images\userface\Image26.gif" />
+    <Content Include="Images\userface\Image27.gif" />
+    <Content Include="Images\userface\Image28.gif" />
+    <Content Include="Images\userface\Image29.gif" />
+    <Content Include="Images\userface\Image3.gif" />
+    <Content Include="Images\userface\Image30.gif" />
+    <Content Include="Images\userface\Image31.gif" />
+    <Content Include="Images\userface\Image32.gif" />
+    <Content Include="Images\userface\Image33.gif" />
+    <Content Include="Images\userface\Image34.gif" />
+    <Content Include="Images\userface\Image35.gif" />
+    <Content Include="Images\userface\Image36.gif" />
+    <Content Include="Images\userface\Image37.gif" />
+    <Content Include="Images\userface\Image38.gif" />
+    <Content Include="Images\userface\Image39.gif" />
+    <Content Include="Images\userface\Image4.gif" />
+    <Content Include="Images\userface\Image40.gif" />
+    <Content Include="Images\userface\Image41.gif" />
+    <Content Include="Images\userface\Image42.gif" />
+    <Content Include="Images\userface\Image43.gif" />
+    <Content Include="Images\userface\Image44.gif" />
+    <Content Include="Images\userface\Image45.gif" />
+    <Content Include="Images\userface\Image46.gif" />
+    <Content Include="Images\userface\Image47.gif" />
+    <Content Include="Images\userface\Image48.gif" />
+    <Content Include="Images\userface\Image49.gif" />
+    <Content Include="Images\userface\Image5.gif" />
+    <Content Include="Images\userface\Image50.gif" />
+    <Content Include="Images\userface\Image51.gif" />
+    <Content Include="Images\userface\Image52.gif" />
+    <Content Include="Images\userface\Image53.gif" />
+    <Content Include="Images\userface\Image54.gif" />
+    <Content Include="Images\userface\Image55.gif" />
+    <Content Include="Images\userface\Image56.gif" />
+    <Content Include="Images\userface\Image57.gif" />
+    <Content Include="Images\userface\Image58.gif" />
+    <Content Include="Images\userface\Image59.gif" />
+    <Content Include="Images\userface\Image6.gif" />
+    <Content Include="Images\userface\Image60.gif" />
+    <Content Include="Images\userface\Image7.gif" />
+    <Content Include="Images\userface\Image8.gif" />
+    <Content Include="Images\userface\Image9.gif" />
+    <Content Include="Images\WebSite_WebLog.gif" />
+    <Content Include="Jscript\WebSiteJavaScript.js" />
+    <Content Include="Jscript\WebSiteJScriptCity.js" />
+    <Content Include="Jscript\WebSiteJScriptSeletGroup.js" />
+    <Content Include="Jscript\WebSiteJScriptTime.js" />
+    <Content Include="Jscript\WebSitePostEmotJavaScript.js" />
+    <Content Include="Style\BlueStyle.css" />
+    <Content Include="Style\blue\body_bg.gif" />
+    <Content Include="Style\blue\dvmenubg3.gif" />
+    <Content Include="Style\blue\menubg.gif" />
+    <Content Include="Style\blue\navspacer.gif" />
+    <Content Include="Style\blue\tabletopbg.gif" />
+    <Content Include="Style\blue\thbg.gif" />
+    <Content Include="Style\blue\topmenubg.gif" />
+    <Content Include="Style\DeFaultStyle.css" />
+    <Content Include="Style\default\body_bg.gif" />
+    <Content Include="Style\default\button\BackButton.gif" />
+    <Content Include="Style\default\button\MoveButton.gif" />
+    <Content Include="Style\default\button\NewButton.gif" />
+    <Content Include="Style\default\button\nexttopic.gif" />
+    <Content Include="Style\default\button\previoustopic.gif" />
+    <Content Include="Style\default\button\ReloadButton.gif" />
+    <Content Include="Style\default\button\RePostButton.gif" />
+    <Content Include="Style\default\button\SettingsButton.gif" />
+    <Content Include="Style\default\dvmenubg3.gif" />
+    <Content Include="Style\default\menubg.gif" />
+    <Content Include="Style\default\navspacer.gif" />
+    <Content Include="Style\default\tabletopbg.gif" />
+    <Content Include="Style\default\thbg.gif" />
+    <Content Include="Style\default\topmenubg.gif" />
+    <Content Include="Web.config" />
+    <Content Include="XmlFile\Resource\languages.xml" />
+    <Content Include="XmlFile\Resource\zh-CN\PageTemp.xml" />
+    <Content Include="XmlFile\Resource\zh-CN\Resources.xml" />
+    <Content Include="XmlFile\Resource\zh-CN\TreeXml.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WebSite\WebSite.csproj">
+      <Project>{46C198B3-B10B-4115-B59B-0A4635A243B2}</Project>
+      <Name>WebSite</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="admin\Board\BigBoard.aspx" />
+    <Content Include="admin\Board\BoardTree.aspx" />
+    <Content Include="admin\Board\DeleteBoard.aspx" />
+    <Content Include="admin\Board\MoveTo.aspx" />
+    <Content Include="admin\Board\TreeBoard.aspx" />
+    <Content Include="admin\Default.aspx" />
+    <Content Include="admin\images\admin_bg_1.gif" />
+    <Content Include="admin\images\admin_left_1.gif" />
+    <Content Include="admin\images\bullet.gif" />
+    <Content Include="admin\images\button.gif" />
+    <Content Include="admin\images\button1.bmp" />
+    <Content Include="admin\images\button2.bmp" />
+    <Content Include="admin\images\button3.bmp" />
+    <Content Include="admin\images\css.css" />
+    <Content Include="admin\images\expand.gif" />
+    <Content Include="admin\images\find_icon.gif" />
+    <Content Include="admin\images\First.gif" />
+    <Content Include="admin\images\follow.gif" />
+    <Content Include="admin\images\icon_01.gif" />
+    <Content Include="admin\images\icon_02.gif" />
+    <Content Include="admin\images\Last.gif" />
+    <Content Include="admin\images\left_bg.gif" />
+    <Content Include="admin\images\line.gif" />
+    <Content Include="admin\images\list.gif" />
+    <Content Include="admin\images\minbgbottom.gif" />
+    <Content Include="admin\images\minbgtop.gif" />
+    <Content Include="admin\images\Next.gif" />
+    <Content Include="admin\images\noexpand.gif" />
+    <Content Include="admin\images\nofollow.gif" />
+    <Content Include="admin\images\Previous.gif" />
+    <Content Include="admin\images\refresh_icon.gif" />
+    <Content Include="admin\images\TableBg.gif" />
+    <Content Include="admin\images\time_star.gif" />
+    <Content Include="admin\images\title.gif" />
+    <Content Include="admin\images\title_bg_quit.gif" />
+    <Content Include="admin\images\top_bg.gif" />
+    <Content Include="admin\images\top_logo.gif" />
+    <Content Include="admin\images\v_dot_line.gif" />
+    <Content Include="admin\js\JScript.js" />
+    <Content Include="admin\js\tree.js" />
+    <Content Include="admin\style\css.css" />
+    <Content Include="admin\User\RefreshUserOnlineList.aspx" />
+    <Content Include="admin\User\UserInfo.aspx" />
+    <Content Include="admin\User\UserLevel.aspx" />
+    <Content Include="admin\User\UserLevelList.aspx" />
+    <Content Include="admin\User\UserList.aspx" />
+    <Content Include="admin\User\UserOnlineList.aspx" />
+    <Content Include="admin\User\UserRole.aspx" />
+    <Content Include="admin\User\UserRoleList.aspx" />
+    <Content Include="admin\WebSiteSitting.aspx" />
+    <Content Include="SelectGroupRole.aspx" />
+    <Content Include="UserUploadFile.aspx" />
+    <Content Include="Forums\Post.aspx" />
+    <Content Include="Forums\ShowTopicInfo.aspx" />
+    <Content Include="PostAction.aspx" />
+    <Content Include="Forums\DeFault.aspx" />
+    <Content Include="Search\Search.aspx" />
+    <Content Include="UserInfo\ForgottenPassword.aspx" />
+    <Content Include="UserInfo\EditUserInfo.aspx" />
+    <Content Include="UserInfo\UserInfo.aspx" />
+    <Content Include="UserInfo\CreateUser.aspx" />
+    <Content Include="UserInfo\UserLoginOut.aspx" />
+    <Content Include="UserInfo\Login.aspx" />
+    <Content Include="WebSiteMaster.ascx" />
+    <Content Include="Global.asax" />
+    <Content Include="WebSite.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Core, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Extensions.Design, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+    <Folder Include="UploadFile\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" Condition="" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1603</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

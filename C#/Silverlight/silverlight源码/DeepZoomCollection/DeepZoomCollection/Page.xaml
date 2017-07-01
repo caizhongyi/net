@@ -1,0 +1,11 @@
+﻿<UserControl x:Class="DeepZoomProject.Page"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    Width="800" Height="600">
+    <Grid x:Name="LayoutRoot" Background="White">
+    	<Border BorderBrush="#FF727272" BorderThickness="1,1,1,1">
+    		<MultiScaleImage Height="600" x:Name="msi" Source="GeneratedImages/dzc_output.xml"  Width="800"/>
+    	</Border>
+        <Button Height="31" Width="286" Content="Randomize Images" Click="Arrange_Click"/>
+    </Grid>
+</UserControl>

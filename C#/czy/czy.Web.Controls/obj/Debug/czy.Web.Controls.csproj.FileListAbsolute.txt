@@ -1,0 +1,10 @@
+I:\LibraryClass\C#\czy.Web.Controls\bin\Debug\czy.Web.Controls.dll
+I:\LibraryClass\C#\czy.Web.Controls\bin\Debug\czy.Web.Controls.pdb
+I:\LibraryClass\C#\czy.Web.Controls\obj\Debug\ResolveAssemblyReference.cache
+I:\LibraryClass\C#\czy.Web.Controls\obj\Debug\czy.Web.Controls.dll
+I:\LibraryClass\C#\czy.Web.Controls\obj\Debug\czy.Web.Controls.pdb
+F:\Library\LibraryClass\czy\czy.Web.Controls\bin\Debug\czy.Web.Controls.dll
+F:\Library\LibraryClass\czy\czy.Web.Controls\bin\Debug\czy.Web.Controls.pdb
+F:\Library\LibraryClass\czy\czy.Web.Controls\obj\Debug\ResolveAssemblyReference.cache
+F:\Library\LibraryClass\czy\czy.Web.Controls\obj\Debug\czy.Web.Controls.dll
+F:\Library\LibraryClass\czy\czy.Web.Controls\obj\Debug\czy.Web.Controls.pdb

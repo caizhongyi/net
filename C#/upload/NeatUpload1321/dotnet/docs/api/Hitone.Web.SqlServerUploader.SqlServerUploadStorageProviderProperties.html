@@ -1,0 +1,60 @@
+<html dir="LTR">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" />
+    <meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5" />
+    <title>SqlServerUploadStorageProvider Properties</title>
+    <xml>
+    </xml>
+    <link rel="stylesheet" type="text/css" href="MSDN.css" />
+  </head>
+  <body id="bodyID" class="dtBODY">
+    <div id="nsbanner">
+      <div id="bannerrow1">
+        <table class="bannerparthead" cellspacing="0">
+          <tr id="hdr">
+            <td class="runninghead">NeatUpload Documentation</td>
+            <td class="product">
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div id="TitleRow">
+        <h1 class="dtH1">SqlServerUploadStorageProvider Properties</h1>
+      </div>
+    </div>
+    <div id="nstext">
+      <p>The properties of the <b>SqlServerUploadStorageProvider</b> class are listed below. For a complete list of <b>SqlServerUploadStorageProvider</b> class members, see the <a href="Hitone.Web.SqlServerUploader.SqlServerUploadStorageProviderMembers.html">SqlServerUploadStorageProvider Members</a> topic.</p>
+      <h4 class="dtH4">Public Instance Properties</h4>
+      <div class="tablediv">
+        <table class="dtTABLE" cellspacing="0">
+<tr VALIGN="top"><td width="50%"><img src="pubproperty.gif"></img><a href="Hitone.Web.SqlServerUploader.SqlServerUploadStorageProvider.CleanupProcedure.html">CleanupProcedure</a></td><td width="50%"> Name of procedure to call when the file upload is completed but before the .net web page loads. This procedure can be used to clear the "partial upload" flag if one was used.</td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubproperty.gif"></img><a href="Hitone.Web.SqlServerUploader.SqlServerUploadStorageProvider.ConnectionName.html">ConnectionName</a></td><td width="50%"> Name of connection string to use when connecting to the database (from then &lt;connectionStrings&gt; section in web.config)</td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubproperty.gif"></img><a href="Hitone.Web.SqlServerUploader.SqlServerUploadStorageProvider.ConnectionString.html">ConnectionString</a></td><td width="50%"> Connection string to use when connecting to the database </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubproperty.gif"></img><a href="Hitone.Web.SqlServerUploader.SqlServerUploadStorageProvider.CreateProcedure.html">CreateProcedure</a></td><td width="50%"> Name of procedure to call to create a new file in the database. To create new blobs either this or TableName/DataColumnName must be available </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubproperty.gif"></img><a href="Hitone.Web.SqlServerUploader.SqlServerUploadStorageProvider.DataColumnName.html">DataColumnName</a></td><td width="50%"> Name of table column to store data into. Should be of type 'Image'. This or CreatorProcedure must be specified </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubproperty.gif"></img><a href="Hitone.Web.SqlServerUploader.SqlServerUploadStorageProvider.DeleteProcedure.html">DeleteProcedure</a></td><td width="50%"> Name of procedure to call to delete a file from the database. Either this or TableName must be available to allow deletion of files </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubproperty.gif"></img><a href="Hitone.Web.SqlServerUploader.SqlServerUploadStorageProvider.Description.html">Description</a></td><td width="50%">Description of this storage provider</td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubproperty.gif"></img><a href="Hitone.Web.SqlServerUploader.SqlServerUploadStorageProvider.FileNameColumnName.html">FileNameColumnName</a></td><td width="50%">
+                <code>Optional</code> Name of table column where the name of the uploaded file will be stored </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubproperty.gif"></img><a href="Hitone.Web.SqlServerUploader.SqlServerUploadStorageProvider.HashAlgorithm.html">HashAlgorithm</a></td><td width="50%">
+                <code>Optional</code> Name of hash algorithm to use if we should hash while upload </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubproperty.gif"></img><a href="Hitone.Web.SqlServerUploader.SqlServerUploadStorageProvider.HashColumnName.html">HashColumnName</a></td><td width="50%">
+                <code>Optional</code> Name of table column where the hash of the uploaded file will be stored </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubproperty.gif"></img><a href="Hitone.Web.SqlServerUploader.SqlServerUploadStorageProvider.MIMETypeColumnName.html">MIMETypeColumnName</a></td><td width="50%">
+                <code>Optional</code> Name of table column where the MIME-type of the uploaded file will be stored </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubproperty.gif"></img><a href="Hitone.Web.SqlServerUploader.SqlServerUploadStorageProvider.Name.html">Name</a></td><td width="50%"> Unique friendly name for this provider </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubproperty.gif"></img><a href="Hitone.Web.SqlServerUploader.SqlServerUploadStorageProvider.OpenProcedure.html">OpenProcedure</a></td><td width="50%"> Name of procedure to call to open an existing blob in the database. To read/append data either this or TableName/DataColumnName must be available </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubproperty.gif"></img><a href="Hitone.Web.SqlServerUploader.SqlServerUploadStorageProvider.PartialFlagColumnName.html">PartialFlagColumnName</a></td><td width="50%">
+                <code>Optional</code> Name of table column to store a "partial"-flag in; while uploading this will be set to 1, when done it will be set to 0 </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubproperty.gif"></img><a href="Hitone.Web.SqlServerUploader.SqlServerUploadStorageProvider.ReadProcedure.html">ReadProcedure</a></td><td width="50%"> Name of procedure to call to read data from the database. Either this or TableName/DataColumnName must be available </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubproperty.gif"></img><a href="Hitone.Web.SqlServerUploader.SqlServerUploadStorageProvider.RenameProcedure.html">RenameProcedure</a></td><td width="50%"> Name of procedure to call to change the name of the file in the database. Either this or TableName/FileNameColumnName must be available </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubproperty.gif"></img><a href="Hitone.Web.SqlServerUploader.SqlServerUploadStorageProvider.StoreHashProcedure.html">StoreHashProcedure</a></td><td width="50%"> Name of procedure to call when the file upload is completed and verified to stay in the database (i.e. MoveTo has been called). This procedure can be used to store the Hash of the file if one was calculated</td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubproperty.gif"></img><a href="Hitone.Web.SqlServerUploader.SqlServerUploadStorageProvider.TableName.html">TableName</a></td><td width="50%"> Table to store incoming file into. This or CreatorProcedure must be specified </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubproperty.gif"></img><a href="Hitone.Web.SqlServerUploader.SqlServerUploadStorageProvider.WriteProcedure.html">WriteProcedure</a></td><td width="50%"> Name of procedure to call to append data in the database. Either this or TableName/DataColumnName must be available </td></tr></table>
+      </div>
+      <h4 class="dtH4">See Also</h4>
+      <p>
+        <a href="Hitone.Web.SqlServerUploader.SqlServerUploadStorageProvider.html">SqlServerUploadStorageProvider Class</a> | <a href="Hitone.Web.SqlServerUploader.html">Hitone.Web.SqlServerUploader Namespace</a></p>
+    </div>
+  </body>
+</html>

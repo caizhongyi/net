@@ -1,0 +1,28 @@
+C:\Documents and Settings\Administrator\桌面\FromDemo\FromDemo.Web\bin\FromDemo.Web.dll
+C:\Documents and Settings\Administrator\桌面\FromDemo\FromDemo.Web\bin\FromDemo.Web.pdb
+C:\Documents and Settings\Administrator\桌面\FromDemo\FromDemo.Web\bin\System.Web.Silverlight.dll
+C:\Documents and Settings\Administrator\桌面\FromDemo\FromDemo.Web\bin\zh-Hans\System.Web.Silverlight.resources.dll
+C:\Documents and Settings\Administrator\桌面\FromDemo\FromDemo.Web\bin\zh-Hant\System.Web.Silverlight.resources.dll
+C:\Documents and Settings\Administrator\桌面\FromDemo\FromDemo.Web\bin\de\System.Web.Silverlight.resources.dll
+C:\Documents and Settings\Administrator\桌面\FromDemo\FromDemo.Web\bin\es\System.Web.Silverlight.resources.dll
+C:\Documents and Settings\Administrator\桌面\FromDemo\FromDemo.Web\bin\fr\System.Web.Silverlight.resources.dll
+C:\Documents and Settings\Administrator\桌面\FromDemo\FromDemo.Web\bin\it\System.Web.Silverlight.resources.dll
+C:\Documents and Settings\Administrator\桌面\FromDemo\FromDemo.Web\bin\ja\System.Web.Silverlight.resources.dll
+C:\Documents and Settings\Administrator\桌面\FromDemo\FromDemo.Web\bin\ko\System.Web.Silverlight.resources.dll
+C:\Documents and Settings\Administrator\桌面\FromDemo\FromDemo.Web\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\桌面\FromDemo\FromDemo.Web\obj\Debug\FromDemo.Web.dll
+C:\Documents and Settings\Administrator\桌面\FromDemo\FromDemo.Web\obj\Debug\FromDemo.Web.pdb
+F:\SilverlightTest\FromDemo\FromDemo.Web\bin\FromDemo.Web.dll
+F:\SilverlightTest\FromDemo\FromDemo.Web\bin\FromDemo.Web.pdb
+F:\SilverlightTest\FromDemo\FromDemo.Web\bin\System.Web.Silverlight.dll
+F:\SilverlightTest\FromDemo\FromDemo.Web\bin\de\System.Web.Silverlight.resources.dll
+F:\SilverlightTest\FromDemo\FromDemo.Web\bin\es\System.Web.Silverlight.resources.dll
+F:\SilverlightTest\FromDemo\FromDemo.Web\bin\fr\System.Web.Silverlight.resources.dll
+F:\SilverlightTest\FromDemo\FromDemo.Web\bin\it\System.Web.Silverlight.resources.dll
+F:\SilverlightTest\FromDemo\FromDemo.Web\bin\ja\System.Web.Silverlight.resources.dll
+F:\SilverlightTest\FromDemo\FromDemo.Web\bin\ko\System.Web.Silverlight.resources.dll
+F:\SilverlightTest\FromDemo\FromDemo.Web\bin\zh-Hans\System.Web.Silverlight.resources.dll
+F:\SilverlightTest\FromDemo\FromDemo.Web\bin\zh-Hant\System.Web.Silverlight.resources.dll
+F:\SilverlightTest\FromDemo\FromDemo.Web\obj\Debug\ResolveAssemblyReference.cache
+F:\SilverlightTest\FromDemo\FromDemo.Web\obj\Debug\FromDemo.Web.dll
+F:\SilverlightTest\FromDemo\FromDemo.Web\obj\Debug\FromDemo.Web.pdb

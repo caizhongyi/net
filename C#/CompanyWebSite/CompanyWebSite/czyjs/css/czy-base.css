@@ -1,0 +1,25 @@
+﻿@charset "utf-8";
+/* CSS Document */
+a{ color:#999999;}
+html{ margin:0px; padding:0px;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{ margin:0; padding:0;}
+td *{ vertical-align:middle;}
+input,button,textarea,select{ font-family:inherit; font-size:inherit; font-weight:inherit; font:100% Arial,sans-serif;}
+input{ padding-left:3px;}
+blockquote, q { quotes: "" "";}
+img { border: none; vertical-align:top;}
+a img {border: none;outline: none;}
+a:link, a:visited{ color:#333333; text-decoration:none;}
+a:hover{ color:#666; text-decoration:none;}
+a:active, a:focus { outline:none; }
+ul , ol{margin:0;padding:0;list-style:none;text-align:left;}
+
+.borderred{ border:1px solid red;}
+.clear{ clear:both; height:1px; overflow:hidden;}
+.left{ float:left}
+.right{ float:right}
+.div-left{ float:left; margin-right:-3px;}
+.div-right{float:right; margin-left:-3px;}
+.list-init{ list-style-type:none; margin:0px; padding:0px }
+.a-init{color:#999999; text-decoration:none;}
+.overflow-hidden{overflow:hidden;}

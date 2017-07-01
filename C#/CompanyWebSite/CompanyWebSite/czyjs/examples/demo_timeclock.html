@@ -1,0 +1,29 @@
+﻿<html>
+	<head>
+	<title></title>
+<script type="text/javascript" src="../czy-js-all.js"></script>
+<link rel="stylesheet" href="../czy-css-all.css" type="text/css"/>
+<style type="text/css">
+#drag{ height:50px; width:50px; background-color:Red;}
+</style>
+<script type="text/javascript">
+
+    window.onload = function () {
+        // addEventHandler(document, "click",show);
+        new czyjs.Time.TimeClock({ id: "drag" });
+    }
+
+function show()
+{
+    alert(czyjs.Event.GetEventObj(null));
+}
+
+</script>
+
+	</head>
+	<body>
+<div id="drag"></div>
+
+		
+	</body>
+</html>

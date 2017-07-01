@@ -1,0 +1,5 @@
+bin\Debug\InternetService.dll
+bin\Debug\InternetService.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\InternetService.dll
+obj\Debug\InternetService.pdb

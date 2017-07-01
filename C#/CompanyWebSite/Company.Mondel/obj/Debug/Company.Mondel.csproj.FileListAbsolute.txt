@@ -1,0 +1,5 @@
+E:\caizhongyi\MyWork\Library\Company.Mondel\obj\Debug\ResolveAssemblyReference.cache
+E:\caizhongyi\MyWork\Library\Company.Mondel\bin\Debug\Company.Mondel.dll
+E:\caizhongyi\MyWork\Library\Company.Mondel\bin\Debug\Company.Mondel.pdb
+E:\caizhongyi\MyWork\Library\Company.Mondel\obj\Debug\Company.Mondel.dll
+E:\caizhongyi\MyWork\Library\Company.Mondel\obj\Debug\Company.Mondel.pdb

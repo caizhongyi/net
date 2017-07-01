@@ -1,0 +1,17 @@
+﻿#parse("_headno.html")
+<style type="text/css">body{width:auto;}</style>
+
+ <form action="class${exname}?id=$ids&fid=$fid&uid=$uid" method="post">
+<div>
+    <ul>
+        <li><input type="radio" value="0" name="friendclassid" $checked0 /> 不分类</li>
+        #foreach($frd in $frdlist)
+        <li id="param$frd.id"><input type="radio" value="$frd.id" name="friendclassid" $frd.checked /> $frd.cname $frd.delete</li>
+        #end
+    </ul>
+</div>
+ 
+<div class="center"> ${button}分类：<input id="cname" value="$cname" type="text" /><input type="hidden" value="$fids" name="fids" id="fids"><input type="hidden" value="$ids" name="ids" id="ids"><input type="hidden" value="$fid" name="fid" id="fid"><input id="Button1" type="button" class="btn_blue2" onclick="javascript:AddorModifFriendClass($ids,$uid,$fids,$fid)" value="$button" /></div>
+
+<div class="center margintop20"><input id="Button2" type="submit" class="btn_blue5" value="设置分组" /></div>
+</form>

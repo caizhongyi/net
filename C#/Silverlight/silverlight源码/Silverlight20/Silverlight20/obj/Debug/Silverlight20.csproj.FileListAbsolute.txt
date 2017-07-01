@@ -1,0 +1,369 @@
+\\wanglei\Silverlight20\Silverlight20\Bin\Debug\AppManifest.xaml
+\\wanglei\Silverlight20\Silverlight20\Bin\Debug\Silverlight20.dll
+\\wanglei\Silverlight20\Silverlight20\Bin\Debug\Silverlight20.pdb
+\\wanglei\Silverlight20\Silverlight20\Bin\Debug\Silverlight20.xap
+\\wanglei\Silverlight20\Silverlight20\Bin\Debug\TestPage.html
+\\wanglei\Silverlight20\Silverlight20\obj\Debug\ResolveAssemblyReference.cache
+\\wanglei\Silverlight20\Silverlight20\obj\Debug\App.g.cs
+\\wanglei\Silverlight20\Silverlight20\obj\Debug\Control\Border.g.cs
+\\wanglei\Silverlight20\Silverlight20\obj\Debug\Control\Button.g.cs
+\\wanglei\Silverlight20\Silverlight20\obj\Debug\Page.g.cs
+\\wanglei\Silverlight20\Silverlight20\obj\Debug\Silverlight20.g.resources
+\\wanglei\Silverlight20\Silverlight20\obj\Debug\Silverlight20.dll
+\\wanglei\Silverlight20\Silverlight20\obj\Debug\Silverlight20.pdb
+\\wanglei\Silverlight20\Silverlight20\obj\Debug\XapCacheFile.xml
+C:\Silverlight20\Silverlight20\Bin\Debug\AppManifest.xaml
+C:\Silverlight20\Silverlight20\Bin\Debug\Silverlight20.dll
+C:\Silverlight20\Silverlight20\Bin\Debug\Silverlight20.pdb
+C:\Silverlight20\Silverlight20\Bin\Debug\Silverlight20.xap
+C:\Silverlight20\Silverlight20\Bin\Debug\TestPage.html
+C:\Silverlight20\Silverlight20\Bin\Debug\Microsoft.Windows.Controls.dll
+C:\Silverlight20\Silverlight20\Bin\Debug\MyControl.dll
+C:\Silverlight20\Silverlight20\Bin\Debug\System.Json.dll
+C:\Silverlight20\Silverlight20\Bin\Debug\System.ServiceModel.Syndication.dll
+C:\Silverlight20\Silverlight20\Bin\Debug\System.Windows.Controls.Data.dll
+C:\Silverlight20\Silverlight20\Bin\Debug\System.Windows.Controls.dll
+C:\Silverlight20\Silverlight20\Bin\Debug\System.Xml.Linq.dll
+C:\Silverlight20\Silverlight20\Bin\Debug\System.Xml.Serialization.dll
+C:\Silverlight20\Silverlight20\Bin\Debug\System.ServiceModel.Syndication.xml
+C:\Silverlight20\Silverlight20\Bin\Debug\System.Json.xml
+C:\Silverlight20\Silverlight20\Bin\Debug\System.Windows.Controls.xml
+C:\Silverlight20\Silverlight20\Bin\Debug\MyControl.pdb
+C:\Silverlight20\Silverlight20\Bin\Debug\System.Windows.Controls.Data.xml
+C:\Silverlight20\Silverlight20\Bin\Debug\System.Xml.Serialization.xml
+C:\Silverlight20\Silverlight20\Bin\Debug\System.Xml.Linq.xml
+C:\Silverlight20\Silverlight20\Bin\Debug\de\System.ServiceModel.Syndication.resources.dll
+C:\Silverlight20\Silverlight20\Bin\Debug\es\System.ServiceModel.Syndication.resources.dll
+C:\Silverlight20\Silverlight20\Bin\Debug\fr\System.ServiceModel.Syndication.resources.dll
+C:\Silverlight20\Silverlight20\Bin\Debug\it\System.ServiceModel.Syndication.resources.dll
+C:\Silverlight20\Silverlight20\Bin\Debug\ja\System.ServiceModel.Syndication.resources.dll
+C:\Silverlight20\Silverlight20\Bin\Debug\ko\System.ServiceModel.Syndication.resources.dll
+C:\Silverlight20\Silverlight20\Bin\Debug\zh-Hans\System.ServiceModel.Syndication.resources.dll
+C:\Silverlight20\Silverlight20\Bin\Debug\zh-Hant\System.ServiceModel.Syndication.resources.dll
+C:\Silverlight20\Silverlight20\Bin\Debug\de\System.Json.resources.dll
+C:\Silverlight20\Silverlight20\Bin\Debug\es\System.Json.resources.dll
+C:\Silverlight20\Silverlight20\Bin\Debug\fr\System.Json.resources.dll
+C:\Silverlight20\Silverlight20\Bin\Debug\it\System.Json.resources.dll
+C:\Silverlight20\Silverlight20\Bin\Debug\ja\System.Json.resources.dll
+C:\Silverlight20\Silverlight20\Bin\Debug\ko\System.Json.resources.dll
+C:\Silverlight20\Silverlight20\Bin\Debug\zh-Hans\System.Json.resources.dll
+C:\Silverlight20\Silverlight20\Bin\Debug\zh-Hant\System.Json.resources.dll
+C:\Silverlight20\Silverlight20\Bin\Debug\de\System.Windows.Controls.resources.dll
+C:\Silverlight20\Silverlight20\Bin\Debug\es\System.Windows.Controls.resources.dll
+C:\Silverlight20\Silverlight20\Bin\Debug\fr\System.Windows.Controls.resources.dll
+C:\Silverlight20\Silverlight20\Bin\Debug\it\System.Windows.Controls.resources.dll
+C:\Silverlight20\Silverlight20\Bin\Debug\ja\System.Windows.Controls.resources.dll
+C:\Silverlight20\Silverlight20\Bin\Debug\ko\System.Windows.Controls.resources.dll
+C:\Silverlight20\Silverlight20\Bin\Debug\zh-Hans\System.Windows.Controls.resources.dll
+C:\Silverlight20\Silverlight20\Bin\Debug\zh-Hant\System.Windows.Controls.resources.dll
+C:\Silverlight20\Silverlight20\Bin\Debug\de\System.Windows.Controls.Data.resources.dll
+C:\Silverlight20\Silverlight20\Bin\Debug\es\System.Windows.Controls.Data.resources.dll
+C:\Silverlight20\Silverlight20\Bin\Debug\fr\System.Windows.Controls.Data.resources.dll
+C:\Silverlight20\Silverlight20\Bin\Debug\it\System.Windows.Controls.Data.resources.dll
+C:\Silverlight20\Silverlight20\Bin\Debug\ja\System.Windows.Controls.Data.resources.dll
+C:\Silverlight20\Silverlight20\Bin\Debug\ko\System.Windows.Controls.Data.resources.dll
+C:\Silverlight20\Silverlight20\Bin\Debug\zh-Hans\System.Windows.Controls.Data.resources.dll
+C:\Silverlight20\Silverlight20\Bin\Debug\zh-Hant\System.Windows.Controls.Data.resources.dll
+C:\Silverlight20\Silverlight20\Bin\Debug\de\System.Xml.Serialization.resources.dll
+C:\Silverlight20\Silverlight20\Bin\Debug\es\System.Xml.Serialization.resources.dll
+C:\Silverlight20\Silverlight20\Bin\Debug\fr\System.Xml.Serialization.resources.dll
+C:\Silverlight20\Silverlight20\Bin\Debug\it\System.Xml.Serialization.resources.dll
+C:\Silverlight20\Silverlight20\Bin\Debug\ja\System.Xml.Serialization.resources.dll
+C:\Silverlight20\Silverlight20\Bin\Debug\ko\System.Xml.Serialization.resources.dll
+C:\Silverlight20\Silverlight20\Bin\Debug\zh-Hans\System.Xml.Serialization.resources.dll
+C:\Silverlight20\Silverlight20\Bin\Debug\zh-Hant\System.Xml.Serialization.resources.dll
+C:\Silverlight20\Silverlight20\Bin\Debug\de\System.Xml.Linq.resources.dll
+C:\Silverlight20\Silverlight20\Bin\Debug\es\System.Xml.Linq.resources.dll
+C:\Silverlight20\Silverlight20\Bin\Debug\fr\System.Xml.Linq.resources.dll
+C:\Silverlight20\Silverlight20\Bin\Debug\it\System.Xml.Linq.resources.dll
+C:\Silverlight20\Silverlight20\Bin\Debug\ja\System.Xml.Linq.resources.dll
+C:\Silverlight20\Silverlight20\Bin\Debug\ko\System.Xml.Linq.resources.dll
+C:\Silverlight20\Silverlight20\Bin\Debug\zh-Hans\System.Xml.Linq.resources.dll
+C:\Silverlight20\Silverlight20\Bin\Debug\zh-Hant\System.Xml.Linq.resources.dll
+C:\Silverlight20\Silverlight20\obj\Debug\ResolveAssemblyReference.cache
+C:\Silverlight20\Silverlight20\obj\Debug\App.g.cs
+C:\Silverlight20\Silverlight20\obj\Debug\Animation\ColorAnimation.g.cs
+C:\Silverlight20\Silverlight20\obj\Debug\Animation\DoubleAnimation.g.cs
+C:\Silverlight20\Silverlight20\obj\Debug\Animation\KeyFrame.g.cs
+C:\Silverlight20\Silverlight20\obj\Debug\Animation\PointAnimation.g.cs
+C:\Silverlight20\Silverlight20\obj\Debug\Animation\Programmatically.g.cs
+C:\Silverlight20\Silverlight20\obj\Debug\Communication\Json.g.cs
+C:\Silverlight20\Silverlight20\obj\Debug\Communication\RssAtom.g.cs
+C:\Silverlight20\Silverlight20\obj\Debug\Communication\Xml.g.cs
+C:\Silverlight20\Silverlight20\obj\Debug\Data\Conversion.g.cs
+C:\Silverlight20\Silverlight20\obj\Debug\Data\DataGrid01.g.cs
+C:\Silverlight20\Silverlight20\obj\Debug\Data\DataGrid02.g.cs
+C:\Silverlight20\Silverlight20\obj\Debug\Data\IsolatedStorage.g.cs
+C:\Silverlight20\Silverlight20\obj\Debug\Data\ListBox.g.cs
+C:\Silverlight20\Silverlight20\obj\Debug\Data\NotifyProperty.g.cs
+C:\Silverlight20\Silverlight20\obj\Debug\Data\Validation.g.cs
+C:\Silverlight20\Silverlight20\obj\Debug\Interactive\InkPresenter.g.cs
+C:\Silverlight20\Silverlight20\obj\Debug\Interactive\Keyboard.g.cs
+C:\Silverlight20\Silverlight20\obj\Debug\Interactive\Mouse.g.cs
+C:\Silverlight20\Silverlight20\obj\Debug\Test\Test3.g.cs
+C:\Silverlight20\Silverlight20\obj\Debug\Test\xxx.g.cs
+C:\Silverlight20\Silverlight20\obj\Debug\Brush\ImageBrush.g.cs
+C:\Silverlight20\Silverlight20\obj\Debug\Brush\LinearGradientBrush.g.cs
+C:\Silverlight20\Silverlight20\obj\Debug\Brush\RadialGradientBrush.g.cs
+C:\Silverlight20\Silverlight20\obj\Debug\Brush\SolidColorBrush.g.cs
+C:\Silverlight20\Silverlight20\obj\Debug\Brush\VideoBrush.g.cs
+C:\Silverlight20\Silverlight20\obj\Debug\Control\Border.g.cs
+C:\Silverlight20\Silverlight20\obj\Debug\Control\Button.g.cs
+C:\Silverlight20\Silverlight20\obj\Debug\Control\Calendar.g.cs
+C:\Silverlight20\Silverlight20\obj\Debug\Control\Canvas.g.cs
+C:\Silverlight20\Silverlight20\obj\Debug\Control\CheckBox.g.cs
+C:\Silverlight20\Silverlight20\obj\Debug\Control\ComboBox.g.cs
+C:\Silverlight20\Silverlight20\obj\Debug\Control\DataGrid.g.cs
+C:\Silverlight20\Silverlight20\obj\Debug\Control\DatePicker.g.cs
+C:\Silverlight20\Silverlight20\obj\Debug\Control\Grid.g.cs
+C:\Silverlight20\Silverlight20\obj\Debug\Control\GridSplitter.g.cs
+C:\Silverlight20\Silverlight20\obj\Debug\Control\HyperlinkButton.g.cs
+C:\Silverlight20\Silverlight20\obj\Debug\Control\Image.g.cs
+C:\Silverlight20\Silverlight20\obj\Debug\Control\ListBox.g.cs
+C:\Silverlight20\Silverlight20\obj\Debug\Control\MediaElement.g.cs
+C:\Silverlight20\Silverlight20\obj\Debug\Control\MultiScaleImage.g.cs
+C:\Silverlight20\Silverlight20\obj\Debug\Control\PasswordBox.g.cs
+C:\Silverlight20\Silverlight20\obj\Debug\Control\ProgressBar.g.cs
+C:\Silverlight20\Silverlight20\obj\Debug\Control\RadioButton.g.cs
+C:\Silverlight20\Silverlight20\obj\Debug\Control\ScrollViewer.g.cs
+C:\Silverlight20\Silverlight20\obj\Debug\Control\Slider.g.cs
+C:\Silverlight20\Silverlight20\obj\Debug\Control\StackPanel.g.cs
+C:\Silverlight20\Silverlight20\obj\Debug\Control\TabControl.g.cs
+C:\Silverlight20\Silverlight20\obj\Debug\Control\TextBlock.g.cs
+C:\Silverlight20\Silverlight20\obj\Debug\Control\TextBox.g.cs
+C:\Silverlight20\Silverlight20\obj\Debug\Control\ToggleButton.g.cs
+C:\Silverlight20\Silverlight20\obj\Debug\CustomControl\Test.g.cs
+C:\Silverlight20\Silverlight20\obj\Debug\Other\Transform.g.cs
+C:\Silverlight20\Silverlight20\obj\Debug\Other\FrameworkElement.g.cs
+C:\Silverlight20\Silverlight20\obj\Debug\Other\UIElement.g.cs
+C:\Silverlight20\Silverlight20\obj\Debug\Page.g.cs
+C:\Silverlight20\Silverlight20\obj\Debug\Shape\Ellipse.g.cs
+C:\Silverlight20\Silverlight20\obj\Debug\Shape\Line.g.cs
+C:\Silverlight20\Silverlight20\obj\Debug\Shape\Path.g.cs
+C:\Silverlight20\Silverlight20\obj\Debug\Shape\Polygon.g.cs
+C:\Silverlight20\Silverlight20\obj\Debug\Shape\Polyline.g.cs
+C:\Silverlight20\Silverlight20\obj\Debug\Shape\Rectangle.g.cs
+C:\Silverlight20\Silverlight20\obj\Debug\Shape\Shape.g.cs
+C:\Silverlight20\Silverlight20\obj\Debug\Appearance\Style.g.cs
+C:\Silverlight20\Silverlight20\obj\Debug\Appearance\Template.g.cs
+C:\Silverlight20\Silverlight20\obj\Debug\Appearance\VisualStateManager.g.cs
+C:\Silverlight20\Silverlight20\obj\Debug\Video\VideoPlayer.g.cs
+C:\Silverlight20\Silverlight20\obj\Debug\Silverlight20.g.resources
+C:\Silverlight20\Silverlight20\obj\Debug\Silverlight20.dll
+C:\Silverlight20\Silverlight20\obj\Debug\Silverlight20.pdb
+C:\Silverlight20\Silverlight20\obj\Debug\XapCacheFile.xml
+C:\Silverlight20\Silverlight20\obj\Debug\Communication\WebClientDownload.g.cs
+C:\Silverlight20\Silverlight20\obj\Debug\Communication\WebClientUpload.g.cs
+C:\Silverlight20\Silverlight20\obj\Debug\Communication\WebRequestGet.g.cs
+C:\Silverlight20\Silverlight20\obj\Debug\Communication\WebRequestPost.g.cs
+C:\Silverlight20\Silverlight20\obj\Debug\Communication\Cryptography.g.cs
+C:\Silverlight20\Silverlight20\obj\Debug\Communication\WCF.g.cs
+C:\Silverlight20\Silverlight20\Bin\Debug\System.ServiceModel.PollingDuplex.dll
+C:\Silverlight20\Silverlight20\Bin\Debug\System.ServiceModel.PollingDuplex.xml
+C:\Silverlight20\Silverlight20\obj\Debug\Communication\DuplexService.g.cs
+C:\Silverlight20\Silverlight20\obj\Debug\Test\Test.g.cs
+C:\Silverlight20\Silverlight20\obj\Debug\Test\Test2.g.cs
+C:\Silverlight20\Silverlight20\obj\Debug\Thread\BackgroundWorker.g.cs
+C:\Silverlight20\Silverlight20\obj\Debug\Thread\Thread.g.cs
+C:\Silverlight20\Silverlight20\obj\Debug\Thread\ThreadStaticAttribute.g.cs
+C:\Silverlight20\Silverlight20\obj\Debug\Thread\Timer.g.cs
+C:\Silverlight20\Silverlight20\obj\Debug\Communication\SocketClient.g.cs
+C:\Silverlight20\Silverlight20\obj\Debug\Thread\ThreadPool.g.cs
+C:\Silverlight20\Silverlight20\obj\Debug\Thread\Lock.g.cs
+C:\Silverlight20\Silverlight20\obj\Debug\Thread\Monitor.g.cs
+C:\Silverlight20\Silverlight20\obj\Debug\Thread\Interlocked.g.cs
+C:\Silverlight20\Silverlight20\obj\Debug\Thread\EventWaitHandle.g.cs
+C:\Silverlight20\Silverlight20\obj\Debug\Tip\InitParams.g.cs
+C:\Silverlight20\Silverlight20\obj\Debug\WebPage\ScriptableDemo.g.cs
+C:\Silverlight20\Silverlight20\obj\Debug\WebPage\DOMDemo.g.cs
+C:\Silverlight20\Silverlight20\obj\Debug\WebPage\JSDemo.g.cs
+C:\Silverlight20\Silverlight20\obj\Debug\Communication\DataService.g.cs
+C:\Silverlight20\Silverlight20\Bin\Debug\System.Data.Services.Client.dll
+C:\Silverlight20\Silverlight20\Bin\Debug\System.Data.Services.Client.xml
+C:\Silverlight20\Silverlight20\Bin\Debug\de\System.Data.Services.Client.resources.dll
+C:\Silverlight20\Silverlight20\Bin\Debug\es\System.Data.Services.Client.resources.dll
+C:\Silverlight20\Silverlight20\Bin\Debug\fr\System.Data.Services.Client.resources.dll
+C:\Silverlight20\Silverlight20\Bin\Debug\it\System.Data.Services.Client.resources.dll
+C:\Silverlight20\Silverlight20\Bin\Debug\ja\System.Data.Services.Client.resources.dll
+C:\Silverlight20\Silverlight20\Bin\Debug\ko\System.Data.Services.Client.resources.dll
+C:\Silverlight20\Silverlight20\Bin\Debug\zh-Hans\System.Data.Services.Client.resources.dll
+C:\Silverlight20\Silverlight20\Bin\Debug\zh-Hant\System.Data.Services.Client.resources.dll
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\Bin\Debug\AppManifest.xaml
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\Bin\Debug\Silverlight20.dll
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\Bin\Debug\Silverlight20.pdb
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\Bin\Debug\Silverlight20.xap
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\Bin\Debug\TestPage.html
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\Bin\Debug\Microsoft.Windows.Controls.dll
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\Bin\Debug\MyControl.dll
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\Bin\Debug\System.Data.Services.Client.dll
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\Bin\Debug\System.Json.dll
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\Bin\Debug\System.ServiceModel.PollingDuplex.dll
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\Bin\Debug\System.ServiceModel.Syndication.dll
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\Bin\Debug\System.Windows.Controls.Data.dll
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\Bin\Debug\System.Windows.Controls.dll
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\Bin\Debug\System.Xml.Linq.dll
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\Bin\Debug\System.Xml.Serialization.dll
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\Bin\Debug\System.ServiceModel.PollingDuplex.xml
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\Bin\Debug\System.ServiceModel.Syndication.xml
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\Bin\Debug\System.Json.xml
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\Bin\Debug\System.Xml.Linq.xml
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\Bin\Debug\System.Windows.Controls.xml
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\Bin\Debug\MyControl.pdb
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\Bin\Debug\System.Windows.Controls.Data.xml
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\Bin\Debug\System.Data.Services.Client.xml
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\Bin\Debug\System.Xml.Serialization.xml
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\Bin\Debug\de\System.ServiceModel.Syndication.resources.dll
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\Bin\Debug\es\System.ServiceModel.Syndication.resources.dll
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\Bin\Debug\fr\System.ServiceModel.Syndication.resources.dll
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\Bin\Debug\it\System.ServiceModel.Syndication.resources.dll
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\Bin\Debug\ja\System.ServiceModel.Syndication.resources.dll
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\Bin\Debug\ko\System.ServiceModel.Syndication.resources.dll
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\Bin\Debug\zh-Hans\System.ServiceModel.Syndication.resources.dll
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\Bin\Debug\zh-Hant\System.ServiceModel.Syndication.resources.dll
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\Bin\Debug\de\System.Json.resources.dll
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\Bin\Debug\es\System.Json.resources.dll
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\Bin\Debug\fr\System.Json.resources.dll
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\Bin\Debug\it\System.Json.resources.dll
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\Bin\Debug\ja\System.Json.resources.dll
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\Bin\Debug\ko\System.Json.resources.dll
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\Bin\Debug\zh-Hans\System.Json.resources.dll
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\Bin\Debug\zh-Hant\System.Json.resources.dll
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\Bin\Debug\de\System.Xml.Linq.resources.dll
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\Bin\Debug\es\System.Xml.Linq.resources.dll
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\Bin\Debug\fr\System.Xml.Linq.resources.dll
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\Bin\Debug\it\System.Xml.Linq.resources.dll
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\Bin\Debug\ja\System.Xml.Linq.resources.dll
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\Bin\Debug\ko\System.Xml.Linq.resources.dll
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\Bin\Debug\zh-Hans\System.Xml.Linq.resources.dll
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\Bin\Debug\zh-Hant\System.Xml.Linq.resources.dll
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\Bin\Debug\de\System.Windows.Controls.resources.dll
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\Bin\Debug\es\System.Windows.Controls.resources.dll
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\Bin\Debug\fr\System.Windows.Controls.resources.dll
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\Bin\Debug\it\System.Windows.Controls.resources.dll
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\Bin\Debug\ja\System.Windows.Controls.resources.dll
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\Bin\Debug\ko\System.Windows.Controls.resources.dll
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\Bin\Debug\zh-Hans\System.Windows.Controls.resources.dll
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\Bin\Debug\zh-Hant\System.Windows.Controls.resources.dll
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\Bin\Debug\de\System.Windows.Controls.Data.resources.dll
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\Bin\Debug\es\System.Windows.Controls.Data.resources.dll
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\Bin\Debug\fr\System.Windows.Controls.Data.resources.dll
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\Bin\Debug\it\System.Windows.Controls.Data.resources.dll
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\Bin\Debug\ja\System.Windows.Controls.Data.resources.dll
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\Bin\Debug\ko\System.Windows.Controls.Data.resources.dll
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\Bin\Debug\zh-Hans\System.Windows.Controls.Data.resources.dll
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\Bin\Debug\zh-Hant\System.Windows.Controls.Data.resources.dll
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\Bin\Debug\de\System.Data.Services.Client.resources.dll
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\Bin\Debug\es\System.Data.Services.Client.resources.dll
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\Bin\Debug\fr\System.Data.Services.Client.resources.dll
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\Bin\Debug\it\System.Data.Services.Client.resources.dll
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\Bin\Debug\ja\System.Data.Services.Client.resources.dll
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\Bin\Debug\ko\System.Data.Services.Client.resources.dll
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\Bin\Debug\zh-Hans\System.Data.Services.Client.resources.dll
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\Bin\Debug\zh-Hant\System.Data.Services.Client.resources.dll
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\Bin\Debug\de\System.Xml.Serialization.resources.dll
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\Bin\Debug\es\System.Xml.Serialization.resources.dll
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\Bin\Debug\fr\System.Xml.Serialization.resources.dll
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\Bin\Debug\it\System.Xml.Serialization.resources.dll
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\Bin\Debug\ja\System.Xml.Serialization.resources.dll
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\Bin\Debug\ko\System.Xml.Serialization.resources.dll
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\Bin\Debug\zh-Hans\System.Xml.Serialization.resources.dll
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\Bin\Debug\zh-Hant\System.Xml.Serialization.resources.dll
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\App.g.cs
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\Animation\ColorAnimation.g.cs
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\Animation\DoubleAnimation.g.cs
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\Animation\KeyFrame.g.cs
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\Animation\PointAnimation.g.cs
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\Animation\Programmatically.g.cs
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\Communication\DataService.g.cs
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\Communication\SocketClient.g.cs
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\Communication\Cryptography.g.cs
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\Communication\DuplexService.g.cs
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\Communication\Json.g.cs
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\Communication\RssAtom.g.cs
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\Communication\WCF.g.cs
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\Communication\WebClientDownload.g.cs
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\Communication\WebClientUpload.g.cs
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\Communication\WebRequestGet.g.cs
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\Communication\WebRequestPost.g.cs
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\Communication\Xml.g.cs
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\Data\Conversion.g.cs
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\Data\DataGrid01.g.cs
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\Data\DataGrid02.g.cs
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\Data\IsolatedStorage.g.cs
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\Data\ListBox.g.cs
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\Data\NotifyProperty.g.cs
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\Data\Validation.g.cs
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\Interactive\InkPresenter.g.cs
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\Interactive\Keyboard.g.cs
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\Interactive\Mouse.g.cs
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\Test\Test.g.cs
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\Test\Test2.g.cs
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\Test\Test3.g.cs
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\Test\xxx.g.cs
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\Brush\ImageBrush.g.cs
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\Brush\LinearGradientBrush.g.cs
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\Brush\RadialGradientBrush.g.cs
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\Brush\SolidColorBrush.g.cs
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\Brush\VideoBrush.g.cs
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\Control\Border.g.cs
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\Control\Button.g.cs
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\Control\Calendar.g.cs
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\Control\Canvas.g.cs
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\Control\CheckBox.g.cs
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\Control\ComboBox.g.cs
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\Control\DataGrid.g.cs
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\Control\DatePicker.g.cs
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\Control\Grid.g.cs
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\Control\GridSplitter.g.cs
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\Control\HyperlinkButton.g.cs
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\Control\Image.g.cs
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\Control\ListBox.g.cs
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\Control\MediaElement.g.cs
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\Control\MultiScaleImage.g.cs
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\Control\PasswordBox.g.cs
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\Control\ProgressBar.g.cs
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\Control\RadioButton.g.cs
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\Control\ScrollViewer.g.cs
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\Control\Slider.g.cs
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\Control\StackPanel.g.cs
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\Control\TabControl.g.cs
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\Control\TextBlock.g.cs
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\Control\TextBox.g.cs
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\Control\ToggleButton.g.cs
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\CustomControl\Test.g.cs
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\Other\Transform.g.cs
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\Other\FrameworkElement.g.cs
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\Other\UIElement.g.cs
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\Page.g.cs
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\Shape\Ellipse.g.cs
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\Shape\Line.g.cs
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\Shape\Path.g.cs
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\Shape\Polygon.g.cs
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\Shape\Polyline.g.cs
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\Shape\Rectangle.g.cs
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\Shape\Shape.g.cs
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\Appearance\Style.g.cs
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\Appearance\Template.g.cs
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\Appearance\VisualStateManager.g.cs
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\Thread\BackgroundWorker.g.cs
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\Thread\EventWaitHandle.g.cs
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\Thread\Interlocked.g.cs
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\Thread\Lock.g.cs
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\Thread\Monitor.g.cs
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\Thread\Thread.g.cs
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\Thread\ThreadPool.g.cs
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\Thread\ThreadStaticAttribute.g.cs
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\Thread\Timer.g.cs
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\Tip\InitParams.g.cs
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\Video\VideoPlayer.g.cs
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\WebPage\DOMDemo.g.cs
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\WebPage\JSDemo.g.cs
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\WebPage\ScriptableDemo.g.cs
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\Silverlight20.g.resources
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\Silverlight20.dll
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\Silverlight20.pdb
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\XapCacheFile.xml
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\Tip\CustomFont.g.cs
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\Tip\Cookie.g.cs
+C:\Documents and Settings\webabcd\桌面\Silverlight20\Silverlight20\obj\Debug\Tip\RightClick.g.cs

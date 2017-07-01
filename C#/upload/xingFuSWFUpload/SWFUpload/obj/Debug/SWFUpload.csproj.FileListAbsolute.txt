@@ -1,0 +1,21 @@
+H:\Web Demo\SWFUpload\SWFUpload\SWFUpload\obj\Debug\ResolveAssemblyReference.cache
+H:\Web Demo\SWFUpload\SWFUpload\SWFUpload\bin\SWFUpload.dll
+H:\Web Demo\SWFUpload\SWFUpload\SWFUpload\bin\SWFUpload.pdb
+H:\Web Demo\SWFUpload\SWFUpload\SWFUpload\bin\SWFUploadAPI.dll
+H:\Web Demo\SWFUpload\SWFUpload\SWFUpload\bin\SWFUploadAPI.pdb
+H:\Web Demo\SWFUpload\SWFUpload\SWFUpload\obj\Debug\SWFUpload.dll
+H:\Web Demo\SWFUpload\SWFUpload\SWFUpload\obj\Debug\SWFUpload.pdb
+E:\项目\未分类\SWFUpload\SWFUpload\bin\SWFUpload.dll
+E:\项目\未分类\SWFUpload\SWFUpload\bin\SWFUpload.pdb
+E:\项目\未分类\SWFUpload\SWFUpload\bin\SWFUploadAPI.dll
+E:\项目\未分类\SWFUpload\SWFUpload\bin\SWFUploadAPI.pdb
+E:\项目\未分类\SWFUpload\SWFUpload\obj\Debug\ResolveAssemblyReference.cache
+E:\项目\未分类\SWFUpload\SWFUpload\obj\Debug\SWFUpload.dll
+E:\项目\未分类\SWFUpload\SWFUpload\obj\Debug\SWFUpload.pdb
+F:\Library\upload\xingFuSWFUpload\SWFUpload\bin\SWFUpload.dll
+F:\Library\upload\xingFuSWFUpload\SWFUpload\bin\SWFUpload.pdb
+F:\Library\upload\xingFuSWFUpload\SWFUpload\bin\SWFUploadAPI.dll
+F:\Library\upload\xingFuSWFUpload\SWFUpload\bin\SWFUploadAPI.pdb
+F:\Library\upload\xingFuSWFUpload\SWFUpload\obj\Debug\ResolveAssemblyReference.cache
+F:\Library\upload\xingFuSWFUpload\SWFUpload\obj\Debug\SWFUpload.dll
+F:\Library\upload\xingFuSWFUpload\SWFUpload\obj\Debug\SWFUpload.pdb

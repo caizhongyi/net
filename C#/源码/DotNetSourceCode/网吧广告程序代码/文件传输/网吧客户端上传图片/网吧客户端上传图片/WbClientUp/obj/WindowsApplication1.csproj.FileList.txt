@@ -1,0 +1,11 @@
+bin\Debug\WindowsApplication1.exe
+bin\Debug\WindowsApplication1.pdb
+bin\Debug\WbClient.dll
+bin\Debug\WbClient.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\WindowsApplication1.Form1.resources
+obj\Debug\WindowsApplication1.Properties.Resources.resources
+obj\Debug\WindowsApplication1.csproj.GenerateResource.Cache
+obj\Debug\WindowsApplication1.exe
+obj\Debug\WindowsApplication1.pdb
+bin\Debug\WindowsApplication1.exe.config

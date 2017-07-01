@@ -1,0 +1,29 @@
+﻿#if($uid>0)
+<ul class="default-app">
+    $menulist
+</ul>
+<div class="clearpix"><img src="$templatepath/images/drag.gif" align="absmiddle" /> &nbsp;<a href="$webpath/home/menu/default$exname" class="reshow">更改菜单顺序</a></div>
+#else
+<div class="logins">
+<div class="login_box">
+    <form action="$webpath/login${exname}?urls=$loginurls" method="post">
+	    <p class="clearfix"><em>用户名/Email：</em><input class="text" name="username" id="username" type="text" /></p>
+	    <p class="clearfix"><em>密码：</em><input class="text"  type="password" name="password" id="password" /></p>
+
+        #if($iscode==1)
+        <p class="clearfix"><em>请填写答案：</em>
+        <img src="$webpath/library/page/verifycode${exname}" style="width:65px;height:25px" id="vimgs" align="absmiddle" />
+        <input type="text" name="vcode" id="vcode"   maxlength="5" value="" class="f-text" style="width:30px;" /> <br />
+            <a href="javascript:void(0)" onclick="document.getElementById('vimgs').src='$webpath/library/page/verifycode${exname}?v='+Math.random()+''">看不清，换一张</a>
+        </p>
+        #end
+
+	    <p class="tj clearfix"><input class="button" name="" value="" type="submit" />
+	    </p>
+	    <p class="tj clearfix"><input type="checkbox" name="autologin" id="autologin" value="1" />自动登录</p>
+	    <p><a href="$webpath/register$exname">注册</a> | <a href="$webpath/repwd$exname">忘记密码？</a></p>
+	</form>
+	</div>
+</div>
+#end
+

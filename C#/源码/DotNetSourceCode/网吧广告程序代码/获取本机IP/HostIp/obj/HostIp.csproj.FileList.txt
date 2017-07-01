@@ -1,0 +1,5 @@
+obj\Debug\ResolveAssemblyReference.cache
+bin\Debug\HostIp.dll
+bin\Debug\HostIp.pdb
+obj\Debug\HostIp.dll
+obj\Debug\HostIp.pdb

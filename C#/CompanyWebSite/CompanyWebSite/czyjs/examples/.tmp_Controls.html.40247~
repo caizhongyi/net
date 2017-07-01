@@ -1,0 +1,36 @@
+<html>
+	<head>
+	<title></title>
+<script type="text/javascript" src="../czy-js-all.js"></script>
+<link rel="stylesheet" href="../czy-css-all.css" type="text/css"/>
+
+<script type="text/javascript">
+	var select;
+   window.onload=function()
+   {
+   	     var d=[
+		 {value:"1",text:"aa"},
+		 {value:"2",text:"bb"}
+		 ]
+	     
+         select =new czyjs.Util.Controls.Select(
+		 {
+		 	data:d,
+			txtField:"id",
+			valueField:"value",
+			width:200,
+			height:20,
+			contenterId:"se"
+		 }
+		 );   	
+   }
+</script>
+
+	</head>
+	<body>
+<div id="drag"></div>
+<input type="text" id="txt" class="czy-text" />
+	<input type="button" id="txt" class="czy-button" value="click" />
+	<div id="se" style=" width:200px;"></div>	
+	</body>
+</html>

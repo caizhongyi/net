@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute">
+
+  <mx:Script>
+    <![CDATA[
+	    import mx.rpc.events.ResultEvent;
+	    import mx.utils.ObjectUtil;
+	    import mx.controls.Alert;
+	    import mx.rpc.events.FaultEvent;
+	
+	    /* Call the login service*/
+	    private function logIn():void{		
+	      //use remote object method setCredentials to
+	      //enable Flex to send the values required 
+		    loginRO.logout();
+        	loginRO.setCredentials(username.text, password.text);
+	    	loginRO.Login();
+	    }
+	
+	    /*Call logout*/
+	    private function logOut():void
+	    {		
+		    loginRO.logout();
+        	appViews.selectedChild = loginView;
+	    }
+
+	    private function getSecureData():void
+	    {		
+		    fluorineRO.GetSecureData();
+	    }
+
+      	/* Display error messages returned */
+	    private function serverFault(event:FaultEvent):void{
+       		Alert.show( ObjectUtil.toString(event.fault.faultString), "Error", mx.controls.Alert.OK );
+	    }
+      
+	    private function loginResult(event:ResultEvent):void {
+		    var result:Boolean = event.result as Boolean;
+        	appViews.selectedChild = secureView;
+     	}
+      
+	    private function loginFault(event:FaultEvent):void{
+        	//Alert.show("Authentication failed", "Errors", mx.controls.Alert.OK);
+        	Alert.show( ObjectUtil.toString(event.fault), "Authentication failed" );
+	    }
+      
+	    private function getSecureDataResult(event:ResultEvent):void {
+		    var result:String = event.result as String;
+        Alert.show(result, "Secure data", mx.controls.Alert.OK);
+      }
+      
+    ]]>
+  </mx:Script>
+
+  <mx:ViewStack id="appViews" width="100%" height="100%">
+  <!--login view-->
+    <mx:HBox horizontalAlign="center" verticalAlign="middle" id="loginView" width="100%" height="100%">
+      <mx:Panel title="Login" id="loginPanel" horizontalScrollPolicy="off" verticalScrollPolicy="off">
+        <mx:Form id="loginForm">
+          <mx:FormItem label="Username:">
+            <mx:TextInput id="username"/>
+          </mx:FormItem>
+          <mx:FormItem label="Password:">
+            <mx:TextInput id="password"  displayAsPassword="true"/>
+          </mx:FormItem>
+        </mx:Form>
+        <mx:ControlBar>
+          <mx:Spacer width="100%" id="spacer1"/>
+          <mx:Button label="Login" id="loginButton"
+              enabled="{(username.text.length == 0 || password.text.length == 0) ? false : true}"
+              toolTip="{loginButton.enabled == true ? 'Click to submit' : 'Enter username and password'}" 
+              click="logIn()" />
+        </mx:ControlBar>
+      </mx:Panel>
+    </mx:HBox>
+  <!--end loginView-->
+
+  <!--secure area view, made visible after a successful login-->
+    <mx:HBox id="secureView" width="100%" height="100%">
+      <mx:ApplicationControlBar dock="true" paddingTop="0" paddingBottom="0" width="100%" >
+        <mx:Label text="Action:" />
+        <mx:Spacer width="5"/>
+        <mx:Button label="Get" click="getSecureData()"/>
+        <mx:Spacer width="5"/>
+        <mx:Button label="Logout" click="logOut()"/>
+      </mx:ApplicationControlBar>
+    </mx:HBox>
+  <!--end secure area view-->
+  </mx:ViewStack>
+
+  <mx:RemoteObject id="loginRO" destination="login">
+    <mx:method name="Login" result="loginResult(event)" fault="loginFault(event)" />
+  </mx:RemoteObject>
+
+  <mx:RemoteObject id="fluorineRO" destination="fluorine" source="ServiceLibrary.SecureService">
+    <mx:method name="GetSecureData" result="getSecureDataResult(event)" fault="serverFault(event)" />
+  </mx:RemoteObject>
+	
+</mx:Application>

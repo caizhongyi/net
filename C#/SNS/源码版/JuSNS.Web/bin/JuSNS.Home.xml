@@ -1,0 +1,2816 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JuSNS.Home</name>
+    </assembly>
+    <members>
+        <member name="M:JuSNS.Home.App.Vote.OptionList(System.Int32,System.Int32,System.Boolean@)">
+            <summary>
+            取得用户投票选项
+            </summary>
+            <param name="vid">投票编号</param>
+            <param name="userid">用户编号</param>
+            <param name="tf">是否有投票</param>
+            <returns>返回列表</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Vote.GetVoteInfo(System.Object)">
+            <summary>
+            得到投票信息
+            </summary>
+            <param name="vid">投票ID</param>
+            <returns>VoteInfo实体类</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Vote.GetVoteToInfo(System.Object,System.Object)">
+            <summary>
+            得到投票信息信息
+            </summary>
+            <param name="vid">投票ID</param>
+            <returns>VoteInfo实体类</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Vote.IsVote(System.Int32,System.Int32)">
+            <summary>
+            取得用户是否已投票
+            </summary>
+            <param name="userid">用户编号</param>
+            <param name="vid">投票编号</param>
+            <returns>如果已投票返回true,否则false</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Vote.Add(JuSNS.Model.VoteToInfo)">
+            <summary>
+            用户投票
+            </summary>
+            <param name="info">用户投票实体类</param>
+            <returns>投票成功返回1</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Vote.DeleteVote(System.Int32,System.Int32)">
+            <summary>
+            删除投票
+            </summary>
+            <param name="vid">投票的ID</param>
+            <param name="uid">操作用户ID</param>
+            <returns>0失败，1成功</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Vote.DeleteVoteTo(System.Int32,System.Int32)">
+            <summary>
+            删除投票结果
+            </summary>
+            <param name="vid">投票的ID</param>
+            <param name="uid">操作用户ID</param>
+            <returns>0失败，1成功</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Vote.AddVote(JuSNS.Model.VoteInfo)">
+            <summary>
+            添加投票
+            </summary>
+            <param name="info">投票实体类</param>
+            <returns>添加成功返回投票编号</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Vote.AddOption(JuSNS.Model.VoteOptionInfo)">
+            <summary>
+            添加投票项
+            </summary>
+            <param name="info">投票实体类</param>
+            <returns>添加成功返回投票编号</returns>
+        </member>
+        <member name="P:JuSNS.Home.App.Vote.Instance">
+            <summary>
+            取得实例
+            </summary>
+        </member>
+        <member name="M:JuSNS.Home.App.TWrite.GetTwritterNew(System.Object)">
+            <summary>
+            得到最新的微博
+            </summary>
+            <param name="UserID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.App.TWrite.GetTwritterNew(System.Object,System.Int32@)">
+            <summary>
+            得到最新的微博
+            </summary>
+            <param name="UserID"></param>
+            <param name="tid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.App.TWrite.InserTwitter(JuSNS.Model.TwitterInfo)">
+            <summary>
+            插入微博客日志
+            </summary>
+            <param name="Info">微博客实体类</param>
+            <returns>0失败，1成功</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.TWrite.DeleteTwitter(System.Int32,System.Int32)">
+            <summary>
+            删除微博
+            </summary>
+            <param name="TID">微博ID</param>
+            <param name="UserID">用户ID</param>
+            <returns>0失败，1成功</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.TWrite.GetTwitterComments(System.Object)">
+            <summary>
+            得到评论数
+            </summary>
+            <param name="tid">微博ID</param>
+            <returns>评论数量</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.TWrite.GetTwitterInfo(System.Object)">
+            <summary>
+            得到制定微博的类型
+            </summary>
+            <param name="tid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.App.TWrite.GetTwitterCommentInfo(System.Object)">
+            <summary>
+            得到微博单个评论信息
+            </summary>
+            <param name="cid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.App.TWrite.InserTwitterComment(JuSNS.Model.TwitterCommentInfo)">
+            <summary>
+            插入微博评论
+            </summary>
+            <param name="info">微博评论实体类</param>
+            <returns>0失败，1成功</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.TWrite.DeleteTwitterComment(System.Int32,System.Int32)">
+            <summary>
+            删除博客评论
+            </summary>
+            <param name="cid"></param>
+            <param name="uid"></param>
+            <returns></returns>
+        </member>
+        <member name="P:JuSNS.Home.App.TWrite.Instance">
+            <summary>
+            取得实例
+            </summary>
+        </member>
+        <member name="M:JuSNS.Home.App.Photo.UpdatePhotoCount(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            更新图片数量
+            </summary>
+            <param name="AlbumID"></param>
+            <param name="ImagesCount"></param>
+            <param name="UserID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Photo.Add(JuSNS.Model.PhotoInfo)">
+            <summary>
+            插入图片
+            </summary>
+            <param name="pi"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Photo.Edit(JuSNS.Model.PhotoInfo)">
+            <summary>
+            修改照片
+            </summary>
+            <param name="Info">照片实体类</param>
+            <returns>修改成功返回1</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Photo.Delete(System.Int32,System.Int32)">
+            <summary>
+            删除图片
+            </summary>
+            <param name="PhotoID">图片ID</param>
+            <param name="UserID">图片所在的用户ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Photo.DeletePhotoComment(System.Int32,System.Int32)">
+            <summary>
+            删除图片评论
+            </summary>
+            <param name="comid"></param>
+            <param name="userid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Photo.GetInfo(System.Object)">
+            <summary>
+            得到照片信息(PhotoID)
+            </summary>
+            <param name="PhotoID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Photo.GetAlbumInfo(System.Object)">
+            <summary>
+            得到相册信息
+            </summary>
+            <param name="PhotoID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Photo.GetInfoForUser(System.Object)">
+            <summary>
+            根据用户头像得到照片信息(UserID)
+            </summary>
+            <param name="UserID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Photo.GetPhotoList(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            得到所有相册
+            </summary>
+            <param name="AlbumID">相册</param>
+            <param name="UserID">用户</param>
+            <param name="Number">调用数量</param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Photo.NextPhotoID(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            同一相册上一张照片ID
+            </summary>
+        </member>
+        <member name="M:JuSNS.Home.App.Photo.PrePhotoID(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            同一相册上一张照片ID
+            </summary>
+        </member>
+        <member name="M:JuSNS.Home.App.Photo.TheNumber(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            照片位于相册中的第几张
+            </summary>
+        </member>
+        <member name="M:JuSNS.Home.App.Photo.GetPhotoCommentInfo(System.Int32)">
+            <summary>
+            得到评论具体信息
+            </summary>
+            <param name="cid">图片评论的ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Photo.UpdateNumber(System.Int32,System.Int32)">
+            <summary>
+            更新相片信息
+            </summary>
+            <param name="photoid">相片ID</param>
+            <param name="flg">0表示更新点击率，1表示更新评论数量，2更新分享数量</param>
+            <returns>0或1</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Photo.InsertPhotoComment(JuSNS.Model.PhotoCommentInfo)">
+            <summary>
+            插入日志评论
+            </summary>
+            <param name="Info"></param>
+            <returns></returns>
+        </member>
+        <member name="P:JuSNS.Home.App.Photo.Instance">
+            <summary>
+            取得实例
+            </summary>
+        </member>
+        <member name="M:JuSNS.Home.User.User.IsAdmin(System.Object)">
+            <summary>
+            是否是管理员
+            </summary>
+            <param name="userid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.IsAdmin(System.Object,System.Data.SqlClient.SqlConnection)">
+            <summary>
+            是否是管理员
+            </summary>
+            <param name="userid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.CheckUserExsit(System.String,System.Int32)">
+            <summary>
+            检查用户名是否存在
+            </summary>
+            <param name="inputstr">用户名/或电子邮件</param>
+            <param name="logintype">0电子邮件，1用户名，2手机</param>
+        </member>
+        <member name="M:JuSNS.Home.User.User.CheckUserExsit(System.Object)">
+            <summary>
+            根据用户ID检查用户是否在系统中存在
+            </summary>
+            <param name="userid">用户ID</param>
+            <returns>返回True或False</returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.CheckUser(System.Int32,System.String)">
+            <summary>
+            检查用户合法性
+            </summary>
+            <param name="userid">ID</param>
+            <param name="password">已MD5加密的密码</param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.CheckUser(System.Int32,System.String,System.Int32@)">
+            <summary>
+            检查用户合法性
+            </summary>
+            <param name="userid">ID</param>
+            <param name="password">已MD5加密的密码</param>
+            <param name="loginNum">返回得登录次数</param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.GetUserInfo(System.Object)">
+            <summary>
+            得到用户基本信息，(表NT_User)
+            </summary>
+            <param name="userid">传入的用户ID</param>
+            <returns>返回用户实例</returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.ChangePassword(System.Int32,System.String)">
+            <summary>
+            修改密码
+            </summary>
+            <param name="userid">用户ID</param>
+            <param name="password">新密码(加密后)</param>
+            <returns>返回成功或失败</returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.ChangeNowCity(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            修改居住地
+            </summary>
+            <param name="userid">用户ID</param>
+            <param name="homeprovince">省份ID</param>
+            <param name="city">城市ID</param>
+            <returns>0失败，1成功</returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.CheckEmail(System.Int32,System.String)">
+            <summary>
+            检查邮箱是否被占用
+            </summary>
+            <param name="userid"></param>
+            <param name="Email"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.ChangeEmail(System.Int32,System.String)">
+            <summary>
+            修改Email
+            </summary>
+            <param name="userid">用户ID</param>
+            <param name="Email">新Email</param>
+            <returns>0修改成功，1你修改过了，还未激活,2修改成功，但未发送电子邮件。</returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.Register(JuSNS.Model.UserInfo,JuSNS.Model.UserBaseInfo,System.Int32@)">
+            <summary>
+            用户注册
+            </summary>
+            <param name="ui">用户基础实体类</param>
+            <param name="basi">用户扩展实体类</param>
+            <param name="uid">返回的userid</param>
+            <returns>返回EnumRegister结果</returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.EmailActive(System.String,JuSNS.Model.UserInfo)">
+            <summary>
+            激活电子邮件
+            </summary>
+            <param name="email"></param>
+            <param name="ui"></param>
+            <returns>0成功，1邮件发送失败，不需要激活</returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.IsFriends(System.Object,System.Object)">
+            <summary>
+            是否是好友。
+            </summary>
+            <param name="userid"></param>
+            <param name="friendid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.InserDefaultFriend(System.Int32)">
+            <summary>
+            插入默认好友
+            </summary>
+            <param name="userid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.InsertFriend(JuSNS.Model.FriendInfo,System.Int32)">
+            <summary>
+            插入好友
+            </summary>
+            <param name="Info">实例</param>
+            <param name="flag">大于0表示直接为好友，不需要审核</param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.UpdateInte(System.Int32,System.Object,System.Int32,System.Int32,System.String)">
+            <summary>
+            增加积分或者金币
+            </summary>
+            <param name="userid">用户ID</param>
+            <param name="point">增加数量单位</param>
+            <param name="flag">0增加积分，1增加金币，2帐户资金</param>
+            <param name="ifoat">0增加，1减少</param>
+            <param name="content">描述</param>
+        </member>
+        <member name="M:JuSNS.Home.User.User.InsertFilesRecord(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            插入资源阅读记录
+            </summary>
+            <param name="userid">用户ID</param>
+            <param name="infoid">操作的ID</param>
+            <param name="type">0，资讯，1其他</param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.isFilesDownload(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            得到是否已经下载过资源
+            </summary>
+            <param name="userid"></param>
+            <param name="infoid"></param>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.GetInvReg(System.Int32)">
+            <summary>
+            为邀请注册者增加积分
+            </summary>
+            <param name="userid"></param>
+        </member>
+        <member name="M:JuSNS.Home.User.User.GetMaxuserid">
+            <summary>
+            取得最大的userid
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.ChangeAddr(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            修改所在地
+            </summary>
+            <param name="userid">用户ID</param>
+            <param name="province">省份</param>
+            <param name="city">城市</param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.ChangeMSN(System.Int32,System.String)">
+            <summary>
+            修改MSN
+            </summary>
+            <param name="userid"></param>
+            <param name="MSN"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.ChangeGTalk(System.Int32,System.String)">
+            <summary>
+            修改GTalk
+            </summary>
+            <param name="userid"></param>
+            <param name="gtalk"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.ChangeMobile(System.Int32,System.String)">
+            <summary>
+            修改手机
+            </summary>
+            <param name="userid"></param>
+            <param name="Mobile"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.Login(System.String,System.String,System.Int32@,System.String@,System.String@,System.Int32@,System.Int32)">
+            <summary>
+            开始登录
+            </summary>
+            <param name="inputstr">需要验证的字段</param>
+            <param name="password">密码</param>
+            <param name="userid">返回的userid</param>
+            <param name="username">用户名</param>
+            <param name="truename">真实姓名</param>
+            <param name="loginnum">登录次数</param>
+            <param name="logintype">0电子邮件，1用户名，2手机</param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.CheckLogin(System.Int32,System.String,System.Int32@)">
+            <summary>
+            检查登录
+            </summary>
+            <param name="userid">用户名</param>
+            <param name="password">密码</param>
+            <param name="loginnum">登录次数</param>
+            <returns>EnumloginState实例</returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.GetUserBaseInfo(System.Object)">
+            <summary>
+            获得用户实例（表NT_userInfo）
+            </summary>
+            <param name="userid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.GetUserSettingInfo(System.Object)">
+            <summary>
+            得到用户隐私设置（表NT_UserSetting）
+            </summary>
+            <param name="userid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.SetPrivacy(System.Int32,JuSNS.Model.UserSettingInfo)">
+            <summary>
+            设置隐私信息
+            </summary>
+            <param name="userid">用户ID</param>
+            <param name="privacyinfo">隐私信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.InsertEducation(JuSNS.Model.EducationInfo,System.Int32)">
+            <summary>
+            插入教育信息
+            </summary>
+            <param name="Info"></param>
+            <param name="flag">0增加，1修改</param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.DeleteEducation(System.Object,System.Object)">
+            <summary>
+            删除教育信息
+            </summary>
+            <param name="uid"></param>
+            <param name="eid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.GetEducationInfo(System.Object)">
+            <summary>
+            得到教育信息
+            </summary>
+            <param name="eid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.UpdateLike(JuSNS.Model.UserBaseInfo)">
+            <summary>
+            更新爱好信息
+            </summary>
+            <param name="basi"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.InsertCareer(JuSNS.Model.CareerInfo,System.Int32)">
+            <summary>
+            插入工作信息
+            </summary>
+            <param name="info"></param>
+            <param name="flag">0增加，1修改</param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.DeleteCareer(System.Object,System.Object)">
+            <summary>
+            删除工作信息
+            </summary>
+            <param name="uid"></param>
+            <param name="cid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.GetCareerInfo(System.Object)">
+            <summary>
+            得到工作信息
+            </summary>
+            <param name="cid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.Retrieve(System.String,System.Int32)">
+            <summary>
+            取回密码
+            </summary>
+            <param name="Email">Email</param>
+            <param name="logintype">0电子邮件，1手机</param>
+            <returns>0,成功,-2,邮箱无效,-3邮件发送失败</returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.ResetPwd(System.String,System.String,System.Int32@,System.String@,System.String@,System.String@)">
+            <summary>
+            重设密码,并设为已录录状态
+            </summary>
+            <param name="newPwd">加密过的新密码</param>
+            <param name="code"></param>
+            <returns>0成功，-1没有找到相关的申请记录,-2该申请已完成重设而无效,-3邮箱无效</returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.GetRestPwdRecord(System.String,System.String)">
+            <summary>
+            重置密码验证是否已经有记录
+            </summary>
+            <param name="r"></param>
+            <param name="email"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.GetPrivacy(System.Int32)">
+            <summary>
+            取得隐私信息
+            </summary>
+            <param name="userid">用户ID信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.GetUserHeadPic(System.Int32,System.Int32@)">
+            <summary>
+            取得头像名称
+            </summary>
+        </member>
+        <member name="M:JuSNS.Home.User.User.GetUserIDForEmail(System.String)">
+            <summary>
+            根据电子邮件获得UserID
+            </summary>
+            <param name="email"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.UpdateUserHead(System.Int32,System.Int32)">
+            <summary>
+            更新头像。
+            </summary>
+            <param name="pid"></param>
+            <param name="userid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.UpdateUserInfo(JuSNS.Model.UserInfo,JuSNS.Model.UserBaseInfo)">
+            <summary>
+            更新基本信息
+            </summary>
+            <param name="us"></param>
+            <param name="basi"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.UpdateUserBasicInfo(JuSNS.Model.UserInfo,JuSNS.Model.UserBaseInfo)">
+            <summary>
+            更新基本信息Base
+            </summary>
+            <param name="us"></param>
+            <param name="basi"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.DeleteFriend(System.Object,System.Object)">
+            <summary>
+            断开好友关系
+            </summary>
+            <param name="fid"></param>
+            <param name="uid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.GetFriendClass(System.Int32)">
+            <summary>
+            得到好友分类
+            </summary>
+            <param name="userid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.InsertFriendClass(System.Object,System.Object,System.Int32)">
+            <summary>
+            插入/更新好有分类
+            </summary>
+            <param name="cname"></param>
+            <param name="fid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.DeleteFriendClass(System.Object,System.Object)">
+            <summary>
+            删除好友分类
+            </summary>
+            <param name="fid"></param>
+            <param name="uid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.UpdateFriendClass(System.Object,System.Object,System.Object)">
+            <summary>
+            更新好友的分组
+            </summary>
+            <param name="fid">好友ID</param>
+            <param name="cid">分类ID</param>
+            <param name="uid">用户ID</param>
+            <returns>0失败，1成功</returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.GetFriendInfo(System.Object)">
+            <summary>
+            获得某个好友的实体类
+            </summary>
+            <param name="fid">FID好友ID</param>
+            <returns>得到实体类</returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.GetFriendList(System.Object)">
+            <summary>
+            得到我的好友的ID字符串
+            </summary>
+            <param name="userid">用户ID</param>
+            <returns>字符串：如：0,2,3,2</returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.GetUserFriendList(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            得到同城好友
+            </summary>
+            <param name="userid">用户</param>
+            <param name="city">城市ID</param>
+            <param name="sex">性别(0男，1女)</param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.GetUserPossibleList(System.Int32,System.Int32,System.String)">
+            <summary>
+            得到可能认识的朋友
+            </summary>
+            <param name="number">调用数量</param>
+            <param name="userid">当前用户ID</param>
+            <param name="lastip">最后登录IP</param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.InviteFriends(System.Int32,System.String,System.String,System.String)">
+            <summary>
+            邀请用户注册
+            </summary>
+            <param name="userid">用户ID</param>
+            <param name="userName">用户名或真实姓名</param>
+            <param name="emails">要发送的电子邮件</param>
+            <param name="desc">描述</param>
+            <returns>0成功,1该邮箱已经注册,2该邮箱已被邀请,3写入数据库失败,4未发送成功</returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.GetFriendInvite(System.Int32,System.String,System.String)">
+            <summary>
+            验证邀请注册是否有效
+            </summary>
+            <param name="userid">用户ID</param>
+            <param name="email">电子邮件</param>
+            <param name="code">验证字符串</param>
+            <returns>0正确，1无效的参数，2已经验证过了。</returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.ReplayInvite(System.Int32,System.Int32,System.String)">
+            <summary>
+            回应邀请请求
+            </summary>
+            <param name="userid">邀请者</param>
+            <param name="uid">注册者</param>
+            <param name="email">注册者邮箱</param>
+            <returns>0失败，1成功</returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.DeleteVisite(System.Int32,System.Int32)">
+            <summary>
+            删除访问者或被访问者
+            </summary>
+            <param name="id">访问者的自动编号ID</param>
+            <param name="userid">删除的用户ID</param>
+            <returns>0失败，1成功</returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.InsertChargeOrder(JuSNS.Model.ChargeOrderInfo)">
+            <summary>
+            插入充值订单号
+            </summary>
+            <param name="Info">订单实体类</param>
+            <returns>0失败，1成功</returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.GetMagicInfo(System.Object)">
+            <summary>
+            得到道具实体类
+            </summary>
+            <param name="mid">道具ID</param>
+            <returns>实体类</returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.BuyMagic(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            购买道具
+            </summary>
+            <param name="userid">用户ID</param>
+            <param name="mid">道具ID</param>
+            <param name="Num">购买数量</param>
+            <returns>0购买成功，1积分不够，2金币不够，3库存不够</returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.SendCommentReplay(System.Int32,System.Int32,System.Int32,System.String,System.String)">
+            <summary>
+            保存评论回复。
+            </summary>
+            <param name="bid"></param>
+            <param name="cid"></param>
+            <param name="uid"></param>
+            <param name="cont"></param>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.GetFriendListTop(System.Int32,System.Int32)">
+            <summary>
+            得到好友列表
+            </summary>
+            <param name="number">得到数量</param>
+            <param name="userid">用户</param>
+            <returns>得到List实体类</returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.InsertGiftUser(JuSNS.Model.GiftUserInfo)">
+            <summary>
+            赠送礼物
+            </summary>
+            <param name="info">GiftUserInfo实体类</param>
+            <returns>0失败，1成功，-1赠送已经达到今日最大赠送礼物数量,-2积分或金币不够</returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.GetGiftInfo(System.Object)">
+            <summary>
+            得到礼物类型
+            </summary>
+            <param name="gid">礼物ID</param>
+            <returns>得到List实体类</returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.GetGiftClassList">
+            <summary>
+            得到礼物分类
+            </summary>
+            <returns>得到List实体类</returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.InsertCalend(JuSNS.Model.CalendInfo)">
+            <summary>
+            插入日历选项
+            </summary>
+            <param name="info">CalendInfo实体类</param>
+            <returns>0失败，1成功</returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.GetCalendInfo(System.Int32)">
+            <summary>
+            得到日历具体信息
+            </summary>
+            <param name="cid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.DeleteCalend(System.Int32,System.Int32)">
+            <summary>
+            删除日历
+            </summary>
+            <param name="cid"></param>
+            <param name="uid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.InsertPoke(JuSNS.Model.PokeInfo)">
+            <summary>
+            插入招呼
+            </summary>
+            <param name="info">招呼实体类</param>
+            <returns>0失败，1成功，-1达到每日上限</returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.DeletePoke(System.Int32,System.Int32)">
+            <summary>
+            删除招呼
+            </summary>
+            <param name="pid">招呼ID</param>
+            <param name="uid">操作ID</param>
+            <returns>0失败，1成功</returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.GetFavorList(System.Int32)">
+            <summary>
+            得到收藏分类
+            </summary>
+            <param name="userid">用户ID</param>
+            <returns>FavoriteClassInfo实体类</returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.deleteFavorite(System.Int32,System.Int32)">
+            <summary>
+            删除收藏
+            </summary>
+            <param name="fid"></param>
+            <param name="uid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.deleteFavoriteClass(System.Int32,System.Int32)">
+            <summary>
+            删除收藏分类
+            </summary>
+            <param name="fid"></param>
+            <param name="uid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.GetFavorInfo(System.Object)">
+            <summary>
+            得到收藏夹
+            </summary>
+            <param name="fid">收藏夹ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.InsertFavorite(JuSNS.Model.FavoriteInfo)">
+            <summary>
+            插入收藏
+            </summary>
+            <param name="info"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.insertFavoriteClass(JuSNS.Model.FavoriteClassInfo)">
+            <summary>
+            插入收藏分类名称
+            </summary>
+            <param name="info">FavoriteClassInfo实体类</param>
+            <returns>1成功，0失败</returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.UpdateMailState(System.Int32,System.Int32)">
+            <summary>
+            更新邮件状态
+            </summary>
+            <param name="mid">邮件ID</param>
+            <param name="state">状态</param>
+            <returns>0成功，1失败</returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.DleteMailBox(System.Int32,System.Int32)">
+            <summary>
+            删除邮件
+            </summary>
+            <param name="mid">邮件ID</param>
+            <param name="uid">操作用户</param>
+            <returns>0成功，1失败</returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.DleteMailSend(System.Int32,System.Int32)">
+            <summary>
+            删除发件箱
+            </summary>
+            <param name="mid">邮件ID</param>
+            <param name="uid">操作用户</param>
+            <returns>0成功，1失败</returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.SendMail(System.Int32,System.Int32,System.String,System.String)">
+            <summary>
+            发送电子邮件
+            </summary>
+            <param name="userid">用户ID</param>
+            <param name="reciveid">接受用户ID</param>
+            <param name="title">标题</param>
+            <param name="content">内容</param>
+            <returns>0失败，否则成功</returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.InsertGbook(JuSNS.Model.GBookInfo)">
+            <summary>
+            插入留言
+            </summary>
+            <param name="info">GBookInfo实体类</param>
+            <returns>0失败，1成功</returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.DeleteGbook(System.Int32,System.Int32)">
+            <summary>
+            删除留言
+            </summary>
+            <param name="info">留言ID</param>
+            <param name="uid">操作者</param>
+            <returns>0失败，1成功</returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.RegisterUserNew(System.Int32,System.Int32)">
+            <summary>
+            刚注册的朋友
+            </summary>
+            <param name="userid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.GetNote(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            得到提醒信息
+            </summary>
+            <param name="userid">当前用户</param>
+            <param name="infoid">相关ID</param>
+            <param name="flag">0好友请求，1群组请求，2通知信息，3短信，4提醒</param>
+            <returns>返回数量</returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.GetFriendRequest(System.Int32)">
+            <summary>
+            得到需要审核的好友！
+            </summary>
+            <param name="userid">用户ID</param>
+            <returns>List列表实体</returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.GetGroupRequest(System.Int32)">
+            <summary>
+            得到受邀请的群组！
+            </summary>
+            <param name="userid">用户ID</param>
+            <returns>List列表实体</returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.CheckFriend(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            通过或拒绝好友请求
+            </summary>
+            <param name="fid">好友ID</param>
+            <param name="uid">操作者ID</param>
+            <param name="flag">0通过，1拒绝</param>
+            <returns>0失败，1成功</returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.CheckGroup(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            通过或拒绝加入群
+            </summary>
+            <param name="userid">邀请者</param>
+            <param name="uid">被邀请者</param>
+            <param name="gid">群组ID</param>
+            <param name="flag">0通过，1拒绝</param>
+            <returns>0失败，-1已经加入过了，1操作成功</returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.UpdateOnlineUser(JuSNS.Model.OnlineUserInfo)">
+            <summary>
+            更新在线人数
+            </summary>
+            <param name="info">OnlineUserInfo实体类</param>
+        </member>
+        <member name="M:JuSNS.Home.User.User.GetOnlineCount(System.Int32)">
+            <summary>
+            得到用户在线数
+            </summary>
+            <param name="flag">0游客在线，1注册用户在线，2所有用户在线</param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.InsertDyn(JuSNS.Model.DynInfo)">
+            <summary>
+            插入动态
+            </summary>
+            <param name="info"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.InsertNotice(JuSNS.Model.NoticeInfo)">
+            <summary>
+            插入通知
+            </summary>
+            <param name="info"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.UpdateNote(System.Int32)">
+            <summary>
+            更新所有通知信息为已读
+            </summary>
+            <param name="userid">用户ID</param>
+        </member>
+        <member name="M:JuSNS.Home.User.User.GetDynList(System.Int32,System.Int32,System.String,System.String,System.String)">
+            <summary>
+            得到动态列表(会员中心)
+            </summary>
+            <param name="number">调用数量</param>
+            <param name="userid">用户</param>
+            <param name="friendstr">好友列表</param>
+            <param name="keys">屏蔽的用户列表</param>
+            <param name="dyntype">获得类型</param>
+            <returns>List列表</returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.GetAtt(System.Int32)">
+            <summary>
+            得到我关注的人
+            </summary>
+            <param name="userid">关注这UserID</param>
+            <returns>我关注的人的列表</returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.GetVipInfo(System.Int32)">
+            <summary>
+            得到VIP信息
+            </summary>
+            <param name="userid">用户ID</param>
+            <returns>JoinVipInfo实体类</returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.JoinVip(System.Int32,System.String,System.String)">
+            <summary>
+            加入VIP
+            </summary>
+            <param name="userid">加入者</param>
+            <param name="today">到期时间</param>
+            <param name="joincontents">加入理由</param>
+            <returns>0失败，1成功，-1已经申请过了</returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.UpdateVip(System.Int32,System.Int32)">
+            <summary>
+            更新VIP会员状态
+            </summary>
+            <param name="userid">用户ID</param>
+            <param name="flag">0取消VIP会员资格，增加VIP会员资格</param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.DeleteAtt(System.Int32,System.Int32)">
+            <summary>
+            取消关注
+            </summary>
+            <param name="aid">关注ID</param>
+            <param name="uid">操作者</param>
+            <returns>0失败，1成功</returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.InsertATT(JuSNS.Model.ATTInfo)">
+            <summary>
+            插入关注
+            </summary>
+            <param name="info"></param>
+            <returns>0失败，-1关注过了，1成功</returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.GetSpaceTemplate(System.Int32)">
+            <summary>
+            得到空间模板（指定ID）
+            </summary>
+            <param name="tid">空间模板</param>
+            <returns>SpaceTemplateInfo实体类</returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.UpdateSpaceTemplate(System.Int32)">
+            <summary>
+            更新模板使用次数
+            </summary>
+            <param name="tid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.InsertSpaceTemplate(JuSNS.Model.SpaceTemplateInfo)">
+            <summary>
+            插入或更新模板
+            </summary>
+            <param name="info"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.DeleteSpace(System.Int32,System.Int32)">
+            <summary>
+            删除空间模板
+            </summary>
+            <param name="tid"></param>
+            <param name="uid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.DeleteUser(System.Int32,System.Int32)">
+            <summary>
+            删除用户
+            </summary>
+            <param name="userid">被删除者</param>
+            <param name="uid">删除者</param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.DeleteFlash(System.Int32,System.Int32)">
+            <summary>
+            删除首页Flash幻灯片
+            </summary>
+            <param name="fid"></param>
+            <param name="uid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.DeleteGift(System.Int32,System.Int32)">
+            <summary>
+            删除礼物
+            </summary>
+            <param name="fid"></param>
+            <param name="uid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.GetGiftClassInfo(System.Int32)">
+            <summary>
+            得到礼物分类
+            </summary>
+            <param name="cid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.DeleteGiftClass(System.Int32,System.Int32)">
+            <summary>
+            删除礼物分类
+            </summary>
+            <param name="fid"></param>
+            <param name="uid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.InsertGift(JuSNS.Model.GiftInfo)">
+            <summary>
+            插入礼物或更新礼物
+            </summary>
+            <param name="info"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.InsertGiftClass(JuSNS.Model.GiftClassInfo)">
+            <summary>
+            插入礼物或更新礼物分类
+            </summary>
+            <param name="info"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.DeleteUserAll(System.Int32)">
+            <summary>
+            删除所有会员
+            </summary>
+            <param name="uid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.UpdateATT(System.Int32,System.Int32)">
+            <summary>
+            更新关注
+            </summary>
+            <param name="bid"></param>
+            <param name="uid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.UpdateChargeOrderState(System.Int32,System.Int32)">
+            <summary>
+            更改充值订单的状态
+            </summary>
+            <param name="oid"></param>
+            <param name="flag"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.DeleteChargeOrder(System.Int32,System.Int32)">
+            <summary>
+            删除充值订单
+            </summary>
+            <param name="oid"></param>
+            <param name="uid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.InsertFlash(JuSNS.Model.FlashInfo)">
+            <summary>
+            插入Flash幻灯片
+            </summary>
+            <param name="info"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.GetFlashInfo(System.Int32)">
+            <summary>
+            得到FLASH幻灯片信息
+            </summary>
+            <param name="fid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.User.User.ActivationEmail(System.Int32)">
+            <summary>
+            激活电子邮件
+            </summary>
+            <param name="userid">激活用户ID</param>
+            <returns>0失败，1成功</returns>
+        </member>
+        <member name="P:JuSNS.Home.User.User.Instance">
+            <summary>
+            取得实例
+            </summary>
+        </member>
+        <member name="M:JuSNS.Home.App.Group.GetClassName(System.Int32)">
+            <summary>
+            根据classid获取群组分类名称
+            </summary>
+            <param name="classid">分类ID</param>
+            <returns>分类名称</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Group.GetClassList(System.Int32)">
+            <summary>
+            获得群组分类
+            </summary>
+            <param name="parentid">父ID</param>
+            <returns>List类</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Group.IsJoinGroup(System.Int32,System.Int32)">
+            <summary>
+            是否加入了指定群里面
+            </summary>
+            <param name="groupid">群ID</param>
+            <param name="userid">用户</param>
+            <returns>返回true或false</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Group.GetJoinGroup(System.Int32)">
+            <summary>
+            得到加入的群ID字符串
+            </summary>
+            <param name="userid">用户ID</param>
+            <returns>得到以"," 分开的字符串</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Group.DeleteGroup(System.Int32,System.Int32)">
+            <summary>
+            删除群
+            </summary>
+            <param name="groupid">群ID</param>
+            <param name="userid">当前删除群的用户ID</param>
+            <returns>0失败，1成功</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Group.DeleteGroupTopic(System.Int32,System.Int32)">
+            <summary>
+            删除群主题
+            </summary>
+            <param name="tid">话题ID</param>
+            <param name="userid">当前用户ID</param>
+            <returns>0失败，1成功</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Group.DeleteGroupClass(System.Int32,System.Int32)">
+            <summary>
+            删除社群分类
+            </summary>
+            <param name="cid"></param>
+            <param name="userid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Group.DeleteGroupFile(System.Int32,System.Int32)">
+            <summary>
+            删除群附件
+            </summary>
+            <param name="tid">ID</param>
+            <param name="userid">当前用户ID</param>
+            <returns>0失败，1成功</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Group.GetGroupClassInfo(System.Int32)">
+            <summary>
+            得到群组分类信息
+            </summary>
+            <param name="cid">得到群组分类</param>
+        </member>
+        <member name="M:JuSNS.Home.App.Group.InsertGroupClass(JuSNS.Model.GroupClassInfo)">
+            <summary>
+            插入社群分类
+            </summary>
+            <param name="info"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Group.SetGroupTop(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            设置话题置顶
+            </summary>
+            <param name="tid">话题ID</param>
+            <param name="userid">当前用户ID</param>
+            <param name="flag">0取消置顶，1置顶</param>
+            <returns>0失败1成功</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Group.SetGroupBest(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            设置话题精华
+            </summary>
+            <param name="tid">话题ID</param>
+            <param name="userid">当前用户ID</param>
+            <param name="flag">0取消精华，1设置为精华</param>
+            <returns>0失败1成功</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Group.JoinGroup(System.Int32,System.Int32)">
+            <summary>
+            加入群
+            </summary>
+            <param name="groupid">群ID</param>
+            <param name="userid">申请加入的人</param>
+            <returns>0成功，1需要审核，2拒绝加入，3加入失败</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Group.OutGroup(System.Int32,System.Int32)">
+            <summary>
+            退出
+            </summary>
+            <param name="groupid">群ID</param>
+            <param name="userid">用户ID</param>
+            <returns>1成功，0失败，2是创始人不能退出</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Group.InsertandUpdate(JuSNS.Model.GroupInfo,System.Int32@)">
+            <summary>
+            插入或更新群信息
+            </summary>
+            <param name="info">群组实体类</param>
+            <param name="gid">返回群组ID</param>
+            <returns>大于0，成功</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Group.GetGroupInfo(System.Object)">
+            <summary>
+            得到指定群组信息
+            </summary>
+            <param name="gid">群ID</param>
+            <returns>得到群实体类</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Group.GetTopicInfo(System.Object)">
+            <summary>
+            得到指定帖子信息
+            </summary>
+            <param name="tid">帖子ID</param>
+            <returns>得到群实体类</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Group.GetGroupTopicCount(System.Int32,System.Int32)">
+            <summary>
+            得到指定群组的话题数量
+            </summary>
+            <param name="gid">群组ID</param>
+            <param name="flag">0所有话题，1只有群组主题，2只有群组回复</param>
+            <returns>群组主题数</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Group.GetGroupTopicList(System.Int32,System.Int32)">
+            <summary>
+            得到指定群内的帖子列表
+            </summary>
+            <param name="number">调用数</param>
+            <param name="gid">群ID</param>
+            <returns>返回List列表实体</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Group.GetGroupMemberList(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            得到某个群的成员
+            </summary>
+            <param name="number">调用数</param>
+            <param name="gid">群ID</param>
+            <param name="flag">0以管理员排序,1以最新加入会员排序</param>
+            <returns>返回List列表实体</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Group.GetGroupAlbumCount(System.Int32)">
+            <summary>
+            得到群相册数量
+            </summary>
+            <param name="gid">群ID</param>
+            <returns>群相册数量</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Group.GetGroupFilesCount(System.Int32)">
+            <summary>
+            得到群附件数量
+            </summary>
+            <param name="gid">群ID</param>
+            <returns>群附件数量</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Group.GetGroupMemberCount(System.Int32)">
+            <summary>
+            得到群会员数量
+            </summary>
+            <param name="gid">群ID</param>
+            <returns>群会员数量</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Group.GetGroupAtiveCount(System.Int32)">
+            <summary>
+            得到群活动数量
+            </summary>
+            <param name="gid">群ID</param>
+            <returns>群活动数量</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Group.isGroupAdmin(System.Int32,System.Int32)">
+            <summary>
+            是否是群管理员
+            </summary>
+            <param name="gid">群ID</param>
+            <param name="userid">用户ID</param>
+            <returns>返回true或false</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Group.InsertTopic(JuSNS.Model.GroupTopicInfo)">
+            <summary>
+            插入帖子回复
+            </summary>
+            <param name="info">帖子实体类</param>
+            <returns>0失败，1成功</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Group.UpdateTopicContent(JuSNS.Model.GroupTopicInfo)">
+            <summary>
+            更新帖子内容
+            </summary>
+            <param name="info"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Group.UpdateTopicClicks(System.Int32)">
+            <summary>
+            更新查看次数
+            </summary>
+            <param name="tid">帖子ID</param>
+        </member>
+        <member name="M:JuSNS.Home.App.Group.GetMaxTopicForUser(System.Int32,System.Int32)">
+            <summary>
+            获得用户发布的最新的帖子ID
+            </summary>
+            <param name="gid">群组</param>
+            <param name="userid">用户ID</param>
+            <returns>帖子ID</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Group.InviteFriend(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            邀请好友加入群
+            </summary>
+            <param name="userid">邀请者</param>
+            <param name="reciveid">被邀请者</param>
+            <param name="gid">邀请加入的群</param>
+            <returns>0失败，1成功</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Group.GetFileInfo(System.Object)">
+            <summary>
+            得到附件单个信息
+            </summary>
+            <param name="fid">附件ID</param>
+            <returns>附件实体类</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Group.GetFilesSize(System.Int32)">
+            <summary>
+            得到群空间总大小（已使用）
+            </summary>
+            <param name="gid">群ID</param>
+            <returns>返回空间已使用大小，单位KB</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Group.InsertFiles(JuSNS.Model.FilesInfo)">
+            <summary>
+            向数据库中插入附件
+            </summary>
+            <param name="info">附件实体类</param>
+            <returns>0失败，1成功</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Group.CheckGroupMember(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            群组会员通过审核
+            </summary>
+            <param name="gid">群ID</param>
+            <param name="userid">被操作的用户ID</param>
+            <param name="uid">操作的管理员用户ID</param>
+            <param name="flag">0审核，1拒绝</param>
+            <returns>0失败，1成功</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Group.GetMemberList(System.Int32)">
+            <summary>
+            得到加入某个群内的用户列表
+            </summary>
+            <param name="gid">群ID</param>
+            <returns>群会员字符串</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Group.DeleteGroupMember(System.Int32,System.Int32)">
+            <summary>
+            删除群会员
+            </summary>
+            <param name="infoid">ID</param>
+            <param name="uid">操作者</param>
+            <returns>0失败，1成功</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Group.isGroupSuperAdmin(System.Int32,System.Int32)">
+            <summary>
+            是否是超级管理员
+            </summary>
+            <param name="gid"></param>
+            <param name="userid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Group.SetGroupAdmin(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            设置为群管理员
+            </summary>
+            <param name="gid">群ID</param>
+            <param name="userid">被操作者</param>
+            <param name="uid">操作者</param>
+            <param name="flag">1设置为管理员，0取消管理员</param>
+            <returns>0失败，1成功</returns>
+        </member>
+        <member name="P:JuSNS.Home.App.Group.Instance">
+            <summary>
+            取得实例
+            </summary>
+        </member>
+        <member name="M:JuSNS.Home.App.Ative.GetAtiveClassList(System.Int32)">
+            <summary>
+            得到活动分类
+            </summary>
+            <param name="parentid">父ID</param>
+            <returns>List实体类</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Ative.InsertUpdate(JuSNS.Model.AtiveInfo)">
+            <summary>
+            插入或更新活动
+            </summary>
+            <param name="info">活动实体类</param>
+            <returns>返回相关ID</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Ative.GetAtiveInfo(System.Object)">
+            <summary>
+            得到指定活动的信息
+            </summary>
+            <param name="aid">活动ID</param>
+            <returns>活动详情实体类</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Ative.GetAtiveClassInfo(System.Object)">
+            <summary>
+            得到指定活动分类的信息
+            </summary>
+            <param name="aid">活动ID</param>
+            <returns>活动详情实体类</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Ative.GetFriendAtive(System.Int32,System.String,System.Int32)">
+            <summary>
+            得到好友最新参加的活动
+            </summary>
+            <param name="number">显示数量</param>
+            <param name="q">好友查询字符串</param>
+            <param name="userid">当前用户ID</param>
+            <returns>活动实体类集合</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Ative.UpdateClick(System.Int32)">
+            <summary>
+            更新活动点击率
+            </summary>
+            <param name="aid">活动ID</param>
+        </member>
+        <member name="M:JuSNS.Home.App.Ative.GetMembers(System.Int32,System.Int32)">
+            <summary>
+            得到报名活动人数或关注人数
+            </summary>
+            <param name="aid">活动ID</param>
+            <param name="flag">1表示关注活动，2表示报名活动</param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Ative.JoinAtive(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            参与或者关注活动
+            </summary>
+            <param name="aid">活动ID</param>
+            <param name="uid">参与者ID</param>
+            <param name="flag">1关注活动，2参与活动</param>
+            <returns>0失败，1参与了但是需要审核，2成功，3已经参与了</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Ative.GetAtiveATT(System.Int32,System.Int32)">
+            <summary>
+            得到是否参加或者关注过活动
+            </summary>
+            <param name="aid">活动ID</param>
+            <param name="uid">用户ID</param>
+            <returns>-1没有记录，0参与了未审核，1已经关注过了，2已经参与了</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Ative.OutAtive(System.Int32,System.Int32)">
+            <summary>
+            退出活动
+            </summary>
+            <param name="aid">活动ID</param>
+            <param name="uid">用户ID</param>
+            <returns>0失败，1成功</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Ative.GetCheckMembers(System.Int32)">
+            <summary>
+            得到需要审核的参加活动的会员。
+            </summary>
+            <param name="aid">活动ID</param>
+            <returns>需要审核的数量</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Ative.GetCheckMemberList(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            得到需要审核的会员
+            </summary>
+            <param name="number">要调用的列表数量</param>
+            <param name="aid">活动ID</param>
+            <param name="flag">得到要调用的会员列表类型,0表示要审核的，1表示关注的，2表示参与的</param>
+            <returns>活动需要审核的会员列表LIST实体类</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Ative.GetAtiveAlbumList(System.Int32,System.Int32)">
+            <summary>
+            得到活动相册
+            </summary>
+            <param name="number"></param>
+            <param name="aid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Ative.CheckAtiveMember(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            审核会员
+            </summary>
+            <param name="mid">操作的数据库记录ID</param>
+            <param name="aid">活动编号</param>
+            <param name="flag">2审核，0取消审核</param>
+            <returns>0失败，1成功，2人数达到上限</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Ative.AtiveImgCount(System.Int32)">
+            <summary>
+            得到某个活动中的图片数量
+            </summary>
+            <param name="aid">活动ID</param>
+            <returns>图片数量</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Ative.TheNumber(System.Int32,System.Int32)">
+            <summary>
+            相片中的第几张
+            </summary>
+            <param name="aid"></param>
+            <param name="photoID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Ative.PrePhotoID(System.Int32,System.Int32)">
+            <summary>
+            活动相册中的上一张
+            </summary>
+            <param name="aid">活动ID</param>
+            <param name="photoID">相片ID</param>
+            <returns>第几张</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Ative.NextPhotoID(System.Int32,System.Int32)">
+            <summary>
+            活动相册中的下一张
+            </summary>
+            <param name="aid">活动ID</param>
+            <param name="photoID">相片ID</param>
+            <returns>第几张</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Ative.InsertAtiveComment(JuSNS.Model.AtiveCommentInfo)">
+            <summary>
+            插入活动评论
+            </summary>
+            <param name="info">活动评论实体类</param>
+            <returns>0失败，1成功</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Ative.DeleteAtive(System.Int32,System.Int32)">
+            <summary>
+            删除活动
+            </summary>
+            <param name="aid">删除用户</param>
+            <param name="uid">操作用户</param>
+            <returns>0失败，1成功</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Ative.DeleteAtiveClass(System.Int32,System.Int32)">
+            <summary>
+            删除活动分类
+            </summary>
+            <param name="aid"></param>
+            <param name="uid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Ative.GetAtiveCommentInfo(System.Int32)">
+            <summary>
+            得到活动评论具体信息
+            </summary>
+            <param name="cid">活动评论的ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Ative.DeleteAtiveComment(System.Int32,System.Int32)">
+            <summary>
+            删除留言评论
+            </summary>
+            <param name="aid">删除用户</param>
+            <param name="uid">操作用户</param>
+            <returns>0失败，1成功</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Ative.GetInfo(System.Object)">
+            <summary>
+            得到照片信息(PhotoID)
+            </summary>
+            <param name="PhotoID"></param>
+            <returns></returns>
+        </member>
+        <member name="P:JuSNS.Home.App.Ative.Instance">
+            <summary>
+            取得实例
+            </summary>
+        </member>
+        <member name="M:JuSNS.Home.App.Shop.GetGoodsInfo(System.Object)">
+            <summary>
+            得到指定商品信息
+            </summary>
+            <param name="gid">商品的ID</param>
+            <returns>ShopGoodsInfo实体类</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Shop.GetShopClassInfo(System.Object)">
+            <summary>
+            得到指定商品分类信息
+            </summary>
+            <param name="gid">商品的ID</param>
+            <returns>ShopClassInfo实体类</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Shop.GetShopClass(System.Int32)">
+            <summary>
+            得到商品/商铺分类
+            </summary>
+            <param name="parentid">父类ID</param>
+            <returns>返回LIST集合</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Shop.InsertShopGoods(JuSNS.Model.ShopGoodsInfo)">
+            <summary>
+            添加或更新商品
+            </summary>
+            <param name="info">商品实体类</param>
+            <returns>0失败，1成功</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Shop.GetShopID(System.Int32)">
+            <summary>
+            得到店铺ID
+            </summary>
+            <param name="userid">用户ID</param>
+            <returns>0为无店铺，大于表示店铺ID</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Shop.InsertShop(JuSNS.Model.ShopInfo)">
+            <summary>
+            插入店铺或修改店铺
+            </summary>
+            <param name="info">店铺实体类</param>
+            <returns>返回店铺ID</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Shop.GetShopForID(System.Object)">
+            <summary>
+            得到店铺信息(通过ID)
+            </summary>
+            <param name="sid">店铺ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Shop.GetShopForUserID(System.Object)">
+            <summary>
+            得到店铺信息(通过用户ID)
+            </summary>
+            <param name="userid">店铺ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Shop.GetShopList(System.Int32,System.Int32)">
+            <summary>
+            得到店铺列表
+            </summary>
+            <param name="number">得到数量</param>
+            <param name="isrec">0普通，1推荐</param>
+            <returns>LIST列表</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Shop.GetGoodsList(System.Int32,System.Int32)">
+            <summary>
+            得到品牌列表
+            </summary>
+            <param name="number">数量</param>
+            <param name="isrec">0普通，1推荐</param>
+            <returns>LIST列表</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Shop.GetMulteList(System.Int32,System.Int32)">
+            <summary>
+            得到团购列表
+            </summary>
+            <param name="number">数量</param>
+            <param name="isrec">0普通，1推荐</param>
+            <returns>LIST列表</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Shop.UpdateGoodsState(System.Int32,System.Int32)">
+            <summary>
+            更改商品状态
+            </summary>
+            <param name="gid">商品ID</param>
+            <param name="gtype">0点击率率，1顶一下，2踩一下，3增加累计销售量</param>
+            <returns>0失败，1成功</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Shop.GetUserGoodsList(System.Int32,System.Int32)">
+            <summary>
+            得到制定用户的商品列表
+            </summary>
+            <param name="number">调用数</param>
+            <param name="userid">用户ID</param>
+            <returns>商品列表LIST实例类</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Shop.DeleteGoods(System.Int32,System.Int32)">
+            <summary>
+            删除商品
+            </summary>
+            <param name="infoid"></param>
+            <param name="userid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Shop.DeleteShop(System.Int32,System.Int32)">
+            <summary>
+            删除店铺
+            </summary>
+            <param name="infoid">店铺ID</param>
+            <param name="userid">用户ID</param>
+            <returns>0失败，1成功</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Shop.DeleteShopClass(System.Int32,System.Int32)">
+            <summary>
+            删除分类
+            </summary>
+            <param name="infoid">ID</param>
+            <param name="userid">用户ID</param>
+            <returns>0失败，1成功</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Shop.InsertShopClass(JuSNS.Model.ShopClassInfo)">
+            <summary>
+            插入分类
+            </summary>
+            <param name="info"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Shop.JoinMulte(System.Int32,System.Int32,System.String)">
+            <summary>
+            加入团购活动
+            </summary>
+            <param name="mid">团购ID</param>
+            <param name="uid">加入者用户ID</param>
+            <param name="cont">联系方式</param>
+            <returns>0失败，1成功</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Shop.DeleteMulte(System.Int32,System.Int32)">
+            <summary>
+            删除团购信息
+            </summary>
+            <param name="infoid">团购ID</param>
+            <param name="userid">用户ID</param>
+            <returns>0失败，1成功</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Shop.DeleteOrder(System.Int32,System.Int32)">
+            <summary>
+            删除订单
+            </summary>
+            <param name="infoid"></param>
+            <param name="userid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Shop.InserShopOrder(JuSNS.Model.ShopOrderInfo)">
+            <summary>
+            插入商品购买订单号
+            </summary>
+            <param name="info"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Shop.UpdateShopOrder(System.Int32)">
+            <summary>
+            更新订单状态
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Shop.PostOrder(System.String,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            为订单发货
+            </summary>
+            <param name="ordernumber">订单编号</param>
+            <param name="gid">商品ID</param>
+            <param name="orderid">订单ID</param>
+            <param name="uid">用户ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Shop.ReviceOrder(System.Int32,System.Int32)">
+            <summary>
+            确认收货
+            </summary>
+            <param name="orderid">订单ID</param>
+            <param name="uid">用户ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Shop.GetGoodsCommentInfo(System.Object)">
+            <summary>
+            得到指定评论的信息
+            </summary>
+            <param name="id">评论的ID</param>
+            <returns>GoodsCommentInfo实体类</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Shop.InsertShopComment(JuSNS.Model.GoodsCommentInfo)">
+            <summary>
+            插入商品/店铺评论
+            </summary>
+            <param name="info">评论实体类</param>
+            <returns>1成功，0失败</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Shop.DeleteShopComment(System.Int32,System.Int32)">
+            <summary>
+            删除商品评论
+            </summary>
+            <param name="cid">被删除的评论ID</param>
+            <param name="userid">用户ID</param>
+            <returns>1成功，0失败</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Shop.InsertUserComment(JuSNS.Model.ShopUserCommentInfo)">
+            <summary>
+            插入商品积分
+            </summary>
+            <param name="info">商品积分评论实体类</param>
+            <returns>0失败，1成功，-1已经评论过了。</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Shop.GetGoodsSore(System.Int32)">
+            <summary>
+            得到某个商品的平均积分
+            </summary>
+            <param name="gid">商品ID</param>
+            <returns>平均分</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Shop.IsShopUserComment(System.Int32,System.Int32)">
+            <summary>
+            得到是否打个评分
+            </summary>
+            <param name="gid">商品ID</param>
+            <param name="userid">用户ID</param>
+            <returns>返回True或False</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Shop.GetMulteBuyInfo(System.Object)">
+            <summary>
+            得到指定的团购信息
+            </summary>
+            <param name="mid">团购ID</param>
+            <returns>ShopMulteBuyInfo实体类</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Shop.InsertMulteBuy(JuSNS.Model.ShopMulteBuyInfo)">
+            <summary>
+            插入更新团购信息
+            </summary>
+            <param name="info">团购实体类</param>
+            <returns>返回的ID</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Shop.GetShopNewsInfo(System.Int32)">
+            <summary>
+            得到公告基本信息
+            </summary>
+            <param name="nid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Shop.DeleteShopNews(System.Int32)">
+            <summary>
+            删除公告
+            </summary>
+            <param name="nid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Shop.InsertShopNews(JuSNS.Model.ShopNewsInfo)">
+            <summary>
+            插入店铺公告
+            </summary>
+            <param name="info"></param>
+            <returns></returns>
+        </member>
+        <member name="P:JuSNS.Home.App.Shop.Instance">
+            <summary>
+            取得实例
+            </summary>
+        </member>
+        <member name="M:JuSNS.Home.App.Ask.GetAskClass(System.Int32)">
+            <summary>
+            得到问答的分类列表
+            </summary>
+            <param name="ParentID">父ID</param>
+            <returns>List列表实体</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Ask.DeleteAsk(System.Int32,System.Int32)">
+            <summary>
+            删除问题
+            </summary>
+            <param name="aid"></param>
+            <param name="userid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Ask.GetAskClassInfo(System.Object)">
+            <summary>
+            得到指定ID的问答分类
+            </summary>
+            <param name="aid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Ask.InsertAskClass(JuSNS.Model.AskClassInfo)">
+            <summary>
+            插入问题分类
+            </summary>
+            <param name="info"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Ask.DeleteAskClass(System.Int32,System.Int32)">
+            <summary>
+            删除问题分类
+            </summary>
+            <param name="aid"></param>
+            <param name="userid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Ask.InsertAsk(JuSNS.Model.AskInfo,System.Int32@)">
+            <summary>
+            插入新问题或更新新问题
+            </summary>
+            <param name="info"></param>
+            <returns>0失败，1积分不足，2成功</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Ask.GetAskInfo(System.Object)">
+            <summary>
+            得到指定问题的信息
+            </summary>
+            <param name="aid">问题ID</param>
+            <returns>AskInfo实体类</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Ask.UpdateAskState(System.Object,System.Int32,System.Int32)">
+            <summary>
+            更新问题状态
+            </summary>
+            <param name="aid">问题ID</param>
+            <param name="flag">0增加点击率，1更新问题为关闭状态，2设置问题为最佳答案</param>
+            <param name="userid">操作者用户ID</param>
+            <returns>0失败，1成功</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Ask.GetAskList(System.Int32,System.String,System.Int32)">
+            <summary>
+            得到问题列表
+            </summary>
+            <param name="number">调用数量</param>
+            <param name="qstring">查询字符串</param>
+            <param name="flag">0高分悬赏，1最新问题，2相关问题（联合qstring查询,未用）</param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Ask.SetAskBest(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            设置为最佳答案
+            </summary>
+            <param name="uid">操作ID</param>
+            <param name="infoid">操作的答案</param>
+            <param name="mid">答案的问题ID</param>
+            <param name="userid">被操作用户</param>
+            <returns>0成功，1已经有最佳答案了，2问题已经关闭，3不是自己的问题，4设置失败</returns>
+        </member>
+        <member name="P:JuSNS.Home.App.Ask.Instance">
+            <summary>
+            取得实例
+            </summary>
+        </member>
+        <member name="M:JuSNS.Home.App.Share.InsertShare(JuSNS.Model.ShareInfo)">
+            <summary>
+            插入分享
+            </summary>
+            <param name="info">分享实体类</param>
+            <returns>0失败，1成功</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Share.DeleteShare(System.Int32,System.Int32)">
+            <summary>
+            删除分享
+            </summary>
+            <param name="uid">操作用户ID</param>
+            <param name="sid">分享ID</param>
+            <returns>1成功，0失败</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Share.GetInfo(System.Object)">
+            <summary>
+            得到分享信息
+            </summary>
+            <param name="sid">分享ID</param>
+            <returns>ShareInfo实体类</returns>
+        </member>
+        <member name="P:JuSNS.Home.App.Share.Instance">
+            <summary>
+            取得实例
+            </summary>
+        </member>
+        <member name="M:JuSNS.Home.App.News.DeleteNews(System.Int32,System.Int32)">
+            <summary>
+            删除新闻
+            </summary>
+            <param name="nid"></param>
+            <param name="uid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.App.News.GetNewsChannel(System.Int32,System.Int32)">
+            <summary>
+            得到资讯分类
+            </summary>
+            <param name="ParentID">父ID</param>
+            <param name="Type">0资讯，1文章，2资源</param>
+            <returns>List对象</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.News.InsertUpdateNews(JuSNS.Model.NewsInfo)">
+            <summary>
+            插入/修改资讯
+            </summary>
+            <param name="Info"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.App.News.InsertUpdateNewsClass(JuSNS.Model.NewsChannelInfo)">
+            <summary>
+            插入/修改资讯分类
+            </summary>
+            <param name="Info"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.App.News.GetNewsInfo(System.Object)">
+            <summary>
+            得到资讯信息
+            </summary>
+            <param name="nid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.App.News.GetNewsChannelInfo(System.Object)">
+            <summary>
+            得到资讯分类信息
+            </summary>
+            <param name="nid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.App.News.UpdateNewsState(System.Int32)">
+            <summary>
+            更新新闻点击率
+            </summary>
+            <param name="BID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.App.News.UpdateATT(System.Int32,System.Int32)">
+            <summary>
+            更新关注
+            </summary>
+            <param name="BID"></param>
+            <param name="UserID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.App.News.GetNewsCommentInfo(System.Int32)">
+            <summary>
+            得到评论具体信息
+            </summary>
+            <param name="CID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.App.News.GetNewsList(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            调用某个类型的日志
+            </summary>
+            <param name="Number">调用数量</param>
+            <param name="Flag">0点击排行,1关注排行,2分享排行,3推荐,4评论排行,5最新更新,6系统</param>
+            <param name="UserID">用户ID，如果大于0则表示调用用户的日志</param>
+            <returns>List列表</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.News.InsertNewsComment(JuSNS.Model.NewsCommentInfo)">
+            <summary>
+            插入日志评论
+            </summary>
+            <param name="Info"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.App.News.DeleteNewsComment(System.Int32,System.Int32)">
+            <summary>
+            删除资讯评论
+            </summary>
+            <param name="CID"></param>
+            <param name="UserID"></param>
+            <returns></returns>
+        </member>
+        <member name="P:JuSNS.Home.App.News.Instance">
+            <summary>
+            取得实例
+            </summary>
+        </member>
+        <member name="T:JuSNS.Home.UtilPage">
+            <summary>
+            通用分页
+            </summary>
+        </member>
+        <member name="M:JuSNS.Home.UtilPage.#cctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:JuSNS.Home.User.Box.Add(JuSNS.Model.MailInfo)">
+            <summary>
+            添加私信
+            </summary>
+            <param name="Info">私信实体类</param>
+            <returns>添加成功返回1</returns>
+        </member>
+        <member name="M:JuSNS.Home.User.Box.Del(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            删除私信
+            </summary>
+            <param name="dType">类型,0为发件箱,1为收件箱</param>
+            <param name="BoxID">私信编号</param>
+            <returns>删除成功返回1</returns>
+        </member>
+        <member name="M:JuSNS.Home.User.Box.Reply(JuSNS.Model.MailInfo)">
+            <summary>
+            回复私信
+            </summary>
+            <param name="Info">私信实体类</param>
+            <returns>回复成功返回1</returns>
+        </member>
+        <member name="M:JuSNS.Home.User.Box.GetNewReContent(System.Int32,System.Boolean,System.Int32)">
+            <summary>
+            取得最新回复内容
+            </summary>
+            <param name="boxID">私信编号</param>
+            <param name="isMy">是否自已回复的最新内容</param>
+            <param name="UserID">用户编号</param>
+            <returns>返回最新回复内容</returns>
+        </member>
+        <member name="M:JuSNS.Home.User.Box.GetNewReCNT(System.Int32,System.Int32)">
+            <summary>
+            取得最新的回复是否被阅读
+            </summary>
+            <param name="boxID">私信编号</param>
+            <param name="UserID">用户编号</param>
+            <returns>0为未读，1为已读</returns>
+        </member>
+        <member name="M:JuSNS.Home.User.Box.Read(System.Int32,System.Int32)">
+            <summary>
+            设置收到的信息为已读状态
+            </summary>
+            <param name="boxID">私信编号</param>
+            <param name="UserID">用户编号</param>
+            <returns>操作成功返回1</returns>
+        </member>
+        <member name="M:JuSNS.Home.User.Box.UpdateNoticeMode(System.Int32)">
+            <summary>
+            更新通知状态
+            </summary>
+            <param name="UserID">会员编号</param>
+        </member>
+        <member name="M:JuSNS.Home.User.Box.Info(System.Int32)">
+            <summary>
+            私信信息
+            </summary>
+            <param name="ID">私信编号</param>
+            <returns>返回私信实体类</returns>
+        </member>
+        <member name="M:JuSNS.Home.User.Box.GetBoxUnRead(System.Int32)">
+            <summary>
+            得到未读邮件
+            </summary>
+            <param name="UserID"></param>
+            <returns></returns>
+        </member>
+        <member name="P:JuSNS.Home.User.Box.Instance">
+            <summary>
+            取得实例
+            </summary>
+        </member>
+        <member name="M:JuSNS.Home.App.Web.RecAll(System.Int32,System.Int32,System.Int32,System.String)">
+            <summary>
+            推荐
+            </summary>
+            <param name="infoid"></param>
+            <param name="uid"></param>
+            <param name="flag"></param>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Web.GetHelp(System.Int32)">
+            <summary>
+            得到帮助
+            </summary>
+            <param name="helpid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Web.GetHelpQ(System.String)">
+            <summary>
+            得到帮助
+            </summary>
+            <param name="q"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Web.InsertHelp(JuSNS.Model.HelpInfo)">
+            <summary>
+            添加或更新帮助
+            </summary>
+            <param name="info"></param>
+            <returns>0失败，1成功</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Web.GetTopUser(System.Int32,System.Int32)">
+            <summary>
+            得到用户排行
+            </summary>
+            <param name="number">调用数量</param>
+            <param name="flag">0表示热门Blog用户，1热门用户，2热门美女，3热门帅哥，4人气排行，5活跃度，6积分排行，7推荐用户，8被关注度排行</param>
+            <returns>List列表实体</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Web.GetBlogList(System.Int32,System.Int32)">
+            <summary>
+            得到博客列表
+            </summary>
+            <param name="number">数量</param>
+            <param name="flag">0热门博客，1最新博客，2推荐博客</param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Web.GetNewsList(System.Int32,System.Int32)">
+            <summary>
+            得到新闻列表
+            </summary>
+            <param name="number">数量</param>
+            <param name="flag">0热门，1最新，2推荐，3图片</param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Web.GetGroupList(System.Int32,System.Int32)">
+            <summary>
+            得到群组列表
+            </summary>
+            <param name="number">数量</param>
+            <param name="flag">0热门，1最新，2推荐，3名人机构</param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Web.SetGroupLight(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            设置名人机构
+            </summary>
+            <param name="gid"></param>
+            <param name="uid"></param>
+            <param name="flag"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Web.GetGoodsList(System.Int32,System.Int32)">
+            <summary>
+             得到商品列表
+             </summary>
+             <param name="number">数量</param>
+             <param name="flag">0热门，1最新，2推荐</param>
+             <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Web.GetShopList(System.Int32,System.Int32)">
+            <summary>
+             得到店铺列表
+             </summary>
+             <param name="number">数量</param>
+             <param name="flag">0热门，1最新，2推荐</param>
+             <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Web.GetActiveList(System.Int32,System.Int32)">
+            <summary>
+             得到活动列表
+             </summary>
+             <param name="number">数量</param>
+             <param name="flag">0热门，1最新，2推荐</param>
+             <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Web.GetAskList(System.Int32,System.Int32)">
+            <summary>
+             得到问答列表
+             </summary>
+             <param name="number">数量</param>
+             <param name="flag">0热门，1最新，2推荐</param>
+             <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Web.GetVoteList(System.Int32,System.Int32)">
+            <summary>
+             得到投票列表
+             </summary>
+             <param name="number">数量</param>
+             <param name="flag">0热门，1最新，2推荐</param>
+             <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Web.GetPhotoList(System.Int32,System.Int32)">
+            <summary>
+             得到相片列表
+             </summary>
+             <param name="number">数量</param>
+             <param name="flag">0热门，1最新，2推荐</param>
+             <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Web.GetGroupCount(System.Int32,System.Int32)">
+            <summary>
+            得到群组主题数量
+            </summary>
+            <param name="gid">群组ID</param>
+            <param name="flag">0主题数，1回复数</param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Web.GetTwitterList(System.Int32,System.Int32)">
+            <summary>
+            得到微博列表
+            </summary>
+            <param name="number">数量</param>
+            <param name="flag">0最新，1推荐</param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Web.GetGAlbumList(System.Int32,System.Int32)">
+            <summary>
+            得到相册列表
+            </summary>
+            <param name="number">数量</param>
+            <param name="flag">0热门，1最新，2推荐</param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Web.GetTopicList(System.Int32,System.Int32)">
+            <summary>
+            得到话题列表
+            </summary>
+            <param name="number">数量</param>
+            <param name="flag">0热门，1最新，2推荐</param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Web.GetTopicClassList(System.Int32)">
+            <summary>
+            得到社区分类
+            </summary>
+            <param name="parentid">顶级目录</param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Web.SetAllState(System.Int32,System.Int32,System.Int32,System.String)">
+            <summary>
+            设置信息状态
+            </summary>
+            <param name="infoid">被操作的信息</param>
+            <param name="uid">操作者</param>
+            <param name="flag">设置值</param>
+            <param name="type">类型</param>
+            <returns>0失败，1成功</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Web.CheckInfoState(System.Int32,System.Int32,System.Int32,System.String)">
+            <summary>
+            设置信息状态
+            </summary>
+            <param name="infoid">操作信息ID</param>
+            <param name="uid">操作者</param>
+            <param name="flag">操作类型</param>
+            <param name="type">需要设置的值</param>
+            <returns>0失败，1成功</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Web.Start(System.String)">
+            <summary>
+            初始化
+            </summary>
+            <param name="type">初始化类型</param>
+            <returns>0失败，1成功</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Web.DeleteNewsClass(System.Int32,System.Int32)">
+            <summary>
+            删除资讯分类
+            </summary>
+            <param name="infoid">被操作ID</param>
+            <param name="uid">操作者</param>
+            <returns>0失败，1成功</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Web.InsertAds(JuSNS.Model.AdsInfo)">
+            <summary>
+            插入广告/更新广告
+            </summary>
+            <param name="info">AdsInfo实体类</param>
+            <returns>0失败，1成功</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Web.GetAdsInfo(System.Int32)">
+            <summary>
+            得到广告信息
+            </summary>
+            <param name="aid">广告ID</param>
+            <returns>AdsInfo实体类</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Web.DeleteAds(System.Int32,System.Int32)">
+            <summary>
+            删除广告
+            </summary>
+            <param name="infoid">广告ID</param>
+            <param name="userid">操作者ID</param>
+            <returns>0失败，1成功</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Web.GetAdsList(System.String,System.Int32)">
+            <summary>
+            得到广告列表
+            </summary>
+            <param name="ptype">广告位</param>
+            <param name="number">调用数量</param>
+            <returns>List列表类</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Web.InsertEmailNotice(JuSNS.Model.EmailNoticeInfo)">
+            <summary>
+            找回密码插入数据记录
+            </summary>
+            <param name="info">EmailNoticeInfo实体类</param>
+            <returns>0失败，1成功</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Web.GetEmailNoticeInfo(System.String)">
+            <summary>
+            得到邮件通知信息
+            </summary>
+            <param name="vcode">验证码</param>
+            <returns>EmailNoticeInfo实体类</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Web.InsertReport(JuSNS.Model.ReportInfo)">
+            <summary>
+            插入举报信息
+            </summary>
+            <param name="info">ReportInfo实体类</param>
+            <returns>0失败，1成功</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Web.DeleteReport(System.Int32,System.Int32)">
+            <summary>
+            删除举报
+            </summary>
+            <param name="rid">举报ID</param>
+            <param name="userid">操作用户</param>
+            <returns>0失败，1成功</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Web.DeleteDyn(System.Int32,System.Int32)">
+            <summary>
+            删除动态
+            </summary>
+            <param name="did"></param>
+            <param name="userid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Web.GetLinksList(System.Int32,System.Int32)">
+            <summary>
+            得到友情链接
+            </summary>
+            <param name="number"></param>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Web.GetLinksInfo(System.Int32)">
+            <summary>
+            得到链接信息
+            </summary>
+            <param name="lid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Web.DeleteLinks(System.Int32,System.Int32)">
+            <summary>
+            删除友情链接
+            </summary>
+            <param name="lid"></param>
+            <param name="uid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Web.InsertLinks(JuSNS.Model.LinksInfo)">
+            <summary>
+            更新友情链接（增加/更新）
+            </summary>
+            <param name="info"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Web.GetApiKey(System.String)">
+            <summary>
+            得到APIkey是否存在
+            </summary>
+            <param name="apikey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Web.ProgrameInstall">
+            <summary>
+            检查程序是否已经安装
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:JuSNS.Home.App.Web.Instance">
+            <summary>
+            取得实例
+            </summary>
+        </member>
+        <member name="T:JuSNS.Home.App.Album">
+            <summary>
+            相册事务处理
+            </summary>
+        </member>
+        <member name="M:JuSNS.Home.App.Album.CoverPath(System.Int32)">
+            <summary>
+            封面图片路径
+            </summary>
+            <param name="albumid">相册ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Album.InfoList(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            照片信息列表
+            </summary>
+            <param name="albumid">相册编号</param>
+            <param name="userid">用户编号</param>
+            <param name="number">调用数量</param>
+            <returns>返回照片集</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Album.DeleteAlbum(System.Int32,System.Int32)">
+            <summary>
+            删除相册
+            </summary>
+            <param name="albumid">相册ID，0表示头像相册</param>
+            <param name="userid">用户名</param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Album.AlbumList(System.Int32,System.Int32)">
+            <summary>
+            获取指定用户相册集
+            </summary>
+            <param name="userid">用户编号</param>
+            <param name="gid">社群ID</param>
+            <returns>返回相册实体类集合</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Album.Add(JuSNS.Model.AlbumInfo)">
+            <summary>
+            添加相册
+            </summary>
+            <param name="info">相册实体类</param>
+            <returns>返回相册ID</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Album.GetInfo(System.Object)">
+            <summary>
+            得到相册信息
+            </summary>
+            <param name="albumid">相册ID</param>
+            <returns>返回相册实体类</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Album.Edit(JuSNS.Model.AlbumInfo)">
+            <summary>
+            编辑相册
+            </summary>
+            <param name="info">相册实体类</param>
+            <returns>1成功，0失败</returns>
+        </member>
+        <member name="P:JuSNS.Home.App.Album.Instance">
+            <summary>
+            取得实例
+            </summary>
+        </member>
+        <member name="M:JuSNS.Home.Other.Constellation.GetList">
+            <summary>
+            得到星座列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:JuSNS.Home.Other.Constellation.Instance">
+            <summary>
+            取得实例
+            </summary>
+        </member>
+        <member name="M:JuSNS.Home.Other.Area.GetArea">
+            <summary>
+            得到省份列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.Other.Area.CityList(System.Int32)">
+            <summary>
+            得到城市列表
+            </summary>
+            <param name="ParertID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.Other.Area.GetAreaInfo(System.Int32)">
+            <summary>
+            取得某个省市详细信息
+            </summary>
+            <param name="id">省市编号</param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.Other.Area.GetAreaID(System.String)">
+            <summary>
+            根据名称取得地区ID
+            </summary>
+            <param name="AreaName">地域名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.Other.Area.GetVotionList">
+            <summary>
+            加载行业
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.Other.Area.InsertArea(JuSNS.Model.DictAreaInfo)">
+            <summary>
+            插入或者更新地区
+            </summary>
+            <param name="info"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.Other.Area.DeleteArea(System.Int32,System.Int32)">
+            <summary>
+            删除地区
+            </summary>
+            <param name="aid"></param>
+            <param name="uid"></param>
+            <returns></returns>
+        </member>
+        <member name="P:JuSNS.Home.Other.Area.Instance">
+            <summary>
+            取得实例
+            </summary>
+        </member>
+        <member name="M:JuSNS.Home.App.Blog.GetBlogClass(System.Int32,System.Int32)">
+            <summary>
+            得到日志分类
+            </summary>
+            <param name="userid">0表示系统分类，其他表示用户的分类</param>
+            <param name="ParentID">父ID</param>
+            <returns>List对象</returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Blog.AddSortBlogClass(System.String,System.Int32)">
+            <summary>
+            增加日志分类
+            </summary>
+            <param name="SortName">分类名称</param>
+            <param name="userid">用户ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Blog.DeleteBlogClass(System.Int32,System.Int32)">
+            <summary>
+            删除分类
+            </summary>
+            <param name="userid"></param>
+            <param name="bid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Blog.UpdateBlog(JuSNS.Model.BlogInfo)">
+            <summary>
+            更新或新加日志
+            </summary>
+            <param name="Info">日志实体类</param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Blog.GetBlogInfo(System.Int32,System.Object)">
+            <summary>
+            得到日志信息
+            </summary>
+            <param name="userid"></param>
+            <param name="bid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Blog.GetBlogInfo(System.Object)">
+            <summary>
+            得到日志信息
+            </summary>
+            <param name="bid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Blog.InsertBlogClass(JuSNS.Model.BlogClassInfo)">
+            <summary>
+            插入日志分类
+            </summary>
+            <param name="info"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Blog.GetBlogClassInfo(System.Object)">
+            <summary>
+            得到日志分类信息
+            </summary>
+            <param name="userid"></param>
+            <param name="bid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Blog.GetClassName(System.Int32)">
+            <summary>
+            得到博客分类名称
+            </summary>
+            <param name="bid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Blog.DeleteBlog(System.Int32,System.Int32)">
+            <summary>
+            删除博客
+            </summary>
+            <param name="bid"></param>
+            <param name="userid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Blog.DeleteBlogComment(System.Int32,System.Int32)">
+            <summary>
+            删除日志评论
+            </summary>
+            <param name="cid"></param>
+            <param name="userid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Blog.UpdateATT(System.Int32,System.Int32)">
+            <summary>
+            更新关注
+            </summary>
+            <param name="bid"></param>
+            <param name="userid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Blog.UpdateBlogState(System.Int32,System.Int32)">
+            <summary>
+            更新点击率
+            </summary>
+            <param name="bid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Blog.InsertBlogComment(JuSNS.Model.BlogCommentInfo)">
+            <summary>
+            插入日志评论
+            </summary>
+            <param name="Info"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Blog.GetBlogFoot(System.Int32,System.Int32)">
+            <summary>
+            得到脚印
+            </summary>
+            <param name="number">调用数量</param>
+            <param name="fid">日志ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Blog.GetBlogCommentInfo(System.Int32)">
+            <summary>
+            得到评论具体信息
+            </summary>
+            <param name="cid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JuSNS.Home.App.Blog.GetBlogList(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            调用某个类型的日志
+            </summary>
+            <param name="number">调用数量</param>
+            <param name="flag">0点击排行,1关注排行,2分享排行,3推荐,4评论排行,5最新更新</param>
+            <param name="userid">用户ID，如果大于0则表示调用用户的日志</param>
+            <returns>List列表</returns>
+        </member>
+        <member name="P:JuSNS.Home.App.Blog.Instance">
+            <summary>
+            取得实例
+            </summary>
+        </member>
+    </members>
+</doc>

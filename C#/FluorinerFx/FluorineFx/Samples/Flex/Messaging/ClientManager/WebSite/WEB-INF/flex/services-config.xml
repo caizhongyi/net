@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<services-config>
+  <services>
+    <service id="remoting-service" class="flex.messaging.services.RemotingService" messageTypes="flex.messaging.messages.RemotingMessage">
+      <destination id="fluorine">
+        <channels>
+          <channel ref="my-amf"/>
+        </channels>
+        <properties>
+          <source>ServiceLibrary.MySecureService</source>
+          <scope>application</scope>
+        </properties>
+      </destination>
+    </service>
+    <service id="message-service" class="flex.messaging.services.MessageService" messageTypes="flex.messaging.messages.AsyncMessage">
+      <adapters>
+        <adapter-definition id="messagingAdapter" class="ServiceLibrary.MyMessagingAdapter" default="true"/>
+      </adapters>
+      <destination id="feed">
+        <adapter ref="messagingAdapter"/>
+        <channels>
+          <channel ref="my-rtmp"/>
+        </channels>
+        <properties>
+          <network>
+            <!-- The session-timeout element specifies the idle time in minutes before a subscriber is unsubscribed. When you set the value to 0 (zero), subscribers are not forced to unsubscribe automatically. The default value is 20. -->
+            <session-timeout>20</session-timeout>
+          </network>
+        </properties>
+      </destination>
+    </service>
+  </services>
+
+  <!-- Custom authentication -->
+  <security>
+    <!-- A security constraint requires that a user is authorized before accessing a destination.
+		  Here you can declare security constraints globally. When several destinations 
+		  use the same security settings, you should define one security constraint in the 
+		  security section of the services configuration file and refer to it in each destination. 				
+		  -->
+    <security-constraint id="privileged-users">
+      <auth-method>Custom</auth-method>
+      <roles>
+        <role>admin</role>
+        <role>privilegeduser</role>
+      </roles>
+    </security-constraint>
+
+    <!--    
+		  Custom login command, to check a user's credentials and log a principal into the application server
+		  A login command must implement the FluorineFx.Messaging.Security.ILoginCommand interface
+		  or inherit from FluorineFx.Messaging.Security.GenericLoginCommand.
+  		
+		  You can use a login command without security constraints defined.
+		  -->
+    <login-command class="ServiceLibrary.MyLoginCommand" server="asp.net"/>
+  </security>
+
+  <channels>
+    <channel-definition id="my-amf" class="mx.messaging.channels.AMFChannel">
+      <endpoint uri="http://{server.name}:{server.port}/{context.root}/Gateway.aspx" class="flex.messaging.endpoints.AMFEndpoint"/>
+    </channel-definition>
+    <channel-definition id="my-rtmp" class="mx.messaging.channels.RTMPChannel">
+      <endpoint uri="rtmp://{server.name}:1938" class="flex.messaging.endpoints.RTMPEndpoint"/>
+      <!--
+			      <properties>
+                <idle-timeout-minutes>20</idle-timeout-minutes>
+            </properties>
+            -->
+    </channel-definition>
+  </channels>
+</services-config>

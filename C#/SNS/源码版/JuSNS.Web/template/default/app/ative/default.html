@@ -1,0 +1,76 @@
+﻿#parse("_head.html")
+<link href="$templatepath/css/app/ative.css" rel="stylesheet" type="text/css" />
+<div id="snsmenu">
+#parse("_menu.html")
+</div>
+<div id="snsbody">
+    <div id="snshead"><span class="l">$cpagetitle</span><span class="r"><input id="kwd" name="kwd" value="#if($kwd)$kwd#else搜索活动#end" type="text" class="f-text w100" onclick="this.value=''" /> <input id="Button1" type="button" value="搜索" class="btn_gray2" onclick="search('ative','$q')" /></span></div>
+ 
+    <div >
+    <div class="itemmenu">
+        <ul>
+            <li#if($css_null)$css_null#end><a href="$webpath/app/ative/default$exname">全部活动</a></li>
+            <li#if($css_ing)$css_ing#end><a href="$webpath/app/ative/default$exname?q=ing">进行中的活动</a></li>
+            <li#if($css_ed)$css_ed#end><a href="$webpath/app/ative/default$exname?q=ed">结束的活动</a></li>
+            <li#if($css_rec)$css_rec#end><a href="$webpath/app/ative/default$exname?q=rec">推荐活动</a></li>
+            #if($uid>0)
+            <li#if($css_city)$css_city#end><a href="$webpath/app/ative/default$exname?q=city">同城活动</a></li> 
+            <li#if($css_my)$css_my#end><a href="$webpath/app/ative/default$exname?q=my">我的活动</a></li>
+            <li#if($css_friend)$css_friend#end><a href="$webpath/app/ative/default$exname?q=friend">朋友的活动</a></li>
+            #end
+            <li class="new"><a href="$webpath/app/ative/new$exname" class="newitem">发起活动</a></li> 
+        </ul>
+        
+    </div>
+    </div>
+    <div id="ativemiddle">
+         #if($recordcount>0)
+            <div class="ative">
+                <ul>
+                #foreach($info in $infolist)
+                <li id="param_$info.id">
+                    <div class="ativephoto">
+                        <a href="$info.ativeurl"><img src="$info.photo" onerror="this.src='$ativepicpath/default.jpg'" /></a>
+                    </div>
+                    <div class="content">
+                        <p><a href="$info.ativeurl" class="title">$info.ativename</a> $info.showop #if($info.showedite)<a href="$webpath/app/ative/new$exname?aid=$info.id" class="edit1" title="编辑"></a>#end$info.showrec</p>
+                        <p>开始时间：<span class="time">$info.starttime</span> 结束时间：<span class="time">$info.endtime </span></p>
+                        <p>已有<span class="reshow strong">$info.members</span>人报名 &nbsp; 分类：<a href="$webpath/app/ative/default$exname?q=$q&classid=$info.classid">$info.classname</a> </p>
+                        <p>发起时间：<span class="time">$info.time </span></p>
+                    </div>
+                    <div class="userpic images">
+                        <a href="$info.spaceurl" target="_blank" title="查看$info.truename的空间"><img src="$info.headpic" /><br />$info.truename</a>
+                    </div>
+                    
+                </li>
+                #end
+              </ul>
+              </div>
+              <div class="pages">$pagelist</div>
+        #else
+            <div>还没有记录</div>
+        #end        
+    </div>
+    <div id="ativeright">
+       <div class="title">$classname</div>
+       <div class="classlist">
+        <ul>
+            $classlist
+        </ul>
+       </div>
+       <div class="title">好友最新参加活动</div>
+          #if($friendcount>0)
+            <div class="friendslist">
+                <ul>
+                    #foreach($friend in $friendlist)
+                    <li>
+                        <a href="$friend.ativeurl">$friend.ativename</a>
+                    </li>
+                    #end
+                </ul>
+            </div>
+        #end
+    </div>
+</div>
+
+#parse("_foot.html")

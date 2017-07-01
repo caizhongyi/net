@@ -1,0 +1,185 @@
+为了使大家对插件有更深入的了解，让我们先重温一下通常情况下创建和调用DLL的过程。
+每一个程序员都知道，我们应当将某些类或者模块编译为DLL，然后在主程序中调用，关于这样做的目的和好处，我就不再啰嗦了。
+假设我创建了一个名为TirayComm.dll的类库，并编写了一个UDP类用于UDP数据传输：
+namespace Tiray.Net
+{
+    public class UDP
+    {
+ ...
+ //port--本地侦听端口
+ //ttl时间，以毫秒为单位
+        public UDP(int port,short ttl)
+        {
+  ...
+        }
+
+ //初始化
+        public void Init()
+        {
+  ...
+        }
+
+ //发送数据
+ //data--待发送数据
+ //remoteIP--远端IP地址
+ //port--远端UDP端口
+        public void Send(byte[] data,string remoteIP,int port)
+        {
+  ...
+        }
+ //关闭
+        public void Close()
+        {
+   ...
+        }
+        
+    }
+}
+我在主程序中创建UDP类的实例和调用UDP类方法的代码如下：
+using Tiray.Net
+   ...
+   Tiray.Net.UDP udp=new UDP(25000,2000);
+   udp.Int();
+   ...
+别忘了要先在项目中添加对TirayComm.dll的引用。
+我先提醒大家一下，上面的步骤都是在你的IDE中完成的，也就是说是在你编写程序代码的过程中完成的。
+
+下面我用我以前开发的一个软件项目为大家详细解释一下用C#实现插件的一些技术细节。
+我曾经接到过一个SP的软件项目，为一家电台开发一个听众短信互动平台。在需求分析过程中，我意识到电台的短信互动平台需要非常灵活的功能扩展，因为一个电台往往有好几个频率，每个频率平均每个小时都是一个不同的节目，每一个节目对短信平台的要求都可能不同：有的节目仅仅要求短信平台将听众的短信显示给主持人；有的节目要求短信平台能够自动回复某些信息；有的节目如短信答题等要求短信平台能自动判断用户的答案是否正确，并能提供抽奖功能...... 而且最糟糕的是即使同一个节目，其内容也随时有可能更换或改版，然后对短信平台提出新的要求。
+这时候我开始有了编写插件的想法。我希望当主持人提出一个新的短信应用要求时，我只需要编写一个插件来实现相关的应用逻辑，然后将插件安装到短信平台的特定目录下，就可以实现相应的功能，而无须对整个短信平台进行升级。同样，当主持人不再需要某个短信应用的时候，我只须简单地从特定目录中将相应的插件删除即可。
+下面是我编写的插件的基类，请注意这是一个抽象类。从插件的意义说，其中的两个公共抽象方法和一个事件就是插件的接口规范定义。我没有用interface关键字来定义插件的接口，是因为我还有一些与短信网关有关的代码需要在这个类中实现，而且我也不想考虑在插件中实现多重继承的问题。实际上，也可以使用interface关键字来定义插件的接口。关于抽象类和接口的有关内容，大家可以到MSDN里寻找，我就不多说了。
+namespace Tiray.SMS
+{
+ public abstract class Plugin
+ {
+  //插件的名称
+  protected String pluginName;
+  ...
+  //OnReceive是接收到中国移动短信网关类CMPP30和中国联通短信网关类SGIP短信后的事件处理函数
+  //destNumber--SP端的号码，如1066123456
+  //phoneNumber--手机号码，如13812345678
+  //Message--短消息
+  public abstract void OnReceive(String destNumber,String phoneNumber,String message);
+  
+  //显示插件属性，用户可以调用此方方法察看和设置插件属性
+  public abstract void ShowProperty();
+  ...
+  //从内存中销毁插件实例时的处理函数。
+  public abstract void Finalize();  
+  ...
+  //插件的事件
+  //通常是一个发送短消息请求
+  public event PluginEventHandler PluginEvent;
+ }
+ //插件事件定义
+ public delegate void PluginEventHandler(object sender, PluginEventArgs e);
+
+}
+下面是一个为交通类节目写的交通违法查询的短信插件实现。这个插件的作用是当用户发送一个车牌号到短信互动平台时，可以返回该车牌号在一段时间内的交通违法记录。这个插件被编译为一个名为Illegal.dll的类库，然后发布到主程序的“Plugin”子目录下。
+
+using Tiray.SMS;
+namespace Tiray.SMS.RadioService
+{
+ //交通违法查询短信插件
+ public class IllegalQuery:Plugin
+ {
+  ...
+
+  public IllegalQuery()
+  {
+   ...
+   pluginName="交通违法行为查询";
+   ...
+   
+  }
+  public override void ShowProperty()
+  {
+   ...
+  }
+  public override void Finalize()
+  {
+   ...
+  }
+
+  public override void OnReceive(String destNumber,String phoneNumber,String message)
+  {
+   ...
+   //对接收到的车牌号进行检验和处理
+   string carNumber=CheckCarNumber(string message);
+   if(carNumber!=string.Empty)
+   {
+    ...  
+    //查询违法记录并发送到用户手机
+    QueryAndSend(carNumber,phoneNumber);
+    ...
+   }
+   ...
+  }
+
+ }
+}
+从上面的代码来看，我只是实现了一个很普通的类继承，似乎看不出插件有什么与众不同的地方。下面来看一看在主程序中是如何调用插件的。
+
+...
+using Tiray.SMS;
+using System.Reflection;
+
+...
+
+  ...
+  protected Hashtable n_htPlugin=null;
+  ...
+  protected void InitPlugin()
+  {
+   m_htPlugin=new Hashtable();
+
+   string dir=Directory.GetCurrentDirectory()+@"\plugin";
+   string[] files=Directory.GetFiles(strDir,"*.DLL");
+   
+   foreach(string file in files)
+   {
+    Tiray.SMS.Plugin plugin=null;
+    try
+    {
+     System.Reflection.Assembly asm=System.Reflection.Assembly.LoadFile(files);
+     Type[] types=asm.GetTypes();
+     foreach(Type type in types)
+     {
+      if(type.BaseType.FullName=="Tiray.SMS.Plugin")
+      {
+       plugin=asm.CreateInstance(type.FullName) as Plugin;
+       break;
+      }
+     }
+    }
+    catch(Exception ex)
+    {
+     ...
+     plugin=null;
+     ...
+    }
+    if(plugin!=null)
+    {
+     
+     plugin.PluginEvent+=new PluginEventHandler(OnPlugin);
+     m_htPlugin.Add(plugin.Name,plugin);
+    }
+   }
+  }
+   
+  //来自插件的消息
+  //通常是一个发送短消息请求
+  protected void OnPlugin(object sender,PluginEventArgs e)
+  {
+   ...
+  }
+
+}
+请注意插件实例是使用Sytem.Reflection.Assembly类的CreateInstance方法创建的。对比前面我提到过的UDP类的实例创建方法，我并没有在主程序中添加对Illegal.DLL的引用，程序中也没有直接对IllegalQuery类进行声明的代码。
+在上一讲中，我提到过，插件的一个优点就是运行时的功能扩展，通过上面的代码，大家应该对插件的这一特性有一些了解了吧。
+上面的只是一个很简单的例子，但是大家也已经看到，为了实现插件，我不得不在主程序中添加了更多的代码，如我创建了一个Hashtable用于在内存中保存每一个插件实例；我使用了比常规的类实例创建方法更多的代码来创建插件实例；虽然我没有列出插件事件处理函数的代码，但是可以想象，我一定要使用更多的代码来判断当前的事件是由哪一个插件引发的。实际上，插件的实现还需要考虑一些更复杂的问题，在第三讲中，我会对插件进行更深入的探讨。
+现在，让我们回顾一下插件的两个基本特性及实现方法：
+统一的调用接口
+这是用abstract关键字定义一个抽象类或者用interface关键字定义一个接口来实现的；
+运行时加载
+这是使用System.Reflection.Assembly类的相关方法来实现的。

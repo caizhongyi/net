@@ -1,0 +1,7 @@
+obj\Debug\imageConvert.exe
+obj\Debug\imageConvert.pdb
+bin\Debug\imageConvert.exe
+bin\Debug\imageConvert.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\imageConvert.Form1.resources
+obj\Debug\imageConvert.csproj.GenerateResource.Cache

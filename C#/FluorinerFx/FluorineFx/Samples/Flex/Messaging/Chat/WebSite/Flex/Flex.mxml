@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" xmlns="*">
+
+	<mx:Script>
+		<![CDATA[
+		import mx.utils.ObjectUtil;
+		import mx.rpc.events.FaultEvent;
+		import mx.rpc.events.ResultEvent;
+
+		import mx.messaging.*;
+		import mx.messaging.messages.*;
+		import mx.messaging.events.*;
+		import mx.controls.*;
+
+		private function login():void
+		{
+			loginRO.setCredentials(username.text, password.text);
+			//The following call will run MyLoginCommand on the backend
+			//>In this sample the authentication with an empty password will fail
+			loginRO.Login(); 
+		}
+		
+	    private function loginResult(event:ResultEvent):void {
+		    var result:Boolean = event.result as Boolean;
+        	appViews.selectedChild = chatView; 
+        	
+			consumer.setCredentials(username.text, password.text);
+			consumer.subscribe();        	
+     	}
+      
+	    private function loginFault(event:FaultEvent):void
+	    {
+	    	//logout otherwise next connect attempt will fail
+	    	loginRO.logout();
+        	Alert.show( event.fault.faultString, "Authentication failed" );
+	    }		
+
+		private function logout():void
+		{
+			//first unsubscribe then logout
+			consumer.unsubscribe();
+			loginRO.logout();
+			consumer.logout();
+			appViews.selectedChild = connectView;
+		}
+		
+		private function messageHandler(event:MessageEvent):void
+		{
+			ta.text += event.message.body.userId + ": " + event.message.body.text + "\n";				
+		}
+
+		public function sendMessage():void
+		{
+			var message:AsyncMessage = new AsyncMessage();
+			message.body = {userId: username.text, text: msg.text}
+			producer.send(message);
+			msg.text="";
+		}
+		
+        private function messagefaultHandler(event:MessageFaultEvent):void 
+        {
+			// Handle fault event.
+			Alert.show(event.faultString, "Error");
+        }
+		
+		]]>
+	</mx:Script>
+	
+	<mx:Consumer id="consumer" destination="chat" message="messageHandler(event)" fault="messagefaultHandler(event)"/> 
+	<mx:Producer id="producer" destination="chat" fault="messagefaultHandler(event)"/>
+	<mx:RemoteObject id="loginRO" destination="login" fault="loginFault(event)" result="loginResult(event)">
+	    <mx:method name="Login"/>
+	</mx:RemoteObject>
+	
+  <mx:ViewStack id="appViews" width="100%" height="100%" creationPolicy="all">
+  <!--connectView-->
+    <mx:HBox horizontalAlign="center" verticalAlign="middle" id="connectView" width="100%" height="100%">
+      <mx:Panel title="Connect" id="connectPanel" horizontalScrollPolicy="off" verticalScrollPolicy="off">
+        <mx:Form id="connectForm">
+          <mx:FormItem label="Username:">
+            <mx:TextInput id="username"/>
+          </mx:FormItem>
+          <mx:FormItem label="Password:">
+            <mx:TextInput id="password"  displayAsPassword="true"/>
+          </mx:FormItem>
+        </mx:Form>
+        <mx:ControlBar>
+          <mx:Spacer width="100%" id="spacer1"/>
+          <mx:Button label="Connect" id="connectButton"
+              enabled="{(username.text.length == 0 ) ? false : true}"
+              toolTip="{connectButton.enabled == true ? 'Click to connect' : 'Enter username and password'}" 
+              click="login()"/>
+        </mx:ControlBar>
+      </mx:Panel>
+    </mx:HBox>
+  <!--end connectView-->
+	<mx:HBox id="chatView" width="100%" height="100%">
+		<mx:Panel title="Chat" width="100%" height="100%">
+			<mx:TextArea id="ta" width="100%" height="100%"/>
+			<mx:ControlBar>
+				<mx:TextInput id="msg" width="100%" enter="sendMessage()"/>	
+				<mx:Button label="Send" click="sendMessage()"/>
+				<mx:Button label="Logout" click="logout()"/>
+			</mx:ControlBar>	
+		</mx:Panel>
+	</mx:HBox>
+  </mx:ViewStack>
+</mx:Application>

@@ -1,0 +1,46 @@
+﻿<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity" xmlns:Behaviors="clr-namespace:Behaviors;assembly=Behaviors"
+        xmlns:ic="clr-namespace:Microsoft.Expression.Interactivity.Core;assembly=Microsoft.Expression.Interactions"
+        x:Class="MarkupExtensionsTest.Window1"
+        Title="Window1"
+        Height="81"
+        Width="300" Background="#FFB5B3E0">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="5" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="100*" />
+            <ColumnDefinition Width="5" />
+        </Grid.ColumnDefinitions>
+        <Button x:Name="button" HorizontalAlignment="Left"
+                Margin="5,0,0,0"
+                Width="83"
+                Content="Button"
+                Grid.Column="1"
+                Grid.Row="1" >
+        	<i:Interaction.Triggers>
+        		<i:EventTrigger EventName="Click">
+        			<Behaviors:LoggingBehaviour Message="my message" Priority="100" Title="Title"/>
+        		</i:EventTrigger>
+        	</i:Interaction.Triggers>
+        </Button>
+        <TextBox
+                 Margin="122,0,8,0"
+                 Grid.Column="1"
+                 Grid.Row="1"
+                 TextWrapping="Wrap" Background="#FFF4D18D">
+        	<i:Interaction.Behaviors>
+        		<Behaviors:WatermarkBehaviour BrushColor="#FF993232"/>
+        	</i:Interaction.Behaviors>
+        </TextBox>
+    </Grid>
+</Window>

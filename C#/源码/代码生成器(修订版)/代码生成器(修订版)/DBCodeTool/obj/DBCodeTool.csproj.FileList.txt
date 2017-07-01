@@ -1,0 +1,8 @@
+bin\Debug\DBCodeTool.exe
+bin\Debug\DBCodeTool.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\DBCodeTool.Properties.Resources.resources
+obj\Debug\DBCodeTool.csproj.GenerateResource.Cache
+obj\Debug\DBCodeTool.exe
+obj\Debug\DBCodeTool.pdb
+obj\Debug\DBCodeTool.frmMain.resources

@@ -1,0 +1,38 @@
+﻿<html>
+	<head>
+<script type="text/javascript" src="../czy-js-all.js"></script>
+<link rel="stylesheet" href="../czy-css-all.css" type="text/css"/>
+<script type="text/javascript">
+var EasyForm;
+window.onload=function()
+{
+	    EasyForm=new czyjs.UI.LoginForm(
+		{
+
+            id:"bb",
+            listeners   :  {loginEvent:login,validateEvent:null},
+	        speed       :   200,
+	        scroll      :  false,
+            codeImgURL  :  "a",
+            className   : "czy-easyform",
+            topHTML     :  "",
+           // type        :  'zoom'
+            type        :  'opacity'
+		}
+		);
+        
+}
+
+function login()
+{
+    alert(EasyForm.userName + "," + EasyForm.passWord + "," + EasyForm.checkCode);
+}
+</script>
+
+	</head>
+	<body>
+<div id="bg" ></div>
+<input type="button" onclick="EasyForm.Show();" value="Show"  />
+<input type="button" onclick="EasyForm.Close();" value="Close"  />
+	</body>
+</html>

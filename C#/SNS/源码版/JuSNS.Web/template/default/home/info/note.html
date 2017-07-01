@@ -1,0 +1,38 @@
+﻿#parse("_head.html")
+<div id="snsmenu">
+#parse("_menu.html")
+</div>
+<div id="snsbody">
+    <div id="snshead"><span class="l">通知信息</span></div>
+   <div id="snsbody-all">
+      <div class="itemmenu">
+        <ul>
+            <li><a href="friend$exname">好友请求</a></li>
+            <li><a href="group$exname">群组请求</a></li>
+            <li class="current"><a href="note$exname">通知信息</a></li>
+        </ul>
+    </div>
+#if($recordcount>0)        
+    <div class="notelist">
+        <ul>
+        #foreach($info in $infolist)
+        <li id="param_$info.id">
+            #if($info.isread)
+            <p class="strong"><a href="$info.spaceurl" target="_blank" title="查看$info.truename的空间">$info.truename</a>：$info.content #if($isurl==1)<a href="$info.noteurl" target="_blank">查看</a>#end&nbsp; <span class="time">$info.time</span></p>
+            #else
+            <p><a href="$info.spaceurl" target="_blank" title="查看$info.truename的空间">$info.truename</a>：$info.content #if($isurl==1)<a href="$info.noteurl" target="_blank">查看</a>#end&nbsp; <span class="time">$info.time</span></p>
+            #end
+        </li>
+        #end
+      </ul>
+      </div>
+         
+    <div class="pages">$pagelist</div>
+    #else
+        <div>还没有通知信息</div>
+    #end        
+      
+</div>
+</div>
+
+#parse("_foot.html")

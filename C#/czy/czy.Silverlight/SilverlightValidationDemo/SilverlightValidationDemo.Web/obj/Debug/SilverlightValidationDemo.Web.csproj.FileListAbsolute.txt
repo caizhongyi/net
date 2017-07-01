@@ -1,0 +1,15 @@
+D:\Users\Kevin\Documents\Visual Studio 2010\Projects\SilverlightValidationDemo\SilverlightValidationDemo.Web\bin\SilverlightValidationDemo.Web.dll
+D:\Users\Kevin\Documents\Visual Studio 2010\Projects\SilverlightValidationDemo\SilverlightValidationDemo.Web\bin\SilverlightValidationDemo.Web.pdb
+D:\Users\Kevin\Documents\Visual Studio 2010\Projects\SilverlightValidationDemo\SilverlightValidationDemo.Web\obj\Debug\ResolveAssemblyReference.cache
+D:\Users\Kevin\Documents\Visual Studio 2010\Projects\SilverlightValidationDemo\SilverlightValidationDemo.Web\obj\Debug\SilverlightValidationDemo.Web.dll
+D:\Users\Kevin\Documents\Visual Studio 2010\Projects\SilverlightValidationDemo\SilverlightValidationDemo.Web\obj\Debug\SilverlightValidationDemo.Web.pdb
+E:\Development\CodeS\SilverlightValidationDemo\SilverlightValidationDemo\SilverlightValidationDemo.Web\bin\SilverlightValidationDemo.Web.dll
+E:\Development\CodeS\SilverlightValidationDemo\SilverlightValidationDemo\SilverlightValidationDemo.Web\bin\SilverlightValidationDemo.Web.pdb
+E:\Development\CodeS\SilverlightValidationDemo\SilverlightValidationDemo\SilverlightValidationDemo.Web\obj\Debug\ResolveAssemblyReference.cache
+E:\Development\CodeS\SilverlightValidationDemo\SilverlightValidationDemo\SilverlightValidationDemo.Web\obj\Debug\SilverlightValidationDemo.Web.dll
+E:\Development\CodeS\SilverlightValidationDemo\SilverlightValidationDemo\SilverlightValidationDemo.Web\obj\Debug\SilverlightValidationDemo.Web.pdb
+E:\caizhongyi\MyWork\1-100914200150\SilverlightValidationDemo\SilverlightValidationDemo.Web\bin\SilverlightValidationDemo.Web.dll
+E:\caizhongyi\MyWork\1-100914200150\SilverlightValidationDemo\SilverlightValidationDemo.Web\bin\SilverlightValidationDemo.Web.pdb
+E:\caizhongyi\MyWork\1-100914200150\SilverlightValidationDemo\SilverlightValidationDemo.Web\obj\Debug\ResolveAssemblyReference.cache
+E:\caizhongyi\MyWork\1-100914200150\SilverlightValidationDemo\SilverlightValidationDemo.Web\obj\Debug\SilverlightValidationDemo.Web.dll
+E:\caizhongyi\MyWork\1-100914200150\SilverlightValidationDemo\SilverlightValidationDemo.Web\obj\Debug\SilverlightValidationDemo.Web.pdb

@@ -1,0 +1,48 @@
+﻿#parse("_head.html")
+<div id="snsmenu">
+#parse("_menu.html")
+</div>
+<div id="snsbody">
+    <div id="snshead">充值中心</div>
+    #if($errors)
+    <div  id="toperrors" class="errors">$errors</div>
+    #else
+        <div class="itemmenu">
+            <ul>
+                <li><a href="$webpath/home/charge/default$exname">充值</a></li>
+                <li#if($css_null) $css_null #end><a href="$webpath/home/charge/record$exname">所有记录</a></li>
+                <li#if($css_1) $css_1 #end><a href="$webpath/home/charge/record$exname?q=1">成功记录</a></li> 
+                <li#if($css_0) $css_0 #end><a href="$webpath/home/charge/record$exname?q=0">失败记录</a></li> 
+            </ul>
+        </div>
+        #if($recordcount>0)
+          <table  id="mtable">
+               <tr style="background-color:#efefef;padding:3px 5px;">
+              <th>订单号</th>
+              <th>积分</th>
+              <th>$gpoint</th>
+              <th>金额</th>
+              <th>状态</th>
+              <th>提交时间</th>
+            </tr>
+
+            #foreach($rec in $reclist)
+            <tr>
+              <td>$rec.ordernumber</td>
+              <td>$rec.point</td>
+              <td>$rec.gpoint</td>
+              <td>${rec.money}RMB</td>
+              <td>$rec.succ</td>
+              <td>$rec.time</td>
+            </tr>
+            #end
+          </table>
+            <div class="pages">$pagelist</div>
+        #else
+            <div>还没有充值记录</div>
+        #end        
+
+    #end
+</div>
+    
+#parse("_foot.html")

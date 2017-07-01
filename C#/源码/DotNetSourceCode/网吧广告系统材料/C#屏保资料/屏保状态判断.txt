@@ -1,0 +1,17 @@
+private  const  uint  SPI_GETSCREENSAVERRUNNING  =  0x0072;  
+    
+  [DllImport("user32.dll",  CharSet=CharSet.Auto)]  
+  private  static  extern  bool  SystemParametersInfo(uint  uiAction,  uint  uiParam,  ref  bool  pvParam,  uint  fWinIni);  
+    
+  ///  <summary>  
+  ///  获得当前屏幕保护程序的状态  
+  ///  </summary>  
+  ///  <returns>屏幕保护程序正在运行返回true；不再运行返回false </returns>  
+  public  static  bool  GetScreenSaverState()  
+  {  
+  //IntPtr  result  =  new  IntPtr();  
+  bool  result  =  false;  
+  SystemParametersInfo(SPI_GETSCREENSAVERRUNNING,  0,  ref  result,  0);  
+  //System.Diagnostics.Trace.WriteLine(result);  
+  return  (result);  
+  }  

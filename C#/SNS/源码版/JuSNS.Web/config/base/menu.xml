@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <!--菜单名字-->
+  <twitter>微博</twitter>
+  <blog>日志</blog>
+  <album>相册</album>
+  <share>分享</share>
+  <group>社群</group>
+  <news>资讯</news>
+  <shop>品牌空间</shop>
+  <ative>活动</ative>
+  <ask>知识人</ask>
+  <calend>日历</calend>
+  <gift>礼物</gift>
+  <poke>招呼</poke>
+  <vote>投票</vote>
+  <bill>账本</bill>
+  <note>记事本</note>
+  <favorite>收藏夹</favorite>
+  <center>应用程序</center>
+</configuration>
